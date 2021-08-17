@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 	@font-face {
         font-family: "Text";
-        src: url("${process.env.PUBLIC_URL}/fonts/alegreya.ttf");
+        src: url("${process.env.PUBLIC_URL}/fonts/literata.ttf");
 		font-display: block;
     };
 
@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 		tab-size: 4;
 
-		font-size: 1em;
+		font-size: 0.97em;
 
 		font-family: "Text";
 		color: ${(props: bwgr.style.Props) => props.theme.text.main};
@@ -59,7 +59,7 @@ export const GlobalStyle = createGlobalStyle`
 		justify-content: center;
 		align-items: flex-start;
 		align-content: flex-start;
-		overflow: scroll;
+		overflow: hidden scroll;
 		margin: 10px 0;
 	}
 
