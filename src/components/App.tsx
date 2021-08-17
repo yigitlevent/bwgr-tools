@@ -6,10 +6,10 @@ import { DarkTheme } from "../theme/themes";
 
 import { EmptyFaction } from "../data/emptyFaction";
 
-import { AppWrapper, Title } from "./shared/Shared";
+import { OuterBox } from "./shared/Box";
 
-import { Content } from "./app/Content";
-import { Topbar } from "./app/Topbar";
+import { LeftBox } from "./app/LeftBox";
+import { RightBox } from "./app/RightBox";
 
 export function App(): JSX.Element {
 	const [selected, setSelected] = useState("New Faction");
@@ -19,11 +19,10 @@ export function App(): JSX.Element {
 		<ThemeProvider theme={DarkTheme}>
 			<GlobalStyle />
 
-			<AppWrapper>
-				<Title>BWGR Faction Cards</Title>
-				<Topbar selected={selected} setSelected={setSelected} />
-				<Content faction={faction} />
-			</AppWrapper>
+			<OuterBox width={"800px"}>
+				<LeftBox />
+				<RightBox />
+			</OuterBox>
 
 		</ThemeProvider>
 	);
