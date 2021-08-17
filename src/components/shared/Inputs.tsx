@@ -9,7 +9,10 @@ export const Select = styled.select`
 	background: ${(props: bwgr.style.Props) => props.theme.background.input};
 
 	cursor: pointer;
+	
+	font-size: 1.1em;
 
+	width: 100%;
 	flex: 1 0 auto;
 
 	&:hover {
@@ -24,6 +27,9 @@ export const Select = styled.select`
 export const Option = styled.option`
 	font-family: "Text";
 	cursor: pointer;
+
+	font-size: 1.1em;
+	flex: 1 0 auto;
 `;
 
 export const Button = styled.input.attrs({ type: "button" })`
