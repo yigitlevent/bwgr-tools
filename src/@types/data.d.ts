@@ -65,6 +65,11 @@ namespace bwgr {
 		type SkillTypesList = "Academic" | "Artisan" | "Artist" | "Craftsman" | "Forester" | "Martial" | "Medicinal" | "Military" | "Musical" | "Peasant" | "Physical" | "School of Thought" | "Seafaring" | "Social" | "Sorcerous" | "Special" | "Wise";
 		type TraitTypesList = "Character" | "Call-on" | "Die" | "Call-on and Die";
 
+		interface Condition {
+			type: "AND" | "OR" | "NOT",
+			items: (bwgr.path.Lifepath | `Skill➞${bwgr.path.Skill}` | `Trait➞${bwgr.path.Trait}` | bwgr.data.Condition)[];
+		}
+
 		interface Stocks {
 			[key: string]: bwgr.data.Stock;
 		}
@@ -86,6 +91,7 @@ namespace bwgr {
 		interface Setting {
 			allowed: bwgr.data.RulesetsList[];
 			name: string;
+			short: string;
 			stock: bwgr.data.StocksList;
 			type: bwgr.data.SettingTypesList;
 			lifepaths: bwgr.data.Lifepath[];
@@ -112,12 +118,10 @@ namespace bwgr {
 			skills: bwgr.path.Skill[];
 			traits: bwgr.path.Trait[];
 
-			requirements?: {
-				OR?: (string | string[])[];
-				AND?: (string | string[])[];
-				NOTAND?: (string | string[])[];
-				LIMIT?: string[];
-				TEXT?: string[];
+			requirements: {
+				conditions?: bwgr.data.Condition;
+				limits?: (`LP➞UNIQUE` | `GENDER➞${"FEMALE" | "MALE"}` | `${"YEARS" | "LP"}➞${"MIN" | "MAX"}➞${number}`)[];
+				texts?: string[];
 			};
 		}
 

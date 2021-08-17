@@ -34,6 +34,7 @@ export const Elf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Wilderlands",
+			short: "Wilderlands",
 			stock: "Elf",
 			type: "Setting",
 			lifepaths: [
@@ -51,6 +52,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born Wilder Elf",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Wilderlands",
 					skillPool: 2,
@@ -78,6 +80,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Rider",
 					physicalPool: 1,
+					requirements: {},
 					resources: 3,
 					setting: "Wilderlands",
 					skillPool: 6,
@@ -107,6 +110,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Harvester",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "Wilderlands",
 					skillPool: 5,
@@ -136,6 +140,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Gatherer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 3,
 					setting: "Wilderlands",
 					skillPool: 5,
@@ -165,6 +170,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Fisherman",
 					physicalPool: 0,
+					requirements: {},
 					resources: 8,
 					setting: "Wilderlands",
 					skillPool: 9,
@@ -199,6 +205,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Shepherd",
 					physicalPool: 0,
+					requirements: {},
 					resources: 6,
 					setting: "Wilderlands",
 					skillPool: 4,
@@ -226,6 +233,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Wanderer",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "Wilderlands",
 					skillPool: 6,
@@ -254,6 +262,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Huntsman",
 					physicalPool: 1,
+					requirements: {},
 					resources: 9,
 					setting: "Wilderlands",
 					skillPool: 7,
@@ -287,6 +296,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Chandler",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "Wilderlands",
 					skillPool: 5,
@@ -315,6 +325,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Weaver",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Wilderlands",
 					skillPool: 5,
@@ -345,6 +356,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Forester",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "Wilderlands",
 					skillPool: 6,
@@ -375,6 +387,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Vintner",
 					physicalPool: 0,
+					requirements: {},
 					resources: 20,
 					setting: "Wilderlands",
 					skillPool: 7,
@@ -406,6 +419,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Miller",
 					physicalPool: 0,
+					requirements: {},
 					resources: 18,
 					setting: "Wilderlands",
 					skillPool: 6,
@@ -438,6 +452,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Song Singer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Wilderlands",
 					skillPool: 6,
@@ -469,6 +484,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Spouse",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Wilderlands",
 					skillPool: 5,
@@ -498,9 +514,12 @@ export const Elf: bwgr.data.Stock = {
 					name: "Patriarch/Matriarch",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Elf➞Wilderness➞Spouse"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Elf➞Wilderness➞Spouse"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Wilderlands",
@@ -533,7 +552,7 @@ export const Elf: bwgr.data.Stock = {
 					name: "Elder",
 					physicalPool: 0,
 					requirements: {
-						TEXT: [
+						texts: [
 							"The character must be 750 years old after taking this path or the oldest character in the group by 100 years"
 						]
 					},
@@ -559,6 +578,7 @@ export const Elf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Citadel",
+			short: "Citadel",
 			stock: "Elf",
 			type: "Setting",
 			lifepaths: [
@@ -576,6 +596,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Citadel Born",
 					physicalPool: 0,
+					requirements: {},
 					resources: 7,
 					setting: "Citadel",
 					skillPool: 2,
@@ -603,6 +624,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Servitor",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Citadel",
 					skillPool: 5,
@@ -634,6 +656,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Wanderer",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "Citadel",
 					skillPool: 6,
@@ -665,6 +688,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Song Singer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Citadel",
 					skillPool: 5,
@@ -696,6 +720,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Student",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Citadel",
 					skillPool: 6,
@@ -728,6 +753,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Clothier",
 					physicalPool: 0,
+					requirements: {},
 					resources: 20,
 					setting: "Citadel",
 					skillPool: 7,
@@ -761,15 +787,18 @@ export const Elf: bwgr.data.Stock = {
 					name: "Soldier-Protector",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Elf➞Citadel➞Wanderer",
-							"Elf➞Citadel➞Seafarer",
-							"Elf➞Wilderness➞Spouse",
-							"Elf➞Wilderness➞Rider",
-							"Elf➞Wilderness➞Huntsman",
-							"Elf➞Etharch➞1*ANY",
-							"Elf➞Protector➞1*ANY"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Citadel➞Wanderer",
+								"Elf➞Citadel➞Seafarer",
+								"Elf➞Wilderness➞Spouse",
+								"Elf➞Wilderness➞Rider",
+								"Elf➞Wilderness➞Huntsman",
+								"Elf➞Etharch➞1*ANY",
+								"Elf➞Protector➞1*ANY"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Citadel",
@@ -806,6 +835,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Seafarer",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "Citadel",
 					skillPool: 9,
@@ -842,13 +872,16 @@ export const Elf: bwgr.data.Stock = {
 					name: "Sea Captain",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Elf➞Citadel➞Seafarer",
-							"Elf➞Citadel➞Adjutant",
-							"Elf➞Protector➞Lieutenant",
-							"Elf➞Etharch➞Sword Singer",
-							"Elf➞Protector➞Sword Singer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Citadel➞Seafarer",
+								"Elf➞Citadel➞Adjutant",
+								"Elf➞Protector➞Lieutenant",
+								"Elf➞Etharch➞Sword Singer",
+								"Elf➞Protector➞Sword Singer"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Citadel",
@@ -879,6 +912,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Novice",
 					physicalPool: 1,
+					requirements: {},
 					resources: 10,
 					setting: "Citadel",
 					skillPool: 4,
@@ -910,9 +944,12 @@ export const Elf: bwgr.data.Stock = {
 					name: "Shaper",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Elf➞Citadel➞Novice"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Elf➞Citadel➞Novice"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Citadel",
@@ -945,9 +982,12 @@ export const Elf: bwgr.data.Stock = {
 					name: "Jeweler",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Elf➞Citadel➞Shaper"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Elf➞Citadel➞Shaper"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Citadel",
@@ -982,9 +1022,12 @@ export const Elf: bwgr.data.Stock = {
 					name: "Artisan",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Elf➞Citadel➞Shaper"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Elf➞Citadel➞Shaper"
+							]
+						}
 					},
 					resources: 40,
 					setting: "Citadel",
@@ -1016,9 +1059,12 @@ export const Elf: bwgr.data.Stock = {
 					name: "Keel Master",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Elf➞Citadel➞Shaper"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Elf➞Citadel➞Shaper"
+							]
+						}
 					},
 					resources: 25,
 					setting: "Citadel",
@@ -1049,6 +1095,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Artist",
 					physicalPool: 0,
+					requirements: {},
 					resources: 12,
 					setting: "Citadel",
 					skillPool: 5,
@@ -1079,10 +1126,13 @@ export const Elf: bwgr.data.Stock = {
 					name: "Bard",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Elf➞Etharch➞Sword Singer",
-							"Elf➞Protector➞Sword Singer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Etharch➞Sword Singer",
+								"Elf➞Protector➞Sword Singer"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Citadel",
@@ -1118,12 +1168,15 @@ export const Elf: bwgr.data.Stock = {
 					name: "Adjutant",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Elf➞Protector➞Herald",
-							"Elf➞Etharch➞Attendant",
-							"Elf➞Etharch➞Student",
-							"Elf➞Wilderness➞Spouse"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Protector➞Herald",
+								"Elf➞Etharch➞Attendant",
+								"Elf➞Etharch➞Student",
+								"Elf➞Wilderness➞Spouse"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Citadel",
@@ -1160,12 +1213,15 @@ export const Elf: bwgr.data.Stock = {
 					name: "Loremaster",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Elf➞Citadel➞Bard",
-							"Elf➞Citadel➞Adjutant",
-							"Elf➞Etharch➞Steward",
-							"Elf➞Wilderness➞Patriarch/Matriarch"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Citadel➞Bard",
+								"Elf➞Citadel➞Adjutant",
+								"Elf➞Etharch➞Steward",
+								"Elf➞Wilderness➞Patriarch/Matriarch"
+							]
+						}
 					},
 					resources: 25,
 					setting: "Citadel",
@@ -1200,15 +1256,18 @@ export const Elf: bwgr.data.Stock = {
 					name: "Althing",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Elf➞Wilderness➞Patriarch/Matriarch",
-							"Elf➞Citadel➞Loremaster",
-							"Elf➞Etharch➞Steward",
-							"Elf➞Citadel➞Bard",
-							"Elf➞Citadel➞Artisan",
-							"Elf➞Protector➞Sea Captain",
-							"Elf➞Protector➞Captain"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Wilderness➞Patriarch/Matriarch",
+								"Elf➞Citadel➞Loremaster",
+								"Elf➞Etharch➞Steward",
+								"Elf➞Citadel➞Bard",
+								"Elf➞Citadel➞Artisan",
+								"Elf➞Protector➞Sea Captain",
+								"Elf➞Protector➞Captain"
+							]
+						}
 					},
 					resources: 100,
 					setting: "Citadel",
@@ -1236,6 +1295,7 @@ export const Elf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Etharch",
+			short: "Etharch",
 			stock: "Elf",
 			type: "Setting",
 			lifepaths: [
@@ -1254,6 +1314,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born Etharch",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Etharch",
 					skillPool: 2,
@@ -1286,6 +1347,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Student",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Etharch",
 					skillPool: 9,
@@ -1320,6 +1382,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Attendant",
 					physicalPool: 1,
+					requirements: {},
 					resources: 15,
 					setting: "Etharch",
 					skillPool: 4,
@@ -1353,13 +1416,16 @@ export const Elf: bwgr.data.Stock = {
 					name: "Second",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Elf➞Etharch➞Attendant",
-							"Elf➞Protector➞Bowyer",
-							"Elf➞Protector➞Spearbearer",
-							"Elf➞Citadel➞Seafarer",
-							"Elf➞Protector➞Soldier-Protector"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Etharch➞Attendant",
+								"Elf➞Protector➞Bowyer",
+								"Elf➞Protector➞Spearbearer",
+								"Elf➞Citadel➞Seafarer",
+								"Elf➞Protector➞Soldier-Protector"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Etharch",
@@ -1398,11 +1464,14 @@ export const Elf: bwgr.data.Stock = {
 					name: "Sword Singer",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Elf➞Etharch➞Second",
-							"Elf➞Protector➞Lancer",
-							"Elf➞Protector➞Lieutenant"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Etharch➞Second",
+								"Elf➞Protector➞Lancer",
+								"Elf➞Protector➞Lieutenant"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Etharch",
@@ -1439,15 +1508,18 @@ export const Elf: bwgr.data.Stock = {
 					name: "Steward",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Elf➞Protector➞Lieutenant",
-							"Elf➞Citadel➞Artisan",
-							"Elf➞Citadel➞Bard",
-							"Elf➞Citadel➞Loremaster",
-							"Elf➞Citadel➞Adjutant",
-							"Elf➞Protector➞Sea Captain",
-							"Elf➞Wilderness➞Patriarch/Matriarch"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Protector➞Lieutenant",
+								"Elf➞Citadel➞Artisan",
+								"Elf➞Citadel➞Bard",
+								"Elf➞Citadel➞Loremaster",
+								"Elf➞Citadel➞Adjutant",
+								"Elf➞Protector➞Sea Captain",
+								"Elf➞Wilderness➞Patriarch/Matriarch"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Etharch",
@@ -1480,13 +1552,19 @@ export const Elf: bwgr.data.Stock = {
 					name: "Prince/Princess",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Elf➞Etharch➞Sword Singer",
-							"Elf➞Protector➞Sword Singer"
-						],
-						AND: [
-							"Trait➞Elf Lifepath➞Fêa"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Trait➞Elf Lifepath➞Fêa",
+								{
+									type: "OR",
+									items: [
+										"Elf➞Etharch➞Sword Singer",
+										"Elf➞Protector➞Sword Singer"
+									]
+								}
+							]
+						}
 					},
 					resources: 100,
 					setting: "Etharch",
@@ -1518,13 +1596,19 @@ export const Elf: bwgr.data.Stock = {
 					name: "Etharch",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Elf➞Citadel➞Loremaster",
-							"Elf➞Etharch➞Prince/Princess"
-						],
-						AND: [
-							"Trait➞Elf Lifepath➞Aman"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Trait➞Elf Lifepath➞Aman",
+								{
+									type: "OR",
+									items: [
+										"Elf➞Citadel➞Loremaster",
+										"Elf➞Etharch➞Prince/Princess"
+									]
+								}
+							]
+						}
 					},
 					resources: 200,
 					setting: "Etharch",
@@ -1550,6 +1634,7 @@ export const Elf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Protector",
+			short: "Protector",
 			stock: "Elf",
 			type: "Subsetting",
 			lifepaths: [
@@ -1568,6 +1653,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Rider",
 					physicalPool: 1,
+					requirements: {},
 					resources: 8,
 					setting: "Protector",
 					skillPool: 6,
@@ -1599,6 +1685,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Herald",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Protector",
 					skillPool: 8,
@@ -1631,6 +1718,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Soother",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Protector",
 					skillPool: 6,
@@ -1660,12 +1748,15 @@ export const Elf: bwgr.data.Stock = {
 					name: "Ranger",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Elf➞Wilderness➞Forester",
-							"Elf➞Wilderness➞Wanderer",
-							"Elf➞Protector➞Bowyer",
-							"Elf➞Etharch➞Second"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Wilderness➞Forester",
+								"Elf➞Wilderness➞Wanderer",
+								"Elf➞Protector➞Bowyer",
+								"Elf➞Etharch➞Second"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Protector",
@@ -1703,6 +1794,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Bowyer",
 					physicalPool: 1,
+					requirements: {},
 					resources: 8,
 					setting: "Protector",
 					skillPool: 5,
@@ -1734,6 +1826,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Spearbearer",
 					physicalPool: 1,
+					requirements: {},
 					resources: 8,
 					setting: "Protector",
 					skillPool: 8,
@@ -1765,13 +1858,16 @@ export const Elf: bwgr.data.Stock = {
 					name: "Sword Singer",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Elf➞Etharch➞Second",
-							"Elf➞Citadel➞Soldier-Protector",
-							"Elf➞Protector➞Soother",
-							"Elf➞Wilderness➞Spouse",
-							"Elf➞Protector➞Spearbearer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Etharch➞Second",
+								"Elf➞Citadel➞Soldier-Protector",
+								"Elf➞Protector➞Soother",
+								"Elf➞Wilderness➞Spouse",
+								"Elf➞Protector➞Spearbearer"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Protector",
@@ -1807,9 +1903,12 @@ export const Elf: bwgr.data.Stock = {
 					name: "Outrider",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Elf➞Protector➞Rider"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Elf➞Protector➞Rider"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Protector",
@@ -1848,10 +1947,13 @@ export const Elf: bwgr.data.Stock = {
 					name: "Lancer",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Elf➞Protector➞Outrider",
-							"Elf➞Etharch➞Second"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Protector➞Outrider",
+								"Elf➞Etharch➞Second"
+							]
+						}
 					},
 					resources: 12,
 					setting: "Protector",
@@ -1886,14 +1988,17 @@ export const Elf: bwgr.data.Stock = {
 					name: "Lieutenant",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Elf➞Protector➞Sword Singer",
-							"Elf➞Etharch➞Sword Singer",
-							"Elf➞Protector➞Lancer",
-							"Elf➞Citadel➞Sea Captain",
-							"Elf➞Protector➞2*Bowyer",
-							"Elf➞Protector➞2*Spearbearer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Protector➞Sword Singer",
+								"Elf➞Etharch➞Sword Singer",
+								"Elf➞Protector➞Lancer",
+								"Elf➞Citadel➞Sea Captain",
+								"Elf➞Protector➞2*Bowyer",
+								"Elf➞Protector➞2*Spearbearer"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Protector",
@@ -1929,14 +2034,17 @@ export const Elf: bwgr.data.Stock = {
 					name: "Captain",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Elf➞Protector➞Lieutenant",
-							"Elf➞Etharch➞Prince/Princess",
-							"Elf➞Citadel➞Sea Captain",
-							"Elf➞Etharch➞Steward",
-							"Elf➞Protector➞2*Sword Singer",
-							"Elf➞Etharch➞2*Sword Singer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Protector➞Lieutenant",
+								"Elf➞Etharch➞Prince/Princess",
+								"Elf➞Citadel➞Sea Captain",
+								"Elf➞Etharch➞Steward",
+								"Elf➞Protector➞2*Sword Singer",
+								"Elf➞Etharch➞2*Sword Singer"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Protector",
@@ -1974,10 +2082,13 @@ export const Elf: bwgr.data.Stock = {
 					name: "Armorer",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Elf➞Citadel➞Shaper",
-							"Elf➞Protector➞Bladesmith"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Citadel➞Shaper",
+								"Elf➞Protector➞Bladesmith"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Protector",
@@ -2012,12 +2123,15 @@ export const Elf: bwgr.data.Stock = {
 					name: "Bladesmith",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Elf➞Protector➞Armorer",
-							"Elf➞Citadel➞Shaper",
-							"Elf➞Protector➞Bowyer",
-							"Elf➞Protector➞Spearbearer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Protector➞Armorer",
+								"Elf➞Citadel➞Shaper",
+								"Elf➞Protector➞Bowyer",
+								"Elf➞Protector➞Spearbearer"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Protector",
@@ -2051,10 +2165,13 @@ export const Elf: bwgr.data.Stock = {
 					name: "Lord Protector",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Elf➞Protector➞Captain",
-							"Elf➞Etharch➞Prince/Princess"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Protector➞Captain",
+								"Elf➞Etharch➞Prince/Princess"
+							]
+						}
 					},
 					resources: 60,
 					setting: "Protector",
@@ -2083,6 +2200,7 @@ export const Elf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Path of Spite",
+			short: "Spite",
 			stock: "Elf",
 			type: "Subsetting",
 			lifepaths: [
@@ -2097,6 +2215,7 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Griever",
 					physicalPool: 0,
+					requirements: {},
 					resources: 0,
 					setting: "Path of Spite",
 					skillPool: 3,
@@ -2123,9 +2242,12 @@ export const Elf: bwgr.data.Stock = {
 					name: "Wastrel",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Elf➞Path of Spite➞Griever"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Elf➞Path of Spite➞Griever"
+							]
+						}
 					},
 					resources: 3,
 					setting: "Path of Spite",
@@ -2157,9 +2279,12 @@ export const Elf: bwgr.data.Stock = {
 					name: "Thief",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Elf➞Path of Spite➞Griever"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Elf➞Path of Spite➞Griever"
+							]
+						}
 					},
 					resources: 6,
 					setting: "Path of Spite",
@@ -2190,9 +2315,12 @@ export const Elf: bwgr.data.Stock = {
 					name: "Assassin",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Elf➞Path of Spite➞Griever"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Elf➞Path of Spite➞Griever"
+							]
+						}
 					},
 					resources: 6,
 					setting: "Path of Spite",
@@ -2224,9 +2352,12 @@ export const Elf: bwgr.data.Stock = {
 					name: "Stalker",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Elf➞Path of Spite➞Griever"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Elf➞Path of Spite➞Griever"
+							]
+						}
 					},
 					resources: 8,
 					setting: "Path of Spite",
@@ -2261,9 +2392,12 @@ export const Elf: bwgr.data.Stock = {
 					name: "Deciever",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Elf➞Path of Spite➞Griever"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Elf➞Path of Spite➞Griever"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Path of Spite",
@@ -2293,9 +2427,12 @@ export const Elf: bwgr.data.Stock = {
 					name: "Liar",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Elf➞Path of Spite➞Griever"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Elf➞Path of Spite➞Griever"
+							]
+						}
 					},
 					resources: 8,
 					setting: "Path of Spite",
@@ -2325,11 +2462,14 @@ export const Elf: bwgr.data.Stock = {
 					name: "Siren",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Elf➞Path of Spite➞Assassin",
-							"Elf➞Path of Spite➞Deciever",
-							"Elf➞Path of Spite➞Liar"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Path of Spite➞Assassin",
+								"Elf➞Path of Spite➞Deciever",
+								"Elf➞Path of Spite➞Liar"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Path of Spite",
@@ -2365,11 +2505,14 @@ export const Elf: bwgr.data.Stock = {
 					name: "Eremite",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Elf➞Path of Spite➞Siren",
-							"Elf➞Path of Spite➞Wastrel",
-							"Elf➞Path of Spite➞Stalker"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Path of Spite➞Siren",
+								"Elf➞Path of Spite➞Wastrel",
+								"Elf➞Path of Spite➞Stalker"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Path of Spite",
@@ -2406,10 +2549,13 @@ export const Elf: bwgr.data.Stock = {
 					name: "Recluse",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Elf➞Path of Spite➞Eremite",
-							"Elf➞Path of Spite➞3*ANY"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Elf➞Path of Spite➞Eremite",
+								"Elf➞Path of Spite➞3*ANY"
+							]
+						}
 					},
 					resources: 25,
 					setting: "Path of Spite",

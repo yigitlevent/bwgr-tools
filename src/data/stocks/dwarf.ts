@@ -30,6 +30,7 @@ export const Dwarf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Artificer",
+			short: "Artificer",
 			stock: "Dwarf",
 			type: "Setting",
 			lifepaths: [
@@ -47,6 +48,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born Artificer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "Artificer",
 					skillPool: 2,
@@ -75,6 +77,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Ardent",
 					physicalPool: 1,
+					requirements: {},
 					resources: 15,
 					setting: "Artificer",
 					skillPool: 4,
@@ -108,10 +111,13 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "Tyro Artificer",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Dwarf➞Artificer➞Ardent",
-							"Dwarf➞Guilder➞Journeyman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Artificer➞Ardent",
+								"Dwarf➞Guilder➞Journeyman"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Artificer",
@@ -144,10 +150,13 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "Artificer",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Dwarf➞Artificer➞Tyro Artificer",
-							"Dwarf➞Guilder➞Craftsman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Artificer➞Tyro Artificer",
+								"Dwarf➞Guilder➞Craftsman"
+							]
+						}
 					},
 					resources: 35,
 					setting: "Artificer",
@@ -176,16 +185,18 @@ export const Dwarf: bwgr.data.Stock = {
 					leads: [
 						"Dwarf➞Outcast",
 						"Dwarf➞Host",
-						"Dwarf➞Noble",
-						"Dwarf➞Templar"
+						"Dwarf➞Noble"
 					],
 					mentalPool: 0,
 					name: "Mask Bearer",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Dwarf➞Artificer➞Artificer"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Dwarf➞Artificer➞Artificer"
+							]
+						}
 					},
 					resources: 50,
 					setting: "Artificer",
@@ -216,9 +227,12 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "Master of Arches",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Dwarf➞Artificer➞Artificer"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Dwarf➞Artificer➞Artificer"
+							]
+						}
 					},
 					resources: 75,
 					setting: "Artificer",
@@ -254,9 +268,12 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "Master of Forges",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Dwarf➞Artificer➞Mask Bearer"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Dwarf➞Artificer➞Mask Bearer"
+							]
+						}
 					},
 					resources: 75,
 					setting: "Artificer",
@@ -292,9 +309,12 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "Master Engraver",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Dwarf➞Artificer➞Master of Arches"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Dwarf➞Artificer➞Master of Arches"
+							]
+						}
 					},
 					resources: 60,
 					setting: "Artificer",
@@ -317,6 +337,7 @@ export const Dwarf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Clansman",
+			short: "Clansman",
 			stock: "Dwarf",
 			type: "Setting",
 			lifepaths: [
@@ -334,6 +355,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born Clansman",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Clansman",
 					skillPool: 0,
@@ -358,6 +380,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Tender",
 					physicalPool: 1,
+					requirements: {},
 					resources: 7,
 					setting: "Clansman",
 					skillPool: 5,
@@ -388,6 +411,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Herder",
 					physicalPool: 1,
+					requirements: {},
 					resources: 9,
 					setting: "Clansman",
 					skillPool: 5,
@@ -415,12 +439,12 @@ export const Dwarf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Dwarf➞Guilder",
-						"Dwarf➞Outcast",
-						"Dwarf➞Templar"
+						"Dwarf➞Outcast"
 					],
 					mentalPool: 1,
 					name: "Tinkerer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "Clansman",
 					skillPool: 4,
@@ -447,12 +471,12 @@ export const Dwarf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Dwarf➞Host",
-						"Dwarf➞Guilder",
-						"Dwarf➞Templar"
+						"Dwarf➞Guilder"
 					],
 					mentalPool: 0,
 					name: "Delver",
 					physicalPool: 1,
+					requirements: {},
 					resources: 10,
 					setting: "Clansman",
 					skillPool: 4,
@@ -483,6 +507,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Miller",
 					physicalPool: 0,
+					requirements: {},
 					resources: 30,
 					setting: "Clansman",
 					skillPool: 6,
@@ -515,14 +540,16 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "Brewer",
 					physicalPool: 1,
 					requirements: {
-						OR:
-							[
+						conditions: {
+							type: "OR",
+							items: [
 								"Dwarf➞Clansman➞Miller",
 								"Dwarf➞Clansman➞Longbeard",
 								"Dwarf➞Noble➞Seneschal",
 								"Dwarf➞Host➞Captain",
 								"Dwarf➞Outcast➞Drunk"
 							]
+						}
 					},
 					resources: 40,
 					setting: "Clansman",
@@ -549,18 +576,20 @@ export const Dwarf: bwgr.data.Stock = {
 					leads: [
 						"Dwarf➞Guilder",
 						"Dwarf➞Host",
-						"Dwarf➞Artificer",
-						"Dwarf➞Templar"
+						"Dwarf➞Artificer"
 					],
 					mentalPool: 0,
 					name: "Foreman",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Dwarf➞Clansman➞Delver",
-							"Dwarf➞Artificer➞Ardent",
-							"Dwarf➞Host➞Engineer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Clansman➞Delver",
+								"Dwarf➞Artificer➞Ardent",
+								"Dwarf➞Host➞Engineer"
+							]
+						}
 					},
 					resources: 25,
 					setting: "Clansman",
@@ -591,12 +620,12 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Husband/Wife",
 					physicalPool: 0,
-					resources: 18,
 					requirements: {
-						LIMIT: [
-							"NOT➞LP*2"
+						limits: [
+							"LP➞MIN➞3"
 						]
 					},
+					resources: 18,
 					setting: "Clansman",
 					skillPool: 5,
 					skills: [
@@ -623,23 +652,24 @@ export const Dwarf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Dwarf➞Host",
-						"Dwarf➞Guilder",
-						"Dwarf➞Templar"
+						"Dwarf➞Guilder"
 					],
 					mentalPool: 1,
 					name: "Longbeard",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Dwarf➞Templar➞Palisade",
-							"Dwarf➞Clansman➞Foreman",
-							"Dwarf➞Host➞Graybeard",
-							"Dwarf➞Artificer➞Artificer",
-							"Dwarf➞Guilder➞Trader",
-							"Dwarf➞Noble➞Senechal",
-							"Dwarf➞Outcast➞Adventurer",
-							"Dwarf➞Clansman➞Husband/Wife"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Clansman➞Foreman",
+								"Dwarf➞Host➞Graybeard",
+								"Dwarf➞Artificer➞Artificer",
+								"Dwarf➞Guilder➞Trader",
+								"Dwarf➞Noble➞Senechal",
+								"Dwarf➞Outcast➞Adventurer",
+								"Dwarf➞Clansman➞Husband/Wife"
+							]
+						}
 					},
 					resources: 30,
 					setting: "Clansman",
@@ -666,6 +696,7 @@ export const Dwarf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Guilder",
+			short: "Guilder",
 			stock: "Dwarf",
 			type: "Setting",
 			lifepaths: [
@@ -683,6 +714,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born Guilder",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Guilder",
 					skillPool: 0,
@@ -702,12 +734,12 @@ export const Dwarf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Dwarf➞Clansman",
-						"Dwarf➞Host",
-						"Dwarf➞Templar"
+						"Dwarf➞Host"
 					],
 					mentalPool: 0,
 					name: "Wordbearer",
 					physicalPool: 1,
+					requirements: {},
 					resources: 10,
 					setting: "Guilder",
 					skillPool: 5,
@@ -741,6 +773,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Hauler",
 					physicalPool: 1,
+					requirements: {},
 					resources: 7,
 					setting: "Guilder",
 					skillPool: 5,
@@ -772,6 +805,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Carter",
 					physicalPool: 1,
+					requirements: {},
 					resources: 10,
 					setting: "Guilder",
 					skillPool: 5,
@@ -800,12 +834,12 @@ export const Dwarf: bwgr.data.Stock = {
 					leads: [
 						"Dwarf➞Clansman",
 						"Dwarf➞Outcast",
-						"Dwarf➞Host",
-						"Dwarf➞Templar"
+						"Dwarf➞Host"
 					],
 					mentalPool: 1,
 					name: "Hawker",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "Guilder",
 					skillPool: 6,
@@ -831,12 +865,12 @@ export const Dwarf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Dwarf➞Clansman",
-						"Dwarf➞Artificer",
-						"Dwarf➞Templar"
+						"Dwarf➞Artificer"
 					],
 					mentalPool: 0,
 					name: "Apprentice",
 					physicalPool: 1,
+					requirements: {},
 					resources: 20,
 					setting: "Guilder",
 					skillPool: 4,
@@ -864,18 +898,20 @@ export const Dwarf: bwgr.data.Stock = {
 					leads: [
 						"Dwarf➞Clansman",
 						"Dwarf➞Artificer",
-						"Dwarf➞Host",
-						"Dwarf➞Templar"
+						"Dwarf➞Host"
 					],
 					mentalPool: 0,
 					name: "Journeyman",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Dwarf➞Guilder➞Apprentice",
-							"Dwarf➞Artificer➞Ardent",
-							"Dwarf➞Noble➞Ardent"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Guilder➞Apprentice",
+								"Dwarf➞Artificer➞Ardent",
+								"Dwarf➞Noble➞Ardent"
+							]
+						}
 					},
 					resources: 25,
 					setting: "Guilder",
@@ -903,21 +939,23 @@ export const Dwarf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Dwarf➞Clansman",
-						"Dwarf➞Artificer",
-						"Dwarf➞Templar"
+						"Dwarf➞Artificer"
 					],
 					mentalPool: 0,
 					name: "Craftsman",
 					physicalPool: 0,
-					resources: 45,
 					requirements: {
-						OR: [
-							"Dwarf➞Guilder➞Journeyman",
-							"Dwarf➞Artificer➞Artificer",
-							"Dwarf➞Host➞Artillerist",
-							"Dwarf➞Host➞Engineer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Guilder➞Journeyman",
+								"Dwarf➞Artificer➞Artificer",
+								"Dwarf➞Host➞Artillerist",
+								"Dwarf➞Host➞Engineer"
+							]
+						}
 					},
+					resources: 45,
 					setting: "Guilder",
 					skillPool: 4,
 					skills: [
@@ -945,15 +983,18 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Trader",
 					physicalPool: 0,
-					resources: 70,
 					requirements: {
-						OR: [
-							"Dwarf➞Guilder➞Hawker",
-							"Dwarf➞Guilder➞Journeyman",
-							"Dwarf➞Outcast➞Adventurer",
-							"Dwarf➞Clansman➞Husband/Wife"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Guilder➞Hawker",
+								"Dwarf➞Guilder➞Journeyman",
+								"Dwarf➞Outcast➞Adventurer",
+								"Dwarf➞Clansman➞Husband/Wife"
+							]
+						}
 					},
+					resources: 70,
 					setting: "Guilder",
 					skillPool: 7,
 					skills: [
@@ -975,6 +1016,7 @@ export const Dwarf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Host",
+			short: "Host",
 			stock: "Dwarf",
 			type: "Subsetting",
 			lifepaths: [
@@ -989,12 +1031,12 @@ export const Dwarf: bwgr.data.Stock = {
 					leads: [
 						"Dwarf➞Clansman",
 						"Dwarf➞Outcast",
-						"Dwarf➞Guilder",
-						"Dwarf➞Templar"
+						"Dwarf➞Guilder"
 					],
 					mentalPool: 0,
 					name: "Foot Soldier",
 					physicalPool: 1,
+					requirements: {},
 					resources: 6,
 					setting: "Host",
 					skillPool: 6,
@@ -1024,12 +1066,12 @@ export const Dwarf: bwgr.data.Stock = {
 					leads: [
 						"Dwarf➞Clansman",
 						"Dwarf➞Outcast",
-						"Dwarf➞Guilder",
-						"Dwarf➞Templar"
+						"Dwarf➞Guilder"
 					],
 					mentalPool: 0,
 					name: "Arbalester",
 					physicalPool: 0,
+					requirements: {},
 					resources: 12,
 					setting: "Host",
 					skillPool: 5,
@@ -1063,6 +1105,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Banner Bearer",
 					physicalPool: 1,
+					requirements: {},
 					resources: 10,
 					setting: "Host",
 					skillPool: 4,
@@ -1090,12 +1133,12 @@ export const Dwarf: bwgr.data.Stock = {
 					leads: [
 						"Dwarf➞Clansman",
 						"Dwarf➞Outcast",
-						"Dwarf➞Guilder",
-						"Dwarf➞Templar"
+						"Dwarf➞Guilder"
 					],
 					mentalPool: 0,
 					name: "Horncaller",
 					physicalPool: 1,
+					requirements: {},
 					resources: 9,
 					setting: "Host",
 					skillPool: 5,
@@ -1121,18 +1164,20 @@ export const Dwarf: bwgr.data.Stock = {
 					leads: [
 						"Dwarf➞Guilder",
 						"Dwarf➞Outcast",
-						"Dwarf➞Noble",
-						"Dwarf➞Templar"
+						"Dwarf➞Noble"
 					],
 					mentalPool: 0,
 					name: "Axe Bearer",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Dwarf➞Noble➞Ardent",
-							"Dwarf➞Host➞Graybeard",
-							"Dwarf➞Host➞Banner Bearer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Noble➞Ardent",
+								"Dwarf➞Host➞Graybeard",
+								"Dwarf➞Host➞Banner Bearer"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Host",
@@ -1165,18 +1210,20 @@ export const Dwarf: bwgr.data.Stock = {
 					leads: [
 						"Dwarf➞Guilder",
 						"Dwarf➞Outcast",
-						"Dwarf➞Noble",
-						"Dwarf➞Templar"
+						"Dwarf➞Noble"
 					],
 					mentalPool: 0,
 					name: "Graybeard",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Dwarf➞Host➞Axe Bearer",
-							"Dwarf➞Clansman➞Longbeard",
-							"Dwarf➞Host➞3*ANY"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Host➞Axe Bearer",
+								"Dwarf➞Clansman➞Longbeard",
+								"Dwarf➞Host➞3*ANY"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Host",
@@ -1212,11 +1259,14 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "Khirurgeon",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Dwarf➞Noble➞Abecedart",
-							"Dwarf➞Noble➞Seneschal",
-							"Dwarf➞Host➞Graybeard"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Noble➞Abecedart",
+								"Dwarf➞Noble➞Seneschal",
+								"Dwarf➞Host➞Graybeard"
+							]
+						}
 					},
 					resources: 25,
 					setting: "Host",
@@ -1249,12 +1299,15 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "Quartermaster",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Dwarf➞Noble➞Seneschal",
-							"Dwarf➞Noble➞Treasurer",
-							"Dwarf➞Guilder➞Trader",
-							"Dwarf➞Host➞Graybeard"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Noble➞Seneschal",
+								"Dwarf➞Noble➞Treasurer",
+								"Dwarf➞Guilder➞Trader",
+								"Dwarf➞Host➞Graybeard"
+							]
+						}
 					},
 					resources: 35,
 					setting: "Host",
@@ -1284,17 +1337,19 @@ export const Dwarf: bwgr.data.Stock = {
 					leads: [
 						"Dwarf➞Guilder",
 						"Dwarf➞Outcast",
-						"Dwarf➞Noble",
-						"Dwarf➞Templar"
+						"Dwarf➞Noble"
 					],
 					mentalPool: 1,
 					name: "Captain",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Dwarf➞Noble➞Prince",
-							"Dwarf➞Host➞Graybeard"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Noble➞Prince",
+								"Dwarf➞Host➞Graybeard"
+							]
+						}
 					},
 					resources: 40,
 					setting: "Host",
@@ -1329,12 +1384,15 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "Artillerist",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Dwarf➞Artificer➞Mask Bearer",
-							"Dwarf➞Guilder➞Craftsman",
-							"Dwarf➞Clansman➞Foreman",
-							"Dwarf➞Host➞3*Arbalester"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Artificer➞Mask Bearer",
+								"Dwarf➞Guilder➞Craftsman",
+								"Dwarf➞Clansman➞Foreman",
+								"Dwarf➞Host➞3*Arbalester"
+							]
+						}
 					},
 					resources: 45,
 					setting: "Host",
@@ -1368,10 +1426,13 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "Engineer",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Dwarf➞Host➞Artillerist",
-							"Dwarf➞Artificer➞Mask Bearer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Host➞Artillerist",
+								"Dwarf➞Artificer➞Mask Bearer"
+							]
+						}
 					},
 					resources: 50,
 					setting: "Host",
@@ -1399,18 +1460,20 @@ export const Dwarf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Dwarf➞Outcast",
-						"Dwarf➞Noble",
-						"Dwarf➞Templar"
+						"Dwarf➞Noble"
 					],
 					mentalPool: 0,
 					name: "Warden",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Dwarf➞Noble➞Prince",
-							"Dwarf➞Host➞Captain",
-							"Dwarf➞Noble➞High Captain"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Noble➞Prince",
+								"Dwarf➞Host➞Captain",
+								"Dwarf➞Noble➞High Captain"
+							]
+						}
 					},
 					resources: 65,
 					setting: "Host",
@@ -1439,6 +1502,7 @@ export const Dwarf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Noble",
+			short: "Noble",
 			stock: "Dwarf",
 			type: "Setting",
 			lifepaths: [
@@ -1457,6 +1521,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born Noble",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Noble",
 					skillPool: 2,
@@ -1486,6 +1551,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Abecedart",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Noble",
 					skillPool: 4,
@@ -1517,6 +1583,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Ardent",
 					physicalPool: 1,
+					requirements: {},
 					resources: 15,
 					setting: "Noble",
 					skillPool: 4,
@@ -1549,10 +1616,13 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "Axe Bearer",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Dwarf➞Noble➞Ardent",
-							"Dwarf➞Host➞Banner Bearer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Noble➞Ardent",
+								"Dwarf➞Host➞Banner Bearer"
+							]
+						}
 					},
 					resources: 25,
 					setting: "Noble",
@@ -1588,11 +1658,14 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "Chronicler",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Dwarf➞Noble➞Abecedart",
-							"Dwarf➞Host➞Khiurgeon",
-							"Dwarf➞Host➞Graybeard"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Noble➞Abecedart",
+								"Dwarf➞Host➞Khiurgeon",
+								"Dwarf➞Host➞Graybeard"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Noble",
@@ -1629,14 +1702,17 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "Seneschal",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Dwarf➞Guilder➞Trader",
-							"Dwarf➞Clansman➞Longbeard",
-							"Dwarf➞Host➞Quartermaster",
-							"Dwarf➞Noble➞Chronicler",
-							"Dwarf➞Host➞Khiurgeon",
-							"Dwarf➞Host➞Graybeard"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Guilder➞Trader",
+								"Dwarf➞Clansman➞Longbeard",
+								"Dwarf➞Host➞Quartermaster",
+								"Dwarf➞Noble➞Chronicler",
+								"Dwarf➞Host➞Khiurgeon",
+								"Dwarf➞Host➞Graybeard"
+							]
+						}
 					},
 					resources: 50,
 					setting: "Noble",
@@ -1670,11 +1746,14 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "Treasurer",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Dwarf➞Noble➞Seneschal",
-							"Dwarf➞Artificer➞Artificer",
-							"Dwarf➞Host➞Warden"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Dwarf➞Noble➞Seneschal",
+								"Dwarf➞Artificer➞Artificer",
+								"Dwarf➞Host➞Warden"
+							]
+						}
 					},
 					resources: 100,
 					setting: "Noble",
@@ -1709,13 +1788,19 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "High Captain",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Dwarf➞Host➞Captain",
-							"Dwarf➞Host➞Warden"
-						],
-						AND: [
-							"Dwarf➞Noble➞Axe Bearer"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Dwarf➞Noble➞Axe Bearer",
+								{
+									type: "OR",
+									items: [
+										"Dwarf➞Host➞Captain",
+										"Dwarf➞Host➞Warden"
+									]
+								}
+							]
+						}
 					},
 					resources: 75,
 					setting: "Noble",
@@ -1749,10 +1834,13 @@ export const Dwarf: bwgr.data.Stock = {
 					name: "Prince",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Dwarf➞Noble➞Born Noble",
-							"Dwarf➞Noble➞Axe Bearer"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Dwarf➞Noble➞Born Noble",
+								"Dwarf➞Noble➞Axe Bearer"
+							]
+						}
 					},
 					resources: 200,
 					setting: "Noble",
@@ -1782,6 +1870,7 @@ export const Dwarf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Outcast",
+			short: "Outcast",
 			stock: "Dwarf",
 			type: "Subsetting",
 			lifepaths: [
@@ -1800,6 +1889,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Adventurer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Outcast",
 					skillPool: 12,
@@ -1842,6 +1932,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Gambler",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "Outcast",
 					skillPool: 5,
@@ -1872,6 +1963,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Oathbreaker",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Outcast",
 					skillPool: 4,
@@ -1902,6 +1994,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Drunk",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Outcast",
 					skillPool: 5,
@@ -1936,6 +2029,7 @@ export const Dwarf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Coward",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Outcast",
 					skillPool: 5,
@@ -1964,12 +2058,12 @@ export const Dwarf: bwgr.data.Stock = {
 						"Dwarf➞Clansman",
 						"Dwarf➞Guilder",
 						"Dwarf➞Artificer",
-						"Dwarf➞Noble",
-						"Dwarf➞Templar"
+						"Dwarf➞Noble"
 					],
 					mentalPool: 1,
 					name: "Rune Caster",
 					physicalPool: 1,
+					requirements: {},
 					resources: 6,
 					setting: "Outcast",
 					skillPool: 5,

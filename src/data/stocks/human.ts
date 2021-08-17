@@ -27,6 +27,7 @@ export const Human: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "City Dweller",
+			short: "City",
 			stock: "Human",
 			type: "Setting",
 			lifepaths: [
@@ -39,7 +40,7 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 4,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court",
 						"Human➞Noble",
 						"Human➞Outcast",
@@ -48,6 +49,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "City Born",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "City Dweller",
 					skillPool: 0,
@@ -72,6 +74,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Gifted Child",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "City Dweller",
 					skillPool: 0,
@@ -101,6 +104,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Runner",
 					physicalPool: 1,
+					requirements: {},
 					resources: 7,
 					setting: "City Dweller",
 					skillPool: 3,
@@ -123,15 +127,15 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Villager"
 					],
 					mentalPool: 0,
 					name: "Urchin",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2/3"
+						limits: [
+							"LP➞MAX➞3"
 						]
 					},
 					resources: 4,
@@ -162,12 +166,13 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Villager"
 					],
 					mentalPool: 0,
 					name: "Beggar",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "City Dweller",
 					skillPool: 6,
@@ -204,6 +209,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Courier",
 					physicalPool: 0,
+					requirements: {},
 					resources: 8,
 					setting: "City Dweller",
 					skillPool: 4,
@@ -228,12 +234,13 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Professional Soldier",
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Peasant"
 					],
 					mentalPool: 0,
 					name: "Laborer",
 					physicalPool: 1,
+					requirements: {},
 					resources: 4,
 					setting: "City Dweller",
 					skillPool: 2,
@@ -259,13 +266,13 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Religious",
-						"Human➞Servitude",
-						"Human➞Villager",
-						"Human➞Nomad"
+						"Human➞Servitude and Captive",
+						"Human➞Villager"
 					],
 					mentalPool: 1,
 					name: "Pilgrim",
 					physicalPool: 0,
+					requirements: {},
 					resources: 3,
 					setting: "City Dweller",
 					skillPool: 4,
@@ -299,6 +306,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Groom",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "City Dweller",
 					skillPool: 6,
@@ -329,21 +337,24 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Professional Soldier",
 						"Human➞Outcast",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Duelist",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Squire",
-							"Human➞Noble Court➞Squire",
-							"Human➞Outcast➞1*ANY",
-							"Human➞Professional➞1*ANY",
-							"Human➞Villager➞Village Guard",
-							"Human➞City Dweller➞City Guard",
-							"Human➞City Dweller➞Guard Captain"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Squire",
+								"Human➞Noble Court➞Squire",
+								"Human➞Outcast➞1*ANY",
+								"Human➞Professional➞1*ANY",
+								"Human➞Villager➞Village Guard",
+								"Human➞City Dweller➞City Guard",
+								"Human➞City Dweller➞Guard Captain"
+							]
+						}
 					},
 					resources: 8,
 					setting: "City Dweller",
@@ -381,6 +392,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Coin Clipper",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "City Dweller",
 					skillPool: 5,
@@ -410,12 +422,12 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Outcast",
 						"Human➞Villager",
-						"Human➞Servitude",
-						"Human➞Merchant House"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Pickpocket",
 					physicalPool: 1,
+					requirements: {},
 					resources: 8,
 					setting: "City Dweller",
 					skillPool: 5,
@@ -442,12 +454,13 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Professional Soldier"
 					],
 					mentalPool: 0,
 					name: "Street Thug",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "City Dweller",
 					skillPool: 5,
@@ -481,6 +494,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Criminal",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "City Dweller",
 					skillPool: 6,
@@ -517,6 +531,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Confidence Man",
 					physicalPool: 0,
+					requirements: {},
 					resources: 12,
 					setting: "City Dweller",
 					skillPool: 5,
@@ -542,14 +557,14 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Villager",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Peasant",
-						"Human➞Outcast",
-						"Human➞Merchant House"
+						"Human➞Outcast"
 					],
 					mentalPool: 0,
 					name: "City Peddler",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "City Dweller",
 					skillPool: 7,
@@ -581,11 +596,12 @@ export const Human: bwgr.data.Stock = {
 						"Human➞Professional Soldier",
 						"Human➞Seafaring",
 						"Human➞Peasant",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Sailor",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "City Dweller",
 					skillPool: 5,
@@ -617,7 +633,7 @@ export const Human: bwgr.data.Stock = {
 						"Human➞Peasant",
 						"Human➞Villager",
 						"Human➞Seafaring",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court",
 						"Human➞Religious",
 						"Human➞Professional Soldier",
@@ -626,6 +642,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Student",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "City Dweller",
 					skillPool: 11,
@@ -661,12 +678,13 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court"
 					],
 					mentalPool: 0,
 					name: "Ganymede",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "City Dweller",
 					skillPool: 5,
@@ -702,6 +720,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Dilettante",
 					physicalPool: 0,
+					requirements: {},
 					resources: 8,
 					setting: "City Dweller",
 					skillPool: 4,
@@ -731,12 +750,13 @@ export const Human: bwgr.data.Stock = {
 						"Human➞Villager",
 						"Human➞Peasant",
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞College of Magic"
 					],
 					mentalPool: 1,
 					name: "Neophyte Sorcerer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 12,
 					setting: "City Dweller",
 					skillPool: 6,
@@ -767,12 +787,13 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Peasant",
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Religious"
 					],
 					mentalPool: 1,
 					name: "Temple Acolyte",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "City Dweller",
 					skillPool: 5,
@@ -808,6 +829,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Sculptor",
 					physicalPool: 0,
+					requirements: {},
 					resources: 8,
 					setting: "City Dweller",
 					skillPool: 6,
@@ -841,6 +863,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Painter",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "City Dweller",
 					skillPool: 5,
@@ -875,6 +898,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Composer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "City Dweller",
 					skillPool: 5,
@@ -908,6 +932,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Dramaturge",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "City Dweller",
 					skillPool: 5,
@@ -940,6 +965,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Performer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "City Dweller",
 					skillPool: 6,
@@ -975,6 +1001,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Tinkerer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 8,
 					setting: "City Dweller",
 					skillPool: 5,
@@ -997,7 +1024,7 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Peasant",
 						"Human➞Outcast",
 						"Human➞Professional Soldier"
@@ -1005,6 +1032,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Coal Man",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "City Dweller",
 					skillPool: 4,
@@ -1036,6 +1064,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Seamstress",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "City Dweller",
 					skillPool: 4,
@@ -1063,12 +1092,12 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Villager",
-						"Human➞Peasant",
-						"Human➞Merchant House"
+						"Human➞Peasant"
 					],
 					mentalPool: 0,
 					name: "Barkeep",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "City Dweller",
 					skillPool: 4,
@@ -1094,12 +1123,12 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Villager",
-						"Human➞Peasant",
-						"Human➞Merchant House"
+						"Human➞Peasant"
 					],
 					mentalPool: 1,
 					name: "Shopkeeper",
 					physicalPool: 0,
+					requirements: {},
 					resources: 16,
 					setting: "City Dweller",
 					skillPool: 4,
@@ -1129,6 +1158,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Baker",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "City Dweller",
 					skillPool: 5,
@@ -1162,7 +1192,7 @@ export const Human: bwgr.data.Stock = {
 					name: "Alewife",
 					physicalPool: 1,
 					requirements: {
-						LIMIT: [
+						limits: [
 							"GENDER➞FEMALE"
 						]
 					},
@@ -1199,6 +1229,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Conner",
 					physicalPool: 0,
+					requirements: {},
 					resources: 12,
 					setting: "City Dweller",
 					skillPool: 5,
@@ -1228,12 +1259,12 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Villager",
 						"Human➞Outcast",
-						"Human➞Professional Soldier",
-						"Human➞Merchant House"
+						"Human➞Professional Soldier"
 					],
 					mentalPool: 1,
 					name: "Clerk",
 					physicalPool: 0,
+					requirements: {},
 					resources: 9,
 					setting: "City Dweller",
 					skillPool: 4,
@@ -1266,16 +1297,19 @@ export const Human: bwgr.data.Stock = {
 					name: "Scribe",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student",
-							"Human➞Religious➞Acolyte",
-							"Human➞Villager➞Acolyte",
-							"Human➞City Dweller➞Clerk",
-							"Human➞Religious➞Clerk",
-							"Human➞Villager➞Clerk"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student",
+								"Human➞Religious➞Acolyte",
+								"Human➞Villager➞Acolyte",
+								"Human➞City Dweller➞Clerk",
+								"Human➞Religious➞Clerk",
+								"Human➞Villager➞Clerk"
+							]
+						}
 					},
 					resources: 10,
 					setting: "City Dweller",
@@ -1304,23 +1338,25 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Villager",
-						"Human➞Peasant",
-						"Human➞Merchant House"
+						"Human➞Peasant"
 					],
 					mentalPool: 1,
 					name: "Accountant",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Clerk",
-							"Human➞Religious➞Clerk",
-							"Human➞Villager➞Clerk",
-							"Human➞Noble➞Young Lady",
-							"Human➞Noble Court➞Young Lady",
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Clerk",
+								"Human➞Religious➞Clerk",
+								"Human➞Villager➞Clerk",
+								"Human➞Noble➞Young Lady",
+								"Human➞Noble Court➞Young Lady",
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student"
+							]
+						}
 					},
 					resources: 15,
 					setting: "City Dweller",
@@ -1357,19 +1393,22 @@ export const Human: bwgr.data.Stock = {
 					name: "Scholar",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Scribe",
-							"Human➞Religious➞Scribe",
-							"Human➞Outcast➞Thinker",
-							"Human➞Religious➞Archivist",
-							"Human➞Religious➞Interpreter",
-							"Human➞Religious➞Custodian",
-							"Human➞City Dweller➞Bishop",
-							"Human➞Religious➞Bishop",
-							"Skill➞Man Sorcerous➞Sorcery",
-							"Skill➞Man Sorcerous➞Enchanting",
-							"Skill➞Man Sorcerous➞Summoning"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Scribe",
+								"Human➞Religious➞Scribe",
+								"Human➞Outcast➞Thinker",
+								"Human➞Religious➞Archivist",
+								"Human➞Religious➞Interpreter",
+								"Human➞Religious➞Custodian",
+								"Human➞City Dweller➞Bishop",
+								"Human➞Religious➞Bishop",
+								"Skill➞Human Magical➞Sorcery",
+								"Skill➞Human Magical➞Enchanting",
+								"Skill➞Human Magical➞Summoning"
+							]
+						}
 					},
 					resources: 15,
 					setting: "City Dweller",
@@ -1404,12 +1443,12 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Villager",
 						"Human➞Peasant",
-						"Human➞Outcast",
-						"Human➞Merchant House"
+						"Human➞Outcast"
 					],
 					mentalPool: 0,
 					name: "Moneylender",
 					physicalPool: 0,
+					requirements: {},
 					resources: 20,
 					setting: "City Dweller",
 					skillPool: 4,
@@ -1436,15 +1475,14 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Villager",
 						"Human➞Peasant",
-						"Human➞Outcast",
-						"Human➞Merchant House"
+						"Human➞Outcast"
 					],
 					mentalPool: 1,
 					name: "Tax Collector",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"NOT➞LP*2"
+						limits: [
+							"LP➞MIN➞3"
 						]
 					},
 					resources: 18,
@@ -1480,8 +1518,8 @@ export const Human: bwgr.data.Stock = {
 					name: "Taskmaster",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"NOT➞LP*2"
+						limits: [
+							"LP➞MIN➞3"
 						]
 					},
 					resources: 15,
@@ -1519,15 +1557,18 @@ export const Human: bwgr.data.Stock = {
 					name: "Mercenary Captain",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Sailor",
-							"Human➞Professional Soldier➞Sailor",
-							"Human➞Seafaring➞Sailor",
-							"Human➞Villager➞Sailor",
-							"Human➞Outcast➞Pirate",
-							"Human➞Noble➞Knight",
-							"Human➞Noble Court➞Knight"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Sailor",
+								"Human➞Professional Soldier➞Sailor",
+								"Human➞Seafaring➞Sailor",
+								"Human➞Villager➞Sailor",
+								"Human➞Outcast➞Pirate",
+								"Human➞Noble➞Knight",
+								"Human➞Noble Court➞Knight"
+							]
+						}
 					},
 					resources: 15,
 					setting: "City Dweller",
@@ -1561,6 +1602,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "City Guard",
 					physicalPool: 1,
+					requirements: {},
 					resources: 9,
 					setting: "City Dweller",
 					skillPool: 5,
@@ -1594,19 +1636,22 @@ export const Human: bwgr.data.Stock = {
 					name: "Sergeant-at-Arms",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Villager➞Village Guard",
-							"Human➞City Dweller➞City Guard",
-							"Human➞City Dweller➞Guard Captain",
-							"Human➞Seafaring➞Marine",
-							"Human➞Seafaring➞First Mate",
-							"Human➞Professional Soldier➞Foot Soldier",
-							"Human➞Outcast➞Freebooter",
-							"Human➞Noble➞Squire",
-							"Human➞Noble Court➞Squire",
-							"Human➞Noble Court➞Man-at-Arms",
-							"Human➞Professional Soldier➞Cavalryman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Village Guard",
+								"Human➞City Dweller➞City Guard",
+								"Human➞City Dweller➞Guard Captain",
+								"Human➞Seafaring➞Marine",
+								"Human➞Seafaring➞First Mate",
+								"Human➞Professional Soldier➞Foot Soldier",
+								"Human➞Outcast➞Freebooter",
+								"Human➞Noble➞Squire",
+								"Human➞Noble Court➞Squire",
+								"Human➞Noble Court➞Man-at-Arms",
+								"Human➞Professional Soldier➞Cavalryman"
+							]
+						}
 					},
 					resources: 11,
 					setting: "City Dweller",
@@ -1641,14 +1686,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Guard Captain",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Knight",
-							"Human➞Noble Court➞Knight",
-							"Human➞Professional Soldier➞Captain",
-							"Human➞Villager➞Village Sergeant",
-							"Human➞Villager➞Corrupt Sergeant",
-							"Human➞Professional Soldier➞Sergeant"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Knight",
+								"Human➞Noble Court➞Knight",
+								"Human➞Professional Soldier➞Captain",
+								"Human➞Villager➞Village Sergeant",
+								"Human➞Villager➞Corrupt Sergeant",
+								"Human➞Professional Soldier➞Sergeant"
+							]
+						}
 					},
 					resources: 15,
 					setting: "City Dweller",
@@ -1684,6 +1732,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Apprentice",
 					physicalPool: 1,
+					requirements: {},
 					resources: 8,
 					setting: "City Dweller",
 					skillPool: 6,
@@ -1718,6 +1767,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Apprentice Artisan",
 					physicalPool: 1,
+					requirements: {},
 					resources: 10,
 					setting: "City Dweller",
 					skillPool: 8,
@@ -1751,19 +1801,21 @@ export const Human: bwgr.data.Stock = {
 						"Human➞Villager",
 						"Human➞Peasant",
 						"Human➞Professional Soldier",
-						"Human➞Seafaring",
-						"Human➞Merchant House"
+						"Human➞Seafaring"
 					],
 					mentalPool: 0,
 					name: "Journeyman",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Apprentice",
-							"Human➞Nomad➞Apprentice",
-							"Human➞Professional Soldier➞Apprentice",
-							"Human➞Villager➞Apprentice"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Apprentice",
+								"Human➞Nomad➞Apprentice",
+								"Human➞Professional Soldier➞Apprentice",
+								"Human➞Villager➞Apprentice"
+							]
+						}
 					},
 					resources: 15,
 					setting: "City Dweller",
@@ -1801,11 +1853,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Engraver",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Journeyman",
-							"Human➞Professional Soldier➞Journeyman",
-							"Human➞Villager➞Journeyman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Journeyman",
+								"Human➞Professional Soldier➞Journeyman",
+								"Human➞Villager➞Journeyman"
+							]
+						}
 					},
 					resources: 15,
 					setting: "City Dweller",
@@ -1833,18 +1888,20 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Villager",
 						"Human➞Professional Soldier",
-						"Human➞Noble Court",
-						"Human➞Nomad"
+						"Human➞Noble Court"
 					],
 					mentalPool: 0,
 					name: "Saddler",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Journeyman",
-							"Human➞Professional Soldier➞Journeyman",
-							"Human➞Villager➞Journeyman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Journeyman",
+								"Human➞Professional Soldier➞Journeyman",
+								"Human➞Villager➞Journeyman"
+							]
+						}
 					},
 					resources: 25,
 					setting: "City Dweller",
@@ -1873,18 +1930,20 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Professional Soldier",
 						"Human➞Noble Court",
-						"Human➞Outcast",
-						"Human➞Merchant House"
+						"Human➞Outcast"
 					],
 					mentalPool: 0,
 					name: "Armorer",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Journeyman",
-							"Human➞Professional Soldier➞Journeyman",
-							"Human➞Villager➞Journeyman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Journeyman",
+								"Human➞Professional Soldier➞Journeyman",
+								"Human➞Villager➞Journeyman"
+							]
+						}
 					},
 					resources: 25,
 					setting: "City Dweller",
@@ -1919,11 +1978,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Plumber",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Journeyman",
-							"Human➞Professional Soldier➞Journeyman",
-							"Human➞Villager➞Journeyman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Journeyman",
+								"Human➞Professional Soldier➞Journeyman",
+								"Human➞Villager➞Journeyman"
+							]
+						}
 					},
 					resources: 20,
 					setting: "City Dweller",
@@ -1957,11 +2019,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Locksmith",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Journeyman",
-							"Human➞Professional Soldier➞Journeyman",
-							"Human➞Villager➞Journeyman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Journeyman",
+								"Human➞Professional Soldier➞Journeyman",
+								"Human➞Villager➞Journeyman"
+							]
+						}
 					},
 					resources: 13,
 					setting: "City Dweller",
@@ -1988,18 +2053,20 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Peasant",
-						"Human➞Villager",
-						"Human➞Merchant House"
+						"Human➞Villager"
 					],
 					mentalPool: 0,
 					name: "Jeweler",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Journeyman",
-							"Human➞Professional Soldier➞Journeyman",
-							"Human➞Villager➞Journeyman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Journeyman",
+								"Human➞Professional Soldier➞Journeyman",
+								"Human➞Villager➞Journeyman"
+							]
+						}
 					},
 					resources: 20,
 					setting: "City Dweller",
@@ -2036,14 +2103,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Gaol Warden",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Born Noble",
-							"Human➞City Dweller➞Merchant",
-							"Human➞Villager➞Merchant",
-							"Human➞Professional Soldier➞Sergeant",
-							"Human➞Noble Court➞Man-at-Arms",
-							"Human➞City Dweller➞Judge"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Born Noble",
+								"Human➞City Dweller➞Merchant",
+								"Human➞Villager➞Merchant",
+								"Human➞Professional Soldier➞Sergeant",
+								"Human➞Noble Court➞Man-at-Arms",
+								"Human➞City Dweller➞Judge"
+							]
+						}
 					},
 					resources: 15,
 					setting: "City Dweller",
@@ -2076,13 +2146,16 @@ export const Human: bwgr.data.Stock = {
 					name: "Advocate",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student",
-							"Human➞Noble➞Young Lady",
-							"Human➞Noble Court➞Young Lady"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student",
+								"Human➞Noble➞Young Lady",
+								"Human➞Noble Court➞Young Lady"
+							]
+						}
 					},
 					resources: 25,
 					setting: "City Dweller",
@@ -2118,13 +2191,16 @@ export const Human: bwgr.data.Stock = {
 					name: "Doctor",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student",
-							"Human➞Noble➞Young Lady",
-							"Human➞Noble Court➞Young Lady"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student",
+								"Human➞Noble➞Young Lady",
+								"Human➞Noble Court➞Young Lady"
+							]
+						}
 					},
 					resources: 20,
 					setting: "City Dweller",
@@ -2159,14 +2235,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Physician",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Peasant➞Midwife",
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student",
-							"Human➞Noble➞Young Lady",
-							"Human➞Noble Court➞Young Lady"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Peasant➞Midwife",
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student",
+								"Human➞Noble➞Young Lady",
+								"Human➞Noble Court➞Young Lady"
+							]
+						}
 					},
 					resources: 15,
 					setting: "City Dweller",
@@ -2193,18 +2272,21 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Religious"
 					],
 					mentalPool: 0,
 					name: "Hospital Warden",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble,➞1*ANY",
-							"Human➞Noble Court➞1*ANY",
-							"Human➞Religious➞1*ANY"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble,➞1*ANY",
+								"Human➞Noble Court➞1*ANY",
+								"Human➞Religious➞1*ANY"
+							]
+						}
 					},
 					resources: 15,
 					setting: "City Dweller",
@@ -2235,22 +2317,24 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 2,
 					leads: [
 						"Human➞Noble Court",
-						"Human➞Noble",
-						"Human➞Merchant House"
+						"Human➞Noble"
 					],
 					mentalPool: 0,
 					name: "Banker",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Merchant",
-							"Human➞Villager➞Merchant",
-							"Human➞City Dweller➞Moneylender",
-							"Human➞Noble Court➞Steward",
-							"Human➞Seafaring➞Steward",
-							"Human➞City Dweller➞Accountant",
-							"Human➞Noble Court➞Chamberlain"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Merchant",
+								"Human➞Villager➞Merchant",
+								"Human➞City Dweller➞Moneylender",
+								"Human➞Noble Court➞Steward",
+								"Human➞Seafaring➞Steward",
+								"Human➞City Dweller➞Accountant",
+								"Human➞Noble Court➞Chamberlain"
+							]
+						}
 					},
 					resources: 60,
 					setting: "City Dweller",
@@ -2278,31 +2362,32 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Villager",
 						"Human➞Peasant",
-						"Human➞Noble Court",
-						"Human➞Merchant House",
-						"Human➞Nomad"
+						"Human➞Noble Court"
 					],
 					mentalPool: 1,
 					name: "Merchant",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Master Craftsman",
-							"Human➞Villager➞Master Craftsman",
-							"Human➞Noble Court➞Master of Horses",
-							"Human➞Noble Court➞Master of Hounds",
-							"Human➞City Dweller➞Moneylender",
-							"Human➞Noble Court➞Steward",
-							"Human➞Seafaring➞Steward",
-							"Human➞City Dweller➞Jeweler",
-							"Human➞City Dweller➞Saddler",
-							"Human➞City Dweller➞Armorer",
-							"Human➞Noble Court➞Armorer",
-							"Human➞Professional Soldier➞Armorer",
-							"Human➞Villager➞Cobbler",
-							"Human➞Noble Court➞Courtier",
-							"Human➞Noble Court➞Chamberlain"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Master Craftsman",
+								"Human➞Villager➞Master Craftsman",
+								"Human➞Noble Court➞Master of Horses",
+								"Human➞Noble Court➞Master of Hounds",
+								"Human➞City Dweller➞Moneylender",
+								"Human➞Noble Court➞Steward",
+								"Human➞Seafaring➞Steward",
+								"Human➞City Dweller➞Jeweler",
+								"Human➞City Dweller➞Saddler",
+								"Human➞City Dweller➞Armorer",
+								"Human➞Noble Court➞Armorer",
+								"Human➞Professional Soldier➞Armorer",
+								"Human➞Villager➞Cobbler",
+								"Human➞Noble Court➞Courtier",
+								"Human➞Noble Court➞Chamberlain"
+							]
+						}
 					},
 					resources: 30,
 					setting: "City Dweller",
@@ -2337,12 +2422,15 @@ export const Human: bwgr.data.Stock = {
 					name: "Sorcerer",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Neophyte Sorcerer",
-							"Human➞Outcast➞Neophyte Sorcerer",
-							"Human➞Noble➞Arcane Devotee",
-							"Human➞Seafaring➞Weather Witch"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Neophyte Sorcerer",
+								"Human➞Outcast➞Neophyte Sorcerer",
+								"Human➞Noble➞Arcane Devotee",
+								"Human➞Seafaring➞Weather Witch"
+							]
+						}
 					},
 					resources: 32,
 					setting: "City Dweller",
@@ -2369,7 +2457,7 @@ export const Human: bwgr.data.Stock = {
 						"Human➞Peasant",
 						"Human➞Villager",
 						"Human➞Seafaring",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court",
 						"Human➞Religious",
 						"Human➞Professional Soldier",
@@ -2379,12 +2467,15 @@ export const Human: bwgr.data.Stock = {
 					name: "Temple Priest",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Religious Acolyte",
-							"Human➞City Dweller➞Temple Acolyte",
-							"Human➞Religious➞Temple Acolyte",
-							"Human➞Religious➞Military Order"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Religious Acolyte",
+								"Human➞City Dweller➞Temple Acolyte",
+								"Human➞Religious➞Temple Acolyte",
+								"Human➞Religious➞Military Order"
+							]
+						}
 					},
 					resources: 20,
 					setting: "City Dweller",
@@ -2416,20 +2507,22 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Noble Court",
-						"Human➞Villager",
-						"Human➞Merchant House"
+						"Human➞Villager"
 					],
 					mentalPool: 1,
 					name: "Judge",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Villager➞Town Official",
-							"Human➞City Dweller➞Tax Collector",
-							"Human➞Villager➞Tax Collector",
-							"Human➞Noble Court➞Bailiff",
-							"Human➞Noble Court➞Justiciar"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Town Official",
+								"Human➞City Dweller➞Tax Collector",
+								"Human➞Villager➞Tax Collector",
+								"Human➞Noble Court➞Bailiff",
+								"Human➞Noble Court➞Justiciar"
+							]
+						}
 					},
 					resources: 30,
 					setting: "City Dweller",
@@ -2459,30 +2552,32 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Villager",
 						"Human➞Noble Court",
-						"Human➞Outcast",
-						"Human➞Merchant House"
+						"Human➞Outcast"
 					],
 					mentalPool: 1,
 					name: "Municipal Minister",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Villager➞Town Official",
-							"Human➞City Dweller➞Scholar",
-							"Human➞Religious➞Priest",
-							"Human➞City Dweller➞Bishop",
-							"Human➞Religious➞Bishop",
-							"Human➞Professional Soldier➞Captain",
-							"Human➞Seafaring➞Ship's Captain",
-							"Human➞City Dweller➞Artisan",
-							"Human➞Nomad➞Artisan",
-							"Human➞City Dweller➞Master Craftsman",
-							"Human➞Villager➞Master Craftsman",
-							"Human➞Noble➞Knight",
-							"Human➞Noble Court➞Knight",
-							"Human➞Noble Court➞Courtier",
-							"Human➞Noble Court➞Master of Horses"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Town Official",
+								"Human➞City Dweller➞Scholar",
+								"Human➞Religious➞Priest",
+								"Human➞City Dweller➞Bishop",
+								"Human➞Religious➞Bishop",
+								"Human➞Professional Soldier➞Captain",
+								"Human➞Seafaring➞Ship's Captain",
+								"Human➞City Dweller➞Artisan",
+								"Human➞Nomad➞Artisan",
+								"Human➞City Dweller➞Master Craftsman",
+								"Human➞Villager➞Master Craftsman",
+								"Human➞Noble➞Knight",
+								"Human➞Noble Court➞Knight",
+								"Human➞Noble Court➞Courtier",
+								"Human➞Noble Court➞Master of Horses"
+							]
+						}
 					},
 					resources: 30,
 					setting: "City Dweller",
@@ -2510,20 +2605,22 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Professional Soldier",
-						"Human➞Noble Court",
-						"Human➞Merchant House"
+						"Human➞Noble Court"
 					],
 					mentalPool: 1,
 					name: "Artisan",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Apprentice Artisan",
-							"Human➞Professional Soldier➞Engineer",
-							"Human➞Seafaring➞Engineer",
-							"Human➞City Dweller➞Master Craftsman",
-							"Human➞Villager➞Master Craftsman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Apprentice Artisan",
+								"Human➞Professional Soldier➞Engineer",
+								"Human➞Seafaring➞Engineer",
+								"Human➞City Dweller➞Master Craftsman",
+								"Human➞Villager➞Master Craftsman"
+							]
+						}
 					},
 					resources: 45,
 					setting: "City Dweller",
@@ -2552,35 +2649,35 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Villager",
 						"Human➞Noble Court",
-						"Human➞Professional Soldier",
-						"Human➞Merchant House"
+						"Human➞Professional Soldier"
 					],
 					mentalPool: 1,
 					name: "Master Craftsman",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Locksmith",
-							"Human➞City Dweller➞Plumber",
-							"Human➞City Dweller➞Engraver",
-							"Human➞City Dweller➞Saddler",
-							"Human➞City Dweller➞Armorer",
-							"Human➞Noble Court➞Armorer",
-							"Human➞Professional Soldier➞Armorer",
-							"Human➞Noble Court➞Atilliator",
-							"Human➞Professional Soldier➞Atilliator",
-							"Human➞Villager➞Cobbler",
-							"Human➞Villager➞Bowyer",
-							"Human➞City Dweller➞Taskmaster",
-							"Human➞Servitude➞Taskmaster",
-							"Human➞Slave Raider➞Taskmaster",
-							"Human➞Villager➞Taskmaster"
-						],
-						AND: [
-							"Human➞City Dweller➞Journeyman",
-							"Human➞Professional Soldier➞Journeyman",
-							"Human➞Villager➞Journeyman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Locksmith",
+								"Human➞City Dweller➞Plumber",
+								"Human➞City Dweller➞Engraver",
+								"Human➞City Dweller➞Saddler",
+								"Human➞City Dweller➞Armorer",
+								"Human➞Noble Court➞Armorer",
+								"Human➞Professional Soldier➞Armorer",
+								"Human➞Noble Court➞Atilliator",
+								"Human➞Professional Soldier➞Atilliator",
+								"Human➞Villager➞Cobbler",
+								"Human➞Villager➞Bowyer",
+								"Human➞City Dweller➞Taskmaster",
+								"Human➞Servitude➞Taskmaster",
+								"Human➞Slave Raider➞Taskmaster",
+								"Human➞Villager➞Taskmaster",
+								"Human➞City Dweller➞Journeyman",
+								"Human➞Professional Soldier➞Journeyman",
+								"Human➞Villager➞Journeyman"
+							]
+						}
 					},
 					resources: 45,
 					setting: "City Dweller",
@@ -2615,14 +2712,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Bishop",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Religious➞Archpriest",
-							"Human➞Religious➞Canon",
-							"Human➞Noble Court➞Steward",
-							"Human➞Seafaring➞Steward",
-							"Human➞Noble Court➞Chamberlain",
-							"Trait➞Human Lifepath➞Your Grace"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Religious➞Archpriest",
+								"Human➞Religious➞Canon",
+								"Human➞Noble Court➞Steward",
+								"Human➞Seafaring➞Steward",
+								"Human➞Noble Court➞Chamberlain",
+								"Trait➞Human Lifepath➞Your Grace"
+							]
+						}
 					},
 					resources: 60,
 					setting: "City Dweller",
@@ -2654,7 +2754,7 @@ export const Human: bwgr.data.Stock = {
 						"Human➞Villager",
 						"Human➞Noble",
 						"Human➞Seafaring",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court",
 						"Human➞Religious",
 						"Human➞Professional Soldier",
@@ -2664,11 +2764,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Magnate",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Merchant",
-							"Human➞Villager➞Merchant",
-							"Human➞Noble Court➞Master of Horses"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Merchant",
+								"Human➞Villager➞Merchant",
+								"Human➞Noble Court➞Master of Horses"
+							]
+						}
 					},
 					resources: 75,
 					setting: "City Dweller",
@@ -2705,7 +2808,7 @@ export const Human: bwgr.data.Stock = {
 					name: "City Wife",
 					physicalPool: 0,
 					requirements: {
-						TEXT: [
+						texts: [
 							"Players who take the Village Wife lifepath may also choose their husban's lifepath from the Villager setting. The Village Wife may choose from her husband's skills -she gets half of his skill points, rounded down- and she gets half of her husband's Resources."
 						]
 					},
@@ -2738,15 +2841,18 @@ export const Human: bwgr.data.Stock = {
 					name: "Evangelist",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Dilettante",
-							"Human➞Religious➞1*ANY",
-							"Human➞Noble Court➞Court Summoner",
-							"Human➞College of Magic➞Master Summoner",
-							"Human➞Outcast➞Mad Summoner",
-							"Human➞Outcast➞Crazy Witch",
-							"Human➞Seafaring➞Weather Witch"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Dilettante",
+								"Human➞Religious➞1*ANY",
+								"Human➞Noble Court➞Court Summoner",
+								"Human➞College of Magic➞Master Summoner",
+								"Human➞Outcast➞Mad Summoner",
+								"Human➞Outcast➞Crazy Witch",
+								"Human➞Seafaring➞Weather Witch"
+							]
+						}
 					},
 					resources: 6,
 					setting: "City Dweller",
@@ -2772,6 +2878,7 @@ export const Human: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "College of Magic",
+			short: "College",
 			stock: "Human",
 			type: "Subsetting",
 			lifepaths: [
@@ -2785,15 +2892,15 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Peasant",
 						"Human➞Professional Soldier",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Supplicant",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2",
-							"IS➞UNIQUE"
+						limits: [
+							"LP➞MAX➞2",
+							"LP➞UNIQUE"
 						]
 					},
 					resources: 3,
@@ -2829,18 +2936,21 @@ export const Human: bwgr.data.Stock = {
 					name: "Junior Student",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞College of Magic➞Supplicant",
-							"Human➞Noble➞Arcane Devotee",
-							"Human➞Noble Court➞Apt Pupil",
-							"Human➞Outcast➞Apt Pupil",
-							"Human➞Professional Soldier➞Apt Pupil",
-							"Human➞Religious➞Apt Pupil",
-							"Human➞City Dweller➞Neophyte Sorcerer",
-							"Human➞Outcast➞Neophyte Sorcerer"
-						],
-						LIMIT: [
-							"IS➞UNIQUE"
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞College of Magic➞Supplicant",
+								"Human➞Noble➞Arcane Devotee",
+								"Human➞Noble Court➞Apt Pupil",
+								"Human➞Outcast➞Apt Pupil",
+								"Human➞Professional Soldier➞Apt Pupil",
+								"Human➞Religious➞Apt Pupil",
+								"Human➞City Dweller➞Neophyte Sorcerer",
+								"Human➞Outcast➞Neophyte Sorcerer"
+							],
+						},
+						limits: [
+							"LP➞UNIQUE"
 						]
 					},
 					resources: 5,
@@ -2878,12 +2988,15 @@ export const Human: bwgr.data.Stock = {
 					name: "Senior Student",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞College of Magic➞Junior Student",
-							"Human➞City Dweller➞Sorcerer"
-						],
-						LIMIT: [
-							"IS➞UNIQUE"
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞College of Magic➞Junior Student",
+								"Human➞City Dweller➞Sorcerer"
+							]
+						},
+						limits: [
+							"LP➞UNIQUE"
 						]
 					},
 					resources: 10,
@@ -2923,9 +3036,12 @@ export const Human: bwgr.data.Stock = {
 					name: "Adjunct",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Human➞College of Magic➞Senior Student"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Human➞College of Magic➞Senior Student"
+							]
+						}
 					},
 					resources: 10,
 					setting: "College of Magic",
@@ -2962,10 +3078,13 @@ export const Human: bwgr.data.Stock = {
 					name: "Master Sorcerer",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞College of Magic➞Adjunct",
-							"Human➞Noble Court➞Court Sorcerer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞College of Magic➞Adjunct",
+								"Human➞Noble Court➞Court Sorcerer"
+							]
+						}
 					},
 					resources: 30,
 					setting: "College of Magic",
@@ -3000,10 +3119,13 @@ export const Human: bwgr.data.Stock = {
 					name: "Master Enchanter",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞College of Magic➞Adjunct",
-							"Human➞Noble Court➞Court Enchanter"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞College of Magic➞Adjunct",
+								"Human➞Noble Court➞Court Enchanter"
+							]
+						}
 					},
 					resources: 30,
 					setting: "College of Magic",
@@ -3041,10 +3163,13 @@ export const Human: bwgr.data.Stock = {
 					name: "Master Summoner",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞College of Magic➞Adjunct",
-							"Human➞Noble Court➞Court Summoner"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞College of Magic➞Adjunct",
+								"Human➞Noble Court➞Court Summoner"
+							]
+						}
 					},
 					resources: 20,
 					setting: "College of Magic",
@@ -3084,12 +3209,15 @@ export const Human: bwgr.data.Stock = {
 					name: "Researcher",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞College of Magic➞Adjunct",
-							"Human➞City Dweller➞Scholar"
-						],
-						LIMIT: [
-							"IS➞UNIQUE"
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞College of Magic➞Adjunct",
+								"Human➞City Dweller➞Scholar"
+							]
+						},
+						limits: [
+							"LP➞UNIQUE"
 						]
 					},
 					resources: 15,
@@ -3134,11 +3262,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Councillor",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞College of Magic➞Master Sorcerer",
-							"Human➞College of Magic➞Master Enchanter",
-							"Human➞College of Magic➞Master Summoner"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞College of Magic➞Master Sorcerer",
+								"Human➞College of Magic➞Master Enchanter",
+								"Human➞College of Magic➞Master Summoner"
+							]
+						}
 					},
 					resources: 45,
 					setting: "College of Magic",
@@ -3172,9 +3303,12 @@ export const Human: bwgr.data.Stock = {
 					name: "Headmaster",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Human➞College of Magic➞Councillor"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Human➞College of Magic➞Councillor"
+							]
+						}
 					},
 					resources: 50,
 					setting: "College of Magic",
@@ -3203,6 +3337,7 @@ export const Human: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Death Cult",
+			short: "Cult",
 			stock: "Human",
 			type: "Subsetting",
 			lifepaths: [
@@ -3215,11 +3350,12 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Outcast",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Harem Slave",
 					physicalPool: 0,
+					requirements: {},
 					resources: 3,
 					setting: "Death Cult",
 					skillPool: 4,
@@ -3246,11 +3382,12 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Outcast",
 						"Human➞Professional Soldier",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Death Cultist",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Death Cult",
 					skillPool: 3,
@@ -3277,11 +3414,12 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Outcast",
 						"Human➞Professional Soldier",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Grave Robber",
 					physicalPool: 0,
+					requirements: {},
 					resources: 7,
 					setting: "Death Cult",
 					skillPool: 4,
@@ -3314,10 +3452,13 @@ export const Human: bwgr.data.Stock = {
 					name: "Spy",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Outcast➞Cultist",
-							"Human➞Outcast➞Insurrectionist"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Outcast➞Cultist",
+								"Human➞Outcast➞Insurrectionist"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Death Cult",
@@ -3348,21 +3489,24 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Outcast",
 						"Human➞Professional Soldier",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞City Dweller"
 					],
 					mentalPool: 0,
 					name: "Factotum",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Death Cult➞Spy",
-							"Human➞Professional Soldier➞Spy",
-							"Human➞Death Cult➞Tomb Guard",
-							"Human➞Outcast➞Deranged",
-							"Human➞City Dweller➞Evangelist",
-							"Human➞Outcast➞Insurrectionist"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Death Cult➞Spy",
+								"Human➞Professional Soldier➞Spy",
+								"Human➞Death Cult➞Tomb Guard",
+								"Human➞Outcast➞Deranged",
+								"Human➞City Dweller➞Evangelist",
+								"Human➞Outcast➞Insurrectionist"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Death Cult",
@@ -3394,18 +3538,21 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Outcast",
 						"Human➞Professional Soldier",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Tomb Guard",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Outcast➞Cultist",
-							"Human➞Outcast➞Gravedigger",
-							"Human➞Outcast➞Freebooter",
-							"Human➞Professional Soldier➞1*ANY"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Outcast➞Cultist",
+								"Human➞Outcast➞Gravedigger",
+								"Human➞Outcast➞Freebooter",
+								"Human➞Professional Soldier➞1*ANY"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Death Cult",
@@ -3440,10 +3587,13 @@ export const Human: bwgr.data.Stock = {
 					name: "Death Priest",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Villager➞Venal Priest",
-							"Human➞Outcast➞Heretic Priest"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Venal Priest",
+								"Human➞Outcast➞Heretic Priest"
+							]
+						}
 					},
 					resources: 25,
 					setting: "Death Cult",
@@ -3473,20 +3623,23 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Outcast",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Death Artist",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Outcast➞Evil Necromancer",
-							"Human➞Noble Court➞Apt Pupil",
-							"Human➞Outcast➞Apt Pupil",
-							"Human➞Professional Soldier➞Apt Pupil",
-							"Human➞Religious➞Apt Pupil",
-							"Human➞Outcast➞Rogue Wizard"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Outcast➞Evil Necromancer",
+								"Human➞Noble Court➞Apt Pupil",
+								"Human➞Outcast➞Apt Pupil",
+								"Human➞Professional Soldier➞Apt Pupil",
+								"Human➞Religious➞Apt Pupil",
+								"Human➞Outcast➞Rogue Wizard"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Death Cult",
@@ -3518,6 +3671,7 @@ export const Human: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Noble",
+			short: "Noble",
 			stock: "Human",
 			type: "Setting",
 			lifepaths: [
@@ -3534,7 +3688,7 @@ export const Human: bwgr.data.Stock = {
 						"Human➞Villager",
 						"Human➞City Dweller",
 						"Human➞Seafaring",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Religious",
 						"Human➞Professional Soldier",
 						"Human➞Outcast",
@@ -3543,6 +3697,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born Noble",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "Noble",
 					skillPool: 0,
@@ -3575,8 +3730,8 @@ export const Human: bwgr.data.Stock = {
 					name: "Bastard",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2"
+						limits: [
+							"LP➞MAX➞2"
 						]
 					},
 					resources: 15,
@@ -3608,14 +3763,14 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Professional Soldier",
 						"Human➞City Dweller",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Page",
 					physicalPool: 1,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2"
+						limits: [
+							"LP➞MAX➞2"
 						]
 					},
 					resources: 15,
@@ -3649,6 +3804,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Student",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Noble",
 					skillPool: 8,
@@ -3676,18 +3832,21 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Professional Soldier",
 						"Human➞City Dweller",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Outcast"
 					],
 					mentalPool: 1,
 					name: "Squire",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Page",
-							"Human➞Noble Court➞Page",
-							"Human➞Professional Soldier➞1*ANY"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Page",
+								"Human➞Noble Court➞Page",
+								"Human➞Professional Soldier➞1*ANY"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Noble",
@@ -3723,6 +3882,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Arcane Devotee",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Noble",
 					skillPool: 6,
@@ -3757,6 +3917,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Religious Acolyte",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Noble",
 					skillPool: 6,
@@ -3792,9 +3953,9 @@ export const Human: bwgr.data.Stock = {
 					name: "Young Lady",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2/3",
-							"IS➞UNIQUE"
+						limits: [
+							"LP➞MAX➞3",
+							"LP➞UNIQUE"
 						]
 					},
 					resources: 20,
@@ -3834,11 +3995,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Knight",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Squire",
-							"Human➞Noble Court➞Squire",
-							"Human➞Professional Soldier➞Cavalryman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Squire",
+								"Human➞Noble Court➞Squire",
+								"Human➞Professional Soldier➞Cavalryman"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Noble",
@@ -3877,15 +4041,18 @@ export const Human: bwgr.data.Stock = {
 					name: "Lady",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Young Lady",
-							"Human➞Noble Court➞Young Lady",
-							"Human➞Noble Court➞Courtier",
-							"Human➞Noble➞Knight",
-							"Human➞Noble Court➞Knight",
-							"Human➞City Dweller➞City Wife"
-						],
-						TEXT: [
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Young Lady",
+								"Human➞Noble Court➞Young Lady",
+								"Human➞Noble Court➞Courtier",
+								"Human➞Noble➞Knight",
+								"Human➞Noble Court➞Knight",
+								"Human➞City Dweller➞City Wife"
+							]
+						},
+						texts: [
 							"If City Wife is chosen, Magnate or Bishop must be the Husband's lifepath."
 						]
 					},
@@ -3926,11 +4093,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Lord",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Knight",
-							"Human➞Noble Court➞Knight",
-							"Trait➞Human Lifepath➞Your Lordship"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Knight",
+								"Human➞Noble Court➞Knight",
+								"Trait➞Human Lifepath➞Your Lordship"
+							]
+						}
 					},
 					resources: 50,
 					setting: "Noble",
@@ -3965,12 +4135,15 @@ export const Human: bwgr.data.Stock = {
 					name: "Dame",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Lady",
-							"Trait➞Human Lifepath➞Your Lordship",
-							"Human➞City Dweller➞City Wife"
-						],
-						TEXT: [
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Lady",
+								"Trait➞Human Lifepath➞Your Lordship",
+								"Human➞City Dweller➞City Wife"
+							]
+						},
+						texts: [
 							"If City Wife is chosen, Magnate or Bishop must be the Husband's lifepath."
 						]
 					},
@@ -4002,23 +4175,32 @@ export const Human: bwgr.data.Stock = {
 					name: "Baron",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							[
-								"Human➞Noble➞Knight",
-								"Trait➞Human Lifepath➞Your Lordship"
-							],
-							[
-								"Human➞Noble Court➞Knight",
-								"Trait➞Human Lifepath➞Your Lordship"
-							],
-							"Human➞City Dweller➞Magnate",
-							"Human➞Noble Court➞Master of Horses",
-							"Human➞Noble Court➞Steward",
-							"Human➞Seafaring➞Steward",
-							"Human➞Noble➞Lord",
-							"Human➞Noble Court➞Constable",
-							"Human➞Noble Court➞Justiciar"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Magnate",
+								"Human➞Noble Court➞Master of Horses",
+								"Human➞Noble Court➞Steward",
+								"Human➞Seafaring➞Steward",
+								"Human➞Noble➞Lord",
+								"Human➞Noble Court➞Constable",
+								"Human➞Noble Court➞Justiciar",
+								{
+									type: "AND",
+									items: [
+										"Human➞Noble➞Knight",
+										"Trait➞Human Lifepath➞Your Lordship"
+									]
+								},
+								{
+									type: "AND",
+									items: [
+										"Human➞Noble Court➞Knight",
+										"Trait➞Human Lifepath➞Your Lordship"
+									]
+								}
+							]
+						}
 					},
 					resources: 60,
 					setting: "Noble",
@@ -4051,20 +4233,29 @@ export const Human: bwgr.data.Stock = {
 					name: "Viscount",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							[
-								"Human➞Noble➞Knight",
-								"Trait➞Human Lifepath➞Your Eminence"
-							],
-							[
-								"Human➞Noble Court➞Knight",
-								"Trait➞Human Lifepath➞Your Eminence"
-							],
-							"Human➞City Dweller➞Magnate",
-							"Human➞Noble Court➞Constable",
-							"Human➞Noble Court➞Justiciar",
-							"Human➞Noble➞Baron"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Magnate",
+								"Human➞Noble Court➞Constable",
+								"Human➞Noble Court➞Justiciar",
+								"Human➞Noble➞Baron",
+								{
+									type: "AND",
+									items: [
+										"Human➞Noble➞Knight",
+										"Trait➞Human Lifepath➞Your Lordship"
+									]
+								},
+								{
+									type: "AND",
+									items: [
+										"Human➞Noble Court➞Knight",
+										"Trait➞Human Lifepath➞Your Lordship"
+									]
+								}
+							]
+						}
 					},
 					resources: 65,
 					setting: "Noble",
@@ -4097,19 +4288,28 @@ export const Human: bwgr.data.Stock = {
 					name: "Count",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							[
-								"Human➞Noble➞Knight",
-								"Trait➞Human Lifepath➞Your Eminence"
-							],
-							[
-								"Human➞Noble Court➞Knight",
-								"Trait➞Human Lifepath➞Your Eminence"
-							],
-							"Human➞City Dweller➞Magnate",
-							"Human➞Noble Court➞Constable",
-							"Human➞Noble Court➞Justiciar"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Magnate",
+								"Human➞Noble Court➞Constable",
+								"Human➞Noble Court➞Justiciar",
+								{
+									type: "AND",
+									items: [
+										"Human➞Noble➞Knight",
+										"Trait➞Human Lifepath➞Your Lordship"
+									]
+								},
+								{
+									type: "AND",
+									items: [
+										"Human➞Noble Court➞Knight",
+										"Trait➞Human Lifepath➞Your Lordship"
+									]
+								}
+							]
+						}
 					},
 					resources: 70,
 					setting: "Noble",
@@ -4142,20 +4342,26 @@ export const Human: bwgr.data.Stock = {
 					name: "Duke",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							[
-								"Human➞Noble➞Knight",
-								"Trait➞Human Lifepath➞Your Grace"
-							],
-							[
-								"Human➞Noble Court➞Knight",
-								"Trait➞Human Lifepath➞Your Grace"
-							],
-							[
+						conditions: {
+							type: "OR",
+							items: [
 								"Human➞Noble➞Count",
-								"Trait➞Human Lifepath➞Your Grace"
+								{
+									type: "AND",
+									items: [
+										"Human➞Noble➞Knight",
+										"Trait➞Human Lifepath➞Your Lordship"
+									]
+								},
+								{
+									type: "AND",
+									items: [
+										"Human➞Noble Court➞Knight",
+										"Trait➞Human Lifepath➞Your Lordship"
+									]
+								}
 							]
-						]
+						}
 					},
 					resources: 90,
 					setting: "Noble",
@@ -4188,20 +4394,26 @@ export const Human: bwgr.data.Stock = {
 					name: "Noble Prince",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							[
-								"Human➞Noble➞Knight",
-								"Trait➞Human Lifepath➞Your Grace"
-							],
-							[
-								"Human➞Noble Court➞Knight",
-								"Trait➞Human Lifepath➞Your Grace"
-							],
-							[
+						conditions: {
+							type: "OR",
+							items: [
 								"Human➞Noble➞Duke",
-								"Trait➞Human Lifepath➞Your Grace"
+								{
+									type: "AND",
+									items: [
+										"Human➞Noble➞Knight",
+										"Trait➞Human Lifepath➞Your Lordship"
+									]
+								},
+								{
+									type: "AND",
+									items: [
+										"Human➞Noble Court➞Knight",
+										"Trait➞Human Lifepath➞Your Lordship"
+									]
+								}
 							]
-						]
+						}
 					},
 					resources: 100,
 					setting: "Noble",
@@ -4235,10 +4447,13 @@ export const Human: bwgr.data.Stock = {
 					name: "Prince of Blood",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Trait➞Human Lifepath➞Your Grace"
-						],
-						TEXT: [
+						conditions: {
+							type: "OR",
+							items: [
+								"Trait➞Human Lifepath➞Your Grace"
+							]
+						},
+						texts: [
 							"Requires express permission from the GM and all players in the current game. Players may take the Prince of the Blood lifepath for any appropriate length of time, from 2 years to 20. Subject to GM approval, of course."
 						]
 					},
@@ -4266,6 +4481,7 @@ export const Human: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Noble Court",
+			short: "Court",
 			stock: "Human",
 			type: "Subsetting",
 			lifepaths: [
@@ -4279,7 +4495,7 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Outcast",
 						"Human➞Professional Soldier",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞College of Magic",
 						"Human➞Death Cult"
 					],
@@ -4287,9 +4503,9 @@ export const Human: bwgr.data.Stock = {
 					name: "Apt Pupil",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2/3",
-							"IS➞UNIQUE"
+						limits: [
+							"LP➞MAX➞3",
+							"LP➞UNIQUE"
 						]
 					},
 					resources: 8,
@@ -4325,6 +4541,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Minstrel",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Noble Court",
 					skillPool: 5,
@@ -4350,11 +4567,12 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Outcast",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Court Jester",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Noble Court",
 					skillPool: 7,
@@ -4390,13 +4608,16 @@ export const Human: bwgr.data.Stock = {
 					name: "Court Artist",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble Court➞Court Jester",
-							"Human➞City Dweller➞Painter",
-							"Human➞Outcast➞Thinker",
-							"Human➞City Dweller➞Scholar",
-							"Human➞City Dweller➞Sculptor"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble Court➞Court Jester",
+								"Human➞City Dweller➞Painter",
+								"Human➞Outcast➞Thinker",
+								"Human➞City Dweller➞Scholar",
+								"Human➞City Dweller➞Sculptor"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Noble Court",
@@ -4425,11 +4646,12 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Outcast",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Servant",
 					physicalPool: 0,
+					requirements: {},
 					resources: 7,
 					setting: "Noble Court",
 					skillPool: 4,
@@ -4457,12 +4679,13 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Villager"
 					],
 					mentalPool: 0,
 					name: "Nurse",
 					physicalPool: 0,
+					requirements: {},
 					resources: 7,
 					setting: "Noble Court",
 					skillPool: 5,
@@ -4496,6 +4719,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Groom",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "Noble Court",
 					skillPool: 5,
@@ -4522,11 +4746,12 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞City Dweller",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Gardener",
 					physicalPool: 1,
+					requirements: {},
 					resources: 10,
 					setting: "Noble Court",
 					skillPool: 7,
@@ -4559,12 +4784,13 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Professional Soldier"
 					],
 					mentalPool: 1,
 					name: "Torturer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Noble Court",
 					skillPool: 5,
@@ -4598,6 +4824,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Forester",
 					physicalPool: 0,
+					requirements: {},
 					resources: 9,
 					setting: "Noble Court",
 					skillPool: 8,
@@ -4635,6 +4862,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Student",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Noble Court",
 					skillPool: 9,
@@ -4671,9 +4899,9 @@ export const Human: bwgr.data.Stock = {
 					name: "Page",
 					physicalPool: 1,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2",
-							"IS➞UNIQUE"
+						limits: [
+							"LP➞MAX➞2",
+							"LP➞UNIQUE"
 						]
 					},
 					resources: 15,
@@ -4708,13 +4936,16 @@ export const Human: bwgr.data.Stock = {
 					name: "Man-at-Arms",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Page",
-							"Human➞Noble Court➞Page",
-							"Human➞Noble➞Squire",
-							"Human➞Noble Court➞Squire",
-							"Human➞Professional Soldier➞1*ANY"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Page",
+								"Human➞Noble Court➞Page",
+								"Human➞Noble➞Squire",
+								"Human➞Noble Court➞Squire",
+								"Human➞Professional Soldier➞1*ANY"
+							]
+						}
 					},
 					resources: 12,
 					setting: "Noble Court",
@@ -4749,6 +4980,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Falconer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Noble Court",
 					skillPool: 4,
@@ -4781,6 +5013,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Huntsman",
 					physicalPool: 0,
+					requirements: {},
 					resources: 12,
 					setting: "Noble Court",
 					skillPool: 8,
@@ -4809,12 +5042,13 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Professional Soldier",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞City Dweller"
 					],
 					mentalPool: 0,
 					name: "Herald",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Noble Court",
 					skillPool: 4,
@@ -4846,6 +5080,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Court Chef",
 					physicalPool: 0,
+					requirements: {},
 					resources: 14,
 					setting: "Noble Court",
 					skillPool: 5,
@@ -4871,7 +5106,7 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Professional Soldier",
 						"Human➞City Dweller",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Outcast",
 						"Human➞Noble Court"
 					],
@@ -4879,16 +5114,19 @@ export const Human: bwgr.data.Stock = {
 					name: "Squire",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Villager➞Corrupt Sergeant",
-							"Human➞Villager➞Village Sergeant",
-							"Human➞Professional Soldier➞Sergeant",
-							"Human➞Nomad➞Veteran",
-							"Human➞Professional Soldier➞Veteran",
-							"Human➞Noble➞Page",
-							"Human➞Noble Court➞Page",
-							"Human➞Noble Court➞Man-at-Arms"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Corrupt Sergeant",
+								"Human➞Villager➞Village Sergeant",
+								"Human➞Professional Soldier➞Sergeant",
+								"Human➞Nomad➞Veteran",
+								"Human➞Professional Soldier➞Veteran",
+								"Human➞Noble➞Page",
+								"Human➞Noble Court➞Page",
+								"Human➞Noble Court➞Man-at-Arms"
+							]
+						}
 					},
 					resources: 14,
 					setting: "Noble Court",
@@ -4928,9 +5166,9 @@ export const Human: bwgr.data.Stock = {
 					name: "Young Lady",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2/3",
-							"IS➞UNIQUE"
+						limits: [
+							"LP➞MAX➞3",
+							"LP➞UNIQUE"
 						]
 					},
 					resources: 25,
@@ -4970,11 +5208,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Knight",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Squire",
-							"Human➞Noble Court➞Squire",
-							"Human➞Professional Soldier➞Cavalryman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Squire",
+								"Human➞Noble Court➞Squire",
+								"Human➞Professional Soldier➞Cavalryman"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Noble Court",
@@ -5012,6 +5253,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Courtier",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "Noble Court",
 					skillPool: 8,
@@ -5041,21 +5283,24 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Villager"
 					],
 					mentalPool: 0,
 					name: "Governess",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble Court➞Nurse",
-							"Human➞Peasant➞Midwife",
-							"Human➞Noble➞Lady",
-							"Human➞Villager➞Village Wife",
-							"Human➞Peasant➞Country Wife",
-							"Human➞City Dweller➞City Wife"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble Court➞Nurse",
+								"Human➞Peasant➞Midwife",
+								"Human➞Noble➞Lady",
+								"Human➞Villager➞Village Wife",
+								"Human➞Peasant➞Country Wife",
+								"Human➞City Dweller➞City Wife"
+							]
+						}
 					},
 					resources: 12,
 					setting: "Noble Court",
@@ -5088,17 +5333,20 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Professional Soldier",
 						"Human➞Religious",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Chaplain",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Religious➞Military Order",
-							"Human➞Religious➞Priest",
-							"Human➞City Dweller➞Temple Priest"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Religious➞Military Order",
+								"Human➞Religious➞Priest",
+								"Human➞City Dweller➞Temple Priest"
+							]
+						}
 					},
 					resources: 18,
 					setting: "Noble Court",
@@ -5133,11 +5381,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Court Sorcerer",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Arcane Devotee",
-							"Human➞Outcast➞Rogue Wizard",
-							"Human➞City Dweller➞Sorcerer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Arcane Devotee",
+								"Human➞Outcast➞Rogue Wizard",
+								"Human➞City Dweller➞Sorcerer"
+							]
+						}
 					},
 					resources: 32,
 					setting: "Noble Court",
@@ -5175,12 +5426,15 @@ export const Human: bwgr.data.Stock = {
 					name: "Court Lawyer",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student",
-							"Human➞City Dweller➞Advocate"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student",
+								"Human➞City Dweller➞Advocate"
+							]
+						}
 					},
 					resources: 25,
 					setting: "Noble Court",
@@ -5216,14 +5470,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Court Doctor",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student",
-							"Human➞Religious➞Itinerant Monk",
-							"Human➞Religious➞Cloistered Nun",
-							"Human➞Religious➞Priest"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student",
+								"Human➞Religious➞Itinerant Monk",
+								"Human➞Religious➞Cloistered Nun",
+								"Human➞Religious➞Priest"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Noble Court",
@@ -5261,16 +5518,19 @@ export const Human: bwgr.data.Stock = {
 					name: "Chronicler",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student",
-							"Human➞Religious➞Custodian",
-							"Human➞Religious➞Interpreter",
-							"Human➞Religious➞Archivist",
-							"Human➞Noble➞Young Lady",
-							"Human➞Noble Court➞Young Lady"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student",
+								"Human➞Religious➞Custodian",
+								"Human➞Religious➞Interpreter",
+								"Human➞Religious➞Archivist",
+								"Human➞Noble➞Young Lady",
+								"Human➞Noble Court➞Young Lady"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Noble Court",
@@ -5309,11 +5569,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Armorer",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Journeyman",
-							"Human➞Professional Soldier➞Journeyman",
-							"Human➞Villager➞Journeyman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Journeyman",
+								"Human➞Professional Soldier➞Journeyman",
+								"Human➞Villager➞Journeyman"
+							]
+						}
 					},
 					resources: 25,
 					setting: "Noble Court",
@@ -5349,11 +5612,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Atilliator",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Journeyman",
-							"Human➞Professional Soldier➞Journeyman",
-							"Human➞Villager➞Journeyman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Journeyman",
+								"Human➞Professional Soldier➞Journeyman",
+								"Human➞Villager➞Journeyman"
+							]
+						}
 					},
 					resources: 30,
 					setting: "Noble Court",
@@ -5387,12 +5653,15 @@ export const Human: bwgr.data.Stock = {
 					name: "Court Priest",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble Court➞Chaplain",
-							"Human➞Professional Soldier➞Chaplain",
-							"Human➞Religious➞Priest",
-							"Human➞Noble➞Religious Acolyte"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble Court➞Chaplain",
+								"Human➞Professional Soldier➞Chaplain",
+								"Human➞Religious➞Priest",
+								"Human➞Noble➞Religious Acolyte"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Noble Court",
@@ -5430,18 +5699,21 @@ export const Human: bwgr.data.Stock = {
 					name: "Steward",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Villager➞Town Official",
-							"Human➞City Dweller➞Municipal Minister",
-							"Human➞City Dweller➞Judge",
-							"Human➞Noble Court➞Court Lawyer",
-							"Human➞Noble Court➞Court Doctor",
-							"Human➞Noble Court➞Governess",
-							"Human➞Noble➞Young Lady",
-							"Human➞Noble Court➞Young Lady",
-							"Human➞City Dweller➞Magnate",
-							"Human➞Noble➞Lord"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Town Official",
+								"Human➞City Dweller➞Municipal Minister",
+								"Human➞City Dweller➞Judge",
+								"Human➞Noble Court➞Court Lawyer",
+								"Human➞Noble Court➞Court Doctor",
+								"Human➞Noble Court➞Governess",
+								"Human➞Noble➞Young Lady",
+								"Human➞Noble Court➞Young Lady",
+								"Human➞City Dweller➞Magnate",
+								"Human➞Noble➞Lord"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Noble Court",
@@ -5473,14 +5745,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Master of Horses",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Professional Soldier➞Captain",
-							"Human➞Noble➞Baron",
-							"Human➞City Dweller➞Saddler",
-							"Human➞City Dweller➞Merchant",
-							"Human➞Villager➞Merchant",
-							"Human➞City Dweller➞Magnate"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Professional Soldier➞Captain",
+								"Human➞Noble➞Baron",
+								"Human➞City Dweller➞Saddler",
+								"Human➞City Dweller➞Merchant",
+								"Human➞Villager➞Merchant",
+								"Human➞City Dweller➞Magnate"
+							]
+						}
 					},
 					resources: 40,
 					setting: "Noble Court",
@@ -5515,14 +5790,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Master of Hounds",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Professional Soldier➞Captain",
-							"Human➞Noble➞Baron",
-							"Human➞City Dweller➞Saddler",
-							"Human➞City Dweller➞Merchant",
-							"Human➞Villager➞Merchant",
-							"Human➞City Dweller➞Magnate"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Professional Soldier➞Captain",
+								"Human➞Noble➞Baron",
+								"Human➞City Dweller➞Saddler",
+								"Human➞City Dweller➞Merchant",
+								"Human➞Villager➞Merchant",
+								"Human➞City Dweller➞Magnate"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Noble Court",
@@ -5562,10 +5840,13 @@ export const Human: bwgr.data.Stock = {
 					name: "Hostage",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble➞1*ANY"
-						],
-						TEXT: [
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞1*ANY"
+							]
+						},
+						texts: [
 							"Hostage gives resources points equal to half ot the character's previous lifepath."
 						]
 					},
@@ -5604,11 +5885,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Bailiff",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Knight",
-							"Human➞Noble Court➞Knight",
-							"Trait➞Human Lifepath➞Your Lordship"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Knight",
+								"Human➞Noble Court➞Knight",
+								"Trait➞Human Lifepath➞Your Lordship"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Noble Court",
@@ -5647,12 +5931,15 @@ export const Human: bwgr.data.Stock = {
 					name: "Justiciar",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Judge",
-							"Human➞Professional Soldier➞Captain",
-							"Human➞Noble Court➞Bailiff",
-							"Human➞Noble➞Lord"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Judge",
+								"Human➞Professional Soldier➞Captain",
+								"Human➞Noble Court➞Bailiff",
+								"Human➞Noble➞Lord"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Noble Court",
@@ -5688,17 +5975,20 @@ export const Human: bwgr.data.Stock = {
 					name: "Coroner",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble Court➞Steward",
-							"Human➞Seafaring➞Steward",
-							"Human➞Villager➞Town Official",
-							"Human➞City Dweller➞Municipal Minister",
-							"Human➞City Dweller➞Judge",
-							"Human➞Noble Court➞Court Lawyer",
-							"Human➞Noble Court➞Court Doctor",
-							"Human➞City Dweller➞Magnate",
-							"Human➞Noble➞Lord"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble Court➞Steward",
+								"Human➞Seafaring➞Steward",
+								"Human➞Villager➞Town Official",
+								"Human➞City Dweller➞Municipal Minister",
+								"Human➞City Dweller➞Judge",
+								"Human➞Noble Court➞Court Lawyer",
+								"Human➞Noble Court➞Court Doctor",
+								"Human➞City Dweller➞Magnate",
+								"Human➞Noble➞Lord"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Noble Court",
@@ -5734,13 +6024,16 @@ export const Human: bwgr.data.Stock = {
 					name: "Constable",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Professional Soldier➞Captain",
-							"Human➞Noble➞Baron",
-							"Human➞Noble➞Viscount",
-							"Human➞Noble➞Count",
-							"Human➞Noble➞Duke"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Professional Soldier➞Captain",
+								"Human➞Noble➞Baron",
+								"Human➞Noble➞Viscount",
+								"Human➞Noble➞Count",
+								"Human➞Noble➞Duke"
+							]
+						}
 					},
 					resources: 50,
 					setting: "Noble Court",
@@ -5778,22 +6071,25 @@ export const Human: bwgr.data.Stock = {
 					name: "Treasurer",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble Court➞Steward",
-							"Human➞Seafaring➞Steward",
-							"Human➞Villager➞Town Official",
-							"Human➞City Dweller➞Municipal Minister",
-							"Human➞City Dweller➞Judge",
-							"Human➞Noble Court➞Court Lawyer",
-							"Human➞Noble Court➞Court Doctor",
-							"Human➞City Dweller➞Magnate",
-							"Human➞Noble➞Baron",
-							"Human➞City Dweller➞Bishop",
-							"Human➞Religious➞Bishop",
-							"Human➞Noble➞Viscount",
-							"Human➞Noble➞Count",
-							"Human➞Noble➞Duke"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble Court➞Steward",
+								"Human➞Seafaring➞Steward",
+								"Human➞Villager➞Town Official",
+								"Human➞City Dweller➞Municipal Minister",
+								"Human➞City Dweller➞Judge",
+								"Human➞Noble Court➞Court Lawyer",
+								"Human➞Noble Court➞Court Doctor",
+								"Human➞City Dweller➞Magnate",
+								"Human➞Noble➞Baron",
+								"Human➞City Dweller➞Bishop",
+								"Human➞Religious➞Bishop",
+								"Human➞Noble➞Viscount",
+								"Human➞Noble➞Count",
+								"Human➞Noble➞Duke"
+							]
+						}
 					},
 					resources: 45,
 					setting: "Noble Court",
@@ -5829,23 +6125,26 @@ export const Human: bwgr.data.Stock = {
 					name: "Chamberlain",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Scholar",
-							"Human➞Noble Court➞Steward",
-							"Human➞Seafaring➞Steward",
-							"Human➞Villager➞Town Official",
-							"Human➞City Dweller➞Municipal Minister",
-							"Human➞City Dweller➞Judge",
-							"Human➞Noble Court➞Court Lawyer",
-							"Human➞Noble Court➞Court Doctor",
-							"Human➞City Dweller➞Magnate",
-							"Human➞Noble➞Baron",
-							"Human➞City Dweller➞Bishop",
-							"Human➞Religious➞Bishop",
-							"Human➞Noble➞Viscount",
-							"Human➞Noble➞Count",
-							"Human➞Noble➞Duke"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Scholar",
+								"Human➞Noble Court➞Steward",
+								"Human➞Seafaring➞Steward",
+								"Human➞Villager➞Town Official",
+								"Human➞City Dweller➞Municipal Minister",
+								"Human➞City Dweller➞Judge",
+								"Human➞Noble Court➞Court Lawyer",
+								"Human➞Noble Court➞Court Doctor",
+								"Human➞City Dweller➞Magnate",
+								"Human➞Noble➞Baron",
+								"Human➞City Dweller➞Bishop",
+								"Human➞Religious➞Bishop",
+								"Human➞Noble➞Viscount",
+								"Human➞Noble➞Count",
+								"Human➞Noble➞Duke"
+							]
+						}
 					},
 					resources: 30,
 					setting: "Noble Court",
@@ -5874,7 +6173,7 @@ export const Human: bwgr.data.Stock = {
 						"Human➞City Dweller",
 						"Human➞Noble",
 						"Human➞Seafaring",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Religious",
 						"Human➞Professional Soldier",
 						"Human➞Outcast"
@@ -5883,28 +6182,31 @@ export const Human: bwgr.data.Stock = {
 					name: "Advisor to the Court",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Outcast➞Thinker",
-							"Human➞Professional Soldier➞Captain",
-							"Human➞City Dweller➞Magnate",
-							"Human➞City Dweller➞Master Craftsman",
-							"Human➞Villager➞Master Craftsman",
-							"Human➞City Dweller➞Artisan",
-							"Human➞Nomad➞Artisan",
-							"Human➞City Dweller➞Bishop",
-							"Human➞Religious➞Bishop",
-							"Human➞Outcast➞Rogue Wizard",
-							"Human➞Outcast➞Mad Summoner",
-							"Human➞Outcast➞Heretic Priest",
-							"Human➞Noble➞Dame",
-							"Human➞Noble➞Baron",
-							"Human➞Noble➞Viscount",
-							"Human➞Noble➞Count",
-							"Human➞Noble➞Duke",
-							"Human➞Noble➞Prince of Blood",
-							"Human➞Noble➞Noble Prince"
-						],
-						TEXT: [
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Outcast➞Thinker",
+								"Human➞Professional Soldier➞Captain",
+								"Human➞City Dweller➞Magnate",
+								"Human➞City Dweller➞Master Craftsman",
+								"Human➞Villager➞Master Craftsman",
+								"Human➞City Dweller➞Artisan",
+								"Human➞Nomad➞Artisan",
+								"Human➞City Dweller➞Bishop",
+								"Human➞Religious➞Bishop",
+								"Human➞Outcast➞Rogue Wizard",
+								"Human➞Outcast➞Mad Summoner",
+								"Human➞Outcast➞Heretic Priest",
+								"Human➞Noble➞Dame",
+								"Human➞Noble➞Baron",
+								"Human➞Noble➞Viscount",
+								"Human➞Noble➞Count",
+								"Human➞Noble➞Duke",
+								"Human➞Noble➞Prince of Blood",
+								"Human➞Noble➞Noble Prince"
+							]
+						},
+						texts: [
 							"This lifepath can be one to three years long, player chooses tenure. Character gains 1 general skill point and 10 resource points per year. The Stat and trait points are earned once."
 						]
 					},
@@ -5933,16 +6235,19 @@ export const Human: bwgr.data.Stock = {
 					name: "Court Enchanter",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞College of Magic➞Senior Student",
-							"Human➞City Dweller➞Neophyte Sorcerer",
-							"Human➞Outcast➞Neophyte Sorcerer",
-							"Human➞Noble Court➞Apt Pupil",
-							"Human➞Outcast➞Apt Pupil",
-							"Human➞Professional Soldier➞Apt Pupil",
-							"Human➞Religious➞Apt Pupil",
-							"Human➞Villager➞Wizard's Apprentice"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞College of Magic➞Senior Student",
+								"Human➞City Dweller➞Neophyte Sorcerer",
+								"Human➞Outcast➞Neophyte Sorcerer",
+								"Human➞Noble Court➞Apt Pupil",
+								"Human➞Outcast➞Apt Pupil",
+								"Human➞Professional Soldier➞Apt Pupil",
+								"Human➞Religious➞Apt Pupil",
+								"Human➞Villager➞Wizard's Apprentice"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Noble Court",
@@ -5979,15 +6284,18 @@ export const Human: bwgr.data.Stock = {
 					name: "Court Summoner",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞College of Magic➞Senior Student",
-							"Human➞Outcast➞Mad Summoner",
-							"Human➞Noble Court➞Apt Pupil",
-							"Human➞Outcast➞Apt Pupil",
-							"Human➞Professional Soldier➞Apt Pupil",
-							"Human➞Religious➞Apt Pupil",
-							"Human➞Villager➞Wizard's Apprentice"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞College of Magic➞Senior Student",
+								"Human➞Outcast➞Mad Summoner",
+								"Human➞Noble Court➞Apt Pupil",
+								"Human➞Outcast➞Apt Pupil",
+								"Human➞Professional Soldier➞Apt Pupil",
+								"Human➞Religious➞Apt Pupil",
+								"Human➞Villager➞Wizard's Apprentice"
+							]
+						}
 					},
 					resources: 30,
 					setting: "Noble Court",
@@ -6020,6 +6328,7 @@ export const Human: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Outcast",
+			short: "Outcast",
 			stock: "Human",
 			type: "Subsetting",
 			lifepaths: [
@@ -6032,7 +6341,7 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Professional Soldier",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞College of Magic",
 						"Human➞Death Cult"
 					],
@@ -6040,9 +6349,9 @@ export const Human: bwgr.data.Stock = {
 					name: "Apt Pupil",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2/3",
-							"IS➞UNIQUE"
+						limits: [
+							"LP➞MAX➞3",
+							"LP➞UNIQUE"
 						]
 					},
 					resources: 8,
@@ -6073,15 +6382,15 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Peasant",
 						"Human➞Professional Soldier",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Urchin",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2",
-							"IS➞UNIQUE"
+						limits: [
+							"LP➞MAX➞2",
+							"LP➞UNIQUE"
 						]
 					},
 					resources: 3,
@@ -6116,6 +6425,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Apostate",
 					physicalPool: 0,
+					requirements: {},
 					resources: 6,
 					setting: "Outcast",
 					skillPool: 4,
@@ -6148,6 +6458,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Blackmailer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Outcast",
 					skillPool: 4,
@@ -6182,6 +6493,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Kidnapper",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Outcast",
 					skillPool: 5,
@@ -6209,13 +6521,14 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Professional Soldier",
 						"Human➞City Dweller",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Seafaring",
 						"Human➞Death Cult"
 					],
 					mentalPool: 0,
 					name: "Pillager",
 					physicalPool: 0,
+					requirements: {},
 					resources: 7,
 					setting: "Outcast",
 					skillPool: 4,
@@ -6242,11 +6555,12 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞City Dweller",
 						"Human➞Professional Soldier",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Vagrant",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Outcast",
 					skillPool: 4,
@@ -6270,13 +6584,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞City Dweller",
 						"Human➞Death Cult"
 					],
 					mentalPool: 0,
 					name: "Cripple",
 					physicalPool: 0,
+					requirements: {},
 					resources: 3,
 					setting: "Outcast",
 					skillPool: 6,
@@ -6302,13 +6617,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 1,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Professional Soldier",
 						"Human➞Villager"
 					],
 					mentalPool: 0,
 					name: "Poacher",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Outcast",
 					skillPool: 6,
@@ -6333,12 +6649,13 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Death Cult"
 					],
 					mentalPool: 0,
 					name: "Deranged",
 					physicalPool: 0,
+					requirements: {},
 					resources: 3,
 					setting: "Outcast",
 					skillPool: 3,
@@ -6375,6 +6692,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Outlaw",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Outcast",
 					skillPool: 5,
@@ -6399,7 +6717,7 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 1,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞City Dweller",
 						"Human➞Professional Soldier"
 					],
@@ -6407,15 +6725,18 @@ export const Human: bwgr.data.Stock = {
 					name: "Fence",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Shopkeeper",
-							"Human➞Villager➞Shopkeeper",
-							"Human➞City Dweller➞Barkeep",
-							"Human➞City Dweller➞Moneylender",
-							"Human➞Outcast➞1*ANY",
-							"Human➞City Dweller➞Street Thug",
-							"Human➞City Dweller➞Criminal"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Shopkeeper",
+								"Human➞Villager➞Shopkeeper",
+								"Human➞City Dweller➞Barkeep",
+								"Human➞City Dweller➞Moneylender",
+								"Human➞Outcast➞1*ANY",
+								"Human➞City Dweller➞Street Thug",
+								"Human➞City Dweller➞Criminal"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Outcast",
@@ -6444,12 +6765,13 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Professional Soldier",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Death Cult"
 					],
 					mentalPool: 0,
 					name: "Gravedigger",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "Outcast",
 					skillPool: 6,
@@ -6479,6 +6801,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Ratcatcher",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "Outcast",
 					skillPool: 4,
@@ -6511,6 +6834,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Beggar",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Outcast",
 					skillPool: 5,
@@ -6543,6 +6867,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Leper",
 					physicalPool: 0,
+					requirements: {},
 					resources: 3,
 					setting: "Outcast",
 					skillPool: 5,
@@ -6578,6 +6903,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Prostitute",
 					physicalPool: 0,
+					requirements: {},
 					resources: 6,
 					setting: "Outcast",
 					skillPool: 3,
@@ -6605,7 +6931,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
 						"Human➞City Dweller",
 						"Human➞Professional Soldier"
@@ -6614,16 +6939,19 @@ export const Human: bwgr.data.Stock = {
 					name: "Whoremonger",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Villager➞Venal Priest",
-							"Human➞City Dweller➞Shopkeeper",
-							"Human➞Villager➞Shopkeeper",
-							"Human➞City Dweller➞Barkeep",
-							"Human➞City Dweller➞Moneylender",
-							"Human➞Outcast➞1*ANY",
-							"Human➞City Dweller➞Street Thug",
-							"Human➞City Dweller➞Criminal"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Venal Priest",
+								"Human➞City Dweller➞Shopkeeper",
+								"Human➞Villager➞Shopkeeper",
+								"Human➞City Dweller➞Barkeep",
+								"Human➞City Dweller➞Moneylender",
+								"Human➞Outcast➞1*ANY",
+								"Human➞City Dweller➞Street Thug",
+								"Human➞City Dweller➞Criminal"
+							]
+						}
 					},
 					resources: 12,
 					setting: "Outcast",
@@ -6657,6 +6985,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Itinerant Performer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Outcast",
 					skillPool: 8,
@@ -6692,6 +7021,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Insurrectionist",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Outcast",
 					skillPool: 4,
@@ -6719,13 +7049,14 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Peasant",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Professional Soldier",
 						"Human➞Death Cult"
 					],
 					mentalPool: 0,
 					name: "Cultist",
 					physicalPool: 0,
+					requirements: {},
 					resources: 8,
 					setting: "Outcast",
 					skillPool: 5,
@@ -6761,6 +7092,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Poisoner",
 					physicalPool: 0,
+					requirements: {},
 					resources: 8,
 					setting: "Outcast",
 					skillPool: 5,
@@ -6786,13 +7118,13 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Professional Soldier",
 						"Human➞City Dweller"
 					],
 					mentalPool: 0,
 					name: "Thug",
 					physicalPool: 0,
+					requirements: {},
 					resources: 7,
 					setting: "Outcast",
 					skillPool: 4,
@@ -6821,11 +7153,12 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Professional Soldier",
 						"Human➞City Dweller",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Desperate Killer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Outcast",
 					skillPool: 5,
@@ -6859,6 +7192,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Bandit",
 					physicalPool: 1,
+					requirements: {},
 					resources: 7,
 					setting: "Outcast",
 					skillPool: 4,
@@ -6889,6 +7223,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Pirate",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Outcast",
 					skillPool: 6,
@@ -6920,7 +7255,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Professional Soldier",
 						"Human➞City Dweller",
 						"Human➞Villager"
@@ -6928,6 +7262,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Smuggler",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "Outcast",
 					skillPool: 6,
@@ -6958,26 +7293,29 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Professional Soldier",
 						"Human➞Peasant",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Death Cult"
 					],
 					mentalPool: 0,
 					name: "Freebooter",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Nomad➞Bandit",
-							"Human➞Outcast➞Bandit",
-							"Human➞Outcast➞Smuggler",
-							"Human➞Noble➞Squire",
-							"Human➞Noble Court➞Squire",
-							"Human➞Noble➞Knight",
-							"Human➞Noble Court➞Knight",
-							"Human➞City Dweller➞City Guard",
-							"Human➞Villager➞Village Guard",
-							"Human➞Seafaring➞Marine",
-							"Human➞Professional Soldier➞1*ANY"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Nomad➞Bandit",
+								"Human➞Outcast➞Bandit",
+								"Human➞Outcast➞Smuggler",
+								"Human➞Noble➞Squire",
+								"Human➞Noble Court➞Squire",
+								"Human➞Noble➞Knight",
+								"Human➞Noble Court➞Knight",
+								"Human➞City Dweller➞City Guard",
+								"Human➞Villager➞Village Guard",
+								"Human➞Seafaring➞Marine",
+								"Human➞Professional Soldier➞1*ANY"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Outcast",
@@ -7012,20 +7350,23 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Professional Soldier",
 						"Human➞Peasant",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Strider",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Born Noble",
-							"Human➞Nomad➞Hunter",
-							"Human➞Peasant➞Hunter",
-							"Human➞Peasant➞Trapper",
-							"Human➞Noble Court➞Huntsman",
-							"Human➞Professional Soldier➞Scout"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Born Noble",
+								"Human➞Nomad➞Hunter",
+								"Human➞Peasant➞Hunter",
+								"Human➞Peasant➞Trapper",
+								"Human➞Noble Court➞Huntsman",
+								"Human➞Professional Soldier➞Scout"
+							]
+						}
 					},
 					resources: 6,
 					setting: "Outcast",
@@ -7064,13 +7405,16 @@ export const Human: bwgr.data.Stock = {
 					name: "Mad Summoner",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Outcast➞Cultist",
-							"Human➞Peasant➞Augur",
-							"Human➞City Dweller➞Neophyte Sorcerer",
-							"Human➞Outcast➞Neophyte Sorcerer",
-							"Human➞Noble➞Arcane Devotee"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Outcast➞Cultist",
+								"Human➞Peasant➞Augur",
+								"Human➞City Dweller➞Neophyte Sorcerer",
+								"Human➞Outcast➞Neophyte Sorcerer",
+								"Human➞Noble➞Arcane Devotee"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Outcast",
@@ -7100,7 +7444,7 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Seafaring",
 						"Human➞Religious",
 						"Human➞Death Cult"
@@ -7109,13 +7453,16 @@ export const Human: bwgr.data.Stock = {
 					name: "Rogue Wizard",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Outcast➞Cultist",
-							"Human➞Peasant➞Augur",
-							"Human➞City Dweller➞Neophyte Sorcerer",
-							"Human➞Outcast➞Neophyte Sorcerer",
-							"Human➞Noble➞Arcane Devotee"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Outcast➞Cultist",
+								"Human➞Peasant➞Augur",
+								"Human➞City Dweller➞Neophyte Sorcerer",
+								"Human➞Outcast➞Neophyte Sorcerer",
+								"Human➞Noble➞Arcane Devotee"
+							]
+						}
 					},
 					resources: 24,
 					setting: "Outcast",
@@ -7150,20 +7497,23 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Peasant",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Villager"
 					],
 					mentalPool: 0,
 					name: "Crazy Witch",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Seafaring➞Weather Witch",
-							"Human➞Noble➞Young Lady",
-							"Human➞Noble Court➞Young Lady",
-							"Human➞Peasant➞Augur",
-							"Human➞Peasant➞Midwife"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Seafaring➞Weather Witch",
+								"Human➞Noble➞Young Lady",
+								"Human➞Noble Court➞Young Lady",
+								"Human➞Peasant➞Augur",
+								"Human➞Peasant➞Midwife"
+							]
+						}
 					},
 					resources: 6,
 					setting: "Outcast",
@@ -7194,23 +7544,26 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Peasant",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Death Cult"
 					],
 					mentalPool: 0,
 					name: "Heretic Priest",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Religious➞Acolyte",
-							"Human➞Villager➞Acolyte",
-							"Human➞Outcast➞Cultist",
-							"Human➞Outcast➞Apostate",
-							"Human➞Religious➞Theologian",
-							"Human➞Villager➞Venal Priest",
-							"Human➞Religious➞Interpreter",
-							"Human➞Religious➞Archivist"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Religious➞Acolyte",
+								"Human➞Villager➞Acolyte",
+								"Human➞Outcast➞Cultist",
+								"Human➞Outcast➞Apostate",
+								"Human➞Religious➞Theologian",
+								"Human➞Villager➞Venal Priest",
+								"Human➞Religious➞Interpreter",
+								"Human➞Religious➞Archivist"
+							]
+						}
 					},
 					resources: 6,
 					setting: "Outcast",
@@ -7246,7 +7599,7 @@ export const Human: bwgr.data.Stock = {
 						"Human➞City Dweller",
 						"Human➞Noble",
 						"Human➞Seafaring",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court",
 						"Human➞Religious",
 						"Human➞Professional Soldier"
@@ -7255,8 +7608,8 @@ export const Human: bwgr.data.Stock = {
 					name: "Thinker",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"YEARS➞36"
+						limits: [
+							"YEARS➞MIN➞36"
 						]
 					},
 					resources: 5,
@@ -7290,14 +7643,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Demented Inventor",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Outcast➞Rogue Wizard",
-							"Human➞Noble Court➞Apt Pupil",
-							"Human➞Outcast➞Apt Pupil",
-							"Human➞Professional Soldier➞Apt Pupil",
-							"Human➞Religious➞Apt Pupil",
-							"Human➞Villager➞Wizard's Apprentice"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Outcast➞Rogue Wizard",
+								"Human➞Noble Court➞Apt Pupil",
+								"Human➞Outcast➞Apt Pupil",
+								"Human➞Professional Soldier➞Apt Pupil",
+								"Human➞Religious➞Apt Pupil",
+								"Human➞Villager➞Wizard's Apprentice"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Outcast",
@@ -7331,15 +7687,18 @@ export const Human: bwgr.data.Stock = {
 					name: "Evil Necromancer",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Noble Court➞Coroner",
-							"Human➞Death Cult➞Death Cultist",
-							"Human➞Outcast➞Cultist",
-							"Human➞Noble Court➞Apt Pupil",
-							"Human➞Outcast➞Apt Pupil",
-							"Human➞Professional Soldier➞Apt Pupil",
-							"Human➞Religious➞Apt Pupil"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble Court➞Coroner",
+								"Human➞Death Cult➞Death Cultist",
+								"Human➞Outcast➞Cultist",
+								"Human➞Noble Court➞Apt Pupil",
+								"Human➞Outcast➞Apt Pupil",
+								"Human➞Professional Soldier➞Apt Pupil",
+								"Human➞Religious➞Apt Pupil"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Outcast",
@@ -7365,6 +7724,7 @@ export const Human: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Peasant",
+			short: "Peasant",
 			stock: "Human",
 			type: "Setting",
 			lifepaths: [
@@ -7377,17 +7737,16 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 3,
 					leads: [
-						"Human➞Slave Raider",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Professional Soldier",
 						"Human➞Seafaring",
 						"Human➞Religious",
-						"Human➞College of Magic",
-						"Human➞Black Barbarian"
+						"Human➞College of Magic"
 					],
 					mentalPool: 0,
 					name: "Born Peasant",
 					physicalPool: 0,
+					requirements: {},
 					resources: 3,
 					setting: "Peasant",
 					skillPool: 0,
@@ -7405,7 +7764,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 2,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Outcast",
 						"Human➞Noble Court",
 						"Human➞Religious"
@@ -7413,6 +7771,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Gifted Child",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "Peasant",
 					skillPool: 0,
@@ -7436,17 +7795,16 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
 						"Human➞Professional Soldier",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Farmer",
 					physicalPool: 1,
 					requirements: {
-						LIMIT: [
-							"NOT➞LP*2"
+						limits: [
+							"LP➞MIN➞3"
 						]
 					},
 					resources: 5,
@@ -7478,7 +7836,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
 						"Human➞Professional Soldier"
 					],
@@ -7486,11 +7843,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Head of Household",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Men➞Peasant➞Farmer",
-							"Men➞Peasant➞Itinerant Priest"
-						],
-						TEXT: [
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Peasant➞Farmer",
+								"Human➞Peasant➞Itinerant Priest"
+							]
+						},
+						texts: [
 							"Otherwise requires a female lifepath."
 						]
 					},
@@ -7517,13 +7877,13 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
 						"Human➞Outcast"
 					],
 					mentalPool: 1,
 					name: "Midwife",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "Peasant",
 					skillPool: 7,
@@ -7549,14 +7909,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Professional Soldier"
 					],
 					mentalPool: 0,
 					name: "Lazy Stayabout",
 					physicalPool: 0,
+					requirements: {},
 					resources: 3,
 					setting: "Peasant",
 					skillPool: 3,
@@ -7582,15 +7942,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Professional Soldier",
-						"Human➞Outcast",
-						"Human➞Nomad"
+						"Human➞Outcast"
 					],
 					mentalPool: 0,
 					name: "Conscript",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "Peasant",
 					skillPool: 2,
@@ -7615,15 +7974,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Outcast",
-						"Human➞Servitude",
-						"Human➞Villager",
-						"Human➞Nomad"
+						"Human➞Servitude and Captive",
+						"Human➞Villager"
 					],
 					mentalPool: 0,
 					name: "Peasant Pilgrim",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "Peasant",
 					skillPool: 3,
@@ -7649,12 +8007,12 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager"
 					],
 					mentalPool: 0,
 					name: "Miller",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "Peasant",
 					skillPool: 5,
@@ -7680,7 +8038,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
 						"Human➞Professional Soldier",
 						"Human➞Seafaring"
@@ -7688,6 +8045,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Fisherman",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "Peasant",
 					skillPool: 6,
@@ -7715,14 +8073,13 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
-						"Human➞Professional Soldier",
-						"Human➞Nomad"
+						"Human➞Professional Soldier"
 					],
 					mentalPool: 0,
 					name: "Shepherd",
 					physicalPool: 1,
+					requirements: {},
 					resources: 4,
 					setting: "Peasant",
 					skillPool: 5,
@@ -7748,13 +8105,13 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
 						"Human➞Outcast"
 					],
 					mentalPool: 0,
 					name: "Woodcutter",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "Peasant",
 					skillPool: 5,
@@ -7780,15 +8137,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
 						"Human➞Outcast",
-						"Human➞Professional Soldier",
-						"Human➞Nomad"
+						"Human➞Professional Soldier"
 					],
 					mentalPool: 1,
 					name: "Hunter",
 					physicalPool: 1,
+					requirements: {},
 					resources: 6,
 					setting: "Peasant",
 					skillPool: 7,
@@ -7814,15 +8170,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
 						"Human➞Outcast",
-						"Human➞Professional Soldier",
-						"Human➞Nomad"
+						"Human➞Professional Soldier"
 					],
 					mentalPool: 1,
 					name: "Trapper",
 					physicalPool: 1,
+					requirements: {},
 					resources: 8,
 					setting: "Peasant",
 					skillPool: 6,
@@ -7850,15 +8205,15 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞City Dweller",
 						"Human➞Outcast"
 					],
 					mentalPool: 1,
 					name: "Peddler",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Peasant",
 					skillPool: 7,
@@ -7889,18 +8244,16 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
-						"Human➞Outcast",
-						"Human➞Nomad"
+						"Human➞Outcast"
 					],
 					mentalPool: 1,
 					name: "Elder",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"NOT➞LP*1/2/3/4",
-							"YEARS➞50"
+						limits: [
+							"LP➞MIN➞5",
+							"YEARS➞MIN➞50"
 						]
 					},
 					resources: 5,
@@ -7929,19 +8282,21 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Outcast"
 					],
 					mentalPool: 1,
 					name: "Augur",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Men➞Peasant➞Midwife",
-							"Men➞Peasant➞Country Wife"
-						],
-						TEXT: [
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Peasant➞Midwife",
+								"Human➞Peasant➞Country Wife"
+							]
+						},
+						texts: [
 							"Otherwise must be female and no more than three lifepaths."
 						]
 					},
@@ -7974,7 +8329,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
 						"Human➞Outcast",
 						"Human➞City Dweller",
@@ -7984,14 +8338,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Itinerant Priest",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Men➞Villager➞Acolyte",
-							"Men➞Villager➞Failed Acolyte",
-							"Men➞City Dweller➞Temple Acolyte",
-							"Men➞Noble➞Religious Acolyte",
-							"Men➞Religious➞Temple Acolyte",
-							"Men➞Death Cult➞Religious Acolyte"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Acolyte",
+								"Human➞Villager➞Failed Acolyte",
+								"Human➞City Dweller➞Temple Acolyte",
+								"Human➞Noble➞Religious Acolyte",
+								"Human➞Religious➞Temple Acolyte",
+								"Human➞Death Cult➞Religious Acolyte"
+							]
+						}
 					},
 					resources: 8,
 					setting: "Peasant",
@@ -8022,7 +8379,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Outcast",
 						"Human➞Villager",
 						"Human➞City Dweller",
@@ -8032,9 +8388,12 @@ export const Human: bwgr.data.Stock = {
 					name: "Recluse Wizard",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Skill➞Men Sorcerous➞Sorcery"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Skill➞Human Magical➞Sorcery"
+							]
+						}
 					},
 					resources: 28,
 					setting: "Peasant",
@@ -8064,14 +8423,13 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Religious"
 					],
 					mentalPool: 1,
 					name: "Country Wife",
 					physicalPool: 1,
 					requirements: {
-						TEXT: [
+						texts: [
 							"A player who takes the Country Wife lifepath may also choose her husband's lifepath from the Peasant setting and may choose from his skills. She gets half of his skill points,rounded down. She also recieves half of her husband's resource points."
 						]
 					},
@@ -8095,7 +8453,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Outcast",
 						"Human➞Villager"
 					],
@@ -8103,14 +8460,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Speaker of Names",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Men➞Peasant➞Augur",
-							"Men➞Outcast➞Crazy Witch",
-							"Men➞City Dweller➞Neophyte Sorcerer",
-							"Men➞Outcast➞Neophyte Sorcerer",
-							"Men➞Villager➞Wizard's Apprentice",
-							"Men➞Peasant➞Elder"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Peasant➞Augur",
+								"Human➞Outcast➞Crazy Witch",
+								"Human➞City Dweller➞Neophyte Sorcerer",
+								"Human➞Outcast➞Neophyte Sorcerer",
+								"Human➞Villager➞Wizard's Apprentice",
+								"Human➞Peasant➞Elder"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Peasant",
@@ -8139,6 +8499,7 @@ export const Human: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Professional Soldier",
+			short: "Soldier",
 			stock: "Human",
 			type: "Subsetting",
 			lifepaths: [
@@ -8150,9 +8511,8 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞College of Magic",
 						"Human➞Death Cult"
 					],
@@ -8160,9 +8520,9 @@ export const Human: bwgr.data.Stock = {
 					name: "Apt Pupil",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2/3",
-							"IS➞UNIQUE"
+						limits: [
+							"LP➞MAX➞3",
+							"LP➞UNIQUE"
 						]
 					},
 					resources: 8,
@@ -8191,15 +8551,15 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
 						"Human➞Peasant",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Outcast"
 					],
 					mentalPool: 0,
 					name: "Runner",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "Professional Soldier",
 					skillPool: 4,
@@ -8226,7 +8586,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Peasant",
 						"Human➞Villager"
@@ -8234,6 +8593,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Apprentice",
 					physicalPool: 1,
+					requirements: {},
 					resources: 6,
 					setting: "Professional Soldier",
 					skillPool: 6,
@@ -8262,14 +8622,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
 						"Human➞Peasant",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 1,
 					name: "Musician",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Professional Soldier",
 					skillPool: 4,
@@ -8292,14 +8652,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Outcast",
 						"Human➞Villager",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Foot Soldier",
 					physicalPool: 1,
+					requirements: {},
 					resources: 6,
 					setting: "Professional Soldier",
 					skillPool: 6,
@@ -8325,14 +8685,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Outcast",
 						"Human➞Villager",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Archer",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "Professional Soldier",
 					skillPool: 5,
@@ -8357,14 +8717,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Outcast",
 						"Human➞Villager",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Crossbowman",
 					physicalPool: 1,
+					requirements: {},
 					resources: 7,
 					setting: "Professional Soldier",
 					skillPool: 5,
@@ -8389,15 +8749,15 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Seafaring",
 						"Human➞Outcast",
 						"Human➞Villager",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Sailor",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "Professional Soldier",
 					skillPool: 6,
@@ -8428,14 +8788,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court"
 					],
 					mentalPool: 1,
 					name: "Herald",
 					physicalPool: 0,
+					requirements: {},
 					resources: 7,
 					setting: "Professional Soldier",
 					skillPool: 4,
@@ -8460,14 +8820,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court"
 					],
 					mentalPool: 0,
 					name: "Bannerman",
 					physicalPool: 1,
+					requirements: {},
 					resources: 7,
 					setting: "Professional Soldier",
 					skillPool: 5,
@@ -8495,14 +8855,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Peasant",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Outcast"
 					],
 					mentalPool: 0,
 					name: "Scout",
 					physicalPool: 1,
+					requirements: {},
 					resources: 4,
 					setting: "Professional Soldier",
 					skillPool: 5,
@@ -8527,22 +8887,24 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 1,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court"
 					],
 					mentalPool: 0,
 					name: "Sergeant",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Squire",
-							"Human➞Noble Court➞Squire",
-							"Human➞Villager➞Village Guard",
-							"Human➞City Dweller➞City Guard",
-							"Human➞Professional Soldier➞Foot Soldier"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Squire",
+								"Human➞Noble Court➞Squire",
+								"Human➞Villager➞Village Guard",
+								"Human➞City Dweller➞City Guard",
+								"Human➞Professional Soldier➞Foot Soldier"
+							]
+						}
 					},
 					resources: 8,
 					setting: "Professional Soldier",
@@ -8567,7 +8929,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Outcast",
 						"Human➞Noble Court"
 					],
@@ -8575,14 +8936,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Veteran",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Professional Soldier➞Sergeant",
-							"Human➞City Dweller➞Sergeant-at-Arms",
-							"Human➞Noble➞Knight",
-							"Human➞Noble Court➞Knight",
-							"Human➞Religious➞Military Order",
-							"Human➞Outcast➞Freebooter"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Professional Soldier➞Sergeant",
+								"Human➞City Dweller➞Sergeant-at-Arms",
+								"Human➞Noble➞Knight",
+								"Human➞Noble Court➞Knight",
+								"Human➞Religious➞Military Order",
+								"Human➞Outcast➞Freebooter"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Professional Soldier",
@@ -8610,26 +8974,28 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court"
 					],
 					mentalPool: 0,
 					name: "Cavalryman",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Knight",
-							"Human➞Noble Court➞Knight",
-							"Human➞Noble➞Squire",
-							"Human➞Noble Court➞Squire",
-							"Human➞City Dweller➞Groom",
-							"Human➞Noble Court➞Groom",
-							"Human➞Villager➞Groom",
-							"Human➞Noble Court➞Master of Horses"
-						],
-						TEXT: [
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Knight",
+								"Human➞Noble Court➞Knight",
+								"Human➞Noble➞Squire",
+								"Human➞Noble Court➞Squire",
+								"Human➞City Dweller➞Groom",
+								"Human➞Noble Court➞Groom",
+								"Human➞Villager➞Groom",
+								"Human➞Noble Court➞Master of Horses"
+							]
+						},
+						texts: [
 							"a prior lifepath having to do with horses"
 						]
 					},
@@ -8659,7 +9025,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 1,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
 						"Human➞Peasant",
 						"Human➞Outcast"
@@ -8668,12 +9033,15 @@ export const Human: bwgr.data.Stock = {
 					name: "Journeyman",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Apprentice",
-							"Human➞Nomad➞Apprentice",
-							"Human➞Professional Soldier➞Apprentice",
-							"Human➞Villager➞Apprentice"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Apprentice",
+								"Human➞Nomad➞Apprentice",
+								"Human➞Professional Soldier➞Apprentice",
+								"Human➞Villager➞Apprentice"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Professional Soldier",
@@ -8698,7 +9066,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Villager",
 						"Human➞Outcast"
@@ -8707,11 +9074,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Armorer",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Journeyman",
-							"Human➞Professional Soldier➞Journeyman",
-							"Human➞Villager➞Journeyman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Journeyman",
+								"Human➞Professional Soldier➞Journeyman",
+								"Human➞Villager➞Journeyman"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Professional Soldier",
@@ -8738,7 +9108,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Noble Court",
 						"Human➞City Dweller",
 						"Human➞Outcast"
@@ -8747,11 +9116,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Atilliator",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Journeyman",
-							"Human➞Professional Soldier➞Journeyman",
-							"Human➞Villager➞Journeyman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Journeyman",
+								"Human➞Professional Soldier➞Journeyman",
+								"Human➞Villager➞Journeyman"
+							]
+						}
 					},
 					resources: 22,
 					setting: "Professional Soldier",
@@ -8777,7 +9149,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 1,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Outcast",
 						"Human➞City Dweller",
 						"Human➞Seafaring",
@@ -8788,15 +9159,18 @@ export const Human: bwgr.data.Stock = {
 					name: "Chaplain",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Temple Priest",
-							"Human➞Noble Court➞Court Priest",
-							"Human➞Religious➞Priest",
-							"Human➞Religious➞Archpriest",
-							"Human➞Outcast➞Heretic Priest",
-							"Human➞City Dweller➞Temple Priest",
-							"Human➞Religious➞Military Order"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Temple Priest",
+								"Human➞Noble Court➞Court Priest",
+								"Human➞Religious➞Priest",
+								"Human➞Religious➞Archpriest",
+								"Human➞Outcast➞Heretic Priest",
+								"Human➞City Dweller➞Temple Priest",
+								"Human➞Religious➞Military Order"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Professional Soldier",
@@ -8825,7 +9199,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Noble Court",
 						"Human➞Outcast"
@@ -8834,14 +9207,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Engineer",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student",
-							"Human➞Professional Soldier➞Engineer",
-							"Human➞Seafaring➞Engineer",
-							"Human➞Villager➞Mining Engineer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student",
+								"Human➞Professional Soldier➞Engineer",
+								"Human➞Seafaring➞Engineer",
+								"Human➞Villager➞Mining Engineer"
+							]
+						}
 					},
 					resources: 18,
 					setting: "Professional Soldier",
@@ -8868,7 +9244,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Noble Court",
 						"Human➞Outcast"
@@ -8877,14 +9252,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Wizard of War",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Neophyte Sorcerer",
-							"Human➞Outcast➞Neophyte Sorcerer",
-							"Human➞Noble➞Arcane Devotee",
-							"Human➞Seafaring➞Weather Witch",
-							"Human➞Outcast➞Rogue Wizard",
-							"Human➞Outcast➞Mad Summoner"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Neophyte Sorcerer",
+								"Human➞Outcast➞Neophyte Sorcerer",
+								"Human➞Noble➞Arcane Devotee",
+								"Human➞Seafaring➞Weather Witch",
+								"Human➞Outcast➞Rogue Wizard",
+								"Human➞Outcast➞Mad Summoner"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Professional Soldier",
@@ -8913,7 +9291,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Villager",
 						"Human➞City Dweller",
 						"Human➞Noble Court"
@@ -8922,20 +9299,23 @@ export const Human: bwgr.data.Stock = {
 					name: "Quartermaster",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Professional Soldier➞Sergeant",
-							"Human➞Nomad➞Veteran",
-							"Human➞Professional Soldier➞Veteran",
-							"Human➞Noble Court➞Steward",
-							"Human➞Seafaring➞Steward",
-							"Human➞Seafaring➞Ship's Captain",
-							"Human➞City Dweller➞Merchant",
-							"Human➞Villager➞Merchant",
-							"Human➞Noble Court➞Man-at-Arms",
-							"Human➞Outcast➞Smuggler",
-							"Human➞Noble Court➞Constable",
-							"Human➞Noble➞Lord"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Professional Soldier➞Sergeant",
+								"Human➞Nomad➞Veteran",
+								"Human➞Professional Soldier➞Veteran",
+								"Human➞Noble Court➞Steward",
+								"Human➞Seafaring➞Steward",
+								"Human➞Seafaring➞Ship's Captain",
+								"Human➞City Dweller➞Merchant",
+								"Human➞Villager➞Merchant",
+								"Human➞Noble Court➞Man-at-Arms",
+								"Human➞Outcast➞Smuggler",
+								"Human➞Noble Court➞Constable",
+								"Human➞Noble➞Lord"
+							]
+						}
 					},
 					resources: 17,
 					setting: "Professional Soldier",
@@ -8962,12 +9342,11 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Peasant",
 						"Human➞Villager",
 						"Human➞City Dweller",
 						"Human➞Seafaring",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court",
 						"Human➞Religious",
 						"Human➞Outcast"
@@ -8976,13 +9355,16 @@ export const Human: bwgr.data.Stock = {
 					name: "Captain",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Knight",
-							"Human➞Noble Court➞Knight",
-							"Human➞Noble➞Lord",
-							"Human➞Noble Court➞Constable",
-							"Human➞Outcast➞2*Freebooter"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Knight",
+								"Human➞Noble Court➞Knight",
+								"Human➞Noble➞Lord",
+								"Human➞Noble Court➞Constable",
+								"Human➞Outcast➞2*Freebooter"
+							]
+						}
 					},
 					resources: 35,
 					setting: "Professional Soldier",
@@ -9012,6 +9394,7 @@ export const Human: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Religious",
+			short: "Religious",
 			stock: "Human",
 			type: "Subsetting",
 			lifepaths: [
@@ -9025,7 +9408,7 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Outcast",
 						"Human➞Professional Soldier",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞College of Magic",
 						"Human➞Death Cult"
 					],
@@ -9033,9 +9416,9 @@ export const Human: bwgr.data.Stock = {
 					name: "Apt Pupil",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2/3",
-							"IS➞UNIQUE"
+						limits: [
+							"LP➞MAX➞3",
+							"LP➞UNIQUE"
 						]
 					},
 					resources: 8,
@@ -9070,6 +9453,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Castrati",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "Religious",
 					skillPool: 7,
@@ -9106,6 +9490,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Pardoner",
 					physicalPool: 0,
+					requirements: {},
 					resources: 12,
 					setting: "Religious",
 					skillPool: 5,
@@ -9134,12 +9519,13 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Outcast",
 						"Human➞Peasant",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court"
 					],
 					mentalPool: 0,
 					name: "Zealous Convert",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Religious",
 					skillPool: 4,
@@ -9171,7 +9557,7 @@ export const Human: bwgr.data.Stock = {
 						"Human➞City Dweller",
 						"Human➞Noble",
 						"Human➞Seafaring",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court",
 						"Human➞Professional Soldier",
 						"Human➞Outcast"
@@ -9180,13 +9566,16 @@ export const Human: bwgr.data.Stock = {
 					name: "Military Order",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Squire",
-							"Human➞Noble Court➞Squire",
-							"Human➞Noble➞Knight",
-							"Human➞Noble Court➞Knight",
-							"Human➞Professional Soldier➞1*ANY"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Squire",
+								"Human➞Noble Court➞Squire",
+								"Human➞Noble➞Knight",
+								"Human➞Noble Court➞Knight",
+								"Human➞Professional Soldier➞1*ANY"
+							]
+						}
 					},
 					resources: 7,
 					setting: "Religious",
@@ -9216,15 +9605,14 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞City Dweller",
-						"Human➞Villager",
-						"Human➞Nomad",
-						"Human➞Merchant House"
+						"Human➞Villager"
 					],
 					mentalPool: 0,
 					name: "Grave Digger",
 					physicalPool: 0,
+					requirements: {},
 					resources: 6,
 					setting: "Religious",
 					skillPool: 4,
@@ -9257,6 +9645,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Porter",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Religious",
 					skillPool: 4,
@@ -9285,12 +9674,12 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞City Dweller",
 						"Human➞Outcast",
-						"Human➞Noble Court",
-						"Human➞Merchant House"
+						"Human➞Noble Court"
 					],
 					mentalPool: 0,
 					name: "Notary",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "Religious",
 					skillPool: 4,
@@ -9321,20 +9710,23 @@ export const Human: bwgr.data.Stock = {
 					name: "Custodian",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student",
-							"Human➞Noble➞Young Lady",
-							"Human➞Noble Court➞Young Lady",
-							"Human➞Religious➞Itinerant Monk",
-							"Human➞Religious➞Cloistered Nun",
-							"Human➞City Dweller➞Temple Acolyte",
-							"Human➞Religious➞Temple Acolyte",
-							"Human➞Religious➞Inquisitor",
-							"Human➞Religious➞Exorcist",
-							"Human➞Religious➞Theologian"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student",
+								"Human➞Noble➞Young Lady",
+								"Human➞Noble Court➞Young Lady",
+								"Human➞Religious➞Itinerant Monk",
+								"Human➞Religious➞Cloistered Nun",
+								"Human➞City Dweller➞Temple Acolyte",
+								"Human➞Religious➞Temple Acolyte",
+								"Human➞Religious➞Inquisitor",
+								"Human➞Religious➞Exorcist",
+								"Human➞Religious➞Theologian"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Religious",
@@ -9374,17 +9766,20 @@ export const Human: bwgr.data.Stock = {
 					name: "Interpreter",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student",
-							"Human➞Noble➞Young Lady",
-							"Human➞Noble Court➞Young Lady",
-							"Human➞City Dweller➞Temple Acolyte",
-							"Human➞Religious➞Temple Acolyte",
-							"Human➞Religious➞Exorcist",
-							"Human➞Religious➞Theologian"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student",
+								"Human➞Noble➞Young Lady",
+								"Human➞Noble Court➞Young Lady",
+								"Human➞City Dweller➞Temple Acolyte",
+								"Human➞Religious➞Temple Acolyte",
+								"Human➞Religious➞Exorcist",
+								"Human➞Religious➞Theologian"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Religious",
@@ -9421,6 +9816,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Archivist",
 					physicalPool: 0,
+					requirements: {},
 					resources: 8,
 					setting: "Religious",
 					skillPool: 5,
@@ -9454,6 +9850,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Itinerant Monk",
 					physicalPool: 0,
+					requirements: {},
 					resources: 6,
 					setting: "Religious",
 					skillPool: 7,
@@ -9484,12 +9881,12 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Peasant",
 						"Human➞Outcast",
-						"Human➞Noble Court",
-						"Human➞Nomad"
+						"Human➞Noble Court"
 					],
 					mentalPool: 0,
 					name: "Cloistered Nun",
 					physicalPool: 0,
+					requirements: {},
 					resources: 12,
 					setting: "Religious",
 					skillPool: 6,
@@ -9526,6 +9923,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Temple Acolyte",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Religious",
 					skillPool: 4,
@@ -9562,11 +9960,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Priest",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Temple Acolyte",
-							"Human➞Religious➞Temple Acolyte",
-							"Human➞Noble➞Religious Acolyte"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Temple Acolyte",
+								"Human➞Religious➞Temple Acolyte",
+								"Human➞Noble➞Religious Acolyte"
+							]
+						}
 					},
 					resources: 18,
 					setting: "Religious",
@@ -9605,13 +10006,16 @@ export const Human: bwgr.data.Stock = {
 					name: "Exorcist",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Temple Priest",
-							"Human➞Peasant➞Itinerant Priest",
-							"Human➞Religious➞Priest",
-							"Human➞Noble Court➞Court Priest",
-							"Human➞Religious➞Archivist"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Temple Priest",
+								"Human➞Peasant➞Itinerant Priest",
+								"Human➞Religious➞Priest",
+								"Human➞Noble Court➞Court Priest",
+								"Human➞Religious➞Archivist"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Religious",
@@ -9655,14 +10059,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Inquisitor",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Temple Priest",
-							"Human➞Peasant➞Itinerant Priest",
-							"Human➞Religious➞Priest",
-							"Human➞Noble Court➞Court Priest",
-							"Human➞City Dweller➞Judge",
-							"Human➞Noble Court➞Justiciar"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Temple Priest",
+								"Human➞Peasant➞Itinerant Priest",
+								"Human➞Religious➞Priest",
+								"Human➞Noble Court➞Court Priest",
+								"Human➞City Dweller➞Judge",
+								"Human➞Noble Court➞Justiciar"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Religious",
@@ -9700,18 +10107,21 @@ export const Human: bwgr.data.Stock = {
 					name: "Theologian",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Scribe",
-							"Human➞Religious➞Scribe",
-							"Human➞Religious➞Archivist",
-							"Human➞Noble Court➞Court Lawyer",
-							"Human➞City Dweller➞Advocate",
-							"Human➞Religious➞Custodian",
-							"Human➞Religious➞Interpreter",
-							"Human➞Religious➞Priest",
-							"Human➞City Dweller➞Bishop",
-							"Human➞Religious➞Bishop"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Scribe",
+								"Human➞Religious➞Scribe",
+								"Human➞Religious➞Archivist",
+								"Human➞Noble Court➞Court Lawyer",
+								"Human➞City Dweller➞Advocate",
+								"Human➞Religious➞Custodian",
+								"Human➞Religious➞Interpreter",
+								"Human➞Religious➞Priest",
+								"Human➞City Dweller➞Bishop",
+								"Human➞Religious➞Bishop"
+							]
+						}
 					},
 					resources: 9,
 					setting: "Religious",
@@ -9754,14 +10164,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Archpriest",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Temple Priest",
-							"Human➞Peasant➞Itinerant Priest",
-							"Human➞Religious➞Priest",
-							"Human➞Noble Court➞Court Priest",
-							"Human➞Noble Court➞Chaplain",
-							"Human➞Professional Soldier➞Chaplain"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Temple Priest",
+								"Human➞Peasant➞Itinerant Priest",
+								"Human➞Religious➞Priest",
+								"Human➞Noble Court➞Court Priest",
+								"Human➞Noble Court➞Chaplain",
+								"Human➞Professional Soldier➞Chaplain"
+							]
+						}
 					},
 					resources: 25,
 					setting: "Religious",
@@ -9803,11 +10216,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Canon",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Religious➞Archpriest",
-							"Human➞Religious➞Theologian",
-							"Human➞Religious➞Abbot/Abbess"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Religious➞Archpriest",
+								"Human➞Religious➞Theologian",
+								"Human➞Religious➞Abbot/Abbess"
+							]
+						}
 					},
 					resources: 45,
 					setting: "Religious",
@@ -9843,12 +10259,15 @@ export const Human: bwgr.data.Stock = {
 					name: "Abbot/Abbess",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Religious➞Itinerant Monk",
-							"Human➞Religious➞Cloistered Nun",
-							"Human➞Religious➞Theologian",
-							"Human➞Villager➞Vintner"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Religious➞Itinerant Monk",
+								"Human➞Religious➞Cloistered Nun",
+								"Human➞Religious➞Theologian",
+								"Human➞Villager➞Vintner"
+							]
+						}
 					},
 					resources: 45,
 					setting: "Religious",
@@ -9883,16 +10302,23 @@ export const Human: bwgr.data.Stock = {
 					name: "Bishop",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Religious➞Archpriest",
-							"Human➞Noble➞Baron",
-							"Human➞Noble➞Viscount",
-							"Human➞Noble➞Count",
-							"Human➞Noble➞Duke"
-						],
-						AND: [
-							"Trait➞Human Lifepath➞Your Grace"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Religious➞Archpriest",
+								"Human➞Noble➞Baron",
+								"Human➞Noble➞Viscount",
+								"Human➞Noble➞Count",
+								"Human➞Noble➞Duke",
+								{
+									type: "AND",
+									items: [
+										"Human➞Noble➞Lord",
+										"Trait➞Human Lifepath➞Your Grace"
+									]
+								}
+							]
+						}
 					},
 					resources: 45,
 					setting: "Religious",
@@ -9920,6 +10346,7 @@ export const Human: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Seafaring",
+			short: "Seafaring",
 			stock: "Human",
 			type: "Setting",
 			lifepaths: [
@@ -9932,7 +10359,7 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 3,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Professional Soldier",
 						"Human➞Outcast",
 						"Human➞College of Magic"
@@ -9940,6 +10367,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Son of a Gun",
 					physicalPool: 0,
+					requirements: {},
 					resources: 3,
 					setting: "Seafaring",
 					skillPool: 0,
@@ -9966,6 +10394,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Gifted Child",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "Seafaring",
 					skillPool: 0,
@@ -9990,7 +10419,7 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞City Dweller",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Professional Soldier",
 						"Human➞Outcast"
 					],
@@ -9998,9 +10427,9 @@ export const Human: bwgr.data.Stock = {
 					name: "Boy",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2",
-							"IS➞UNIQUE"
+						limits: [
+							"LP➞MAX➞2",
+							"LP➞UNIQUE"
 						]
 					},
 					resources: 8,
@@ -10028,13 +10457,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Professional Soldier",
 						"Human➞Outcast"
 					],
 					mentalPool: 0,
 					name: "Galley Slave",
 					physicalPool: 0,
+					requirements: {},
 					resources: 3,
 					setting: "Seafaring",
 					skillPool: 3,
@@ -10067,12 +10497,13 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞City Dweller"
 					],
 					mentalPool: 0,
 					name: "Ratcatcher",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "Seafaring",
 					skillPool: 5,
@@ -10099,13 +10530,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Professional Soldier",
 						"Human➞Outcast"
 					],
 					mentalPool: 0,
 					name: "Landsman",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Seafaring",
 					skillPool: 3,
@@ -10140,6 +10572,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Drummer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 6,
 					setting: "Seafaring",
 					skillPool: 3,
@@ -10164,7 +10597,7 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Professional Soldier",
 						"Human➞City Dweller",
 						"Human➞Outcast"
@@ -10172,6 +10605,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Sailor",
 					physicalPool: 1,
+					requirements: {},
 					resources: 7,
 					setting: "Seafaring",
 					skillPool: 6,
@@ -10200,24 +10634,27 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Outcast"
 					],
 					mentalPool: 1,
 					name: "Crazy Old Sailor",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Sailor",
-							"Human➞Professional Soldier➞Sailor",
-							"Human➞Seafaring➞Sailor",
-							"Human➞Villager➞Sailor",
-							"Human➞Outcast➞Pirate",
-							"Human➞Black Barbarian➞Mercenary Captain",
-							"Human➞City Dweller➞Mercenary Captain"
-						],
-						LIMIT: [
-							"YEARS➞40"
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Sailor",
+								"Human➞Professional Soldier➞Sailor",
+								"Human➞Seafaring➞Sailor",
+								"Human➞Villager➞Sailor",
+								"Human➞Outcast➞Pirate",
+								"Human➞Black Barbarian➞Mercenary Captain",
+								"Human➞City Dweller➞Mercenary Captain"
+							]
+						},
+						limits: [
+							"YEARS➞MIN➞40"
 						]
 					},
 					resources: 8,
@@ -10246,25 +10683,28 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Professional Soldier"
 					],
 					mentalPool: 0,
 					name: "Purser",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Clerk",
-							"Human➞Religious➞Clerk",
-							"Human➞Villager➞Clerk",
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student",
-							"Human➞City Dweller➞Sailor",
-							"Human➞Professional Soldier➞Sailor",
-							"Human➞Seafaring➞Sailor",
-							"Human➞Villager➞Sailor"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Clerk",
+								"Human➞Religious➞Clerk",
+								"Human➞Villager➞Clerk",
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student",
+								"Human➞City Dweller➞Sailor",
+								"Human➞Professional Soldier➞Sailor",
+								"Human➞Seafaring➞Sailor",
+								"Human➞Villager➞Sailor"
+							]
+						}
 					},
 					resources: 9,
 					setting: "Seafaring",
@@ -10292,12 +10732,13 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Professional Soldier"
 					],
 					mentalPool: 1,
 					name: "Signalman",
 					physicalPool: 0,
+					requirements: {},
 					resources: 8,
 					setting: "Seafaring",
 					skillPool: 5,
@@ -10331,15 +10772,18 @@ export const Human: bwgr.data.Stock = {
 					name: "Pilot",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Sailor",
-							"Human➞Professional Soldier➞Sailor",
-							"Human➞Seafaring➞Sailor",
-							"Human➞Villager➞Sailor",
-							"Human➞Outcast➞Pirate",
-							"Human➞Black Barbarian➞Mercenary Captain",
-							"Human➞City Dweller➞Mercenary Captain"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Sailor",
+								"Human➞Professional Soldier➞Sailor",
+								"Human➞Seafaring➞Sailor",
+								"Human➞Villager➞Sailor",
+								"Human➞Outcast➞Pirate",
+								"Human➞Black Barbarian➞Mercenary Captain",
+								"Human➞City Dweller➞Mercenary Captain"
+							]
+						}
 					},
 					resources: 8,
 					setting: "Seafaring",
@@ -10378,15 +10822,18 @@ export const Human: bwgr.data.Stock = {
 					name: "Marine",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Sailor",
-							"Human➞Professional Soldier➞Sailor",
-							"Human➞Seafaring➞Sailor",
-							"Human➞Villager➞Sailor",
-							"Human➞Outcast➞Pirate",
-							"Human➞Black Barbarian➞Mercenary Captain",
-							"Human➞City Dweller➞Mercenary Captain"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Sailor",
+								"Human➞Professional Soldier➞Sailor",
+								"Human➞Seafaring➞Sailor",
+								"Human➞Villager➞Sailor",
+								"Human➞Outcast➞Pirate",
+								"Human➞Black Barbarian➞Mercenary Captain",
+								"Human➞City Dweller➞Mercenary Captain"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Seafaring",
@@ -10422,15 +10869,18 @@ export const Human: bwgr.data.Stock = {
 					name: "Bosun",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Sailor",
-							"Human➞Professional Soldier➞Sailor",
-							"Human➞Seafaring➞Sailor",
-							"Human➞Villager➞Sailor",
-							"Human➞Outcast➞Pirate",
-							"Human➞Black Barbarian➞Mercenary Captain",
-							"Human➞City Dweller➞Mercenary Captain"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Sailor",
+								"Human➞Professional Soldier➞Sailor",
+								"Human➞Seafaring➞Sailor",
+								"Human➞Villager➞Sailor",
+								"Human➞Outcast➞Pirate",
+								"Human➞Black Barbarian➞Mercenary Captain",
+								"Human➞City Dweller➞Mercenary Captain"
+							]
+						}
 					},
 					resources: 8,
 					setting: "Seafaring",
@@ -10466,14 +10916,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Sailmaker",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Sailor",
-							"Human➞Professional Soldier➞Sailor",
-							"Human➞Seafaring➞Sailor",
-							"Human➞Villager➞Sailor",
-							"Human➞Outcast➞Pirate",
-							"Human➞City Dweller➞Seamstress"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Sailor",
+								"Human➞Professional Soldier➞Sailor",
+								"Human➞Seafaring➞Sailor",
+								"Human➞Villager➞Sailor",
+								"Human➞Outcast➞Pirate",
+								"Human➞City Dweller➞Seamstress"
+							]
+						}
 					},
 					resources: 9,
 					setting: "Seafaring",
@@ -10507,15 +10960,18 @@ export const Human: bwgr.data.Stock = {
 					name: "Ship's Doctor",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Doctor",
-							"Human➞Noble Court➞Court Doctor",
-							"Human➞City Dweller➞Physician",
-							"Human➞Villager➞Barber",
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Doctor",
+								"Human➞Noble Court➞Court Doctor",
+								"Human➞City Dweller➞Physician",
+								"Human➞Villager➞Barber",
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Seafaring",
@@ -10556,13 +11012,16 @@ export const Human: bwgr.data.Stock = {
 					name: "Ship's Cook",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Sailor",
-							"Human➞Professional Soldier➞Sailor",
-							"Human➞Seafaring➞Sailor",
-							"Human➞Villager➞Sailor",
-							"Human➞Outcast➞Pirate"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Sailor",
+								"Human➞Professional Soldier➞Sailor",
+								"Human➞Seafaring➞Sailor",
+								"Human➞Villager➞Sailor",
+								"Human➞Outcast➞Pirate"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Seafaring",
@@ -10601,14 +11060,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Ship's Chaplain",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble Court➞Chaplain",
-							"Human➞Professional Soldier➞Chaplain",
-							"Human➞Religious➞Military Order",
-							"Human➞City Dweller➞Temple Acolyte",
-							"Human➞Religious➞Temple Acolyte",
-							"Human➞Noble➞Religious Acolyte"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble Court➞Chaplain",
+								"Human➞Professional Soldier➞Chaplain",
+								"Human➞Religious➞Military Order",
+								"Human➞City Dweller➞Temple Acolyte",
+								"Human➞Religious➞Temple Acolyte",
+								"Human➞Noble➞Religious Acolyte"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Seafaring",
@@ -10636,7 +11098,7 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 1,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞City Dweller",
 						"Human➞Villager",
 						"Human➞Outcast"
@@ -10645,13 +11107,16 @@ export const Human: bwgr.data.Stock = {
 					name: "Weather Witch",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Peasant➞Augur",
-							"Human➞City Dweller➞Neophyte Sorcerer",
-							"Human➞Outcast➞Neophyte Sorcerer",
-							"Human➞Noble➞Arcane Devotee",
-							"Human➞Outcast➞Rogue Wizard"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Peasant➞Augur",
+								"Human➞City Dweller➞Neophyte Sorcerer",
+								"Human➞Outcast➞Neophyte Sorcerer",
+								"Human➞Noble➞Arcane Devotee",
+								"Human➞Outcast➞Rogue Wizard"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Seafaring",
@@ -10681,25 +11146,28 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Professional Soldier",
 						"Human➞City Dweller",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Outcast"
 					],
 					mentalPool: 1,
 					name: "Navigator",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Seafaring➞Pilot",
-							"Human➞Black Barbarian➞Mercenary Captain",
-							"Human➞City Dweller➞Mercenary Captain",
-							"Human➞City Dweller➞Sailor",
-							"Human➞Professional Soldier➞Sailor",
-							"Human➞Seafaring➞Sailor",
-							"Human➞Villager➞Sailor",
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Seafaring➞Pilot",
+								"Human➞Black Barbarian➞Mercenary Captain",
+								"Human➞City Dweller➞Mercenary Captain",
+								"Human➞City Dweller➞Sailor",
+								"Human➞Professional Soldier➞Sailor",
+								"Human➞Seafaring➞Sailor",
+								"Human➞Villager➞Sailor",
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Seafaring",
@@ -10726,13 +11194,14 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Professional Soldier",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Villager",
 						"Human➞Outcast"
 					],
 					mentalPool: 0,
 					name: "Carpenter's Mate",
 					physicalPool: 1,
+					requirements: {},
 					resources: 8,
 					setting: "Seafaring",
 					skillPool: 3,
@@ -10760,20 +11229,23 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Professional Soldier",
 						"Human➞City Dweller",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Outcast"
 					],
 					mentalPool: 0,
 					name: "Ship's Carpenter",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Apprentice",
-							"Human➞Nomad➞Apprentice",
-							"Human➞Professional Soldier➞Apprentice",
-							"Human➞Villager➞Apprentice",
-							"Human➞Seafaring➞Carpenter's Mate"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Apprentice",
+								"Human➞Nomad➞Apprentice",
+								"Human➞Professional Soldier➞Apprentice",
+								"Human➞Villager➞Apprentice",
+								"Human➞Seafaring➞Carpenter's Mate"
+							]
+						}
 					},
 					resources: 16,
 					setting: "Seafaring",
@@ -10802,12 +11274,13 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Professional Soldier",
 						"Human➞City Dweller",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Outcast"
 					],
 					mentalPool: 1,
 					name: "Artillerist's Mate",
 					physicalPool: 0,
+					requirements: {},
 					resources: 8,
 					setting: "Seafaring",
 					skillPool: 4,
@@ -10834,25 +11307,28 @@ export const Human: bwgr.data.Stock = {
 					leads: [
 						"Human➞Professional Soldier",
 						"Human➞City Dweller",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Outcast"
 					],
 					mentalPool: 1,
 					name: "Engineer",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Seafaring➞Artillerist's Mate",
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student",
-							"Human➞Seafaring➞Ship's Carpenter",
-							"Human➞Professional Soldier➞Engineer",
-							"Human➞Seafaring➞Engineer",
-							"Human➞City Dweller➞Journeyman",
-							"Human➞Professional Soldier➞Journeyman",
-							"Human➞Villager➞Journeyman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Seafaring➞Artillerist's Mate",
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student",
+								"Human➞Seafaring➞Ship's Carpenter",
+								"Human➞Professional Soldier➞Engineer",
+								"Human➞Seafaring➞Engineer",
+								"Human➞City Dweller➞Journeyman",
+								"Human➞Professional Soldier➞Journeyman",
+								"Human➞Villager➞Journeyman"
+							]
+						}
 					},
 					resources: 25,
 					setting: "Seafaring",
@@ -10880,7 +11356,7 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 1,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Outcast",
 						"Human➞Professional Soldier",
 						"Human➞City Dweller"
@@ -10889,14 +11365,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Officer's Mate",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Born Noble",
-							"Human➞Noble➞Page",
-							"Human➞Noble Court➞Page",
-							"Human➞Seafaring➞Son of a Gun"
-						],
-						LIMIT: [
-							"IS➞LP*2/3"
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Born Noble",
+								"Human➞Noble➞Page",
+								"Human➞Noble Court➞Page",
+								"Human➞Seafaring➞Son of a Gun"
+							]
+						},
+						limits: [
+							"LP➞MAX➞3"
 						]
 					},
 					resources: 10,
@@ -10923,7 +11402,7 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Outcast",
 						"Human➞Professional Soldier",
 						"Human➞City Dweller"
@@ -10932,14 +11411,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Steward",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Seafaring➞Purser",
-							"Human➞City Dweller➞Merchant",
-							"Human➞Villager➞Merchant",
-							"Human➞Noble Court➞Steward",
-							"Human➞Seafaring➞Steward",
-							"Human➞City Dweller➞Accountant"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Seafaring➞Purser",
+								"Human➞City Dweller➞Merchant",
+								"Human➞Villager➞Merchant",
+								"Human➞Noble Court➞Steward",
+								"Human➞Seafaring➞Steward",
+								"Human➞City Dweller➞Accountant"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Seafaring",
@@ -10965,7 +11447,7 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Outcast",
 						"Human➞Professional Soldier",
 						"Human➞City Dweller"
@@ -10974,14 +11456,17 @@ export const Human: bwgr.data.Stock = {
 					name: "First Mate",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Noble➞Knight",
-							"Human➞Noble Court➞Knight",
-							"Human➞City Dweller➞2*Sailor",
-							"Human➞Professional Soldier➞2*Sailor",
-							"Human➞Villager➞2*Sailor",
-							"Human➞Seafaring➞2*ANY"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Noble➞Knight",
+								"Human➞Noble Court➞Knight",
+								"Human➞City Dweller➞2*Sailor",
+								"Human➞Professional Soldier➞2*Sailor",
+								"Human➞Villager➞2*Sailor",
+								"Human➞Seafaring➞2*ANY"
+							]
+						}
 					},
 					resources: 18,
 					setting: "Seafaring",
@@ -11010,7 +11495,7 @@ export const Human: bwgr.data.Stock = {
 						"Human➞Peasant",
 						"Human➞Villager",
 						"Human➞City Dweller",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court",
 						"Human➞Religious",
 						"Human➞Professional Soldier",
@@ -11020,13 +11505,16 @@ export const Human: bwgr.data.Stock = {
 					name: "Ship's Captain",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞Seafaring➞First Mate",
-							"Human➞Noble➞Knight",
-							"Human➞Noble Court➞Knight",
-							"Human➞Black Barbarian➞2*Mercenary Captain",
-							"Human➞City Dweller➞2*Mercenary Captain"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Seafaring➞First Mate",
+								"Human➞Noble➞Knight",
+								"Human➞Noble Court➞Knight",
+								"Human➞Black Barbarian➞2*Mercenary Captain",
+								"Human➞City Dweller➞2*Mercenary Captain"
+							]
+						}
 					},
 					resources: 30,
 					setting: "Seafaring",
@@ -11046,12 +11534,13 @@ export const Human: bwgr.data.Stock = {
 				}
 			]
 		},
-		"Servitude": {
+		"Servitude and Captive": {
 			allowed: [
 				"bwg",
 				"bwc"
 			],
-			name: "Servitude",
+			name: "Servitude and Captive",
+			short: "Servitude",
 			stock: "Human",
 			type: "Setting",
 			lifepaths: [
@@ -11070,6 +11559,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born Slave",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Servitude",
 					skillPool: 1,
@@ -11101,6 +11591,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Gifted Child",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "Servitude",
 					skillPool: 0,
@@ -11130,6 +11621,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Ditch Digger",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "Servitude",
 					skillPool: 3,
@@ -11158,12 +11650,12 @@ export const Human: bwgr.data.Stock = {
 						"Human➞Professional Soldier",
 						"Human➞Outcast",
 						"Human➞City Dweller",
-						"Human➞Noble Court",
-						"Human➞Merchant House"
+						"Human➞Noble Court"
 					],
 					mentalPool: 0,
 					name: "Servant",
 					physicalPool: 0,
+					requirements: {},
 					resources: 6,
 					setting: "Servitude",
 					skillPool: 2,
@@ -11189,12 +11681,12 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Professional Soldier",
-						"Human➞Outcast",
-						"Human➞Merchant House"
+						"Human➞Outcast"
 					],
 					mentalPool: 0,
 					name: "Field Laborer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Servitude",
 					skillPool: 7,
@@ -11225,12 +11717,12 @@ export const Human: bwgr.data.Stock = {
 						"Human➞Professional Soldier",
 						"Human➞Outcast",
 						"Human➞City Dweller",
-						"Human➞Nomad",
 						"Human➞Death Cult"
 					],
 					mentalPool: 0,
 					name: "Captive of War",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "Servitude",
 					skillPool: 2,
@@ -11258,12 +11750,12 @@ export const Human: bwgr.data.Stock = {
 						"Human➞Professional Soldier",
 						"Human➞Outcast",
 						"Human➞City Dweller",
-						"Human➞Nomad",
 						"Human➞Death Cult"
 					],
 					mentalPool: 0,
 					name: "Gaol",
 					physicalPool: 0,
+					requirements: {},
 					resources: 3,
 					setting: "Servitude",
 					skillPool: 3,
@@ -11288,12 +11780,12 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Outcast",
-						"Human➞Merchant House",
 						"Human➞Death Cult"
 					],
 					mentalPool: 0,
 					name: "Harem Slave",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "Servitude",
 					skillPool: 3,
@@ -11325,6 +11817,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Bondsman",
 					physicalPool: 0,
+					requirements: {},
 					resources: 7,
 					setting: "Servitude",
 					skillPool: "*",
@@ -11344,6 +11837,7 @@ export const Human: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Villager",
+			short: "Villager",
 			stock: "Human",
 			type: "Setting",
 			lifepaths: [
@@ -11356,17 +11850,16 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 3,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Peasant",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Seafaring",
 						"Human➞Religious",
-						"Human➞College of Magic",
-						"Human➞Black Barbarian"
+						"Human➞College of Magic"
 					],
 					mentalPool: 0,
 					name: "Village Born",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "Villager",
 					skillPool: 0,
@@ -11384,7 +11877,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 2,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Outcast",
 						"Human➞Noble Court",
 						"Human➞Religious"
@@ -11392,6 +11884,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Gifted Child",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "Villager",
 					skillPool: 0,
@@ -11415,23 +11908,21 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Peasant",
 						"Human➞City Dweller",
 						"Human➞Seafaring",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Religious",
 						"Human➞Professional Soldier",
-						"Human➞Outcast",
-						"Human➞Nomad"
+						"Human➞Outcast"
 					],
 					mentalPool: 0,
 					name: "Kid",
 					physicalPool: 1,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2",
-							"IS➞UNIQUE"
+						limits: [
+							"LP➞MAX➞2",
+							"LP➞UNIQUE"
 						]
 					},
 					resources: 3,
@@ -11460,13 +11951,13 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Outcast",
 						"Human➞Peasant"
 					],
 					mentalPool: 0,
 					name: "Idiot",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "Villager",
 					skillPool: 4,
@@ -11495,15 +11986,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Religious",
-						"Human➞Servitude",
-						"Human➞City Dweller",
-						"Human➞Nomad"
+						"Human➞Servitude and Captive",
+						"Human➞City Dweller"
 					],
 					mentalPool: 0,
 					name: "Pilgrim",
 					physicalPool: 0,
+					requirements: {},
 					resources: 4,
 					setting: "Villager",
 					skillPool: 5,
@@ -11531,15 +12021,13 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
-						"Human➞Servitude",
-						"Human➞Outcast",
-						"Human➞Outcast",
-						"Human➞Nomad"
+						"Human➞Servitude and Captive",
+						"Human➞Outcast"
 					],
 					mentalPool: 0,
 					name: "Conscript",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Villager",
 					skillPool: 2,
@@ -11563,7 +12051,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Peasant",
 						"Human➞City Dweller",
 						"Human➞Professional Soldier"
@@ -11571,6 +12058,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Groom",
 					physicalPool: 0,
+					requirements: {},
 					resources: 7,
 					setting: "Villager",
 					skillPool: 4,
@@ -11595,15 +12083,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Peasant",
-						"Human➞Professional Soldier",
-						"Human➞Merchant House"
+						"Human➞Professional Soldier"
 					],
 					mentalPool: 0,
 					name: "Runner",
 					physicalPool: 1,
+					requirements: {},
 					resources: 6,
 					setting: "Villager",
 					skillPool: 3,
@@ -11629,15 +12116,15 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Peasant",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞City Dweller",
 						"Human➞Outcast"
 					],
 					mentalPool: 1,
 					name: "Village Peddler",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Villager",
 					skillPool: 7,
@@ -11666,14 +12153,13 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
-						"Human➞Peasant",
-						"Human➞Merchant House"
+						"Human➞Peasant"
 					],
 					mentalPool: 0,
 					name: "Shopkeeper",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "Villager",
 					skillPool: 5,
@@ -11697,15 +12183,14 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Outcast",
-						"Human➞Professional Soldier",
-						"Human➞Merchant House"
+						"Human➞Professional Soldier"
 					],
 					mentalPool: 0,
 					name: "Clerk",
 					physicalPool: 0,
+					requirements: {},
 					resources: 9,
 					setting: "Villager",
 					skillPool: 4,
@@ -11732,16 +12217,16 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Professional Soldier",
 						"Human➞City Dweller",
 						"Human➞Peasant",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Seafaring"
 					],
 					mentalPool: 0,
 					name: "Sailor",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "Villager",
 					skillPool: 6,
@@ -11770,15 +12255,15 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Professional Soldier",
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Peasant"
 					],
 					mentalPool: 0,
 					name: "Laborer",
 					physicalPool: 1,
+					requirements: {},
 					resources: 4,
 					setting: "Villager",
 					skillPool: 2,
@@ -11806,26 +12291,28 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Professional Soldier",
 						"Human➞Outcast",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Peasant"
 					],
 					mentalPool: 0,
 					name: "Miner",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Men➞City Dweller➞Laborer",
-							"Men➞Villager➞Laborer",
-							"Men➞Servitude➞Laborer",
-							"Men➞Peasant➞Conscript",
-							"Men➞Villager➞Conscript",
-							"Men➞Peasant➞Farmer",
-							"Men➞Servitude➞Farmer",
-							"Men➞Professional Soldier➞Foot Soldier"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Laborer",
+								"Human➞Villager➞Laborer",
+								"Human➞Servitude➞Laborer",
+								"Human➞Peasant➞Conscript",
+								"Human➞Villager➞Conscript",
+								"Human➞Peasant➞Farmer",
+								"Human➞Servitude➞Farmer",
+								"Human➞Professional Soldier➞Foot Soldier"
+							]
+						}
 					},
 					resources: 7,
 					setting: "Villager",
@@ -11852,7 +12339,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Outcast",
 						"Human➞Professional Soldier"
@@ -11861,10 +12347,13 @@ export const Human: bwgr.data.Stock = {
 					name: "Taskmaster",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Men➞Villager➞Village Sergeant",
-							"Men➞Professional Soldier➞1*ANY"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Village Sergeant",
+								"Human➞Professional Soldier➞1*ANY"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Villager",
@@ -11895,11 +12384,10 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Peasant",
 						"Human➞City Dweller",
 						"Human➞Seafaring",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court",
 						"Human➞Religious",
 						"Human➞Professional Soldier",
@@ -11908,6 +12396,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Serving Wench",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Villager",
 					skillPool: 4,
@@ -11936,17 +12425,15 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
-						"Human➞Peasant",
-						"Human➞Merchant House"
+						"Human➞Peasant"
 					],
 					mentalPool: 0,
 					name: "Hosteller",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"NOT➞LP*2"
+						limits: [
+							"LP➞MAX➞2"
 						]
 					},
 					resources: 15,
@@ -11976,15 +12463,15 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Professional Soldier",
 						"Human➞City Dweller",
 						"Human➞Peasant",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
 					name: "Village Guard",
 					physicalPool: 1,
+					requirements: {},
 					resources: 7,
 					setting: "Villager",
 					skillPool: 4,
@@ -12012,23 +12499,25 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 1,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Professional Soldier",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court"
 					],
 					mentalPool: 0,
 					name: "Village Sergeant",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Men➞Villager➞Village Guard",
-							"Men➞Noble➞Squire",
-							"Men➞Noble Court➞Squire",
-							"Men➞Outcast➞Freebooter",
-							"Men➞City➞Sergeant-at-Arms",
-							"Men➞Noble Court➞Man-at-Arms"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Village Guard",
+								"Human➞Noble➞Squire",
+								"Human➞Noble Court➞Squire",
+								"Human➞Outcast➞Freebooter",
+								"Human➞City➞Sergeant-at-Arms",
+								"Human➞Noble Court➞Man-at-Arms"
+							]
+						}
 					},
 					resources: 9,
 					setting: "Villager",
@@ -12060,23 +12549,25 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 1,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Professional Soldier",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Noble Court"
 					],
 					mentalPool: 0,
 					name: "Corrupt Sergeant",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Men➞Villager➞Village Guard",
-							"Men➞Noble➞Squire",
-							"Men➞Noble Court➞Squire",
-							"Men➞Outcast➞Freebooter",
-							"Men➞City➞Sergeant-at-Arms",
-							"Men➞Noble Court➞Man-at-Arms"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Village Guard",
+								"Human➞Noble➞Squire",
+								"Human➞Noble Court➞Squire",
+								"Human➞Outcast➞Freebooter",
+								"Human➞City➞Sergeant-at-Arms",
+								"Human➞Noble Court➞Man-at-Arms"
+							]
+						}
 					},
 					resources: 12,
 					setting: "Villager",
@@ -12106,13 +12597,13 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Peasant"
 					],
 					mentalPool: 0,
 					name: "Tailor",
 					physicalPool: 0,
+					requirements: {},
 					resources: 12,
 					setting: "Villager",
 					skillPool: 5,
@@ -12137,19 +12628,17 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Peasant",
-						"Human➞Outcast",
-						"Human➞Merchant House"
+						"Human➞Outcast"
 					],
 					mentalPool: 1,
 					name: "Tax Collector",
 					physicalPool: 0,
 					requirements: {
-						LIMIT:
+						limits:
 							[
-								"NOT➞LP*2"
+								"LP➞MIN➞3"
 							]
 					},
 					resources: 15,
@@ -12178,7 +12667,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Peasant",
 						"Human➞Professional Soldier",
 						"Human➞City Dweller"
@@ -12187,11 +12675,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Cobbler",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Men➞Villager➞Apprentice",
-							"Men➞Nomad➞Apprentice",
-							"Men➞Professional Soldier➞Apprentice"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Apprentice",
+								"Human➞Nomad➞Apprentice",
+								"Human➞Professional Soldier➞Apprentice"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Villager",
@@ -12219,7 +12710,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Peasant",
 						"Human➞Professional Soldier",
 						"Human➞City Dweller"
@@ -12228,11 +12718,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Farrier",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Men➞Villager➞Apprentice",
-							"Men➞Nomad➞Apprentice",
-							"Men➞Professional Soldier➞Apprentice"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Apprentice",
+								"Human➞Nomad➞Apprentice",
+								"Human➞Professional Soldier➞Apprentice"
+							]
+						}
 					},
 					resources: 12,
 					setting: "Villager",
@@ -12259,7 +12752,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Peasant",
 						"Human➞Outcast"
@@ -12267,6 +12759,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Butcher",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "Villager",
 					skillPool: 4,
@@ -12295,7 +12788,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Peasant",
 						"Human➞Outcast"
@@ -12303,6 +12795,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Barber",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Villager",
 					skillPool: 5,
@@ -12330,7 +12823,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Peasant",
 						"Human➞Noble Court"
@@ -12338,6 +12830,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Brewer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 15,
 					setting: "Villager",
 					skillPool: 4,
@@ -12364,15 +12857,15 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Peasant",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞City Dweller",
 						"Human➞Outcast"
 					],
 					mentalPool: 1,
 					name: "Acolyte",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Villager",
 					skillPool: 6,
@@ -12404,7 +12897,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Outcast",
 						"Human➞Professional Soldier",
 						"Human➞Peasant"
@@ -12412,6 +12904,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Failed Acolyte",
 					physicalPool: 0,
+					requirements: {},
 					resources: 8,
 					setting: "Villager",
 					skillPool: 4,
@@ -12437,11 +12930,10 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Peasant",
 						"Human➞City Dweller",
 						"Human➞Seafaring",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Religious",
 						"Human➞Professional Soldier",
 						"Human➞Outcast"
@@ -12450,10 +12942,13 @@ export const Human: bwgr.data.Stock = {
 					name: "Village Priest",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Men➞Religious➞Acolyte",
-							"Men➞Villager➞Acolyte"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Religious➞Acolyte",
+								"Human➞Villager➞Acolyte"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Villager",
@@ -12481,11 +12976,10 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Peasant",
 						"Human➞City Dweller",
 						"Human➞Seafaring",
-						"Human➞Servitude",
+						"Human➞Servitude and Captive",
 						"Human➞Religious",
 						"Human➞Professional Soldier",
 						"Human➞Outcast",
@@ -12495,17 +12989,20 @@ export const Human: bwgr.data.Stock = {
 					name: "Venal Priest",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Men➞Religious➞Acolyte",
-							"Men➞Villager➞Acolyte",
-							"Men➞Religious➞Clerk",
-							"Men➞Villager➞Clerk",
-							"Men➞City Dweller➞Clerk",
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student",
-							"Men➞Religious➞1*ANY"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Religious➞Acolyte",
+								"Human➞Villager➞Acolyte",
+								"Human➞Religious➞Clerk",
+								"Human➞Villager➞Clerk",
+								"Human➞City Dweller➞Clerk",
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student",
+								"Human➞Religious➞1*ANY"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Villager",
@@ -12532,16 +13029,15 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Peasant",
 						"Human➞Professional Soldier",
-						"Human➞Seafaring",
-						"Human➞Merchant House"
+						"Human➞Seafaring"
 					],
 					mentalPool: 0,
 					name: "Apprentice",
 					physicalPool: 1,
+					requirements: {},
 					resources: 7,
 					setting: "Villager",
 					skillPool: 6,
@@ -12570,7 +13066,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 1,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Peasant",
 						"Human➞Professional Soldier",
@@ -12580,11 +13075,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Journeyman",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Men➞Villager➞Apprentice",
-							"Men➞Nomad➞Apprentice",
-							"Men➞Professional Soldier➞Apprentice"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Apprentice",
+								"Human➞Nomad➞Apprentice",
+								"Human➞Professional Soldier➞Apprentice"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Villager",
@@ -12612,7 +13110,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Peasant"
 					],
@@ -12620,11 +13117,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Cloth Dyer",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Men➞Villager➞Apprentice",
-							"Men➞Nomad➞Apprentice",
-							"Men➞Professional Soldier➞Apprentice"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Apprentice",
+								"Human➞Nomad➞Apprentice",
+								"Human➞Professional Soldier➞Apprentice"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Villager",
@@ -12653,7 +13153,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Professional Soldier",
 						"Human➞Outcast",
 						"Human➞Peasant"
@@ -12662,14 +13161,17 @@ export const Human: bwgr.data.Stock = {
 					name: "Bowyer",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Men➞Villager➞Apprentice",
-							"Men➞Nomad➞Apprentice",
-							"Men➞Professional Soldier➞Apprentice",
-							"Human➞Noble Court➞Huntsman",
-							"Human➞Noble Court➞Forester",
-							"Human➞Professional Soldier➞Archer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Apprentice",
+								"Human➞Nomad➞Apprentice",
+								"Human➞Professional Soldier➞Apprentice",
+								"Human➞Noble Court➞Huntsman",
+								"Human➞Noble Court➞Forester",
+								"Human➞Professional Soldier➞Archer"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Villager",
@@ -12695,7 +13197,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Professional Soldier"
 					],
@@ -12703,11 +13204,14 @@ export const Human: bwgr.data.Stock = {
 					name: "Master Craftsman",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Journeyman",
-							"Human➞Professional Soldier➞Journeyman",
-							"Human➞Villager➞Journeyman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Journeyman",
+								"Human➞Professional Soldier➞Journeyman",
+								"Human➞Villager➞Journeyman"
+							]
+						}
 					},
 					resources: 30,
 					setting: "Villager",
@@ -12737,7 +13241,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Noble Court",
 						"Human➞Peasant"
 					],
@@ -12745,9 +13248,9 @@ export const Human: bwgr.data.Stock = {
 					name: "Vintner",
 					physicalPool: 0,
 					requirements: {
-						LIMIT:
+						limits:
 							[
-								"NOT➞LP*2"
+								"LP➞MIN➞3"
 							]
 					},
 					resources: 40,
@@ -12776,7 +13279,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Peasant",
 						"Human➞Noble Court"
@@ -12784,6 +13286,7 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Apiarist",
 					physicalPool: 0,
+					requirements: {},
 					resources: 20,
 					setting: "Villager",
 					skillPool: 4,
@@ -12810,7 +13313,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Noble Court",
 						"Human➞Professional Soldier"
@@ -12819,18 +13321,21 @@ export const Human: bwgr.data.Stock = {
 					name: "Mining Engineer",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Men➞Villager➞Apprentice",
-							"Men➞Nomad➞Apprentice",
-							"Men➞Professional Soldier➞Apprentice",
-							"Human➞Villager➞Miner",
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student",
-							"Human➞City Dweller➞Journeyman",
-							"Human➞Professional Soldier➞Journeyman",
-							"Human➞Villager➞Journeyman"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Apprentice",
+								"Human➞Nomad➞Apprentice",
+								"Human➞Professional Soldier➞Apprentice",
+								"Human➞Villager➞Miner",
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student",
+								"Human➞City Dweller➞Journeyman",
+								"Human➞Professional Soldier➞Journeyman",
+								"Human➞Villager➞Journeyman"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Villager",
@@ -12860,25 +13365,26 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Outcast",
-						"Human➞Professional Soldier",
-						"Human➞Merchant House"
+						"Human➞Professional Soldier"
 					],
 					mentalPool: 1,
 					name: "Town Official",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Clerk",
-							"Human➞Religious➞Clerk",
-							"Human➞Villager➞Clerk",
-							"Human➞Religious➞Priest",
-							"Human➞City Dweller➞Student",
-							"Human➞Noble➞Student",
-							"Human➞Noble Court➞Student"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Clerk",
+								"Human➞Religious➞Clerk",
+								"Human➞Villager➞Clerk",
+								"Human➞Religious➞Priest",
+								"Human➞City Dweller➞Student",
+								"Human➞Noble➞Student",
+								"Human➞Noble Court➞Student"
+							]
+						}
 					},
 					resources: 25,
 					setting: "Villager",
@@ -12907,26 +13413,26 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞City Dweller",
 						"Human➞Outcast",
-						"Human➞Seafaring",
-						"Human➞Nomad",
-						"Human➞Merchant House"
+						"Human➞Seafaring"
 					],
 					mentalPool: 1,
 					name: "Merchant",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Human➞City Dweller➞Accountant",
-							"Human➞Seafaring➞Ship's Captain",
-							"Human➞City Dweller➞Shopkeeper",
-							"Human➞Villager➞Shopkeeper",
-							"Human➞Outcast➞Smuggler",
-							"Human➞Outcast➞Fence",
-							"Human➞Villager➞Vintner"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞City Dweller➞Accountant",
+								"Human➞Seafaring➞Ship's Captain",
+								"Human➞City Dweller➞Shopkeeper",
+								"Human➞Villager➞Shopkeeper",
+								"Human➞Outcast➞Smuggler",
+								"Human➞Outcast➞Fence",
+								"Human➞Villager➞Vintner"
+							]
+						}
 					},
 					resources: 30,
 					setting: "Villager",
@@ -12954,16 +13460,15 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Religious",
 						"Human➞City Dweller",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 1,
 					name: "Village Wife",
 					physicalPool: 1,
 					requirements: {
-						TEXT: [
+						texts: [
 							"Players who take the Village Wife lifepath may also choose their husban's lifepath from the Villager setting. The Village Wife may choose from her husband's skills -she gets half of his skill points, rounded down- and she gets half of her husband's Resources."
 						]
 					},
@@ -12987,15 +13492,15 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Peasant",
 						"Human➞Noble",
 						"Human➞Outcast",
-						"Human➞Servitude"
+						"Human➞Servitude and Captive"
 					],
 					mentalPool: 1,
 					name: "Wizard's Apprentice",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Villager",
 					skillPool: 6,
@@ -13025,7 +13530,6 @@ export const Human: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Human➞Slave Raider",
 						"Human➞Peasant",
 						"Human➞Noble",
 						"Human➞Outcast"
@@ -13034,19 +13538,25 @@ export const Human: bwgr.data.Stock = {
 					name: "Hedge Wizard",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Human➞Villager➞Wizard's Apprentice",
-							"Human➞City Dweller➞Neophyte Sorcerer",
-							"Human➞Outcast➞Neophyte Sorcerer",
-							"Human➞Noble Court➞Apt Pupil",
-							"Human➞Outcast➞Apt Pupil",
-							"Human➞Professional Soldier➞Apt Pupil",
-							"Human➞Religious➞Apt Pupil",
-							"Human➞College of Magic➞Junior Student"
-						],
-						NOTAND: [
-							"Trait➞Human Lifepath➞Mark of Privilege"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Human➞Villager➞Wizard's Apprentice",
+								"Human➞City Dweller➞Neophyte Sorcerer",
+								"Human➞Outcast➞Neophyte Sorcerer",
+								"Human➞Noble Court➞Apt Pupil",
+								"Human➞Outcast➞Apt Pupil",
+								"Human➞Professional Soldier➞Apt Pupil",
+								"Human➞Religious➞Apt Pupil",
+								"Human➞College of Magic➞Junior Student",
+								{
+									type: "NOT",
+									items: [
+										"Trait➞Human Lifepath➞Mark of Privilege"
+									]
+								}
+							]
+						}
 					},
 					resources: 24,
 					setting: "Villager",

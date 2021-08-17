@@ -24,6 +24,7 @@ export const Troll: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Cavedweller",
+			short: "Cave",
 			stock: "Troll",
 			type: "Setting",
 			lifepaths: [
@@ -40,6 +41,7 @@ export const Troll: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born to Dark Caves",
 					physicalPool: 0,
+					requirements: {},
 					resources: 2,
 					setting: "Cavedweller",
 					skillPool: 0,
@@ -62,6 +64,7 @@ export const Troll: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Dweller",
 					physicalPool: 1,
+					requirements: {},
 					resources: 1,
 					setting: "Cavedweller",
 					skillPool: 2,
@@ -89,6 +92,7 @@ export const Troll: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Mine Haunt",
 					physicalPool: 0,
+					requirements: {},
 					resources: 1,
 					setting: "Cavedweller",
 					skillPool: 2,
@@ -114,6 +118,7 @@ export const Troll: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Dwarf Hunter",
 					physicalPool: 1,
+					requirements: {},
 					resources: 3,
 					setting: "Cavedweller",
 					skillPool: 3,
@@ -140,10 +145,13 @@ export const Troll: bwgr.data.Stock = {
 					name: "Dread Stone",
 					physicalPool: 2,
 					requirements: {
-						OR: [
-							"Troll➞Cavedweller➞Mine Haunt",
-							"Troll➞Cavedweller➞Dwarf Hunter"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Troll➞Cavedweller➞Mine Haunt",
+								"Troll➞Cavedweller➞Dwarf Hunter"
+							]
+						}
 					},
 					resources: 4,
 					setting: "Cavedweller",
@@ -164,6 +172,7 @@ export const Troll: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Pit",
+			short: "Pit",
 			stock: "Troll",
 			type: "Setting",
 			lifepaths: [
@@ -180,6 +189,7 @@ export const Troll: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born to the Pit",
 					physicalPool: 0,
+					requirements: {},
 					resources: 1,
 					setting: "Pit",
 					skillPool: 0,
@@ -202,6 +212,7 @@ export const Troll: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Tortured",
 					physicalPool: 0,
+					requirements: {},
 					resources: 0,
 					setting: "Pit",
 					skillPool: 1,
@@ -225,6 +236,7 @@ export const Troll: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Ox",
 					physicalPool: 1,
+					requirements: {},
 					resources: 1,
 					setting: "Pit",
 					skillPool: 2,
@@ -254,6 +266,7 @@ export const Troll: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Battering Ram",
 					physicalPool: 1,
+					requirements: {},
 					resources: 1,
 					setting: "Pit",
 					skillPool: 2,
@@ -282,13 +295,16 @@ export const Troll: bwgr.data.Stock = {
 					name: "Mattock",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Troll➞Pit➞Ox",
-							"Troll➞Pit➞Battering Ram",
-							"Troll➞Cavedweller➞Dwarf Hunter",
-							"Troll➞Wild➞Manhunter",
-							"Troll➞Wild➞Brute"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Troll➞Pit➞Ox",
+								"Troll➞Pit➞Battering Ram",
+								"Troll➞Cavedweller➞Dwarf Hunter",
+								"Troll➞Wild➞Manhunter",
+								"Troll➞Wild➞Brute"
+							]
+						}
 					},
 					resources: 7,
 					setting: "Pit",
@@ -318,10 +334,13 @@ export const Troll: bwgr.data.Stock = {
 					name: "Ironshield",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Troll➞Pit➞Mattock",
-							"Troll➞Wild➞Brute"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Troll➞Pit➞Mattock",
+								"Troll➞Wild➞Brute"
+							]
+						}
 					},
 					resources: 6,
 					setting: "Pit",
@@ -349,10 +368,13 @@ export const Troll: bwgr.data.Stock = {
 					name: "Bellower",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Troll➞Wild➞Bull",
-							"Troll➞Pit➞Ironshield"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Troll➞Wild➞Bull",
+								"Troll➞Pit➞Ironshield"
+							]
+						}
 					},
 					resources: 4,
 					setting: "Pit",
@@ -382,9 +404,12 @@ export const Troll: bwgr.data.Stock = {
 					name: "Warlord",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Troll➞Pit➞Bellower"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Troll➞Pit➞Bellower"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Pit",
@@ -408,6 +433,7 @@ export const Troll: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Wild",
+			short: "Wild",
 			stock: "Troll",
 			type: "Setting",
 			lifepaths: [
@@ -424,6 +450,7 @@ export const Troll: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born Wild",
 					physicalPool: 0,
+					requirements: {},
 					resources: 2,
 					setting: "Wild",
 					skillPool: 0,
@@ -446,6 +473,7 @@ export const Troll: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Bogey",
 					physicalPool: 1,
+					requirements: {},
 					resources: 1,
 					setting: "Wild",
 					skillPool: 3,
@@ -470,6 +498,7 @@ export const Troll: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Bridgehaunt",
 					physicalPool: 1,
+					requirements: {},
 					resources: 2,
 					setting: "Wild",
 					skillPool: 2,
@@ -497,6 +526,7 @@ export const Troll: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Manhunter",
 					physicalPool: 0,
+					requirements: {},
 					resources: 2,
 					setting: "Wild",
 					skillPool: 2,
@@ -520,6 +550,7 @@ export const Troll: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Forlorn",
 					physicalPool: 0,
+					requirements: {},
 					resources: 1,
 					setting: "Wild",
 					skillPool: 0,
@@ -547,14 +578,17 @@ export const Troll: bwgr.data.Stock = {
 					name: "Brute",
 					physicalPool: 2,
 					requirements: {
-						OR: [
-							"Troll➞Wild➞Bridgehaunt",
-							"Troll➞Cavedweller➞Mine Haunt",
-							"Troll➞Wild➞Manhunter",
-							"Troll➞Cavedweller➞Dwarf Hunter",
-							"Troll➞Pit➞Battering Ram",
-							"Troll➞Pit➞Mattock"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Troll➞Wild➞Bridgehaunt",
+								"Troll➞Cavedweller➞Mine Haunt",
+								"Troll➞Wild➞Manhunter",
+								"Troll➞Cavedweller➞Dwarf Hunter",
+								"Troll➞Pit➞Battering Ram",
+								"Troll➞Pit➞Mattock"
+							]
+						}
 					},
 					resources: 2,
 					setting: "Wild",
@@ -585,11 +619,14 @@ export const Troll: bwgr.data.Stock = {
 					name: "Brood Mother",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Troll➞Wild➞Brute",
-							"Troll➞Cavedweller➞Dread Stone",
-							"Troll➞Pit➞Bellower"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Troll➞Wild➞Brute",
+								"Troll➞Cavedweller➞Dread Stone",
+								"Troll➞Pit➞Bellower"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Wild",
@@ -621,10 +658,13 @@ export const Troll: bwgr.data.Stock = {
 					name: "Bull",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Troll➞Wild➞Brute",
-							"Troll➞Pit➞Ironshield"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Troll➞Wild➞Brute",
+								"Troll➞Pit➞Ironshield"
+							]
+						}
 					},
 					resources: 5,
 					setting: "Wild",

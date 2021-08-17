@@ -21,6 +21,7 @@ export const GreatWolf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Captive",
+			short: "Captive",
 			stock: "Great Wolf",
 			type: "Subsetting",
 			lifepaths: [
@@ -38,6 +39,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Captive",
 					physicalPool: 0,
+					requirements: {},
 					resources: 1,
 					setting: "Captive",
 					skillPool: 3,
@@ -61,6 +63,7 @@ export const GreatWolf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Ghost of the Deeping Wood",
+			short: "Ghost",
 			stock: "Great Wolf",
 			type: "Subsetting",
 			lifepaths: [
@@ -79,10 +82,13 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Wandering Lost",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Great Wolf➞Wild Pack➞Last Wolf",
-							"Great Wolf➞Outcast Wolf➞Lone Wolf"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Great Wolf➞Wild Pack➞Last Wolf",
+								"Great Wolf➞Outcast Wolf➞Lone Wolf"
+							]
+						}
 					},
 					resources: 0,
 					setting: "Ghost of the Deeping Wood",
@@ -107,9 +113,12 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Dire Haunt",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Great Wolf➞Ghost of the Deeping Wood➞Wandering Lost"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Great Wolf➞Ghost of the Deeping Wood➞Wandering Lost"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Ghost of the Deeping Wood",
@@ -137,9 +146,12 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Ancient Journeyer",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Great Wolf➞Ghost of the Deeping Wood➞Wandering Lost"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Great Wolf➞Ghost of the Deeping Wood➞Wandering Lost"
+							]
+						}
 					},
 					resources: 0,
 					setting: "Ghost of the Deeping Wood",
@@ -164,9 +176,12 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Fell Ancient",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Great Wolf➞Ghost of the Deeping Wood➞Ancient Journeyer"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Great Wolf➞Ghost of the Deeping Wood➞Ancient Journeyer"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Ghost of the Deeping Wood",
@@ -195,10 +210,13 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Ghost of the Wood",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Great Wolf➞Ghost of the Deeping Wood➞Dire Haunt",
-							"Great Wolf➞Ghost of the Deeping Wood➞Fell Ancient"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Great Wolf➞Ghost of the Deeping Wood➞Dire Haunt",
+								"Great Wolf➞Ghost of the Deeping Wood➞Fell Ancient"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Ghost of the Deeping Wood",
@@ -228,6 +246,7 @@ export const GreatWolf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Outcast Wolf",
+			short: "Outcast",
 			stock: "Great Wolf",
 			type: "Subsetting",
 			lifepaths: [
@@ -249,15 +268,18 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Lone Wolf",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Great Wolf➞Wild Pack➞Yearling",
-							"Great Wolf➞Wild Pack➞Last Wolf",
-							"Great Wolf➞Captive➞Captive",
-							"Great Wolf➞Ghost of the Deeping Wood➞Wandering Lost",
-							"Great Wolf➞Ghost of the Deeping Wood➞Ancient Journeyer",
-							"Great Wolf➞Slave to the Legion➞Wayward",
-							"Great Wolf➞Slave to the Legion➞Dark Friend"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Great Wolf➞Wild Pack➞Yearling",
+								"Great Wolf➞Wild Pack➞Last Wolf",
+								"Great Wolf➞Captive➞Captive",
+								"Great Wolf➞Ghost of the Deeping Wood➞Wandering Lost",
+								"Great Wolf➞Ghost of the Deeping Wood➞Ancient Journeyer",
+								"Great Wolf➞Slave to the Legion➞Wayward",
+								"Great Wolf➞Slave to the Legion➞Dark Friend"
+							]
+						}
 					},
 					resources: 1,
 					setting: "Outcast Wolf",
@@ -291,11 +313,14 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Scavenger",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Great Wolf➞Outcast Wolf➞Lone Wolf",
-							"Great Wolf➞Captive➞Captive",
-							"Great Wolf➞Slave to the Legion➞Caged and Beaten"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Great Wolf➞Outcast Wolf➞Lone Wolf",
+								"Great Wolf➞Captive➞Captive",
+								"Great Wolf➞Slave to the Legion➞Caged and Beaten"
+							]
+						}
 					},
 					resources: 2,
 					setting: "Outcast Wolf",
@@ -320,6 +345,7 @@ export const GreatWolf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Slave to the Legion",
+			short: "Slave",
 			stock: "Great Wolf",
 			type: "Setting",
 			lifepaths: [
@@ -336,6 +362,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born to the Legion",
 					physicalPool: 0,
+					requirements: {},
 					resources: 0,
 					setting: "Slave to the Legion",
 					skillPool: 2,
@@ -363,6 +390,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Caged and Beaten",
 					physicalPool: 0,
+					requirements: {},
 					resources: 1,
 					setting: "Slave to the Legion",
 					skillPool: 3,
@@ -391,6 +419,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Shadow Chaser",
 					physicalPool: 1,
+					requirements: {},
 					resources: 2,
 					setting: "Slave to the Legion",
 					skillPool: 8,
@@ -426,10 +455,13 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Wayward",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Great Wolf➞Slave to the Legion➞Shadow Chaser",
-							"Great Wolf➞Slave to the Legion➞Caged and Beaten"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Great Wolf➞Slave to the Legion➞Shadow Chaser",
+								"Great Wolf➞Slave to the Legion➞Caged and Beaten"
+							]
+						}
 					},
 					resources: 2,
 					setting: "Slave to the Legion",
@@ -459,8 +491,8 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Bitch",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"YEARS➞2"
+						limits: [
+							"YEARS➞MIN➞2"
 						]
 					},
 					resources: 4,
@@ -492,9 +524,12 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Howling Beast",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Great Wolf➞Slave to the Legion➞Shadow Chaser"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Great Wolf➞Slave to the Legion➞Shadow Chaser"
+							]
+						}
 					},
 					resources: 1,
 					setting: "Slave to the Legion",
@@ -524,10 +559,13 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Black Destroyer",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Great Wolf➞Slave to the Legion➞Howling Beast",
-							"Great Wolf➞Slave to the Legion➞Ebon Tyrant"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Great Wolf➞Slave to the Legion➞Howling Beast",
+								"Great Wolf➞Slave to the Legion➞Ebon Tyrant"
+							]
+						}
 					},
 					resources: 2,
 					setting: "Slave to the Legion",
@@ -560,10 +598,13 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Ebon Tyrant",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Great Wolf➞Slave to the Legion➞Shadow Chaser",
-							"Great Wolf➞Slave to the Legion➞Black Destroyer"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Great Wolf➞Slave to the Legion➞Shadow Chaser",
+								"Great Wolf➞Slave to the Legion➞Black Destroyer"
+							]
+						}
 					},
 					resources: 5,
 					setting: "Slave to the Legion",
@@ -596,9 +637,12 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Dark Friend",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Great Wolf➞Slave to the Legion➞Caged and Beaten"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Great Wolf➞Slave to the Legion➞Caged and Beaten"
+							]
+						}
 					},
 					resources: 3,
 					setting: "Slave to the Legion",
@@ -626,6 +670,7 @@ export const GreatWolf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Spirit Hunter",
+			short: "Hunter",
 			stock: "Great Wolf",
 			type: "Subsetting",
 			lifepaths: [
@@ -644,10 +689,13 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Spirit Chaser",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Great Wolf➞Outcast Wolf➞Lone Wolf",
-							"Trait➞Great Wolf Lifepath➞Spirit Marked"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Great Wolf➞Outcast Wolf➞Lone Wolf",
+								"Trait➞Great Wolf Lifepath➞Spirit Marked"
+							]
+						}
 					},
 					resources: 1,
 					setting: "Spirit Hunter",
@@ -674,9 +722,12 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Spirit Howler",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Great Wolf➞Spirit Hunter➞Spirit Chaser"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Great Wolf➞Spirit Hunter➞Spirit Chaser"
+							]
+						}
 					},
 					resources: 2,
 					setting: "Spirit Hunter",
@@ -706,9 +757,12 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Spirit Hunter",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Great Wolf➞Spirit Hunter➞Spirit Howler"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Great Wolf➞Spirit Hunter➞Spirit Howler"
+							]
+						}
 					},
 					resources: 3,
 					setting: "Spirit Hunter",
@@ -730,6 +784,7 @@ export const GreatWolf: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Wild Pack",
+			short: "Pack",
 			stock: "Great Wolf",
 			type: "Setting",
 			lifepaths: [
@@ -746,6 +801,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born to the Pack",
 					physicalPool: 0,
+					requirements: {},
 					resources: 0,
 					setting: "Wild Pack",
 					skillPool: 2,
@@ -772,9 +828,9 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Yearling",
 					physicalPool: 1,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2",
-							"IS➞UNIQUE"
+						limits: [
+							"LP➞MAX➞2",
+							"LP➞UNIQUE"
 						]
 					},
 					resources: 1,
@@ -807,6 +863,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Hunter",
 					physicalPool: 1,
+					requirements: {},
 					resources: 2,
 					setting: "Wild Pack",
 					skillPool: 7,
@@ -840,13 +897,16 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Dominant",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Great Wolf➞Wild Pack➞Yearling",
-							"Great Wolf➞Wild Pack➞Aunt",
-							"Great Wolf➞Wild Pack➞Uncle",
-							"Great Wolf➞Wild Pack➞Last Wolf"
-						],
-						TEXT: [
+						conditions: {
+							type: "OR",
+							items: [
+								"Great Wolf➞Wild Pack➞Yearling",
+								"Great Wolf➞Wild Pack➞Aunt",
+								"Great Wolf➞Wild Pack➞Uncle",
+								"Great Wolf➞Wild Pack➞Last Wolf"
+							]
+						},
+						texts: [
 							"Dominant wolves are the pack leaders."
 						]
 					},
@@ -880,6 +940,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Aunt",
 					physicalPool: 0,
+					requirements: {},
 					resources: 2,
 					setting: "Wild Pack",
 					skillPool: 4,
@@ -910,6 +971,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Uncle",
 					physicalPool: 0,
+					requirements: {},
 					resources: 2,
 					setting: "Wild Pack",
 					skillPool: 4,
@@ -940,8 +1002,8 @@ export const GreatWolf: bwgr.data.Stock = {
 					name: "Elder",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"YEARS➞7"
+						limits: [
+							"YEARS➞MIN➞7"
 						]
 					},
 					resources: 1,
@@ -974,6 +1036,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Last Wolf",
 					physicalPool: 0,
+					requirements: {},
 					resources: 1,
 					setting: "Wild Pack",
 					skillPool: 2,

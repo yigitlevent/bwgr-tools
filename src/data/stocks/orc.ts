@@ -28,6 +28,7 @@ export const Orc: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Black Legion",
+			short: "Legion",
 			stock: "Orc",
 			type: "Subsetting",
 			lifepaths: [
@@ -46,9 +47,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Goblin",
 					physicalPool: 1,
 					requirements: {
-						NOTAND: [
-							"Orc➞Great and Black➞Born Great"
-						]
+						conditions: {
+							type: "NOT",
+							items: [
+								"Orc➞Great and Black➞Born Great"
+							]
+						}
 					},
 					resources: 2,
 					setting: "Black Legion",
@@ -83,9 +87,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Sun Blotter",
 					physicalPool: 1,
 					requirements: {
-						NOTAND: [
-							"Orc➞Great and Black➞Born Great"
-						]
+						conditions: {
+							type: "NOT",
+							items: [
+								"Orc➞Great and Black➞Born Great"
+							]
+						}
 					},
 					resources: 3,
 					setting: "Black Legion",
@@ -118,9 +125,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Nightseeker",
 					physicalPool: 1,
 					requirements: {
-						NOTAND: [
-							"Orc➞Great and Black➞Born Great"
-						]
+						conditions: {
+							type: "NOT",
+							items: [
+								"Orc➞Great and Black➞Born Great"
+							]
+						}
 					},
 					resources: 4,
 					setting: "Black Legion",
@@ -154,9 +164,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Legioner",
 					physicalPool: 1,
 					requirements: {
-						NOTAND: [
-							"Orc➞Great and Black➞Born Great"
-						]
+						conditions: {
+							type: "NOT",
+							items: [
+								"Orc➞Great and Black➞Born Great"
+							]
+						}
 					},
 					resources: 5,
 					setting: "Black Legion",
@@ -187,11 +200,14 @@ export const Orc: bwgr.data.Stock = {
 					name: "Hatred Bearer",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Orc➞Great and Black➞The Rites",
-							"Orc➞Black Legion➞Legioner",
-							"Orc➞Chattel➞Whipmaster"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Orc➞Great and Black➞The Rites",
+								"Orc➞Black Legion➞Legioner",
+								"Orc➞Chattel➞Whipmaster"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Black Legion",
@@ -224,11 +240,14 @@ export const Orc: bwgr.data.Stock = {
 					name: "Despair Shouter",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Orc➞Great and Black➞The Rites",
-							"Orc➞Black Legion➞Legioner",
-							"Orc➞Chattel➞Whipmaster"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Orc➞Great and Black➞The Rites",
+								"Orc➞Black Legion➞Legioner",
+								"Orc➞Chattel➞Whipmaster"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Black Legion",
@@ -260,11 +279,14 @@ export const Orc: bwgr.data.Stock = {
 					name: "Black Hunter",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Orc➞Great and Black➞Follower",
-							"Orc➞Chattel➞Ravager",
-							"Orc➞Black Legion➞Nightseeker"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Orc➞Great and Black➞Follower",
+								"Orc➞Chattel➞Ravager",
+								"Orc➞Black Legion➞Nightseeker"
+							]
+						}
 					},
 					resources: 5,
 					setting: "Black Legion",
@@ -298,10 +320,13 @@ export const Orc: bwgr.data.Stock = {
 					name: "Astride the Beast",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Orc➞Black Legion➞Black Hunter",
-							"Orc➞Great and Black➞Follower"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Orc➞Black Legion➞Black Hunter",
+								"Orc➞Great and Black➞Follower"
+							]
+						}
 					},
 					resources: 6,
 					setting: "Black Legion",
@@ -338,12 +363,15 @@ export const Orc: bwgr.data.Stock = {
 					name: "Bears the Lash",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Orc➞Chattel➞Whipmaster",
-							"Orc➞Black Legion➞Black Hunter",
-							"Orc➞Black Legion➞Astride the Beast",
-							"Orc➞Great and Black➞The Rites"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Orc➞Chattel➞Whipmaster",
+								"Orc➞Black Legion➞Black Hunter",
+								"Orc➞Black Legion➞Astride the Beast",
+								"Orc➞Great and Black➞The Rites"
+							]
+						}
 					},
 					resources: 9,
 					setting: "Black Legion",
@@ -379,13 +407,16 @@ export const Orc: bwgr.data.Stock = {
 					name: "Packmaster",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Orc➞Black Legion➞Bears the Lash",
-							"Orc➞Great and Black➞Follower",
-							"Orc➞Chattel➞Whipmaster",
-							"Orc➞Servant of the Dark Blood➞Master of Eight",
-							"Orc➞Servant of the Dark Blood➞Knower of Secrets"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Orc➞Black Legion➞Bears the Lash",
+								"Orc➞Great and Black➞Follower",
+								"Orc➞Chattel➞Whipmaster",
+								"Orc➞Servant of the Dark Blood➞Master of Eight",
+								"Orc➞Servant of the Dark Blood➞Knower of Secrets"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Black Legion",
@@ -421,11 +452,14 @@ export const Orc: bwgr.data.Stock = {
 					name: "Head Taker",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Orc➞Black Legion➞Bears the Lash",
-							"Orc➞Great and Black➞Black Destroyer",
-							"Orc➞Great and Black➞Named"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Orc➞Black Legion➞Bears the Lash",
+								"Orc➞Great and Black➞Black Destroyer",
+								"Orc➞Great and Black➞Named"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Black Legion",
@@ -461,11 +495,14 @@ export const Orc: bwgr.data.Stock = {
 					name: "Troll Lord",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							// TODO: Missing "pack master" lifepath?
-							"Orc➞Black Legion➞Bears the Lash",
-							"Orc➞Great and Black➞Named"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								// TODO: Missing "pack master" lifepath?
+								"Orc➞Black Legion➞Bears the Lash",
+								"Orc➞Great and Black➞Named"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Black Legion",
@@ -492,6 +529,7 @@ export const Orc: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Chattel",
+			short: "Chattel",
 			stock: "Orc",
 			type: "Setting",
 			lifepaths: [
@@ -510,6 +548,7 @@ export const Orc: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born Chattel",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "Chattel",
 					skillPool: 0,
@@ -531,6 +570,7 @@ export const Orc: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Cattle Slave",
 					physicalPool: 1,
+					requirements: {},
 					resources: 3,
 					setting: "Chattel",
 					skillPool: 2,
@@ -561,6 +601,7 @@ export const Orc: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Scavenger",
 					physicalPool: 1,
+					requirements: {},
 					resources: 6,
 					setting: "Chattel",
 					skillPool: 3,
@@ -591,6 +632,7 @@ export const Orc: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Forge Slave",
 					physicalPool: 1,
+					requirements: {},
 					resources: 3,
 					setting: "Chattel",
 					skillPool: 2,
@@ -619,6 +661,7 @@ export const Orc: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Hauler",
 					physicalPool: 1,
+					requirements: {},
 					resources: 3,
 					setting: "Chattel",
 					skillPool: 2,
@@ -649,6 +692,7 @@ export const Orc: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Cutter Slave",
 					physicalPool: 1,
+					requirements: {},
 					resources: 3,
 					setting: "Chattel",
 					skillPool: 2,
@@ -677,6 +721,7 @@ export const Orc: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Tunneler",
 					physicalPool: 1,
+					requirements: {},
 					resources: 3,
 					setting: "Chattel",
 					skillPool: 2,
@@ -707,6 +752,7 @@ export const Orc: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Ravager",
 					physicalPool: 1,
+					requirements: {},
 					resources: 4,
 					setting: "Chattel",
 					skillPool: 4,
@@ -735,9 +781,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Woodcutter",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Orc➞Chattel➞Cutter Slave"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Orc➞Chattel➞Cutter Slave"
+							]
+						}
 					},
 					resources: 9,
 					setting: "Chattel",
@@ -765,9 +814,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Butcher",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Orc➞Chattel➞Cattle Slave"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Chattel➞Cattle Slave"
+							]
+						}
 					},
 					resources: 9,
 					setting: "Chattel",
@@ -795,9 +847,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Forger",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Orc➞Chattel➞Forge Slave"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Chattel➞Forge Slave"
+							]
+						}
 					},
 					resources: 9,
 					setting: "Chattel",
@@ -826,9 +881,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Pitwright",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Orc➞Chattel➞Tunneler"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Chattel➞Tunneler"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Chattel",
@@ -859,9 +917,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Edge Grinder",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Orc➞Chattel➞Forger"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Chattel➞Forger"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Chattel",
@@ -894,16 +955,19 @@ export const Orc: bwgr.data.Stock = {
 					name: "Whipmaster",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Orc➞Chattel➞Pitwright",
-							"Orc➞Chattel➞Forger",
-							"Orc➞Great and Black➞1*ANY",
-							"Orc➞Black Legion➞1*ANY",
-							// TODO: this is wrong, it is actually "four slave lifepaths"
-							"Orc➞Chattel➞4*Cutter Slave",
-							"Orc➞Chattel➞4*Forge Slave",
-							"Orc➞Chattel➞4*Cattle Slave"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Orc➞Chattel➞Pitwright",
+								"Orc➞Chattel➞Forger",
+								"Orc➞Great and Black➞1*ANY",
+								"Orc➞Black Legion➞1*ANY",
+								// TODO: this is wrong, it is actually "four slave lifepaths"
+								"Orc➞Chattel➞4*Cutter Slave",
+								"Orc➞Chattel➞4*Forge Slave",
+								"Orc➞Chattel➞4*Cattle Slave"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Chattel",
@@ -929,6 +993,7 @@ export const Orc: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Great and Black",
+			short: "Great",
 			stock: "Orc",
 			type: "Setting",
 			lifepaths: [
@@ -946,6 +1011,7 @@ export const Orc: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born Great",
 					physicalPool: 0,
+					requirements: {},
 					resources: 5,
 					setting: "Great and Black",
 					skillPool: 0,
@@ -974,9 +1040,9 @@ export const Orc: bwgr.data.Stock = {
 					name: "The Rites",
 					physicalPool: 1,
 					requirements: {
-						LIMIT: [
-							"IS➞LP*2",
-							"IS➞UNIQUE"
+						limits: [
+							"LP➞UNIQUE",
+							"LP➞MAX➞2"
 						]
 					},
 					resources: 3,
@@ -1010,6 +1076,7 @@ export const Orc: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Servant of the Gate",
 					physicalPool: 1,
+					requirements: {},
 					resources: 7,
 					setting: "Great and Black",
 					skillPool: 2,
@@ -1042,10 +1109,13 @@ export const Orc: bwgr.data.Stock = {
 					name: "Follower",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Orc➞Great and Black➞The Rites",
-							"Orc➞Black Legion➞Astride the Beast"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Orc➞Great and Black➞The Rites",
+								"Orc➞Black Legion➞Astride the Beast"
+							]
+						}
 					},
 					resources: 9,
 					setting: "Great and Black",
@@ -1082,11 +1152,14 @@ export const Orc: bwgr.data.Stock = {
 					name: "Black Destroyer",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Orc➞Great and Black➞Follower",
-							"Orc➞Black Legion➞Astride the Beast",
-							"Orc➞Black Legion➞Head Taker"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Orc➞Great and Black➞Follower",
+								"Orc➞Black Legion➞Astride the Beast",
+								"Orc➞Black Legion➞Head Taker"
+							]
+						}
 					},
 					resources: 12,
 					setting: "Great and Black",
@@ -1121,11 +1194,14 @@ export const Orc: bwgr.data.Stock = {
 					name: "Named",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Orc➞Great and Black➞Black Destroyer",
-							"Orc➞Black Legion➞Troll Lord",
-							"Orc➞Black Legion➞Head Taker"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Orc➞Great and Black➞Black Destroyer",
+								"Orc➞Black Legion➞Troll Lord",
+								"Orc➞Black Legion➞Head Taker"
+							]
+						}
 					},
 					resources: 25,
 					setting: "Great and Black",
@@ -1157,9 +1233,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Siege Master",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Orc➞Great and Black➞Servant of the Gate"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Great and Black➞Servant of the Gate"
+							]
+						}
 					},
 					resources: 30,
 					setting: "Great and Black",
@@ -1192,9 +1271,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Gate Forger",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Orc➞Great and Black➞Siege Master"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Great and Black➞Siege Master"
+							]
+						}
 					},
 					resources: 30,
 					setting: "Great and Black",
@@ -1226,12 +1308,15 @@ export const Orc: bwgr.data.Stock = {
 					name: "Whisperer",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Orc➞Servant of the Dark Blood➞Slave to the Dark",
-							"Orc➞Chattel➞Whipmaster",
-							"Orc➞Great and Black➞Gate Forger",
-							"Orc➞Black Legion➞Bears the Lash"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Orc➞Servant of the Dark Blood➞Slave to the Dark",
+								"Orc➞Chattel➞Whipmaster",
+								"Orc➞Great and Black➞Gate Forger",
+								"Orc➞Black Legion➞Bears the Lash"
+							]
+						}
 					},
 					resources: 40,
 					setting: "Great and Black",
@@ -1264,10 +1349,13 @@ export const Orc: bwgr.data.Stock = {
 					name: "Great One",
 					physicalPool: 2,
 					requirements: {
-						AND: [
-							"Orc➞Great and Black➞Named",
-							"Trait➞Orc Lifepath➞Born to Rule Them All"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Great and Black➞Named",
+								"Trait➞Orc Lifepath➞Born to Rule Them All"
+							]
+						}
 					},
 					resources: 60,
 					setting: "Great and Black",
@@ -1294,6 +1382,7 @@ export const Orc: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Servant of the Dark Blood",
+			short: "Servant",
 			stock: "Orc",
 			type: "Subsetting",
 			lifepaths: [
@@ -1311,6 +1400,7 @@ export const Orc: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Slave to the Dark",
 					physicalPool: 0,
+					requirements: {},
 					resources: 3,
 					setting: "Servant of the Dark Blood",
 					skillPool: 2,
@@ -1340,9 +1430,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Drinker of the Dark",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Orc➞Servant of the Dark Blood➞Slave to the Dark"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Servant of the Dark Blood➞Slave to the Dark"
+							]
+						}
 					},
 					resources: 6,
 					setting: "Servant of the Dark Blood",
@@ -1374,9 +1467,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Bloodletter",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Orc➞Servant of the Dark Blood➞Drinker of the Dark"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Servant of the Dark Blood➞Drinker of the Dark"
+							]
+						}
 					},
 					resources: 6,
 					setting: "Servant of the Dark Blood",
@@ -1408,9 +1504,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Knower of Secrets",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Orc➞Servant of the Dark Blood➞Drinker of the Dark"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Servant of the Dark Blood➞Drinker of the Dark"
+							]
+						}
 					},
 					resources: 7,
 					setting: "Servant of the Dark Blood",
@@ -1441,9 +1540,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Master of Eight",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Orc➞Servant of the Dark Blood➞Knower of Secrets"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Servant of the Dark Blood➞Knower of Secrets"
+							]
+						}
 					},
 					resources: 8,
 					setting: "Servant of the Dark Blood",
@@ -1476,9 +1578,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Master of Blood",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Orc➞Servant of the Dark Blood➞Bloodletter"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Servant of the Dark Blood➞Bloodletter"
+							]
+						}
 					},
 					resources: 8,
 					setting: "Servant of the Dark Blood",
@@ -1510,9 +1615,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Master of Darkness",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Orc➞Servant of the Dark Blood➞Knower of Secrets"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Servant of the Dark Blood➞Knower of Secrets"
+							]
+						}
 					},
 					resources: 8,
 					setting: "Servant of the Dark Blood",
@@ -1539,9 +1647,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Dark Summoner",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Orc➞Servant of the Dark Blood➞Master of Darkness"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Servant of the Dark Blood➞Master of Darkness"
+							]
+						}
 					},
 					resources: 12,
 					setting: "Servant of the Dark Blood",
@@ -1567,9 +1678,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Blood Summoner",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Orc➞Servant of the Dark Blood➞Master of Blood"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Servant of the Dark Blood➞Master of Blood"
+							]
+						}
 					},
 					resources: 12,
 					setting: "Servant of the Dark Blood",
@@ -1597,13 +1711,19 @@ export const Orc: bwgr.data.Stock = {
 					name: "Servant",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Orc➞Servant of the Dark Blood➞Dark Summoner",
-							"Orc➞Servant of the Dark Blood➞Blood Summoner"
-						],
-						AND: [
-							"Trait➞Orc Lifepath➞Born to Rule Them All"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Trait➞Orc Lifepath➞Born to Rule Them All",
+								{
+									type: "OR",
+									items: [
+										"Orc➞Servant of the Dark Blood➞Dark Summoner",
+										"Orc➞Servant of the Dark Blood➞Blood Summoner"
+									]
+								}
+							]
+						}
 					},
 					resources: 30,
 					setting: "Servant of the Dark Blood",
@@ -1629,9 +1749,12 @@ export const Orc: bwgr.data.Stock = {
 					name: "Master of the Weak",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Orc➞Servant of the Dark Blood➞Knower of Secrets"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Orc➞Servant of the Dark Blood➞Knower of Secrets"
+							]
+						}
 					},
 					resources: 8,
 					setting: "Servant of the Dark Blood",

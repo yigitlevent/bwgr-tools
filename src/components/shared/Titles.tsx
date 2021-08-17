@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Title = styled.div`
-	font-size: 1.9em;
+	font-size: 2.0em;
 	padding: 4px 6px 4px 16px;
 
 	font-family: "Title";
@@ -14,7 +14,7 @@ export const Title = styled.div`
 `;
 
 export const Subtitle = styled.div`
-	font-size: 1.5em;
+	font-size: 1.7em;
 	padding: 4px 6px 4px 6px;
 
 	font-family: "Title";

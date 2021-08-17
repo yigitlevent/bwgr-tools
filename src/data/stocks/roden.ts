@@ -23,6 +23,7 @@ export const Roden: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Below",
+			short: "Below",
 			stock: "Roden",
 			type: "Setting",
 			lifepaths: [
@@ -39,6 +40,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born Below",
 					physicalPool: 0,
+					requirements: {},
 					resources: 0,
 					setting: "Below",
 					skillPool: 0,
@@ -61,6 +63,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: -1,
 					name: "Pinky",
 					physicalPool: 0,
+					requirements: {},
 					resources: 2,
 					setting: "Below",
 					skillPool: 3,
@@ -92,6 +95,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Scavenger",
 					physicalPool: 0,
+					requirements: {},
 					resources: 3,
 					setting: "Below",
 					skillPool: 5,
@@ -120,6 +124,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Scratcher",
 					physicalPool: 1,
+					requirements: {},
 					resources: 4,
 					setting: "Below",
 					skillPool: 4,
@@ -150,6 +155,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Snitch",
 					physicalPool: 0,
+					requirements: {},
 					resources: 3,
 					setting: "Below",
 					skillPool: 4,
@@ -179,6 +185,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "The Gauntlet",
 					physicalPool: 1,
+					requirements: {},
 					resources: 4,
 					setting: "Below",
 					skillPool: 1,
@@ -210,9 +217,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Apprentice",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Roden➞Below➞The Gauntlet"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Below➞The Gauntlet"
+							]
+						}
 					},
 					resources: 5,
 					setting: "Below",
@@ -244,9 +254,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Kidnapper",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Roden➞Below➞The Gauntlet"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Below➞The Gauntlet"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Below",
@@ -281,9 +294,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Fingers",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Roden➞Below➞The Gauntlet"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Below➞The Gauntlet"
+							]
+						}
 					},
 					resources: 5,
 					setting: "Below",
@@ -314,9 +330,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Sneak Thief",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Roden➞Below➞The Gauntlet"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Below➞The Gauntlet"
+							]
+						}
 					},
 					resources: 6,
 					setting: "Below",
@@ -350,10 +369,13 @@ export const Roden: bwgr.data.Stock = {
 					name: "Bladesmith",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Below➞Apprentice",
-							"Roden➞Field➞Apprentice"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Below➞Apprentice",
+								"Roden➞Field➞Apprentice"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Below",
@@ -384,13 +406,16 @@ export const Roden: bwgr.data.Stock = {
 					name: "Burglar",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Below➞Fingers",
-							"Roden➞Below➞Sneak Thief",
-							"Roden➞Society➞Shadow",
-							"Roden➞Exile➞Corsair",
-							"Roden➞Exile➞Bushwhacker"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Below➞Fingers",
+								"Roden➞Below➞Sneak Thief",
+								"Roden➞Society➞Shadow",
+								"Roden➞Exile➞Corsair",
+								"Roden➞Exile➞Bushwhacker"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Below",
@@ -425,9 +450,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Bruiser",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Roden➞Below➞The Gauntlet"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Below➞The Gauntlet"
+							]
+						}
 					},
 					resources: 8,
 					setting: "Below",
@@ -458,11 +486,14 @@ export const Roden: bwgr.data.Stock = {
 					name: "Fence",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Below➞Scavenger",
-							"Roden➞Below➞Snitch",
-							"Roden➞Below➞Sneak Thief"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Below➞Scavenger",
+								"Roden➞Below➞Snitch",
+								"Roden➞Below➞Sneak Thief"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Below",
@@ -495,12 +526,15 @@ export const Roden: bwgr.data.Stock = {
 					name: "Sawbones",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Society➞Poisoner",
-							"Roden➞Exile➞Albino",
-							"Roden➞Field➞Healer",
-							"Roden➞Below➞Pinky"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Society➞Poisoner",
+								"Roden➞Exile➞Albino",
+								"Roden➞Field➞Healer",
+								"Roden➞Below➞Pinky"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Below",
@@ -533,14 +567,17 @@ export const Roden: bwgr.data.Stock = {
 					name: "Negotiator",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Below➞Kidnapper",
-							"Roden➞Field➞Deputy",
-							"Roden➞Exile➞Corsair",
-							"Roden➞Field➞Missionary",
-							"Roden➞Below➞Fence",
-							"Roden➞Society➞Perverter"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Below➞Kidnapper",
+								"Roden➞Field➞Deputy",
+								"Roden➞Exile➞Corsair",
+								"Roden➞Field➞Missionary",
+								"Roden➞Below➞Fence",
+								"Roden➞Society➞Perverter"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Below",
@@ -574,11 +611,14 @@ export const Roden: bwgr.data.Stock = {
 					name: "The Brain",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Exile➞Hermit",
-							"Roden➞Field➞Mayor",
-							"Roden➞Below➞Scratcher"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Exile➞Hermit",
+								"Roden➞Field➞Mayor",
+								"Roden➞Below➞Scratcher"
+							]
+						}
 					},
 					resources: 13,
 					setting: "Below",
@@ -617,12 +657,15 @@ export const Roden: bwgr.data.Stock = {
 					name: "Mastermind",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Roden➞Below➞Negotiator",
-							"Roden➞Below➞The Brain",
-							"Roden➞Exile➞Bandit King",
-							"Roden➞Field➞Abbot/Abbess"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Below➞Negotiator",
+								"Roden➞Below➞The Brain",
+								"Roden➞Exile➞Bandit King",
+								"Roden➞Field➞Abbot/Abbess"
+							]
+						}
 					},
 					resources: 30,
 					setting: "Below",
@@ -659,10 +702,13 @@ export const Roden: bwgr.data.Stock = {
 					name: "The Pope",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Roden➞Field➞Father/Mother",
-							"Roden➞Society➞Visionary"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Field➞Father/Mother",
+								"Roden➞Society➞Visionary"
+							]
+						}
 					},
 					resources: 75,
 					setting: "Below",
@@ -692,6 +738,7 @@ export const Roden: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Exile",
+			short: "Exile",
 			stock: "Roden",
 			type: "Subsetting",
 			lifepaths: [
@@ -710,9 +757,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Carnivore",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Roden➞Field➞Born to the Fields"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Field➞Born to the Fields"
+							]
+						}
 					},
 					resources: 5,
 					setting: "Exile",
@@ -747,9 +797,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Serub",
 					physicalPool: -1,
 					requirements: {
-						AND: [
-							"Roden➞Below➞Born Below"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Below➞Born Below"
+							]
+						}
 					},
 					resources: 3,
 					setting: "Exile",
@@ -786,6 +839,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Hermit",
 					physicalPool: 0,
+					requirements: {},
 					resources: 2,
 					setting: "Exile",
 					skillPool: 8,
@@ -823,6 +877,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Bushwhacker",
 					physicalPool: 1,
+					requirements: {},
 					resources: 5,
 					setting: "Exile",
 					skillPool: 4,
@@ -855,14 +910,17 @@ export const Roden: bwgr.data.Stock = {
 					name: "Corsair",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Exile➞Bushwhacker",
-							"Roden➞Field➞Sheriff",
-							"Roden➞Exile➞Bandit King",
-							"Roden➞Field➞Trader",
-							"Roden➞Below➞Negotiator",
-							"Roden➞Below➞Bruiser"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Exile➞Bushwhacker",
+								"Roden➞Field➞Sheriff",
+								"Roden➞Exile➞Bandit King",
+								"Roden➞Field➞Trader",
+								"Roden➞Below➞Negotiator",
+								"Roden➞Below➞Bruiser"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Exile",
@@ -900,11 +958,14 @@ export const Roden: bwgr.data.Stock = {
 					name: "Bandit King",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Exile➞Bushwhacker",
-							"Roden➞Field➞Sheriff",
-							"Roden➞Below➞Bruiser"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Exile➞Bushwhacker",
+								"Roden➞Field➞Sheriff",
+								"Roden➞Below➞Bruiser"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Exile",
@@ -935,6 +996,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Albino",
 					physicalPool: 0,
+					requirements: {},
 					resources: 25,
 					setting: "Exile",
 					skillPool: 7,
@@ -962,6 +1024,7 @@ export const Roden: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Field",
+			short: "Field",
 			stock: "Roden",
 			type: "Setting",
 			lifepaths: [
@@ -978,6 +1041,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Born to the Fields",
 					physicalPool: 0,
+					requirements: {},
 					resources: 0,
 					setting: "Field",
 					skillPool: 0,
@@ -1002,6 +1066,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Hand",
 					physicalPool: 1,
+					requirements: {},
 					resources: 3,
 					setting: "Field",
 					skillPool: 4,
@@ -1030,6 +1095,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Woodsen",
 					physicalPool: 1,
+					requirements: {},
 					resources: 6,
 					setting: "Field",
 					skillPool: 4,
@@ -1060,6 +1126,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Apprentice",
 					physicalPool: 1,
+					requirements: {},
 					resources: 9,
 					setting: "Field",
 					skillPool: 3,
@@ -1088,6 +1155,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Gatherer",
 					physicalPool: 0,
+					requirements: {},
 					resources: 10,
 					setting: "Field",
 					skillPool: 3,
@@ -1112,6 +1180,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Farmer",
 					physicalPool: 1,
+					requirements: {},
 					resources: 10,
 					setting: "Field",
 					skillPool: 3,
@@ -1139,14 +1208,17 @@ export const Roden: bwgr.data.Stock = {
 					name: "Beekeeper",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Field➞Woodsen",
-							"Roden➞Field➞Gatherer",
-							"Roden➞Field➞Farmer",
-							"Roden➞Below➞Apprentice",
-							"Roden➞Field➞Apprentice",
-							"Roden➞Field➞Hand"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Field➞Woodsen",
+								"Roden➞Field➞Gatherer",
+								"Roden➞Field➞Farmer",
+								"Roden➞Below➞Apprentice",
+								"Roden➞Field➞Apprentice",
+								"Roden➞Field➞Hand"
+							]
+						}
 					},
 					resources: 9,
 					setting: "Field",
@@ -1178,14 +1250,17 @@ export const Roden: bwgr.data.Stock = {
 					name: "Miller",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Field➞Woodsen",
-							"Roden➞Field➞Gatherer",
-							"Roden➞Field➞Farmer",
-							"Roden➞Below➞Apprentice",
-							"Roden➞Field➞Apprentice",
-							"Roden➞Field➞Hand"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Field➞Woodsen",
+								"Roden➞Field➞Gatherer",
+								"Roden➞Field➞Farmer",
+								"Roden➞Below➞Apprentice",
+								"Roden➞Field➞Apprentice",
+								"Roden➞Field➞Hand"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Field",
@@ -1214,9 +1289,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Meadmaker",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Field➞Beekeeper"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Field➞Beekeeper"
+							]
+						}
 					},
 					resources: 14,
 					setting: "Field",
@@ -1244,11 +1322,14 @@ export const Roden: bwgr.data.Stock = {
 					name: "Baker",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Field➞Hand",
-							"Roden➞Field➞Miller",
-							"Roden➞Field➞Beekeeper"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Field➞Hand",
+								"Roden➞Field➞Miller",
+								"Roden➞Field➞Beekeeper"
+							]
+						}
 					},
 					resources: 12,
 					setting: "Field",
@@ -1279,10 +1360,13 @@ export const Roden: bwgr.data.Stock = {
 					name: "Weaver",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Below➞Apprentice",
-							"Roden➞Field➞Apprentice"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Below➞Apprentice",
+								"Roden➞Field➞Apprentice"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Field",
@@ -1313,10 +1397,13 @@ export const Roden: bwgr.data.Stock = {
 					name: "Crafter",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Below➞Apprentice",
-							"Roden➞Field➞Apprentice"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Below➞Apprentice",
+								"Roden➞Field➞Apprentice"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Field",
@@ -1349,16 +1436,19 @@ export const Roden: bwgr.data.Stock = {
 					name: "Healer",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							// TODO: Missing "Philosopher" lifepath, added hermit instead
-							"Roden➞Exile➞Hermit",
-							"Roden➞Exile➞Albino",
-							"Roden➞Below➞Sawbones",
-							"Roden➞Field➞Hand",
-							"Roden➞Field➞Woodsen",
-							"Roden➞Field➞Farmer",
-							"Roden➞Field➞Beekeeper"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								// TODO: Missing "Philosopher" lifepath, added hermit instead
+								"Roden➞Exile➞Hermit",
+								"Roden➞Exile➞Albino",
+								"Roden➞Below➞Sawbones",
+								"Roden➞Field➞Hand",
+								"Roden➞Field➞Woodsen",
+								"Roden➞Field➞Farmer",
+								"Roden➞Field➞Beekeeper"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Field",
@@ -1392,8 +1482,8 @@ export const Roden: bwgr.data.Stock = {
 					name: "Trader",
 					physicalPool: 0,
 					requirements: {
-						LIMIT: [
-							"NOT➞LP*2"
+						limits: [
+							"LP➞MAX➞2"
 						]
 					},
 					resources: 16,
@@ -1428,8 +1518,8 @@ export const Roden: bwgr.data.Stock = {
 					name: "Deputy",
 					physicalPool: 1,
 					requirements: {
-						LIMIT: [
-							"NOT➞LP*2"
+						limits: [
+							"LP➞MIN➞3"
 						]
 					},
 					resources: 6,
@@ -1461,12 +1551,15 @@ export const Roden: bwgr.data.Stock = {
 					name: "Sheriff",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Field➞Deputy",
-							"Roden➞Exile➞Bandit King",
-							"Roden➞Below➞Bruiser",
-							"Roden➞Below➞Mastermind"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Field➞Deputy",
+								"Roden➞Exile➞Bandit King",
+								"Roden➞Below➞Bruiser",
+								"Roden➞Below➞Mastermind"
+							]
+						}
 					},
 					resources: 8,
 					setting: "Field",
@@ -1494,15 +1587,18 @@ export const Roden: bwgr.data.Stock = {
 					name: "Mayor",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Field➞Sheriff",
-							"Roden➞Field➞Healer",
-							"Roden➞Field➞Baker",
-							"Roden➞Field➞Meadmaker",
-							"Roden➞Below➞Negotiator",
-							// TODO: No philosopher so added hermit
-							"Roden➞Exile➞Hermit"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Field➞Sheriff",
+								"Roden➞Field➞Healer",
+								"Roden➞Field➞Baker",
+								"Roden➞Field➞Meadmaker",
+								"Roden➞Below➞Negotiator",
+								// TODO: No philosopher so added hermit
+								"Roden➞Exile➞Hermit"
+							]
+						}
 					},
 					resources: 20,
 					setting: "Field",
@@ -1536,6 +1632,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Brother/Sister",
 					physicalPool: 0,
+					requirements: {},
 					resources: 14,
 					setting: "Field",
 					skillPool: 6,
@@ -1570,9 +1667,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Missionary",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Roden➞Field➞Brother/Sister"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Field➞Brother/Sister"
+							]
+						}
 					},
 					resources: 5,
 					setting: "Field",
@@ -1606,9 +1706,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Father/Mother",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Roden➞Field➞Brother/Sister"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Field➞Brother/Sister"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Field",
@@ -1644,9 +1747,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Abbot/Abbess",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Roden➞Field➞Father/Mother"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Field➞Father/Mother"
+							]
+						}
 					},
 					resources: 30,
 					setting: "Field",
@@ -1671,6 +1777,7 @@ export const Roden: bwgr.data.Stock = {
 				"bwc"
 			],
 			name: "Society",
+			short: "Society",
 			stock: "Roden",
 			type: "Subsetting",
 			lifepaths: [
@@ -1687,6 +1794,7 @@ export const Roden: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Initiate",
 					physicalPool: 0,
+					requirements: {},
 					resources: 2,
 					setting: "Society",
 					skillPool: 3,
@@ -1713,9 +1821,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Cultist",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Roden➞Society➞Initiate"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Society➞Initiate"
+							]
+						}
 					},
 					resources: 4,
 					setting: "Society",
@@ -1746,9 +1857,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Shadow",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Roden➞Society➞Initiate"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Society➞Initiate"
+							]
+						}
 					},
 					resources: 6,
 					setting: "Society",
@@ -1779,9 +1893,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Arsonist",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Roden➞Society➞Initiate"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Society➞Initiate"
+							]
+						}
 					},
 					resources: 6,
 					setting: "Society",
@@ -1812,9 +1929,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Murderer",
 					physicalPool: 1,
 					requirements: {
-						AND: [
-							"Roden➞Society➞Initiate"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Society➞Initiate"
+							]
+						}
 					},
 					resources: 7,
 					setting: "Society",
@@ -1846,9 +1966,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Willard",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Roden➞Society➞Initiate"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Society➞Initiate"
+							]
+						}
 					},
 					resources: 5,
 					setting: "Society",
@@ -1883,11 +2006,14 @@ export const Roden: bwgr.data.Stock = {
 					name: "Perverter",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Below➞The Brain",
-							"Roden➞Society➞Cultist",
-							"Roden➞Field➞Missionary"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Below➞The Brain",
+								"Roden➞Society➞Cultist",
+								"Roden➞Field➞Missionary"
+							]
+						}
 					},
 					resources: 10,
 					setting: "Society",
@@ -1918,9 +2044,12 @@ export const Roden: bwgr.data.Stock = {
 					name: "Poisoner",
 					physicalPool: 0,
 					requirements: {
-						AND: [
-							"Roden➞Society➞Initiate"
-						]
+						conditions: {
+							type: "AND",
+							items: [
+								"Roden➞Society➞Initiate"
+							]
+						}
 					},
 					resources: 7,
 					setting: "Society",
@@ -1950,11 +2079,14 @@ export const Roden: bwgr.data.Stock = {
 					name: "Guardian",
 					physicalPool: 1,
 					requirements: {
-						OR: [
-							"Roden➞Society➞Murderer",
-							"Roden➞Society➞Willard",
-							"Roden➞Society➞Perverter"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Society➞Murderer",
+								"Roden➞Society➞Willard",
+								"Roden➞Society➞Perverter"
+							]
+						}
 					},
 					resources: 9,
 					setting: "Society",
@@ -1986,12 +2118,15 @@ export const Roden: bwgr.data.Stock = {
 					name: "Preacher",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Society➞Cultist",
-							"Roden➞Field➞Missionary",
-							// TODO: NO philosopher so added hermit
-							"Roden➞Exile➞Hermit"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Society➞Cultist",
+								"Roden➞Field➞Missionary",
+								// TODO: NO philosopher so added hermit
+								"Roden➞Exile➞Hermit"
+							]
+						}
 					},
 					resources: 15,
 					setting: "Society",
@@ -2025,12 +2160,15 @@ export const Roden: bwgr.data.Stock = {
 					name: "Visionary",
 					physicalPool: 0,
 					requirements: {
-						OR: [
-							"Roden➞Exile➞Albino",
-							"Roden➞Society➞Preacher",
-							"Roden➞Field➞Abbot/Abbess",
-							"Roden➞Below➞Mastermind"
-						]
+						conditions: {
+							type: "OR",
+							items: [
+								"Roden➞Exile➞Albino",
+								"Roden➞Society➞Preacher",
+								"Roden➞Field➞Abbot/Abbess",
+								"Roden➞Below➞Mastermind"
+							]
+						}
 					},
 					resources: 30,
 					setting: "Society",
