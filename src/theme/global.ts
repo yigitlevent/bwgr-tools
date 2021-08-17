@@ -3,13 +3,19 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 	@font-face {
         font-family: "Text";
-        src: url("${process.env.PUBLIC_URL}/fonts/text.ttf");
+        src: url("${process.env.PUBLIC_URL}/fonts/alegreya.ttf");
 		font-display: block;
     };
 
 	@font-face {
         font-family: "Title";
-        src: url("${process.env.PUBLIC_URL}/fonts/title.ttf");
+        src: url("${process.env.PUBLIC_URL}/fonts/thryromanes.ttf");
+		font-display: block;
+    };
+
+	@font-face {
+        font-family: "Hand";
+        src: url("${process.env.PUBLIC_URL}/fonts/caveat.ttf");
 		font-display: block;
     };
 
