@@ -7415,6 +7415,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 			}
 		]
 	},
+	
 	"Dwarf Common": {
 		allowed: [
 			"bwg",
@@ -7805,6 +7806,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 			}
 		]
 	},
+
 	"Elf Common": {
 		allowed: [
 			"bwg",
@@ -8249,7 +8251,8 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 			}
 		]
 	},
-	"Man Lifepath": {
+
+	"Human Lifepath": {
 		allowed: [
 			"bwg",
 			"bwc"
@@ -8918,7 +8921,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 			}
 		]
 	},
-	"Man Special": {
+	"Human Special": {
 		allowed: [
 			"bwg",
 			"bwc"
@@ -9326,6 +9329,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 			}
 		]
 	},
+
 	"Orc Common": {
 		allowed: [
 			"bwg",
@@ -9782,6 +9786,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 			}
 		]
 	},
+
 	"Roden Common": {
 		allowed: [
 			"bwc"
@@ -10836,6 +10841,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 			}
 		]
 	},
+
 	"Troll Common": {
 		allowed: [
 			"bwc"
@@ -11412,6 +11418,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 			}
 		]
 	},
+
 	"Great Wolf Common": {
 		allowed: [
 			"bwc"

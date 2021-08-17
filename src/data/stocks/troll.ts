@@ -35,7 +35,7 @@ export const Troll: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 2,
 					leads: [
-						"Troll->Pit"
+						"Troll➞Pit"
 					],
 					mentalPool: 0,
 					name: "Born to Dark Caves",
@@ -55,7 +55,7 @@ export const Troll: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Troll->Wild"
+						"Troll➞Wild"
 					],
 					mentalPool: 0,
 					name: "Dweller",
@@ -64,9 +64,9 @@ export const Troll: bwgr.data.Stock = {
 					setting: "Cavedweller",
 					skillPool: 2,
 					skills: [
-						"Any General->Climbing",
-						"Any Wise->Rock-wise",
-						"Any General->Brawling"
+						"Any General➞Climbing",
+						"Any Wise➞Rock-wise",
+						"Any General➞Brawling"
 					],
 					stock: "Troll",
 					traitPool: 2,
@@ -80,8 +80,8 @@ export const Troll: bwgr.data.Stock = {
 					eitherPool: 1,
 					generalSkillPool: 0,
 					leads: [
-						"Troll->Pit",
-						"Troll->Wild"
+						"Troll➞Pit",
+						"Troll➞Wild"
 					],
 					mentalPool: 0,
 					name: "Mine Haunt",
@@ -90,8 +90,8 @@ export const Troll: bwgr.data.Stock = {
 					setting: "Cavedweller",
 					skillPool: 2,
 					skills: [
-						"Troll Special->Mine-wise",
-						"Any General->Brawling"
+						"Troll Special➞Mine-wise",
+						"Any General➞Brawling"
 					],
 					stock: "Troll",
 					traitPool: 1,
@@ -105,7 +105,7 @@ export const Troll: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Troll->Pit"
+						"Troll➞Pit"
 					],
 					mentalPool: 1,
 					name: "Dwarf Hunter",
@@ -114,13 +114,13 @@ export const Troll: bwgr.data.Stock = {
 					setting: "Cavedweller",
 					skillPool: 3,
 					skills: [
-						"Any Wise->Dwarf-wise",
-						"Any General->Throwing"
+						"Any Wise➞Dwarf-wise",
+						"Any General➞Throwing"
 					],
 					stock: "Troll",
 					traitPool: 1,
 					traits: [
-						"Troll Lifepath->Stubborn"
+						"Troll Lifepath➞Stubborn"
 					],
 					years: 6
 				},
@@ -136,16 +136,16 @@ export const Troll: bwgr.data.Stock = {
 					physicalPool: 2,
 					requirements: {
 						OR: [
-							"Troll->Cavedweller->Mine Haunt",
-							"Troll->Cavedweller->Dwarf Hunter"
+							"Troll➞Cavedweller➞Mine Haunt",
+							"Troll➞Cavedweller➞Dwarf Hunter"
 						]
 					},
 					resources: 4,
 					setting: "Cavedweller",
 					skillPool: 3,
 					skills: [
-						"Troll Special->Camouflage",
-						"Any General->Stealthy"
+						"Troll Special➞Camouflage",
+						"Any General➞Stealthy"
 					],
 					stock: "Troll",
 					traitPool: 3,
@@ -169,7 +169,7 @@ export const Troll: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 1,
 					leads: [
-						"Troll->Cavedweller"
+						"Troll➞Cavedweller"
 					],
 					mentalPool: 0,
 					name: "Born to the Pit",
@@ -180,7 +180,7 @@ export const Troll: bwgr.data.Stock = {
 					stock: "Troll",
 					traitPool: 2,
 					traits: [
-						"Troll Lifepath->Vile Language"
+						"Troll Lifepath➞Vile Language"
 					],
 					years: 4
 				},
@@ -200,8 +200,8 @@ export const Troll: bwgr.data.Stock = {
 					stock: "Troll",
 					traitPool: 3,
 					traits: [
-						"Troll Lifepath->Tasting the Lash",
-						"Troll Lifepath->Numb"
+						"Troll Lifepath➞Tasting the Lash",
+						"Troll Lifepath➞Numb"
 					],
 					years: 3
 				},
@@ -219,15 +219,15 @@ export const Troll: bwgr.data.Stock = {
 					setting: "Pit",
 					skillPool: 2,
 					skills: [
-						"Any General->Ditch Digging",
-						"Any General->Hauling",
-						"Any General->Mining"
+						"Any General➞Ditch Digging",
+						"Any General➞Hauling",
+						"Any General➞Mining"
 					],
 					stock: "Troll",
 					traitPool: 1,
 					traits: [
-						"Troll Lifepath->Back-Breaking Labor",
-						"Troll Lifepath->Tasting the Lash"
+						"Troll Lifepath➞Back-Breaking Labor",
+						"Troll Lifepath➞Tasting the Lash"
 					],
 					years: 9
 				},
@@ -239,7 +239,7 @@ export const Troll: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Troll->Wild"
+						"Troll➞Wild"
 					],
 					mentalPool: 0,
 					name: "Battering Ram",
@@ -248,13 +248,13 @@ export const Troll: bwgr.data.Stock = {
 					setting: "Pit",
 					skillPool: 2,
 					skills: [
-						"Any General->Brawling",
-						"Any General->Throwing"
+						"Any General➞Brawling",
+						"Any General➞Throwing"
 					],
 					stock: "Troll",
 					traitPool: 1,
 					traits: [
-						"Troll Lifepath->Hardened"
+						"Troll Lifepath➞Hardened"
 					],
 					years: 6
 				},
@@ -266,31 +266,31 @@ export const Troll: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Troll->Wild"
+						"Troll➞Wild"
 					],
 					mentalPool: 0,
 					name: "Mattock",
 					physicalPool: 1,
 					requirements: {
 						OR: [
-							"Troll->Pit->Ox",
-							"Troll->Pit->Battering Ram",
-							"Troll->Cavedweller->Dwarf Hunter",
-							"Troll->Wild->Manhunter",
-							"Troll->Wild->Brute"
+							"Troll➞Pit➞Ox",
+							"Troll➞Pit➞Battering Ram",
+							"Troll➞Cavedweller➞Dwarf Hunter",
+							"Troll➞Wild➞Manhunter",
+							"Troll➞Wild➞Brute"
 						]
 					},
 					resources: 7,
 					setting: "Pit",
 					skillPool: 3,
 					skills: [
-						"Any General->Hammer",
-						"Any General->Formation Fighting"
+						"Any General➞Hammer",
+						"Any General➞Formation Fighting"
 					],
 					stock: "Troll",
 					traitPool: 1,
 					traits: [
-						"Troll Lifepath->Brutal"
+						"Troll Lifepath➞Brutal"
 					],
 					years: 7
 				},
@@ -302,28 +302,28 @@ export const Troll: bwgr.data.Stock = {
 					eitherPool: 1,
 					generalSkillPool: 0,
 					leads: [
-						"Troll->Wild"
+						"Troll➞Wild"
 					],
 					mentalPool: 0,
 					name: "Ironshield",
 					physicalPool: 0,
 					requirements: {
 						OR: [
-							"Troll->Pit->Mattock",
-							"Troll->Wild->Brute"
+							"Troll➞Pit➞Mattock",
+							"Troll➞Wild➞Brute"
 						]
 					},
 					resources: 6,
 					setting: "Pit",
 					skillPool: 3,
 					skills: [
-						"Any General->Shield Training",
-						"Any General->Intimidation"
+						"Any General➞Shield Training",
+						"Any General➞Intimidation"
 					],
 					stock: "Troll",
 					traitPool: 1,
 					traits: [
-						"Troll Lifepath->Unflinching"
+						"Troll Lifepath➞Unflinching"
 					],
 					years: 8
 				},
@@ -339,23 +339,23 @@ export const Troll: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						OR: [
-							"Troll->Wild->Bull",
-							"Troll->Pit->Ironshield"
+							"Troll➞Wild➞Bull",
+							"Troll➞Pit➞Ironshield"
 						]
 					},
 					resources: 4,
 					setting: "Pit",
 					skillPool: 3,
 					skills: [
-						"Any General->Torture",
-						"Troll Special->Lash"
+						"Any General➞Torture",
+						"Troll Special➞Lash"
 					],
 					stock: "Troll",
 					traitPool: 1,
 					traits: [
-						"Troll Lifepath->Where There's a Whip There is a Way",
-						"Troll Lifepath->Tough as Nails",
-						"Troll Lifepath->Bellowing"
+						"Troll Lifepath➞Where There's a Whip There is a Way",
+						"Troll Lifepath➞Tough as Nails",
+						"Troll Lifepath➞Bellowing"
 					],
 					years: 16
 				},
@@ -371,21 +371,21 @@ export const Troll: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						OR: [
-							"Troll->Pit->Bellower"
+							"Troll➞Pit➞Bellower"
 						]
 					},
 					resources: 10,
 					setting: "Pit",
 					skillPool: 3,
 					skills: [
-						"Any General->Command",
-						"Any General->Strategy"
+						"Any General➞Command",
+						"Any General➞Strategy"
 					],
 					stock: "Troll",
 					traitPool: 2,
 					traits: [
-						"Troll Lifepath->Insidious Cruelty",
-						"Troll Lifepath->Wickedly Clever"
+						"Troll Lifepath➞Insidious Cruelty",
+						"Troll Lifepath➞Wickedly Clever"
 					],
 					years: 56
 				}
@@ -407,7 +407,7 @@ export const Troll: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 2,
 					leads: [
-						"Troll->Pit"
+						"Troll➞Pit"
 					],
 					mentalPool: 0,
 					name: "Born Wild",
@@ -427,7 +427,7 @@ export const Troll: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Troll->Cavedweller"
+						"Troll➞Cavedweller"
 					],
 					mentalPool: 0,
 					name: "Bogey",
@@ -436,9 +436,9 @@ export const Troll: bwgr.data.Stock = {
 					setting: "Wild",
 					skillPool: 3,
 					skills: [
-						"Any General->Brawling",
-						"Any Wise->Forest-wise",
-						"Any General->Stealthy"
+						"Any General➞Brawling",
+						"Any Wise➞Forest-wise",
+						"Any General➞Stealthy"
 					],
 					stock: "Troll",
 					traitPool: 2,
@@ -458,13 +458,13 @@ export const Troll: bwgr.data.Stock = {
 					setting: "Wild",
 					skillPool: 2,
 					skills: [
-						"Any Wise->Bridge-wise",
-						"Any General->Intimidation"
+						"Any Wise➞Bridge-wise",
+						"Any General➞Intimidation"
 					],
 					stock: "Troll",
 					traitPool: 1,
 					traits: [
-						"Troll Lifepath->Stubborn"
+						"Troll Lifepath➞Stubborn"
 					],
 					years: 10
 				},
@@ -476,7 +476,7 @@ export const Troll: bwgr.data.Stock = {
 					eitherPool: 1,
 					generalSkillPool: 0,
 					leads: [
-						"Troll->Pit"
+						"Troll➞Pit"
 					],
 					mentalPool: 0,
 					name: "Manhunter",
@@ -485,8 +485,8 @@ export const Troll: bwgr.data.Stock = {
 					setting: "Wild",
 					skillPool: 2,
 					skills: [
-						"Any Wise->Man-wise",
-						"Any Wise->Village-wise"
+						"Any Wise➞Man-wise",
+						"Any Wise➞Village-wise"
 					],
 					stock: "Troll",
 					traitPool: 1,
@@ -508,9 +508,9 @@ export const Troll: bwgr.data.Stock = {
 					stock: "Troll",
 					traitPool: 2,
 					traits: [
-						"Troll Lifepath->Solitary",
-						"Troll Lifepath->Addled",
-						"Troll Lifepath->Slow"
+						"Troll Lifepath➞Solitary",
+						"Troll Lifepath➞Addled",
+						"Troll Lifepath➞Slow"
 					],
 					years: 13
 				},
@@ -522,32 +522,32 @@ export const Troll: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Troll->Pit"
+						"Troll➞Pit"
 					],
 					mentalPool: 0,
 					name: "Brute",
 					physicalPool: 2,
 					requirements: {
 						OR: [
-							"Troll->Wild->Bridgehaunt",
-							"Troll->Cavedweller->Mine Haunt",
-							"Troll->Wild->Manhunter",
-							"Troll->Cavedweller->Dwarf Hunter",
-							"Troll->Pit->Battering Ram",
-							"Troll->Pit->Mattock"
+							"Troll➞Wild➞Bridgehaunt",
+							"Troll➞Cavedweller➞Mine Haunt",
+							"Troll➞Wild➞Manhunter",
+							"Troll➞Cavedweller➞Dwarf Hunter",
+							"Troll➞Pit➞Battering Ram",
+							"Troll➞Pit➞Mattock"
 						]
 					},
 					resources: 2,
 					setting: "Wild",
 					skillPool: 2,
 					skills: [
-						"Any General->Intimidation",
-						"Any General->Brawling"
+						"Any General➞Intimidation",
+						"Any General➞Brawling"
 					],
 					stock: "Troll",
 					traitPool: 1,
 					traits: [
-						"Troll Lifepath->Brute"
+						"Troll Lifepath➞Brute"
 					],
 					years: 15
 				},
@@ -559,32 +559,32 @@ export const Troll: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Troll->Cavedweller",
-						"Troll->Pit"
+						"Troll➞Cavedweller",
+						"Troll➞Pit"
 					],
 					mentalPool: 1,
 					name: "Brood Mother",
 					physicalPool: 1,
 					requirements: {
 						OR: [
-							"Troll->Wild->Brute",
-							"Troll->Cavedweller->Dread Stone",
-							"Troll->Pit->Bellower"
+							"Troll➞Wild➞Brute",
+							"Troll➞Cavedweller➞Dread Stone",
+							"Troll➞Pit➞Bellower"
 						]
 					},
 					resources: 10,
 					setting: "Wild",
 					skillPool: 3,
 					skills: [
-						"Any General->Nursing",
-						"Any General->Ugly Truth"
+						"Any General➞Nursing",
+						"Any General➞Ugly Truth"
 					],
 					stock: "Troll",
 					traitPool: 2,
 					traits: [
-						"Troll Lifepath->Misshapen",
-						"Troll Lifepath->Grotesque",
-						"Troll Lifepath->Witch Flesh"
+						"Troll Lifepath➞Misshapen",
+						"Troll Lifepath➞Grotesque",
+						"Troll Lifepath➞Witch Flesh"
 					],
 					years: 33
 				},
@@ -596,28 +596,28 @@ export const Troll: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Troll->Pit"
+						"Troll➞Pit"
 					],
 					mentalPool: 1,
 					name: "Bull",
 					physicalPool: 1,
 					requirements: {
 						OR: [
-							"Troll->Wild->Brute",
-							"Troll->Pit->Ironshield"
+							"Troll➞Wild➞Brute",
+							"Troll➞Pit➞Ironshield"
 						]
 					},
 					resources: 5,
 					setting: "Wild",
 					skillPool: 3,
 					skills: [
-						"Any General->Torture",
-						"Troll Special->Extortion"
+						"Any General➞Torture",
+						"Troll Special➞Extortion"
 					],
 					stock: "Troll",
 					traitPool: 2,
 					traits: [
-						"Troll Lifepath->Boor"
+						"Troll Lifepath➞Boor"
 					],
 					years: 45
 				}

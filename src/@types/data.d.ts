@@ -178,8 +178,8 @@ namespace bwgr {
 	namespace path {
 
 		type Stock = `${bwgr.data.StocksList}`;
-		type Setting = `${bwgr.path.Stock}->${string}`;
-		type Lifepath = `${bwgr.path.Setting}->${string}`;
+		type Setting = `${bwgr.path.Stock}➞${string}`;
+		type Lifepath = `${bwgr.path.Setting}➞${string}`;
 
 		type SkillCategory = `${"Any"} ${"General" | "Monstrous" | "Wise"}`
 			| `${"Dwarf" | "Elf" | "Human" | "Orc" | "Roden" | "Troll" | "Great Wolf"} ${"Special"}`
@@ -188,10 +188,12 @@ namespace bwgr {
 			| `Dark Elf ${"Skill Song" | "Spell Song"}`
 			| `Human ${"Magical"}`
 			| `Great Wolf ${"Spirit Hunter Song"}`;
-		type Skill = `${bwgr.path.SkillCategory}->${string}`;
+		type Skill = `${bwgr.path.SkillCategory}➞${string}`;
 
-		type TraitCategory = `${string}`;
-		type Trait = `${bwgr.path.TraitCategory}->${string}`;
+		type TraitCategory = `${"Any"} ${"Character" | "Call-on" | "Die" | "Monstrous"}`
+			| `${"Dwarf" | "Elf" | "Orc" | "Roden" | "Troll" | "Great Wolf"} ${"Common"}`
+			| `${"Dwarf" | "Elf" | "Dark Elf" | "Human" | "Orc" | "Roden" | "Troll" | "Great Wolf"} ${"Lifepath" | "Special"}`;
+		type Trait = `${bwgr.path.TraitCategory}➞${string}`;
 
 	}
 

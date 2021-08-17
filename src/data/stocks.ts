@@ -9,7 +9,7 @@ import { GreatWolf } from "./stocks/greatWolf";
 export const Stocks: bwgr.data.Stocks = {
 	"Dwarf": Dwarf,
 	"Elf": Elf,
-	"Man": Human,
+	"Human": Human,
 	"Orc": Orc,
 	"Roden": Roden,
 	"Troll": Troll,

@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 		tab-size: 4;
 
-		font-size: 0.99em;
+		font-size: 1em;
 
 		font-family: "Text";
 		color: ${(props: bwgr.style.Props) => props.theme.text.main};
@@ -51,6 +51,16 @@ export const GlobalStyle = createGlobalStyle`
 		background: ${(props: bwgr.style.Props) => props.theme.background.surface};
 		margin: 0;
 		padding: 0;
+	}
+
+	#root {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: flex-start;
+		align-content: flex-start;
+		overflow: scroll;
+		margin: 10px 0;
 	}
 
 	a {
