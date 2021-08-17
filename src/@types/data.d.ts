@@ -92,15 +92,26 @@ namespace bwgr {
 		}
 
 		interface Lifepath {
-			allowed: bwgr.data.RulesetsList[];
-			born: boolean;
-			eitherPool: number;
-			generalSkillPool: number | `${number}/yr`;
-			leads?: string[];
-			mentalPool: number;
 			name: string;
+
+			allowed: bwgr.data.RulesetsList[];
+			stock: bwgr.data.StocksList;
+			setting: string;
+			leads?: string[];
+			years: number | "*";
+			born: boolean;
+
+			eitherPool: number;
+			mentalPool: number;
 			physicalPool: number;
+			generalSkillPool: number | `${number}/yr`;
+			skillPool: number | "*";
+			traitPool: number;
 			resources: number | `${number}/yr` | "*";
+
+			skills?: string[];
+			traits?: string[];
+
 			requirements?: {
 				OR?: (string | string[])[];
 				AND?: (string | string[])[];
@@ -108,14 +119,6 @@ namespace bwgr {
 				LIMIT?: string[];
 				TEXT?: string[];
 			};
-			selectable: boolean;
-			setting: string;
-			skillPool: number | "*";
-			skills?: string[];
-			stock: bwgr.data.StocksList;
-			traitPool: number;
-			traits?: string[];
-			years: number | "*";
 		}
 
 		interface SkillCategories {
@@ -129,11 +132,11 @@ namespace bwgr {
 		}
 
 		interface Skill {
-			allowed: bwgr.data.RulesetsList[];
-			description: string;
-			disabled: -1;
-			magical: boolean;
 			name: string;
+			description: string;
+
+			allowed: bwgr.data.RulesetsList[];
+			magical: boolean;
 			noList: boolean;
 			restriction: string;
 			root: bwgr.data.StatsList | `${bwgr.data.StatsList}/${bwgr.data.StatsList}` | "N/A";
@@ -156,7 +159,6 @@ namespace bwgr {
 			allowed: bwgr.data.RulesetsList[];
 			cost: number | number[];
 			description: string;
-			disabled: boolean;
 			name: string;
 			stock: "Any" | bwgr.data.StocksList;
 			type: bwgr.data.TraitTypesList;

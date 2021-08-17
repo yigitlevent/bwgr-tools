@@ -23,7 +23,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born Artificer",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "Artificer",
 						skillPool: 2,
 						skills: ["Dwarf Special->Dwarven Rune Script"],
@@ -41,7 +40,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Ardent",
 						physicalPool: 1,
 						resources: 15,
-						selectable: true,
 						setting: "Artificer",
 						skillPool: 4,
 						skills: ["Any General->Firebuilding", "Any General->Soothing Platitudes", "Any Wise->Soot-wise"],
@@ -66,7 +64,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Artificer",
 						skillPool: 5,
 						skills: ["Dwarf Art->Black-Metal Artifice", "Any General->Mending", "Any Wise->Dwarven Arts-wise"],
@@ -91,7 +88,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 35,
-						selectable: true,
 						setting: "Artificer",
 						skillPool: 8,
 						skills: ["Dwarf Art->Stone Artifice", "Any General->Etching", "Dwarf Art->White-Metal Artifice", "Dwarf Art->Gem Artifice"],
@@ -115,7 +111,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 50,
-						selectable: true,
 						setting: "Artificer",
 						skillPool: 6,
 						skills: ["Any General->Jargon", "Any Wise->Fire and Steel-wise", "Dwarf Art->War Art"],
@@ -138,7 +133,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 75,
-						selectable: true,
 						setting: "Artificer",
 						skillPool: 8,
 						skills: ["Dwarf Art->Lithography", "Any General->Sculpture", "Dwarf Art->Hallmaster", "Any General->Symbology", "Any General->Etiquette"],
@@ -162,7 +156,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 75,
-						selectable: true,
 						setting: "Artificer",
 						skillPool: 6,
 						skills: ["Dwarf Art->Forge Artifice", "Any General->Appraisal", "Any General->Engineering", "Any General->Command", "Any Wise->Maker's Mark-wise"],
@@ -186,7 +179,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 60,
-						selectable: true,
 						setting: "Artificer",
 						skillPool: 4,
 						skills: ["Dwarf Art->Reason of Old Stone", "Any Wise->Stone-wise", "Any Wise->Mountain-wise"],
@@ -212,7 +204,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born Clansman",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Clansman",
 						skillPool: 0,
 						stock: "Dwarf",
@@ -229,7 +220,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Tender",
 						physicalPool: 1,
 						resources: 7,
-						selectable: true,
 						setting: "Clansman",
 						skillPool: 5,
 						skills: ["Any General->Farming", "Any Wise->Crowd-wise", "Any Wise->Hold-wise"],
@@ -248,7 +238,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Herder",
 						physicalPool: 1,
 						resources: 9,
-						selectable: true,
 						setting: "Clansman",
 						skillPool: 5,
 						skills: ["Any General->Animal Husbandry", "Any Wise->Forest-wise", "Dwarf Special->Fence Building", "Any General->Climbing"],
@@ -267,7 +256,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Tinkerer",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "Clansman",
 						skillPool: 4,
 						skills: ["Dwarf Special->Stuff-wise", "Any General->Mending", "Any General->Scavenging"],
@@ -286,7 +274,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Delver",
 						physicalPool: 1,
 						resources: 10,
-						selectable: true,
 						setting: "Clansman",
 						skillPool: 4,
 						skills: ["Any Wise->Tunnel-wise", "Any Wise->Genius-wise", "Dwarf Art->Excavation"],
@@ -305,7 +292,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Miller",
 						physicalPool: 0,
 						resources: 30,
-						selectable: true,
 						setting: "Clansman",
 						skillPool: 6,
 						skills: ["Dwarf Special->Grain Appraisal", "Any General->Miller", "Any General->Mending", "Any General->Brewer", "Any Wise->Graybeard-wise"],
@@ -333,7 +319,6 @@ export const Stocks: bwgr.data.Stocks = {
 								]
 						},
 						resources: 40,
-						selectable: true,
 						setting: "Clansman",
 						skillPool: 5,
 						skills: ["Dwarf Special->Beer Appraisal", "Dwarf Art->Nogger", "Any General->Miller", "Any Wise->Beer-wise"],
@@ -358,7 +343,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Clansman",
 						skillPool: 5,
 						skills: ["Any Wise->Personal Effects-wise", "Any Wise->Vintage-wise", "Any General->Engineering"],
@@ -381,7 +365,6 @@ export const Stocks: bwgr.data.Stocks = {
 								"NOT->LP*2"
 							]
 						},
-						selectable: true,
 						setting: "Clansman",
 						skillPool: 5,
 						skills: ["Any Wise->Contract-wise", "Any Wise->Family Secrets-wise", "Any General->Haggling", "Any General->Soothing Platitudes"],
@@ -412,7 +395,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "Clansman",
 						skillPool: 6,
 						skills: ["Dwarf Art->Coarse Persuasion", "Any General->Ugly Truth", "Any Wise->Handwriting-wise", "Any Wise->Hypocritical Bastards-wise"],
@@ -439,7 +421,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born Guilder",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Guilder",
 						skillPool: 0,
 						stock: "Dwarf",
@@ -456,7 +437,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Wordbearer",
 						physicalPool: 1,
 						resources: 10,
-						selectable: true,
 						setting: "Guilder",
 						skillPool: 5,
 						skills: ["Any Wise->Hoof-wise", "Any Wise->Scutwork-wise", "Any General->Oratory", "Dwarf Special->Clan History"],
@@ -475,7 +455,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Hauler",
 						physicalPool: 1,
 						resources: 7,
-						selectable: true,
 						setting: "Guilder",
 						skillPool: 5,
 						skills: ["Any General->Hauling", "Any Wise->Whip-wise", "Any Wise->Cave-In-wise", "Any Wise->Rumor-wise"],
@@ -494,7 +473,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Carter",
 						physicalPool: 1,
 						resources: 10,
-						selectable: true,
 						setting: "Guilder",
 						skillPool: 5,
 						skills: ["Any General->Animal Husbandry", "Any General->Driving", "Any General->Mending", "Any Wise->Oath-wise"],
@@ -513,7 +491,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Hawker",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "Guilder",
 						skillPool: 6,
 						skills: ["Any General->Inconspicuous", "Any General->Conspicuous", "Any General->Streetwise", "Any General->Haggling", "Any Wise->Suicidal Bravery-wise"],
@@ -531,7 +508,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Apprentice",
 						physicalPool: 1,
 						resources: 20,
-						selectable: true,
 						setting: "Guilder",
 						skillPool: 4,
 						skills: ["Any General->Carving", "Any General->Tanner", "Any General->Carpentry", "Any Wise->Shortcut-wise"],
@@ -557,7 +533,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Guilder",
 						skillPool: 7,
 						skills: ["Any General->Haggling", "Any General->Cartwright", "Any General->Mending", "Dwarf Art->Black-Metal Artifice"],
@@ -584,7 +559,6 @@ export const Stocks: bwgr.data.Stocks = {
 								"Dwarf->Host->Engineer"
 							]
 						},
-						selectable: true,
 						setting: "Guilder",
 						skillPool: 4,
 						skills: ["Any General->Appraisal", "Any General->Shipwright", "Any General->Wises"],
@@ -610,7 +584,6 @@ export const Stocks: bwgr.data.Stocks = {
 								"Dwarf->Clansman->Husband/Wife"
 							]
 						},
-						selectable: true,
 						setting: "Guilder",
 						skillPool: 7,
 						skills: ["Dwarf Art->Stentorious Debate", "Dwarf Art->Shrewd Appraisal", "Any General->Haggling", "Any General->Persuasion"],
@@ -636,7 +609,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Foot Soldier",
 						physicalPool: 1,
 						resources: 6,
-						selectable: true,
 						setting: "Host",
 						skillPool: 6,
 						skills: ["Any General->Foraging", "Any General->Brawling", "Any General->Hammer", "Any General->Armor Training", "Any General->Shield Training", "Any Wise->Cadence-wise"],
@@ -655,7 +627,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Arbalester",
 						physicalPool: 0,
 						resources: 12,
-						selectable: true,
 						setting: "Host",
 						skillPool: 5,
 						skills: ["Any General->Crossbow", "Any General->Mending", "Any General->Fletcher", "Dwarf Special->Artillery Hand", "Any Wise->Windage-wise"],
@@ -674,7 +645,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Banner Bearer",
 						physicalPool: 1,
 						resources: 10,
-						selectable: true,
 						setting: "Host",
 						skillPool: 4,
 						skills: ["Any General->Conspicuous", "Any Wise->Banner-wise", "Any General->Intimidation"],
@@ -693,7 +663,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Horncaller",
 						physicalPool: 1,
 						resources: 9,
-						selectable: true,
 						setting: "Host",
 						skillPool: 5,
 						skills: ["Dwarf Special->Links", "Any General->Conspicuous", "Any Wise->Cadence-wise", "Any Wise->Suicidal Bravery-wise"],
@@ -718,7 +687,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Host",
 						skillPool: 9,
 						skills: ["Any General->Foraging", "Any General->Axe", "Any General->Conspicuous", "Any General->Intimidation", "Any General->Armor Training", "Any General->Shield Training", "Any General->Formation Fighting Training", "Any General->Throwing"],
@@ -744,7 +712,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Host",
 						skillPool: 5,
 						skills: ["Any General->Intimidation", "Any General->Field Dressing", "Any General->Command", "Any Wise->Campaign-wise"],
@@ -770,7 +737,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Host",
 						skillPool: 6,
 						skills: ["Dwarf Special->Khirurgy", "Any General->Soothing Platitudes", "Any General->Cooking", "Any Wise->Infection-wise"],
@@ -796,7 +762,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 35,
-						selectable: true,
 						setting: "Host",
 						skillPool: 7,
 						skills: ["Any General->Logistics", "Any General->Accounting", "Any General->Strategy", "Any Wise->Supply-wise", "Any Wise->Host-wise"],
@@ -821,7 +786,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 40,
-						selectable: true,
 						setting: "Host",
 						skillPool: 7,
 						skills: ["Any General->Command", "Any General->Conspicuous", "Any General->Formation Fighting Training", "Any General->Strategy", "Any General->Cartography", "Any Wise->Graybeard-wise"],
@@ -847,7 +811,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 45,
-						selectable: true,
 						setting: "Host",
 						skillPool: 5,
 						skills: ["Any General->Artillerist", "Any General->Mending", "Any General->Carpentry", "Any Wise->Structural Weakness-wise"],
@@ -872,7 +835,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 50,
-						selectable: true,
 						setting: "Host",
 						skillPool: 6,
 						skills: ["Any General->Jargon", "Dwarf Art->War Engineer", "Any General->Scavenging", "Any Wise->Leverage-wise"],
@@ -898,7 +860,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 65,
-						selectable: true,
 						setting: "Host",
 						skillPool: 7,
 						skills: ["Any General->Conspicuous", "Any General->Oratory", "Any General->Observation", "Any General->Strategy", "Any General->Etiquette", "Any Wise->Champion-wise"],
@@ -925,7 +886,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born Noble",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 2,
 						skills: ["Dwarf Special->Dwarven Rune Script"],
@@ -944,7 +904,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Abecedart",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 4,
 						skills: ["Any General->Chronology of Kings", "Any General->Etiquette", "Any Wise->Obscure Text-wise"],
@@ -963,7 +922,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Ardent",
 						physicalPool: 1,
 						resources: 15,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 4,
 						skills: ["Any General->Sing", "Any General->Soothing Platitudes", "Any General->Accounting", "Any Wise->Whispered Secrets-wise"],
@@ -988,7 +946,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 8,
 						skills: ["Any General->Axe", "Any General->Armor Training", "Any General->Shield Training", "Any General->Formation Fighting Training", "Any General->Throwing"],
@@ -1014,7 +971,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 9,
 						skills: ["Any General->Illuminations", "Any General->Ancient History", "Any Wise->Clan-wise", "Any Wise->Dwarf-wise", "Any General->Poetry", "Any General->Cartography", "Any General->Etiquette", "Any General->Symbology", "Any Wise->Oath-wise"],
@@ -1041,7 +997,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 50,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 5,
 						skills: ["Any General->Etiquette", "Any General->Command", "Any General->Estate Management", "Any Wise->Hold-wise"],
@@ -1067,7 +1022,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 100,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 6,
 						skills: ["Any General->Accounting", "Any General->Etiquette", "Any Wise->Treasure-wise", "Any General->Administration"],
@@ -1095,7 +1049,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 75,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 5,
 						skills: ["Any General->Command", "Any General->Strategy", "Any General->Conspicuous"],
@@ -1120,7 +1073,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 200,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 8,
 						skills: ["Any General->Conspicuous", "Any General->Etiquette", "Any General->Intimidation", "Any General->Oratory", "Any General->Command", "Any Wise->Burden of the Crown-wise"],
@@ -1147,7 +1099,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Adventurer",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 12,
 						skills: ["Any General->Survival", "Any General->Climbing", "Any General->Knots", "Any General->Herbalism", "Any General->Haggling", "Any General->Firebuilding", "Any General->Brawling", "Any General->Knives", "Any General->Sword", "Any General->Crossbow", "Any General->Lock Pick", "Any General->Appraisal", "Any General->Obscure History", "Any General->Symbology", "Any Wise->Lost Treasure-wise"],
@@ -1166,7 +1117,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Gambler",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 5,
 						skills: ["Dwarf Special->Games of Chance", "Any General->Observation", "Any General->Sleight of Hand", "Any Wise->Cheating-wise"],
@@ -1185,7 +1135,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Oathbreaker",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 4,
 						skills: ["Any General->Ugly Truth", "Any General->Falsehood", "Any Wise->Oath-wise"],
@@ -1204,7 +1153,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Drunk",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 5,
 						skills: ["Dwarf Art->Stentorious Singing", "Dwarf Art->Drunking", "Any Wise->Tavern Tales-wise"],
@@ -1223,7 +1171,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Coward",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 5,
 						skills: ["Any General->Inconspicuous", "Any General->Ugly Truth", "Any General->Oratory", "Any Wise->Hypocritical Bastards-wise"],
@@ -1242,7 +1189,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Rune Caster",
 						physicalPool: 1,
 						resources: 6,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 5,
 						skills: ["Dwarf Art->Rune Casting", "Any General->Foraging", "Any General->Scavenging", "Any Wise->Bad End-wise"],
@@ -1279,7 +1225,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born Wilder Elf",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 2,
 						skills: ["Any General->Sing", "Elf Special->Elven Script"],
@@ -1297,7 +1242,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Rider",
 						physicalPool: 1,
 						resources: 3,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 6,
 						skills: ["Any General->Riding", "Elf Spell Song->Gift of Speed", "Elf Spell Song->Lay of the Horse"],
@@ -1316,7 +1260,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Harvester",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 5,
 						skills: ["Elf Skill Song->Round of Harvest", "Any General->Farming", "Any General->Firebuilding", "Any General->Animal Husbandry", "Any General->Mending"],
@@ -1334,7 +1277,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Gatherer",
 						physicalPool: 0,
 						resources: 3,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 5,
 						skills: ["Elf Skill Song->Rhyme of the Gatherer", "Any Wise->Herb-wise", "Any General->Orienteering"],
@@ -1353,7 +1295,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Fisherman",
 						physicalPool: 0,
 						resources: 8,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 9,
 						skills: ["Elf Skill Song->Hymn of Scales and Fins", "Any General->Pilot", "Any General->Boatwright", "Any General->Knots", "Any General->Mending", "Any General->Cooking", "Any General->Seamanship", "Any General->Rigging"],
@@ -1372,7 +1313,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Shepherd",
 						physicalPool: 0,
 						resources: 6,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 4,
 						skills: ["Elf Skill Song->Song of Flocks and Herds", "Any General->Climbing", "Any Wise->Wolf-wise"],
@@ -1390,7 +1330,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Wanderer",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 6,
 						skills: ["Elf Skill Song->Song of Paths and Ways", "Elf Spell Song->Air of Gates", "Any General->Foraging"],
@@ -1408,7 +1347,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Huntsman",
 						physicalPool: 1,
 						resources: 9,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 7,
 						skills: ["Elf Skill Song->Call of the Wild", "Any General->Javelin", "Any General->Bow", "Any General->Tracking", "Any General->Stealthy", "Any General->Observation"],
@@ -1427,7 +1365,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Chandler",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 5,
 						skills: ["Elf Spell Song->Chant of Offering", "Any General->Haggling", "Any General->Conspicuous", "Any General->Appraisal"],
@@ -1445,7 +1382,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Weaver",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 5,
 						skills: ["Elf Skill Song->Weaving Way", "Elf Skill Song->Threading Chant", "Any General->Mending"],
@@ -1464,7 +1400,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Forester",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 6,
 						skills: ["Elf Spell Song->Song of Arbors", "Any Wise->Forest-wise", "Any Wise->Tree-wise", "Elf Skill Song->Song of the Eldar"],
@@ -1483,7 +1418,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Vintner",
 						physicalPool: 0,
 						resources: 20,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 7,
 						skills: ["Elf Skill Song->Purple Song", "Any Wise->Vine-wise", "Any General->Cooper", "Any Wise->Vintage-wise", "Any Wise->Terroir-wise"],
@@ -1502,7 +1436,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Miller",
 						physicalPool: 0,
 						resources: 18,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 6,
 						skills: ["Elf Skill Song->Grain Song", "Any General->Mending", "Any General->Carpentry", "Any Wise->Mill-wise", "Any Wise->Grain-wise"],
@@ -1521,7 +1454,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Song Singer",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 6,
 						skills: ["Elf Spell Song->Song of Songs", "Elf Skill Song->Song of Soothing", "Elf Spell Song->Lament of the Westering Sun", "Any General->Oratory"],
@@ -1540,7 +1472,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Spouse",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 5,
 						skills: ["Elf Skill Song->Song of Soothing", "Elf Spell Song->Rhyme of Rules", "Elf Skill Song->Song of Feasting", "Any Wise->Fealty-wise"],
@@ -1563,7 +1494,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 6,
 						skills: ["Elf Spell Song->Homesong", "Elf Spell Song->Lyric of Healing", "Elf Skill Song->Dignity of the Wilderlands"],
@@ -1587,7 +1517,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "Wilderlands",
 						skillPool: 5,
 						skills: ["Elf Spell Song->Verse of Decision", "Elf Spell Song->Council-Caller"],
@@ -1614,7 +1543,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Citadel Born",
 						physicalPool: 0,
 						resources: 7,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 2,
 						skills: ["Elf Special->Elven Script", "Any General->Sing"],
@@ -1632,7 +1560,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Servitor",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 5,
 						skills: ["Any General->Hauling", "Any General->Observation", "Any Wise->Citadel-wise", "Any Wise->Althing-wise"],
@@ -1651,7 +1578,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Wanderer",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 6,
 						skills: ["Elf Skill Song->Song of Paths and Ways", "Elf Spell Song->Air of Gates", "Any General->Scavenging", "Any General->Streetwise"],
@@ -1670,7 +1596,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Song Singer",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 5,
 						skills: ["Any General->Sing", "Elf Spell Song->Song of Songs", "Elf Skill Song->Song of Soothing", "Elf Spell Song->Lament of Stars"],
@@ -1689,7 +1614,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Student",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 6,
 						skills: ["Elf Skill Song->Lyric of Law", "Elf Skill Song->Ballad of History", "Elf Special->Elven Script", "Any General->Etiquette", "Any General->Oratory"],
@@ -1708,7 +1632,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Clothier",
 						physicalPool: 0,
 						resources: 20,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 7,
 						skills: ["Elf Skill Song->Threading Chant", "Any General->Embroidery", "Elf Skill Song->Leathercraft", "Elf Skill Song->Weaving Way"],
@@ -1738,7 +1661,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 8,
 						skills: ["Elf Spell Song->Alarm", "Any General->Armor Training", "Any General->Shield Training", "Any General->Sword", "Any General->Bow", "Any General->Knives", "Any General->Fletcher", "Any General->Mending"],
@@ -1757,7 +1679,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Seafarer",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 9,
 						skills: ["Elf Spell Song->Weathersong", "Elf Skill Song->Rope Chant", "Elf Skill Song->Rhyme of the Mariner", "Any General->Pilot", "Any General->Seamanship", "Any General->Spear"],
@@ -1785,7 +1706,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 8,
 						skills: ["Elf Skill Song->Slip of Currents", "Elf Spell Song->Supplication to the Wind", "Any General->Command", "Any General->Oratory", "Any General->Sword"],
@@ -1803,7 +1723,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Novice",
 						physicalPool: 1,
 						resources: 10,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 4,
 						skills: ["Any General->Mending", "Any Wise->Craft-wise", "Any Wise->Elven Artifact-wise"],
@@ -1827,7 +1746,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 6,
 						skills: ["Elf Skill Song->Woodcraft", "Elf Skill Song->Stonecraft", "Elf Skill Song->Smithcraft"],
@@ -1851,7 +1769,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 5,
 						skills: ["Elf Skill Song->Jewelcraft", "Elf Skill Song->Gemcraft", "Any General->Appraisal"],
@@ -1875,7 +1792,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 40,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 6,
 						skills: ["Elf Skill Song->Archcraft", "Elf Skill Song->Starcraft", "Elf Spell Song->Canticle of Years", "Elf Skill Song->Antiphon Union Training"],
@@ -1898,7 +1814,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 6,
 						skills: ["Any General->Shipwright", "Any Wise->Ship-wise", "Any General->Carving"],
@@ -1917,7 +1832,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Artist",
 						physicalPool: 0,
 						resources: 12,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 5,
 						skills: ["Elf Skill Song->Song of Form", "Any General->Painting"],
@@ -1942,7 +1856,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 11,
 						skills: ["Elf Spell Song->Song of Merriment", "Elf Spell Song->Lament of Mourning", "Elf Spell Song->Verse of Friendship", "Elf Spell Song->Tract of Enmity", "Any General->Oratory", "Any General->Conspicuous", "Any General->Lyre", "Any General->Flute"],
@@ -1968,7 +1881,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 7,
 						skills: ["Elf Skill Song->Code of Citadels", "Any General->Etiquette", "Any General->Administration", "Any Wise->Etharch-wise", "Any Wise->Citadel-wise", "Any Wise->Protector-wise"],
@@ -1995,7 +1907,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 10,
 						skills: ["Any General->Ancient and Obscure History", "Any General->Research", "Elf Skill Song->Ballad of History", "Elf Skill Song->Lyric of Law", "Elf Spell Song->Canticle of Years", "Elf Spell Song->Rhyme of Tongues"],
@@ -2024,7 +1935,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 100,
-						selectable: true,
 						setting: "Citadel",
 						skillPool: 10,
 						skills: ["Elf Spell Song->Council-Caller", "Elf Spell Song->Song of Silence", "Any General->Persuasion", "Any General->Soothing Platitudes", "Any General->Ugly Truth", "Any General->Administration"],
@@ -2051,7 +1961,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born Etharch",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Etharch",
 						skillPool: 2,
 						skills: ["Elf Special->Elven Script", "Any General->Etiquette", "Any General->Sing"],
@@ -2070,7 +1979,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Student",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Etharch",
 						skillPool: 9,
 						skills: ["Elf Skill Song->Ages of the Etharch", "Elf Skill Song->Lyric of Law", "Elf Skill Song->Ballad of History", "Any General->Oratory", "Any General->Calligraphy", "Elf Skill Song->Song of the Eldar"],
@@ -2089,7 +1997,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Attendant",
 						physicalPool: 1,
 						resources: 15,
-						selectable: true,
 						setting: "Etharch",
 						skillPool: 4,
 						skills: ["Any General->Etiquette", "Any General->Riding", "Any General->Brawling", "Any General->Sword"],
@@ -2117,7 +2024,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Etharch",
 						skillPool: 8,
 						skills: ["Elf Spell Song->Song of Bonding", "Any General->Sword", "Any General->Knives", "Any General->Bow", "Any General->Mending", "Any General->Riding", "Any General->Mounted Combat Training"],
@@ -2143,7 +2049,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Etharch",
 						skillPool: 10,
 						skills: ["Elf Spell Song->Song of the Sword", "Any General->Sword", "Any General->Armor Training", "Any General->Shield Training", "Any General->Knives", "Any General->Brawling"],
@@ -2173,7 +2078,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Etharch",
 						skillPool: 8,
 						skills: ["Any General->Estate Management", "Any General->Accounting", "Any General->Etiquette", "Any Wise->Estate-wise", "Any Wise->Intrigue-wise"],
@@ -2200,7 +2104,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 100,
-						selectable: true,
 						setting: "Etharch",
 						skillPool: 6,
 						skills: ["Elf Skill Song->Song of Lordship", "Elf Spell Song->Voice of Ages"],
@@ -2228,7 +2131,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 200,
-						selectable: true,
 						setting: "Etharch",
 						skillPool: 8,
 						skills: ["Elf Spell Song->Council-Caller", "Elf Skill Song->Voice of Thunder", "Elf Spell Song->Doom Sayer", "Elf Spell Song->Discerner"],
@@ -2255,7 +2157,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Rider",
 						physicalPool: 1,
 						resources: 8,
-						selectable: true,
 						setting: "Protector",
 						skillPool: 6,
 						skills: ["Any General->Riding", "Any General->Animal Husbandry", "Elf Spell Song->Gift of Speed", "Elf Spell Song->Lay of the Horse"],
@@ -2274,7 +2175,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Herald",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Protector",
 						skillPool: 8,
 						skills: ["Elf Skill Song->Paean of Deeds", "Elf Spell Song->Mornsong", "Elf Spell Song->Evensong", "Elf Spell Song->Recitation of Ages", "Elf Special->Silver Trumpet"],
@@ -2293,7 +2193,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Soother",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Protector",
 						skillPool: 6,
 						skills: ["Elf Spell Song->Lyric of Healing", "Elf Skill Song->Song of Soothing", "Elf Spell Song->Doom of Strength", "Any General->Foraging"],
@@ -2319,7 +2218,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Protector",
 						skillPool: 10,
 						skills: ["Any General->Observation", "Any General->Stealthy", "Any General->Bow", "Any General->Foraging", "Elf Skill Song->Rhyme of the Pathfinder", "Elf Skill Song->Song of Soothing", "Elf Spell Song->Threne of the Chameleon", "Elf Spell Song->Lyric of Healing"],
@@ -2338,7 +2236,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Bowyer",
 						physicalPool: 1,
 						resources: 8,
-						selectable: true,
 						setting: "Protector",
 						skillPool: 5,
 						skills: ["Elf Skill Song->Bowcraft", "Any General->Mending", "Any General->Bow", "Any Wise->Bow-wise"],
@@ -2357,7 +2254,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Spearbearer",
 						physicalPool: 1,
 						resources: 8,
-						selectable: true,
 						setting: "Protector",
 						skillPool: 8,
 						skills: ["Elf Skill Song->Spearcraft", "Any General->Spear", "Any General->Armor Training", "Any General->Formation Fighting Training"],
@@ -2384,7 +2280,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Protector",
 						skillPool: 10,
 						skills: ["Any General->Sword", "Any General->Armor Training", "Any General->Shield Training", "Any General->Knives", "Any General->Brawling", "Elf Spell Song->Song of the Sword"],
@@ -2408,7 +2303,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Protector",
 						skillPool: 9,
 						skills: ["Any General->Bow", "Any General->Spear", "Any General->Observation", "Any Wise->Trails-wise", "Any General->Mounted Combat Training", "Any General->Animal Husbandry", "Any General->Mending", "Any General->Stealthy"],
@@ -2433,7 +2327,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 12,
-						selectable: true,
 						setting: "Protector",
 						skillPool: 10,
 						skills: ["Elf Spell Song->Song of Burning Bright", "Elf Spell Song->Lament for the Fallen", "Any General->Lance", "Any General->Mounted Combat Training", "Any General->Shield Training", "Any General->Armor Training"],
@@ -2461,7 +2354,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Protector",
 						skillPool: 7,
 						skills: ["Elf Skill Song->Paean of Deeds", "Any General->Command", "Any General->Sword", "Any General->Shield Training", "Any General->Formation Fighting Training"],
@@ -2490,7 +2382,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Protector",
 						skillPool: 9,
 						skills: ["Any General->Oratory", "Any General->Sword", "Any General->Command", "Any General->Tactics", "Any General->Formation Fighting Training", "Elf Spell Song->Monody of the March", "Elf Skill Song->Silent Fury", "Elf Spell Song->Hymn of Victory"],
@@ -2515,7 +2406,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Protector",
 						skillPool: 7,
 						skills: ["Any General->Armorer", "Any General->Etching", "Any General->Sewing", "Any General->Tanner", "Elf Skill Song->Antiphon Union Training"],
@@ -2542,7 +2432,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Protector",
 						skillPool: 5,
 						skills: ["Elf Skill Song->Riddle of Steel", "Any General->Etching", "Any Wise->Elven Blade-wise"],
@@ -2567,7 +2456,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 60,
-						selectable: true,
 						setting: "Protector",
 						skillPool: 10,
 						skills: ["Elf Spell Song->Strain of Far Sight", "Elf Spell Song->Anthem of Courage", "Elf Spell Song->Ballad of Rage", "Any General->Command", "Any General->Formation Fighting Training", "Any General->Administration", "Any General->Logistics", "Any General->Strategy"],
@@ -2593,7 +2481,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Griever",
 						physicalPool: 0,
 						resources: 0,
-						selectable: true,
 						setting: "Path of Spite",
 						skillPool: 3,
 						skills: ["Dark Elf Spell Song->Sorrow of Truth", "Any Wise->Dark Elf-wise"],
@@ -2616,7 +2503,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 3,
-						selectable: true,
 						setting: "Path of Spite",
 						skillPool: 6,
 						skills: ["Any General->Scavenging", "Any General->Brawling", "Any Wise->Forest-wise", "Any Wise->Wasteland-wise", "Any Wise->Animal-wise"],
@@ -2639,7 +2525,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 6,
-						selectable: true,
 						setting: "Path of Spite",
 						skillPool: 6,
 						skills: ["Any General->Lock Pick", "Any General->Stealthy", "Any General->Climbing", "Any General->Sleight of Hand", "Dark Elf Spell Song->Dirge of Night"],
@@ -2662,7 +2547,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 6,
-						selectable: true,
 						setting: "Path of Spite",
 						skillPool: 7,
 						skills: ["Any General->Intimidation", "Any General->Poisons", "Any General->Knives", "Dark Elf Spell Song->Keen of Terror"],
@@ -2685,7 +2569,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Path of Spite",
 						skillPool: 8,
 						skills: ["Any General->Hunting", "Any Wise->Elf-wise", "Any General->Tracking", "Any General->Trapper", "Any General->Observation", "Any General->Stealthy", "Any General->Throwing", "Any General->Javelin", "Dark Elf Spell Song->Supplication to Shadows"],
@@ -2708,7 +2591,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Path of Spite",
 						skillPool: 7,
 						skills: ["Any General->Sleight of Hand", "Any General->Disguise", "Any General->Inconspicuous", "Dark Elf Spell Song->Rhyme of the Unraveler"],
@@ -2731,7 +2613,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Path of Spite",
 						skillPool: 6,
 						skills: ["Any General->Falsehood", "Any General->Soothing Platitudes", "Any General->Persuasion", "Dark Elf Spell Song->Twisted Tongue"],
@@ -2756,7 +2637,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Path of Spite",
 						skillPool: 9,
 						skills: ["Any General->Seduction", "Any General->Etiquette", "Any General->Persuasion", "Any General->Soothing Platitudes", "Any Wise->Gossip-wise", "Dark Elf Spell Song->Fugue of Discord", "Dark Elf Skill Song->Litany of Fools"],
@@ -2782,7 +2662,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Path of Spite",
 						skillPool: 12,
 						skills: ["Any General->Philosophy", "Any General->Ugly Truth", "Any General->Obscure History", "Any General->Symbology", "Any General->Strategy", "Any Wise->Elf-wise", "Any Wise->Orc-wise", "Any Wise->Dwarf-wise", "Any Wise->Man-wise", "Dark Elf Spell Song->Paean to the Dark Fire"],
@@ -2806,7 +2685,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Path of Spite",
 						skillPool: 2,
 						skills: ["Any General->Ancient History", "Any Wise->Dwarf-wise", "Any Wise->Elven Politics-wise", "Dark Elf Spell Song->Cut of the Quickened Mind"],
@@ -2843,7 +2721,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "City Born",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 0,
 						stock: "Human",
@@ -2860,7 +2737,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Gifted Child",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 0,
 						stock: "Human",
@@ -2878,7 +2754,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Runner",
 						physicalPool: 1,
 						resources: 7,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 3,
 						skills: ["Any General->Streetwise", "Any General->Inconspicuous"],
@@ -2901,7 +2776,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 4,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Inconspicuous", "Any General->Falsehood", "Any General->Streetwise", "Any General->Stealthy"],
@@ -2920,7 +2794,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Beggar",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any Wise->City-wise", "Any Wise->City Guard-wise", "Any Wise->Wealth-wise", "Any General->Inconspicuous", "Any General->Persuasion", "Any General->Falsehood"],
@@ -2939,7 +2812,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Courier",
 						physicalPool: 0,
 						resources: 8,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 4,
 						skills: ["Any General->Riding", "Any General->Streetwise", "Any Wise->Countryside-wise"],
@@ -2957,7 +2829,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Laborer",
 						physicalPool: 1,
 						resources: 4,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 2,
 						skills: ["Any General->Ditch Digging", "Any General->Hauling"],
@@ -2976,7 +2847,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Pilgrim",
 						physicalPool: 0,
 						resources: 3,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 4,
 						skills: ["Any General->Religious Diatribe", "Any Wise->City-wise", "Any Wise->Shrine-wise", "Any General->Doctrine"],
@@ -2995,7 +2865,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Groom",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any Wise->Road-wise", "Any General->Driving", "Any General->Riding", "Any General->Animal Husbandry", "Any General->Mending", "Any Wise->City-wise", "Any Wise->Traveler-wise"],
@@ -3025,7 +2894,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 7,
 						skills: ["Any General->Sword", "Any General->Brawling", "Any General->Two-Fisted Fighting Training", "Any General->Streetwise", "Any General->Haggling", "Any General->Conspicuous", "Any Wise->Trial by Combat-wise"],
@@ -3044,7 +2912,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Coin Clipper",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Streetwise", "Any General->Forgery", "Any General->Falsehood", "Any General->Intimidation", "Any General->Counterfeiting", "Any Wise->Coin-wise"],
@@ -3063,7 +2930,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Pickpocket",
 						physicalPool: 1,
 						resources: 8,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Inconspicuous", "Any General->Streetwise", "Any General->Sleight of Hand", "Any Wise->Crowd-wise"],
@@ -3082,7 +2948,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Street Thug",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Brawling", "Any General->Intimidation", "Any General->Streetwise", "Any Wise->Darkened Streets-wise"],
@@ -3101,7 +2966,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Criminal",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any General->Inconspicuous", "Any General->Streetwise", "Any General->Intimidation", "Any General->Knives", "Any General->Climbing"],
@@ -3120,7 +2984,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Confidence Man",
 						physicalPool: 0,
 						resources: 12,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Falsehood", "Any General->Inconspicuous", "Any General->Disguise", "Any General->Persuasion", "Any Wise->Grift-wise"],
@@ -3138,7 +3001,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "City Peddler",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 7,
 						skills: ["Any General->Mending", "Any General->Sing", "Any General->Haggling", "Any General->Chandler", "Any General->Persuasion", "Any General->Inconspicuous", "Any General->Falsehood"],
@@ -3157,7 +3019,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Sailor",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Rigging", "Any General->Knots", "Any General->Brawling", "Any General->Mending", "Any General->Sing", "Any General->Gambling"],
@@ -3176,7 +3037,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Student",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 11,
 						skills: ["Any General->Write", "Any General->Read", "Any General->Philosophy", "Any General->Rule of Law", "Any General->History", "Any General->Symbology", "Any General->Anatomy", "Man Special->Astrology", "Any General->Inconspicuous", "Any General->Streetwise", "Any Wise->City-wise"],
@@ -3195,7 +3055,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Ganymede",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any Wise->Fashion-wise", "Any General->Inconspicuous", "Any General->Conspicuous", "Any General->Soothing Platitudes"],
@@ -3214,7 +3073,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Dilettante",
 						physicalPool: 0,
 						resources: 8,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 4,
 						skills: ["Any Wise->Sorcery-wise", "Any General->Obscure History", "Any General->Falsehood"],
@@ -3233,7 +3091,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Neophyte Sorcerer",
 						physicalPool: 0,
 						resources: 12,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any General->Write", "Any General->Read", "Any General->Research", "Any General->Symbology", "Any Wise->Great Masters-wise"],
@@ -3252,7 +3109,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Temple Acolyte",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Doctrine", "Any General->Bureaucracy", "Any General->Read", "Any General->Write", "Any Wise->Temple-wise"],
@@ -3271,7 +3127,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Sculptor",
 						physicalPool: 0,
 						resources: 8,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any General->Sculpture", "Any General->Mason", "Any General->Blacksmith", "Any General->Carpentry", "Any Wise->Stone-wise"],
@@ -3290,7 +3145,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Painter",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Painting", "Any General->Illuminations", "Any General->Anatomy", "Any Wise->Paint-wise"],
@@ -3309,7 +3163,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Composer",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Music Composition", "Any General->Poetry", "Any General->Sing", "Any General->Musical Instrument"],
@@ -3328,7 +3181,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Dramaturge",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Playwright", "Any General->Composition", "Any General->Write", "Any Wise->Drama-wise"],
@@ -3347,7 +3199,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Performer",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any General->Acting", "Any General->Persuasion", "Any General->Sing", "Any General->Falsehood", "Any General->Conspicuous", "Any General->Sleight of Hand", "Any General->Musical Instrument"],
@@ -3366,7 +3217,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Tinkerer",
 						physicalPool: 0,
 						resources: 8,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Mending", "Any General->Scavenging", "Any Wise->Junk-wise"],
@@ -3384,7 +3234,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Coal Man",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 4,
 						skills: ["Any General->Firebuilding", "Any General->Streetwise", "Any Wise->Charcoal-wise", "Any General->Haggling"],
@@ -3403,7 +3252,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Seamstress",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 4,
 						skills: ["Any General->Sewing", "Any General->Embroidery", "Any Wise->Clothing-wise", "Any Wise->Fashion-wise"],
@@ -3422,7 +3270,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Barkeep",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 4,
 						skills: ["Any Wise->Drink-wise", "Any Wise->Drunk-wise", "Any General->Persuasion"],
@@ -3441,7 +3288,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Shopkeeper",
 						physicalPool: 0,
 						resources: 16,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 4,
 						skills: ["Any Wise->Merchant-wise", "Any General->Haggling", "Any General->Accounting", "Any General->Observation"],
@@ -3459,7 +3305,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Baker",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Baking", "Any General->Cooking", "Any Wise->Daily Bread-wise", "Any Wise->Sweet Tooth-wise"],
@@ -3483,7 +3328,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 12,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Brewer", "Any General->Mending", "Any General->Drinking", "Any General->Administration", "Any Wise->Drunk Husband-wise"],
@@ -3502,7 +3346,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Conner",
 						physicalPool: 0,
 						resources: 12,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Brewer", "Any General->Mending", "Any General->Drinking", "Any General->Cooper", "Any Wise->Beer-wise"],
@@ -3521,7 +3364,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Clerk",
 						physicalPool: 0,
 						resources: 9,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 4,
 						skills: ["Any General->Bureaucracy", "Any General->Read", "Any General->Write", "Any General->Accounting", "Any Wise->Bribe-wise", "Any Wise->Paperwork-wise"],
@@ -3551,7 +3393,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Write", "Any General->Illuminations", "Any General->Read", "Any Wise->Handwriting-wise"],
@@ -3582,7 +3423,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 4,
 						skills: ["Any General->Accounting", "Any General->Bureaucracy", "Any General->Read", "Any General->Write", "Any Wise->Ledger-wise"],
@@ -3616,7 +3456,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 11,
 						skills: ["Any General->Read", "Any General->Research", "Any General->History", "Any General->Philosophy", "Any General->Symbology", "Any General->Instruction", "Any General->Illuminations", "Any General->Foreign Languages", "Any General->Ancient Languages"],
@@ -3635,7 +3474,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Moneylender",
 						physicalPool: 0,
 						resources: 20,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 4,
 						skills: ["Any Wise->Currency-wise", "Any General->Haggling", "Any General->Accounting"],
@@ -3659,7 +3497,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 18,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 4,
 						skills: ["Any General->Intimidation", "Any General->Accounting", "Any General->Haggling", "Any General->Interrogation"],
@@ -3683,7 +3520,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Intimidation", "Any General->Brawling", "Any General->Sing", "Any General->Conspicuous", "Any Wise->Laborer-wise"],
@@ -3713,7 +3549,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any General->Pilot", "Any Wise->Fat Merchant-wise", "Any General->Sword", "Any General->Climbing", "Any General->Intimidation"],
@@ -3732,7 +3567,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "City Guard",
 						physicalPool: 1,
 						resources: 9,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Brawling", "Any General->Intimidation", "Any General->Drinking", "Any General->Appropriate Weapons", "Any General->Armor Training"],
@@ -3766,7 +3600,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 11,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any General->Intimidation", "Any General->Appropriate Weapons", "Any General->Armor Training", "Any General->Field Dressing"],
@@ -3795,7 +3628,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any General->Etiquette", "Any General->Riding", "Any General->Intimidation", "Any General->Command", "Any General->Appropriate Weapons"],
@@ -3814,7 +3646,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Apprentice",
 						physicalPool: 1,
 						resources: 8,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any General->Mending", "Any General->Write", "Any General->Read", "Any General->Hauling", "Any General->Driving", "Any General->Ditch Digging"],
@@ -3833,7 +3664,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Apprentice Artisan",
 						physicalPool: 1,
 						resources: 10,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 8,
 						skills: ["Any Wise->Artisan-wise", "Any General->Mason", "Any General->Blacksmith", "Any General->Coppersmith", "Any General->Locksmith", "Any General->Weaponsmith", "Any General->Whitesmith", "Any General->Carpentry", "Any General->Read", "Any General->Write", "Any General->Jargon"],
@@ -3859,7 +3689,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 7,
 						skills: ["Any General->Haggling", "Any General->Appraisal", "Any General->Blacksmith", "Any General->Carpentry", "Any General->Tanner", "Any General->Potter", "Any General->Cooper"],
@@ -3885,7 +3714,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 4,
 						skills: ["Any General->Engraving", "Any General->Etching", "Any General->Jargon"],
@@ -3911,7 +3739,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any General->Saddlery", "Any General->Tanner", "Any General->Sewing", "Any General->Embroidery", "Any General->Mending", "Any Wise->Mount-wise"],
@@ -3936,7 +3763,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 7,
 						skills: ["Any Wise->Swordsman-wise", "Any General->Blacksmith", "Any General->Tanner", "Any General->Armorer", "Any General->Weaponsmith"],
@@ -3962,7 +3788,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Plumbing", "Any General->Engineering", "Any General->Coppersmith", "Any Wise->Waterworks-wise"],
@@ -3988,7 +3813,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 13,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 4,
 						skills: ["Any General->Locksmith", "Any General->Haggling", "Any Wise->Lock-wise"],
@@ -4014,7 +3838,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Jeweler", "Any General->Lapidary", "Any General->Appraisal", "Any General->Haggling", "Any General->Falsehood"],
@@ -4043,7 +3866,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 4,
 						skills: ["Any General->Administration", "Any General->Etiquette", "Any Wise->Gaol-wise", "Any Wise->Everybody's Innocent-wise"],
@@ -4070,7 +3892,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any General->Rule of Law", "Any General->Bureaucracy", "Any General->Persuasion", "Any General->History", "Any General->Rhetoric"],
@@ -4098,7 +3919,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any General->Anatomy", "Any General->Apothecary", "Any General->Bloodletting", "Any General->Surgery", "Any General->Soothing Platitudes"],
@@ -4127,7 +3947,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any General->Herbalism", "Any General->Apothecary", "Any General->Anatomy", "Any General->Research", "Any Wise->Herbalist-wise"],
@@ -4152,7 +3971,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Administration", "Any Wise->Beggar-wise", "Any Wise->Vagrant-wise", "Any Wise->Leper-wise"],
@@ -4182,7 +4000,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 60,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 4,
 						skills: ["Any General->Accounting", "Any General->Administration", "Any Wise->Currency-wise"],
@@ -4220,7 +4037,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any General->Accounting", "Any General->Haggling", "Any Wise->Supplier-wise", "Any Wise->Lord-wise", "Any Wise->Peasant-wise"],
@@ -4246,7 +4062,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 32,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Man Magical->Sorcery", "Man Magical->Enchanting", "Any General->Calligraphy"],
@@ -4272,7 +4087,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 8,
 						skills: ["Any Wise->Church Politics-wise", "Any General->Doctrine", "Any General->Oratory", "Any General->Suasion", "Any General->Symbology"],
@@ -4300,7 +4114,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Rule of Law", "Any General->Amercement", "Any Wise->Criminal-wise", "Any General->Interrogation"],
@@ -4338,7 +4151,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any General->Persuasion", "Any General->Rule of Law", "Any General->Administration", "Any General->Oratory", "Any Wise->Law-wise", "Any Wise->Minister-wise"],
@@ -4365,7 +4177,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 45,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 9,
 						skills: ["Any General->Jargon", "Any General->Mason", "Any General->Engineering", "Any General->Architect"],
@@ -4408,7 +4219,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 45,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any Wise->Craftsman-wise", "Any Wise->Artisan-wise", "Any Wise->Materials-wise", "Any Wise->Tools-wise"],
@@ -4437,7 +4247,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 60,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Etiquette", "Any General->Bureaucracy", "Any General->Ritual", "Any Wise->Church-wise", "Any Wise->City-wise"],
@@ -4463,7 +4272,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 75,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 6,
 						skills: ["Any General->Administration", "Any Wise->Merchant-wise", "Any Wise->Court-wise", "Any Wise->Commodities-wise", "Any Wise->Pirates-wise", "Any Wise->Bandit-wise"],
@@ -4486,7 +4294,6 @@ export const Stocks: bwgr.data.Stocks = {
 								"Players who take the Village Wife lifepath may also choose their husban's lifepath from the Villager setting. The Village Wife may choose from her husband's skills -she gets half of his skill points, rounded down- and she gets half of her husband's Resources."]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 2,
 						skills: ["Any General->Child-Rearing", "Any Wise->Husband-wise"],
@@ -4515,7 +4322,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 6,
-						selectable: true,
 						setting: "City Dweller",
 						skillPool: 5,
 						skills: ["Any General->Empyrealia", "Any General->Demonology", "Any General->Oratory", "Any Wise->Cultist-wise"],
@@ -4548,7 +4354,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 3,
-						selectable: true,
 						setting: "College of Magic",
 						skillPool: 2,
 						skills: ["Any General->Animal Husbandry", "Any General->Firebuilding"],
@@ -4582,7 +4387,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "College of Magic",
 						skillPool: 8,
 						skills: ["Any General->Read", "Any General->Write", "Any General->Ancient History", "Man Magical->Circination", "Any General->Illuminations", "Man Special->Astrology", "Any General->Symbology"],
@@ -4610,7 +4414,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "College of Magic",
 						skillPool: 8,
 						skills: ["Any General->Calligraphy", "Any General->Rhetoric", "Any General->Aura Reading", "Any General->Empyrealia", "Any General->Demonology", "Any General->Doctrine", "Any Wise->School of Magic-wise", "Any Wise->Junior Student-wise"],
@@ -4634,7 +4437,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "College of Magic",
 						skillPool: 7,
 						skills: ["Any General->Research", "Any General->Folklore", "Man Magical->Alchemy", "Any General->Taxidermy", "Any Wise->Library-wise"],
@@ -4659,7 +4461,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "College of Magic",
 						skillPool: 6,
 						skills: ["Man Magical->Sorcery", "Any General->Instruction", "Any Wise->Facet-wise", "Any Wise->Aura-wise"],
@@ -4684,7 +4485,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "College of Magic",
 						skillPool: 6,
 						skills: ["Man Magical->Enchanting", "Any General->Instruction", "Any General->Carving", "Any General->Etching", "Any General->Herbalism", "Any General->Jeweler", "Any Wise->Vessel-wise"],
@@ -4709,7 +4509,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "College of Magic",
 						skillPool: 8,
 						skills: ["Man Magical->Summoning", "Any General->Instruction", "Man Magical->Bargaining", "Any General->Ugly Truth", "Any General->Soothing Platitudes", "Any General->Rule of Law", "Any General->Philosophy", "Any Wise->Scheme-wise"],
@@ -4737,7 +4536,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "College of Magic",
 						skillPool: 12,
 						skills: ["Any General->Research", "Any General->Composition", "Any General->Cartography", "Any General->Cryptography", "Any General->Doctrine", "Any General->Apothecary", "Any General->Ritual", "Man Magical->Death Art", "Any General->Foreign Languages", "Any Wise->Dark Arts-wise", "Any Wise->Elven Songs-wise", "Any Wise->Orc Rituals-wise", "Any Wise->Dwarven Arts-wise"],
@@ -4763,7 +4561,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 45,
-						selectable: true,
 						setting: "College of Magic",
 						skillPool: 6,
 						skills: ["Any General->Administration", "Any General->Rhetoric", "Any General->Wine Tasting", "Any Wise->Troubled Student-wise"],
@@ -4787,7 +4584,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 50,
-						selectable: true,
 						setting: "College of Magic",
 						skillPool: 7,
 						skills: ["Any General->Oratory", "Any General->Etiquette", "Any General->Poetry", "Any General->Strategy Games", "Any General->Vintner", "Any Wise->Dark Secret-wise"],
@@ -4814,7 +4610,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Harem Slave",
 						physicalPool: 0,
 						resources: 3,
-						selectable: true,
 						setting: "Death Cult",
 						skillPool: 4,
 						skills: ["Any Wise->Creepy Priest-wise", "Any Wise->Disgusting Necromancer-wise", "Any Wise->Death Cult-wise", "Any Monstrous->Escape Artist"],
@@ -4833,7 +4628,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Death Cultist",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Death Cult",
 						skillPool: 3,
 						skills: ["Any Wise->Death-wise", "Any Wise->Riot-wise", "Any Wise->Secret Cult Worship-wise"],
@@ -4852,7 +4646,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Grave Robber",
 						physicalPool: 0,
 						resources: 7,
-						selectable: true,
 						setting: "Death Cult",
 						skillPool: 4,
 						skills: ["Any General->Ditch Digging", "Any Wise->Graveyard-wise", "Any Wise->Night Watch-wise", "Any Wise->Shovel-wise"],
@@ -4877,7 +4670,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Death Cult",
 						skillPool: 7,
 						skills: ["Any General->Inconspicuous", "Any General->Stealthy", "Any General->Falsehood", "Any General->Forgery", "Any General->Observation", "Any Wise->Righteous Priest-wise"],
@@ -4906,7 +4698,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Death Cult",
 						skillPool: 7,
 						skills: ["Any General->Haggling", "Any General->Persuasion", "Any General->Hauling", "Any General->Appraisal", "Any General->Taxidermy", "Any Wise->Local Law-wise"],
@@ -4933,7 +4724,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Death Cult",
 						skillPool: 5,
 						skills: ["Any General->Spear", "Any General->Knives", "Any General->Brawling", "Any Wise->Walking Corpse-wise"],
@@ -4958,7 +4748,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Death Cult",
 						skillPool: 6,
 						skills: ["Any General->Command", "Any General->Ritual", "Any Wise->God of Death-wise", "Any Wise->Death Cult-wise"],
@@ -4987,7 +4776,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Death Cult",
 						skillPool: 8,
 						skills: ["Man Magical->Death Art", "Any Wise->Tomb-wise", "Any Wise->Orc Servant-wise", "Any Wise->Evil Necromancer-wise", "Any Wise->Death Cult-wise"],
@@ -5014,7 +4802,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born Noble",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 0,
 						stock: "Human",
@@ -5037,7 +4824,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 4,
 						skills: ["Any Wise->Family Secret-wise", "Any General->Etiquette", "Any General->Extortion"],
@@ -5061,7 +4847,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 7,
 						skills: ["Any General->Riding", "Any General->Brawling", "Any General->Read", "Any General->Write", "Any General->Sword", "Any General->Etiquette"],
@@ -5079,7 +4864,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Student",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 8,
 						skills: ["Any General->Write", "Any General->Read", "Any General->Rule of Law", "Any General->Oratory", "Any General->Doctrine", "Any General->Etiquette"],
@@ -5104,7 +4888,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 9,
 						skills: ["Any General->Sword", "Any General->Mounted Combat Training", "Any General->Shield Training", "Any General->Armor Training", "Any General->Lance", "Any General->Knives", "Any General->Crossbow"],
@@ -5122,7 +4905,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Arcane Devotee",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 6,
 						skills: ["Any General->Calligraphy", "Any General->Read", "Any General->Write", "Any General->Research", "Any General->Symbology"],
@@ -5141,7 +4923,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Religious Acolyte",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 6,
 						skills: ["Any General->Doctrine", "Any General->Bureaucracy", "Any General->Read", "Any General->Write", "Any General->Etiquette"],
@@ -5166,7 +4947,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 11,
 						skills: ["Any General->Write", "Any General->Read", "Any General->Etiquette", "Man Special->Astrology", "Any General->Musical Instrument", "Any General->Composition", "Any General->Field Dressing", "Any General->Apothecary", "Any General->Doctrine"],
@@ -5191,7 +4971,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 10,
 						skills: ["Any General->Mounted Combat Training", "Any General->Shield Training", "Any General->Armor Training", "Any General->Appropriate Weapons", "Any General->Intimidation", "Any General->Hunting", "Any General->Conspicuous"],
@@ -5223,7 +5002,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 11,
 						skills: ["Any General->Etiquette", "Any General->Estate Management", "Any General->Persuasion", "Any General->Seduction", "Any General->Inconspicuous", "Any General->Doctrine", "Any Wise->Husband-wise", "Any Wise->Estate-wise", "Any Wise->Staff-wise", "Any Wise->Court-wise"],
@@ -5248,7 +5026,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 50,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 6,
 						skills: ["Any General->Hunting", "Any General->Dance", "Any General->Sing", "Any General->Falconry", "Any General->Estate Management"],
@@ -5274,7 +5051,6 @@ export const Stocks: bwgr.data.Stocks = {
 							TEXT: ["If City Wife is chosen, Magnate or Bishop must be the Husband's lifepath."]
 						},
 						resources: 40,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 3,
 						skills: ["Any General->Estate Management", "Any Wise->Noble-wise"],
@@ -5305,7 +5081,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 60,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 0,
 						stock: "Human",
@@ -5333,7 +5108,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 65,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 0,
 						stock: "Human",
@@ -5360,7 +5134,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 70,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 0,
 						stock: "Human",
@@ -5385,7 +5158,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 90,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 0,
 						stock: "Human",
@@ -5410,7 +5182,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 100,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 0,
 						stock: "Human",
@@ -5434,7 +5205,6 @@ export const Stocks: bwgr.data.Stocks = {
 							TEXT: ["Requires express permission from the GM and all players in the current game. Players may take the Prince of the Blood lifepath for any appropriate length of time, from 2 years to 20. Subject to GM approval, of course."]
 						},
 						resources: 60,
-						selectable: true,
 						setting: "Noble",
 						skillPool: 0,
 						stock: "Human",
@@ -5466,7 +5236,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 3,
 						skills: ["Any General->Obscure History", "Any General->Ugly Truth", "Any General->Intimidation"],
@@ -5485,7 +5254,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Minstrel",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 5,
 						skills: ["Any General->Poetry", "Any General->Sing", "Any General->Musical Instrument"],
@@ -5504,7 +5272,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Court Jester",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 7,
 						skills: ["Any General->Sing", "Any General->Sleight of Hand", "Any General->Climbing", "Any General->Conspicuous", "Any General->Throwing", "Any General->Ugly Truth"],
@@ -5532,7 +5299,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 5,
 						skills: ["Any General->Sculpture", "Any General->Painting", "Any General->Engraving", "Any General->Seduction", "Any Wise->Genius-wise"],
@@ -5551,7 +5317,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Servant",
 						physicalPool: 0,
 						resources: 7,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 4,
 						skills: ["Any General->Inconspicuous", "Any General->Etiquette", "Any Wise->Court Gossip-wise"],
@@ -5570,7 +5335,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Nurse",
 						physicalPool: 0,
 						resources: 7,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 5,
 						skills: ["Any General->Child-Rearing", "Any General->Etiquette", "Any Wise->Court Gossip-wise", "Any General->Field Dressing", "Any Wise->Child-wise"],
@@ -5589,7 +5353,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Groom",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 5,
 						skills: ["Any General->Animal Husbandry", "Any General->Riding", "Any General->Mending", "Any Wise->Border-wise", "Any Wise->Road-wise"],
@@ -5608,7 +5371,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Gardener",
 						physicalPool: 1,
 						resources: 10,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 7,
 						skills: ["Any Wise->Plant-wise", "Any Wise->Flower-wise", "Any Wise->Tree-wise", "Any Wise->Pest-wise", "Any General->Herbalism", "Any General->Farming", "Any General->Almanac"],
@@ -5627,7 +5389,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Torturer",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 5,
 						skills: ["Any General->Interrogation", "Any General->Torture", "Any General->Anatomy", "Any Wise->Torture Devices-wise"],
@@ -5646,7 +5407,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Forester",
 						physicalPool: 0,
 						resources: 9,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 8,
 						skills: ["Any General->Observation", "Any General->Orienteering", "Any General->Foraging", "Any General->Survival", "Any General->Tracking", "Any General->Trapper", "Any General->Cudgel", "Any General->Staff", "Any General->Bow", "Any Wise->Poacher-wise", "Any Wise->Park-wise"],
@@ -5664,7 +5424,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Student",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 9,
 						skills: ["Any General->Write", "Any General->Read", "Any General->Rule of Law", "Any General->Oratory", "Any General->Doctrine", "Any General->Etiquette"],
@@ -5689,7 +5448,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 6,
 						skills: ["Any General->Riding", "Any General->Brawling", "Any General->Read", "Any General->Write", "Any General->Sword"],
@@ -5716,7 +5474,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 12,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 8,
 						skills: ["Any General->Mounted Combat Training", "Any General->Shield Training", "Any General->Armor Training", "Any General->Brawling", "Any General->Intimidation", "Any General->Etiquette", "Any General->Appropriate Weapons"],
@@ -5734,7 +5491,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Falconer",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 4,
 						skills: ["Any General->Falconry", "Any General->Animal Husbandry", "Any General->Hunting"],
@@ -5753,7 +5509,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Huntsman",
 						physicalPool: 0,
 						resources: 12,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 8,
 						skills: ["Any General->Hunting", "Any General->Animal Husbandry", "Any Wise->Forest-wise", "Any General->Stealthy", "Any General->Cooking", "Any General->Tracking", "Any General->Orienteering", "Any General->Crossbow"],
@@ -5771,7 +5526,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Herald",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 4,
 						skills: ["Any General->Heraldry", "Any Wise->Noble-wise"],
@@ -5790,7 +5544,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Court Chef",
 						physicalPool: 0,
 						resources: 14,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 5,
 						skills: ["Any General->Cooking", "Any General->Sing", "Any General->Herbalism", "Any General->Falsehood"],
@@ -5820,7 +5573,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 14,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 9,
 						skills: ["Any General->Sword", "Any General->Shield Training", "Any General->Armor Training", "Any General->Lance", "Any General->Brawling", "Any General->Mounted Combat Training", "Any General->Etiquette"],
@@ -5845,7 +5597,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 10,
 						skills: ["Any General->Write", "Any General->Read", "Any General->Etiquette", "Any General->Poetry", "Man Special->Astrology", "Any General->Musical Instrument", "Any General->Composition", "Any General->Field Dressing", "Any General->Apothecary", "Any Wise->Court Gossip-wise"],
@@ -5870,7 +5621,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 11,
 						skills: ["Any General->Conspicuous", "Any General->Intimidation", "Any General->Falconry", "Any General->Mounted Combat Training", "Any General->Shield Training", "Any General->Armor Training", "Any General->Appropriate Weapons"],
@@ -5889,7 +5639,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Courtier",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 8,
 						skills: ["Any General->Etiquette", "Any General->Observation", "Any General->Persuasion", "Any General->Seduction", "Any General->Inconspicuous", "Any Wise->Court Gossip-wise", "Any Wise->Noble-wise"],
@@ -5918,7 +5667,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 12,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 7,
 						skills: ["Any Wise->Family-wise", "Any General->Administration", "Any General->Intimidation", "Any General->Etiquette", "Any General->Persuasion", "Any General->Ugly Truth"],
@@ -5944,7 +5692,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 18,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 8,
 						skills: ["Any General->Oratory", "Any General->Doctrine", "Any General->Riding", "Any General->Armor Training", "Any General->Mounted Combat Training", "Any General->Shield Training", "Any General->Appropriate Weapons"],
@@ -5969,7 +5716,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 32,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 7,
 						skills: ["Any General->Etiquette", "Any General->Falsehood", "Man Special->Astrology", "Man Magical->Alchemy", "Man Magical->Sorcery"],
@@ -5996,7 +5742,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 6,
 						skills: ["Any General->Etiquette", "Any General->Oratory", "Any General->Persuasion", "Any General->Rule of Law", "Any General->History"],
@@ -6025,7 +5770,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 7,
 						skills: ["Any General->Etiquette", "Any General->Apothecary", "Any General->Bloodletting", "Any General->Surgery", "Any General->Anatomy", "Man Special->Astrology", "Any General->Falsehood"],
@@ -6056,7 +5800,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 6,
 						skills: ["Any General->Composition", "Any General->History", "Any General->Etiquette", "Any General->Illuminations", "Any General->Obscure History"],
@@ -6082,7 +5825,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 9,
 						skills: ["Any General->Etching", "Any General->Armorer", "Any General->Blacksmith", "Any General->Tanner", "Any General->Sewing", "Any General->Weaponsmith"],
@@ -6108,7 +5850,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 6,
 						skills: ["Any General->Atilliator", "Any General->Carpentry", "Any General->Carving"],
@@ -6135,7 +5876,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 5,
 						skills: ["Any General->Etiquette", "Any General->History", "Any General->Symbology", "Any General->Doctrine", "Any General->Persuasion"],
@@ -6168,7 +5908,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 6,
 						skills: ["Any General->Estate Management", "Any General->Accounting", "Any General->Observation", "Any Wise->Manor-wise"],
@@ -6196,7 +5935,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 40,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 4,
 						skills: ["Any General->Horse Husbandry", "Any General->Appraisal", "Any Wise->Horse-wise"],
@@ -6225,7 +5963,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 7,
 						skills: ["Any General->Dog Husbandry", "Any Wise->Dog-wise", "Any General->Hunting", "Any General->Instruction", "Any General->Mimicry"],
@@ -6250,7 +5987,6 @@ export const Stocks: bwgr.data.Stocks = {
 							TEXT: ["Hostage gives resources points equal to half ot the character's previous lifepath."]
 						},
 						resources: "*",
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 4,
 						skills: ["Any General->Etiquette", "Any Wise->Court-wise", "Any General->Foreign Languages", "Any General->Foreign History"],
@@ -6276,7 +6012,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 7,
 						skills: ["Any General->Intimidation", "Any General->Interrogation", "Any General->Rule of Law", "Any Wise->Outlaw-wise", "Any Wise->Village-wise", "Any Wise->City-wise", "Any Wise->Tax-wise"],
@@ -6303,7 +6038,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 6,
 						skills: ["Any General->Rule of Law", "Any General->Amercement", "Any General->Interrogation", "Any Wise->Criminal-wise", "Any Wise->Circuit-wise"],
@@ -6335,7 +6069,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 5,
 						skills: ["Any General->Rule of Law", "Any General->Anatomy", "Any Wise->Writ-wise", "Any General->Observation"],
@@ -6363,7 +6096,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 50,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 5,
 						skills: ["Any General->Command", "Any General->Heraldry", "Any General->Logistics", "Any Wise->Kingdom-wise", "Any Wise->Obligation-wise", "Any Wise->Soldier-wise", "Any Wise->Cavalry-wise"],
@@ -6400,7 +6132,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 45,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 5,
 						skills: ["Any General->Accounting", "Any General->Estate Management", "Any Wise->Tax-wise", "Any Wise->Debt-wise"],
@@ -6438,7 +6169,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 5,
 						skills: ["Any General->Soothing Platitudes", "Any General->Persuasion", "Any General->Ugly Truth"],
@@ -6479,7 +6209,6 @@ export const Stocks: bwgr.data.Stocks = {
 							TEXT: ["This lifepath can be one to three years long, player chooses tenure. Character gains 1 general skill point and 10 resource points per year. The Stat and trait points are earned once."]
 						},
 						resources: "10/yr",
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 1,
 						stock: "Human",
@@ -6508,7 +6237,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 5,
 						skills: ["Any General->Etiquette", "Man Special->Astrology", "Man Magical->Alchemy", "Man Magical->Enchanting", "Any Wise->Excuses-wise"],
@@ -6538,7 +6266,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "Noble Court",
 						skillPool: 6,
 						skills: ["Any General->Etiquette", "Man Special->Astrology", "Man Magical->Summoning", "Man Magical->Circination", "Man Magical->Bargaining", "Any Wise->Inane Requst-wise", "Any Wise->Promise-wise"],
@@ -6571,7 +6298,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 3,
 						skills: ["Any General->Obscure History", "Any General->Ugly Truth", "Any General->Intimidation"],
@@ -6596,7 +6322,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 3,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 4,
 						skills: ["Any General->Inconspicuous", "Any General->Streetwise", "Any General->Sleight of Hand"],
@@ -6615,7 +6340,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Apostate",
 						physicalPool: 0,
 						resources: 6,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 4,
 						skills: ["Any General->Doctrine", "Any General->Heretical Doctrine", "Any General->Foreign Doctrine"],
@@ -6634,7 +6358,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Blackmailer",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 4,
 						skills: ["Any General->Extortion", "Any General->Forgery", "Any General->Ugly Truth", "Any General->Falsehood", "Any Wise->Bribe-wise"],
@@ -6653,7 +6376,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Kidnapper",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 5,
 						skills: ["Any General->Interrogation", "Any General->Torture", "Any General->Intimidation", "Any Wise->Ransom-wise"],
@@ -6672,7 +6394,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Pillager",
 						physicalPool: 0,
 						resources: 7,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 4,
 						skills: ["Any General->Scavenging", "Any General->Foraging", "Any Wise->Army-wise", "Any Wise->Battle-wise", "Any General->Haggling"],
@@ -6690,7 +6411,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Vagrant",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 4,
 						skills: ["Any Wise->Road-wise", "Any Wise->Hostel-wise", "Any Wise->Hospital-wise", "Any General->Inconspicuous"],
@@ -6708,7 +6428,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Cripple",
 						physicalPool: 0,
 						resources: 3,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 6,
 						skills: ["Any General->Begging", "Any General->Inconspicuous", "Any General->Conspicuous"],
@@ -6727,7 +6446,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Poacher",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 6,
 						skills: ["Any Wise->Royal Parks-wise", "Any General->Hunting", "Any General->Stealthy", "Any General->Tracking", "Any General->Orienteering"],
@@ -6745,7 +6463,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Deranged",
 						physicalPool: 0,
 						resources: 3,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 3,
 						skills: ["Any General->Inconspicuous", "Any Wise->Quack-wise"],
@@ -6764,7 +6481,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Outlaw",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 5,
 						skills: ["Any Wise->Authority-wise", "Any General->Inconspicuous", "Any General->Conspicuous"],
@@ -6794,7 +6510,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 6,
 						skills: ["Any General->Appraisal", "Any General->Haggling", "Any General->Inconspicuous", "Any General->Streetwise", "Any Wise->Guard-wise"],
@@ -6813,7 +6528,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Gravedigger",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 6,
 						skills: ["Any General->Ditch Digging", "Any General->Philosophy", "Any Wise->Grave-wise", "Any Wise->Cemetary-wise", "Any Wise->Bone-wise"],
@@ -6831,7 +6545,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Ratcatcher",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 4,
 						skills: ["Any General->Trapper", "Any General->Poisons", "Any General->Ratiquette"],
@@ -6850,7 +6563,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Beggar",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 5,
 						skills: ["Any General->Inconspicuous", "Any General->Conspicuous", "Any General->Streetwise", "Any General->Falsehood"],
@@ -6869,7 +6581,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Leper",
 						physicalPool: 0,
 						resources: 3,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 5,
 						skills: ["Any General->Inconspicuous", "Any Wise->Hospital-wise", "Any Wise->Priest-wise", "Any Wise->Pilgrim-wise"],
@@ -6888,7 +6599,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Prostitute",
 						physicalPool: 0,
 						resources: 6,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 3,
 						skills: ["Any General->Conspicuous", "Any General->Inconspicuous", "Any General->Persuasion", "Any General->Falsehood", "Any General->Haggling", "Any General->Soothing Platitudes"],
@@ -6919,7 +6629,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 12,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 5,
 						skills: ["Any General->Intimidation", "Any General->Haggling", "Any Wise->Prostitute-wise", "Any Wise->City-wise", "Any Wise->Guard-wise"],
@@ -6937,7 +6646,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Itinerant Performer",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 8,
 						skills: ["Any General->Cooking", "Any General->Sewing", "Any General->Acting", "Any General->Sleight of Hand", "Any General->Haggling", "Any General->Mending", "Any General->Disguise"],
@@ -6956,7 +6664,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Insurrectionist",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 4,
 						skills: ["Any General->Philosophy", "Any General->Rule of Law", "Any General->Doctrine", "Any General->Oratory", "Man Special->Arson"],
@@ -6975,7 +6682,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Cultist",
 						physicalPool: 0,
 						resources: 8,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 5,
 						skills: ["Any General->Cult Doctrine", "Any General->Inconspicuous", "Any General->Conspicuous", "Any General->Falsehood", "Any General->Persuasion"],
@@ -6994,7 +6700,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Poisoner",
 						physicalPool: 0,
 						resources: 8,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 5,
 						skills: ["Any General->Poisons", "Any General->Cooking", "Any General->Inconspicuous", "Any General->Disguise"],
@@ -7013,7 +6718,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Thug",
 						physicalPool: 0,
 						resources: 7,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 4,
 						skills: ["Any General->Streetwise", "Any Wise->Murder-wise", "Any Wise->Guard-wise", "Any General->Brawling"],
@@ -7032,7 +6736,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Desperate Killer",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 5,
 						skills: ["Any General->Appropriate Weapons", "Any General->Inconspicuous", "Any Wise->Assassination-wise"],
@@ -7051,7 +6754,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Bandit",
 						physicalPool: 1,
 						resources: 7,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 4,
 						skills: ["Any General->Appropriate Weapons", "Any General->Intimidation", "Any General->Stealthy", "Any Wise->Caravan-wise"],
@@ -7069,7 +6771,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Pirate",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 6,
 						skills: ["Any Wise->Pirate Cove-wise", "Any General->Rigging", "Any General->Knots", "Any General->Knives", "Any Wise->Sea-wise", "Any Wise->Map-wise"],
@@ -7088,7 +6789,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Smuggler",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 6,
 						skills: ["Any General->Persuasion", "Any General->Falsehood", "Any General->Appraisal", "Any Wise->Law-wise", "Any General->Forgery", "Any General->Stealthy", "Any General->Inconspicuous"],
@@ -7122,7 +6822,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 8,
 						skills: ["Any General->Intimidation", "Any General->Appropriate Weapons", "Any Wise->Countryside-wise", "Any Wise->Fortress-wise", "Any Wise->Mercenary Company-wise", "Any General->Foreign Languages", "Any Wise->War-wise", "Any Wise->Loot-wise", "Any Wise->Extortion-wise"],
@@ -7151,7 +6850,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 6,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 9,
 						skills: ["Any Wise->Forest-wise", "Any General->Orienteering", "Any General->Foraging", "Any General->Tracking", "Any General->Firebuilding", "Any General->Riding", "Any General->Stealthy", "Any General->Appropriate Weapons"],
@@ -7179,7 +6877,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 6,
 						skills: ["Man Magical->Summoning", "Man Magical->Enchanting", "Any General->Demonology", "Any General->Empyrealia"],
@@ -7207,7 +6904,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 24,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 8,
 						skills: ["Man Magical->Sorcery", "Any General->Inconspicuous", "Any Wise->Graveyard-wise", "Man Special->Astrology", "Any General->Bloodletting", "Any General->Ugly Truth", "Any Wise->Apocalypse-wise", "Man Magical->Enchanting", "Man Magical->Alchemy"],
@@ -7235,7 +6931,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 6,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 5,
 						skills: ["Any General->Folklore", "Any General->Herbalism", "Any General->Poisons", "Man Magical->Summoning", "Any Wise->Profanity-wise"],
@@ -7265,7 +6960,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 6,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 7,
 						skills: ["Any General->Heretical Doctrine", "Any General->Oratory", "Any Wise->Apostate-wise", "Any General->Demonology", "Any Wise->Summoner-wise", "Any Wise->Cultist-wise"],
@@ -7289,7 +6983,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 6,
 						skills: ["Any General->Philosophy", "Any General->Strategy", "Any General->Strategy Games", "Any General->Calligraphy", "Any General->History", "Any General->Painting"],
@@ -7317,7 +7010,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 6,
 						skills: ["Any Wise->Mad Invention-wise", "Any General->Mending", "Man Magical->Enchanting", "Any General->Blacksmith", "Any General->Whitesmith"],
@@ -7347,7 +7039,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Outcast",
 						skillPool: 4,
 						skills: ["Man Magical->Death Art", "Any General->Anatomy", "Any Wise->Graveyard-wise"],
@@ -7374,7 +7065,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born Peasant",
 						physicalPool: 0,
 						resources: 3,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 0,
 						stock: "Human",
@@ -7391,7 +7081,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Gifted Child",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 0,
 						stock: "Human",
@@ -7414,7 +7103,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 8,
 						skills: ["Any General->Farming", "Any General->Mending", "Any General->Animal Husbandry", "Any General->Weaving", "Any General->Cooking", "Any General->Sewing", "Any General->Firebuilding", "Any General->Sing"],
@@ -7440,7 +7128,6 @@ export const Stocks: bwgr.data.Stocks = {
 							TEXT: ["Otherwise requires a female lifepath."]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 8,
 						skills: ["Any General->Carpentry", "Any General->Hunting", "Any General->Haggling", "Any General->Almanac"],
@@ -7458,7 +7145,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Midwife",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 7,
 						skills: ["Any General->Animal Husbandry", "Any General->Herbalism", "Any General->Midwifery", "Any Wise->Omen-wise"],
@@ -7477,7 +7163,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Lazy Stayabout",
 						physicalPool: 0,
 						resources: 3,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 3,
 						skills: ["Any Wise->Lazy-wise", "Any Wise->Peasant-wise", "Any Wise->Wife-wise", "Any Wise->Work-wise"],
@@ -7496,7 +7181,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Conscript",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 2,
 						skills: ["Any General->Foraging", "Any Wise->Battle-wise", "Any Wise->Rumor-wise"],
@@ -7515,7 +7199,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Peasant Pilgrim",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 3,
 						skills: ["Any General->Doctrine", "Any Wise->Pilgrimage-wise", "Any Wise->Saint-wise"],
@@ -7534,7 +7217,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Miller",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 5,
 						skills: ["Any General->Miller", "Any General->Brewer", "Any General->Mending", "Any General->Carpentry"],
@@ -7553,7 +7235,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Fisherman",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 6,
 						skills: ["Any General->Fishing", "Any General->Rigging", "Any General->Knots", "Any General->Mending", "Any General->Cooking", "Any General->Boatwright"],
@@ -7572,7 +7253,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Shepherd",
 						physicalPool: 1,
 						resources: 4,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 5,
 						skills: ["Any General->Animal Husbandry", "Any General->Sing", "Any General->Climbing", "Any General->Flute"],
@@ -7591,7 +7271,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Woodcutter",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 5,
 						skills: ["Any General->Firebuilding", "Any General->Mending", "Any General->Foraging", "Any General->Orienteering", "Any Wise->Tree-wise", "Any General->Tree Cutting"],
@@ -7609,7 +7288,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Hunter",
 						physicalPool: 1,
 						resources: 6,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 7,
 						skills: ["Any General->Hunting", "Any General->Tracking", "Any General->Stealthy", "Any General->Cooking", "Any General->Orienteering", "Any General->Javelin or Any General->Bow"],
@@ -7627,7 +7305,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Trapper",
 						physicalPool: 1,
 						resources: 8,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 6,
 						skills: ["Any General->Trapper", "Any General->Stealthy", "Any General->Tracking", "Any General->Cooking", "Any General->Haggling", "Any General->Taxidermy"],
@@ -7646,7 +7323,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Peddler",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 7,
 						skills: ["Any General->Mending", "Any General->Sing", "Any General->Haggling", "Any General->Chandler", "Any General->Persuasion", "Any General->Inconspicuous", "Any General->Falsehood"],
@@ -7671,7 +7347,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 6,
 						skills: ["Any General->Observation", "Any General->Persuasion", "Any General->Ugly Truth", "Any Wise->Peasant-wise", "Any General->Local History"],
@@ -7697,7 +7372,6 @@ export const Stocks: bwgr.data.Stocks = {
 							TEXT: ["Otherwise must be female and no more than three lifepaths."]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 4,
 						skills: ["Man Special->Astrology", "Man Magical->Sorcery", "Any General->Falsehood", "Any General->Ugly Truth", "Any Wise->Omen-wise"],
@@ -7726,7 +7400,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 7,
 						skills: ["Any General->Oratory", "Any General->Suasion", "Any General->Chandler", "Any General->Riding", "Any General->Read", "Any General->Write", "Any General->Doctrine"],
@@ -7750,7 +7423,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 28,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 7,
 						skills: ["Man Special->Astrology", "Man Magical->Alchemy", "Man Magical->Enchanting", "Any General->Illuminations", "Any General->Ancient History", "Any General->Obscure History"],
@@ -7772,7 +7444,6 @@ export const Stocks: bwgr.data.Stocks = {
 							TEXT: ["A player who takes the Country Wife lifepath may also choose her husband's lifepath from the Peasant setting and may choose from his skills. She gets half of his skill points,rounded down. She also recieves half of her husband's resource points."]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 2,
 						skills: ["Any General->Child-Rearing", "Any General->Cooking"],
@@ -7800,7 +7471,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Peasant",
 						skillPool: 6,
 						skills: ["Man Magical->Spirit Binding", "Man Magical->Circination", "Any Wise->Paths-wise", "Any Wise->Spirit-wise", "Any Wise->Domain-wise"],
@@ -7833,7 +7503,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 3,
 						skills: ["Any General->Obscure History", "Any General->Ugly Truth", "Any General->Intimidation"],
@@ -7852,7 +7521,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Runner",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 4,
 						skills: ["Any General->Inconspicuous", "Any General->Stealthy", "Any General->Sing"],
@@ -7871,7 +7539,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Apprentice",
 						physicalPool: 1,
 						resources: 6,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 6,
 						skills: ["Any General->Mending", "Any General->Write", "Any General->Read", "Any General->Hauling", "Any General->Driving", "Any General->Ditch Digging"],
@@ -7890,7 +7557,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Musician",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 4,
 						skills: ["Any General->Musical Instrument", "Any General->Conspicuous", "Any General->Riding"],
@@ -7908,7 +7574,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Foot Soldier",
 						physicalPool: 1,
 						resources: 6,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 6,
 						skills: ["Any General->Soldiering", "Any General->Appropriate Weapons", "Any General->Shield Training", "Any General->Brawling", "Any General->Foraging", "Any General->Firebuilding"],
@@ -7926,7 +7591,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Archer",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 5,
 						skills: ["Any General->Bow", "Any General->Fletcher", "Any General->Brawling", "Any General->Foraging", "Any General->Firebuilding"],
@@ -7944,7 +7608,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Crossbowman",
 						physicalPool: 1,
 						resources: 7,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 5,
 						skills: ["Any General->Crossbow", "Any General->Fletcher", "Any General->Brawling", "Any General->Foraging", "Any General->Firebuilding"],
@@ -7962,7 +7625,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Sailor",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 6,
 						skills: ["Any General->Seamanship", "Any General->Rigging", "Any General->Knots", "Any General->Mending", "Any General->Navigation", "Any General->Knives", "Any General->Sword"],
@@ -7981,7 +7643,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Herald",
 						physicalPool: 0,
 						resources: 7,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 4,
 						skills: ["Any General->Oratory", "Any General->Conspicuous", "Any General->Riding", "Any General->Heraldry", "Any Wise->Bannerman-wise"],
@@ -7999,7 +7660,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Bannerman",
 						physicalPool: 1,
 						resources: 7,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 5,
 						skills: ["Any General->Conspicuous", "Any General->Riding", "Any General->Appropriate Weapons", "Any General->Armor Training"],
@@ -8018,7 +7678,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Scout",
 						physicalPool: 1,
 						resources: 4,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 5,
 						skills: ["Any General->Stealthy", "Any General->Foraging", "Any General->Orienteering", "Any General->Appropriate Weapons", "Any General->Observation"],
@@ -8045,7 +7704,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 6,
 						skills: ["Any General->Intimidation", "Any General->Command", "Any General->Field Dressing", "Any General->Appropriate Weapons"],
@@ -8073,7 +7731,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 5,
 						skills: ["Any Wise->Soldier-wise", "Any General->Soldiering", "Any General->Campaign History", "Any General->Tactics"],
@@ -8105,7 +7762,6 @@ export const Stocks: bwgr.data.Stocks = {
 							TEXT: ["a prior lifepath having to do with horses"]
 						},
 						resources: 9,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 10,
 						skills: ["Any General->Riding", "Any General->Mounted Combat Training", "Any General->Armor Training", "Any General->Shield Training", "Any General->Appropriate Weapons", "Any Wise->Horse-wise", "Any General->Haggling"],
@@ -8130,7 +7786,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 5,
 						skills: ["Any General->Blacksmith", "Any General->Appraisal", "Any General->Haggling", "Any Wise->Ridiculous Request-wise"],
@@ -8155,7 +7810,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 9,
 						skills: ["Any General->Mending", "Any General->Blacksmith", "Any General->Armorer", "Any General->Weaponsmith", "Any General->Etching", "Any General->Tanner"],
@@ -8180,7 +7834,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 22,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 6,
 						skills: ["Any General->Atilliator", "Any General->Carpentry", "Any General->Carving", "Any General->Blacksmith", "Any General->Tanner"],
@@ -8209,7 +7862,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 6,
 						skills: ["Any General->Oratory", "Any General->Riding", "Any General->Armor Training", "Any General->Mounted Combat Training", "Any General->Appropriate Weapons"],
@@ -8238,7 +7890,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 18,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 6,
 						skills: ["Any General->Artillerist", "Any General->Engineering", "Any General->Fortifications"],
@@ -8267,7 +7918,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 7,
 						skills: ["Man Magical->Sorcery", "Any General->Strategy Games", "Any Wise->Soldier-wise", "Any Wise->War-wise", "Any General->Haggling", "Any General->Cartography"],
@@ -8302,7 +7952,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 17,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 6,
 						skills: ["Any General->Administration", "Any General->Accounting", "Any General->Haggling", "Any General->Logistics"],
@@ -8330,7 +7979,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 35,
-						selectable: true,
 						setting: "Professional Soldier",
 						skillPool: 9,
 						skills: ["Any General->Command", "Any Wise->Contract-wise", "Any General->Haggling", "Any General->Oratory", "Any General->Appropriate Weapons", "Any General->Field Dressing", "Any General->Riding", "Any General->Strategy"],
@@ -8363,7 +8011,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 3,
 						skills: ["Any General->Obscure History", "Any General->Ugly Truth", "Any General->Intimidation"],
@@ -8382,7 +8029,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Castrati",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 7,
 						skills: ["Any General->Sing", "Any General->Persuasion", "Any General->Falsehood", "Any General->Etiquette", "Any General->Administration", "Any General->Rule of Law"],
@@ -8401,7 +8047,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Pardoner",
 						physicalPool: 0,
 						resources: 12,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 5,
 						skills: ["Any General->Persuasion", "Any General->Falsehood", "Any General->Intimidation", "Any General->Doctrine"],
@@ -8420,7 +8065,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Zealous Convert",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 4,
 						skills: ["Any General->Religious Diatribe", "Any General->Doctrine", "Any General->Rhetoric"],
@@ -8448,7 +8092,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 7,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 5,
 						skills: ["Any General->Doctrine", "Any General->Riding", "Any General->Armor Training", "Any General->Appropriate Weapons"],
@@ -8467,7 +8110,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Grave Digger",
 						physicalPool: 0,
 						resources: 6,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 4,
 						skills: ["Any General->Ditch Digging", "Any Wise->Grave-wise", "Any Wise->Cemetery-wise"],
@@ -8486,7 +8128,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Porter",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 4,
 						skills: ["Any Wise->Temple-wise", "Any Wise->Priest-wise", "Any Wise->Worshipper-wise", "Any Wise->Church Treasure-wise"],
@@ -8505,7 +8146,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Notary",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 4,
 						skills: ["Any General->Rule of Law", "Any General->Bureaucracy", "Any General->Church Law", "Any Wise->Bribe-wise"],
@@ -8539,7 +8179,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 7,
 						skills: ["Any Wise->Relic-wise", "Any General->Observation", "Any General->Obscure History", "Any General->Religious History", "Any General->Folklore", "Any Wise->Saint-wise"],
@@ -8571,7 +8210,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 7,
 						skills: ["Any General->Read", "Any General->Ancient Languages", "Any General->Instruction", "Any General->Write", "Any General->Doctrine", "Any General->Foreign Languages"],
@@ -8590,7 +8228,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Archivist",
 						physicalPool: 0,
 						resources: 8,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 5,
 						skills: ["Any General->Research", "Any Wise->Library-wise", "Any General->Ancient History", "Any General->Symbology"],
@@ -8609,7 +8246,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Itinerant Monk",
 						physicalPool: 0,
 						resources: 6,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 7,
 						skills: ["Any General->Doctrine", "Any General->Suasion", "Any General->Meditation", "Any General->Begging", "Any Wise->Alms-wise", "Any General->Streetwise", "Any Wise->Road-wise"],
@@ -8628,7 +8264,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Cloistered Nun",
 						physicalPool: 0,
 						resources: 12,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 6,
 						skills: ["Any General->Research", "Any General->History", "Any General->Meditation", "Any General->Vintner", "Any General->Symbology"],
@@ -8647,7 +8282,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Temple Acolyte",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 4,
 						skills: ["Any General->Write", "Any General->Read", "Any General->Doctrine", "Any Wise->Temple-wise"],
@@ -8673,7 +8307,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 18,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 7,
 						skills: ["Any General->Oratory", "Any General->Suasion", "Any General->Read", "Any General->Write", "Any General->Doctrine", "Any General->Ritual", "Any General->Symbology", "Any General->Religious History"],
@@ -8701,7 +8334,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 9,
 						skills: ["Any General->Doctrine", "Any General->Obscure History", "Any General->Observation", "Any General->Church Law", "Any General->Symbology", "Any General->Demonology", "Any General->Ancient Languages"],
@@ -8730,7 +8362,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 6,
 						skills: ["Any General->Doctrine", "Any General->Interrogation", "Any General->Torture", "Any Wise->Heresy-wise"],
@@ -8763,7 +8394,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 9,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 10,
 						skills: ["Any General->Doctrine", "Any General->Rhetoric", "Any General->Philosophy", "Any General->History", "Any General->Religious History", "Any General->Church Law", "Any General->Obscure History", "Any General->Read", "Any General->Write"],
@@ -8792,7 +8422,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 10,
 						skills: ["Any General->Oratory", "Any General->Suasion", "Any General->Read", "Any General->Write", "Any General->Doctrine", "Any General->History", "Any General->Religious History", "Any General->Ritual", "Any Wise->Church-wise", "Any Wise->Parish-wise", "Any Wise->Tithe-wise"],
@@ -8818,7 +8447,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 45,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 6,
 						skills: ["Any General->Rule of Law", "Any General->Church Law", "Any General->Administration", "Any General->Doctrine", "Any Wise->Church-wise"],
@@ -8845,7 +8473,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 45,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 6,
 						skills: ["Any General->Administration", "Any General->Accounting", "Any General->Vintner", "Any General->Wine Tasting", "Any Wise->Royal Secret-wise", "Any Wise->Abbey-wise"],
@@ -8875,7 +8502,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 45,
-						selectable: true,
 						setting: "Religious",
 						skillPool: 7,
 						skills: ["Any General->Religious History", "Any General->Intimidation", "Any General->Ritual", "Any General->Symbology", "Any General->History", "Any General->Obscure History"],
@@ -8902,7 +8528,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Son of a Gun",
 						physicalPool: 0,
 						resources: 3,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 0,
 						stock: "Human",
@@ -8920,7 +8545,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Gifted Child",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 0,
 						stock: "Human",
@@ -8944,7 +8568,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 4,
 						skills: ["Any Wise->Sailor-wise", "Any Wise->Ship-wise"],
@@ -8963,7 +8586,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Galley Slave",
 						physicalPool: 0,
 						resources: 3,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 3,
 						skills: ["Any Wise->Slave Deck-wise", "Any Wise->Taskmaster-wise", "Any General->Sing", "Any General->Seamanship", "Any General->Knots"],
@@ -8982,7 +8604,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Ratcatcher",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 5,
 						skills: ["Any General->Trapper", "Any General->Poisons", "Any General->Ratiquette"],
@@ -9001,7 +8622,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Landsman",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 3,
 						skills: ["Any General->Seamanship", "Any General->Knots", "Any General->Brawling", "Any Wise->Rope-wise"],
@@ -9020,7 +8640,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Drummer",
 						physicalPool: 0,
 						resources: 6,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 3,
 						skills: ["Any General->Drum", "Any General->Sing", "Any General->Drum Maker"],
@@ -9039,7 +8658,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Sailor",
 						physicalPool: 1,
 						resources: 7,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 6,
 						skills: ["Any General->Seamanship", "Any General->Rigging", "Any General->Knots", "Any General->Brawling", "Any General->Sing", "Any Wise->Sea-wise", "Any General->Gambling"],
@@ -9072,7 +8690,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 3,
 						skills: ["Any General->Ugly Truth", "Any General->Intimidation", "Any Wise->Omen-wise"],
@@ -9105,7 +8722,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 9,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 4,
 						skills: ["Any General->Accounting", "Any Wise->Crew-wise", "Any Wise->Supply-wise", "Any Wise->Ship-wise"],
@@ -9124,7 +8740,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Signalman",
 						physicalPool: 0,
 						resources: 8,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 5,
 						skills: ["Any General->Signaling", "Any General->Observation", "Any General->Cryptography"],
@@ -9154,7 +8769,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 5,
 						skills: ["Any General->Pilot", "Any Wise->Ship-wise", "Any General->Observation", "Any Wise->Shoal-wise"],
@@ -9184,7 +8798,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 4,
 						skills: ["Any General->Appropriate Weapons", "Any General->Knots", "Any General->Intimidation"],
@@ -9214,7 +8827,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 3,
 						skills: ["Any General->Intimidation", "Any General->Brawling", "Any Wise->Sailor-wise"],
@@ -9243,7 +8855,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 9,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 5,
 						skills: ["Any General->Sewing", "Any General->Weaving", "Any General->Mending", "Any Wise->Sail-wise"],
@@ -9272,7 +8883,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 8,
 						skills: ["Any General->Apothecary", "Any General->Bloodletting", "Any General->Surgery", "Any General->Anatomy", "Man Special->Astrology", "Any General->Falsehood", "Any Wise->Tar-wise", "Any Wise->Scurvy-wise"],
@@ -9300,7 +8910,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 6,
 						skills: ["Any General->Cooking", "Any General->Firebuilding", "Any General->Sing", "Any General->Falsehood", "Any Wise->Mystery Meat-wise"],
@@ -9329,7 +8938,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 4,
 						skills: ["Any General->Oratory", "Any General->Doctrine", "Any Wise->Ship-wise"],
@@ -9357,7 +8965,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 6,
 						skills: ["Any Wise->Sea-wise", "Man Magical->Summoning", "Any Wise->Superstition-wise", "Any General->Navigation", "Man Special->Astrology"],
@@ -9390,7 +8997,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 6,
 						skills: ["Any General->Navigation", "Any Wise->Sea-wise", "Any General->Cartography", "Man Special->Astrology", "Any Wise->Current-wise"],
@@ -9408,7 +9014,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Carpenter's Mate",
 						physicalPool: 1,
 						resources: 8,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 3,
 						skills: ["Any General->Mending", "Any General->Gambling", "Any Wise->Wood-wise"],
@@ -9436,7 +9041,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 16,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 5,
 						skills: ["Any General->Carpentry", "Any General->Shipwright", "Any General->Boatwright", "Any Wise->Ship-wise"],
@@ -9455,7 +9059,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Artillerist's Mate",
 						physicalPool: 0,
 						resources: 8,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 4,
 						skills: ["Any General->Mending", "Any General->Carpentry", "Any General->Artillerist"],
@@ -9488,7 +9091,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 6,
 						skills: ["Any General->Engineering", "Man Special->Munitions", "Any General->Artillerist", "Any General->Carpentry", "Any General->Mending"],
@@ -9518,7 +9120,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 4,
 						skills: ["Any General->Etiquette", "Any Wise->Captain-wise", "Any General->Seamanship"],
@@ -9547,7 +9148,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 5,
 						skills: ["Any General->Accounting", "Any General->Ship Management", "Any General->Haggling", "Any Wise->Merchant-wise", "Any General->Appraisal"],
@@ -9575,7 +9175,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 18,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 6,
 						skills: ["Any General->Intimidation", "Any General->Command", "Any General->Conspicuous", "Any Wise->Seaman-wise", "Any General->Sword"],
@@ -9602,7 +9201,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "Seafaring",
 						skillPool: 6,
 						skills: ["Any General->Command", "Any General->Oratory", "Any Wise->Ship-wise", "Any Wise->Sea-wise"],
@@ -9629,7 +9227,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born Slave",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Servitude",
 						skillPool: 1,
 						skills: ["Any Wise->Slavery-wise"],
@@ -9648,7 +9245,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Gifted Child",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "Servitude",
 						skillPool: 0,
 						stock: "Human",
@@ -9666,7 +9262,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Ditch Digger",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "Servitude",
 						skillPool: 3,
 						skills: ["Any General->Ditch Digging", "Any General->Sing", "Any Wise->Boss-wise"],
@@ -9685,7 +9280,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Servant",
 						physicalPool: 0,
 						resources: 6,
-						selectable: true,
 						setting: "Servitude",
 						skillPool: 2,
 						skills: ["Any General->Soothing Platitudes", "Any Wise->Gossip-wise"],
@@ -9704,7 +9298,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Field Laborer",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Servitude",
 						skillPool: 7,
 						skills: ["Any General->Farming", "Any General->Mending", "Any General->Sing", "Any General->Hauling", "Any General->Driving", "Any Wise->Fall Grass-wise"],
@@ -9723,7 +9316,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Captive of War",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "Servitude",
 						skillPool: 2,
 						skills: ["Any Wise->Cell-wise", "Any Wise->Chain-wise"],
@@ -9742,7 +9334,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Gaol",
 						physicalPool: 0,
 						resources: 3,
-						selectable: true,
 						setting: "Servitude",
 						skillPool: 3,
 						skills: ["Any Wise->Gaol-wise", "Any General->Ratiquette"],
@@ -9761,7 +9352,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Harem Slave",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "Servitude",
 						skillPool: 3,
 						skills: ["Any General->Falsehood", "Any General->Seduction"],
@@ -9780,7 +9370,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Bondsman",
 						physicalPool: 0,
 						resources: 7,
-						selectable: true,
 						setting: "Servitude",
 						skillPool: "*",
 						stock: "Human",
@@ -9806,7 +9395,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Village Born",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 0,
 						stock: "Human",
@@ -9823,7 +9411,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Gifted Child",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 0,
 						stock: "Human",
@@ -9847,7 +9434,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 3,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 3,
 						skills: ["Any Wise->Trouble-wise", "Any General->Throwing", "Any General->Inconspicuous"],
@@ -9866,7 +9452,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Idiot",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 4,
 						skills: ["Any General->Inconspicuous", "Any General->Conspicuous", "Any General->Ugly Truth", "Any Wise->Village Secrets-wise"],
@@ -9885,7 +9470,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Pilgrim",
 						physicalPool: 0,
 						resources: 4,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 5,
 						skills: ["Any Wise->Religious Rumor-wise", "Any Wise->Road-wise", "Any Wise->Shrine-wise", "Any Wise->Alms-wise", "Any Wise->Relic-wise", "Any General->Doctrine"],
@@ -9904,7 +9488,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Conscript",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 2,
 						skills: ["Any General->Foraging", "Any Wise->Baggage Train-wise"],
@@ -9923,7 +9506,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Groom",
 						physicalPool: 0,
 						resources: 7,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 4,
 						skills: ["Any General->Animal Husbandry", "Any General->Riding", "Any General->Mending", "Any Wise->Horse-wise", "Any Wise->Road-wise"],
@@ -9941,7 +9523,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Runner",
 						physicalPool: 1,
 						resources: 6,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 3,
 						skills: ["Any General->Streetwise", "Any General->Inconspicuous", "Any Wise->Shortcut-wise"],
@@ -9960,7 +9541,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Village Peddler",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 7,
 						skills: ["Any General->Mending", "Any General->Sing", "Any General->Haggling", "Any General->Chandler", "Any General->Persuasion", "Any General->Inconspicuous", "Any General->Falsehood"],
@@ -9979,7 +9559,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Shopkeeper",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 5,
 						skills: ["Any General->Haggling", "Any General->Accounting", "Any General->Observation", "Any Wise->Merchant-wise"],
@@ -9997,7 +9576,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Clerk",
 						physicalPool: 0,
 						resources: 9,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 4,
 						skills: ["Any General->Bureaucracy", "Any General->Write", "Any General->Read", "Any Wise->Contract-wise"],
@@ -10016,7 +9594,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Sailor",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 6,
 						skills: ["Any General->Rigging", "Any General->Knots", "Any General->Brawling", "Any General->Mending", "Any General->Sing", "Any General->Fishing"],
@@ -10035,7 +9612,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Laborer",
 						physicalPool: 1,
 						resources: 4,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 2,
 						skills: ["Any General->Ditch Digging", "Any Wise->Latrine-wise"],
@@ -10066,7 +9642,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 7,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 2,
 						skills: ["Any General->Mining", "Any Wise->Cave-In-wise"],
@@ -10091,7 +9666,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 5,
 						skills: ["Any General->Intimidation", "Any General->Brawling", "Any General->Sing", "Any General->Conspicuous", "Any Wise->Lazy Bastard-wise"],
@@ -10110,7 +9684,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Serving Wench",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 4,
 						skills: ["Any General->Soothing Platitudes", "Any General->Ugly Truth", "Any Wise->Customer-wise", "Any General->Sleight of Hand"],
@@ -10130,7 +9703,6 @@ export const Stocks: bwgr.data.Stocks = {
 						physicalPool: 0,
 						requirements: { LIMIT: ["NOT->LP*2"] },
 						resources: 15,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 5,
 						skills: ["Any General->Cooking", "Any General->Mending", "Any General->Accounting", "Any General->Soothing Platitudes", "Any Wise->Guest-wise"],
@@ -10149,7 +9721,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Village Guard",
 						physicalPool: 1,
 						resources: 7,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 4,
 						skills: ["Any General->Appropriate Weapons", "Any General->Intimidation", "Any General->Brawling", "Any Wise->Graft-wise", "Any Wise->Village-wise", "Any Wise->Guard-wise"],
@@ -10178,7 +9749,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 9,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 6,
 						skills: ["Any General->Command", "Any General->Intimidation", "Any General->Field Dressing", "Any General->Appropriate Weapons", "Any General->Shield Training", "Any General->Armor Training", "Any Wise->Bribe-wise", "Any Wise->Wealthy-wise"],
@@ -10207,7 +9777,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 12,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 6,
 						skills: ["Any General->Intimidation", "Any General->Appropriate Weapons", "Any General->Shield Training", "Any General->Armor Training", "Any Wise->Bribe-wise", "Any Wise->Wealthy-wise", "Any Wise->Criminal-wise"],
@@ -10226,7 +9795,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Tailor",
 						physicalPool: 0,
 						resources: 12,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 5,
 						skills: ["Any General->Sewing", "Any General->Embroidery", "Any Wise->Clothing-wise"],
@@ -10251,7 +9819,6 @@ export const Stocks: bwgr.data.Stocks = {
 								]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 4,
 						skills: ["Any General->Intimidation", "Any General->Accounting", "Any General->Haggling", "Any General->Persuasion"],
@@ -10277,7 +9844,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 4,
 						skills: ["Any General->Cobbler", "Any Wise->Shoe-wise", "Any Wise->Feet-wise", "Any Wise->Leather-wise", "Any Wise->Nail-wise"],
@@ -10303,7 +9869,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 12,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 4,
 						skills: ["Any General->Blacksmith", "Any General->Animal Husbandry", "Any Wise->Horse-wise", "Any General->Haggling"],
@@ -10322,7 +9887,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Butcher",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 4,
 						skills: ["Any General->Butchery", "Any General->Cooking", "Any Wise->Guts-wise", "Any General->Anatomy"],
@@ -10341,7 +9905,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Barber",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 5,
 						skills: ["Any General->Bloodletting", "Any General->Anatomy", "Any General->Apothecary", "Any Wise->Village-wise", "Any Wise->Gossip-wise"],
@@ -10360,7 +9923,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Brewer",
 						physicalPool: 0,
 						resources: 15,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 4,
 						skills: ["Any General->Brewer", "Any General->Miller", "Any Wise->Grain-wise", "Any Wise->Brew-wise"],
@@ -10379,7 +9941,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Acolyte",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 6,
 						skills: ["Any General->Doctrine", "Any General->Bureaucracy", "Any General->Read", "Any General->Write", "Any General->Ritual", "Any General->Religious History", "Any Wise->Temple-wise"],
@@ -10398,7 +9959,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Failed Acolyte",
 						physicalPool: 0,
 						resources: 8,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 4,
 						skills: ["Any Wise->Temple-wise", "Any Wise->Dirty Secrets-wise", "Any General->Doctrine", "Any General->Religious History"],
@@ -10423,7 +9983,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 5,
 						skills: ["Any General->Oratory", "Any General->Suasion", "Any General->Symbology"],
@@ -10455,7 +10014,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 6,
 						skills: ["Any General->Persuasion", "Any General->Soothing Platitudes", "Any General->Falsehood"],
@@ -10474,7 +10032,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Apprentice",
 						physicalPool: 1,
 						resources: 7,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 6,
 						skills: ["Any General->Mending", "Any General->Blacksmith", "Any General->Carpentry", "Any General->Tanner", "Any General->Potter", "Any General->Cooper"],
@@ -10500,7 +10057,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 5,
 						skills: ["Any General->Haggling", "Any General->Appraisal", "Any General->Read", "Any General->Write"],
@@ -10526,7 +10082,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 6,
 						skills: ["Any General->Cloth Dyeing", "Any General->Dye Manufacture", "Any General->Accounting", "Any General->Haggling", "Any Wise->Fabric-wise", "Any Wise->Mineral-wise"],
@@ -10555,7 +10110,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 4,
 						skills: ["Any General->Bowyer", "Any General->Fletcher", "Any General->Mending", "Any General->Bow", "Any Wise->Bow-wise"],
@@ -10580,7 +10134,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 6,
 						skills: ["Any Wise->Craftsman-wise", "Any Wise->Artisan-wise", "Any Wise->Materials-wise", "Any Wise->Tools-wise"],
@@ -10605,7 +10158,6 @@ export const Stocks: bwgr.data.Stocks = {
 								]
 						},
 						resources: 40,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 4,
 						skills: ["Any General->Vintner", "Any General->Wine Tasting", "Any General->Estate Management", "Any Wise->Grape-wise"],
@@ -10624,7 +10176,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Apiarist",
 						physicalPool: 0,
 						resources: 20,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 4,
 						skills: ["Any General->Insect Husbandry", "Any General->Carpentry", "Any General->Firebuilding", "Any Wise->Honey-wise"],
@@ -10657,7 +10208,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 5,
 						skills: ["Any General->Prospecting", "Any General->Engineering", "Any Wise->Ore-wise", "Any Wise->Rock-wise", "Any General->Command"],
@@ -10687,7 +10237,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 8,
 						skills: ["Any General->Rule of Law", "Any General->Persuasion", "Any General->Etiquette", "Any General->Interrogation", "Any General->Falsehood", "Any Wise->Town-wise"],
@@ -10717,7 +10266,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 6,
 						skills: ["Any General->Accounting", "Any General->Persuasion", "Any General->Falsehood", "Any Wise->Wholesale-wise", "Any Wise->Landlord-wise"],
@@ -10739,7 +10287,6 @@ export const Stocks: bwgr.data.Stocks = {
 							TEXT: ["Players who take the Village Wife lifepath may also choose their husban's lifepath from the Villager setting. The Village Wife may choose from her husband's skills -she gets half of his skill points, rounded down- and she gets half of her husband's Resources."]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 2,
 						skills: ["Any General->Child-Rearing", "Any General->Cooking"],
@@ -10757,7 +10304,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Wizard's Apprentice",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 6,
 						skills: ["Any General->Read", "Any General->Foraging", "Any General->Symbology", "Man Magical->Circination", "Any Wise->Pig-wise", "Any Wise->Bone Headed-wise"],
@@ -10786,12 +10332,11 @@ export const Stocks: bwgr.data.Stocks = {
 								"Man->Religious->Apt Pupil",
 								"Man->College of Magic->Junior Student"
 							],
-							NOTAND:[
+							NOTAND: [
 								"Trait->Man Lifepath->Mark of Privilege"
 							]
 						},
 						resources: 24,
-						selectable: true,
 						setting: "Villager",
 						skillPool: 7,
 						skills: ["Man Magical->Sorcery", "Man Magical->Enchanting", "Man Magical->Alchemy", "Any General->Obscure History", "Any Wise->Pest-wise", "Any Wise->Fool-wise"],
@@ -10828,12 +10373,11 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Goblin",
 						physicalPool: 1,
 						requirements: {
-							NOTAND:[
+							NOTAND: [
 								"Orc->Great and Black->Born Great"
 							]
 						},
 						resources: 2,
-						selectable: true,
 						setting: "Black Legion",
 						skillPool: 2,
 						skills: ["Any General->Foraging", "Any General->Brawling"],
@@ -10852,12 +10396,11 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Sun Blotter",
 						physicalPool: 1,
 						requirements: {
-							NOTAND:[
+							NOTAND: [
 								"Orc->Great and Black->Born Great"
 							]
 						},
 						resources: 3,
-						selectable: true,
 						setting: "Black Legion",
 						skillPool: 2,
 						skills: ["Any General->Bow", "Any General->Mending", "Any General->Fletcher"],
@@ -10876,12 +10419,11 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Nightseeker",
 						physicalPool: 1,
 						requirements: {
-							NOTAND:[
+							NOTAND: [
 								"Orc->Great and Black->Born Great"
 							]
 						},
 						resources: 4,
-						selectable: true,
 						setting: "Black Legion",
 						skillPool: 5,
 						skills: ["Any General->Orienteering", "Any General->Tracking", "Any General->Trapper", "Any General->Stealthy", "Any General->Climbing"],
@@ -10900,12 +10442,11 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Legioner",
 						physicalPool: 1,
 						requirements: {
-							NOTAND:[
+							NOTAND: [
 								"Orc->Great and Black->Born Great"
 							]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "Black Legion",
 						skillPool: 4,
 						skills: ["Any General->Spear", "Any General->Shield Training", "Any General->Brawling", "Any General->Foraging"],
@@ -10930,7 +10471,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Black Legion",
 						skillPool: 3,
 						skills: ["Any General->Conspicuous", "Any Wise->Black Legion-wise"],
@@ -10956,7 +10496,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Black Legion",
 						skillPool: 3,
 						skills: ["Orc Special->Brazen Horn of Despair", "Any General->Intimidation", "Any General->Brawling"],
@@ -10982,7 +10521,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "Black Legion",
 						skillPool: 5,
 						skills: ["Any General->Bow", "Any General->Hunting", "Any General->Field Dressing", "Any General->Stealthy"],
@@ -11007,7 +10545,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 6,
-						selectable: true,
 						setting: "Black Legion",
 						skillPool: 9,
 						skills: ["Any General->Mounted Combat Training", "Any General->Riding", "Any General->Great Wolf Husbandry", "Any General->Intimidation", "Any General->Spear", "Any General->Armor Training"],
@@ -11034,7 +10571,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 9,
-						selectable: true,
 						setting: "Black Legion",
 						skillPool: 6,
 						skills: ["Any Wise->Whip-wise", "Any General->Intimidation", "Any General->Torture", "Any General->Command", "Any General->Sword", "Any General->Brawling"],
@@ -11062,7 +10598,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Black Legion",
 						skillPool: 5,
 						skills: ["Any General->Great Wolf Husbandry", "Any General->Great Wolf Husbandry", "Any Wise->Landlord-wise", "Any General->Mending"],
@@ -11088,7 +10623,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Black Legion",
 						skillPool: 5,
 						skills: ["Any General->Command", "Orc Special->Brutal Intimidation", "Any General->Axe", "Any General->Brawling"],
@@ -11114,7 +10648,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Black Legion",
 						skillPool: 6,
 						skills: ["Any Wise->Troll-wise", "Any General->Troll Etiquette", "Any General->Hammer", "Any General->Shield Training"],
@@ -11141,7 +10674,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born Chattel",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "Chattel",
 						skillPool: 0,
 						stock: "Orc",
@@ -11157,7 +10689,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Cattle Slave",
 						physicalPool: 1,
 						resources: 3,
-						selectable: true,
 						setting: "Chattel",
 						skillPool: 2,
 						skills: ["Any General->Animal Husbandry"],
@@ -11176,7 +10707,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Scavenger",
 						physicalPool: 1,
 						resources: 6,
-						selectable: true,
 						setting: "Chattel",
 						skillPool: 3,
 						skills: ["Any General->Foraging", "Any General->Inconspicuous"],
@@ -11194,7 +10724,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Forge Slave",
 						physicalPool: 1,
 						resources: 3,
-						selectable: true,
 						setting: "Chattel",
 						skillPool: 2,
 						skills: ["Any General->Ditch Digging"],
@@ -11212,7 +10741,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Hauler",
 						physicalPool: 1,
 						resources: 3,
-						selectable: true,
 						setting: "Chattel",
 						skillPool: 2,
 						skills: ["Any General->Driving", "Any Wise->Beast of Burden-wise"],
@@ -11230,7 +10758,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Cutter Slave",
 						physicalPool: 1,
 						resources: 3,
-						selectable: true,
 						setting: "Chattel",
 						skillPool: 2,
 						skills: ["Orc Special->Tree Pulling", "Any General->Ditch Digging"],
@@ -11248,7 +10775,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Tunneler",
 						physicalPool: 1,
 						resources: 3,
-						selectable: true,
 						setting: "Chattel",
 						skillPool: 2,
 						skills: ["Any General->Ditch Digging", "Any Wise->Tunnel-wise"],
@@ -11267,7 +10793,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Ravager",
 						physicalPool: 1,
 						resources: 4,
-						selectable: true,
 						setting: "Chattel",
 						skillPool: 4,
 						skills: ["Any General->Brawling", "Any General->Cudgel", "Any General->Intimidation"],
@@ -11290,7 +10815,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 9,
-						selectable: true,
 						setting: "Chattel",
 						skillPool: 4,
 						skills: ["Orc Special->Rude Carpentry", "Any General->Mending", "Any General->Intimidation"],
@@ -11312,7 +10836,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 9,
-						selectable: true,
 						setting: "Chattel",
 						skillPool: 4,
 						skills: ["Any General->Butchery", "Any General->Tanner", "Any General->Intimidation"],
@@ -11334,7 +10857,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 9,
-						selectable: true,
 						setting: "Chattel",
 						skillPool: 5,
 						skills: ["Any General->Blacksmith", "Any General->Intimidation"],
@@ -11357,7 +10879,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Chattel",
 						skillPool: 4,
 						skills: ["Any General->Mining", "Any General->Intimidation"],
@@ -11381,7 +10902,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Chattel",
 						skillPool: 6,
 						skills: ["Any General->Mending", "Any General->Weaponsmith", "Any General->Armorer", "Any General->Tanner"],
@@ -11412,7 +10932,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Chattel",
 						skillPool: 4,
 						skills: ["Any General->Interrogation", "Any General->Intimidation", "Any General->Brawling", "Any General->Torture"],
@@ -11439,7 +10958,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born Great",
 						physicalPool: 0,
 						resources: 5,
-						selectable: true,
 						setting: "Great and Black",
 						skillPool: 0,
 						stock: "Orc",
@@ -11463,7 +10981,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 3,
-						selectable: true,
 						setting: "Great and Black",
 						skillPool: 5,
 						skills: ["Any General->Brawling", "Any General->Intimidation", "Any General->Torture"],
@@ -11482,7 +10999,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Servant of the Gate",
 						physicalPool: 1,
 						resources: 7,
-						selectable: true,
 						setting: "Great and Black",
 						skillPool: 2,
 						skills: ["Any General->Soothing Platitudes", "Any General->Ditch Digging", "Any General->Hauling"],
@@ -11507,7 +11023,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 9,
-						selectable: true,
 						setting: "Great and Black",
 						skillPool: 8,
 						skills: ["Any General->Armor Training", "Any General->Axe", "Any General->Bow", "Any General->Knives", "Any General->Mace", "Any General->Riding", "Any General->Shield Training", "Any Wise->Clan-wise"],
@@ -11533,7 +11048,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 12,
-						selectable: true,
 						setting: "Great and Black",
 						skillPool: 7,
 						skills: ["Any General->Mounted Combat Training", "Any General->Great Wolf Husbandry", "Any General->Riding", "Any General->Axe", "Any General->Spear"],
@@ -11559,7 +11073,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 25,
-						selectable: true,
 						setting: "Great and Black",
 						skillPool: 5,
 						skills: ["Any General->Command", "Orc Special->Brutal Intimidation", "Any General->Torture"],
@@ -11583,7 +11096,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "Great and Black",
 						skillPool: 5,
 						skills: ["Orc Special->Siege Engineer", "Any General->Artillerist", "Any General->Mending"],
@@ -11607,7 +11119,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "Great and Black",
 						skillPool: 5,
 						skills: ["Any General->Mason", "Orc Special->Bastions of Hatred", "Any General->Mining"],
@@ -11634,7 +11145,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 40,
-						selectable: true,
 						setting: "Great and Black",
 						skillPool: 5,
 						skills: ["Orc Special->Poisonous Platitudes", "Any General->Falsehood", "Any General->Persuasion", "Any Wise->Clan-wise", "Any Wise->Ambition-wise"],
@@ -11658,7 +11168,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 60,
-						selectable: true,
 						setting: "Great and Black",
 						skillPool: 5,
 						skills: ["Any General->Command", "Any General->Strategy", "Orc Special->Name Ritual"],
@@ -11685,7 +11194,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Slave to the Dark",
 						physicalPool: 0,
 						resources: 3,
-						selectable: true,
 						setting: "Servant of the Dark Blood",
 						skillPool: 2,
 						skills: ["Orc Special->Servant-wise"],
@@ -11709,7 +11217,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 6,
-						selectable: true,
 						setting: "Servant of the Dark Blood",
 						skillPool: 3,
 						skills: ["Orc Special->Doctrine of Night's Blood"],
@@ -11733,7 +11240,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 6,
-						selectable: true,
 						setting: "Servant of the Dark Blood",
 						skillPool: 5,
 						skills: ["Orc Special->Rituals of Blood", "Any General->Torture", "Any General->Intimidation", "Any General->Knives"],
@@ -11756,7 +11262,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 7,
-						selectable: true,
 						setting: "Servant of the Dark Blood",
 						skillPool: 4,
 						skills: ["Orc Special->Rituals of Night", "Orc Special->Vile Poisoner", "Any General->Foraging"],
@@ -11779,7 +11284,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Servant of the Dark Blood",
 						skillPool: 7,
 						skills: ["Orc Special->Spider Husbandry", "Any General->Riding", "Any General->Mounted Combat Training", "Any Wise->Web-wise", "Any General->Climbing"],
@@ -11802,7 +11306,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Servant of the Dark Blood",
 						skillPool: 4,
 						skills: ["Any Wise->Rituals-wise", "Any General->Animal Husbandry", "Any Wise->Orc-wise", "Any Wise->Elf-wise", "Any Wise->Wolf-wise"],
@@ -11825,7 +11328,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Servant of the Dark Blood",
 						skillPool: 3,
 						skills: ["Any Wise->Cave-wise", "Any Wise->Tunnel-wise"],
@@ -11847,7 +11349,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 12,
-						selectable: true,
 						setting: "Servant of the Dark Blood",
 						skillPool: 3,
 						skills: ["Any Wise->Darkness-wise"],
@@ -11869,7 +11370,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 12,
-						selectable: true,
 						setting: "Servant of the Dark Blood",
 						skillPool: 3,
 						skills: ["Any Wise->Poison-wise", "Any Wise->Bat-wise", "Any Wise->Troll-wise"],
@@ -11895,7 +11395,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "Servant of the Dark Blood",
 						skillPool: 2,
 						skills: ["Any Wise->Great and Black-wise", "Orc Special->Name Ritual"],
@@ -11917,7 +11416,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Servant of the Dark Blood",
 						skillPool: 5,
 						skills: ["Man Magical->Death Art", "Any Wise->Apocalypse-wise", "Any Wise->Graveyard-wise", "Any Wise->Murder-wise"],
@@ -11954,7 +11452,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born Below",
 						physicalPool: 0,
 						resources: 0,
-						selectable: true,
 						setting: "Below",
 						skillPool: 0,
 						stock: "Roden",
@@ -11971,7 +11468,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Pinky",
 						physicalPool: 0,
 						resources: 2,
-						selectable: true,
 						setting: "Below",
 						skillPool: 3,
 						skills: ["Any General->Soothing Platitudes", "Any Wise->Below-wise"],
@@ -11990,7 +11486,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Scavenger",
 						physicalPool: 0,
 						resources: 3,
-						selectable: true,
 						setting: "Below",
 						skillPool: 5,
 						skills: ["Any General->Inconspicuous", "Any General->Scavenging", "Any General->Survival", "Any General->Appraisal", "Any Wise->Junk-wise"],
@@ -12008,7 +11503,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Scratcher",
 						physicalPool: 1,
 						resources: 4,
-						selectable: true,
 						setting: "Below",
 						skillPool: 4,
 						skills: ["Any General->Ditch Digging", "Any Wise->Tunnel-wise", "Any General->Mending"],
@@ -12027,7 +11521,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Snitch",
 						physicalPool: 0,
 						resources: 3,
-						selectable: true,
 						setting: "Below",
 						skillPool: 4,
 						skills: ["Any General->Inconspicuous", "Any General->Falsehood", "Any General->Haggling", "Any Wise->Secret-wise"],
@@ -12046,7 +11539,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "The Gauntlet",
 						physicalPool: 1,
 						resources: 4,
-						selectable: true,
 						setting: "Below",
 						skillPool: 1,
 						skills: ["Any General->Brawling", "Any General->Soothing Platitudes", "Any Wise->Hazing-wise", "Any Wise->Pecking Order-wise"],
@@ -12070,7 +11562,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "Below",
 						skillPool: 3,
 						skills: ["Any General->Mending", "Any General->Blacksmith", "Any Wise->Bribe-wise"],
@@ -12094,7 +11585,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Below",
 						skillPool: 7,
 						skills: ["Any General->Inconspicuous", "Any General->Knots", "Any General->Haggling", "Any General->Cudgel", "Any General->Intimidation", "Any Wise->Child-wise"],
@@ -12118,7 +11608,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "Below",
 						skillPool: 4,
 						skills: ["Any General->Sleight of Hand", "Any General->Inconspicuous", "Any General->Knives", "Any General->Streetwise"],
@@ -12141,7 +11630,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 6,
-						selectable: true,
 						setting: "Below",
 						skillPool: 5,
 						skills: ["Any General->Stealthy", "Any General->Lock Pick", "Any General->Knives", "Any Wise->Roof-wise", "Any Wise->Window-wise"],
@@ -12166,7 +11654,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Below",
 						skillPool: 7,
 						skills: ["Any General->Haggling", "Any General->Instruction", "Any General->Weaponsmith", "Any Wise->Knife-wise", "Any Wise->Sword-wise"],
@@ -12193,7 +11680,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Below",
 						skillPool: 7,
 						skills: ["Any General->Observation", "Any General->Climbing", "Any General->Throwing", "Any General->Locksmith", "Any Wise->Loot-wise"],
@@ -12217,7 +11703,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Below",
 						skillPool: 7,
 						skills: ["Any General->Appropriate Weapons", "Any General->Intimidation", "Any General->Extortion", "Any General->Shield Training"],
@@ -12242,7 +11727,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Below",
 						skillPool: 7,
 						skills: ["Any General->Appraisal", "Any General->Haggling", "Any General->Falsehood", "Any Wise->Antique-wise", "Any Wise->Fake-wise"],
@@ -12269,7 +11753,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Below",
 						skillPool: 5,
 						skills: ["Any General->Field Dressing", "Any General->Apothecary", "Any General->Poisons", "Any General->Haggling"],
@@ -12298,7 +11781,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Below",
 						skillPool: 6,
 						skills: ["Any General->Persuasion", "Any Wise->Deal-wise", "Any General->Haggling", "Any General->Intimidation", "Any General->Ugly Truth"],
@@ -12324,7 +11806,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 13,
-						selectable: true,
 						setting: "Below",
 						skillPool: 13,
 						skills: ["Any General->Soothing Platitudes", "Any General->Read", "Any General->Write", "Any General->Research", "Man Special->Astrology", "Any General->Strategy", "Any General->Logistics", "Any General->Falsehood", "Any General->History", "Any General->Obscure History", "Any Wise->World Domination-wise"],
@@ -12350,7 +11831,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "Below",
 						skillPool: 11,
 						skills: ["Any General->Intimidation", "Any General->Persuasion", "Any General->Oratory", "Any General->Falsehood", "Any General->Command", "Any Wise->Below-wise", "Any General->Sword", "Any Wise->Clique-wise", "Any Wise->Nest-wise", "Any Wise->Traitor-wise"],
@@ -12374,7 +11854,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 75,
-						selectable: true,
 						setting: "Below",
 						skillPool: 9,
 						skills: ["Any General->Extortion", "Any General->Intimidation", "Any General->Read", "Any General->Write", "Any General->Composition", "Any Wise->Church-wise", "Any Wise->Papal Bull-wise", "Any Wise->Pope Joke-wise"],
@@ -12406,7 +11885,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "Exile",
 						skillPool: 5,
 						skills: ["Any General->Hunting", "Any General->Tracking", "Any General->Trapper", "Any General->Bow", "Any Wise->Forest-wise"],
@@ -12430,7 +11908,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 3,
-						selectable: true,
 						setting: "Exile",
 						skillPool: 5,
 						skills: ["Any General->Inconspicuous", "Any General->Soothing Platitudes", "Any Wise->Kick Me-wise", "Any Wise->Bully-wise", "Any Wise->Nest-wise", "Any Wise->Below-wise", "Any Wise->Village-wise", "Any Wise->Cat-wise"],
@@ -12449,7 +11926,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Hermit",
 						physicalPool: 0,
 						resources: 2,
-						selectable: true,
 						setting: "Exile",
 						skillPool: 8,
 						skills: ["Any General->Philosophy", "Man Special->Astrology", "Any General->Rhetoric", "Any General->Oratory", "Any General->Foraging", "Any Wise->Books-wise", "Any Wise->Lost Secret-wise"],
@@ -12468,7 +11944,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Bushwhacker",
 						physicalPool: 1,
 						resources: 5,
-						selectable: true,
 						setting: "Exile",
 						skillPool: 4,
 						skills: ["Any General->Appropriate Weapons", "Any General->Intimidation", "Any General->Stealthy", "Any Wise->Ambush-wise"],
@@ -12497,7 +11972,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Exile",
 						skillPool: 8,
 						skills: ["Any General->Pilot", "Any General->Rigging", "Any General->Knots", "Any General->Navigation", "Any General->Mending", "Any Wise->Ship-wise", "Any Wise->Bay-wise"],
@@ -12523,7 +11997,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Exile",
 						skillPool: 6,
 						skills: ["Any General->Intimidation", "Any General->Command", "Any General->Sword", "Any Wise->Bandit-wise", "Any Wise->Caravan-wise"],
@@ -12541,7 +12014,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Albino",
 						physicalPool: 0,
 						resources: 25,
-						selectable: true,
 						setting: "Exile",
 						skillPool: 7,
 						skills: ["Man Special->Astrology", "Any General->Ugly Truth", "Any General->Read", "Any General->Write", "Man Magical->Sorcery", "Man Magical->Spirit Binding"],
@@ -12568,7 +12040,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born to the Fields",
 						physicalPool: 0,
 						resources: 0,
-						selectable: true,
 						setting: "Field",
 						skillPool: 0,
 						stock: "Roden",
@@ -12586,7 +12057,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Hand",
 						physicalPool: 1,
 						resources: 3,
-						selectable: true,
 						setting: "Field",
 						skillPool: 4,
 						skills: ["Any General->Sing", "Any Wise->Work-wise", "Any General->Ditch Digging"],
@@ -12605,7 +12075,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Woodsen",
 						physicalPool: 1,
 						resources: 6,
-						selectable: true,
 						setting: "Field",
 						skillPool: 4,
 						skills: ["Any General->Tree Cutting", "Any Wise->Tree-wise", "Any General->Mending", "Any General->Orienteering"],
@@ -12624,7 +12093,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Apprentice",
 						physicalPool: 1,
 						resources: 9,
-						selectable: true,
 						setting: "Field",
 						skillPool: 3,
 						skills: ["Any General->Mending", "Any General->Haggling", "Any Wise->Materials-wise"],
@@ -12643,7 +12111,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Gatherer",
 						physicalPool: 0,
 						resources: 10,
-						selectable: true,
 						setting: "Field",
 						skillPool: 3,
 						skills: ["Any General->Foraging", "Any General->Herbalism", "Any Wise->Nut and Berry-wise"],
@@ -12660,7 +12127,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Farmer",
 						physicalPool: 1,
 						resources: 10,
-						selectable: true,
 						setting: "Field",
 						skillPool: 3,
 						skills: ["Any General->Farming", "Any General->Mending", "Any Wise->Seed-wise"],
@@ -12688,7 +12154,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 9,
-						selectable: true,
 						setting: "Field",
 						skillPool: 5,
 						skills: ["Any General->Bird Husbandry", "Any General->Firebuilding", "Any Wise->Bee-wise", "Any Wise->Flower-wise", "Any Wise->Honey-wise"],
@@ -12716,7 +12181,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Field",
 						skillPool: 5,
 						skills: ["Any General->Miller", "Any Wise->Grain-wise", "Any General->Haggling"],
@@ -12739,7 +12203,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 14,
-						selectable: true,
 						setting: "Field",
 						skillPool: 5,
 						skills: ["Any General->Brewer", "Any Wise->Mead-wise", "Any General->Haggling", "Any General->Cooper"],
@@ -12763,7 +12226,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 12,
-						selectable: true,
 						setting: "Field",
 						skillPool: 4,
 						skills: ["Any General->Baking", "Any General->Firebuilding", "Any Wise->Bread-wise", "Any General->Cooking"],
@@ -12787,7 +12249,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Field",
 						skillPool: 6,
 						skills: ["Any General->Weaving", "Any General->Sewing", "Any General->Embroidery", "Any General->Soothing Platitudes", "Any General->Sing"],
@@ -12811,7 +12272,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Field",
 						skillPool: 5,
 						skills: ["Any General->Jargon", "Any General->Instruction", "Any Wise->Apprentice-wise", "Any General->Blacksmith", "Any General->Carpentry", "Any General->Potter", "Any General->Mason"],
@@ -12841,7 +12301,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Field",
 						skillPool: 6,
 						skills: ["Any General->Herbalism", "Any General->Field Dressing", "Any General->Apothecary", "Any General->Ugly Truth", "Any Wise->Hurt-wise"],
@@ -12865,7 +12324,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 16,
-						selectable: true,
 						setting: "Field",
 						skillPool: 6,
 						skills: ["Any General->Haggling", "Any General->Appraisal", "Any General->Accounting", "Any General->Conspicuous", "Any Wise->Village-wise"],
@@ -12889,7 +12347,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 6,
-						selectable: true,
 						setting: "Field",
 						skillPool: 6,
 						skills: ["Any General->Conspicuous", "Any General->Spear", "Any General->Bow", "Any General->Brawling", "Any General->Shield Training"],
@@ -12915,7 +12372,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 8,
-						selectable: true,
 						setting: "Field",
 						skillPool: 6,
 						skills: ["Any General->Command", "Any General->Intimidation", "Any General->Interrogation", "Any General->Sword"],
@@ -12943,7 +12399,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 20,
-						selectable: true,
 						setting: "Field",
 						skillPool: 7,
 						skills: ["Any General->Oratory", "Any General->Persuasion", "Any General->Rule of Law", "Any General->Etiquette", "Any General->Haggling", "Any Wise->Petitioner-wise"],
@@ -12962,7 +12417,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Brother/Sister",
 						physicalPool: 0,
 						resources: 14,
-						selectable: true,
 						setting: "Field",
 						skillPool: 6,
 						skills: ["Any General->Doctrine", "Any General->Read", "Any General->Write", "Any General->Meditation", "Any Wise->Shrine-wise", "Any Wise->Prayer-wise"],
@@ -12986,7 +12440,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "Field",
 						skillPool: 5,
 						skills: ["Any General->Suasion", "Roden Special->Preaching", "Any General->Foreign Languages", "Any General->Intimidation", "Any Wise->Below-wise", "Any General->Brawling", "Any Wise->Man-wise"],
@@ -13009,7 +12462,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Field",
 						skillPool: 6,
 						skills: ["Any Wise->Aecer-wise", "Any General->Oratory", "Any General->Illuminations", "Any General->Calligraphy", "Any General->Sing", "Any General->History", "Any General->Research", "Any General->Cartography", "Any General->Poetry"],
@@ -13032,7 +12484,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "Field",
 						skillPool: 5,
 						skills: ["Any General->Administration", "Any General->Accounting", "Any General->Conspicuous", "Any General->Etiquette"],
@@ -13059,7 +12510,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Initiate",
 						physicalPool: 0,
 						resources: 2,
-						selectable: true,
 						setting: "Society",
 						skillPool: 3,
 						skills: ["Any General->Doctrine", "Any Wise->Society-wise"],
@@ -13082,7 +12532,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 4,
-						selectable: true,
 						setting: "Society",
 						skillPool: 5,
 						skills: ["Any General->Rhetoric", "Any General->Suasion", "Any General->Cudgel", "Any Wise->Tail-wise"],
@@ -13105,7 +12554,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 6,
-						selectable: true,
 						setting: "Society",
 						skillPool: 6,
 						skills: ["Any General->Stealthy", "Any General->Observation", "Any General->Inconspicuous", "Any General->Climbing", "Any Wise->Tail-wise"],
@@ -13128,7 +12576,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 6,
-						selectable: true,
 						setting: "Society",
 						skillPool: 6,
 						skills: ["Man Special->Arson", "Any General->Firebuilding", "Any General->Inconspicuous", "Roden Special->Firebombs", "Any Wise->Arson-wise"],
@@ -13151,7 +12598,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 7,
-						selectable: true,
 						setting: "Society",
 						skillPool: 5,
 						skills: ["Any General->Knives", "Any General->Stealthy", "Any General->Intimidation", "Any General->Inconspicuous", "Roden Special->Garrote"],
@@ -13174,7 +12620,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "Society",
 						skillPool: 4,
 						skills: ["Any General->Animal Husbandry", "Any General->Inconspicuous", "Any General->Rattiquette"],
@@ -13200,7 +12645,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Society",
 						skillPool: 6,
 						skills: ["Any General->Disguise", "Roden Special->Preaching", "Any General->Inconspicuous", "Any General->Falsehood", "Any Wise->Dupe-wise"],
@@ -13223,7 +12667,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 7,
-						selectable: true,
 						setting: "Society",
 						skillPool: 5,
 						skills: ["Any General->Poisons", "Any General->Inconspicuous", "Any General->Apothecary", "Any Wise->Toxin-wise"],
@@ -13248,7 +12691,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 9,
-						selectable: true,
 						setting: "Society",
 						skillPool: 8,
 						skills: ["Any General->Appropriate Weapons", "Any General->Brawling", "Any General->Armor Training", "Any General->Shield Training", "Any General->Intimidation"],
@@ -13274,7 +12716,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Society",
 						skillPool: 6,
 						skills: ["Roden Special->Preaching", "Any General->Conspicuous", "Any General->Symbology", "Any General->Obscure History"],
@@ -13301,7 +12742,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 30,
-						selectable: true,
 						setting: "Society",
 						skillPool: 11,
 						skills: ["Any General->Oratory", "Any General->Command", "Man Special->Astrology", "Any General->Research", "Any General->Interrogation", "Any General->Torture", "Any General->Observation", "Any General->Poetry", "Any Wise->Cult-wise", "Any Wise->Inner Workings-wise", "Any Wise->Undermining-wise"],
@@ -13338,7 +12778,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born to Dark Caves",
 						physicalPool: 0,
 						resources: 2,
-						selectable: true,
 						setting: "Cavedweller",
 						skillPool: 0,
 						stock: "Troll",
@@ -13355,7 +12794,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Dweller",
 						physicalPool: 1,
 						resources: 1,
-						selectable: true,
 						setting: "Cavedweller",
 						skillPool: 2,
 						skills: ["Any General->Climbing", "Any Wise->Rock-wise", "Any General->Brawling"],
@@ -13373,7 +12811,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Mine Haunt",
 						physicalPool: 0,
 						resources: 1,
-						selectable: true,
 						setting: "Cavedweller",
 						skillPool: 2,
 						skills: ["Troll Special->Mine-wise", "Any General->Brawling"],
@@ -13391,7 +12828,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Dwarf Hunter",
 						physicalPool: 1,
 						resources: 3,
-						selectable: true,
 						setting: "Cavedweller",
 						skillPool: 3,
 						skills: ["Any Wise->Dwarf-wise", "Any General->Throwing"],
@@ -13415,7 +12851,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 4,
-						selectable: true,
 						setting: "Cavedweller",
 						skillPool: 3,
 						skills: ["Troll Special->Camouflage", "Any General->Stealthy"],
@@ -13441,7 +12876,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born to the Pit",
 						physicalPool: 0,
 						resources: 1,
-						selectable: true,
 						setting: "Pit",
 						skillPool: 0,
 						stock: "Troll",
@@ -13458,7 +12892,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Tortured",
 						physicalPool: 0,
 						resources: 0,
-						selectable: true,
 						setting: "Pit",
 						skillPool: 1,
 						stock: "Troll",
@@ -13475,7 +12908,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Ox",
 						physicalPool: 1,
 						resources: 1,
-						selectable: true,
 						setting: "Pit",
 						skillPool: 2,
 						skills: ["Any General->Ditch Digging", "Any General->Hauling", "Any General->Mining"],
@@ -13494,7 +12926,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Battering Ram",
 						physicalPool: 1,
 						resources: 1,
-						selectable: true,
 						setting: "Pit",
 						skillPool: 2,
 						skills: ["Any General->Brawling", "Any General->Throwing"],
@@ -13522,7 +12953,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 7,
-						selectable: true,
 						setting: "Pit",
 						skillPool: 3,
 						skills: ["Any General->Hammer", "Any General->Formation Fighting"],
@@ -13547,7 +12977,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 6,
-						selectable: true,
 						setting: "Pit",
 						skillPool: 3,
 						skills: ["Any General->Shield Training", "Any General->Intimidation"],
@@ -13571,7 +13000,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 4,
-						selectable: true,
 						setting: "Pit",
 						skillPool: 3,
 						skills: ["Any General->Torture", "Troll Special->Lash"],
@@ -13594,7 +13022,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Pit",
 						skillPool: 3,
 						skills: ["Any General->Command", "Any General->Strategy"],
@@ -13621,7 +13048,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born Wild",
 						physicalPool: 0,
 						resources: 2,
-						selectable: true,
 						setting: "Wild",
 						skillPool: 0,
 						stock: "Troll",
@@ -13638,7 +13064,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Bogey",
 						physicalPool: 1,
 						resources: 1,
-						selectable: true,
 						setting: "Wild",
 						skillPool: 3,
 						skills: ["Any General->Brawling", "Any Wise->Forest-wise", "Any General->Stealthy"],
@@ -13655,7 +13080,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Bridgehaunt",
 						physicalPool: 1,
 						resources: 2,
-						selectable: true,
 						setting: "Wild",
 						skillPool: 2,
 						skills: ["Any Wise->Bridge-wise", "Any General->Intimidation"],
@@ -13674,7 +13098,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Manhunter",
 						physicalPool: 0,
 						resources: 2,
-						selectable: true,
 						setting: "Wild",
 						skillPool: 2,
 						skills: ["Any Wise->Man-wise", "Any Wise->Village-wise"],
@@ -13691,7 +13114,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Forlorn",
 						physicalPool: 0,
 						resources: 1,
-						selectable: true,
 						setting: "Wild",
 						skillPool: 0,
 						stock: "Troll",
@@ -13719,7 +13141,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 2,
-						selectable: true,
 						setting: "Wild",
 						skillPool: 2,
 						skills: ["Any General->Intimidation", "Any General->Brawling"],
@@ -13745,7 +13166,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Wild",
 						skillPool: 3,
 						skills: ["Any General->Nursing", "Any General->Ugly Truth"],
@@ -13770,7 +13190,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "Wild",
 						skillPool: 3,
 						skills: ["Any General->Torture", "Troll Special->Extortion"],
@@ -13807,7 +13226,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Captive",
 						physicalPool: 0,
 						resources: 1,
-						selectable: true,
 						setting: "Captive",
 						skillPool: 3,
 						skills: ["Great Wolf Special->Begging", "Great Wolf Special->Cage-wise", "Great Wolf Special->Man-wise"],
@@ -13840,7 +13258,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 0,
-						selectable: true,
 						setting: "Ghost of the Deeping Wood",
 						skillPool: 2,
 						skills: ["Great Wolf Special->Nature of All Things"],
@@ -13862,7 +13279,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Ghost of the Deeping Wood",
 						skillPool: 3,
 						skills: ["Great Wolf Special->Tongue of the Ancient One"],
@@ -13885,7 +13301,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 0,
-						selectable: true,
 						setting: "Ghost of the Deeping Wood",
 						skillPool: 2,
 						skills: ["Great Wolf Special->Old World-wise"],
@@ -13907,7 +13322,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 15,
-						selectable: true,
 						setting: "Ghost of the Deeping Wood",
 						skillPool: 3,
 						skills: ["Great Wolf Special->Ancient Ways"],
@@ -13931,7 +13345,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 10,
-						selectable: true,
 						setting: "Ghost of the Deeping Wood",
 						skillPool: 6,
 						skills: ["Great Wolf Special->Wolf-wise", "Great Wolf Special->Spirit Hunter-wise", "Great Wolf Special->Legion-wise", "Great Wolf Special->Path-wise", "Great Wolf Special->River-wise", "Great Wolf Special->Pack-wise"],
@@ -13969,7 +13382,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 1,
-						selectable: true,
 						setting: "Outcast Wolf",
 						skillPool: 4,
 						skills: ["Great Wolf Special->Territory-wise", "Great Wolf Special->Pack-wise", "Any General->Scavenging"],
@@ -13995,7 +13407,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 2,
-						selectable: true,
 						setting: "Outcast Wolf",
 						skillPool: 3,
 						skills: ["Great Wolf Special->Scent-wise", "Great Wolf Special->Village-wise", "Great Wolf Special->Dog-wise", "Any General->Scavenging"],
@@ -14022,7 +13433,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born to the Legion",
 						physicalPool: 0,
 						resources: 0,
-						selectable: true,
 						setting: "Slave to the Legion",
 						skillPool: 2,
 						skills: ["Great Wolf Special->Howling"],
@@ -14041,7 +13451,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Caged and Beaten",
 						physicalPool: 0,
 						resources: 1,
-						selectable: true,
 						setting: "Slave to the Legion",
 						skillPool: 3,
 						skills: ["Great Wolf Special->Pack Etiquette", "Great Wolf Special->Begging", "Great Wolf Special->Cage-wise"],
@@ -14059,7 +13468,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Shadow Chaser",
 						physicalPool: 1,
 						resources: 2,
-						selectable: true,
 						setting: "Slave to the Legion",
 						skillPool: 8,
 						skills: ["Any General->Stealthy", "Great Wolf Special->Scent Tracking", "Great Wolf Special->Trail-wise", "Great Wolf Special->Orc-wise", "Any General->Scavenging", "Any General->Intimidation", "Great Wolf Special->Rider Training", "Great Wolf Special->Begging"],
@@ -14084,7 +13492,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 2,
-						selectable: true,
 						setting: "Slave to the Legion",
 						skillPool: 6,
 						skills: ["Great Wolf Special->Pack Hunting", "Any General->Foraging", "Any General->Brawling", "Any General->Stealthy", "Great Wolf Special->Howling", "Great Wolf Special->Escape Artist"],
@@ -14106,7 +13513,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 4,
-						selectable: true,
 						setting: "Slave to the Legion",
 						skillPool: 5,
 						skills: ["Great Wolf Special->Nursing", "Great Wolf Special->Rearing", "Great Wolf Special->Pup-wise", "Any General->Scavenging", "Great Wolf Special->Begging"],
@@ -14129,7 +13535,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 1,
-						selectable: true,
 						setting: "Slave to the Legion",
 						skillPool: 7,
 						skills: ["Great Wolf Special->Rider Training", "Great Wolf Special->Combat Mount Training", "Great Wolf Special->Savage Attack", "Any General->Intimidation"],
@@ -14153,7 +13558,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 2,
-						selectable: true,
 						setting: "Slave to the Legion",
 						skillPool: 4,
 						skills: ["Great Wolf Special->Rider Training", "Great Wolf Special->Combat Mount Training", "Great Wolf Special->Savage Attack"],
@@ -14177,7 +13581,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 5,
-						selectable: true,
 						setting: "Slave to the Legion",
 						skillPool: 5,
 						skills: ["Any General->Conspicuous", "Any General->Command", "Any General->Skirmish Tactics", "Any General->Strategy"],
@@ -14201,7 +13604,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 3,
-						selectable: true,
 						setting: "Slave to the Legion",
 						skillPool: 5,
 						skills: ["Any General->Stealthy", "Great Wolf Special->Scent Tracking", "Any General->Brawling", "Great Wolf Special->Rituals-wise", "Great Wolf Special->Poisons-wise"],
@@ -14234,7 +13636,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 1,
-						selectable: true,
 						setting: "Spirit Hunter",
 						skillPool: 5,
 						skills: ["Great Wolf Spirit Hunter Songs->Primal Bark", "Great Wolf Special->Pack Hunting", "Great Wolf Special->The Way of the First Hunter"],
@@ -14256,7 +13657,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 2,
-						selectable: true,
 						setting: "Spirit Hunter",
 						skillPool: 3,
 						skills: ["Great Wolf Spirit Hunter Songs->Ancestral Jaw"],
@@ -14280,7 +13680,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 3,
-						selectable: true,
 						setting: "Spirit Hunter",
 						skillPool: 3,
 						skills: ["Great Wolf Spirit Hunter Songs->Grandfather's Song"],
@@ -14307,7 +13706,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Born to the Pack",
 						physicalPool: 0,
 						resources: 0,
-						selectable: true,
 						setting: "Wild Pack",
 						skillPool: 2,
 						skills: ["Great Wolf Special->Howling"],
@@ -14331,7 +13729,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 1,
-						selectable: true,
 						setting: "Wild Pack",
 						skillPool: 8,
 						skills: ["Great Wolf Special->Pack Etiquette", "Any General->Stealthy", "Great Wolf Special->Pack Hunting", "Great Wolf Special->Scent Tracking", "Any General->Foraging", "Any General->Brawling"],
@@ -14349,7 +13746,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Hunter",
 						physicalPool: 1,
 						resources: 2,
-						selectable: true,
 						setting: "Wild Pack",
 						skillPool: 7,
 						skills: ["Great Wolf Special->Pack Hunting", "Great Wolf Special->Hoof-wise", "Any General->Intimidation", "Any General->Brawling", "Great Wolf Special->Begging", "Great Wolf Special->Scent-wise"],
@@ -14374,10 +13770,9 @@ export const Stocks: bwgr.data.Stocks = {
 								"Great Wolf->Wild Pack->Uncle",
 								"Great Wolf->Wild Pack->Last Wolf"
 							],
-							TEXT:[ "Dominant wolves are the pack leaders."]
+							TEXT: ["Dominant wolves are the pack leaders."]
 						},
 						resources: 3,
-						selectable: true,
 						setting: "Wild Pack",
 						skillPool: 5,
 						skills: ["Any General->Intimidation", "Any General->Command", "Great Wolf Special->Nursing", "Any General->Brawling"],
@@ -14396,7 +13791,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Aunt",
 						physicalPool: 0,
 						resources: 2,
-						selectable: true,
 						setting: "Wild Pack",
 						skillPool: 4,
 						skills: ["Great Wolf Special->Nursing", "Great Wolf Special->Pup-wise", "Any General->Scavenging", "Any General->Begging"],
@@ -14415,7 +13809,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Uncle",
 						physicalPool: 0,
 						resources: 2,
-						selectable: true,
 						setting: "Wild Pack",
 						skillPool: 4,
 						skills: ["Great Wolf Special->Rearing", "Great Wolf Special->Pup-wise", "Any General->Scavenging", "Any General->Begging"],
@@ -14439,7 +13832,6 @@ export const Stocks: bwgr.data.Stocks = {
 							]
 						},
 						resources: 1,
-						selectable: true,
 						setting: "Wild Pack",
 						skillPool: 7,
 						skills: ["Great Wolf Special->Begging", "Great Wolf Special->Man-wise", "Great Wolf Special->Orc-wise", "Great Wolf Special->Forest-wise"],
@@ -14458,7 +13850,6 @@ export const Stocks: bwgr.data.Stocks = {
 						name: "Last Wolf",
 						physicalPool: 0,
 						resources: 1,
-						selectable: true,
 						setting: "Wild Pack",
 						skillPool: 2,
 						skills: ["Great Wolf Special->Begging", "Great Wolf Special->Pack Etiquette"],
@@ -14471,4 +13862,4 @@ export const Stocks: bwgr.data.Stocks = {
 			}
 		}
 	}
-}
+};
