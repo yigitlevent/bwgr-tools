@@ -55,6 +55,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					stock: "Dwarf",
 					traitPool: 1,
+					traits: [],
 					years: 20
 				},
 				{
@@ -196,6 +197,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					stock: "Dwarf",
 					traitPool: 1,
+					traits: [],
 					years: 55
 				},
 				{
@@ -304,6 +306,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					stock: "Dwarf",
 					traitPool: 1,
+					traits: [],
 					years: 100
 				},
 			]
@@ -334,8 +337,10 @@ export const Dwarf: bwgr.data.Stock = {
 					resources: 10,
 					setting: "Clansman",
 					skillPool: 0,
+					skills: [],
 					stock: "Dwarf",
 					traitPool: 1,
+					traits: [],
 					years: 20
 				},
 				{
@@ -490,6 +495,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					stock: "Dwarf",
 					traitPool: 1,
+					traits: [],
 					years: 30
 				},
 				{
@@ -529,6 +535,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					stock: "Dwarf",
 					traitPool: 1,
+					traits: [],
 					years: 40
 				},
 				{
@@ -565,6 +572,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					stock: "Dwarf",
 					traitPool: 1,
+					traits: [],
 					years: 35
 				},
 				{
@@ -678,8 +686,10 @@ export const Dwarf: bwgr.data.Stock = {
 					resources: 5,
 					setting: "Guilder",
 					skillPool: 0,
+					skills: [],
 					stock: "Dwarf",
 					traitPool: 1,
+					traits: [],
 					years: 21
 				},
 				{
@@ -808,6 +818,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					stock: "Dwarf",
 					traitPool: 1,
+					traits: [],
 					years: 15
 				},
 				{
@@ -916,6 +927,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					stock: "Dwarf",
 					traitPool: 1,
+					traits: [],
 					years: 45
 				},
 				{
@@ -952,6 +964,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					stock: "Dwarf",
 					traitPool: 1,
+					traits: [],
 					years: 45
 				}
 			]
@@ -1094,6 +1107,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					stock: "Dwarf",
 					traitPool: 1,
+					traits: [],
 					years: 7
 				},
 				{
@@ -1215,6 +1229,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					stock: "Dwarf",
 					traitPool: 1,
+					traits: [],
 					years: 25
 				},
 				{
@@ -1294,6 +1309,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					stock: "Dwarf",
 					traitPool: 1,
+					traits: [],
 					years: 55
 				},
 				{
@@ -1594,6 +1610,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					stock: "Dwarf",
 					traitPool: 1,
+					traits: [],
 					years: 50
 				},
 				{

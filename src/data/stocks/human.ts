@@ -51,8 +51,10 @@ export const Human: bwgr.data.Stock = {
 					resources: 10,
 					setting: "City Dweller",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 12
 				},
 				{
@@ -73,6 +75,7 @@ export const Human: bwgr.data.Stock = {
 					resources: 4,
 					setting: "City Dweller",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 1,
 					traits: [
@@ -107,6 +110,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 3
 				},
 				{
@@ -210,6 +214,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 4
 				},
 				{
@@ -524,6 +529,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 4
 				},
 				{
@@ -979,6 +985,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 2,
+					traits: [],
 					years: 7
 				},
 				{
@@ -1104,6 +1111,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 0,
+					traits: [],
 					years: 6
 				},
 				{
@@ -1239,6 +1247,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 4
 				},
 				{
@@ -1727,6 +1736,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 8
 				},
 				{
@@ -1849,6 +1859,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 8
 				},
 				{
@@ -2045,6 +2056,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 4
 				},
 				{
@@ -2168,6 +2180,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 5
 				},
 				{
@@ -2303,6 +2316,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 0,
+					traits: [],
 					years: 6
 				},
 				{
@@ -2340,6 +2354,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 6
 				},
 				{
@@ -2482,6 +2497,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 0,
+					traits: [],
 					years: 9
 				},
 				{
@@ -2702,6 +2718,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 6
 				},
 				{
@@ -3529,6 +3546,7 @@ export const Human: bwgr.data.Stock = {
 					resources: 15,
 					setting: "Noble",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 1,
 					traits: [
@@ -3613,6 +3631,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 6
 				},
 				{
@@ -3643,6 +3662,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 4
 				},
 				{
@@ -3683,6 +3703,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 6
 				},
 				{
@@ -3792,6 +3813,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 2,
+					traits: [],
 					years: 10
 				},
 				{
@@ -3884,6 +3906,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 5
 				},
 				{
@@ -3921,6 +3944,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 7
 				},
 				{
@@ -3959,6 +3983,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 7
 				},
 				{
@@ -3998,6 +4023,7 @@ export const Human: bwgr.data.Stock = {
 					resources: 60,
 					setting: "Noble",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 1,
 					traits: [
@@ -4043,6 +4069,7 @@ export const Human: bwgr.data.Stock = {
 					resources: 65,
 					setting: "Noble",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 1,
 					traits: [
@@ -4087,6 +4114,7 @@ export const Human: bwgr.data.Stock = {
 					resources: 70,
 					setting: "Noble",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 1,
 					traits: [
@@ -4132,6 +4160,7 @@ export const Human: bwgr.data.Stock = {
 					resources: 90,
 					setting: "Noble",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 1,
 					traits: [
@@ -4177,6 +4206,7 @@ export const Human: bwgr.data.Stock = {
 					resources: 100,
 					setting: "Noble",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 1,
 					traits: [
@@ -4215,6 +4245,7 @@ export const Human: bwgr.data.Stock = {
 					resources: 60,
 					setting: "Noble",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 2,
 					traits: [
@@ -4585,6 +4616,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 7
 				},
 				{
@@ -4656,6 +4688,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 6
 				},
 				{
@@ -4697,6 +4730,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 6
 				},
 				{
@@ -4762,6 +4796,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 5
 				},
 				{
@@ -4822,6 +4857,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 5
 				},
 				{
@@ -4914,6 +4950,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 9
 				},
 				{
@@ -5077,6 +5114,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 5
 				},
 				{
@@ -5416,6 +5454,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 7
 				},
 				{
@@ -5818,6 +5857,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 7
 				},
 				{
@@ -5871,8 +5911,10 @@ export const Human: bwgr.data.Stock = {
 					resources: "10/yr",
 					setting: "Noble Court",
 					skillPool: 1,
+					skills: [],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: "*"
 				},
 				{
@@ -6186,6 +6228,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 4
 				},
 				{
@@ -6215,6 +6258,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 2,
+					traits: [],
 					years: 3
 				},
 				{
@@ -6277,6 +6321,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 5
 				},
 				{
@@ -6430,6 +6475,7 @@ export const Human: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Ratcatcher",
 					physicalPool: 0,
@@ -6591,6 +6637,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 6
 				},
 				{
@@ -6823,6 +6870,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 3
 				},
 				{
@@ -7224,6 +7272,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 2,
+					traits: [],
 					years: 15
 				},
 				{
@@ -7342,8 +7391,10 @@ export const Human: bwgr.data.Stock = {
 					resources: 3,
 					setting: "Peasant",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 2,
+					traits: [],
 					years: 8
 				},
 				{
@@ -7365,6 +7416,7 @@ export const Human: bwgr.data.Stock = {
 					resources: 4,
 					setting: "Peasant",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 1,
 					traits: [
@@ -7453,6 +7505,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 2,
+					traits: [],
 					years: 15
 				},
 				{
@@ -7715,6 +7768,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 3
 				},
 				{
@@ -7748,6 +7802,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 5
 				},
 				{
@@ -8029,6 +8084,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 10
 				},
 				{
@@ -8224,6 +8280,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 3
 				},
 				{
@@ -8256,6 +8313,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 3
 				},
 				{
@@ -8287,6 +8345,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 3
 				},
 				{
@@ -8318,6 +8377,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 3
 				},
 				{
@@ -8388,6 +8448,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 3
 				},
 				{
@@ -8454,6 +8515,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 3
 				},
 				{
@@ -8493,6 +8555,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 5
 				},
 				{
@@ -8584,6 +8647,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 4
 				},
 				{
@@ -8622,6 +8686,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 5
 				},
 				{
@@ -8661,6 +8726,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 8
 				},
 				{
@@ -8699,6 +8765,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 10
 				},
 				{
@@ -9235,6 +9302,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 4
 				},
 				{
@@ -9795,6 +9863,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 10
 				},
 				{
@@ -9874,6 +9943,7 @@ export const Human: bwgr.data.Stock = {
 					resources: 3,
 					setting: "Seafaring",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 2,
 					traits: [
@@ -9899,6 +9969,7 @@ export const Human: bwgr.data.Stock = {
 					resources: 4,
 					setting: "Seafaring",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 1,
 					traits: [
@@ -10415,6 +10486,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 5
 				},
 				{
@@ -10641,6 +10713,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 6
 				},
 				{
@@ -10880,6 +10953,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 6
 				},
 				{
@@ -10921,6 +10995,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 6
 				},
 				{
@@ -11029,6 +11104,7 @@ export const Human: bwgr.data.Stock = {
 					resources: 4,
 					setting: "Servitude",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 1,
 					traits: [
@@ -11252,6 +11328,7 @@ export const Human: bwgr.data.Stock = {
 					resources: 7,
 					setting: "Servitude",
 					skillPool: "*",
+					skills: [],
 					stock: "Human",
 					traitPool: 2,
 					traits: [
@@ -11293,8 +11370,10 @@ export const Human: bwgr.data.Stock = {
 					resources: 4,
 					setting: "Villager",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 2,
+					traits: [],
 					years: 10
 				},
 				{
@@ -11316,6 +11395,7 @@ export const Human: bwgr.data.Stock = {
 					resources: 4,
 					setting: "Villager",
 					skillPool: 0,
+					skills: [],
 					stock: "Human",
 					traitPool: 1,
 					traits: [
@@ -11503,6 +11583,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 4
 				},
 				{
@@ -11604,6 +11685,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 6
 				},
 				{
@@ -12601,6 +12683,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 6
 				},
 				{
@@ -12893,6 +12976,7 @@ export const Human: bwgr.data.Stock = {
 					],
 					stock: "Human",
 					traitPool: 1,
+					traits: [],
 					years: 8
 				},
 				{

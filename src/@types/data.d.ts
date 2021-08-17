@@ -97,7 +97,7 @@ namespace bwgr {
 			allowed: bwgr.data.RulesetsList[];
 			stock: bwgr.data.StocksList;
 			setting: string;
-			leads?: bwgr.path.Setting[];
+			leads: bwgr.path.Setting[];
 			years: number | "*";
 			born: boolean;
 
@@ -109,8 +109,8 @@ namespace bwgr {
 			traitPool: number;
 			resources: number | `${number}/yr` | "*";
 
-			skills?: bwgr.path.Skill[];
-			traits?: bwgr.path.Trait[];
+			skills: bwgr.path.Skill[];
+			traits: bwgr.path.Trait[];
 
 			requirements?: {
 				OR?: (string | string[])[];

@@ -92,6 +92,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					],
 					stock: "Great Wolf",
 					traitPool: 1,
+					traits: [],
 					years: 0
 				},
 				{
@@ -101,6 +102,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 1,
 					name: "Dire Haunt",
 					physicalPool: 1,
@@ -117,6 +119,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					],
 					stock: "Great Wolf",
 					traitPool: 2,
+					traits: [],
 					years: 1
 				},
 				{
@@ -146,6 +149,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					],
 					stock: "Great Wolf",
 					traitPool: 1,
+					traits: [],
 					years: 0
 				},
 				{
@@ -155,6 +159,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 1,
 					name: "Fell Ancient",
 					physicalPool: 1,
@@ -185,6 +190,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 1,
+					leads: [],
 					mentalPool: 2,
 					name: "Ghost of the Wood",
 					physicalPool: 0,
@@ -381,6 +387,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Shadow Chaser",
 					physicalPool: 1,
@@ -437,6 +444,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					],
 					stock: "Great Wolf",
 					traitPool: 1,
+					traits: [],
 					years: 0
 				},
 				{
@@ -446,6 +454,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Bitch",
 					physicalPool: 0,
@@ -478,6 +487,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Howling Beast",
 					physicalPool: 1,
@@ -509,6 +519,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 1,
 					name: "Black Destroyer",
 					physicalPool: 1,
@@ -544,6 +555,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 1,
 					name: "Ebon Tyrant",
 					physicalPool: 1,
@@ -647,6 +659,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					],
 					stock: "Great Wolf",
 					traitPool: 1,
+					traits: [],
 					years: 1
 				},
 				{
@@ -656,6 +669,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Spirit Howler",
 					physicalPool: 0,
@@ -740,6 +754,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					],
 					stock: "Great Wolf",
 					traitPool: 2,
+					traits: [],
 					years: 1
 				},
 				{
@@ -775,6 +790,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					],
 					stock: "Great Wolf",
 					traitPool: 1,
+					traits: [],
 					years: 1
 				},
 				{

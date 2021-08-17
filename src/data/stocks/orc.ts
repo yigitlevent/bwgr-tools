@@ -169,6 +169,7 @@ export const Orc: bwgr.data.Stock = {
 					],
 					stock: "Orc",
 					traitPool: 1,
+					traits: [],
 					years: 4
 				},
 				{
@@ -512,8 +513,10 @@ export const Orc: bwgr.data.Stock = {
 					resources: 5,
 					setting: "Chattel",
 					skillPool: 0,
+					skills: [],
 					stock: "Orc",
 					traitPool: 1,
+					traits: [],
 					years: 10
 				},
 				{
@@ -524,6 +527,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Cattle Slave",
 					physicalPool: 1,
@@ -583,6 +587,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Forge Slave",
 					physicalPool: 1,
@@ -610,6 +615,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Hauler",
 					physicalPool: 1,
@@ -639,6 +645,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Cutter Slave",
 					physicalPool: 1,
@@ -666,6 +673,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Tunneler",
 					physicalPool: 1,
@@ -722,6 +730,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 1,
 					name: "Woodcutter",
 					physicalPool: 0,
@@ -740,6 +749,7 @@ export const Orc: bwgr.data.Stock = {
 					],
 					stock: "Orc",
 					traitPool: 1,
+					traits: [],
 					years: 7
 				},
 				{
@@ -750,6 +760,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 1,
 					name: "Butcher",
 					physicalPool: 0,
@@ -768,6 +779,7 @@ export const Orc: bwgr.data.Stock = {
 					],
 					stock: "Orc",
 					traitPool: 1,
+					traits: [],
 					years: 7
 				},
 				{
@@ -778,6 +790,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 1,
 					name: "Forger",
 					physicalPool: 0,
@@ -808,6 +821,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 1,
 					name: "Pitwright",
 					physicalPool: 0,
@@ -935,6 +949,7 @@ export const Orc: bwgr.data.Stock = {
 					resources: 5,
 					setting: "Great and Black",
 					skillPool: 0,
+					skills: [],
 					stock: "Orc",
 					traitPool: 2,
 					traits: [
@@ -1244,6 +1259,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 1,
+					leads: [],
 					mentalPool: 2,
 					name: "Great One",
 					physicalPool: 2,
@@ -1373,6 +1389,7 @@ export const Orc: bwgr.data.Stock = {
 					],
 					stock: "Orc",
 					traitPool: 1,
+					traits: [],
 					years: 5
 				},
 				{
@@ -1405,6 +1422,7 @@ export const Orc: bwgr.data.Stock = {
 					],
 					stock: "Orc",
 					traitPool: 1,
+					traits: [],
 					years: 6
 				},
 				{
@@ -1453,6 +1471,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Master of Blood",
 					physicalPool: 0,
@@ -1486,6 +1505,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Master of Darkness",
 					physicalPool: 0,
@@ -1503,6 +1523,7 @@ export const Orc: bwgr.data.Stock = {
 					],
 					stock: "Orc",
 					traitPool: 1,
+					traits: [],
 					years: 7
 				},
 				{
@@ -1513,6 +1534,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 1,
+					leads: [],
 					mentalPool: 0,
 					name: "Dark Summoner",
 					physicalPool: 0,
@@ -1529,6 +1551,7 @@ export const Orc: bwgr.data.Stock = {
 					],
 					stock: "Orc",
 					traitPool: 1,
+					traits: [],
 					years: 7
 				},
 				{
@@ -1539,6 +1562,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 1,
+					leads: [],
 					mentalPool: 0,
 					name: "Blood Summoner",
 					physicalPool: 0,
@@ -1557,6 +1581,7 @@ export const Orc: bwgr.data.Stock = {
 					],
 					stock: "Orc",
 					traitPool: 1,
+					traits: [],
 					years: 10
 				},
 				{
@@ -1567,6 +1592,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 2,
+					leads: [],
 					mentalPool: 1,
 					name: "Servant",
 					physicalPool: 0,
@@ -1588,6 +1614,7 @@ export const Orc: bwgr.data.Stock = {
 					],
 					stock: "Orc",
 					traitPool: 1,
+					traits: [],
 					years: 50
 				},
 				{
@@ -1597,6 +1624,7 @@ export const Orc: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Master of the Weak",
 					physicalPool: 0,

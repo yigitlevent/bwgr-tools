@@ -43,8 +43,10 @@ export const Troll: bwgr.data.Stock = {
 					resources: 2,
 					setting: "Cavedweller",
 					skillPool: 0,
+					skills: [],
 					stock: "Troll",
 					traitPool: 2,
+					traits: [],
 					years: 5
 				},
 				{
@@ -70,6 +72,7 @@ export const Troll: bwgr.data.Stock = {
 					],
 					stock: "Troll",
 					traitPool: 2,
+					traits: [],
 					years: 4
 				},
 				{
@@ -95,6 +98,7 @@ export const Troll: bwgr.data.Stock = {
 					],
 					stock: "Troll",
 					traitPool: 1,
+					traits: [],
 					years: 12
 				},
 				{
@@ -131,6 +135,7 @@ export const Troll: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Dread Stone",
 					physicalPool: 2,
@@ -149,6 +154,7 @@ export const Troll: bwgr.data.Stock = {
 					],
 					stock: "Troll",
 					traitPool: 3,
+					traits: [],
 					years: 30
 				}
 			]
@@ -177,6 +183,7 @@ export const Troll: bwgr.data.Stock = {
 					resources: 1,
 					setting: "Pit",
 					skillPool: 0,
+					skills: [],
 					stock: "Troll",
 					traitPool: 2,
 					traits: [
@@ -191,12 +198,14 @@ export const Troll: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Tortured",
 					physicalPool: 0,
 					resources: 0,
 					setting: "Pit",
 					skillPool: 1,
+					skills: [],
 					stock: "Troll",
 					traitPool: 3,
 					traits: [
@@ -212,6 +221,7 @@ export const Troll: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Ox",
 					physicalPool: 1,
@@ -334,6 +344,7 @@ export const Troll: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 1,
 					name: "Bellower",
 					physicalPool: 1,
@@ -366,6 +377,7 @@ export const Troll: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 1,
+					leads: [],
 					mentalPool: 1,
 					name: "Warlord",
 					physicalPool: 1,
@@ -415,8 +427,10 @@ export const Troll: bwgr.data.Stock = {
 					resources: 2,
 					setting: "Wild",
 					skillPool: 0,
+					skills: [],
 					stock: "Troll",
 					traitPool: 1,
+					traits: [],
 					years: 5
 				},
 				{
@@ -442,6 +456,7 @@ export const Troll: bwgr.data.Stock = {
 					],
 					stock: "Troll",
 					traitPool: 2,
+					traits: [],
 					years: 7
 				},
 				{
@@ -451,6 +466,7 @@ export const Troll: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Bridgehaunt",
 					physicalPool: 1,
@@ -490,6 +506,7 @@ export const Troll: bwgr.data.Stock = {
 					],
 					stock: "Troll",
 					traitPool: 1,
+					traits: [],
 					years: 7
 				},
 				{
@@ -499,12 +516,14 @@ export const Troll: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 1,
+					leads: [],
 					mentalPool: 1,
 					name: "Forlorn",
 					physicalPool: 0,
 					resources: 1,
 					setting: "Wild",
 					skillPool: 0,
+					skills: [],
 					stock: "Troll",
 					traitPool: 2,
 					traits: [

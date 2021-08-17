@@ -60,6 +60,7 @@ export const Elf: bwgr.data.Stock = {
 					],
 					stock: "Elf",
 					traitPool: 1,
+					traits: [],
 					years: 20
 				},
 				{
@@ -131,6 +132,7 @@ export const Elf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Gatherer",
 					physicalPool: 0,
@@ -207,6 +209,7 @@ export const Elf: bwgr.data.Stock = {
 					],
 					stock: "Elf",
 					traitPool: 1,
+					traits: [],
 					years: 45
 				},
 				{
@@ -233,6 +236,7 @@ export const Elf: bwgr.data.Stock = {
 					],
 					stock: "Elf",
 					traitPool: 1,
+					traits: [],
 					years: 75
 				},
 				{
@@ -294,6 +298,7 @@ export const Elf: bwgr.data.Stock = {
 					],
 					stock: "Elf",
 					traitPool: 1,
+					traits: [],
 					years: 50
 				},
 				{
@@ -475,6 +480,7 @@ export const Elf: bwgr.data.Stock = {
 					],
 					stock: "Elf",
 					traitPool: 1,
+					traits: [],
 					years: 75
 				},
 				{
@@ -579,6 +585,7 @@ export const Elf: bwgr.data.Stock = {
 					],
 					stock: "Elf",
 					traitPool: 1,
+					traits: [],
 					years: 20
 				},
 				{
@@ -855,6 +862,7 @@ export const Elf: bwgr.data.Stock = {
 					],
 					stock: "Elf",
 					traitPool: 1,
+					traits: [],
 					years: 100
 				},
 				{
@@ -989,6 +997,7 @@ export const Elf: bwgr.data.Stock = {
 					],
 					stock: "Elf",
 					traitPool: 1,
+					traits: [],
 					years: 150
 				},
 				{
@@ -1090,6 +1099,7 @@ export const Elf: bwgr.data.Stock = {
 					],
 					stock: "Elf",
 					traitPool: 1,
+					traits: [],
 					years: 65
 				},
 				{
@@ -1170,6 +1180,7 @@ export const Elf: bwgr.data.Stock = {
 					],
 					stock: "Elf",
 					traitPool: 1,
+					traits: [],
 					years: 200
 				},
 				{
@@ -1450,6 +1461,7 @@ export const Elf: bwgr.data.Stock = {
 					],
 					stock: "Elf",
 					traitPool: 1,
+					traits: [],
 					years: 110
 				},
 				{
@@ -1630,6 +1642,7 @@ export const Elf: bwgr.data.Stock = {
 					],
 					stock: "Elf",
 					traitPool: 1,
+					traits: [],
 					years: 30
 				},
 				{
@@ -1732,6 +1745,7 @@ export const Elf: bwgr.data.Stock = {
 					],
 					stock: "Elf",
 					traitPool: 1,
+					traits: [],
 					years: 20
 				},
 				{
@@ -1852,6 +1866,7 @@ export const Elf: bwgr.data.Stock = {
 					],
 					stock: "Elf",
 					traitPool: 1,
+					traits: [],
 					years: 50
 				},
 				{
@@ -2078,6 +2093,7 @@ export const Elf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Griever",
 					physicalPool: 0,
@@ -2102,6 +2118,7 @@ export const Elf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Wastrel",
 					physicalPool: 0,
@@ -2135,6 +2152,7 @@ export const Elf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Thief",
 					physicalPool: 0,
@@ -2167,6 +2185,7 @@ export const Elf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Assassin",
 					physicalPool: 1,
@@ -2200,6 +2219,7 @@ export const Elf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Stalker",
 					physicalPool: 0,
@@ -2236,6 +2256,7 @@ export const Elf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 1,
 					name: "Deciever",
 					physicalPool: 0,
@@ -2267,6 +2288,7 @@ export const Elf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 1,
 					name: "Liar",
 					physicalPool: 0,
@@ -2298,6 +2320,7 @@ export const Elf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
+					leads: [],
 					mentalPool: 0,
 					name: "Siren",
 					physicalPool: 0,
@@ -2378,6 +2401,7 @@ export const Elf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 5,
+					leads: [],
 					mentalPool: 0,
 					name: "Recluse",
 					physicalPool: 1,
