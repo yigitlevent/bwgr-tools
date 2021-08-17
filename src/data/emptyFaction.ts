@@ -1,23 +1,23 @@
-export const EmptyFaction: FactionCard = {
-	basics: {
-		name: "",
-		leader: "",
-		type: "",
-		membership: "",
-		innerCircle: "",
-		doctrines: ["", "", ""],
-		traditions: ["", "", ""],
-		traits: [],
+export const EmptyFaction: bwgr.data.FactionCard = {
+	Basics: {
+		Name: "",
+		Leader: "",
+		Type: "",
+		Membership: "",
+		"Inner Circle": "",
+		Doctrines: ["", "", ""],
+		Traditions: ["", "", ""],
+		Traits: [],
 	},
-	stats: {
-		influence: 0,
-		funds: 0
+	Stats: {
+		Influence: 0,
+		Funds: 0
 	},
-	politics: {
-		alliances: [],
-		allegiances: [],
-		rivals: [],
-		territories: [],
-		assets: []
+	Politics: {
+		Alliances: [],
+		Allegiances: [],
+		Rivals: [],
+		Territories: [],
+		Assets: []
 	}
 };
