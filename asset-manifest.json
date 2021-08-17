@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/bwgr-tools/static/js/main.27216ca9.chunk.js",
+    "main.js.map": "/bwgr-tools/static/js/main.27216ca9.chunk.js.map",
+    "runtime-main.js": "/bwgr-tools/static/js/runtime-main.6c84ff44.js",
+    "runtime-main.js.map": "/bwgr-tools/static/js/runtime-main.6c84ff44.js.map",
+    "static/js/2.8036feef.chunk.js": "/bwgr-tools/static/js/2.8036feef.chunk.js",
+    "static/js/2.8036feef.chunk.js.map": "/bwgr-tools/static/js/2.8036feef.chunk.js.map",
+    "index.html": "/bwgr-tools/index.html",
+    "static/js/2.8036feef.chunk.js.LICENSE.txt": "/bwgr-tools/static/js/2.8036feef.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6c84ff44.js",
+    "static/js/2.8036feef.chunk.js",
+    "static/js/main.27216ca9.chunk.js"
+  ]
+}
