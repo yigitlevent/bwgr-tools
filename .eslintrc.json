@@ -17,8 +17,6 @@
 	"ignorePatterns": ["node_modules", "dist", "build"],
 	"plugins": ["react", "@typescript-eslint", "json"],
 	"rules": {
-		"array-element-newline": ["error", "always"],
-		"array-bracket-newline": ["error", "always"],
 		"eol-last": ["error", "always"],
 		"json/*": ["error", "allowComments"],
 		"prefer-const": "error",
