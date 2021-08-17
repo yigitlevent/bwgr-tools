@@ -22,7 +22,7 @@ export const PracticeTable: bwgr.data.PracticeTable = {
 	"Speed": { Cycle: 3, Routine: 3, Difficult: 6, Challenging: 9 },
 	"Power": { Cycle: 1, Routine: 2, Difficult: 4, Challenging: 8 },
 	"Forte": { Cycle: 2, Routine: 4, Difficult: 8, Challenging: 16 },
-	
+
 	"Faith": { Cycle: 12, Routine: 5, Difficult: 10, Challenging: 20 },
 	"Steel": { Cycle: 2, Routine: 1, Difficult: 3, Challenging: 9 },
-}
+};

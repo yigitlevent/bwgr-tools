@@ -70,7 +70,7 @@ namespace bwgr {
 		}
 
 		interface Stock {
-			agePool: [maxage: number, minage: number, m: number, p: number][];
+			agePool: { max: number, min: number, m: number, p: number; }[];
 			allowed: bwgr.data.RulesetsList[];
 			hasSetting: boolean;
 			hasSubsetting: boolean;
@@ -97,7 +97,7 @@ namespace bwgr {
 			allowed: bwgr.data.RulesetsList[];
 			stock: bwgr.data.StocksList;
 			setting: string;
-			leads?: string[];
+			leads?: bwgr.path.Setting[];
 			years: number | "*";
 			born: boolean;
 
@@ -109,8 +109,8 @@ namespace bwgr {
 			traitPool: number;
 			resources: number | `${number}/yr` | "*";
 
-			skills?: string[];
-			traits?: string[];
+			skills?: bwgr.path.Skill[];
+			traits?: bwgr.path.Trait[];
 
 			requirements?: {
 				OR?: (string | string[])[];
@@ -165,13 +165,33 @@ namespace bwgr {
 		}
 
 		interface PracticeTable {
-			[key:string]: {
+			[key: string]: {
 				Cycle: number;
 				Routine: number;
 				Difficult: number;
 				Challenging: number;
-			}
+			};
 		}
+
+	}
+
+	namespace path {
+
+		type Stock = `${bwgr.data.StocksList}`;
+		type Setting = `${bwgr.path.Stock}->${string}`;
+		type Lifepath = `${bwgr.path.Setting}->${string}`;
+
+		type SkillCategory = `${"Any"} ${"General" | "Monstrous" | "Wise"}`
+			| `${"Dwarf" | "Elf" | "Human" | "Orc" | "Roden" | "Troll" | "Great Wolf"} ${"Special"}`
+			| `Dwarf ${"Art"}`
+			| `Elf ${"Skill Song" | "Spell Song"}`
+			| `Dark Elf ${"Skill Song" | "Spell Song"}`
+			| `Human ${"Magical"}`
+			| `Great Wolf ${"Spirit Hunter Song"}`;
+		type Skill = `${bwgr.path.SkillCategory}->${string}`;
+
+		type TraitCategory = `${string}`;
+		type Trait = `${bwgr.path.TraitCategory}->${string}`;
 
 	}
 

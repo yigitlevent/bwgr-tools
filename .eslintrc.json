@@ -1,0 +1,58 @@
+{
+	"root": true,
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": ["react-app", "eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended", "plugin:json/recommended"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"version": "detect",
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"ignorePatterns": ["node_modules", "dist", "build"],
+	"plugins": ["react", "@typescript-eslint", "json"],
+	"rules": {
+		"array-element-newline": ["error", "always"],
+		"array-bracket-newline": ["error", "always"],
+		"eol-last": ["error", "always"],
+		"json/*": ["error", "allowComments"],
+		"prefer-const": "error",
+		"no-empty": "off",
+		"no-empty-function": "off",
+		"camelcase": "off",
+		"no-mixed-spaces-and-tabs": "error",
+		"linebreak-style": "off",
+		"quotes": ["error", "double"],
+		"semi": ["error", "always"],
+		"no-unused-vars": "off",
+		"indent": "off",
+		"@typescript-eslint/indent": ["error", "tab", { "SwitchCase": 1 }],
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/no-empty-interface": "off",
+		"@typescript-eslint/no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars-experimental": ["warn", { "ignoreArgsIfArgsAfterAreUsed": true }],
+		"@typescript-eslint/no-empty-function": "warn",
+		"@typescript-eslint/no-inferrable-types": "off",
+		"@typescript-eslint/naming-convention": [
+			"error",
+			{ "selector": "default", "format": ["snake_case"] },
+			{ "selector": ["variable", "parameter"], "format": ["camelCase"] },
+			{ "selector": "variable", "modifiers": ["global"], "format": ["PascalCase"] },
+			{ "selector": "function", "format": ["PascalCase"] },
+			{ "selector": "function", "filter": { "regex": "^use", "match": true }, "format": ["camelCase"] },
+			{ "selector": "property", "format": ["camelCase", "snake_case", "PascalCase"] },
+			{ "selector": "typeLike", "format": ["PascalCase"] },
+			{ "selector": "method", "format": ["camelCase"] },
+			{ "selector": "classProperty", "format": ["camelCase", "snake_case"], "leadingUnderscore": "allow" }
+		],
+		"react/react-in-jsx-scope": "off",
+		"react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn"
+	}
+}
