@@ -8,7 +8,6 @@ import { LifepathList } from "./rightbox/LifepathList";
 import { SkillList } from "./rightbox/SkillList";
 import { TraitList } from "./rightbox/TraitList";
 import { MagicWheel } from "./rightbox/MagicWheel";
-import { Distillation } from "./rightbox/Distillation";
 
 export function RightBox(): JSX.Element {
 	const { activeMenu } = ClientStore(state => ({ activeMenu: state.activeMenu }), shallow);
@@ -20,6 +19,8 @@ export function RightBox(): JSX.Element {
 			{(activeMenu === "trait") ? <TraitList /> : null}
 			{(activeMenu === "magicwheel") ? <MagicWheel /> : null}
 			{/*(activeMenu === "distillation") ? <Distillation /> : null*/}
+			{/*(activeMenu === "faction") ? <FactionMaker /> : null*/}
+			{/*(activeMenu === "unit") ? <UnitMaker /> : null*/}
 		</Box>
 	);
 }

@@ -2,7 +2,7 @@ namespace bwgr {
 
 	namespace stores {
 
-		type MenuNames = "" | "lifepath" | "skill" | "trait" | "magicwheel" | "distillation";
+		type MenuNames = "" | "lifepath" | "skill" | "trait" | "magicwheel" | "distillation" | "faction" | "unit";
 
 		interface ClientStore {
 			status: bwgr.Status;
