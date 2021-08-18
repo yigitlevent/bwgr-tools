@@ -15,7 +15,6 @@ export function TraitList(): JSX.Element {
 	return (
 		<Fragment>
 			<Subtitle>{traitMenu.category}</Subtitle>
-
 			<CategoryWrapper>
 				{TraitCategories[traitMenu.category].traits.map((v, i) => {
 					return (

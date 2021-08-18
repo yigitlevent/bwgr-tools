@@ -15,7 +15,6 @@ export function SkillList(): JSX.Element {
 	return (
 		<Fragment>
 			<Subtitle>{skillMenu.category}</Subtitle>
-
 			<CategoryWrapper>
 				{SkillCategories[skillMenu.category].skills.map((v, i) => {
 					return (
