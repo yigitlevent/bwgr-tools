@@ -7,6 +7,7 @@ export const ClientStore = create<bwgr.stores.ClientStore>(set => ({
 	activeMenu: "",
 
 	lifepathMenu: { stock: "", setting: "" },
+	magicwheelMenu: { canvasSize: 580, circleRadius: 32, circleOffset: 90, textOffset: 100 },
 
 	// BASICS
 	setStatus: (status) => set(produce((state: bwgr.stores.ClientStore) => {
@@ -23,5 +24,4 @@ export const ClientStore = create<bwgr.stores.ClientStore>(set => ({
 	setLifepathMenu: (stock, setting) => set(produce((state: bwgr.stores.ClientStore) => {
 		state.lifepathMenu = { stock, setting };
 	}))
-
 }));
