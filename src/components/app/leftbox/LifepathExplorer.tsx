@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import SelectSearch, { fuzzySearch } from "react-select-search";
 import shallow from "zustand/shallow";
 
@@ -6,6 +6,7 @@ import { Stocks } from "../../../data/stocks";
 
 import { ClientStore } from "../../../stores/ClientStore";
 
+import { SubBox } from "../../shared/Box";
 import { Button } from "../../shared/Inputs";
 import { Subtitle } from "../../shared/Titles";
 
@@ -20,7 +21,7 @@ export function LifepathExplorer(): JSX.Element {
 	const [setting, setSetting] = useState(lifepathMenu.setting);
 
 	return (
-		<Fragment>
+		<SubBox>
 			<Subtitle>Lifepath Explorer</Subtitle>
 
 			<SelectSearch
@@ -46,7 +47,6 @@ export function LifepathExplorer(): JSX.Element {
 				? <Button value={"List"} onClick={() => { setActiveMenu("lifepath"); setLifepathMenu(stock, setting); }} />
 				: null
 			}
-
-		</Fragment>
+		</SubBox>
 	);
 }

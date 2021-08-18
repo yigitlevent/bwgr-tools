@@ -10,6 +10,7 @@ export const Title = styled.div`
 
 	border-bottom: ${(props: bwgr.style.Props) => props.theme.border.hard};
 
+	width: 100%;
 	flex: 1 0 auto;
 `;
 
@@ -19,5 +20,8 @@ export const Subtitle = styled.div`
 
 	font-family: "Title";
 
+	border-bottom: ${(props: bwgr.style.Props) => props.theme.border.medium};
+
+	width: 100%;
 	flex: 1 0 auto;
 `;

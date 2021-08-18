@@ -102,7 +102,7 @@ export const GlobalStyle = createGlobalStyle`
 		display: inline-block;
 		position: absolute;
 		top: calc(50% - 9px);
-		right: 19px;
+		right: 10px;
 		width: 11px;
 		height: 11px;
 	}

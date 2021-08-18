@@ -24,10 +24,13 @@ export const Box = styled.div<{ grow: number; shrink: number; flexWidth: string;
 	outline: ${(props: bwgr.style.Props) => props.theme.border.medium};
 	
 	flex: ${p => p.grow} ${p => p.shrink} ${p => p.flexWidth};
+`;
 
+export const SubBox = styled.div`
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: flex-start;
 	align-content: flex-start;
+	margin: 4px 0 12px 0;
 `;
