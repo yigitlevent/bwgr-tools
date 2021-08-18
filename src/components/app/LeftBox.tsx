@@ -5,6 +5,7 @@ import { LifepathExplorer } from "./leftbox/LifepathExplorer";
 import { SkillExplorer } from "./leftbox/SkillExplorer";
 import { TraitExplorer } from "./leftbox/TraitExplorer";
 import { MagicWheel } from "./leftbox/MagicWheel";
+import { Distillation } from "./leftbox/Distillation";
 
 export function LeftBox(): JSX.Element {
 
@@ -15,6 +16,7 @@ export function LeftBox(): JSX.Element {
 			<SkillExplorer />
 			<TraitExplorer />
 			<MagicWheel />
+			{/*<Distillation />*/}
 		</Box>
 	);
 }

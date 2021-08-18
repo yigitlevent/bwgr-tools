@@ -6,7 +6,7 @@ import { SubBox } from "../../shared/Box";
 import { Subtitle } from "../../shared/Titles";
 import { NoLink } from "../../shared/Links";
 
-export function MagicWheel(): JSX.Element {
+export function Distillation(): JSX.Element {
 	const { setActiveMenu } = ClientStore(state => ({
 		setActiveMenu: state.setActiveMenu
 	}), shallow);
@@ -14,8 +14,8 @@ export function MagicWheel(): JSX.Element {
 	return (
 		<SubBox>
 			<Subtitle noBorder>
-				<NoLink onClick={() => { setActiveMenu("magicwheel"); }}>
-					Magic Wheel
+				<NoLink onClick={() => { setActiveMenu("distillation"); }}>
+					Spell Distillation
 				</NoLink>
 			</Subtitle>
 		</SubBox>
