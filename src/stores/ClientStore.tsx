@@ -7,6 +7,8 @@ export const ClientStore = create<bwgr.stores.ClientStore>(set => ({
 	activeMenu: "",
 
 	lifepathMenu: { stock: "", setting: "" },
+	skillMenu: { category: "" },
+	traitMenu: { category: "" },
 	magicwheelMenu: { canvasSize: 580, circleRadius: 32, circleOffset: 90, textOffset: 100 },
 
 	// BASICS
@@ -23,5 +25,15 @@ export const ClientStore = create<bwgr.stores.ClientStore>(set => ({
 	// LIFEPATH MENU
 	setLifepathMenu: (stock, setting) => set(produce((state: bwgr.stores.ClientStore) => {
 		state.lifepathMenu = { stock, setting };
+	})),
+
+	// SKILL MENU
+	setSkillMenu: (skill) => set(produce((state: bwgr.stores.ClientStore) => {
+		state.skillMenu.category = skill;
+	})),
+
+	// TRAIT MENU
+	setTraitMenu: (trait) => set(produce((state: bwgr.stores.ClientStore) => {
+		state.traitMenu.category = trait;
 	}))
 }));

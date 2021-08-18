@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { GetOrdinalSuffix } from "../../../../utility/ordinalSuffix";
 
-import { List, ListTitle } from "../../../shared/Lifepath";
+import { List, ListTitle } from "../../../shared/Inner";
 
 const ReqBlock = styled.div`
 	display: inline;

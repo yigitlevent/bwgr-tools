@@ -6,9 +6,9 @@ import { Stocks } from "../../../data/stocks";
 
 import { ClientStore } from "../../../stores/ClientStore";
 
-import { NoLink } from "../../shared/Link";
+import { NoLink } from "../../shared/Links";
 import { Subtitle } from "../../shared/Titles";
-import { ListBlock } from "../../shared/Lifepath";
+import { ListBlock } from "../../shared/Inner";
 
 import { Skills } from "./lifepathlist/Skills";
 import { Traits } from "./lifepathlist/Traits";

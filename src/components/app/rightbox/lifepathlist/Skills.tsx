@@ -1,5 +1,5 @@
-import { List, ListTitle, ListBlock, ListPoint } from "../../../shared/Lifepath";
-import { NoLink } from "../../../shared/Link";
+import { List, ListTitle, ListBlock, ListPoint } from "../../../shared/Inner";
+import { NoLink } from "../../../shared/Links";
 
 export function Skills({ generalSkillPool, skillPool, skills }: { generalSkillPool: number | `${number}/yr`; skillPool: number | "*"; skills: bwgr.path.Skill[]; }): JSX.Element {
 	const hasGeneralSkill = typeof generalSkillPool === "string" || generalSkillPool > 0;

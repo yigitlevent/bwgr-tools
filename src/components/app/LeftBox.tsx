@@ -2,6 +2,8 @@ import { Box } from "../shared/Box";
 import { Title } from "../shared/Titles";
 
 import { LifepathExplorer } from "./leftbox/LifepathExplorer";
+import { SkillExplorer } from "./leftbox/SkillExplorer";
+import { TraitExplorer } from "./leftbox/TraitExplorer";
 import { MagicWheel } from "./leftbox/MagicWheel";
 
 export function LeftBox(): JSX.Element {
@@ -10,6 +12,8 @@ export function LeftBox(): JSX.Element {
 		<Box grow={0} shrink={0} flexWidth={"300px"}>
 			<Title>BWGR Tools</Title>
 			<LifepathExplorer />
+			<SkillExplorer />
+			<TraitExplorer />
 			<MagicWheel />
 		</Box>
 	);

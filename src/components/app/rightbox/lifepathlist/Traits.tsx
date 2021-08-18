@@ -1,5 +1,5 @@
-import { List, ListTitle, ListBlock, ListPoint } from "../../../shared/Lifepath";
-import { NoLink } from "../../../shared/Link";
+import { List, ListTitle, ListBlock, ListPoint } from "../../../shared/Inner";
+import { NoLink } from "../../../shared/Links";
 
 export function Traits({ traitPool, traits }: { traitPool: number; traits: bwgr.path.Trait[]; }): JSX.Element {
 	return (

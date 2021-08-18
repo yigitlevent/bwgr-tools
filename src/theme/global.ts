@@ -76,11 +76,14 @@ export const GlobalStyle = createGlobalStyle`
 	//// React-Select-Search
 	/////// Main wrapper
 	.select-search {
-		width: 300px;
+		min-width: 120px;
+		max-width: 300px;
 		position: relative;
 		font-family: "Text";
 		box-sizing: border-box;
-		margin: 1px 2px;
+		margin: 2px;
+
+		flex: 1 1 auto;
 	}
 
 	.select-search *,
@@ -142,7 +145,7 @@ export const GlobalStyle = createGlobalStyle`
 	* Options wrapper
 	*/
 	.select-search__select {
-		background: #fff;
+		background: ${(props: bwgr.style.Props) => props.theme.background.input};
 		box-shadow: 0 .0625rem .125rem rgba(0, 0, 0, 0.15);
 	}
 
@@ -206,7 +209,7 @@ export const GlobalStyle = createGlobalStyle`
 	.select-search__group-header {
 		font-size: 10px;
 		text-transform: uppercase;
-		background: #eee;
+		background: ${(props: bwgr.style.Props) => props.theme.background.subelement};
 		padding: 8px 16px;
 	}
 
@@ -252,9 +255,8 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	.select-search:not(.select-search--multiple) .select-search__input:hover {
-		border-color: #2FCC8B;
+		border: ${(props: bwgr.style.Props) => props.theme.border.hard};
 	}
-
 
 	.select-search:not(.select-search--multiple) .select-search__select {
 		position: absolute;
