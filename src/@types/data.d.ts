@@ -65,10 +65,16 @@ namespace bwgr {
 		type SkillTypesList = "Academic" | "Artisan" | "Artist" | "Craftsman" | "Forester" | "Martial" | "Medicinal" | "Military" | "Musical" | "Peasant" | "Physical" | "School of Thought" | "Seafaring" | "Social" | "Sorcerous" | "Special" | "Wise";
 		type TraitTypesList = "Character" | "Call-on" | "Die" | "Call-on and Die";
 
+		interface Requirements {
+			conditions?: bwgr.data.Condition;
+			limits?: bwgr.data.Limit[];
+			texts?: string[];
+		};
 		interface Condition {
 			type: "AND" | "OR" | "NOT",
 			items: (bwgr.path.Lifepath | `Skill➞${bwgr.path.Skill}` | `Trait➞${bwgr.path.Trait}` | bwgr.data.Condition)[];
 		}
+		type Limit = (`LP➞UNIQUE` | `GENDER➞${"FEMALE" | "MALE"}` | `${"YEARS" | "LP"}➞${"MIN" | "MAX"}➞${number}`);
 
 		interface Stocks {
 			[key: string]: bwgr.data.Stock;
@@ -118,11 +124,7 @@ namespace bwgr {
 			skills: bwgr.path.Skill[];
 			traits: bwgr.path.Trait[];
 
-			requirements: {
-				conditions?: bwgr.data.Condition;
-				limits?: (`LP➞UNIQUE` | `GENDER➞${"FEMALE" | "MALE"}` | `${"YEARS" | "LP"}➞${"MIN" | "MAX"}➞${number}`)[];
-				texts?: string[];
-			};
+			requirements: bwgr.data.Requirements;
 		}
 
 		interface SkillCategories {

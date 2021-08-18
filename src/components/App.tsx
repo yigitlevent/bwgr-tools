@@ -13,7 +13,7 @@ export function App(): JSX.Element {
 		<ThemeProvider theme={DarkTheme}>
 			<GlobalStyle />
 
-			<OuterBox width={"800px"}>
+			<OuterBox>
 				<LeftBox />
 				<RightBox />
 			</OuterBox>

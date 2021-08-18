@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const OuterBox = styled.div<{ width: string; }>`
+export const OuterBox = styled.div`
 	width: 100%;
 	padding: 0;
 	margin: 0 auto;

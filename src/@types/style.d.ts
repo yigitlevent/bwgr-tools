@@ -14,10 +14,16 @@ namespace bwgr {
 				subelement: string;
 				input: string;
 			};
+			accents : {
+				super: string;
+				main: string;
+				sub: string;
+			}
 			text: {
 				main: string;
 				hint: string;
 				link: string;
+				nolink: string;
 			};
 			border: {
 				soft: string;

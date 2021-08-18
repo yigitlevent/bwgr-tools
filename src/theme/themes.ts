@@ -1,3 +1,5 @@
+// https://paletton.com/#uid=75C0O0kffcx9Pn4cdhWkyaOpA7N
+
 export const DarkTheme: bwgr.style.Palette = {
 	background: {
 		surface: "rgb(24, 24, 24)",
@@ -6,10 +8,16 @@ export const DarkTheme: bwgr.style.Palette = {
 		subelement: "rgb(64, 64, 64)",
 		input: "rgb(80, 80, 80)"
 	},
+	accents: {
+		super: "rgb(99, 52, 53)",
+		main: "rgb(142, 88, 89)",
+		sub: "rgb(182, 126, 127)"
+	},
 	text: {
 		main: "rgb(210, 210, 210)",
 		hint: "rgb(180, 180, 180)",
-		link: "rgb(170, 190, 240)"
+		link: "rgb(86, 102, 120)",
+		nolink: "rgb(184, 162, 127)"
 	},
 	border: {
 		soft: "1px solid rgb(64, 64, 64)",

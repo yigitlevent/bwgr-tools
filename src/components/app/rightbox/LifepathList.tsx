@@ -6,7 +6,13 @@ import { Stocks } from "../../../data/stocks";
 
 import { ClientStore } from "../../../stores/ClientStore";
 
+import { NoLink } from "../../shared/Link";
 import { Subtitle } from "../../shared/Titles";
+import { ListBlock } from "../../shared/Lifepath";
+
+import { Skills } from "./lifepathlist/Skills";
+import { Traits } from "./lifepathlist/Traits";
+import { Requirements } from "./lifepathlist/Requirements";
 
 const LifepathBox = styled.div`
 	width: 100%;
@@ -22,7 +28,7 @@ const LifepathTop = styled.div`
 	padding: 2px 6px 5px;
 
 	display: grid;
-	grid-template-columns: 160px 60px 60px 60px auto;
+	grid-template-columns: 2fr repeat(3, 56px) 3fr;
 	grid-template-rows: 1fr;
 
 	background: ${(props: bwgr.style.Props) => props.theme.background.subelement};
@@ -45,36 +51,8 @@ const LifepathTop = styled.div`
 	}
 `;
 
-const List = styled.div`
-	padding: 2px 0 2px 8px;
-
-	& > span {
-		font-weight: bold;
-		font-style: italic;
-		margin-right: 4px;
-	}
-`;
-
 export function LifepathList(): JSX.Element {
 	const { lifepathMenu } = ClientStore(state => ({ lifepathMenu: state.lifepathMenu }), shallow);
-
-	const requirementsResolver = (conditionsBlock: bwgr.data.Condition): string => {
-		const tempSet = new Set<string>();
-
-		conditionsBlock.items.forEach(condition => {
-			if (typeof condition === "string") {
-				tempSet.add(condition.split("➞")[2]);
-			}
-			else {
-				tempSet.add(requirementsResolver(condition));
-			}
-		});
-
-		const array = [...tempSet];
-		if (array.length > 1) array[array.length - 1] = `${conditionsBlock.type.toLowerCase()} ${array[array.length - 1]}`;
-
-		return (array.length < 3) ? array.join(" ") : array.join(", ");
-	};
 
 	const setting = Stocks[lifepathMenu.stock].settings[lifepathMenu.setting];
 
@@ -96,21 +74,6 @@ export function LifepathList(): JSX.Element {
 			}
 		}
 
-		const skillsString = [];
-		if (typeof lifepath.generalSkillPool === "string" || lifepath.generalSkillPool > 0) {
-			skillsString.push(`${lifepath.generalSkillPool}${(lifepath.generalSkillPool > 1) ? "pts" : "pt"}: General`);
-		}
-		if (typeof lifepath.skillPool === "string" || lifepath.skillPool > 0) {
-			skillsString.push(`${lifepath.skillPool}${(lifepath.skillPool > 1) ? "pts" : "pt"}: ${lifepath.skills.map(v => v.split("➞")[1]).join(", ")}`);
-		}
-
-		const traitsString = `${lifepath.traitPool}${(lifepath.traitPool > 1) ? "pts" : "pt"}: ${(lifepath.traits.length === 0) ? "—" : lifepath.traits.map(v => v.split("➞")[1]).join(", ")}`;
-
-		const requirementsArray = [];
-		if (lifepath.requirements.conditions) requirementsArray.push(requirementsResolver(lifepath.requirements.conditions));
-		if (lifepath.requirements.limits) requirementsArray.push(lifepath.requirements.limits.join("/"));
-		if (lifepath.requirements.texts) requirementsArray.push(lifepath.requirements.texts.join(" "));
-
 		return (
 			<LifepathBox key={i}>
 				<LifepathTop>
@@ -118,19 +81,22 @@ export function LifepathList(): JSX.Element {
 					<div>{lifepath.years}{yearString}</div>
 					<div>{lifepath.resources}{resourcesString}</div>
 					<div>{statPoolsString.join(", ")}</div>
-					<div>{(lifepath.leads.length === 0) ? "—" : lifepath.leads.map(v => {
-						const path = v.split("➞");
-						return Stocks[path[0]].settings[path[1]].short;
-					}).join(", ")}</div>
+					<div>
+						<ListBlock>
+							{(lifepath.leads.length === 0) ? "—" : lifepath.leads.map((lead, leadIndex) => {
+								const path = lead.split("➞");
+								return <NoLink key={leadIndex} seperator={","}>{Stocks[path[0]].settings[path[1]].short}</NoLink>;
+							})}
+						</ListBlock>
+					</div>
 				</LifepathTop>
 
-				<List><span>Skills:</span> {skillsString.join("; ")}</List>
-				<List><span>Traits:</span> {traitsString}</List>
+				<Skills generalSkillPool={lifepath.generalSkillPool} skillPool={lifepath.skillPool} skills={lifepath.skills} />
+
+				<Traits traitPool={lifepath.traitPool} traits={lifepath.traits} />
 
 				{(Object.keys(lifepath.requirements).length > 0)
-					? <List>
-						<span>Requirements:</span> {`${requirementsArray.join(". ")}`}
-					</List>
+					? <Requirements requirements={lifepath.requirements} />
 					: null
 				}
 			</LifepathBox>

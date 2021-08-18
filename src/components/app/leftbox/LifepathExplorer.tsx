@@ -1,11 +1,12 @@
 import { Fragment, useState } from "react";
+import SelectSearch, { fuzzySearch } from "react-select-search";
 import shallow from "zustand/shallow";
 
 import { Stocks } from "../../../data/stocks";
 
 import { ClientStore } from "../../../stores/ClientStore";
 
-import { Select, Option, Button } from "../../shared/Inputs";
+import { Button } from "../../shared/Inputs";
 import { Subtitle } from "../../shared/Titles";
 
 export function LifepathExplorer(): JSX.Element {
@@ -22,20 +23,30 @@ export function LifepathExplorer(): JSX.Element {
 		<Fragment>
 			<Subtitle>Lifepath Explorer</Subtitle>
 
-			<Select value={stock} onChange={e => { setStock(e.target.value as any); setSetting(""); }}>
-				<Option value=""></Option>
-				{Object.keys(Stocks).map((k, i) => <Option key={i} value={k}>{k}</Option>)}
-			</Select>
+			<SelectSearch
+				options={[{ name: "", value: "" }, ...Object.keys(Stocks).map(k => { return { name: k, value: k }; })]}
+				value={stock}
+				search filterOptions={fuzzySearch}
+				placeholder="Choose a Stock"
+				onChange={(selectedValue) => { setStock(selectedValue as any); setSetting(""); }}
+			/>
 
-			<Select value={setting} onChange={e => setSetting(e.target.value)}>
-				<Option value=""></Option>
-				{(stock !== "")
-					? Object.keys(Stocks[stock].settings).map((k, i) => <Option key={i} value={k}>{k}</Option>)
-					: null
-				}
-			</Select>
+			{(stock !== "" && stock)
+				? <SelectSearch
+					options={[{ name: "", value: "" }, ...Object.keys(Stocks[stock].settings).map(k => { return { name: k, value: k }; })]}
+					value={setting}
+					search filterOptions={fuzzySearch}
+					placeholder="Choose a Setting"
+					onChange={(selectedValue) => { setSetting(selectedValue as any); }}
+				/>
+				: null
+			}
 
-			<Button value={"List"} onClick={() => { setActiveMenu("lifepath"); setLifepathMenu(stock, setting); }} />
+			{(stock !== "" && setting !== "")
+				? <Button value={"List"} onClick={() => { setActiveMenu("lifepath"); setLifepathMenu(stock, setting); }} />
+				: null
+			}
+
 		</Fragment>
 	);
 }
