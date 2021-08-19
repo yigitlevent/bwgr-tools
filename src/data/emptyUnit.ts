@@ -2,7 +2,7 @@ export const EmptyUnit: bwgr.data.UnitCard = {
 	name: "",
 	commander: "",
 	type: "",
-	status: "",
+	status: "Inactive",
 	composition: "",
 	doctrine: "",
 	tradition: "",

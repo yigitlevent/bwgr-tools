@@ -27,14 +27,15 @@ namespace bwgr {
 		}
 
 		interface UnitCard {
+			[key: string]: string | ["B" | "G" | "W", number] | number | bwgr.data.ListItem[];
 			name: string;
 			commander: string;
 			type: string;
-			status: string; // fixed
+			status: "Active" | "Inactive";
 			composition: string;
 			doctrine: string;
 			tradition: string;
-			traits: string[];
+			traits: bwgr.data.ListItem[];
 			ambush: ["B" | "G" | "W", number];
 			battle: ["B" | "G" | "W", number];
 			siege: ["B" | "G" | "W", number];
