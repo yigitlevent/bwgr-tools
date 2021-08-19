@@ -1,30 +1,22 @@
 export const EmptyUnitrs: bwgr.data.UnitCard = {
-	Basics: {
-		Name: "",
-		Commander: "",
-		Type: "",
-		Status: "",
-		Composition: "",
-		Doctrine: "",
-		Tradition: "",
-		Traits: []
-	},
-	Stats: {
-		Ambush: ["B", 0],
-		Battle: ["B", 0],
-		Siege: ["B", 0],
-		Skirmish: ["B", 0],
-		Soldiering: ["B", 0],
-		Seamanship: ["B", 0]
-	},
-	Attributes: {
-		Health: ["B", 0],
-		Steel: ["B", 0],
-	},
-	Aspects: {
-		Strature: 0,
-		Strength: 0,
-		Stride: 0,
-		Supply: 0
-	}
+	name: "",
+	commander: "",
+	type: "",
+	status: "",
+	composition: "",
+	doctrine: "",
+	tradition: "",
+	traits: [],
+	ambush: ["B", 0],
+	battle: ["B", 0],
+	siege: ["B", 0],
+	skirmish: ["B", 0],
+	soldiering: ["B", 0],
+	seamanship: ["B", 0],
+	health: ["B", 0],
+	steel: ["B", 0],
+	strature: 0,
+	strength: 0,
+	stride: 0,
+	supply: 0
 };

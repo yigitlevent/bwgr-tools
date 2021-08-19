@@ -2,59 +2,51 @@ namespace bwgr {
 
 	namespace data {
 
+		interface ListItem {
+			name: string;
+			description: string;
+		}
+
 		interface FactionCard {
-			Basics: {
-				Name: string;
-				Leader: string;
-				Type: string;
-				Membership: string;
-				"Inner Circle": string;
-				Doctrines: [string, string, string];
-				Traditions: [string, string, string];
-				Traits: string[];
-			};
-			Stats: {
-				Influence: number;
-				Funds: number;
-			};
-			Politics: {
-				Alliances: { name: string; description: string; }[];
-				Allegiances: { name: string; description: string; }[];
-				Rivals: { name: string; description: string; }[];
-				Territories: { name: string; description: string; }[];
-				Assets: { name: string; description: string; }[];
-			};
+			[key: string]: string | string[] | [string, string, string] | number | bwgr.data.ListItem[];
+			name: string;
+			leader: string;
+			type: string;
+			membership: string;
+			innerCircle: string;
+			doctrines: [string, string, string];
+			traditions: [string, string, string];
+			traits: string[];
+			influence: number;
+			funds: number;
+			alliances: [];
+			allegiances: bwgr.data.ListItem[];
+			rivals: bwgr.data.ListItem[];
+			territories: bwgr.data.ListItem[];
+			assets: bwgr.data.ListItem[];
 		}
 
 		interface UnitCard {
-			Basics: {
-				Name: string;
-				Commander: string;
-				Type: string;
-				Status: string; // fixed
-				Composition: string;
-				Doctrine: string;
-				Tradition: string;
-				Traits: string[];
-			};
-			Stats: {
-				Ambush: ["B" | "G" | "W", number];
-				Battle: ["B" | "G" | "W", number];
-				Siege: ["B" | "G" | "W", number];
-				Skirmish: ["B" | "G" | "W", number];
-				Soldiering: ["B" | "G" | "W", number];
-				Seamanship: ["B" | "G" | "W", number];
-			};
-			Attributes: {
-				Health: ["B" | "G" | "W", number];
-				Steel: ["B" | "G" | "W", number];
-			};
-			Aspects: {
-				Strature: number;
-				Strength: number;
-				Stride: number;
-				Supply: number;
-			};
+			name: string;
+			commander: string;
+			type: string;
+			status: string; // fixed
+			composition: string;
+			doctrine: string;
+			tradition: string;
+			traits: string[];
+			ambush: ["B" | "G" | "W", number];
+			battle: ["B" | "G" | "W", number];
+			siege: ["B" | "G" | "W", number];
+			skirmish: ["B" | "G" | "W", number];
+			soldiering: ["B" | "G" | "W", number];
+			seamanship: ["B" | "G" | "W", number];
+			health: ["B" | "G" | "W", number];
+			steel: ["B" | "G" | "W", number];
+			strature: number;
+			strength: number;
+			stride: number;
+			supply: number;
 		}
 
 		type RulesetsList = "bwg" | "bwc";
