@@ -60,7 +60,8 @@ export const GlobalStyle = createGlobalStyle`
 		align-items: flex-start;
 		align-content: flex-start;
 		overflow: hidden scroll;
-		margin: 10px 0;
+		margin: 0;
+		padding: 30px 0;
 	}
 
 	p {
@@ -76,7 +77,8 @@ export const GlobalStyle = createGlobalStyle`
 	//// React-Select-Search
 	/////// Main wrapper
 	.select-search {
-		min-width: 120px;
+		width: min-content;
+		min-width: 160px;
 		max-width: 300px;
 		position: relative;
 		font-family: "Text";
