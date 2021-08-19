@@ -22,7 +22,7 @@ export function Faction(): JSX.Element {
 			<Subtitle>Faction Maker</Subtitle>
 
 			<SelectSearch
-				options={[{ name: "", value: -1 }]} // TODO: stored factions
+				options={[{ name: "", value: -1 }, ...factionMenu.factions.map((v, i) => { return { name: v.name, value: i }; })]}
 				value={factionIndex.toString()}
 				search filterOptions={fuzzySearch}
 				placeholder="Choose a Faction"

@@ -22,7 +22,7 @@ export function Unit(): JSX.Element {
 			<Subtitle>Unit Maker</Subtitle>
 
 			<SelectSearch
-				options={[{ name: "", value: -1 }]} // TODO: stored units
+				options={[{ name: "", value: -1 }, ...unitMenu.units.map((v, i) => { return { name: v.name, value: i }; })]}
 				value={unitIndex.toString()}
 				search filterOptions={fuzzySearch}
 				placeholder="Choose a Unit"
