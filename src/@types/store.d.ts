@@ -13,8 +13,8 @@ namespace bwgr {
 			skillMenu: { category: string; };
 			traitMenu: { category: string; };
 			magicwheelMenu: { canvasSize: number; circleRadius: number; circleOffset: number; textOffset: number; };
-			factionMenu: { factionIndex: number; };
-			unitMenu: { unitIndex: number; };
+			factionMenu: { factionIndex: number; factions: bwgr.data.FactionCard[]; };
+			unitMenu: { unitIndex: number; units: bwgr.data.UnitCard[]; };
 
 			// BASICS
 			setStatus: (status: bwgr.Status) => void;
@@ -36,9 +36,13 @@ namespace bwgr {
 
 			// FACTION MENU
 			setFactionMenu: (factionIndex: number) => void;
+			addFaction: (faction: bwgr.data.FactionCard) => void;
+			removeFaction: (factionIndex: number) => void;
 
 			// UNIT MENU
 			setUnitMenu: (unitIndex: number) => void;
+			addUnit: (unit: bwgr.data.UnitCard) => void;
+			removeUnit: (unitIndex: number) => void;
 		}
 
 	}
