@@ -13,6 +13,8 @@ namespace bwgr {
 			skillMenu: { category: string; };
 			traitMenu: { category: string; };
 			magicwheelMenu: { canvasSize: number; circleRadius: number; circleOffset: number; textOffset: number; };
+			factionMenu: { factionIndex: number; };
+			unitMenu: { unitIndex: number; };
 
 			// BASICS
 			setStatus: (status: bwgr.Status) => void;
@@ -27,6 +29,16 @@ namespace bwgr {
 
 			// TRAIT MENU
 			setTraitMenu: (traitCategory: string) => void;
+
+			// MAGICWHEEL MENU
+
+			// DISTILLATION MENU
+
+			// FACTION MENU
+			setFactionMenu: (factionIndex: number) => void;
+
+			// UNIT MENU
+			setUnitMenu: (unitIndex: number) => void;
 		}
 
 	}
