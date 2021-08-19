@@ -36,12 +36,6 @@ const Line = styled.div`
 	align-items: center;
 	align-content: center;
 
-	& > input:not([type="button"]) {
-		width: 30px;
-		padding: 0 8px;
-		text-align: center;
-	}
-
 	& > input:is([type="button"]) {
 		margin: 3px auto;
 	}
@@ -181,22 +175,31 @@ export function MagicWheel(): JSX.Element {
 		const targetRotation = [...currentAngle].map((v, i) => v + (amount * (blockAngle[i] / 2)));
 
 		let myReq: number = 0;
+
 		let tempRotation = [...currentRotation];
 
+		let skip = true;
+		let done = false;
 		const step = () => {
-			tempRotation = [...tempRotation].map((v, i) => {
-				const tempVal = v + (0.05 * amount);
-				if ((amount > 0 && tempVal >= targetRotation[i])
-					|| (amount < 0 && tempVal <= targetRotation[i])) return targetRotation[i];
-				return tempVal;
-			});
+			skip = !skip;
+			if (!skip) {
+				tempRotation = [...tempRotation].map((v, i) => {
+					const tempVal = v + (0.05 * amount);
+					if ((amount > 0 && tempVal >= targetRotation[i])
+						|| (amount < 0 && tempVal <= targetRotation[i])) return targetRotation[i];
+					return tempVal;
+				});
 
-			drawAll(tempRotation);
+				drawAll(tempRotation);
 
-			setCurrentAngle(tempRotation);
+				setCurrentAngle(tempRotation);
 
-			if ((amount > 0 && tempRotation.every((v, i) => v >= targetRotation[i]))
-				|| (amount < 0 && tempRotation.every((v, i) => v <= targetRotation[i]))) {
+				if ((amount > 0 && tempRotation.every((v, i) => v >= targetRotation[i]))
+					|| (amount < 0 && tempRotation.every((v, i) => v <= targetRotation[i]))) {
+					done = true;
+				}
+			}
+			if (done) {
 				cancelAnimationFrame(myReq);
 				setIsRotating(false);
 			}
