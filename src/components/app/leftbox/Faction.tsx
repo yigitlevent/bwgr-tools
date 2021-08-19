@@ -9,13 +9,13 @@ import { Button } from "../../shared/Inputs";
 import { Subtitle } from "../../shared/Titles";
 
 export function Faction(): JSX.Element {
-	const { factionMenu, setActiveMenu, setFactionMenu } = ClientStore(state => ({
+	const { factionMenu, setActiveMenu, setFactionIndex } = ClientStore(state => ({
 		factionMenu: state.factionMenu,
 		setActiveMenu: state.setActiveMenu,
-		setFactionMenu: state.setFactionMenu
+		setFactionIndex: state.setFactionIndex
 	}), shallow);
 
-	const [factionIndex, setFactionIndex] = useState(factionMenu.factionIndex);
+	const [index, setIndex] = useState(factionMenu.factionIndex);
 
 	return (
 		<SubBox>
@@ -23,19 +23,19 @@ export function Faction(): JSX.Element {
 
 			<SelectSearch
 				options={[{ name: "", value: -1 }, ...factionMenu.factions.map((v, i) => { return { name: v.name, value: i }; })]}
-				value={factionIndex.toString()}
+				value={index.toString()}
 				search filterOptions={fuzzySearch}
 				placeholder="Choose a Faction"
-				onChange={(selectedValue) => { setFactionIndex(parseInt(selectedValue as any)); }}
+				onChange={(selectedValue) => { setIndex(parseInt(selectedValue as any)); }}
 			/>
 
-			{(factionIndex !== -1)
-				? <Button value={"Show"} onClick={() => { setActiveMenu("faction"); setFactionMenu(factionIndex); }} />
+			{(index !== -1)
+				? <Button value={"Show"} onClick={() => { setActiveMenu("faction"); setFactionIndex(index); }} />
 				: null
 			}
 
-			{(factionIndex === -1)
-				? <Button value={"Create New"} onClick={() => { setActiveMenu("faction"); setFactionMenu(factionIndex); }} />
+			{(index === -1)
+				? <Button value={"Create New"} onClick={() => { setActiveMenu("faction"); setFactionIndex(index); }} />
 				: null
 			}
 		</SubBox>

@@ -11,10 +11,10 @@ import { Button } from "../../shared/Inputs";
 import { Subtitle } from "../../shared/Titles";
 
 export function SkillExplorer(): JSX.Element {
-	const { skillMenu, setActiveMenu, setSkillMenu } = ClientStore(state => ({
+	const { skillMenu, setActiveMenu, setSkillCategory } = ClientStore(state => ({
 		skillMenu: state.skillMenu,
 		setActiveMenu: state.setActiveMenu,
-		setSkillMenu: state.setSkillMenu
+		setSkillCategory: state.setSkillCategory
 	}), shallow);
 
 	const [category, setCategory] = useState(skillMenu.category);
@@ -32,7 +32,7 @@ export function SkillExplorer(): JSX.Element {
 			/>
 
 			{(category !== "")
-				? <Button value={"List"} onClick={() => { setActiveMenu("skill"); setSkillMenu(category); }} />
+				? <Button value={"List"} onClick={() => { setActiveMenu("skill"); setSkillCategory(category); }} />
 				: null
 			}
 		</SubBox>

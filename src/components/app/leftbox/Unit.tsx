@@ -9,13 +9,13 @@ import { Button } from "../../shared/Inputs";
 import { Subtitle } from "../../shared/Titles";
 
 export function Unit(): JSX.Element {
-	const { unitMenu, setActiveMenu, setUnitMenu } = ClientStore(state => ({
+	const { unitMenu, setActiveMenu, setUnitIndex } = ClientStore(state => ({
 		unitMenu: state.unitMenu,
 		setActiveMenu: state.setActiveMenu,
-		setUnitMenu: state.setUnitMenu
+		setUnitIndex: state.setUnitIndex
 	}), shallow);
 
-	const [unitIndex, setUnitIndex] = useState(unitMenu.unitIndex);
+	const [index, setIndex] = useState(unitMenu.unitIndex);
 
 	return (
 		<SubBox>
@@ -23,19 +23,19 @@ export function Unit(): JSX.Element {
 
 			<SelectSearch
 				options={[{ name: "", value: -1 }, ...unitMenu.units.map((v, i) => { return { name: v.name, value: i }; })]}
-				value={unitIndex.toString()}
+				value={index.toString()}
 				search filterOptions={fuzzySearch}
 				placeholder="Choose a Unit"
-				onChange={(selectedValue) => { setUnitIndex(parseInt(selectedValue as any)); }}
+				onChange={(selectedValue) => { setIndex(parseInt(selectedValue as any)); }}
 			/>
 
-			{(unitIndex !== -1)
-				? <Button value={"Show"} onClick={() => { setActiveMenu("unit"); setUnitMenu(unitIndex); }} />
+			{(index !== -1)
+				? <Button value={"Show"} onClick={() => { setActiveMenu("unit"); setUnitIndex(index); }} />
 				: null
 			}
 
-			{(unitIndex === -1)
-				? <Button value={"Create New"} onClick={() => { setActiveMenu("unit"); setUnitMenu(unitIndex); }} />
+			{(index === -1)
+				? <Button value={"Create New"} onClick={() => { setActiveMenu("unit"); setUnitIndex(index); }} />
 				: null
 			}
 		</SubBox>

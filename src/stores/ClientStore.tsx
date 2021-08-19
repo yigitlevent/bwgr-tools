@@ -25,17 +25,17 @@ export const ClientStore = create<bwgr.stores.ClientStore>(set => ({
 	})),
 
 	// LIFEPATH MENU
-	setLifepathMenu: (stock, setting) => set(produce((state: bwgr.stores.ClientStore) => {
+	setLifepathStockSetting: (stock, setting) => set(produce((state: bwgr.stores.ClientStore) => {
 		state.lifepathMenu = { stock, setting };
 	})),
 
 	// SKILL MENU
-	setSkillMenu: (skill) => set(produce((state: bwgr.stores.ClientStore) => {
+	setSkillCategory: (skill) => set(produce((state: bwgr.stores.ClientStore) => {
 		state.skillMenu.category = skill;
 	})),
 
 	// TRAIT MENU
-	setTraitMenu: (trait) => set(produce((state: bwgr.stores.ClientStore) => {
+	setTraitCategory: (trait) => set(produce((state: bwgr.stores.ClientStore) => {
 		state.traitMenu.category = trait;
 	})),
 
@@ -44,7 +44,7 @@ export const ClientStore = create<bwgr.stores.ClientStore>(set => ({
 	// DISTILLATION MENU
 
 	// FACTION MENU
-	setFactionMenu: (factionIndex) => set(produce((state: bwgr.stores.ClientStore) => {
+	setFactionIndex: (factionIndex) => set(produce((state: bwgr.stores.ClientStore) => {
 		state.factionMenu.factionIndex = factionIndex;
 	})),
 	addFaction: (faction) => set(produce((state: bwgr.stores.ClientStore) => {
@@ -63,7 +63,7 @@ export const ClientStore = create<bwgr.stores.ClientStore>(set => ({
 	})),
 
 	// UNIT MENU
-	setUnitMenu: (unitIndex) => set(produce((state: bwgr.stores.ClientStore) => {
+	setUnitIndex: (unitIndex) => set(produce((state: bwgr.stores.ClientStore) => {
 		state.unitMenu.unitIndex = unitIndex;
 	})),
 	addUnit: (unit) => set(produce((state: bwgr.stores.ClientStore) => {
@@ -81,5 +81,6 @@ export const ClientStore = create<bwgr.stores.ClientStore>(set => ({
 			state.unitMenu.unitIndex = -1;
 		}
 	})),
+
 
 }));

@@ -11,10 +11,10 @@ import { Button } from "../../shared/Inputs";
 import { Subtitle } from "../../shared/Titles";
 
 export function LifepathExplorer(): JSX.Element {
-	const { lifepathMenu, setActiveMenu, setLifepathMenu } = ClientStore(state => ({
+	const { lifepathMenu, setActiveMenu, setLifepathStockSetting } = ClientStore(state => ({
 		lifepathMenu: state.lifepathMenu,
 		setActiveMenu: state.setActiveMenu,
-		setLifepathMenu: state.setLifepathMenu
+		setLifepathStockSetting: state.setLifepathStockSetting
 	}), shallow);
 
 	const [stock, setStock] = useState(lifepathMenu.stock);
@@ -44,7 +44,7 @@ export function LifepathExplorer(): JSX.Element {
 			}
 
 			{(stock !== "" && setting !== "")
-				? <Button value={"List"} onClick={() => { setActiveMenu("lifepath"); setLifepathMenu(stock, setting); }} />
+				? <Button value={"List"} onClick={() => { setActiveMenu("lifepath"); setLifepathStockSetting(stock, setting); }} />
 				: null
 			}
 		</SubBox>

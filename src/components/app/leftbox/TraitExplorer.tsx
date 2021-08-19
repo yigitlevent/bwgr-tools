@@ -11,10 +11,10 @@ import { Button } from "../../shared/Inputs";
 import { Subtitle } from "../../shared/Titles";
 
 export function TraitExplorer(): JSX.Element {
-	const { traitMenu, setActiveMenu, setTraitMenu } = ClientStore(state => ({
+	const { traitMenu, setActiveMenu, setTraitCategory } = ClientStore(state => ({
 		traitMenu: state.traitMenu,
 		setActiveMenu: state.setActiveMenu,
-		setTraitMenu: state.setTraitMenu
+		setTraitCategory: state.setTraitCategory
 	}), shallow);
 
 	const [category, setCategory] = useState(traitMenu.category);
@@ -32,7 +32,7 @@ export function TraitExplorer(): JSX.Element {
 			/>
 
 			{(category !== "")
-				? <Button value={"List"} onClick={() => { setActiveMenu("trait"); setTraitMenu(category); }} />
+				? <Button value={"List"} onClick={() => { setActiveMenu("trait"); setTraitCategory(category); }} />
 				: null
 			}
 		</SubBox>
