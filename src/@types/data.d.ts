@@ -27,7 +27,7 @@ namespace bwgr {
 		}
 
 		interface UnitCard {
-			[key: string]: string | ["B" | "G" | "W", number] | number | bwgr.data.ListItem[];
+			[key: string]: string | ["B" | "G" | "W", number] | ["B" | "G" | "W", number, number] | number | bwgr.data.ListItem[];
 			name: string;
 			commander: string;
 			type: string;
@@ -42,12 +42,15 @@ namespace bwgr {
 			skirmish: ["B" | "G" | "W", number];
 			soldiering: ["B" | "G" | "W", number];
 			seamanship: ["B" | "G" | "W", number];
-			health: ["B" | "G" | "W", number];
-			steel: ["B" | "G" | "W", number];
+			health: ["B" | "G" | "W", number, number];
+			steel: ["B" | "G" | "W", number, number];
 			strature: number;
 			strength: number;
 			stride: number;
 			supply: number;
+			weaponry: string;
+			armor: string;
+			trainings: string;
 		}
 
 		type RulesetsList = "bwg" | "bwc";
