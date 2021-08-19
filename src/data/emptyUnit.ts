@@ -1,4 +1,4 @@
-export const EmptyUnitrs: bwgr.data.UnitCard = {
+export const EmptyUnits: bwgr.data.UnitCard = {
 	name: "",
 	commander: "",
 	type: "",
