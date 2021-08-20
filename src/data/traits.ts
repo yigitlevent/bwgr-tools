@@ -9006,6 +9006,17 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 					"bwg",
 					"bwc"
 				],
+				cost: 3,
+				description: "You are the center of something great and terrible. Earn a persona point each time your actions cause a conflict between two powerful personas or organizations.",
+				name: "Catalyst",
+				stock: "Human",
+				type: "Character"
+			},
+			{
+				allowed: [
+					"bwg",
+					"bwc"
+				],
 				cost: 1,
 				description: "Catamite has been chosen as the trait name to represent openly homosexual characters in the Burning Wheel. Honestly, it was a pejorative medieval term- a slur. It is how society would refer to them, not necessarily how they refer to themselves. <br> Any character may be homosexual via the player's choice, but by taking the Catamite trait, the player is acknowledging that his character is open about his orientation. The ramifications of such a decision in a conservative medieval society are grist for great game situations.",
 				name: "Catamite",

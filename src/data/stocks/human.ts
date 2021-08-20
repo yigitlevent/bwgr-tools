@@ -18,7 +18,7 @@ export const Human: bwgr.data.Stock = {
 	],
 	hasSetting: true,
 	hasSubsetting: true,
-	name: "Man",
+	name: "Human",
 	stride: 7,
 	settings: {
 		"City Dweller": {
@@ -175,14 +175,15 @@ export const Human: bwgr.data.Stock = {
 					requirements: {},
 					resources: 4,
 					setting: "City Dweller",
-					skillPool: 6,
+					skillPool: 7,
 					skills: [
+						"Any General➞Beggardry",
+						"Any General➞Inconspicuous",
+						"Any General➞Persuasion",
+						"Any General➞Falsehood",
 						"Any Wise➞City-wise",
 						"Any Wise➞City Guard-wise",
 						"Any Wise➞Wealth-wise",
-						"Any General➞Inconspicuous",
-						"Any General➞Persuasion",
-						"Any General➞Falsehood"
 					],
 					stock: "Human",
 					traitPool: 1,
@@ -697,10 +698,10 @@ export const Human: bwgr.data.Stock = {
 					stock: "Human",
 					traitPool: 2,
 					traits: [
-						"Human Special➞Catamite",
 						"Any Character➞Flamboyant",
 						"Any Character➞Comely",
-						"Any Character➞Sharp Dresser"
+						"Any Character➞Sharp Dresser",
+						"Human Special➞Catalyst"
 					],
 					years: 5
 				},
@@ -912,7 +913,8 @@ export const Human: bwgr.data.Stock = {
 					traitPool: 2,
 					traits: [
 						"Any Character➞Esoteric",
-						"Any Character➞Remote"
+						"Any Character➞Remote",
+						"Any Die➞Deaf"
 					],
 					years: 4
 				},
@@ -1317,7 +1319,7 @@ export const Human: bwgr.data.Stock = {
 					skills: [
 						"Any General➞Write",
 						"Any General➞Illuminations",
-						"Any General➞Read",
+						"Any General➞Foreign Languages",
 						"Any Wise➞Handwriting-wise"
 					],
 					stock: "Human",
@@ -1364,9 +1366,9 @@ export const Human: bwgr.data.Stock = {
 					skills: [
 						"Any General➞Accounting",
 						"Any General➞Bureaucracy",
-						"Any General➞Read",
-						"Any General➞Write",
-						"Any Wise➞Ledger-wise"
+						"Any General➞Extortion",
+						"Any Wise➞Ledger-wise",
+						"Any Wise➞Graft-wise"
 					],
 					stock: "Human",
 					traitPool: 1,
@@ -2030,10 +2032,9 @@ export const Human: bwgr.data.Stock = {
 					},
 					resources: 13,
 					setting: "City Dweller",
-					skillPool: 4,
+					skillPool: 3,
 					skills: [
 						"Any General➞Locksmith",
-						"Any General➞Haggling",
 						"Any Wise➞Lock-wise"
 					],
 					stock: "Human",
@@ -2075,7 +2076,6 @@ export const Human: bwgr.data.Stock = {
 						"Any General➞Jeweler",
 						"Any General➞Lapidary",
 						"Any General➞Appraisal",
-						"Any General➞Haggling",
 						"Any General➞Falsehood"
 					],
 					stock: "Human",
@@ -2229,7 +2229,8 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞Noble Court",
-						"Human➞Professional Soldier"
+						"Human➞Professional Soldier",
+						"Human➞Peasant"
 					],
 					mentalPool: 1,
 					name: "Physician",
@@ -3799,6 +3800,7 @@ export const Human: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Human➞City Dweller",
+						"Human➞Religious",
 						"Human➞Noble Court"
 					],
 					mentalPool: 1,
@@ -3965,6 +3967,7 @@ export const Human: bwgr.data.Stock = {
 						"Any General➞Write",
 						"Any General➞Read",
 						"Any General➞Etiquette",
+						"Any General➞Dance",
 						"Human Special➞Astrology",
 						"Any General➞Musical Instrument",
 						"Any General➞Composition",
@@ -4009,8 +4012,6 @@ export const Human: bwgr.data.Stock = {
 					skillPool: 10,
 					skills: [
 						"Any General➞Mounted Combat Training",
-						"Any General➞Shield Training",
-						"Any General➞Armor Training",
 						"Any General➞Appropriate Weapons",
 						"Any General➞Intimidation",
 						"Any General➞Hunting",
@@ -5219,14 +5220,11 @@ export const Human: bwgr.data.Stock = {
 					},
 					resources: 20,
 					setting: "Noble Court",
-					skillPool: 11,
+					skillPool: 7,
 					skills: [
 						"Any General➞Conspicuous",
 						"Any General➞Intimidation",
 						"Any General➞Falconry",
-						"Any General➞Mounted Combat Training",
-						"Any General➞Shield Training",
-						"Any General➞Armor Training",
 						"Any General➞Appropriate Weapons"
 					],
 					stock: "Human",
@@ -5443,7 +5441,7 @@ export const Human: bwgr.data.Stock = {
 						"Any General➞Etiquette",
 						"Any General➞Oratory",
 						"Any General➞Persuasion",
-						"Any General➞Rule of Law",
+						"Any General➞Amercement",
 						"Any General➞History"
 					],
 					stock: "Human",
@@ -6144,7 +6142,7 @@ export const Human: bwgr.data.Stock = {
 								"Human➞Noble➞Count",
 								"Human➞Noble➞Duke"
 							]
-						}
+						} 
 					},
 					resources: 30,
 					setting: "Noble Court",
@@ -6155,8 +6153,10 @@ export const Human: bwgr.data.Stock = {
 						"Any General➞Ugly Truth"
 					],
 					stock: "Human",
-					traitPool: 1,
-					traits: [],
+					traitPool: 2,
+					traits: [
+						"Any Die➞Power Behind the Throne"
+					],
 					years: 7
 				},
 				{
@@ -6596,7 +6596,7 @@ export const Human: bwgr.data.Stock = {
 					setting: "Outcast",
 					skillPool: 6,
 					skills: [
-						"Any General➞Begging",
+						"Any General➞Beggardry",
 						"Any General➞Inconspicuous",
 						"Any General➞Conspicuous"
 					],
@@ -8087,7 +8087,8 @@ export const Human: bwgr.data.Stock = {
 						"Any General➞Animal Husbandry",
 						"Any General➞Sing",
 						"Any General➞Climbing",
-						"Any General➞Flute"
+						"Any General➞Flute",
+						"Any General➞Throwing"
 					],
 					stock: "Human",
 					traitPool: 1,
@@ -8252,7 +8253,6 @@ export const Human: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						limits: [
-							"LP➞MIN➞5",
 							"YEARS➞MIN➞50"
 						]
 					},
@@ -8725,20 +8725,20 @@ export const Human: bwgr.data.Stock = {
 					name: "Crossbowman",
 					physicalPool: 1,
 					requirements: {},
-					resources: 7,
+					resources: 8,
 					setting: "Professional Soldier",
-					skillPool: 5,
+					skillPool: 6,
 					skills: [
 						"Any General➞Crossbow",
 						"Any General➞Fletcher",
 						"Any General➞Brawling",
 						"Any General➞Foraging",
-						"Any General➞Firebuilding"
+						"Any General➞Soldiering"
 					],
 					stock: "Human",
 					traitPool: 1,
 					traits: [],
-					years: 3
+					years: 4
 				},
 				{
 					allowed: [
@@ -8900,7 +8900,7 @@ export const Human: bwgr.data.Stock = {
 							items: [
 								"Human➞Noble➞Squire",
 								"Human➞Noble Court➞Squire",
-								"Human➞Villager➞Village Guard",
+								"Human➞Villager➞Village Tough",
 								"Human➞City Dweller➞City Guard",
 								"Human➞Professional Soldier➞Foot Soldier"
 							]
@@ -8996,6 +8996,7 @@ export const Human: bwgr.data.Stock = {
 							]
 						},
 						texts: [
+							// TODO: Make sure that the list above reflects this 100%
 							"a prior lifepath having to do with horses"
 						]
 					},
@@ -9469,6 +9470,8 @@ export const Human: bwgr.data.Stock = {
 					traitPool: 3,
 					traits: [
 						"Any Character➞Eunuch",
+						"Any Character➞Perfect Pitch",
+						"Any Character➞Patient",
 						"Any Die➞Scheming"
 					],
 					years: 7
@@ -9858,7 +9861,7 @@ export const Human: bwgr.data.Stock = {
 						"Any General➞Doctrine",
 						"Any General➞Suasion",
 						"Any General➞Meditation",
-						"Any General➞Begging",
+						"Any General➞Beggardry",
 						"Any Wise➞Alms-wise",
 						"Any General➞Streetwise",
 						"Any Wise➞Road-wise"
@@ -9975,12 +9978,11 @@ export const Human: bwgr.data.Stock = {
 					skills: [
 						"Any General➞Oratory",
 						"Any General➞Suasion",
-						"Any General➞Read",
-						"Any General➞Write",
-						"Any General➞Doctrine",
 						"Any General➞Ritual",
 						"Any General➞Symbology",
-						"Any General➞Religious History"
+						"Any General➞Religious History",
+						"Any Wise➞Sacrament-wise",
+						"Any Wise➞Bishop-wise"
 					],
 					stock: "Human",
 					traitPool: 2,
@@ -11204,16 +11206,18 @@ export const Human: bwgr.data.Stock = {
 					requirements: {},
 					resources: 8,
 					setting: "Seafaring",
-					skillPool: 3,
+					skillPool: 5,
 					skills: [
 						"Any General➞Mending",
 						"Any General➞Gambling",
-						"Any Wise➞Wood-wise"
+						"Any Wise➞Wood-wise",
+						"Any Wise➞Caulking-wise"
 					],
 					stock: "Human",
-					traitPool: 1,
+					traitPool: 2,
 					traits: [
 						"Any Character➞Cursing",
+						"Any Character➞Lifting Heavy Things",
 						"Human Lifepath➞Bull's-eye Spitter"
 					],
 					years: 6
@@ -11249,11 +11253,12 @@ export const Human: bwgr.data.Stock = {
 					},
 					resources: 16,
 					setting: "Seafaring",
-					skillPool: 5,
+					skillPool: 6,
 					skills: [
 						"Any General➞Carpentry",
 						"Any General➞Shipwright",
 						"Any General➞Boatwright",
+						"Any General➞Rigging",
 						"Any Wise➞Ship-wise"
 					],
 					stock: "Human",
@@ -11389,7 +11394,7 @@ export const Human: bwgr.data.Stock = {
 					stock: "Human",
 					traitPool: 3,
 					traits: [
-						"Any Character➞Pegboy"
+						"Any Character➞Curses Like a Sailor"
 					],
 					years: 4
 				},
@@ -11658,9 +11663,10 @@ export const Human: bwgr.data.Stock = {
 					requirements: {},
 					resources: 6,
 					setting: "Servitude",
-					skillPool: 2,
+					skillPool: 3,
 					skills: [
 						"Any General➞Soothing Platitudes",
+						"Any General➞Inconspicuous",
 						"Any Wise➞Gossip-wise"
 					],
 					stock: "Human",
@@ -11817,7 +11823,11 @@ export const Human: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Bondsman",
 					physicalPool: 0,
-					requirements: {},
+					requirements: {
+						texts: [
+							"The player may choose his Bondsman's owner's lifepath from Noble, City Dweller, Soldier or Villager setting. The Bondsman may purchase from owner's skills with one querter of that path's skill points (minimum of 1)."
+						]
+					},
 					resources: 7,
 					setting: "Servitude",
 					skillPool: "*",
@@ -12394,7 +12404,7 @@ export const Human: bwgr.data.Stock = {
 						"Human➞Outcast"
 					],
 					mentalPool: 1,
-					name: "Serving Wench",
+					name: "Serving Girl",
 					physicalPool: 0,
 					requirements: {},
 					resources: 5,
@@ -12409,10 +12419,9 @@ export const Human: bwgr.data.Stock = {
 					stock: "Human",
 					traitPool: 2,
 					traits: [
-						"Any Character➞Extremely Bitter",
-						"Any Character➞Ugly",
-						"Any Character➞Drop-Dead Gorgeous",
-						"Any Character➞Buxom"
+						"Any Character➞Bored",
+						"Any Character➞Bitter",
+						"Any Character➞Comely"
 					],
 					years: 3
 				},
@@ -12469,7 +12478,7 @@ export const Human: bwgr.data.Stock = {
 						"Human➞Servitude and Captive"
 					],
 					mentalPool: 0,
-					name: "Village Guard",
+					name: "Village Tough",
 					physicalPool: 1,
 					requirements: {},
 					resources: 7,
@@ -13469,7 +13478,7 @@ export const Human: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						texts: [
-							"Players who take the Village Wife lifepath may also choose their husban's lifepath from the Villager setting. The Village Wife may choose from her husband's skills -she gets half of his skill points, rounded down- and she gets half of her husband's Resources."
+							"Players who take the Village Wife lifepath may also choose their husban's lifepath from the Villager setting. The Village Wife may choose from her husband's skills —she gets half of his skill points (including General points), rounded down— and she gets half of her husband's resources."
 						]
 					},
 					resources: 5,
