@@ -10,7 +10,7 @@ import { ClientStore } from "../../../stores/ClientStore";
 import { SubBox } from "../../shared/Box";
 import { Divider } from "../../shared/Divider";
 import { Button, Input, Textarea } from "../../shared/Inputs";
-import { BlockCenterer, MakerBlock, MakerSideBlock, MakerStatBlock, MakerWrapper } from "../../shared/Maker";
+import { BlockCenterer, MakerBlock, MakerStatBlock, MakerWrapper } from "../../shared/Maker";
 import { Subtitle } from "../../shared/Titles";
 
 const UnitMakerWrapper = styled(MakerWrapper)`
