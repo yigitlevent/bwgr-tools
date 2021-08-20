@@ -948,7 +948,7 @@ export const GreatWolf: bwgr.data.Stock = {
 						"Great Wolf Special➞Nursing",
 						"Great Wolf Special➞Pup-wise",
 						"Any General➞Scavenging",
-						"Any General➞Begging"
+						"Great Wolf Special➞Begging"
 					],
 					stock: "Great Wolf",
 					traitPool: 1,
@@ -979,7 +979,7 @@ export const GreatWolf: bwgr.data.Stock = {
 						"Great Wolf Special➞Rearing",
 						"Great Wolf Special➞Pup-wise",
 						"Any General➞Scavenging",
-						"Any General➞Begging"
+						"Great Wolf Special➞Begging"
 					],
 					stock: "Great Wolf",
 					traitPool: 1,

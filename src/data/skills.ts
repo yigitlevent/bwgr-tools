@@ -389,9 +389,9 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 					"bwg",
 					"bwc"
 				],
-				description: "Begging can elicit a few coins from the victim (1D of cash). It may also be used to replenish taxed Resources.",
+				description: "Beggardry can elicit a few coins from the victim (1D of cash). It may also be used to replenish taxed Resources.",
 				magical: false,
-				name: "Begging",
+				name: "Beggardry",
 				noList: false,
 				restriction: "N/A",
 				root: "Will",
