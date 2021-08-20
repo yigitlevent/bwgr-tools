@@ -9,11 +9,10 @@ namespace bwgr {
 
 		interface MagicFacet {
 			name: string;
-			obstacle: number; 
-			actions: number; 
+			obstacle: number;
+			actions: number;
 			resource: number;
 		}
-
 
 		type UnitStatus = "Ready" | "Out of Supply" | "Unscathed" | "Bloodied" | "Broken";
 
@@ -76,11 +75,13 @@ namespace bwgr {
 			limits?: bwgr.data.Limit[];
 			texts?: string[];
 		};
+
 		interface Condition {
 			type: "AND" | "OR" | "NOT",
 			items: (bwgr.path.Lifepath | `Skill➞${bwgr.path.Skill}` | `Trait➞${bwgr.path.Trait}` | bwgr.data.Condition)[];
 		}
-		type Limit = (`LP➞UNIQUE` | `GENDER➞${"FEMALE" | "MALE"}` | `${"YEARS" | "LP"}➞${"MIN" | "MAX"}➞${number}`);
+
+		type Limit = (`LP➞UNIQUE` | `GENDER➞${"FEMALE" | "MALE"}` | `${"YEARS" | "LP" | "GRIEF"}➞${"MIN" | "MAX"}➞${number}`);
 
 		interface Stocks {
 			[key: string]: bwgr.data.Stock;

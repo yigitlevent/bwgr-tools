@@ -86,7 +86,7 @@ export const Elf: bwgr.data.Stock = {
 					skillPool: 6,
 					skills: [
 						"Any General➞Riding",
-						"Elf Spell Song➞Gift of Speed",
+						"Elf Spell Song➞The Gift of Speed",
 						"Elf Spell Song➞Lay of the Horse"
 					],
 					stock: "Elf",
@@ -116,7 +116,6 @@ export const Elf: bwgr.data.Stock = {
 					skillPool: 5,
 					skills: [
 						"Elf Skill Song➞Round of Harvest",
-						"Any General➞Farming",
 						"Any General➞Firebuilding",
 						"Any General➞Animal Husbandry",
 						"Any General➞Mending"
@@ -136,7 +135,9 @@ export const Elf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
-					leads: [],
+					leads: [ 
+						"Elf➞Path of Spite"
+					],
 					mentalPool: 0,
 					name: "Gatherer",
 					physicalPool: 0,
@@ -216,7 +217,9 @@ export const Elf: bwgr.data.Stock = {
 					],
 					stock: "Elf",
 					traitPool: 1,
-					traits: [],
+					traits: [
+						"Any Character➞Never Cry Wolf"
+					],
 					years: 45
 				},
 				{
@@ -240,7 +243,8 @@ export const Elf: bwgr.data.Stock = {
 					skills: [
 						"Elf Skill Song➞Song of Paths and Ways",
 						"Elf Spell Song➞Air of Gates",
-						"Any General➞Foraging"
+						"Any General➞Foraging",
+						"Any Wise➞1*ANY"
 					],
 					stock: "Elf",
 					traitPool: 1,
@@ -727,7 +731,6 @@ export const Elf: bwgr.data.Stock = {
 					skills: [
 						"Elf Skill Song➞Lyric of Law",
 						"Elf Skill Song➞Ballad of History",
-						"Elf Special➞Elven Script",
 						"Any General➞Etiquette",
 						"Any General➞Oratory"
 					],
@@ -1660,7 +1663,7 @@ export const Elf: bwgr.data.Stock = {
 					skills: [
 						"Any General➞Riding",
 						"Any General➞Animal Husbandry",
-						"Elf Spell Song➞Gift of Speed",
+						"Elf Spell Song➞The Gift of Speed",
 						"Elf Spell Song➞Lay of the Horse"
 					],
 					stock: "Elf",
@@ -1918,7 +1921,7 @@ export const Elf: bwgr.data.Stock = {
 						"Any General➞Spear",
 						"Any General➞Observation",
 						"Any Wise➞Trails-wise",
-						"Any General➞Mounted Combat Training",
+						"Any General➞Mounted Combat Bowman Training",
 						"Any General➞Animal Husbandry",
 						"Any General➞Mending",
 						"Any General➞Stealthy"
@@ -2057,7 +2060,7 @@ export const Elf: bwgr.data.Stock = {
 						"Any General➞Formation Fighting Training",
 						"Elf Spell Song➞Monody of the March",
 						"Elf Skill Song➞Silent Fury",
-						"Elf Spell Song➞Hymn of Victory"
+						"Elf Spell Song➞The Hymn of Victory"
 					],
 					stock: "Elf",
 					traitPool: 2,
@@ -2215,7 +2218,11 @@ export const Elf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Griever",
 					physicalPool: 0,
-					requirements: {},
+					requirements: {
+						limits: [
+							"GRIEF➞MIN➞3"
+						]
+					},
 					resources: 0,
 					setting: "Path of Spite",
 					skillPool: 3,

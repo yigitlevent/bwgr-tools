@@ -46,6 +46,10 @@ export function Requirements({ requirements }: { requirements: bwgr.data.Require
 				if (temp[1] === "MIN") limits.push(`Character must be at least ${parseInt(temp[2])} years old.`);
 				else if (temp[1] === "MAX") limits.push(`Character must be at most ${parseInt(temp[2])} years old.`);
 			}
+			else if (temp[0] === "GRIEF") {
+				if (temp[1] === "MIN") limits.push(`Character must have at least a ${temp[0].toLowerCase()} of ${parseInt(temp[2])}.`);
+				else if (temp[1] === "MAX") limits.push(`Character must have at most a ${temp[0].toLowerCase()} of ${parseInt(temp[2])}.`);
+			}
 			else if (temp[0] === "GENDER") {
 				limits.push(`Character's must be a ${temp[1].toLowerCase()}.`);
 			}

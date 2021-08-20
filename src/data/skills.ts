@@ -2387,9 +2387,27 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 					"bwg",
 					"bwc"
 				],
-				description: "Mounted Combat Training gives the character the ability to fight effectively from horseback. If appropriate to the character and the game setting, players may choose Mounted Combat: Bowman instead of the traditional lancer archetype. See the Riding and Mounted Combat chapter.",
+				description: "Mounted Combat Training gives the character the ability to fight effectively with melee weapons from horseback. See the Riding and Mounted Combat chapter.",
 				magical: false,
 				name: "Mounted Combat Training",
+				noList: false,
+				restriction: "N/A",
+				root: "Will/Power",
+				tools: [
+					"No",
+					""
+				],
+				training: true,
+				type: "Martial"
+			},
+			{
+				allowed: [
+					"bwg",
+					"bwc"
+				],
+				description: "Mounted Combat Bowman Training gives the character the ability to fight effectively with ranged weapons from horseback. See the Riding and Mounted Combat chapter.",
+				magical: false,
+				name: "Mounted Combat Bowman Training",
 				noList: false,
 				restriction: "N/A",
 				root: "Will/Power",
@@ -12470,7 +12488,7 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 				],
 				description: "This powerful song lightens the tread of the rider's horse until it seems the steed is galloping on air. Meeting the obstacle grants +1D to the horse's speed. Extra successes increase the Speed of the horse by +1D each. The rider must be mounted on the horse. The gift lasts for the remainder of the day (or night).",
 				magical: true,
-				name: "Gift of Speed",
+				name: "The Gift of Speed",
 				noList: false,
 				restriction: "Elves only",
 				root: "Will",
@@ -12506,7 +12524,7 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 				],
 				description: "A song sung of all the victories of the Elves--this one included. The Hymn forces the enemy to choose Stand and Drool as a hesitation option from a failed Steel test while this song is being sung. The Hymn of Victory is a fine way to round up and finish off the straggling remnants of the enemy forces.",
 				magical: true,
-				name: "Hymn of Victory",
+				name: "The Hymn of Victory",
 				noList: false,
 				restriction: "Elves only",
 				root: "Will",
