@@ -2,7 +2,7 @@ export const EmptyUnit: bwgr.data.UnitCard = {
 	name: "",
 	commander: "",
 	type: "",
-	status: "Inactive",
+	status: "Ready",
 	composition: "",
 	doctrine: "",
 	tradition: "",
@@ -23,3 +23,7 @@ export const EmptyUnit: bwgr.data.UnitCard = {
 	stride: 0,
 	supply: 0
 };
+
+export const UnitStatuses: bwgr.data.UnitStatus[] = [
+	"Ready", "Out of Supply", "Unscathed", "Bloodied", "Broken"
+];
