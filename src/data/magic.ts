@@ -6,7 +6,7 @@ export const MagicData: bwgr.data.MagicFacet[][] = [
 	],
 	[ // 4 duration
 		{ name: "Instantaneous", obstacle: 0, actions: 1, resource: 0 },
-		{ name: "Presence", obstacle: 0, actions: 1, resource: 0 },
+		{ name: "Presence", obstacle: 2, actions: 2, resource: 2 },
 		{ name: "Permanent", obstacle: 0, actions: 1, resource: 0 },
 		{ name: "Sustained", obstacle: 0, actions: 1, resource: 0 }
 	],
@@ -43,3 +43,11 @@ export const MagicData: bwgr.data.MagicFacet[][] = [
 		{ name: "Single Target", obstacle: 0, actions: 1, resource: 0 }
 	],
 ];
+
+export const EmptySpell = {
+	name: "",
+	obstacle: "",
+	actions: "",
+	resource: "",
+
+};

@@ -15,7 +15,7 @@ export function Distillation(): JSX.Element {
 		<SubBox>
 			<Subtitle noBorder>
 				<NoLink onClick={() => { setActiveMenu("distillation"); }}>
-					Spell Distillation
+					Distillation
 				</NoLink>
 			</Subtitle>
 		</SubBox>
