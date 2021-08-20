@@ -4,11 +4,13 @@ import styled from "styled-components";
 
 import { MagicData } from "../../../data/magic";
 
+import { RandomNumber } from "../../../utility/randomNumber";
+
 import { SubBox } from "../../shared/Box";
 import { Subtitle } from "../../shared/Titles";
 import { Button, Input } from "../../shared/Inputs";
 import { Divider } from "../../shared/Divider";
-import { RandomNumber } from "../../../utility/randomNumber";
+import { Controls, Line } from "../../shared/Single";
 
 import { BackCanvas } from "./magicwheel/BackCanvas";
 import { MainCanvas } from "./magicwheel/MainCanvas";
@@ -23,39 +25,6 @@ const CanvasWrapper = styled.div`
 	position: relative;
 
 	z-index: 100;
-`;
-
-const Controls = styled.div`
-	width: 100%;
-`;
-
-const Line = styled.div`
-	width: auto;
-	margin: 0 auto;
-
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-
-	& > input:is([type="button"]) {
-		margin: 3px 0;
-	}
-
-	& > span {
-		font-size: 18px;
-		width: max-content;
-		padding: 0 8px 3px;
-	}
-
-	& > div {
-		width: 160px;
-	}
-
-	& > * {
-		flex: 0 0 auto;
-	}
 `;
 
 export function MagicWheel(): JSX.Element {
@@ -129,7 +98,7 @@ export function MagicWheel(): JSX.Element {
 		const selectionIndex = MagicData[circleIndex].findIndex(v => v.name === value);
 		if (selectionIndex > -1) {
 			const tempSel = [...selected];
-			tempSel[circleIndex] = MagicData[circleIndex][selectionIndex].name;
+			tempSel[circleIndex] = value;
 
 			currentAngle[circleIndex] = (blockAngle[circleIndex] / 2) * selectionIndex;
 			setCurrentAngle([...currentAngle]);
