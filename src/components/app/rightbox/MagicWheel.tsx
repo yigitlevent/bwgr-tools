@@ -182,16 +182,16 @@ export function MagicWheel(): JSX.Element {
 		let done = false;
 		const step = () => {
 			skip = !skip;
+
+			tempRotation = [...tempRotation].map((v, i) => {
+				const tempVal = v + (0.05 * amount);
+				if ((amount > 0 && tempVal >= targetRotation[i])
+					|| (amount < 0 && tempVal <= targetRotation[i])) return targetRotation[i];
+				return tempVal;
+			});
+
 			if (!skip) {
-				tempRotation = [...tempRotation].map((v, i) => {
-					const tempVal = v + (0.05 * amount);
-					if ((amount > 0 && tempVal >= targetRotation[i])
-						|| (amount < 0 && tempVal <= targetRotation[i])) return targetRotation[i];
-					return tempVal;
-				});
-
 				drawAll(tempRotation);
-
 				setCurrentAngle(tempRotation);
 
 				if ((amount > 0 && tempRotation.every((v, i) => v >= targetRotation[i]))
@@ -199,6 +199,7 @@ export function MagicWheel(): JSX.Element {
 					done = true;
 				}
 			}
+
 			if (done) {
 				cancelAnimationFrame(myReq);
 				setIsRotating(false);
@@ -207,7 +208,6 @@ export function MagicWheel(): JSX.Element {
 		};
 
 		myReq = requestAnimationFrame(step);
-
 	}, [blockAngle, currentAngle, drawAll]);
 
 	useEffect(() => {
