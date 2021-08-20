@@ -3237,7 +3237,7 @@ export const Human: bwgr.data.Stock = {
 						"Any Wise➞Dark Arts-wise",
 						"Any Wise➞Elven Songs-wise",
 						"Any Wise➞Orc Rituals-wise",
-						"Any Wise➞Dwarven Arts-wise"
+						"Any Wise➞Dwarven Art-wise"
 					],
 					stock: "Human",
 					traitPool: 2,
@@ -4665,7 +4665,7 @@ export const Human: bwgr.data.Stock = {
 					traitPool: 2,
 					traits: [
 						"Any Character➞Veneer of Obedience",
-						"Dwarf Lifepath➞Lifting Heavy Things",
+						"Human Lifepath➞Lifting Heavy Things",
 						"Any Character➞Bored"
 					],
 					years: 6
@@ -8155,7 +8155,8 @@ export const Human: bwgr.data.Stock = {
 						"Any General➞Stealthy",
 						"Any General➞Cooking",
 						"Any General➞Orienteering",
-						"Any General➞Javelin or Any General➞Bow"
+						"Any General➞Javelin", // TODO: This is actually Javelin OR Bow
+						"Any General➞Bow"
 					],
 					stock: "Human",
 					traitPool: 1,
@@ -9470,7 +9471,7 @@ export const Human: bwgr.data.Stock = {
 					traitPool: 3,
 					traits: [
 						"Any Character➞Eunuch",
-						"Any Character➞Perfect Pitch",
+						"Any Call-on➞Perfect Pitch",
 						"Any Character➞Patient",
 						"Any Die➞Scheming"
 					],
@@ -11217,7 +11218,7 @@ export const Human: bwgr.data.Stock = {
 					traitPool: 2,
 					traits: [
 						"Any Character➞Cursing",
-						"Any Character➞Lifting Heavy Things",
+						"Human Lifepath➞Lifting Heavy Things",
 						"Human Lifepath➞Bull's-eye Spitter"
 					],
 					years: 6
@@ -11394,7 +11395,7 @@ export const Human: bwgr.data.Stock = {
 					stock: "Human",
 					traitPool: 3,
 					traits: [
-						"Any Character➞Curses Like a Sailor"
+						"Any Character➞Curses like a Sailor"
 					],
 					years: 4
 				},
@@ -13308,7 +13309,7 @@ export const Human: bwgr.data.Stock = {
 					stock: "Human",
 					traitPool: 2,
 					traits: [
-						"Any Character➞Stung Once Once",
+						"Any Character➞Stung Once (Once)",
 						"Human Lifepath➞Beespeaker"
 					],
 					years: 8

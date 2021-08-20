@@ -857,8 +857,8 @@ export const Roden: bwgr.data.Stock = {
 					traits: [
 						"Roden Lifepath➞Toughtful",
 						"Roden Lifepath➞Pack Rat",
-						"Roden Lifepath➞Boring",
-						"Roden Lifepath➞Farts"
+						"Any Character➞Boring",
+						"Any Character➞Farting"
 					],
 					years: 10
 				},
@@ -1684,7 +1684,7 @@ export const Roden: bwgr.data.Stock = {
 						"Any General➞Intimidation",
 						"Any Wise➞Below-wise",
 						"Any General➞Brawling",
-						"Any Wise➞Man-wise"
+						"Any Wise➞Human-wise"
 					],
 					stock: "Roden",
 					traitPool: 2,
@@ -1979,7 +1979,7 @@ export const Roden: bwgr.data.Stock = {
 					skills: [
 						"Any General➞Animal Husbandry",
 						"Any General➞Inconspicuous",
-						"Any General➞Rattiquette"
+						"Any General➞Etiquette" // TODO: Actually Rattiquette but I couldn't find any other reference to it
 					],
 					stock: "Roden",
 					traitPool: 2,

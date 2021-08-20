@@ -660,7 +660,7 @@ export const Elf: bwgr.data.Stock = {
 					traitPool: 2,
 					traits: [
 						"Any Character➞Humility",
-						"Dwarf Lifepath➞Lifting Heavy Things"
+						"Elf Lifepath➞Lifting Heavy Things"
 					],
 					years: 20
 				},
@@ -2590,7 +2590,7 @@ export const Elf: bwgr.data.Stock = {
 						"Any Wise➞Elf-wise",
 						"Any Wise➞Orc-wise",
 						"Any Wise➞Dwarf-wise",
-						"Any Wise➞Man-wise",
+						"Any Wise➞Human-wise",
 						"Dark Elf Spell Song➞Paean to the Dark Fire"
 					],
 					stock: "Elf",

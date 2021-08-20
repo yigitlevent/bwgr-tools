@@ -464,6 +464,17 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 				],
 				cost: 1,
 				description: "",
+				name: "Boring",
+				stock: "Any",
+				type: "Character"
+			},
+			{
+				allowed: [
+					"bwg",
+					"bwc"
+				],
+				cost: 1,
+				description: "",
 				name: "Brash",
 				stock: "Any",
 				type: "Character"
@@ -1378,6 +1389,17 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 				cost: 1,
 				description: "",
 				name: "Fanatical Devotion",
+				stock: "Any",
+				type: "Character"
+			},
+			{
+				allowed: [
+					"bwg",
+					"bwc"
+				],
+				cost: 1,
+				description: "",
+				name: "Farting",
 				stock: "Any",
 				type: "Character"
 			},
@@ -9956,6 +9978,16 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 					"bwc"
 				],
 				cost: 0,
+				description: "",
+				name: "Bitter",
+				stock: "Roden",
+				type: "Character"
+			},
+			{
+				allowed: [
+					"bwc"
+				],
+				cost: 0,
 				description: "A Carnivore's blood runs hot, and he is quick to anger. He relies on confrontation to deal with most problems. Call-on for Intimidation. He must enter combat in aggressive stance.",
 				name: "Blood Thirsty",
 				stock: "Roden",
@@ -10440,6 +10472,16 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 				name: "Opportunist",
 				stock: "Roden",
 				type: "Character"
+			},
+			{
+				allowed: [
+					"bwc"
+				],
+				cost: 0,
+				description: "This Roden is one of Aecer's Ordained. He is responsible for carrying out the rituals and rites. Ordained characters are always treated with respect by the Field Roden. 1D affiliation with the Roden faithful.",
+				name: "Ordained",
+				stock: "Roden",
+				type: "Die"
 			},
 			{
 				allowed: [

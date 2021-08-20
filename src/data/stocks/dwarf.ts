@@ -963,7 +963,7 @@ export const Dwarf: bwgr.data.Stock = {
 					skills: [
 						"Any General➞Appraisal",
 						"Any General➞Shipwright",
-						"Any General➞Artificer-wise"
+						"Any Wise➞Artificer-wise"
 					],
 					stock: "Dwarf",
 					traitPool: 1,

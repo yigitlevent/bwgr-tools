@@ -4727,6 +4727,23 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 			},
 			{
 				allowed: [
+					"bwc"
+				],
+				description: "",
+				magical: false,
+				name: "Bishop-wise",
+				noList: false,
+				restriction: "N/A",
+				root: "Perception",
+				tools: [
+					"No",
+					""
+				],
+				training: false,
+				type: "Wise"
+			},
+			{
+				allowed: [
 					"bwg",
 					"bwc"
 				],
@@ -4904,6 +4921,24 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 			},
 			{
 				allowed: [
+					"bwg",
+					"bwc"
+				],
+				description: "",
+				magical: false,
+				name: "Bridge-wise",
+				noList: false,
+				restriction: "N/A",
+				root: "Perception",
+				tools: [
+					"No",
+					""
+				],
+				training: false,
+				type: "Wise"
+			},
+			{
+				allowed: [
 					"bwc"
 				],
 				description: "",
@@ -5034,6 +5069,23 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 				description: "",
 				magical: false,
 				name: "Cat-wise",
+				noList: false,
+				restriction: "N/A",
+				root: "Perception",
+				tools: [
+					"No",
+					""
+				],
+				training: false,
+				type: "Wise"
+			},
+			{
+				allowed: [
+					"bwc"
+				],
+				description: "",
+				magical: false,
+				name: "Caulking-wise",
 				noList: false,
 				restriction: "N/A",
 				root: "Perception",
@@ -6155,7 +6207,7 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 				],
 				description: "",
 				magical: false,
-				name: "Dwarven Arts-wise",
+				name: "Dwarven Art-wise",
 				noList: false,
 				restriction: "N/A",
 				root: "Perception",
@@ -6994,6 +7046,24 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 				description: "",
 				magical: false,
 				name: "Great Masters-wise",
+				noList: false,
+				restriction: "N/A",
+				root: "Perception",
+				tools: [
+					"No",
+					""
+				],
+				training: false,
+				type: "Wise"
+			},
+			{
+				allowed: [
+					"bwg",
+					"bwc"
+				],
+				description: "",
+				magical: false,
+				name: "Great Wolf-wise",
 				noList: false,
 				restriction: "N/A",
 				root: "Perception",
@@ -7884,7 +7954,7 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 				],
 				description: "",
 				magical: false,
-				name: "Lost Treasure-wise",
+				name: "Lost Treasures-wise",
 				noList: false,
 				restriction: "N/A",
 				root: "Perception",
@@ -7919,7 +7989,7 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 				],
 				description: "",
 				magical: false,
-				name: "Maker’s Mark-wise",
+				name: "Maker's Mark-wise",
 				noList: false,
 				restriction: "N/A",
 				root: "Perception",
@@ -9355,6 +9425,24 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 			},
 			{
 				allowed: [
+					"bwg",
+					"bwc"
+				],
+				description: "",
+				magical: false,
+				name: "Sacrament-wise",
+				noList: false,
+				restriction: "N/A",
+				root: "Perception",
+				tools: [
+					"No",
+					""
+				],
+				training: false,
+				type: "Wise"
+			},
+			{
+				allowed: [
 					"bwc"
 				],
 				description: "",
@@ -10106,6 +10194,24 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 				],
 				description: "",
 				magical: false,
+				name: "Territory-wise",
+				noList: false,
+				restriction: "N/A",
+				root: "Perception",
+				tools: [
+					"No",
+					""
+				],
+				training: false,
+				type: "Wise"
+			},
+			{
+				allowed: [
+					"bwg",
+					"bwc"
+				],
+				description: "",
+				magical: false,
 				name: "Terroir-wise",
 				noList: false,
 				restriction: "N/A",
@@ -10231,6 +10337,24 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 				description: "",
 				magical: false,
 				name: "Tragic End-wise",
+				noList: false,
+				restriction: "N/A",
+				root: "Perception",
+				tools: [
+					"No",
+					""
+				],
+				training: false,
+				type: "Wise"
+			},
+			{
+				allowed: [
+					"bwg",
+					"bwc"
+				],
+				description: "",
+				magical: false,
+				name: "Trail-wise",
 				noList: false,
 				restriction: "N/A",
 				root: "Perception",
@@ -13996,23 +14120,6 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 				description: "",
 				magical: false,
 				name: "Legion-wise",
-				noList: false,
-				restriction: "N/A",
-				root: "Perception",
-				tools: [
-					"No",
-					""
-				],
-				training: false,
-				type: "Wise"
-			},
-			{
-				allowed: [
-					"bwc"
-				],
-				description: "",
-				magical: false,
-				name: "Man-wise",
 				noList: false,
 				restriction: "N/A",
 				root: "Perception",

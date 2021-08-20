@@ -141,7 +141,7 @@ export const Orc: bwgr.data.Stock = {
 						"Any General➞Trapper",
 						"Any General➞Stealthy",
 						"Any General➞Climbing",
-						"Any General➞Garrote"
+						"Any Monstrous➞Garrote"
 					],
 					stock: "Orc",
 					traitPool: 1,

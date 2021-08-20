@@ -46,7 +46,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					skills: [
 						"Great Wolf Special➞Begging",
 						"Great Wolf Special➞Cage-wise",
-						"Great Wolf Special➞Man-wise"
+						"Any Wise➞Human-wise"
 					],
 					stock: "Great Wolf",
 					traitPool: 3,
@@ -285,7 +285,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					setting: "Outcast Wolf",
 					skillPool: 4,
 					skills: [
-						"Great Wolf Special➞Territory-wise",
+						"Any Wise➞Territory-wise",
 						"Great Wolf Special➞Pack-wise",
 						"Any General➞Scavenging"
 					],
@@ -404,7 +404,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					traits: [
 						"Great Wolf Lifepath➞Submissive",
 						"Great Wolf Lifepath➞Tasting the Lash",
-						"Great Wolf Lifepath➞Deranged"
+						"Great Wolf Lifepath➞Demented"
 					],
 					years: 0
 				},
@@ -426,7 +426,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					skills: [
 						"Any General➞Stealthy",
 						"Great Wolf Special➞Scent Tracking",
-						"Great Wolf Special➞Trail-wise",
+						"Any Wise➞Trail-wise",
 						"Great Wolf Special➞Orc-wise",
 						"Any General➞Scavenging",
 						"Any General➞Intimidation",
@@ -578,7 +578,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					stock: "Great Wolf",
 					traitPool: 2,
 					traits: [
-						"Great Wolf Lifepath➞Fearsome Beast",
+						"Great Wolf Special➞Fearsome Beast",
 						"Great Wolf Lifepath➞Intense Hatred",
 						"Great Wolf Lifepath➞Fearless",
 						"Great Wolf Lifepath➞Dominant",
@@ -612,7 +612,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					skills: [
 						"Any General➞Conspicuous",
 						"Any General➞Command",
-						"Any General➞Skirmish Tactics",
+						"Any General➞Skirmish Tactics Training",
 						"Any General➞Strategy"
 					],
 					stock: "Great Wolf",
@@ -703,7 +703,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					skills: [
 						"Great Wolf Spirit Hunter Song➞Primal Bark",
 						"Great Wolf Special➞Pack Hunting",
-						"Great Wolf Special➞The Way of the First Hunter"
+						"Great Wolf Special➞Way of the First Hunter"
 					],
 					stock: "Great Wolf",
 					traitPool: 1,
@@ -1011,7 +1011,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					skillPool: 7,
 					skills: [
 						"Great Wolf Special➞Begging",
-						"Great Wolf Special➞Man-wise",
+						"Any Wise➞Human-wise",
 						"Great Wolf Special➞Orc-wise",
 						"Great Wolf Special➞Forest-wise"
 					],

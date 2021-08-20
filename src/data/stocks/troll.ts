@@ -311,7 +311,7 @@ export const Troll: bwgr.data.Stock = {
 					skillPool: 3,
 					skills: [
 						"Any General➞Hammer",
-						"Any General➞Formation Fighting"
+						"Any General➞Formation Fighting Training"
 					],
 					stock: "Troll",
 					traitPool: 1,
@@ -386,7 +386,7 @@ export const Troll: bwgr.data.Stock = {
 					stock: "Troll",
 					traitPool: 1,
 					traits: [
-						"Troll Lifepath➞Where There's a Whip There is a Way",
+						"Troll Lifepath➞Where There's a Whip There's a Way",
 						"Troll Lifepath➞Tough as Nails",
 						"Troll Lifepath➞Bellowing"
 					],
@@ -531,7 +531,7 @@ export const Troll: bwgr.data.Stock = {
 					setting: "Wild",
 					skillPool: 2,
 					skills: [
-						"Any Wise➞Man-wise",
+						"Any Wise➞Human-wise",
 						"Any Wise➞Village-wise"
 					],
 					stock: "Troll",
@@ -632,7 +632,7 @@ export const Troll: bwgr.data.Stock = {
 					setting: "Wild",
 					skillPool: 3,
 					skills: [
-						"Any General➞Nursing",
+						"Any Monstrous➞Nursing",
 						"Any General➞Ugly Truth"
 					],
 					stock: "Troll",
