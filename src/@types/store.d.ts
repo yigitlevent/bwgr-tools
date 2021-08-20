@@ -13,8 +13,8 @@ namespace bwgr {
 			skillMenu: { category: string; };
 			traitMenu: { category: string; };
 			magicwheelMenu: { canvasSize: number; circleRadius: number; circleOffset: number; textOffset: number; };
-			factionMenu: { factionIndex: number; factions: bwgr.data.FactionCard[]; };
-			unitMenu: { unitIndex: number; units: bwgr.data.UnitCard[]; };
+			factionMenu: { currentIndex: number; factions: bwgr.data.FactionCard[]; };
+			unitMenu: { currentIndex: number; units: bwgr.data.UnitCard[]; };
 
 			// BASICS
 			setStatus: (status: bwgr.Status) => void;

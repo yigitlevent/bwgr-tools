@@ -7,6 +7,8 @@ namespace bwgr {
 			description: string;
 		}
 
+		type UnitStatus = "Ready" | "Out of Supply" | "Unscathed" | "Bloodied" | "Broken";
+
 		interface FactionCard {
 			[key: string]: string | string[] | [string, string, string] | number | bwgr.data.ListItem[];
 			name: string;
@@ -31,7 +33,7 @@ namespace bwgr {
 			name: string;
 			commander: string;
 			type: string;
-			status: "Active" | "Inactive";
+			status: bwgr.data.UnitStatus;
 			composition: string;
 			doctrine: string;
 			tradition: string;
