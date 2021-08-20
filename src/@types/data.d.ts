@@ -2,6 +2,9 @@ namespace bwgr {
 
 	namespace data {
 
+		interface Error { path: string; type: string; error: string; }
+		interface Warning { path: string; type: string; warning: string; }
+
 		interface ListItem {
 			name: string;
 			description: string;
@@ -76,9 +79,11 @@ namespace bwgr {
 			texts?: string[];
 		};
 
+		type ConditionItem = (bwgr.path.Lifepath | `Skill➞${bwgr.path.Skill}` | `Trait➞${bwgr.path.Trait}` | bwgr.data.Condition);
+
 		interface Condition {
 			type: "AND" | "OR" | "NOT",
-			items: (bwgr.path.Lifepath | `Skill➞${bwgr.path.Skill}` | `Trait➞${bwgr.path.Trait}` | bwgr.data.Condition)[];
+			items: bwgr.data.ConditionItem[];
 		}
 
 		type Limit = (`LP➞UNIQUE` | `GENDER➞${"FEMALE" | "MALE"}` | `${"YEARS" | "LP" | "GRIEF"}➞${"MIN" | "MAX"}➞${number}`);
