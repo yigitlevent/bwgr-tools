@@ -27,7 +27,7 @@ const Controls = styled.div`
 `;
 
 const Line = styled.div`
-	width: max-content;
+	width: auto;
 	margin: 0 auto;
 
 	display: flex;
@@ -37,7 +37,7 @@ const Line = styled.div`
 	align-content: center;
 
 	& > input:is([type="button"]) {
-		margin: 3px auto;
+		margin: 3px 0;
 	}
 
 	& > span {
@@ -72,6 +72,7 @@ export function MagicWheel(): JSX.Element {
 	const [steps, setSteps] = useState(0);
 
 	const [isRotating, setIsRotating] = useState(false);
+	const [selected, setSelected] = useState([MagicData[0][0], MagicData[1][0], MagicData[2][0], MagicData[3][0], MagicData[4][0]]);
 	const [blockAngle, setBlockAngle] = useState([0, 0, 0, 0, 0]);
 	const [currentAngle, setCurrentAngle] = useState([0, 0, 0, 0, 0]);
 
@@ -125,11 +126,11 @@ export function MagicWheel(): JSX.Element {
 					const anglePerCharacter = 8 * (1 / radius);
 
 					const stringStartAngle = ((blockAngle[parseInt(arrayKey)] - (anglePerCharacter * length)) / 2);
-					const blockStartAngle = ((blockAngle[parseInt(arrayKey)] * parseInt(stringKey) - (anglePerCharacter * 2)) / 2);
+					const blockStartAngle = ((blockAngle[parseInt(arrayKey)] * -parseInt(stringKey) - (anglePerCharacter * 2)) / 2);
 
 					context.save();
 					context.translate(canvasSize / 2, canvasSize / 2);
-					context.rotate(rotationArray[parseInt(arrayKey)] + stringStartAngle + blockStartAngle);
+					context.rotate(rotationArray[parseInt(arrayKey)] + stringStartAngle + blockStartAngle - (blockAngle[parseInt(arrayKey)] / 2));
 
 					drawString(MagicData[arrayKey][stringKey], radius, anglePerCharacter);
 
@@ -171,6 +172,53 @@ export function MagicWheel(): JSX.Element {
 	const rotate = useCallback((amount: number): void => {
 		setIsRotating(true);
 
+		console.log("////////////////////////////////////////////////////////////////////");
+		console.log(selected);
+		console.log("amount", amount);
+		console.log(" ");
+
+		const tmpSel = ["", "", "", "", ""];
+
+		for (const key in MagicData) {
+			const currentIndex = MagicData[key].findIndex(v => v === selected[key]);
+			console.log("currIndex", currentIndex);
+
+			let newIndex = currentIndex + amount;
+			if (newIndex > MagicData[key].length - 1) {
+				newIndex = newIndex % MagicData[key].length;
+			}
+			else if (newIndex < 0) {
+				newIndex = (newIndex % MagicData[key].length + MagicData[key].length) % MagicData[key].length;
+			}
+
+			console.log(newIndex);
+
+			tmpSel[key] = MagicData[key][newIndex];
+
+
+			/*let newIndex = currentIndex + amount;
+			const maxIndex = MagicData[key].length - 1;
+
+			console.log("newIndex u", newIndex);
+			console.log("maxIndex", maxIndex);
+
+			const overflow = newIndex > maxIndex;
+			while (newIndex > maxIndex) newIndex = newIndex - maxIndex;
+			if (overflow) newIndex = newIndex - 1;
+			console.log("newIndex 1", newIndex);
+
+			const underflow = newIndex < 0;
+			if (underflow) newIndex = newIndex - 1;
+			while (newIndex < 0) newIndex = maxIndex + newIndex;
+			console.log("newIndex 2", newIndex);
+
+			console.log("result", MagicData[key][newIndex]);
+			console.log(" ");*/
+		}
+		setSelected([...tmpSel]);
+		console.log(tmpSel);
+		console.log(" ");
+
 		const currentRotation = [...currentAngle];
 		const targetRotation = [...currentAngle].map((v, i) => v + (amount * (blockAngle[i] / 2)));
 
@@ -184,7 +232,7 @@ export function MagicWheel(): JSX.Element {
 			skip = !skip;
 
 			tempRotation = [...tempRotation].map((v, i) => {
-				const tempVal = v + (0.05 * amount);
+				const tempVal = (v + (0.05 * amount));
 				if ((amount > 0 && tempVal >= targetRotation[i])
 					|| (amount < 0 && tempVal <= targetRotation[i])) return targetRotation[i];
 				return tempVal;
@@ -208,7 +256,19 @@ export function MagicWheel(): JSX.Element {
 		};
 
 		myReq = requestAnimationFrame(step);
-	}, [blockAngle, currentAngle, drawAll]);
+	}, [selected, blockAngle, currentAngle, drawAll]);
+
+	const startConditionChange = useCallback((value: string, circleIndex: number): void => {
+		const selectionIndex = MagicData[circleIndex].findIndex(v => v === value);
+		if (selectionIndex > -1) {
+			const tempSel = [...selected];
+			tempSel[circleIndex] = MagicData[circleIndex][selectionIndex];
+
+			currentAngle[circleIndex] = (blockAngle[circleIndex] / 2) * selectionIndex;
+			setCurrentAngle([...currentAngle]);
+			setSelected(tempSel);
+		}
+	}, [blockAngle, currentAngle, selected]);
 
 	useEffect(() => {
 		const tempArr = [0, 0, 0, 0, 0];
@@ -231,6 +291,36 @@ export function MagicWheel(): JSX.Element {
 			<Subtitle>Magic Wheel</Subtitle>
 
 			<Controls>
+				<Line>
+					<SelectSearch
+						options={[...MagicData[4].map(v => { return { name: v, value: v }; })]}
+						value={(!isRotating) ? selected[4] : ""}
+						onChange={(e) => startConditionChange(e as any, 4)}
+					/>
+					<SelectSearch
+						options={[...MagicData[3].map(v => { return { name: v, value: v }; })]}
+						value={(!isRotating) ? selected[3] : ""}
+						onChange={(e) => startConditionChange(e as any, 3)}
+					/>
+					<SelectSearch
+						options={[...MagicData[2].map(v => { return { name: v, value: v }; })]}
+						value={(!isRotating) ? selected[2] : ""}
+						onChange={(e) => startConditionChange(e as any, 2)}
+					/>
+					<SelectSearch
+						options={[...MagicData[1].map(v => { return { name: v, value: v }; })]}
+						value={(!isRotating) ? selected[1] : ""}
+						onChange={(e) => startConditionChange(e as any, 1)}
+					/>
+					<SelectSearch
+						options={[...MagicData[0].map(v => { return { name: v, value: v }; })]}
+						value={(!isRotating) ? selected[0] : ""}
+						onChange={(e) => startConditionChange(e as any, 0)}
+					/>
+				</Line>
+
+				<Divider />
+
 				<Line>
 					<SelectSearch
 						options={[{ name: "clockwise", value: 1 }, { name: "counterclockwise", value: -1 }]}
