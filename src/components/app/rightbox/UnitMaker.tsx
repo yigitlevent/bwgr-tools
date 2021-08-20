@@ -10,7 +10,7 @@ import { ClientStore } from "../../../stores/ClientStore";
 import { SubBox } from "../../shared/Box";
 import { Divider } from "../../shared/Divider";
 import { Button, Input, Textarea } from "../../shared/Inputs";
-import { BlockCenterer, MakerBlock, MakerSideBlock, MakerWrapper } from "../../shared/Maker";
+import { BlockCenterer, MakerBlock, MakerSideBlock, MakerStatBlock, MakerWrapper } from "../../shared/Maker";
 import { Subtitle } from "../../shared/Titles";
 
 const UnitMakerWrapper = styled(MakerWrapper)`
@@ -21,50 +21,6 @@ const UnitMakerWrapper = styled(MakerWrapper)`
 	& > *:nth-child(3) {
 		width: 80px !important;
 		margin: 2px 0 2px 2px;
-	}
-`;
-
-const UnitMakerSideBlock = styled(MakerSideBlock)`
-	width: 92px;
-	grid-template-columns: 56px 36px;
-	grid-template-rows: auto auto;
-	margin: 0 1px;
-
-	& > label {
-		text-align: center;
-		grid-column: span 2;
-	}
-
-	& > .select-search {
-		width: 100%;
-		min-width: 0;
-		justify-self: end;
-		margin: 0;
-	}
-
-	& > input {
-		width: 100% !important;
-		min-width: 0;
-		justify-self: start;
-		margin: 0;
-	}
-`;
-
-const UnitMakerSideBlockWide = styled(UnitMakerSideBlock)`
-	width: 128px;
-	grid-template-columns: 56px 36px 36px;
-
-	& > label {
-		grid-column: span 3;
-	}
-`;
-
-const UnitMakerSideBlockSingle = styled(UnitMakerSideBlock)`
-	width: 56px;
-	grid-template-columns: 56px;
-
-	& > label {
-		grid-column: span 1;
 	}
 `;
 
@@ -178,7 +134,7 @@ export function UnitMaker(): JSX.Element {
 
 				<Divider title={"Stats"} />
 				<BlockCenterer>
-					<UnitMakerSideBlock>
+					<MakerStatBlock span={2} columns={"56px 36px"} rows={"auto auto"}>
 						<label>Ambush</label>
 						<SelectSearch
 							options={[{ name: "B", value: "B" }, { name: "G", value: "G" }, { name: "W", value: "W" }]}
@@ -187,8 +143,8 @@ export function UnitMaker(): JSX.Element {
 						<Input type="number" placeholder="0" min={0} max={6}
 							value={currentUnit.ambush[1]} onChange={(e) => changeValue("ambush", e.target.value, 1)}
 						/>
-					</UnitMakerSideBlock>
-					<UnitMakerSideBlock>
+					</MakerStatBlock>
+					<MakerStatBlock span={2} columns={"56px 36px"} rows={"auto auto"}>
 						<label>Battle</label>
 						<SelectSearch
 							options={[{ name: "B", value: "B" }, { name: "G", value: "G" }, { name: "W", value: "W" }]}
@@ -197,8 +153,8 @@ export function UnitMaker(): JSX.Element {
 						<Input type="number" placeholder="0" min={0} max={6}
 							value={currentUnit.battle[1]} onChange={(e) => changeValue("battle", e.target.value, 1)}
 						/>
-					</UnitMakerSideBlock>
-					<UnitMakerSideBlock>
+					</MakerStatBlock>
+					<MakerStatBlock span={2} columns={"56px 36px"} rows={"auto auto"}>
 						<label>Siege</label>
 						<SelectSearch
 							options={[{ name: "B", value: "B" }, { name: "G", value: "G" }, { name: "W", value: "W" }]}
@@ -207,8 +163,8 @@ export function UnitMaker(): JSX.Element {
 						<Input type="number" placeholder="0" min={0} max={6}
 							value={currentUnit.siege[1]} onChange={(e) => changeValue("siege", e.target.value, 1)}
 						/>
-					</UnitMakerSideBlock>
-					<UnitMakerSideBlock>
+					</MakerStatBlock>
+					<MakerStatBlock span={2} columns={"56px 36px"} rows={"auto auto"}>
 						<label>Skirmish</label>
 						<SelectSearch
 							options={[{ name: "B", value: "B" }, { name: "G", value: "G" }, { name: "W", value: "W" }]}
@@ -217,8 +173,8 @@ export function UnitMaker(): JSX.Element {
 						<Input type="number" placeholder="0" min={0} max={6}
 							value={currentUnit.skirmish[1]} onChange={(e) => changeValue("skirmish", e.target.value, 1)}
 						/>
-					</UnitMakerSideBlock>
-					<UnitMakerSideBlock>
+					</MakerStatBlock>
+					<MakerStatBlock span={2} columns={"56px 36px"} rows={"auto auto"}>
 						<label>Soldiering</label>
 						<SelectSearch
 							options={[{ name: "B", value: "B" }, { name: "G", value: "G" }, { name: "W", value: "W" }]}
@@ -227,8 +183,8 @@ export function UnitMaker(): JSX.Element {
 						<Input type="number" placeholder="0" min={0} max={6}
 							value={currentUnit.soldiering[1]} onChange={(e) => changeValue("soldiering", e.target.value, 1)}
 						/>
-					</UnitMakerSideBlock>
-					<UnitMakerSideBlock>
+					</MakerStatBlock>
+					<MakerStatBlock span={2} columns={"56px 36px"} rows={"auto auto"}>
 						<label>Seamanship</label>
 						<SelectSearch
 							options={[{ name: "B", value: "B" }, { name: "G", value: "G" }, { name: "W", value: "W" }]}
@@ -237,12 +193,12 @@ export function UnitMaker(): JSX.Element {
 						<Input type="number" placeholder="0" min={0} max={6}
 							value={currentUnit.seamanship[1]} onChange={(e) => changeValue("seamanship", e.target.value, 1)}
 						/>
-					</UnitMakerSideBlock>
+					</MakerStatBlock>
 				</BlockCenterer>
 
 				<Divider title={"Attributes"} />
 				<BlockCenterer>
-					<UnitMakerSideBlockWide>
+					<MakerStatBlock span={3} columns={"56px 36px 36px"} rows={"auto auto"}>
 						<label>Health</label>
 						<SelectSearch
 							options={[{ name: "B", value: "B" }, { name: "G", value: "G" }, { name: "W", value: "W" }]}
@@ -254,8 +210,8 @@ export function UnitMaker(): JSX.Element {
 						<Input type="number" placeholder="0" min={0} max={6}
 							value={currentUnit.health[2]} onChange={(e) => changeValue("health", e.target.value, 2)}
 						/>
-					</UnitMakerSideBlockWide>
-					<UnitMakerSideBlockWide>
+					</MakerStatBlock>
+					<MakerStatBlock span={3} columns={"56px 36px 36px"} rows={"auto auto"}>
 						<label>Steel</label>
 						<SelectSearch
 							options={[{ name: "B", value: "B" }, { name: "G", value: "G" }, { name: "W", value: "W" }]}
@@ -267,35 +223,35 @@ export function UnitMaker(): JSX.Element {
 						<Input type="number" placeholder="0" min={0} max={6}
 							value={currentUnit.steel[1]} onChange={(e) => changeValue("steel", e.target.value, 2)}
 						/>
-					</UnitMakerSideBlockWide>
+					</MakerStatBlock>
 				</BlockCenterer>
 
 				<Divider title={"Aspects"} />
 				<BlockCenterer>
-					<UnitMakerSideBlockSingle>
+					<MakerStatBlock span={1} columns={"60px"} rows={"auto auto"}>
 						<label>Strature</label>
 						<Input type="number" placeholder="0" min={0} max={10}
 							value={currentUnit.strature} onChange={(e) => changeValue("strature", e.target.value)}
 						/>
-					</UnitMakerSideBlockSingle>
-					<UnitMakerSideBlockSingle>
+					</MakerStatBlock>
+					<MakerStatBlock span={1} columns={"60px"} rows={"auto auto"}>
 						<label>Strength</label>
 						<Input type="number" placeholder="0" min={0} max={10}
 							value={currentUnit.strength} onChange={(e) => changeValue("strength", e.target.value)}
 						/>
-					</UnitMakerSideBlockSingle>
-					<UnitMakerSideBlockSingle>
+					</MakerStatBlock>
+					<MakerStatBlock span={1} columns={"60px"} rows={"auto auto"}>
 						<label>Stride</label>
 						<Input type="number" placeholder="0" min={0} max={10}
 							value={currentUnit.stride} onChange={(e) => changeValue("stride", e.target.value)}
 						/>
-					</UnitMakerSideBlockSingle>
-					<UnitMakerSideBlockSingle>
+					</MakerStatBlock>
+					<MakerStatBlock span={1} columns={"60px"} rows={"auto auto"}>
 						<label>Supply</label>
 						<Input type="number" placeholder="0" min={0} max={10}
 							value={currentUnit.supply} onChange={(e) => changeValue("supply", e.target.value)}
 						/>
-					</UnitMakerSideBlockSingle>
+					</MakerStatBlock>
 				</BlockCenterer>
 
 				<Divider />

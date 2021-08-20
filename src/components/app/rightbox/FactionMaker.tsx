@@ -94,14 +94,14 @@ export function FactionMaker(): JSX.Element {
 				/>
 
 				<div>
-					<MakerSideBlock>
+					<MakerSideBlock columns={"70px 30px"} rows={"auto"}>
 						<label>Influence</label>
 						<Input type="number" placeholder="0" min={0} max={3}
 							value={currentFaction.influence} onChange={(e) => changeValue("influence", e.target.value)}
 						/>
 					</MakerSideBlock>
 
-					<MakerSideBlock>
+					<MakerSideBlock columns={"70px 30px"} rows={"auto"}>
 						<label>Funds</label>
 						<Input type="number" placeholder="0" min={0} max={100}
 							value={currentFaction.funds} onChange={(e) => changeValue("funds", e.target.value)}

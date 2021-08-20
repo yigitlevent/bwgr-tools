@@ -41,18 +41,48 @@ export const MakerBlock = styled.span`
 	${MakerBlockInternal}
 `;
 
-export const MakerSideBlock = styled.span`
+export const MakerSideBlock = styled.span<{ rows: string; columns: string; }>`
 	display: grid;
 	width: 100px;
 	flex: 0 0 auto;
+	margin: 0 1px;
 
-	grid-template-columns: 70px 30px;
-	grid-template-rows: auto;
+	grid-template-columns: ${p => p.columns};
+	grid-template-rows: ${p => p.rows};
 	align-items: center;
 
 	& > label {
 		font-size: 1.1em;
 		text-align: right;
+	}
+`;
+
+export const MakerStatBlock = styled.span<{ span: number; rows: string; columns: string; }>`
+	display: grid;
+	width: 92px;
+	flex: 0 0 auto;
+	margin: 0 1px;
+
+	grid-template-columns: ${p => p.columns};
+	grid-template-rows: ${p => p.rows};
+	align-items: center;
+
+	& > label {
+		font-size: 1.1em;
+		text-align: center;
+		grid-column: span ${p => p.span};
+	}
+
+	& > .select-search {
+		width: 100%;
+		min-width: 0;
+		margin: 0;
+	}
+
+	& > input {
+		width: 100% !important;
+		min-width: 0;
+		margin: 0;
 	}
 `;
 
