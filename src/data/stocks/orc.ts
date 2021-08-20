@@ -140,7 +140,8 @@ export const Orc: bwgr.data.Stock = {
 						"Any General➞Tracking",
 						"Any General➞Trapper",
 						"Any General➞Stealthy",
-						"Any General➞Climbing"
+						"Any General➞Climbing",
+						"Any General➞Garrote"
 					],
 					stock: "Orc",
 					traitPool: 1,
@@ -423,8 +424,8 @@ export const Orc: bwgr.data.Stock = {
 					skillPool: 5,
 					skills: [
 						"Any General➞Great Wolf Husbandry",
-						"Any General➞Great Wolf Husbandry",
-						"Any Wise➞Landlord-wise",
+						"Any Wise➞Great Wolf-wise",
+						"Any Wise➞Pack-wise",
 						"Any General➞Mending"
 					],
 					stock: "Orc",
@@ -498,8 +499,8 @@ export const Orc: bwgr.data.Stock = {
 						conditions: {
 							type: "OR",
 							items: [
-								// TODO: Missing "pack master" lifepath?
 								"Orc➞Black Legion➞Bears the Lash",
+								"Orc➞Black Legion➞Packmaster",
 								"Orc➞Great and Black➞Named"
 							]
 						}
@@ -962,10 +963,7 @@ export const Orc: bwgr.data.Stock = {
 								"Orc➞Chattel➞Forger",
 								"Orc➞Great and Black➞1*ANY",
 								"Orc➞Black Legion➞1*ANY",
-								// TODO: this is wrong, it is actually "four slave lifepaths"
-								"Orc➞Chattel➞4*Cutter Slave",
-								"Orc➞Chattel➞4*Forge Slave",
-								"Orc➞Chattel➞4*Cattle Slave"
+								"Orc➞Chattel➞4*-Slave",
 							]
 						}
 					},
