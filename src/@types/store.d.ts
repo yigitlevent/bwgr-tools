@@ -12,9 +12,9 @@ namespace bwgr {
 			lifepathMenu: { stock: "" | bwgr.data.StocksList; setting: string; };
 			skillMenu: { category: string; };
 			traitMenu: { category: string; };
-			magicwheelMenu: { canvasSize: number; circleRadius: number; circleOffset: number; textOffset: number; };
 			factionMenu: { currentIndex: number; factions: bwgr.data.FactionCard[]; };
 			unitMenu: { currentIndex: number; units: bwgr.data.UnitCard[]; };
+			magicwheelMenu: { canvasSize: number; circleRadius: number; circleOffset: number; textOffset: number; };
 
 			// BASICS
 			setStatus: (status: bwgr.Status) => void;

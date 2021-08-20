@@ -64,16 +64,16 @@ export function MagicWheel(): JSX.Element {
 	const [steps, setSteps] = useState(0);
 
 	const [isRotating, setIsRotating] = useState(false);
-	const [selected, setSelected] = useState([MagicData[0][0], MagicData[1][0], MagicData[2][0], MagicData[3][0], MagicData[4][0]]);
+	const [selected, setSelected] = useState<string[]>([MagicData[0][0].name, MagicData[1][0].name, MagicData[2][0].name, MagicData[3][0].name, MagicData[4][0].name]);
 	const [blockAngle, setBlockAngle] = useState([0, 0, 0, 0, 0]);
 	const [currentAngle, setCurrentAngle] = useState([0, 0, 0, 0, 0]);
 
 	const rotate = useCallback((amount: number): void => {
 		setIsRotating(true);
 
-		const tmpSel = ["", "", "", "", ""];
+		const tmpSel: string[] = ["", "", "", "", ""];
 		for (const key in MagicData) {
-			const currentIndex = MagicData[key].findIndex(v => v === selected[key]);
+			const currentIndex = MagicData[key].findIndex(v => v.name === selected[key]);
 
 			let newIndex = currentIndex + amount;
 			if (newIndex > MagicData[key].length - 1) {
@@ -83,7 +83,7 @@ export function MagicWheel(): JSX.Element {
 				newIndex = (newIndex % MagicData[key].length + MagicData[key].length) % MagicData[key].length;
 			}
 
-			tmpSel[key] = MagicData[key][newIndex];
+			tmpSel[key] = MagicData[key][newIndex].name;
 		}
 		setSelected([...tmpSel]);
 
@@ -126,10 +126,10 @@ export function MagicWheel(): JSX.Element {
 	}, [selected, blockAngle, currentAngle]);
 
 	const startConditionChange = useCallback((value: string, circleIndex: number): void => {
-		const selectionIndex = MagicData[circleIndex].findIndex(v => v === value);
+		const selectionIndex = MagicData[circleIndex].findIndex(v => v.name === value);
 		if (selectionIndex > -1) {
 			const tempSel = [...selected];
-			tempSel[circleIndex] = MagicData[circleIndex][selectionIndex];
+			tempSel[circleIndex] = MagicData[circleIndex][selectionIndex].name;
 
 			currentAngle[circleIndex] = (blockAngle[circleIndex] / 2) * selectionIndex;
 			setCurrentAngle([...currentAngle]);
@@ -152,27 +152,27 @@ export function MagicWheel(): JSX.Element {
 			<Controls>
 				<Line>
 					<SelectSearch
-						options={[...MagicData[4].map(v => { return { name: v, value: v }; })]}
+						options={[...Object.values(MagicData[4]).map(v => { return { name: v.name, value: v.name }; })]}
 						value={(!isRotating) ? selected[4] : ""}
 						onChange={(e) => startConditionChange(e as any, 4)}
 					/>
 					<SelectSearch
-						options={[...MagicData[3].map(v => { return { name: v, value: v }; })]}
+						options={[...Object.values(MagicData[3]).map(v => { return { name: v.name, value: v.name }; })]}
 						value={(!isRotating) ? selected[3] : ""}
 						onChange={(e) => startConditionChange(e as any, 3)}
 					/>
 					<SelectSearch
-						options={[...MagicData[2].map(v => { return { name: v, value: v }; })]}
+						options={[...Object.values(MagicData[2]).map(v => { return { name: v.name, value: v.name }; })]}
 						value={(!isRotating) ? selected[2] : ""}
 						onChange={(e) => startConditionChange(e as any, 2)}
 					/>
 					<SelectSearch
-						options={[...MagicData[1].map(v => { return { name: v, value: v }; })]}
+						options={[...Object.values(MagicData[1]).map(v => { return { name: v.name, value: v.name }; })]}
 						value={(!isRotating) ? selected[1] : ""}
 						onChange={(e) => startConditionChange(e as any, 1)}
 					/>
 					<SelectSearch
-						options={[...MagicData[0].map(v => { return { name: v, value: v }; })]}
+						options={[...Object.values(MagicData[0]).map(v => { return { name: v.name, value: v.name }; })]}
 						value={(!isRotating) ? selected[0] : ""}
 						onChange={(e) => startConditionChange(e as any, 0)}
 					/>

@@ -7,6 +7,14 @@ namespace bwgr {
 			description: string;
 		}
 
+		interface MagicFacet {
+			name: string;
+			obstacle: number; 
+			actions: number; 
+			resource: number;
+		}
+
+
 		type UnitStatus = "Ready" | "Out of Supply" | "Unscathed" | "Bloodied" | "Broken";
 
 		interface FactionCard {

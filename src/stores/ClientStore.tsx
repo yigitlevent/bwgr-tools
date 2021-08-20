@@ -9,9 +9,9 @@ export const ClientStore = create<bwgr.stores.ClientStore>(set => ({
 	lifepathMenu: { stock: "", setting: "" },
 	skillMenu: { category: "" },
 	traitMenu: { category: "" },
-	magicwheelMenu: { canvasSize: 580, circleRadius: 32, circleOffset: 90, textOffset: 100 },
 	factionMenu: { currentIndex: -1, factions: [] },
 	unitMenu: { currentIndex: -1, units: [] },
+	magicwheelMenu: { canvasSize: 580, circleRadius: 32, circleOffset: 90, textOffset: 100 },
 
 	// BASICS
 	setStatus: (status) => set(produce((state: bwgr.stores.ClientStore) => {

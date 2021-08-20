@@ -51,7 +51,7 @@ export function MainCanvas({ currentAngle, blockAngle }: { currentAngle: number[
 		if (context) {
 			for (const arrayKey in MagicData) {
 				for (const stringKey in MagicData[arrayKey]) {
-					const length = MagicData[arrayKey][stringKey].length;
+					const length = MagicData[arrayKey][stringKey].name.length;
 
 					const radius = circleRadius * (parseInt(arrayKey) + 1) + textOffset;
 					const anglePerCharacter = 8 * (1 / radius);
