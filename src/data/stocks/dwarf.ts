@@ -125,7 +125,7 @@ export const Dwarf: bwgr.data.Stock = {
 					skills: [
 						"Dwarf Art➞Black-Metal Artifice",
 						"Any General➞Mending",
-						"Any Wise➞Dwarven Arts-wise"
+						"Any Wise➞Dwarven Art-wise"
 					],
 					stock: "Dwarf",
 					traitPool: 1,
@@ -300,7 +300,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					born: false,
 					eitherPool: 0,
-					generalSkillPool: 0,
+					generalSkillPool: 2,
 					leads: [
 						"Dwarf➞Outcast",
 						"Dwarf➞Host"
@@ -387,7 +387,7 @@ export const Dwarf: bwgr.data.Stock = {
 					skills: [
 						"Any General➞Farming",
 						"Any Wise➞Crowd-wise",
-						"Any Wise➞Hold-wise"
+						"Any Wise➞Hills-wise"
 					],
 					stock: "Dwarf",
 					traitPool: 2,
@@ -417,7 +417,7 @@ export const Dwarf: bwgr.data.Stock = {
 					skillPool: 5,
 					skills: [
 						"Any General➞Animal Husbandry",
-						"Any Wise➞Forest-wise",
+						"Any Wise➞Flock-wise",
 						"Dwarf Special➞Fence Building",
 						"Any General➞Climbing"
 					],
@@ -482,7 +482,7 @@ export const Dwarf: bwgr.data.Stock = {
 					skillPool: 4,
 					skills: [
 						"Any Wise➞Tunnel-wise",
-						"Any Wise➞Genius-wise",
+						"Any Wise➞Gas Pocket-wise",
 						"Dwarf Art➞Excavation"
 					],
 					stock: "Dwarf",
@@ -516,7 +516,7 @@ export const Dwarf: bwgr.data.Stock = {
 						"Any General➞Miller",
 						"Any General➞Mending",
 						"Any General➞Brewer",
-						"Any Wise➞Graybeard-wise"
+						"Any Wise➞Grain-wise"
 					],
 					stock: "Dwarf",
 					traitPool: 1,
@@ -595,8 +595,8 @@ export const Dwarf: bwgr.data.Stock = {
 					setting: "Clansman",
 					skillPool: 5,
 					skills: [
-						"Any Wise➞Personal Effects-wise",
-						"Any Wise➞Vintage-wise",
+						"Any Wise➞Ore-wise",
+						"Any Wise➞Vein-wise",
 						"Any General➞Engineering"
 					],
 					stock: "Dwarf",
@@ -629,8 +629,8 @@ export const Dwarf: bwgr.data.Stock = {
 					setting: "Clansman",
 					skillPool: 5,
 					skills: [
-						"Any Wise➞Contract-wise",
-						"Any Wise➞Family Secrets-wise",
+						"Any Wise➞Clan-wise",
+						"Any Wise➞Family-wise",
 						"Any General➞Haggling",
 						"Any General➞Soothing Platitudes"
 					],
@@ -677,8 +677,8 @@ export const Dwarf: bwgr.data.Stock = {
 					skills: [
 						"Dwarf Art➞Coarse Persuasion",
 						"Any General➞Ugly Truth",
-						"Any Wise➞Handwriting-wise",
-						"Any Wise➞Hypocritical Bastards-wise"
+						"Any Wise➞Guilder-wise",
+						"Any Wise➞Host-wise"
 					],
 					stock: "Dwarf",
 					traitPool: 2,
@@ -744,8 +744,8 @@ export const Dwarf: bwgr.data.Stock = {
 					setting: "Guilder",
 					skillPool: 5,
 					skills: [
-						"Any Wise➞Hoof-wise",
-						"Any Wise➞Scutwork-wise",
+						"Any Wise➞Hold-wise",
+						"Any Wise➞Rumor-wise",
 						"Any General➞Oratory",
 						"Dwarf Special➞Clan History"
 					],
@@ -779,9 +779,9 @@ export const Dwarf: bwgr.data.Stock = {
 					skillPool: 5,
 					skills: [
 						"Any General➞Hauling",
-						"Any Wise➞Whip-wise",
-						"Any Wise➞Cave-In-wise",
-						"Any Wise➞Rumor-wise"
+						"Any Wise➞Wagon-wise",
+						"Any Wise➞Cargo-wise",
+						"Any Wise➞Road-wise"
 					],
 					stock: "Dwarf",
 					traitPool: 2,
@@ -800,6 +800,7 @@ export const Dwarf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Dwarf➞Clansman",
+						"Dwarf➞Host",
 						"Dwarf➞Outcast"
 					],
 					mentalPool: 0,
@@ -813,7 +814,7 @@ export const Dwarf: bwgr.data.Stock = {
 						"Any General➞Animal Husbandry",
 						"Any General➞Driving",
 						"Any General➞Mending",
-						"Any Wise➞Oath-wise"
+						"Any Wise➞Mule-wise"
 					],
 					stock: "Dwarf",
 					traitPool: 1,
@@ -848,7 +849,7 @@ export const Dwarf: bwgr.data.Stock = {
 						"Any General➞Conspicuous",
 						"Any General➞Streetwise",
 						"Any General➞Haggling",
-						"Any Wise➞Suicidal Bravery-wise"
+						"Any Wise➞Spiel-wise"
 					],
 					stock: "Dwarf",
 					traitPool: 1,
@@ -878,7 +879,7 @@ export const Dwarf: bwgr.data.Stock = {
 						"Any General➞Carving",
 						"Any General➞Tanner",
 						"Any General➞Carpentry",
-						"Any Wise➞Shortcut-wise"
+						"Any Wise➞Scutwork-wise"
 					],
 					stock: "Dwarf",
 					traitPool: 1,
@@ -918,6 +919,7 @@ export const Dwarf: bwgr.data.Stock = {
 					skillPool: 7,
 					skills: [
 						"Any General➞Haggling",
+						"Any Wise➞Reputation-wise",
 						"Any General➞Cartwright",
 						"Any General➞Mending",
 						"Dwarf Art➞Black-Metal Artifice"
@@ -936,7 +938,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					born: false,
 					eitherPool: 1,
-					generalSkillPool: 0,
+					generalSkillPool: 1,
 					leads: [
 						"Dwarf➞Clansman",
 						"Dwarf➞Artificer"
@@ -961,7 +963,7 @@ export const Dwarf: bwgr.data.Stock = {
 					skills: [
 						"Any General➞Appraisal",
 						"Any General➞Shipwright",
-						"Any General➞Wises"
+						"Any General➞Artificer-wise"
 					],
 					stock: "Dwarf",
 					traitPool: 1,
@@ -1358,7 +1360,7 @@ export const Dwarf: bwgr.data.Stock = {
 						"Any General➞Command",
 						"Any General➞Conspicuous",
 						"Any General➞Formation Fighting Training",
-						"Any General➞Strategy",
+						"Any General➞Tactics",
 						"Any General➞Cartography",
 						"Any Wise➞Graybeard-wise"
 					],
@@ -1779,7 +1781,7 @@ export const Dwarf: bwgr.data.Stock = {
 					],
 					born: false,
 					eitherPool: 0,
-					generalSkillPool: 0,
+					generalSkillPool: 2,
 					leads: [
 						"Dwarf➞Host",
 						"Dwarf➞Outcast"
@@ -1908,7 +1910,7 @@ export const Dwarf: bwgr.data.Stock = {
 						"Any General➞Appraisal",
 						"Any General➞Obscure History",
 						"Any General➞Symbology",
-						"Any Wise➞Lost Treasure-wise"
+						"Any Wise➞Lost Treasures-wise"
 					],
 					stock: "Dwarf",
 					traitPool: 2,
@@ -1940,7 +1942,7 @@ export const Dwarf: bwgr.data.Stock = {
 						"Dwarf Special➞Games of Chance",
 						"Any General➞Observation",
 						"Any General➞Sleight of Hand",
-						"Any Wise➞Cheating-wise"
+						"Any Wise➞Cheat-wise"
 					],
 					stock: "Dwarf",
 					traitPool: 2,
@@ -2019,13 +2021,7 @@ export const Dwarf: bwgr.data.Stock = {
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
-					leads: [
-						"Dwarf➞Clansman",
-						"Dwarf➞Guilder",
-						"Dwarf➞Artificer",
-						"Dwarf➞Noble",
-						"Dwarf➞Host"
-					],
+					leads: [],
 					mentalPool: 0,
 					name: "Coward",
 					physicalPool: 0,
