@@ -8257,7 +8257,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 			"bwg",
 			"bwc"
 		],
-		name: "Man Lifepath",
+		name: "Human Lifepath",
 		traits: [
 			{
 				allowed: [
@@ -8926,7 +8926,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 			"bwg",
 			"bwc"
 		],
-		name: "Man Special",
+		name: "Human Special",
 		traits: [
 			{
 				allowed: [
@@ -9337,17 +9337,6 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 		],
 		name: "Orc Common",
 		traits: [
-			{
-				allowed: [
-					"bwg",
-					"bwc"
-				],
-				cost: 0,
-				description: "Though they loathe life and yearn for death, Orcs are compelled by their accursed nature to procreate often and quickly.",
-				name: "Breeder",
-				stock: "Orc",
-				type: "Character"
-			},
 			{
 				allowed: [
 					"bwg",

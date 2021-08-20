@@ -7937,7 +7937,7 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 				],
 				description: "",
 				magical: false,
-				name: "Man-wise",
+				name: "Human-wise",
 				noList: false,
 				restriction: "N/A",
 				root: "Perception",
@@ -13189,7 +13189,7 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 			"bwg",
 			"bwc"
 		],
-		name: "Man Magical",
+		name: "Human Magical",
 		skills: [
 			{
 				allowed: [
