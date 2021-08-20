@@ -47,7 +47,8 @@ export const Elf: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 4,
 					leads: [
-						"Elf➞Citadel"
+						"Elf➞Citadel",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Born Wilder Elf",
@@ -75,7 +76,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Citadel",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Rider",
@@ -105,7 +107,8 @@ export const Elf: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Harvester",
@@ -166,7 +169,8 @@ export const Elf: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Elf➞Citadel"
+						"Elf➞Citadel",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Fisherman",
@@ -201,7 +205,8 @@ export const Elf: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Elf➞Citadel"
+						"Elf➞Citadel",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Shepherd",
@@ -231,7 +236,8 @@ export const Elf: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Elf➞Citadel"
+						"Elf➞Citadel",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Wanderer",
@@ -261,7 +267,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Citadel",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Huntsman",
@@ -295,7 +302,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Citadel",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Chandler",
@@ -324,7 +332,8 @@ export const Elf: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Elf➞Citadel"
+						"Elf➞Citadel",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Weaver",
@@ -355,7 +364,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Forester",
@@ -386,7 +396,8 @@ export const Elf: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Elf➞Wilderlands"
+						"Elf➞Wilderlands",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Vintner",
@@ -418,7 +429,8 @@ export const Elf: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Elf➞Wilderlands"
+						"Elf➞Wilderlands",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Miller",
@@ -451,7 +463,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Song Singer",
@@ -483,7 +496,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Spouse",
@@ -512,7 +526,8 @@ export const Elf: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Elf➞Wilderlands"
+						"Elf➞Wilderlands",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Patriarch/Matriarch",
@@ -550,7 +565,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Etharch"
+						"Elf➞Etharch",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Elder",
@@ -595,7 +611,8 @@ export const Elf: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 5,
 					leads: [
-						"Elf➞Wilderlands"
+						"Elf➞Wilderlands",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Citadel Born",
@@ -623,7 +640,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Servitor",
@@ -655,7 +673,8 @@ export const Elf: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Elf➞Wilderlands"
+						"Elf➞Wilderlands",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Wanderer",
@@ -687,7 +706,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Song Singer",
@@ -719,7 +739,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Student",
@@ -751,7 +772,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Clothier",
@@ -784,7 +806,8 @@ export const Elf: bwgr.data.Stock = {
 					leads: [
 						"Elf➞Wilderlands",
 						"Elf➞Protector",
-						"Elf➞Etharch"
+						"Elf➞Etharch",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Soldier-Protector",
@@ -833,7 +856,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Seafarer",
@@ -869,7 +893,8 @@ export const Elf: bwgr.data.Stock = {
 					leads: [
 						"Elf➞Wilderlands",
 						"Elf➞Protector",
-						"Elf➞Etharch"
+						"Elf➞Etharch",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Sea Captain",
@@ -910,7 +935,8 @@ export const Elf: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Elf➞Wilderlands"
+						"Elf➞Wilderlands",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Novice",
@@ -941,7 +967,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Shaper",
@@ -979,7 +1006,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Jeweler",
@@ -1019,7 +1047,8 @@ export const Elf: bwgr.data.Stock = {
 					leads: [
 						"Elf➞Wilderlands",
 						"Elf➞Protector",
-						"Elf➞Etharch"
+						"Elf➞Etharch",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Artisan",
@@ -1056,7 +1085,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Keel Master",
@@ -1093,7 +1123,8 @@ export const Elf: bwgr.data.Stock = {
 					eitherPool: 0,
 					generalSkillPool: 0,
 					leads: [
-						"Elf➞Wilderlands"
+						"Elf➞Wilderlands",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Artist",
@@ -1123,7 +1154,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Bard",
@@ -1165,7 +1197,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Adjutant",
@@ -1210,7 +1243,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Etharch"
+						"Elf➞Etharch",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Loremaster",
@@ -1253,7 +1287,8 @@ export const Elf: bwgr.data.Stock = {
 					leads: [
 						"Elf➞Wilderlands",
 						"Elf➞Protector",
-						"Elf➞Etharch"
+						"Elf➞Etharch",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Althing",
@@ -1312,7 +1347,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 5,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Citadel"
+						"Elf➞Citadel",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Born Etharch",
@@ -1345,7 +1381,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Citadel"
+						"Elf➞Citadel",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Student",
@@ -1380,7 +1417,8 @@ export const Elf: bwgr.data.Stock = {
 					leads: [
 						"Elf➞Wilderlands",
 						"Elf➞Citadel",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Attendant",
@@ -1413,7 +1451,8 @@ export const Elf: bwgr.data.Stock = {
 					leads: [
 						"Elf➞Wilderlands",
 						"Elf➞Citadel",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Second",
@@ -1461,7 +1500,8 @@ export const Elf: bwgr.data.Stock = {
 					leads: [
 						"Elf➞Wilderlands",
 						"Elf➞Citadel",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Sword Singer",
@@ -1505,7 +1545,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Citadel",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Steward",
@@ -1549,7 +1590,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 4,
 					leads: [
 						"Elf➞Citadel",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Prince/Princess",
@@ -1593,7 +1635,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 4,
 					leads: [
 						"Elf➞Citadel",
-						"Elf➞Protector"
+						"Elf➞Protector",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Etharch",
@@ -1651,7 +1694,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Citadel",
-						"Elf➞Wilderlands"
+						"Elf➞Wilderlands",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Rider",
@@ -1683,7 +1727,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Citadel",
-						"Elf➞Wilderlands"
+						"Elf➞Wilderlands",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Herald",
@@ -1716,7 +1761,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Citadel",
-						"Elf➞Wilderlands"
+						"Elf➞Wilderlands",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Soother",
@@ -1745,7 +1791,8 @@ export const Elf: bwgr.data.Stock = {
 					eitherPool: 1,
 					generalSkillPool: 0,
 					leads: [
-						"Elf➞Wilderlands"
+						"Elf➞Wilderlands",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Ranger",
@@ -1792,7 +1839,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Citadel",
-						"Elf➞Wilderlands"
+						"Elf➞Wilderlands",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Bowyer",
@@ -1824,7 +1872,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Citadel",
-						"Elf➞Wilderlands"
+						"Elf➞Wilderlands",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Spearbearer",
@@ -1855,7 +1904,8 @@ export const Elf: bwgr.data.Stock = {
 					leads: [
 						"Elf➞Wilderlands",
 						"Elf➞Citadel",
-						"Elf➞Etharch"
+						"Elf➞Etharch",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Sword Singer",
@@ -1900,7 +1950,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Citadel",
-						"Elf➞Wilderlands"
+						"Elf➞Wilderlands",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Outrider",
@@ -1944,7 +1995,8 @@ export const Elf: bwgr.data.Stock = {
 					leads: [
 						"Elf➞Wilderlands",
 						"Elf➞Citadel",
-						"Elf➞Etharch"
+						"Elf➞Etharch",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Lancer",
@@ -1985,7 +2037,8 @@ export const Elf: bwgr.data.Stock = {
 					leads: [
 						"Elf➞Wilderlands",
 						"Elf➞Citadel",
-						"Elf➞Etharch"
+						"Elf➞Etharch",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Lieutenant",
@@ -2031,7 +2084,8 @@ export const Elf: bwgr.data.Stock = {
 					leads: [
 						"Elf➞Wilderlands",
 						"Elf➞Citadel",
-						"Elf➞Etharch"
+						"Elf➞Etharch",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Captain",
@@ -2079,7 +2133,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Citadel"
+						"Elf➞Citadel",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Armorer",
@@ -2120,7 +2175,8 @@ export const Elf: bwgr.data.Stock = {
 					generalSkillPool: 0,
 					leads: [
 						"Elf➞Wilderlands",
-						"Elf➞Citadel"
+						"Elf➞Citadel",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
 					name: "Bladesmith",
@@ -2162,7 +2218,8 @@ export const Elf: bwgr.data.Stock = {
 					leads: [
 						"Elf➞Wilderlands",
 						"Elf➞Citadel",
-						"Elf➞Etharch"
+						"Elf➞Etharch",
+						"Elf➞Path of Spite"
 					],
 					mentalPool: 1,
 					name: "Lord Protector",
