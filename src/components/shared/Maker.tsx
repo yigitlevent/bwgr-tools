@@ -55,3 +55,10 @@ export const MakerSideBlock = styled.span`
 		text-align: right;
 	}
 `;
+
+export const BlockCenterer = styled.div`
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	width: 100%;
+`;

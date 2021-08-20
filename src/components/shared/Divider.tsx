@@ -5,6 +5,7 @@ const DividerWrapper = styled.div`
 	width: 100%;
 	display: flex;
 	align-items: center;
+	min-height: 18px;
 `;
 
 const DividerLine = styled.div`

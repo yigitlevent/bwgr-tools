@@ -5,7 +5,7 @@ import { LifepathExplorer } from "./leftbox/LifepathExplorer";
 import { SkillExplorer } from "./leftbox/SkillExplorer";
 import { TraitExplorer } from "./leftbox/TraitExplorer";
 import { Faction } from "./leftbox/Faction";
-// import { Unit } from "./leftbox/Unit";
+import { Unit } from "./leftbox/Unit";
 import { MagicWheel } from "./leftbox/MagicWheel";
 // import { Distillation } from "./leftbox/Distillation";
 
@@ -18,7 +18,7 @@ export function LeftBox(): JSX.Element {
 			<SkillExplorer />
 			<TraitExplorer />
 			<Faction />
-			{/*<Unit />*/}
+			<Unit />
 			<MagicWheel />
 			{/*<Distillation />*/}
 		</Box>

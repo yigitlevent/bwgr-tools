@@ -8,7 +8,7 @@ import { ClientStore } from "../../../stores/ClientStore";
 import { SubBox } from "../../shared/Box";
 import { Divider } from "../../shared/Divider";
 import { Button, Input, Textarea } from "../../shared/Inputs";
-import { MakerBlock, MakerSideBlock, MakerWrapper } from "../../shared/Maker";
+import { BlockCenterer, MakerBlock, MakerSideBlock, MakerWrapper } from "../../shared/Maker";
 import { Subtitle } from "../../shared/Titles";
 
 export function FactionMaker(): JSX.Element {
@@ -149,8 +149,12 @@ export function FactionMaker(): JSX.Element {
 				<Divider title={"Assets"} />
 				{createList("assets", "asset")}
 
-				<Button key={"button"} value={"Save Faction"} onClick={() => addFaction(currentFaction)} />
-				<Button key={"button"} value={"Delete Faction"} onClick={() => removeFaction(currentIndex)} />
+				<Divider />
+
+				<BlockCenterer>
+					<Button value={"Save Faction"} onClick={() => addFaction(currentFaction)} />
+					<Button value={"Delete Faction"} onClick={() => removeFaction(currentIndex)} />
+				</BlockCenterer>
 			</MakerWrapper>
 		</SubBox>
 	);
