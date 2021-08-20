@@ -5,7 +5,7 @@ import shallow from "zustand/shallow";
 
 import { DarkTheme } from "../../../theme/themes";
 
-import { MagicData } from "../../../data/magicData";
+import { MagicData } from "../../../data/magic";
 
 import { ClientStore } from "../../../stores/ClientStore";
 

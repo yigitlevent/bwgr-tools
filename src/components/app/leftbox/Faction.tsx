@@ -15,7 +15,7 @@ export function Faction(): JSX.Element {
 		setFactionIndex: state.setFactionIndex
 	}), shallow);
 
-	const [index, setIndex] = useState(factionMenu.factionIndex);
+	const [index, setIndex] = useState(factionMenu.currentIndex);
 
 	return (
 		<SubBox>

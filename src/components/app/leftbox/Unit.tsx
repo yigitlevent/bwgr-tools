@@ -15,7 +15,7 @@ export function Unit(): JSX.Element {
 		setUnitIndex: state.setUnitIndex
 	}), shallow);
 
-	const [index, setIndex] = useState(unitMenu.unitIndex);
+	const [index, setIndex] = useState(unitMenu.currentIndex);
 
 	return (
 		<SubBox>

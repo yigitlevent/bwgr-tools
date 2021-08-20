@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import shallow from "zustand/shallow";
 
-import { EmptyFaction } from "../../../data/emptyFaction";
+import { EmptyFaction } from "../../../data/faction";
 
 import { ClientStore } from "../../../stores/ClientStore";
 
@@ -12,8 +12,8 @@ import { MakerBlock, MakerSideBlock, MakerWrapper } from "../../shared/Maker";
 import { Subtitle } from "../../shared/Titles";
 
 export function FactionMaker(): JSX.Element {
-	const { factionIndex, factions, addFaction, removeFaction } = ClientStore(state => ({
-		factionIndex: state.factionMenu.factionIndex,
+	const { currentIndex, factions, addFaction, removeFaction } = ClientStore(state => ({
+		currentIndex: state.factionMenu.currentIndex,
 		factions: state.factionMenu.factions,
 		addFaction: state.addFaction,
 		removeFaction: state.removeFaction,
@@ -71,8 +71,8 @@ export function FactionMaker(): JSX.Element {
 	}, [changeValue, currentFaction]);
 
 	useEffect(() => {
-		setCurrentFaction((factionIndex > -1) ? factions[factionIndex] : EmptyFaction);
-	}, [factionIndex, factions]);
+		setCurrentFaction((currentIndex > -1) ? factions[currentIndex] : EmptyFaction);
+	}, [currentIndex, factions]);
 
 	return (
 		<SubBox>
@@ -109,7 +109,7 @@ export function FactionMaker(): JSX.Element {
 					</MakerSideBlock>
 				</div>
 
-				<Divider title={"Doctrine & Traditions"} />
+				<Divider title={"Doctrines & Traditions"} />
 
 				<Textarea placeholder="doctrine"
 					value={currentFaction.doctrines[0]} onChange={(e) => changeValue("doctrines", e.target.value, 0)}
@@ -150,7 +150,7 @@ export function FactionMaker(): JSX.Element {
 				{createList("assets", "asset")}
 
 				<Button key={"button"} value={"Save Faction"} onClick={() => addFaction(currentFaction)} />
-				<Button key={"button"} value={"Delete Faction"} onClick={() => removeFaction(factionIndex)} />
+				<Button key={"button"} value={"Delete Faction"} onClick={() => removeFaction(currentIndex)} />
 			</MakerWrapper>
 		</SubBox>
 	);
