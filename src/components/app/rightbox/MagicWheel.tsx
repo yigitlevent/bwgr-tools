@@ -161,7 +161,7 @@ export function MagicWheel(): JSX.Element {
 						min={1} max={6}
 						onChange={(e) => setSteps(parseInt(e.target.value))}
 					/>
-					<span>steps</span>
+					<span className="big">steps</span>
 					<Button
 						value={"Turn the Wheel"}
 						onClick={() => { if (!isRotating) rotate(isClockwise * steps); }}

@@ -18,10 +18,22 @@ export const Line = styled.div`
 		margin: 3px 0;
 	}
 
-	& > span {
+	& > .big {
 		font-size: 18px;
 		width: max-content;
 		padding: 0 8px 3px;
+	}
+
+	& > .small {
+		font-size: 1em;
+		width: 50%;
+		padding: 2px 2px 4px;
+		flex: 1 0 auto;
+
+		& > * {
+			display: inline-block;
+			margin-right: 2px;
+		}
 	}
 
 	& > div {

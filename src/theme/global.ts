@@ -64,14 +64,6 @@ export const GlobalStyle = createGlobalStyle`
 		padding: 30px 0;
 	}
 
-	p {
-		margin: 2px 6px 10px;
-		line-height: 1.5;
-		text-indent: 10px;
-		text-align: justify;
-		text-align-last: left;
-	}
-
 	// Dependency Styles
 
 	//// React-Select-Search
