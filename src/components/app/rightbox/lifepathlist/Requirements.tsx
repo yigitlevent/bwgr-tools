@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+import { NameMaker } from "../../../../utility/nameMaker";
 import { GetOrdinalSuffix } from "../../../../utility/ordinalSuffix";
 
 import { List, ListTitle } from "../../../shared/Inner";
@@ -23,7 +24,7 @@ export function Requirements({ requirements }: { requirements: bwgr.data.Require
 		const tempSet = new Set<string>();
 
 		conditionsBlock.items.forEach(condition => {
-			if (typeof condition === "string") tempSet.add(condition.split("➞")[2]);
+			if (typeof condition === "string") tempSet.add(NameMaker(condition, 2));
 			else tempSet.add(requirementsResolver(condition));
 		});
 

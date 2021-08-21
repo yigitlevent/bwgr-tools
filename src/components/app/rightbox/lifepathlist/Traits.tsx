@@ -10,7 +10,7 @@ export function Traits({ traitPool, traits }: { traitPool: number; traits: bwgr.
 			<ListBlock>
 				<ListPoint>{traitPool}{(traitPool > 1) ? "pts" : "pt"}:</ListPoint>
 				{(traits.length !== 0)
-					? traits.map((trait, traitIndex) => <NoLink key={traitIndex} seperator={","}>{NameMaker(trait, "trait")}</NoLink>)
+					? traits.map((trait, traitIndex) => <NoLink key={traitIndex} seperator={","}>{NameMaker(trait, 1, "trait")}</NoLink>)
 					: "—"}
 			</ListBlock>
 		</List>

@@ -22,7 +22,7 @@ export function Skills({ generalSkillPool, skillPool, skills }: { generalSkillPo
 			{(hasLifepathSkill)
 				? <ListBlock>
 					<ListPoint>{skillPool}{(skillPool > 1) ? "pts" : "pt"}:</ListPoint>
-					{skills.map((skill, skillIndex) => <NoLink key={skillIndex} seperator={","}>{NameMaker(skill, "skill")}</NoLink>)}
+					{skills.map((skill, skillIndex) => <NoLink key={skillIndex} seperator={","}>{NameMaker(skill, 1, "skill")}</NoLink>)}
 				</ListBlock> : null}
 		</List>
 	);
