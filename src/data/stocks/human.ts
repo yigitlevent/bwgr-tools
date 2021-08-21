@@ -11624,7 +11624,7 @@ export const Human: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {},
 					resources: 5,
-					setting: "Servitude",
+					setting: "Servitude and Captive",
 					skillPool: 1,
 					skills: [
 						"Any Wise➞Slavery-wise"
@@ -11656,7 +11656,7 @@ export const Human: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {},
 					resources: 4,
-					setting: "Servitude",
+					setting: "Servitude and Captive",
 					skillPool: 0,
 					skills: [],
 					stock: "Human",
@@ -11686,7 +11686,7 @@ export const Human: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {},
 					resources: 4,
-					setting: "Servitude",
+					setting: "Servitude and Captive",
 					skillPool: 3,
 					skills: [
 						"Any General➞Ditch Digging",
@@ -11720,7 +11720,7 @@ export const Human: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {},
 					resources: 6,
-					setting: "Servitude",
+					setting: "Servitude and Captive",
 					skillPool: 3,
 					skills: [
 						"Any General➞Soothing Platitudes",
@@ -11752,7 +11752,7 @@ export const Human: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {},
 					resources: 5,
-					setting: "Servitude",
+					setting: "Servitude and Captive",
 					skillPool: 7,
 					skills: [
 						"Any General➞Farming",
@@ -11788,7 +11788,7 @@ export const Human: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {},
 					resources: 4,
-					setting: "Servitude",
+					setting: "Servitude and Captive",
 					skillPool: 2,
 					skills: [
 						"Any Wise➞Cell-wise",
@@ -11821,7 +11821,7 @@ export const Human: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {},
 					resources: 3,
-					setting: "Servitude",
+					setting: "Servitude and Captive",
 					skillPool: 3,
 					skills: [
 						"Any Wise➞Gaol-wise",
@@ -11851,7 +11851,7 @@ export const Human: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {},
 					resources: 4,
-					setting: "Servitude",
+					setting: "Servitude and Captive",
 					skillPool: 3,
 					skills: [
 						"Any General➞Falsehood",
@@ -11887,7 +11887,7 @@ export const Human: bwgr.data.Stock = {
 						]
 					},
 					resources: 7,
-					setting: "Servitude",
+					setting: "Servitude and Captive",
 					skillPool: "*",
 					skills: [],
 					stock: "Human",
