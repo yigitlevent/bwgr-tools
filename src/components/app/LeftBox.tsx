@@ -14,8 +14,11 @@ import { Link } from "../shared/Links";
 import { LifepathExplorer } from "./leftbox/LifepathExplorer";
 import { SkillExplorer } from "./leftbox/SkillExplorer";
 import { TraitExplorer } from "./leftbox/TraitExplorer";
+import { LifepathRandomizer } from "./leftbox/LifepathRandomizer";
+
 import { Faction } from "./leftbox/Faction";
 import { Unit } from "./leftbox/Unit";
+
 import { MagicWheel } from "./leftbox/MagicWheel";
 // import { Distillation } from "./leftbox/Distillation";
 
@@ -39,6 +42,7 @@ export function LeftBox(): JSX.Element {
 			<LifepathExplorer />
 			<SkillExplorer />
 			<TraitExplorer />
+			<LifepathRandomizer />
 
 			<Faction />
 			<Unit />
