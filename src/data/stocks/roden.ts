@@ -31,7 +31,7 @@ export const Roden: bwgr.data.Stock = {
 					allowed: [
 						"bwc"
 					],
-					born: false,
+					born: true,
 					eitherPool: 0,
 					generalSkillPool: 3,
 					leads: [
@@ -1038,7 +1038,7 @@ export const Roden: bwgr.data.Stock = {
 					allowed: [
 						"bwc"
 					],
-					born: false,
+					born: true,
 					eitherPool: 0,
 					generalSkillPool: 3,
 					leads: [
