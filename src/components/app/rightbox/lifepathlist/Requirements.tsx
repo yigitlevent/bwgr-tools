@@ -24,7 +24,7 @@ export function Requirements({ requirements }: { requirements: bwgr.data.Require
 		const tempSet = new Set<string>();
 
 		conditionsBlock.items.forEach(condition => {
-			if (typeof condition === "string") tempSet.add(NameMaker(condition, 2));
+			if (typeof condition === "string") tempSet.add(NameMaker(condition, 2, ["lifepath", "lifepaths"]));
 			else tempSet.add(requirementsResolver(condition));
 		});
 

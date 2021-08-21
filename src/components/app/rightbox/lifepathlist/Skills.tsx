@@ -7,7 +7,6 @@ export function Skills({ generalSkillPool, skillPool, skills }: { generalSkillPo
 	const hasGeneralSkill = typeof generalSkillPool === "string" || generalSkillPool > 0;
 	const hasLifepathSkill = typeof skillPool === "string" || skillPool > 0;
 
-
 	return (
 		<List>
 			<ListTitle>Skills:</ListTitle>
@@ -22,7 +21,7 @@ export function Skills({ generalSkillPool, skillPool, skills }: { generalSkillPo
 			{(hasLifepathSkill)
 				? <ListBlock>
 					<ListPoint>{skillPool}{(skillPool > 1) ? "pts" : "pt"}:</ListPoint>
-					{skills.map((skill, skillIndex) => <NoLink key={skillIndex} seperator={","}>{NameMaker(skill, 1, "skill")}</NoLink>)}
+					{skills.map((skill, skillIndex) => <NoLink key={skillIndex} seperator={","}>{NameMaker(skill, 1, ["skill", "skills"])}</NoLink>)}
 				</ListBlock> : null}
 		</List>
 	);
