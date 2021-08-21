@@ -25,7 +25,7 @@ export function MainCanvas({ currentAngle, blockAngle }: { currentAngle: number[
 	const canvasRef = createRef<HTMLCanvasElement>();
 	const [context, setContext] = useState<CanvasRenderingContext2D>();
 
-	const drawString = useCallback((string, radius, anglePerCharacter): void => {
+	const drawString = useCallback((string: string, radius: number, anglePerCharacter: number): void => {
 		if (context) {
 			const color = DarkTheme.text.main
 				.substring(4, DarkTheme.text.main.length - 1)
@@ -39,6 +39,7 @@ export function MainCanvas({ currentAngle, blockAngle }: { currentAngle: number[
 				context.rotate(anglePerCharacter);
 
 				context.save();
+
 				context.translate(0, -1 * radius);
 				context.fillText(string[i], 0, 0);
 
@@ -63,7 +64,7 @@ export function MainCanvas({ currentAngle, blockAngle }: { currentAngle: number[
 					context.translate(canvasSize / 2, canvasSize / 2);
 					context.rotate(rotationArray[parseInt(arrayKey)] + stringStartAngle + blockStartAngle - (blockAngle[parseInt(arrayKey)] / 2));
 
-					drawString(MagicData[arrayKey][stringKey], radius, anglePerCharacter);
+					drawString(MagicData[arrayKey][stringKey].name, radius, anglePerCharacter);
 
 					context.restore();
 				}

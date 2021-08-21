@@ -30,7 +30,7 @@ const CanvasWrapper = styled.div`
 export function MagicWheel(): JSX.Element {
 	const [isHidden, setIsHidden] = useState(true);
 	const [isClockwise, setIsClockwise] = useState(1);
-	const [steps, setSteps] = useState(0);
+	const [steps, setSteps] = useState(1);
 
 	const [isRotating, setIsRotating] = useState(false);
 	const [selected, setSelected] = useState<string[]>([MagicData[0][0].name, MagicData[1][0].name, MagicData[2][0].name, MagicData[3][0].name, MagicData[4][0].name]);
@@ -118,7 +118,7 @@ export function MagicWheel(): JSX.Element {
 		<SubBox>
 			<Subtitle>Magic Wheel</Subtitle>
 
-			<Controls>
+			<Controls style={{ zIndex: 200 }}>
 				<Line>
 					<SelectSearch
 						options={[...Object.values(MagicData[4]).map(v => { return { name: v.name, value: v.name }; })]}
