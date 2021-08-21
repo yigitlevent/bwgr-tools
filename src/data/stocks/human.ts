@@ -1774,7 +1774,7 @@ export const Human: bwgr.data.Stock = {
 					skills: [
 						"Any Wise➞Artisan-wise",
 						"Any General➞Mason",
-						"Any General➞Blacksmith",
+						"Any General➞Blacksmith", // TODO: This five is actually "any 'smith' skill"
 						"Any General➞Coppersmith",
 						"Any General➞Locksmith",
 						"Any General➞Weaponsmith",
@@ -6738,9 +6738,11 @@ export const Human: bwgr.data.Stock = {
 								"Human➞City Dweller➞Barkeep",
 								"Human➞City Dweller➞Moneylender",
 								"Human➞Outcast➞1*ANY",
-								// TODO: check if this is enough
+								"Human➞City Dweller➞Coin Clipper",
+								"Human➞City Dweller➞Pickpocket",
 								"Human➞City Dweller➞Street Thug",
-								"Human➞City Dweller➞Criminal"
+								"Human➞City Dweller➞Criminal",
+								"Human➞City Dweller➞Confidence Man"
 							]
 						}
 					},
@@ -6954,9 +6956,11 @@ export const Human: bwgr.data.Stock = {
 								"Human➞City Dweller➞Barkeep",
 								"Human➞City Dweller➞Moneylender",
 								"Human➞Outcast➞1*ANY",
-								// TODO: Check if this is enough, as per "Fence"
+								"Human➞City Dweller➞Coin Clipper",
+								"Human➞City Dweller➞Pickpocket",
 								"Human➞City Dweller➞Street Thug",
-								"Human➞City Dweller➞Criminal"
+								"Human➞City Dweller➞Criminal",
+								"Human➞City Dweller➞Confidence Man"
 							]
 						}
 					},
@@ -8327,11 +8331,11 @@ export const Human: bwgr.data.Stock = {
 							]
 						},
 						limits: [
-							"GENDER➞FEMALE"
+							// TODO: These two are the "otherwise" case, so maybe fold limits into conditions in the future
+							"GENDER➞FEMALE",
+							"LP➞MAX➞4"
 						],
 						texts: [
-							// TODO
-							"Otherwise must be female and no more than three lifepaths."
 						]
 					},
 					resources: 10,
@@ -9030,20 +9034,27 @@ export const Human: bwgr.data.Stock = {
 						conditions: {
 							type: "OR",
 							items: [
-								"Human➞Noble➞Knight",
-								"Human➞Noble Court➞Knight",
-								"Human➞Noble➞Squire",
-								"Human➞Noble Court➞Squire",
-								"Human➞City Dweller➞Groom",
-								"Human➞Noble Court➞Groom",
 								"Human➞Villager➞Groom",
-								"Human➞Noble Court➞Master of Horses"
+								"Human➞Villager➞Farrier",
+								"Human➞City Dweller➞Courier",
+								"Human➞City Dweller➞Groom",
+								"Human➞City Dweller➞Guard Captain",
+								"Human➞City Dweller➞Saddler",
+								"Human➞Noble➞Page",
+								"Human➞Noble➞Squire",
+								"Human➞Noble➞Knight",
+								"Human➞Noble Court➞Groom",
+								"Human➞Noble Court➞Page",
+								"Human➞Noble Court➞Man-at-Arms",
+								"Human➞Noble Court➞Squire",
+								"Human➞Noble Court➞Master of Horses",
+								"Human➞Religious➞Military Order",
+								"Human➞Professional Soldier➞Bannerman",
+								"Human➞Professional Soldier➞Cavalryman",
+								"Human➞Professional Soldier➞Chaplain",
+								"Human➞Professional Soldier➞Captain",
 							]
-						},
-						texts: [
-							// TODO: Make sure that the list above reflects this 100%
-							"a prior lifepath having to do with horses"
-						]
+						}
 					},
 					resources: 9,
 					setting: "Professional Soldier",

@@ -1445,8 +1445,7 @@ export const Roden: bwgr.data.Stock = {
 						conditions: {
 							type: "OR",
 							items: [
-								// TODO: Missing "Philosopher" lifepath, added hermit instead
-								"Roden➞Exile➞Hermit",
+								"Roden➞Exile➞Hermit", // TODO: Missing "Philosopher" lifepath, added hermit instead
 								"Roden➞Exile➞Albino",
 								"Roden➞Below➞Sawbones",
 								"Roden➞Field➞Hand",
@@ -1601,8 +1600,7 @@ export const Roden: bwgr.data.Stock = {
 								"Roden➞Field➞Baker",
 								"Roden➞Field➞Meadmaker",
 								"Roden➞Below➞Negotiator",
-								// TODO: No philosopher so added hermit
-								"Roden➞Exile➞Hermit"
+								"Roden➞Exile➞Hermit" // TODO: Missing "Philosopher" lifepath, added hermit instead
 							]
 						}
 					},
@@ -2129,8 +2127,7 @@ export const Roden: bwgr.data.Stock = {
 							items: [
 								"Roden➞Society➞Cultist",
 								"Roden➞Field➞Missionary",
-								// TODO: NO philosopher so added hermit
-								"Roden➞Exile➞Hermit"
+								"Roden➞Exile➞Hermit" // TODO: Missing "Philosopher" lifepath, added hermit instead
 							]
 						}
 					},
