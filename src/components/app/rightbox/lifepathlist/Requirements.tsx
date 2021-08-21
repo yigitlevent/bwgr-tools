@@ -19,7 +19,6 @@ const ReqPoint = styled.div`
 `;
 
 export function Requirements({ requirements }: { requirements: bwgr.data.Requirements; }): JSX.Element {
-
 	const requirementsResolver = (conditionsBlock: bwgr.data.Condition): string => {
 		const tempSet = new Set<string>();
 
@@ -29,7 +28,16 @@ export function Requirements({ requirements }: { requirements: bwgr.data.Require
 		});
 
 		const array = [...tempSet];
-		if (array.length > 1) array[array.length - 1] = `${conditionsBlock.type.toLowerCase()} ${array[array.length - 1]}`;
+		if (array.length > 1 && conditionsBlock.type !== "NOT") {
+			array[array.length - 1] = `${conditionsBlock.type.toLowerCase()} ${array[array.length - 1]}`;
+		}
+		else if (conditionsBlock.type === "NOT") {
+			array[0] = `Character cannot have ${array[0]}`;
+
+			if (array.length > 1) {
+				array[array.length - 1] = `and ${array[array.length - 1]}`;
+			}
+		}
 
 		return (array.length < 3) ? array.join(" ") : array.join(", ");
 	};

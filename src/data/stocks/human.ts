@@ -13584,15 +13584,20 @@ export const Human: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "OR",
+							type: "AND",
 							items: [
-								"Human➞Villager➞Wizard's Apprentice",
-								"Human➞City Dweller➞Neophyte Sorcerer",
-								"Human➞Noble Court➞Apt Pupil",
-								"Human➞Outcast➞Apt Pupil",
-								"Human➞Professional Soldier➞Apt Pupil",
-								"Human➞Religious➞Apt Pupil",
-								"Human➞College of Magic➞Junior Student",
+								{
+									type: "OR",
+									items: [
+										"Human➞Villager➞Wizard's Apprentice",
+										"Human➞City Dweller➞Neophyte Sorcerer",
+										"Human➞Noble Court➞Apt Pupil",
+										"Human➞Outcast➞Apt Pupil",
+										"Human➞Professional Soldier➞Apt Pupil",
+										"Human➞Religious➞Apt Pupil",
+										"Human➞College of Magic➞Junior Student"
+									]
+								},
 								{
 									type: "NOT",
 									items: [

@@ -2,49 +2,66 @@ import { Stocks } from "../data/stocks";
 import { SkillCategories } from "../data/skills";
 import { TraitCategories } from "../data/traits";
 
+function FixAsterisk(name: string): string {
+	if (name.includes("*") && !name.includes("*-")) return name.split("*")[1];
+	return name;
+}
+
 function CheckStock(stockName: string, stockPath: string, errorPath: string): bwgr.data.Error | undefined {
+	stockName = FixAsterisk(stockName);
 	const stockCheck1 = Object.values(Stocks).some(v => v.name === stockName);
 	const stockCheck2 = stockName in Stocks;
-	if (!stockCheck1 && !stockCheck2) return { path: `${errorPath}`, type: "Lead/Category", error: `'${stockName}' for '${stockPath}'` };
+	if (!stockCheck1 && !stockCheck2 && !stockName.includes("ANY")) return { path: `${errorPath}`, type: "Lead/Category", error: `'${stockName}' for '${stockPath}'` };
 	return undefined;
 }
 
 function CheckSetting(stockName: string, settingName: string, stockPath: string, errorPath: string): bwgr.data.Error | undefined {
+	stockName = FixAsterisk(stockName);
+	settingName = FixAsterisk(settingName);
 	const stockCheck1 = Object.values(Stocks[stockName].settings).some(v => v.name === settingName);
 	const stockCheck2 = stockName in Stocks[stockName].settings;
-	if (!stockCheck1 && !stockCheck2) return { path: `${errorPath}`, type: "Lead/Setting", error: `'${settingName}' for '${stockPath}'` };
+	if (!stockCheck1 && !stockCheck2 && !settingName.includes("ANY")) return { path: `${errorPath}`, type: "Lead/Setting", error: `'${settingName}' for '${stockPath}'` };
 	return undefined;
 }
 
 function CheckLifepath(stockName: string, settingName: string, lifepathName: string, stockPath: string, errorPath: string): bwgr.data.Error | undefined {
+	stockName = FixAsterisk(stockName);
+	settingName = FixAsterisk(settingName);
+	lifepathName = FixAsterisk(lifepathName);
 	const lifepathCheck1 = Stocks[stockName].settings[settingName].lifepaths.findIndex(v => v.name === lifepathName);
-	if (lifepathCheck1 === -1) return { path: `${errorPath}`, type: "Lead/Lifepath", error: `'${lifepathName}' for '${stockPath}'` };
+	if (lifepathCheck1 === -1 && !lifepathName.includes("ANY") && !lifepathName.includes("*-")) return { path: `${errorPath}`, type: "Lead/Lifepath", error: `'${lifepathName}' for '${stockPath}'` };
 	return undefined;
 }
 
 function CheckSkillCategory(skillCategory: string, skillPath: string, errorPath: string): bwgr.data.Error | undefined {
+	skillCategory = FixAsterisk(skillCategory);
 	const categoryCheck1 = Object.values(SkillCategories).some(v => v.name === skillCategory);
 	const categoryCheck2 = skillCategory in SkillCategories;
-	if (!categoryCheck1 && !categoryCheck2) return { path: `${errorPath}`, type: "Skill/Category", error: `'${skillCategory}' for '${skillPath}'` };
+	if (!categoryCheck1 && !categoryCheck2 && !skillCategory.includes("ANY")) return { path: `${errorPath}`, type: "Skill/Category", error: `'${skillCategory}' for '${skillPath}'` };
 	return undefined;
 }
 
 function CheckSkillName(skillCategory: string, skillName: string, skillPath: string, errorPath: string): bwgr.data.Error | undefined {
+	skillCategory = FixAsterisk(skillCategory);
+	skillName = FixAsterisk(skillName);
 	const nameCheck = SkillCategories[skillCategory].skills.some(v => v.name === skillName);
-	if (!nameCheck) return { path: `${errorPath}`, type: "Skill/Name", error: `'${skillName}' for '${skillPath}'` };
+	if (!nameCheck && !skillName.includes("ANY")) return { path: `${errorPath}`, type: "Skill/Name", error: `'${skillName}' for '${skillPath}'` };
 	return undefined;
 }
 
 function CheckTraitCategory(traitCategory: string, traitPath: string, errorPath: string): bwgr.data.Error | undefined {
+	traitCategory = FixAsterisk(traitCategory);
 	const categoryCheck1 = Object.values(TraitCategories).some(v => v.name === traitCategory);
 	const categoryCheck2 = traitCategory in TraitCategories;
-	if (!categoryCheck1 && !categoryCheck2) return { path: `${errorPath}`, type: "Trait/Category", error: `'${traitCategory}' for '${traitPath}'` };
+	if (!categoryCheck1 && !categoryCheck2 && !traitCategory.includes("ANY")) return { path: `${errorPath}`, type: "Trait/Category", error: `'${traitCategory}' for '${traitPath}'` };
 	return undefined;
 }
 
 function CheckTraitName(traitCategory: string, traitName: string, traitPath: string, errorPath: string): bwgr.data.Error | undefined {
+	traitCategory = FixAsterisk(traitCategory);
+	traitName = FixAsterisk(traitName);
 	const nameCheck = TraitCategories[traitCategory].traits.some(v => v.name === traitName);
-	if (!nameCheck) return { path: `${errorPath}`, type: "Trait/Name", error: `'${traitName}' for '${traitPath}'` };
+	if (!nameCheck && !traitName.includes("ANY")) return { path: `${errorPath}`, type: "Trait/Name", error: `'${traitName}' for '${traitPath}'` };
 	return undefined;
 }
 
