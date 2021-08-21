@@ -32,5 +32,5 @@ export const SubBox = styled.div`
 	justify-content: center;
 	align-items: flex-start;
 	align-content: flex-start;
-	margin: 4px 0 12px 0;
+	margin: 6px 0 6px 0;
 `;
