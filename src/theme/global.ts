@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
 
 	@font-face {
         font-family: "Hand";
-        src: url("${process.env.PUBLIC_URL}/fonts/caveat.ttf");
+        src: url("${process.env.PUBLIC_URL}/fonts/CormorantUpright-SemiBold.ttf");
 		font-display: block;
     };
 
