@@ -534,9 +534,9 @@ export const Elf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
-								"Elf➞Wilderness➞Spouse"
+								"Elf➞Wilderlands➞Spouse"
 							]
 						}
 					},
@@ -572,6 +572,7 @@ export const Elf: bwgr.data.Stock = {
 					name: "Elder",
 					physicalPool: 0,
 					requirements: {
+						// TODO: second part of this must be turned into a limit maybe
 						texts: [
 							"The character must be 750 years old after taking this path or the oldest character in the group by 100 years"
 						]
@@ -818,9 +819,9 @@ export const Elf: bwgr.data.Stock = {
 							items: [
 								"Elf➞Citadel➞Wanderer",
 								"Elf➞Citadel➞Seafarer",
-								"Elf➞Wilderness➞Spouse",
-								"Elf➞Wilderness➞Rider",
-								"Elf➞Wilderness➞Huntsman",
+								"Elf➞Wilderlands➞Spouse",
+								"Elf➞Wilderlands➞Rider",
+								"Elf➞Wilderlands➞Huntsman",
 								"Elf➞Etharch➞1*ANY",
 								"Elf➞Protector➞1*ANY"
 							]
@@ -975,7 +976,7 @@ export const Elf: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Elf➞Citadel➞Novice"
 							]
@@ -1014,7 +1015,7 @@ export const Elf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Elf➞Citadel➞Shaper"
 							]
@@ -1055,7 +1056,7 @@ export const Elf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Elf➞Citadel➞Shaper"
 							]
@@ -1093,7 +1094,7 @@ export const Elf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Elf➞Citadel➞Shaper"
 							]
@@ -1210,7 +1211,7 @@ export const Elf: bwgr.data.Stock = {
 								"Elf➞Protector➞Herald",
 								"Elf➞Etharch➞Attendant",
 								"Elf➞Etharch➞Student",
-								"Elf➞Wilderness➞Spouse"
+								"Elf➞Wilderlands➞Spouse"
 							]
 						}
 					},
@@ -1256,7 +1257,7 @@ export const Elf: bwgr.data.Stock = {
 								"Elf➞Citadel➞Bard",
 								"Elf➞Citadel➞Adjutant",
 								"Elf➞Etharch➞Steward",
-								"Elf➞Wilderness➞Patriarch/Matriarch"
+								"Elf➞Wilderlands➞Patriarch/Matriarch"
 							]
 						}
 					},
@@ -1297,12 +1298,12 @@ export const Elf: bwgr.data.Stock = {
 						conditions: {
 							type: "OR",
 							items: [
-								"Elf➞Wilderness➞Patriarch/Matriarch",
+								"Elf➞Wilderlands➞Patriarch/Matriarch",
 								"Elf➞Citadel➞Loremaster",
 								"Elf➞Etharch➞Steward",
 								"Elf➞Citadel➞Bard",
 								"Elf➞Citadel➞Artisan",
-								"Elf➞Protector➞Sea Captain",
+								"Elf➞Citadel➞Sea Captain",
 								"Elf➞Protector➞Captain"
 							]
 						}
@@ -1465,7 +1466,7 @@ export const Elf: bwgr.data.Stock = {
 								"Elf➞Protector➞Bowyer",
 								"Elf➞Protector➞Spearbearer",
 								"Elf➞Citadel➞Seafarer",
-								"Elf➞Protector➞Soldier-Protector"
+								"Elf➞Citadel➞Soldier-Protector"
 							]
 						}
 					},
@@ -1560,8 +1561,8 @@ export const Elf: bwgr.data.Stock = {
 								"Elf➞Citadel➞Bard",
 								"Elf➞Citadel➞Loremaster",
 								"Elf➞Citadel➞Adjutant",
-								"Elf➞Protector➞Sea Captain",
-								"Elf➞Wilderness➞Patriarch/Matriarch"
+								"Elf➞Citadel➞Sea Captain",
+								"Elf➞Wilderlands➞Patriarch/Matriarch"
 							]
 						}
 					},
@@ -1801,8 +1802,8 @@ export const Elf: bwgr.data.Stock = {
 						conditions: {
 							type: "OR",
 							items: [
-								"Elf➞Wilderness➞Forester",
-								"Elf➞Wilderness➞Wanderer",
+								"Elf➞Wilderlands➞Forester",
+								"Elf➞Wilderlands➞Wanderer",
 								"Elf➞Protector➞Bowyer",
 								"Elf➞Etharch➞Second"
 							]
@@ -1917,7 +1918,7 @@ export const Elf: bwgr.data.Stock = {
 								"Elf➞Etharch➞Second",
 								"Elf➞Citadel➞Soldier-Protector",
 								"Elf➞Protector➞Soother",
-								"Elf➞Wilderness➞Spouse",
+								"Elf➞Wilderlands➞Spouse",
 								"Elf➞Protector➞Spearbearer"
 							]
 						}
@@ -1958,7 +1959,7 @@ export const Elf: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Elf➞Protector➞Rider"
 							]
@@ -2307,7 +2308,7 @@ export const Elf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Elf➞Path of Spite➞Griever"
 							]
@@ -2344,7 +2345,7 @@ export const Elf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Elf➞Path of Spite➞Griever"
 							]
@@ -2380,7 +2381,7 @@ export const Elf: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Elf➞Path of Spite➞Griever"
 							]
@@ -2417,7 +2418,7 @@ export const Elf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Elf➞Path of Spite➞Griever"
 							]
@@ -2457,7 +2458,7 @@ export const Elf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Elf➞Path of Spite➞Griever"
 							]
@@ -2492,7 +2493,7 @@ export const Elf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Elf➞Path of Spite➞Griever"
 							]

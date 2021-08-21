@@ -114,7 +114,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Great Wolf➞Ghost of the Deeping Wood➞Wandering Lost"
 							]
@@ -147,7 +147,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Great Wolf➞Ghost of the Deeping Wood➞Wandering Lost"
 							]
@@ -177,7 +177,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Great Wolf➞Ghost of the Deeping Wood➞Ancient Journeyer"
 							]
@@ -390,7 +390,11 @@ export const GreatWolf: bwgr.data.Stock = {
 					mentalPool: 0,
 					name: "Caged and Beaten",
 					physicalPool: 0,
-					requirements: {},
+					requirements: {
+						texts: [
+							"Wolves entering the legion from other settings must take Caged and Beaten as their first lifepath in this setting."
+						]
+					},
 					resources: 1,
 					setting: "Slave to the Legion",
 					skillPool: 3,
@@ -525,7 +529,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Great Wolf➞Slave to the Legion➞Shadow Chaser"
 							]
@@ -638,7 +642,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Great Wolf➞Slave to the Legion➞Caged and Beaten"
 							]
@@ -723,7 +727,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Great Wolf➞Spirit Hunter➞Spirit Chaser"
 							]
@@ -758,7 +762,7 @@ export const GreatWolf: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Great Wolf➞Spirit Hunter➞Spirit Howler"
 							]
@@ -907,7 +911,8 @@ export const GreatWolf: bwgr.data.Stock = {
 							]
 						},
 						texts: [
-							"Dominant wolves are the pack leaders."
+							"Dominant wolves are the pack leaders.",
+							"Female Dominants of three years or older may take the Nursing skill. Males may not take this skill at all."
 						]
 					},
 					resources: 3,
@@ -1036,7 +1041,11 @@ export const GreatWolf: bwgr.data.Stock = {
 					mentalPool: 1,
 					name: "Last Wolf",
 					physicalPool: 0,
-					requirements: {},
+					requirements: {
+						texts: [
+							"Any wolf entering the Wild Pack setting from another setting must take Last Wolf as their first lifepath in the Wild Pack."
+						]
+					},
 					resources: 1,
 					setting: "Wild Pack",
 					skillPool: 2,

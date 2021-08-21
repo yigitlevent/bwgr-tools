@@ -218,7 +218,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Below➞The Gauntlet"
 							]
@@ -255,7 +255,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Below➞The Gauntlet"
 							]
@@ -295,7 +295,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Below➞The Gauntlet"
 							]
@@ -331,7 +331,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Below➞The Gauntlet"
 							]
@@ -451,7 +451,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Below➞The Gauntlet"
 							]
@@ -616,7 +616,13 @@ export const Roden: bwgr.data.Stock = {
 							items: [
 								"Roden➞Exile➞Hermit",
 								"Roden➞Field➞Mayor",
-								"Roden➞Below➞Scratcher"
+								"Roden➞Below➞Scratcher",
+								{
+									type: "NOT",
+									items: [
+										"Roden➞Below➞Pinky"
+									]
+								}
 							]
 						}
 					},
@@ -758,7 +764,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Field➞Born to the Fields"
 							]
@@ -798,7 +804,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: -1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Below➞Born Below"
 							]
@@ -1668,7 +1674,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Field➞Brother/Sister"
 							]
@@ -1707,7 +1713,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Field➞Brother/Sister"
 							]
@@ -1748,7 +1754,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Field➞Father/Mother"
 							]
@@ -1822,7 +1828,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Society➞Initiate"
 							]
@@ -1858,7 +1864,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Society➞Initiate"
 							]
@@ -1894,7 +1900,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Society➞Initiate"
 							]
@@ -1930,7 +1936,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Society➞Initiate"
 							]
@@ -1967,7 +1973,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Society➞Initiate"
 							]
@@ -2045,7 +2051,7 @@ export const Roden: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Roden➞Society➞Initiate"
 							]

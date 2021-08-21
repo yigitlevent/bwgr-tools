@@ -816,7 +816,7 @@ export const Orc: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Orc➞Chattel➞Cattle Slave"
 							]
@@ -849,7 +849,7 @@ export const Orc: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Orc➞Chattel➞Forge Slave"
 							]
@@ -883,7 +883,7 @@ export const Orc: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Orc➞Chattel➞Tunneler"
 							]
@@ -919,7 +919,7 @@ export const Orc: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Orc➞Chattel➞Forger"
 							]
@@ -963,7 +963,8 @@ export const Orc: bwgr.data.Stock = {
 								"Orc➞Chattel➞Forger",
 								"Orc➞Great and Black➞1*ANY",
 								"Orc➞Black Legion➞1*ANY",
-								"Orc➞Chattel➞4*-Slave",
+								// TODO: I'm not sure if they mean this
+								"Orc➞Chattel➞4*ANY",
 							]
 						}
 					},
@@ -1232,7 +1233,7 @@ export const Orc: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Orc➞Great and Black➞Servant of the Gate"
 							]
@@ -1270,7 +1271,7 @@ export const Orc: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Orc➞Great and Black➞Siege Master"
 							]
@@ -1429,7 +1430,7 @@ export const Orc: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Orc➞Servant of the Dark Blood➞Slave to the Dark"
 							]
@@ -1466,7 +1467,7 @@ export const Orc: bwgr.data.Stock = {
 					physicalPool: 1,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Orc➞Servant of the Dark Blood➞Drinker of the Dark"
 							]
@@ -1503,7 +1504,7 @@ export const Orc: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Orc➞Servant of the Dark Blood➞Drinker of the Dark"
 							]
@@ -1539,7 +1540,7 @@ export const Orc: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Orc➞Servant of the Dark Blood➞Knower of Secrets"
 							]
@@ -1577,7 +1578,7 @@ export const Orc: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Orc➞Servant of the Dark Blood➞Bloodletter"
 							]
@@ -1614,7 +1615,7 @@ export const Orc: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Orc➞Servant of the Dark Blood➞Knower of Secrets"
 							]
@@ -1646,7 +1647,7 @@ export const Orc: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Orc➞Servant of the Dark Blood➞Master of Darkness"
 							]
@@ -1677,7 +1678,7 @@ export const Orc: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Orc➞Servant of the Dark Blood➞Master of Blood"
 							]
@@ -1748,7 +1749,7 @@ export const Orc: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Orc➞Servant of the Dark Blood➞Knower of Secrets"
 							]

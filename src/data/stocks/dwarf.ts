@@ -192,7 +192,7 @@ export const Dwarf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Dwarf➞Artificer➞Artificer"
 							]
@@ -228,7 +228,7 @@ export const Dwarf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Dwarf➞Artificer➞Artificer"
 							]
@@ -269,7 +269,7 @@ export const Dwarf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Dwarf➞Artificer➞Mask Bearer"
 							]
@@ -310,7 +310,7 @@ export const Dwarf: bwgr.data.Stock = {
 					physicalPool: 0,
 					requirements: {
 						conditions: {
-							type: "AND",
+							type: "OR",
 							items: [
 								"Dwarf➞Artificer➞Master of Arches"
 							]
@@ -665,7 +665,7 @@ export const Dwarf: bwgr.data.Stock = {
 								"Dwarf➞Host➞Graybeard",
 								"Dwarf➞Artificer➞Artificer",
 								"Dwarf➞Guilder➞Trader",
-								"Dwarf➞Noble➞Senechal",
+								"Dwarf➞Noble➞Seneschal",
 								"Dwarf➞Outcast➞Adventurer",
 								"Dwarf➞Clansman➞Husband/Wife"
 							]
@@ -1664,7 +1664,7 @@ export const Dwarf: bwgr.data.Stock = {
 							type: "OR",
 							items: [
 								"Dwarf➞Noble➞Abecedart",
-								"Dwarf➞Host➞Khiurgeon",
+								"Dwarf➞Host➞Khirurgeon",
 								"Dwarf➞Host➞Graybeard"
 							]
 						}
@@ -1711,7 +1711,7 @@ export const Dwarf: bwgr.data.Stock = {
 								"Dwarf➞Clansman➞Longbeard",
 								"Dwarf➞Host➞Quartermaster",
 								"Dwarf➞Noble➞Chronicler",
-								"Dwarf➞Host➞Khiurgeon",
+								"Dwarf➞Host➞Khirurgeon",
 								"Dwarf➞Host➞Graybeard"
 							]
 						}
