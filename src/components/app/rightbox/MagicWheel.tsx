@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { createRef, useCallback, useEffect, useState } from "react";
 import SelectSearch from "react-select-search";
 import styled from "styled-components";
 
@@ -16,11 +16,10 @@ import { BackCanvas } from "./magicwheel/BackCanvas";
 import { MainCanvas } from "./magicwheel/MainCanvas";
 import { FrontCanvas } from "./magicwheel/FrontCanvas";
 
-const CanvasWrapper = styled.div`
-	max-height: 100%;
+const CanvasWrapper = styled.div<{ size: string; }>`
 	max-width: 100%;
-	width: 580px;
-	height: 580px;
+	width: ${p => (p.size === "0px") ? "580px" : p.size};
+	height: ${p => (p.size === "0px") ? "580px" : p.size};
 	
 	position: relative;
 
@@ -36,6 +35,9 @@ export function MagicWheel(): JSX.Element {
 	const [selected, setSelected] = useState<string[]>([MagicData[0][0].name, MagicData[1][0].name, MagicData[2][0].name, MagicData[3][0].name, MagicData[4][0].name]);
 	const [blockAngle, setBlockAngle] = useState([0, 0, 0, 0, 0]);
 	const [currentAngle, setCurrentAngle] = useState([0, 0, 0, 0, 0]);
+
+	const wrapperRef = createRef<HTMLDivElement>();
+	const [size, setSize] = useState("0px");
 
 	const rotate = useCallback((amount: number): void => {
 		setIsRotating(true);
@@ -105,6 +107,10 @@ export function MagicWheel(): JSX.Element {
 			setSelected(tempSel);
 		}
 	}, [blockAngle, currentAngle, selected]);
+
+	useEffect(() => {
+		if (wrapperRef && wrapperRef.current) setSize(window.getComputedStyle(wrapperRef.current).width);
+	}, [wrapperRef]);
 
 	useEffect(() => {
 		const tempArr = [0, 0, 0, 0, 0];
@@ -180,7 +186,7 @@ export function MagicWheel(): JSX.Element {
 				</Line>
 			</Controls>
 
-			<CanvasWrapper>
+			<CanvasWrapper ref={wrapperRef} size={size}>
 				<BackCanvas />
 				<MainCanvas currentAngle={currentAngle} blockAngle={blockAngle} />
 				<FrontCanvas isHidden={isHidden} />

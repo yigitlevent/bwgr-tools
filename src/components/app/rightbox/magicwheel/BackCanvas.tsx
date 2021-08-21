@@ -1,17 +1,17 @@
-import { createRef, useCallback, useState } from "react";
+import { createRef, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 import shallow from "zustand/shallow";
 
 import { DarkTheme } from "../../../../theme/themes";
 
 import { ClientStore } from "../../../../stores/ClientStore";
-import { useEffect } from "react";
 
 const Canvas = styled.canvas`
 	position: absolute;
 	left: 0;
 	top: 0; 
 	z-index: 101;
+	width: 100%;
 `;
 
 export function BackCanvas(): JSX.Element {

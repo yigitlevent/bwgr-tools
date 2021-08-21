@@ -13,6 +13,7 @@ const Canvas = styled.canvas`
 	left: 0;
 	top: 0; 
 	z-index: 102;
+	width: 100%;
 `;
 
 export function MainCanvas({ currentAngle, blockAngle }: { currentAngle: number[]; blockAngle: number[]; }): JSX.Element {
