@@ -27,6 +27,7 @@ export function LifepathRandomizer(): JSX.Element {
 	const [minimum, setMinimum] = useState(5);
 	const [maximum, setMaximum] = useState(6);
 	const [maximumLeads, setMaximumLeads] = useState(3);
+	const [noDuplicates, setNoDuplicates] = useState(false);
 
 	const [chosenLifepaths, setChosen] = useState<bwgr.data.Lifepath[]>([]);
 
@@ -80,24 +81,31 @@ export function LifepathRandomizer(): JSX.Element {
 	const createRandom = useCallback((): void => {
 		const tempChosenLifepaths: bwgr.data.Lifepath[] = [];
 
-		const chooseNext = (currentStock: bwgr.data.Stock): void => {
+		let leadsCounter = 0;
+
+		const chooseNext = (currentStock: bwgr.data.Stock): bwgr.data.Lifepath => {
 			const lastLP = tempChosenLifepaths[tempChosenLifepaths.length - 1];
 
 			let combinedPossibilities = [...currentStock.settings[lastLP.setting].lifepaths];
-			for (const leadKey in lastLP.leads) {
-				combinedPossibilities = [
-					...combinedPossibilities,
-					...currentStock.settings[lastLP.leads[leadKey].split("➞")[1]].lifepaths
-				];
+
+			if (leadsCounter < maximumLeads) {
+				for (const leadKey in lastLP.leads) {
+					combinedPossibilities = [
+						...combinedPossibilities,
+						...currentStock.settings[lastLP.leads[leadKey].split("➞")[1]].lifepaths
+					];
+				}
 			}
 
 			const possibilities = filterByRequirements(combinedPossibilities, tempChosenLifepaths);
 			const chosenLP = possibilities[RandomNumber(0, possibilities.length - 1)];
 
-			tempChosenLifepaths.push(chosenLP);
-		};
+			if (chosenLP.setting !== tempChosenLifepaths[tempChosenLifepaths.length - 1].setting) {
+				leadsCounter += 1;
+			}
 
-		const lpAmount = RandomNumber(minimum, maximum);
+			return chosenLP;
+		};
 
 		const stockValues = Object.values(Stocks);
 		const chosenStock: bwgr.data.Stock = (stock === "Random")
@@ -113,10 +121,22 @@ export function LifepathRandomizer(): JSX.Element {
 		const bornLPsNum = bornLPs.length - 1;
 		tempChosenLifepaths.push(bornLPs[RandomNumber(0, bornLPsNum)]);
 
-		for (let i = 0; i < lpAmount; i++) { chooseNext(chosenStock); }
+		const lpAmount = RandomNumber(minimum, maximum);
+		let chosenAmount = 0;
+
+		while (chosenAmount < lpAmount) {
+			const lp = chooseNext(chosenStock);
+
+			const isDuplicate = tempChosenLifepaths.filter(v => (v.name === lp.name && v.setting === lp.setting)).length > 0;
+			if(isDuplicate && noDuplicates) continue;
+			else {
+				chosenAmount += 1;
+				tempChosenLifepaths.push(lp);
+			}
+		}
 
 		setChosen(tempChosenLifepaths);
-	}, [setting, stock, maximum, minimum, filterByRequirements]);
+	}, [setting, stock, maximum, minimum, maximumLeads, filterByRequirements]);
 
 	const infoBlock = useCallback((): JSX.Element => {
 		const totals = {
@@ -188,7 +208,7 @@ export function LifepathRandomizer(): JSX.Element {
 					<span className="small">Resources: {totals.resource}{totals.resourcesExt.length > 0 ? `, plus ${totals.resourcesExt.join(" ")}` : ""}</span>
 				</Line>
 				<Line>
-					<span className="small">Stats: {totals.ageStats[0] + totals.mental}M, {totals.ageStats[1]+ totals.physical}P {(totals.either !== 0) ? `(${totals.either > 0 ? "+" : ""}${totals.either}M/P)`: ""}</span>
+					<span className="small">Stats: {totals.ageStats[0] + totals.mental}M, {totals.ageStats[1] + totals.physical}P {(totals.either !== 0) ? `(${totals.either > 0 ? "+" : ""}${totals.either}M/P)` : ""}</span>
 					<span className="small">Trait Points: {totals.trait}</span>
 				</Line>
 				<Line>
@@ -228,7 +248,7 @@ export function LifepathRandomizer(): JSX.Element {
 					<label>Stock</label>
 					<SelectSearch
 						options={[
-							{ name: "Random", value: "Random" }, 
+							{ name: "Random", value: "Random" },
 							...Object.keys(Stocks).map(v => { return { name: v, value: v }; })
 						]}
 						value={stock}
@@ -241,7 +261,7 @@ export function LifepathRandomizer(): JSX.Element {
 						<label>Starting Setting</label>
 						<SelectSearch
 							options={[
-								{ name: "Random", value: "Random" }, 
+								{ name: "Random", value: "Random" },
 								...Object.values(Stocks[stock].settings)
 									.filter(v => v.type === "Setting")
 									.map(v => { return { name: v.name, value: v.name }; })
@@ -257,13 +277,20 @@ export function LifepathRandomizer(): JSX.Element {
 					<label>Minimum Lifepaths</label>
 					<Input type={"number"} value={minimum} min={1} max={10} onChange={(e) => setMinimum(parseInt(e.target.value))} />
 				</Line>
+
 				<Line>
 					<label>Maximum Lifepaths</label>
 					<Input type={"number"} value={maximum} min={2} max={10} onChange={(e) => setMaximum(parseInt(e.target.value))} />
 				</Line>
+
 				<Line>
 					<label>Maximum Leads</label>
 					<Input type={"number"} value={maximumLeads} min={0} max={10} onChange={(e) => setMaximumLeads(parseInt(e.target.value))} />
+				</Line>
+
+				<Line>
+					<label>No Duplicates</label>
+					<Input type={"checkbox"} checked={noDuplicates} onChange={(e) => setNoDuplicates(v => !v)} />
 				</Line>
 
 				<Note width={"45%"}>

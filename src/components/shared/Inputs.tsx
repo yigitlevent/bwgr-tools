@@ -38,6 +38,10 @@ export const Input = styled.input`
 		text-align: center;
 	}
 
+	&[type="checkbox"] {
+		cursor: pointer;
+	}
+
 	&:hover {
 		filter: brightness(110%);
 	}
