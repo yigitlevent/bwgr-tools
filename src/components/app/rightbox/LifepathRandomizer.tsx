@@ -119,10 +119,8 @@ export function LifepathRandomizer(): JSX.Element {
 	}, [setting, stock, maximum, minimum, filterByRequirements]);
 
 	const infoBlock = useCallback((): JSX.Element => {
-		console.log(chosenLifepaths);
-
 		const totals = {
-			year: 0, yearExt: [] as string[],
+			year: 0, yearExt: [] as string[], ageStats: [0, 0],
 			resource: 0, resourcesExt: [] as string[],
 			// Stat
 			either: 0, mental: 0, physical: 0,
@@ -140,6 +138,11 @@ export function LifepathRandomizer(): JSX.Element {
 
 		for (const lifepathKey in chosenLifepaths) {
 			const lp = chosenLifepaths[lifepathKey];
+
+			if (parseInt(lifepathKey) !== 0) {
+				const prevLp = chosenLifepaths[parseInt(lifepathKey) - 1];
+				if (lp.setting !== prevLp.setting) totals.year += 1;
+			}
 
 			totals.either += lp.eitherPool;
 			totals.mental += lp.mentalPool;
@@ -175,18 +178,8 @@ export function LifepathRandomizer(): JSX.Element {
 			lp.traits.forEach(v => { if (!totals.mandTraits.has(v)) totals.traits.add(v); });
 		}
 
-		for (const lifepathKey in chosenLifepaths) {
-			if (parseInt(lifepathKey) === 0) continue;
-
-			const prevLp = chosenLifepaths[parseInt(lifepathKey) - 1];
-			const lp = chosenLifepaths[lifepathKey];
-			if (lp.setting !== prevLp.setting) totals.year += 1;
-		}
-
-		const statString: string[] = [];
-		if (totals.either !== 0) statString.push(`${totals.either > 0 ? "+" : ""}${totals.either}M/P`);
-		if (totals.mental !== 0) statString.push(`${totals.mental > 0 ? "+" : ""}${totals.mental}M`);
-		if (totals.physical !== 0) statString.push(`${totals.physical > 0 ? "+" : ""}${totals.physical}P`);
+		const ageBracket = Stocks[chosenLifepaths[0].stock].agePool.filter(v => (v.max >= totals.year && v.min <= totals.year));
+		totals.ageStats = [ageBracket[0].m, ageBracket[0].p];
 
 		return (
 			<Controls>
@@ -195,7 +188,7 @@ export function LifepathRandomizer(): JSX.Element {
 					<span className="small">Resources: {totals.resource}{totals.resourcesExt.length > 0 ? `, plus ${totals.resourcesExt.join(" ")}` : ""}</span>
 				</Line>
 				<Line>
-					<span className="small">Stats: {statString.length > 0 ? statString.join(", ") : "—"}</span>
+					<span className="small">Stats: {totals.ageStats[0] + totals.mental}M, {totals.ageStats[1]+ totals.physical}P {(totals.either !== 0) ? `(${totals.either > 0 ? "+" : ""}${totals.either}M/P)`: ""}</span>
 					<span className="small">Trait Points: {totals.trait}</span>
 				</Line>
 				<Line>
@@ -234,7 +227,10 @@ export function LifepathRandomizer(): JSX.Element {
 				<Line>
 					<label>Stock</label>
 					<SelectSearch
-						options={[{ name: "Random", value: "Random" }, ...Object.keys(Stocks).map(v => { return { name: v, value: v }; })]}
+						options={[
+							{ name: "Random", value: "Random" }, 
+							...Object.keys(Stocks).map(v => { return { name: v, value: v }; })
+						]}
 						value={stock}
 						onChange={(e) => setStock(e as any)}
 					/>
@@ -244,7 +240,12 @@ export function LifepathRandomizer(): JSX.Element {
 					? <Line>
 						<label>Starting Setting</label>
 						<SelectSearch
-							options={[{ name: "Random", value: "Random" }, ...Object.keys(Stocks[stock].settings).map(v => { return { name: v, value: v }; })]}
+							options={[
+								{ name: "Random", value: "Random" }, 
+								...Object.values(Stocks[stock].settings)
+									.filter(v => v.type === "Setting")
+									.map(v => { return { name: v.name, value: v.name }; })
+							]}
 							value={setting}
 							onChange={(e) => setSetting(e as any)}
 						/>
