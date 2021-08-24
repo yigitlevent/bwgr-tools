@@ -77,7 +77,7 @@ namespace bwgr {
 			conditions?: bwgr.data.Condition;
 			limits?: bwgr.data.Limit[];
 			texts?: string[];
-		};
+		}
 
 		type ConditionItem = (bwgr.path.Lifepath | `Skill➞${bwgr.path.Skill}` | `Trait➞${bwgr.path.Trait}` | bwgr.data.Condition);
 
@@ -86,7 +86,7 @@ namespace bwgr {
 			items: bwgr.data.ConditionItem[];
 		}
 
-		type Limit = (`LP➞UNIQUE` | `GENDER➞${"FEMALE" | "MALE"}` | `${"YEARS" | "LP" | "GRIEF"}➞${"MIN" | "MAX"}➞${number}`);
+		type Limit = ("LP➞UNIQUE" | `GENDER➞${"FEMALE" | "MALE"}` | `${"YEARS" | "LP" | "GRIEF"}➞${"MIN" | "MAX"}➞${number}`);
 
 		interface Stocks {
 			[key: string]: bwgr.data.Stock;

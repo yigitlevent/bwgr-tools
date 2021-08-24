@@ -26,6 +26,7 @@ export function LifepathRandomizer(): JSX.Element {
 	const [setting, setSetting] = useState("Random");
 	const [minimum, setMinimum] = useState(5);
 	const [maximum, setMaximum] = useState(6);
+	const [maximumLeads, setMaximumLeads] = useState(3);
 
 	const [chosenLifepaths, setChosen] = useState<bwgr.data.Lifepath[]>([]);
 
@@ -174,6 +175,14 @@ export function LifepathRandomizer(): JSX.Element {
 			lp.traits.forEach(v => { if (!totals.mandTraits.has(v)) totals.traits.add(v); });
 		}
 
+		for (const lifepathKey in chosenLifepaths) {
+			if (parseInt(lifepathKey) === 0) continue;
+
+			const prevLp = chosenLifepaths[parseInt(lifepathKey) - 1];
+			const lp = chosenLifepaths[lifepathKey];
+			if (lp.setting !== prevLp.setting) totals.year += 1;
+		}
+
 		const statString: string[] = [];
 		if (totals.either !== 0) statString.push(`${totals.either > 0 ? "+" : ""}${totals.either}M/P`);
 		if (totals.mental !== 0) statString.push(`${totals.mental > 0 ? "+" : ""}${totals.mental}M`);
@@ -250,6 +259,10 @@ export function LifepathRandomizer(): JSX.Element {
 				<Line>
 					<label>Maximum Lifepaths</label>
 					<Input type={"number"} value={maximum} min={2} max={10} onChange={(e) => setMaximum(parseInt(e.target.value))} />
+				</Line>
+				<Line>
+					<label>Maximum Leads</label>
+					<Input type={"number"} value={maximumLeads} min={0} max={10} onChange={(e) => setMaximumLeads(parseInt(e.target.value))} />
 				</Line>
 
 				<Note width={"45%"}>
