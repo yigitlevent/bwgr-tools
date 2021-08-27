@@ -33,7 +33,7 @@ export function MainCanvas({ currentAngle, blockAngle }: { currentAngle: number[
 				.split(", ")
 				.map(v => parseInt(v));
 
-			context.font = "16px Consolas";
+			context.font = "14px 'Code'";
 			context.fillStyle = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
 
 			for (let i = 0; i < string.length; i++) {
@@ -42,7 +42,7 @@ export function MainCanvas({ currentAngle, blockAngle }: { currentAngle: number[
 				context.save();
 
 				context.translate(0, -1 * radius);
-				context.fillText(string[i], 0, 0);
+				context.fillText(string[i].toLowerCase(), 0, 0);
 
 				context.restore();
 			}
