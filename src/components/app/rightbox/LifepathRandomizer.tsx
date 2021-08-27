@@ -136,7 +136,7 @@ export function LifepathRandomizer(): JSX.Element {
 		}
 
 		setChosen(tempChosenLifepaths);
-	}, [setting, stock, maximum, minimum, maximumLeads, filterByRequirements]);
+	}, [setting, stock, maximum, minimum, maximumLeads, noDuplicates, filterByRequirements]);
 
 	const infoBlock = useCallback((): JSX.Element => {
 		const totals = {
@@ -290,7 +290,7 @@ export function LifepathRandomizer(): JSX.Element {
 
 				<Line>
 					<label>No Duplicates</label>
-					<Input type={"checkbox"} checked={noDuplicates} onChange={(e) => setNoDuplicates(v => !v)} />
+					<Input type={"checkbox"} checked={noDuplicates} onChange={() => setNoDuplicates(v => !v)} />
 				</Line>
 
 				<Note width={"45%"}>
