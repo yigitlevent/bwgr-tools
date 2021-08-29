@@ -184,6 +184,7 @@ namespace bwgr {
 
 		interface PracticeTable {
 			[key: string]: {
+				[key: string]: number;
 				Cycle: number;
 				Routine: number;
 				Difficult: number;

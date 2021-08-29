@@ -7,7 +7,9 @@ import { Box } from "../shared/Box";
 import { LifepathList } from "./rightbox/LifepathList";
 import { SkillList } from "./rightbox/SkillList";
 import { TraitList } from "./rightbox/TraitList";
+
 import { LifepathRandomizer } from "./rightbox/LifepathRandomizer";
+import { PracticePlanner } from "./rightbox/PracticePlanner";
 
 import { FactionMaker } from "./rightbox/FactionMaker";
 import { UnitMaker } from "./rightbox/UnitMaker";
@@ -23,12 +25,14 @@ export function RightBox(): JSX.Element {
 			{(activeMenu === "lifepath") ? <LifepathList /> : null}
 			{(activeMenu === "skill") ? <SkillList /> : null}
 			{(activeMenu === "trait") ? <TraitList /> : null}
+
 			{(activeMenu === "lifepathrandomizer") ? <LifepathRandomizer /> : null}
+			{(activeMenu === "practiceplanner") ? <PracticePlanner /> : null}
+			{(activeMenu === "magicwheel") ? <MagicWheel /> : null}
 
 			{(activeMenu === "faction") ? <FactionMaker /> : null}
 			{(activeMenu === "unit") ? <UnitMaker /> : null}
-			
-			{(activeMenu === "magicwheel") ? <MagicWheel /> : null}
+
 			{/*(activeMenu === "distillation") ? <Distillation /> : null*/}
 		</Box>
 	);

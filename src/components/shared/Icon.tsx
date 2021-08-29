@@ -6,6 +6,7 @@ const IconWrapper = styled.div<{ size: number; name: string; isDev: boolean; }>`
 	background: transparent url("${p => p.isDev ? "./bwgr-tools" : "."}/icons/${p => p.name}.svg") no-repeat center center;
 	background-size: contain;
 	margin: auto;
+	display: inline-block;
 
 	&:hover {
 		filter: brightness(120%);
@@ -24,13 +25,14 @@ const IconWrapper = styled.div<{ size: number; name: string; isDev: boolean; }>`
 	}
 `;
 
-export function Icon({ name, isDev, title }: { name: string; isDev: boolean; title?: string; }): JSX.Element {
+export function Icon({ name, isDev, title, size, onClick }: { name: string; isDev: boolean; title?: string; size: number; onClick?: () => void; }): JSX.Element {
 	return (
 		<IconWrapper
-			size={24}
+			size={size}
 			name={name}
 			title={(title) ? title : undefined}
 			isDev={isDev}
+			onClick={onClick}
 		/>
 	);
 }

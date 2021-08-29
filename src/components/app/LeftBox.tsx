@@ -14,7 +14,9 @@ import { Link } from "../shared/Links";
 import { LifepathExplorer } from "./leftbox/LifepathExplorer";
 import { SkillExplorer } from "./leftbox/SkillExplorer";
 import { TraitExplorer } from "./leftbox/TraitExplorer";
+
 import { LifepathRandomizer } from "./leftbox/LifepathRandomizer";
+import { PracticePlanner } from "./leftbox/PracticePlanner";
 
 import { Faction } from "./leftbox/Faction";
 import { Unit } from "./leftbox/Unit";
@@ -42,25 +44,30 @@ export function LeftBox(): JSX.Element {
 			<LifepathExplorer />
 			<SkillExplorer />
 			<TraitExplorer />
+
+			<Divider />
+
 			<LifepathRandomizer />
-
-			<Faction />
-			<Unit />
-
+			<PracticePlanner />
 			<MagicWheel />
 			{/*<Distillation />*/}
 
 			<Divider />
 
+			<Faction />
+			<Unit />
+
+			<Divider />
+
 			<IconWrapper>
 				<Link href="https://www.burningwheel.com" rel="noopener noreferrer" target="_blank">
-					<Icon name={"external"} title={"Burning Wheel HQ"} isDev={IsDev} />
+					<Icon name={"external"} title={"Burning Wheel HQ"} isDev={IsDev} size={24} />
 				</Link>
 				<Link href="https://github.com/yigitlevent/bwgr-tools" rel="noopener noreferrer" target="_blank">
-					<Icon name={"github"} title={"BWGR Tools Github"} isDev={IsDev} />
+					<Icon name={"github"} title={"BWGR Tools Github"} isDev={IsDev} size={24} />
 				</Link>
 				<Link href="https://discord.gg/dwkuevMXCH" rel="noopener noreferrer" target="_blank">
-					<Icon name={"discord"} title={"Burning Wheel Discord Server"} isDev={IsDev} />
+					<Icon name={"discord"} title={"Burning Wheel Discord Server"} isDev={IsDev} size={24} />
 				</Link>
 			</IconWrapper>
 
