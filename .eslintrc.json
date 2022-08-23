@@ -32,8 +32,7 @@
 		"@typescript-eslint/indent": ["error", "tab", { "SwitchCase": 1 }],
 		"@typescript-eslint/no-explicit-any": "off",
 		"@typescript-eslint/no-empty-interface": "off",
-		"@typescript-eslint/no-unused-vars": "off",
-		"@typescript-eslint/no-unused-vars-experimental": ["warn", { "ignoreArgsIfArgsAfterAreUsed": true }],
+		"@typescript-eslint/no-unused-vars": ["warn", { "args": "after-used" }],
 		"@typescript-eslint/no-empty-function": "warn",
 		"@typescript-eslint/no-inferrable-types": "off",
 		"@typescript-eslint/naming-convention": [
@@ -46,7 +45,8 @@
 			{ "selector": "property", "format": ["camelCase", "snake_case", "PascalCase"] },
 			{ "selector": "typeLike", "format": ["PascalCase"] },
 			{ "selector": "method", "format": ["camelCase"] },
-			{ "selector": "classProperty", "format": ["camelCase", "snake_case"], "leadingUnderscore": "allow" }
+			{ "selector": "classProperty", "format": ["camelCase", "snake_case"], "leadingUnderscore": "allow" },
+			{ "selector": "objectLiteralProperty", "format": [] }
 		],
 		"react/react-in-jsx-scope": "off",
 		"react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
