@@ -1,4 +1,4 @@
-import { createRef, useCallback, useEffect, useState } from "react";
+import { createRef, Fragment, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 import shallow from "zustand/shallow";
 
@@ -25,6 +25,7 @@ export function MainCanvas({ currentAngle, blockAngle }: { currentAngle: number[
 
 	const canvasRef = createRef<HTMLCanvasElement>();
 	const [context, setContext] = useState<CanvasRenderingContext2D>();
+	const [isFontLoaded, setIsFontLoaded] = useState(false);
 
 	const drawString = useCallback((string: string, radius: number, anglePerCharacter: number): void => {
 		if (context) {
@@ -33,15 +34,14 @@ export function MainCanvas({ currentAngle, blockAngle }: { currentAngle: number[
 				.split(", ")
 				.map(v => parseInt(v));
 
-			context.font = "14px 'Code'";
-			context.fillStyle = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
-
 			for (let i = 0; i < string.length; i++) {
 				context.rotate(anglePerCharacter);
 
 				context.save();
 
 				context.translate(0, -1 * radius);
+				context.font = "14px 'Code'";
+				context.fillStyle = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
 				context.fillText(string[i].toLowerCase(), 0, 0);
 
 				context.restore();
@@ -74,15 +74,28 @@ export function MainCanvas({ currentAngle, blockAngle }: { currentAngle: number[
 	}, [context, canvasSize, circleRadius, blockAngle, textOffset, drawString]);
 
 	useEffect(() => {
-		if (context) {
+		if (context && isFontLoaded) {
 			context.clearRect(0, 0, canvasSize, canvasSize);
 			drawText(currentAngle);
 		}
-	}, [context, currentAngle, canvasSize, drawText]);
+	}, [context, currentAngle, canvasSize, isFontLoaded, drawText]);
 
 	useEffect(() => {
 		setContext(canvasRef.current?.getContext("2d") as CanvasRenderingContext2D);
 	}, [canvasRef]);
+
+	useEffect(() => {
+		if (!isFontLoaded) {
+			const font = new FontFace("Code", `url(${process.env.PUBLIC_URL}/fonts/SourceCodePro-SemiBold.ttf)`);
+			font.load().then(
+				(font) => {
+					document.fonts.add(font);
+					setIsFontLoaded(true);
+				},
+				console.error
+			);
+		}
+	}, []);
 
 	return (
 		<Canvas ref={canvasRef} height={canvasSize} width={canvasSize}>Your browser does not support canvas.</Canvas>

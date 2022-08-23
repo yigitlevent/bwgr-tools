@@ -18,13 +18,7 @@ export const GlobalStyle = createGlobalStyle`
         src: url("${process.env.PUBLIC_URL}/fonts/CormorantUpright-SemiBold.ttf");
 		font-display: block;
     };
-
-	@font-face {
-        font-family: "Code";
-        src: url("${process.env.PUBLIC_URL}/fonts/SourceCodePro-SemiBold.ttf");
-		font-display: block;
-    };
-
+	
 	* {
 		box-sizing: border-box;
 		tab-size: 4;
