@@ -14,6 +14,8 @@ import { Divider } from "../../shared/Divider";
 import { Controls, Line } from "../../shared/Single";
 import { Note } from "../../shared/Note";
 import { NoLink } from "../../shared/Links";
+import { GetTrait } from "./lifepathlist/Traits";
+import { GetSkill } from "./lifepathlist/Skills";
 
 const Chosen = styled.div`
 	display: block;
@@ -217,22 +219,22 @@ export function LifepathRandomizer(): JSX.Element {
 				</Line>
 				<Line>
 					<span className="small">Mandatory Skills: {[...totals.mandSkills].map((v, i) =>
-						<NoLink key={i} seperator={","}>{NameMaker(v, 1, ["skill", "skills"])}</NoLink>)
+						<NoLink key={i} data={["Skill", GetSkill(v)]} seperator={","}>{NameMaker(v, 1, ["skill", "skills"])}</NoLink>)
 					}</span>
 				</Line>
 				<Line>
 					<span className="small">Skills: {[...totals.skills].map((v, i) =>
-						<NoLink key={i} seperator={","}>{NameMaker(v, 1, ["skill", "skills"])}</NoLink>)
+						<NoLink key={i} data={["Skill", GetSkill(v)]} seperator={","}>{NameMaker(v, 1, ["skill", "skills"])}</NoLink>)
 					}</span>
 				</Line>
 				<Line>
 					<span className="small">Mandatory Traits: {[...totals.mandTraits].map((v, i) =>
-						<NoLink key={i} seperator={","}>{NameMaker(v, 1, ["trait", "traits"])}</NoLink>)
+						<NoLink key={i} data={["Trait", GetTrait(v)]} seperator={","}>{NameMaker(v, 1, ["trait", "traits"])}</NoLink>)
 					}</span>
 				</Line>
 				<Line>
 					<span className="small">Traits: {[...totals.traits].map((v, i) =>
-						<NoLink key={i} seperator={","}>{NameMaker(v, 1, ["trait", "traits"])}</NoLink>)
+						<NoLink key={i} data={["Trait", GetTrait(v)]} seperator={","}>{NameMaker(v, 1, ["trait", "traits"])}</NoLink>)
 					}</span>
 				</Line>
 			</Controls>

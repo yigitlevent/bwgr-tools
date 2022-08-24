@@ -4,7 +4,7 @@ import { NameMaker } from "../../../../utility/nameMaker";
 import { List, ListTitle, ListBlock, ListPoint } from "../../../shared/Inner";
 import { NoLink } from "../../../shared/Links";
 
-function GetSkill(skillPath: string): bwgr.data.Skill {
+export function GetSkill(skillPath: string): bwgr.data.Skill {
 	const path = skillPath.split("➞");
 	const skill = SkillCategories[path[0]].skills.find(v => v.name === path[1]);
 	if (skill === undefined) console.error(`Cannot find '${skillPath}'`);

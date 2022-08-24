@@ -4,7 +4,7 @@ import { NameMaker } from "../../../../utility/nameMaker";
 import { List, ListTitle, ListBlock, ListPoint } from "../../../shared/Inner";
 import { NoLink } from "../../../shared/Links";
 
-function GetTrait(traitPath: string): bwgr.data.Trait {
+export function GetTrait(traitPath: string): bwgr.data.Trait {
 	const path = traitPath.split("➞");
 	const trait = TraitCategories[path[0]].traits.find(v => v.name === path[1]);
 	if (trait === undefined) console.error(`Cannot find '${traitPath}'`);
