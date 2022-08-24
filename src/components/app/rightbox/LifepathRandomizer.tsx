@@ -121,14 +121,14 @@ export function LifepathRandomizer(): JSX.Element {
 		const bornLPsNum = bornLPs.length - 1;
 		tempChosenLifepaths.push(bornLPs[RandomNumber(0, bornLPsNum)]);
 
-		const lpAmount = RandomNumber(minimum, maximum);
+		const lpAmount = RandomNumber(minimum - 1, maximum - 1);
 		let chosenAmount = 0;
 
 		while (chosenAmount < lpAmount) {
 			const lp = chooseNext(chosenStock);
 
 			const isDuplicate = tempChosenLifepaths.filter(v => (v.name === lp.name && v.setting === lp.setting)).length > 0;
-			if(isDuplicate && noDuplicates) continue;
+			if (isDuplicate && noDuplicates) continue;
 			else {
 				chosenAmount += 1;
 				tempChosenLifepaths.push(lp);
