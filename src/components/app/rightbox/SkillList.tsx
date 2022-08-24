@@ -19,7 +19,7 @@ export function SkillList(): JSX.Element {
 				{SkillCategories[skillMenu.category].skills.map((v, i) => {
 					return (
 						<CategoryItem key={i}>
-							<NoLink>{v.name}</NoLink>
+							<NoLink data={["Skill", v]}>{v.name}</NoLink>
 						</CategoryItem>
 					);
 				})}

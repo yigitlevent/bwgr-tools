@@ -9,6 +9,8 @@ namespace bwgr {
 			username: string;
 			activeMenu: bwgr.stores.MenuNames;
 
+			descriptionPopup: undefined | JSX.Element;
+
 			lifepathMenu: { stock: "" | bwgr.data.StocksList; setting: string; };
 			skillMenu: { category: string; };
 			traitMenu: { category: string; };
@@ -20,6 +22,8 @@ namespace bwgr {
 			setStatus: (status: bwgr.Status) => void;
 			setUsername: (username: string) => void;
 			setActiveMenu: (menuName: bwgr.stores.MenuNames) => void;
+
+			setDescriptionPopup: (data: undefined | JSX.Element) => void;
 
 			// LIFEPATH MENU
 			setLifepathStockSetting: (stock: "" | bwgr.data.StocksList, setting: string) => void;

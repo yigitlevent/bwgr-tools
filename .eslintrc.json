@@ -29,6 +29,7 @@
 		"semi": ["error", "always"],
 		"no-unused-vars": "off",
 		"indent": "off",
+		"@typescript-eslint/no-non-null-assertion": "off",
 		"@typescript-eslint/indent": ["error", "tab", { "SwitchCase": 1 }],
 		"@typescript-eslint/no-explicit-any": "off",
 		"@typescript-eslint/no-empty-interface": "off",

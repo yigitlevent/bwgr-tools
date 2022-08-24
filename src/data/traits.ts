@@ -10935,7 +10935,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 					"bwc"
 				],
 				cost: 0,
-				description: "Trolls are the definition of Massive Stature: barrel-chested, hulking beasts with long thick limbs and shoulders like towering cliffs. The largest of their number growtwice as tall as humans, but even the smallest adults are rarely less than seven feet in height.\\nIncrease all weapon lengths by one for the Troll.\\nThese great lumbering beasts must have minimum Power and Forte of 4. The maximum exponents for Power and Forte are 9. The maximum exponents for Agility and Speed are 5. Stride is 7.",
+				description: "Trolls are the definition of Massive Stature: barrel-chested, hulking beasts with long thick limbs and shoulders like towering cliffs. The largest of their number growtwice as tall as humans, but even the smallest adults are rarely less than seven feet in height.<br>Increase all weapon lengths by one for the Troll.<br>These great lumbering beasts must have minimum Power and Forte of 4. The maximum exponents for Power and Forte are 9. The maximum exponents for Agility and Speed are 5. Stride is 7.",
 				name: "Massive Stature",
 				stock: "Troll",
 				type: "Die"
@@ -10945,7 +10945,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 					"bwc"
 				],
 				cost: 0,
-				description: "Trolls were born of stone and sorcery and to these roots they remain closely tied. Though not immortal, these creatures age very slowly and are capable of living for long centuries -if they can survive their own violent tendencies.\\nHowever, the weight of granite in their blood has detrimental effects. Their view of the world is dim and ponderous and their ability to intuit or empathize is minimal. A troll may not have a Perception or Will exponent highter than 6.",
+				description: "Trolls were born of stone and sorcery and to these roots they remain closely tied. Though not immortal, these creatures age very slowly and are capable of living for long centuries -if they can survive their own violent tendencies.<br>However, the weight of granite in their blood has detrimental effects. Their view of the world is dim and ponderous and their ability to intuit or empathize is minimal. A troll may not have a Perception or Will exponent highter than 6.",
 				name: "Stone's Age",
 				stock: "Troll",
 				type: "Die"
@@ -10965,7 +10965,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 					"bwc"
 				],
 				cost: 0,
-				description: "Troll Skin is resilient and leathery, It provides 1D of armor to the limbs and head, 2D to the chest.\\nAs he gets older, a Troll's flesh often hardens into a stony mass. Thus, the Troll Skin trait maybe upgraded to Scaly Skin or Stone Skin for just a few trait points. See the Troll Special Traits list. This skin cannot 'fail' and become damaged like armor: 1s are discounted in this case. VA works as normal against this armor.",
+				description: "Troll Skin is resilient and leathery, It provides 1D of armor to the limbs and head, 2D to the chest.<br>As he gets older, a Troll's flesh often hardens into a stony mass. Thus, the Troll Skin trait maybe upgraded to Scaly Skin or Stone Skin for just a few trait points. See the Troll Special Traits list. This skin cannot 'fail' and become damaged like armor: 1s are discounted in this case. VA works as normal against this armor.",
 				name: "Troll Skin",
 				stock: "Troll",
 				type: "Die"
@@ -11214,7 +11214,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 					"bwc"
 				],
 				cost: 0,
-				description: "The Brood Mother knows a bit of magic, rumored to have been handed down from an old giantess in ages past. This magic, called Witch Flesh, grants the ability to transform into a handsome young man or woman. The disguies is impenetrable. The brood mother retains her stats and attributes, but her character traits are replaced with Beautiful, Wholesome, Apple-Cheeked, etc. Any other traits requiring physical expression (like Horns or Claws) are temporarily lost to the human form. No test is required to transform, but the change requires a full scene, during which magic slowly takes effect.\\nOnce the Brood Mother reveals her true nature to her victim (or is perhaps accidentally spotted transforming), the victim will never see her the same way again -and can never be fooled by the Witch Flesh of this Brood Mother again.",
+				description: "The Brood Mother knows a bit of magic, rumored to have been handed down from an old giantess in ages past. This magic, called Witch Flesh, grants the ability to transform into a handsome young man or woman. The disguies is impenetrable. The brood mother retains her stats and attributes, but her character traits are replaced with Beautiful, Wholesome, Apple-Cheeked, etc. Any other traits requiring physical expression (like Horns or Claws) are temporarily lost to the human form. No test is required to transform, but the change requires a full scene, during which magic slowly takes effect.<br>Once the Brood Mother reveals her true nature to her victim (or is perhaps accidentally spotted transforming), the victim will never see her the same way again -and can never be fooled by the Witch Flesh of this Brood Mother again.",
 				name: "Witch Flesh",
 				stock: "Troll",
 				type: "Die"
@@ -11263,7 +11263,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 					"bwc"
 				],
 				cost: 3,
-				description: "A growth of crystallin spines sprouts from the back and shoulders of this Troll. The spines are sharp to the touch and break off and lodge themselves in the flesh of the unwary, causing great discomfort.\\nAny creature that grapples or otherwise comes into contanct with the Troll's spines suffers a +1 Ob to all tests until the spines are removed. This takes effect if the Troll grapples you, too. The penalty is cumulative for each contact.\\nSpines can be plucked out in about a half hour. If the Surgery or Field Dressing skill is used, they can be treated in the time it takes to tend to a Superficial wound.\\nIf the troll is forced onto his back -if he falls or is pushed- it is possible that the spines are crushed and flattened. Roll the die of fate. On a 1 the spines are crushed and unusable. It takes about a month for the crystals to regrow (They always regrow).",
+				description: "A growth of crystallin spines sprouts from the back and shoulders of this Troll. The spines are sharp to the touch and break off and lodge themselves in the flesh of the unwary, causing great discomfort.<br>Any creature that grapples or otherwise comes into contanct with the Troll's spines suffers a +1 Ob to all tests until the spines are removed. This takes effect if the Troll grapples you, too. The penalty is cumulative for each contact.<br>Spines can be plucked out in about a half hour. If the Surgery or Field Dressing skill is used, they can be treated in the time it takes to tend to a Superficial wound.<br>If the troll is forced onto his back -if he falls or is pushed- it is possible that the spines are crushed and flattened. Roll the die of fate. On a 1 the spines are crushed and unusable. It takes about a month for the crystals to regrow (They always regrow).",
 				name: "Crystalline Spines",
 				stock: "Troll",
 				type: "Die"
@@ -11492,7 +11492,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 					"bwc"
 				],
 				cost: 0,
-				description: "Great Wolves possess the basic form common to wolves. They have a rangy, muscular body set on high and powerful legs with large, well-padded feet. They have lonf snouths and massive, protruding jaws. Their fur is a crown of coarse guard hairs supported by a night-impertmeable layer of soft underfur. Their most prominent feature is, of couse, their massive size. Great wolves stand three to five feet at the shoulder, and can weigh 200-600 lbs.\\nGreat Wolves have a maximum exponent of 6 for Agility (from their lack of hands), while other stat maximums are 8. Their Stride is 11.",
+				description: "Great Wolves possess the basic form common to wolves. They have a rangy, muscular body set on high and powerful legs with large, well-padded feet. They have lonf snouths and massive, protruding jaws. Their fur is a crown of coarse guard hairs supported by a night-impertmeable layer of soft underfur. Their most prominent feature is, of couse, their massive size. Great wolves stand three to five feet at the shoulder, and can weigh 200-600 lbs.<br>Great Wolves have a maximum exponent of 6 for Agility (from their lack of hands), while other stat maximums are 8. Their Stride is 11.",
 				name: "Great Lupine Form",
 				stock: "Great Wolf",
 				type: "Die"
@@ -11502,7 +11502,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 					"bwc"
 				],
 				cost: 0,
-				description: "Without a doubt, Great Wolvea re intelligent creatures. They possess a personality and intellect equivalent to that of humans and Orcs. Never assume that just because they don't live in cities, write with pends or eat with knives, wolves are dumb brutes.\\nEven so, Great Wolves are not tool-using creatures. Though they understand a great many matters, they generally don't use (or even need) tools to accomplish the tasks in their daily lives. Any wolf attempting to use tools like hammers, swords or scissors suffers quadruple obstacle penalties.",
+				description: "Without a doubt, Great Wolvea re intelligent creatures. They possess a personality and intellect equivalent to that of humans and Orcs. Never assume that just because they don't live in cities, write with pends or eat with knives, wolves are dumb brutes.<br>Even so, Great Wolves are not tool-using creatures. Though they understand a great many matters, they generally don't use (or even need) tools to accomplish the tasks in their daily lives. Any wolf attempting to use tools like hammers, swords or scissors suffers quadruple obstacle penalties.",
 				name: "Lupine Intellect",
 				stock: "Great Wolf",
 				type: "Die"
@@ -11770,7 +11770,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 					"bwc"
 				],
 				cost: 0,
-				description: "Wolves learn to submit to a Dominant wolf at a very young age. Any wolf in the pack who is not part of the Dominant pair is submissive. These wolves follow the lead of their superiors and often beg for certain permissions, including permission to eat from a kill. Being Submissive in the pack connotes no weakness. It merely shows that the wolf understands the natural order of things. This trait grants a free relationship with a master or dominant character.\\nProminent Submissive behaviors include: looking away from the Dominant's gaze, crouching with head to the ground before the Dominant, rolling over and exposing the belly to the Dominant and nibbling or licking the Dominant's chin.\\nLastly, wolves may possess both the Dominant and Submissive traits. These wolves will rule their pack as they rightly should, but they might also submit to stronger Dominants -be they wolf, human or Orc.",
+				description: "Wolves learn to submit to a Dominant wolf at a very young age. Any wolf in the pack who is not part of the Dominant pair is submissive. These wolves follow the lead of their superiors and often beg for certain permissions, including permission to eat from a kill. Being Submissive in the pack connotes no weakness. It merely shows that the wolf understands the natural order of things. This trait grants a free relationship with a master or dominant character.<br>Prominent Submissive behaviors include: looking away from the Dominant's gaze, crouching with head to the ground before the Dominant, rolling over and exposing the belly to the Dominant and nibbling or licking the Dominant's chin.<br>Lastly, wolves may possess both the Dominant and Submissive traits. These wolves will rule their pack as they rightly should, but they might also submit to stronger Dominants -be they wolf, human or Orc.",
 				name: "Submissive",
 				stock: "Great Wolf",
 				type: "Die"
@@ -11908,7 +11908,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 					"bwc"
 				],
 				cost: 2,
-				description: "Wolves and ravens have a special relationship. Not only do they aid one another on the hunt -ravens will circle a herd to mark it for wolves, and wolves will allow ravens to feed at their kills- they are also great friends. Wolves and ravens enjoy taunting each other and playing endless and dangerous games of tak. This trait grants either a free relationship with a raven or a 1D affiliation with a conspiracy of ravens.\\nThis trait signifies a wolf who is especially fond of ravens and well though of by the birds. While the whole pack may play, he is the only pack member who can understand the quacks and squawks of raven speech.",
+				description: "Wolves and ravens have a special relationship. Not only do they aid one another on the hunt -ravens will circle a herd to mark it for wolves, and wolves will allow ravens to feed at their kills- they are also great friends. Wolves and ravens enjoy taunting each other and playing endless and dangerous games of tak. This trait grants either a free relationship with a raven or a 1D affiliation with a conspiracy of ravens.<br>This trait signifies a wolf who is especially fond of ravens and well though of by the birds. While the whole pack may play, he is the only pack member who can understand the quacks and squawks of raven speech.",
 				name: "Raven Friend",
 				stock: "Great Wolf",
 				type: "Call-on"

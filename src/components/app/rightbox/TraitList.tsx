@@ -19,7 +19,7 @@ export function TraitList(): JSX.Element {
 				{TraitCategories[traitMenu.category].traits.map((v, i) => {
 					return (
 						<CategoryItem key={i}>
-							<NoLink>{v.name}</NoLink>
+							<NoLink data={["Trait", v]}>{v.name}</NoLink>
 						</CategoryItem>
 					);
 				})}

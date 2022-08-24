@@ -6,6 +6,8 @@ export const ClientStore = create<bwgr.stores.ClientStore>(set => ({
 	username: "",
 	activeMenu: "",
 
+	descriptionPopup: undefined,
+
 	lifepathMenu: { stock: "", setting: "" },
 	skillMenu: { category: "" },
 	traitMenu: { category: "" },
@@ -22,6 +24,10 @@ export const ClientStore = create<bwgr.stores.ClientStore>(set => ({
 	})),
 	setActiveMenu: (menuName) => set(produce((state: bwgr.stores.ClientStore) => {
 		state.activeMenu = menuName;
+	})),
+
+	setDescriptionPopup: (data) => set(produce((state: bwgr.stores.ClientStore) => {
+		state.descriptionPopup = data;
 	})),
 
 	// LIFEPATH MENU

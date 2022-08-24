@@ -1,4 +1,4 @@
-import { createRef, Fragment, useCallback, useEffect, useState } from "react";
+import { createRef, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 import shallow from "zustand/shallow";
 
@@ -95,7 +95,7 @@ export function MainCanvas({ currentAngle, blockAngle }: { currentAngle: number[
 				console.error
 			);
 		}
-	}, []);
+	}, [isFontLoaded]);
 
 	return (
 		<Canvas ref={canvasRef} height={canvasSize} width={canvasSize}>Your browser does not support canvas.</Canvas>
