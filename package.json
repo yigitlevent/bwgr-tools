@@ -3,12 +3,21 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
+	"license": "MIT",
+	"homepage": "http://yigitlevent.github.io/bwgr-tools/",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yigitlevent/bwgr-tools.git"
+	},
+	"bugs": {
+		"url": "https://github.com/yigitlevent/bwgr-tools/issues"
+	},
 	"scripts": {
 		"dev": "vite",
 		"preview": "vite preview",
 		"build": "tsc && vite build",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build"
+		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
 		"@mui/icons-material": "^5.10.2",
