@@ -166,7 +166,6 @@ export function LifepathRandomizer() {
 			}
 		}
 
-		console.log(tempChosenLifepaths);
 		if (tempChosenLifepaths.length < minLifepaths) setTriedTooMuch(true);
 
 		setChosen(tempChosenLifepaths);
@@ -270,7 +269,6 @@ export function LifepathRandomizer() {
 			const [category, name] = path.split("➞");
 			let s = SkillCategories[category].skills.find(v => v.name === name);
 			if (name === "1*ANY") s = SkillCategories[category].skills.find(v => v.name === "Any wise");
-			if (s === undefined) console.error(path);
 			return s as Skill;
 		});
 
@@ -278,21 +276,18 @@ export function LifepathRandomizer() {
 			const [category, name] = path.split("➞");
 			let s = SkillCategories[category].skills.find(v => v.name === name);
 			if (name === "1*ANY") s = SkillCategories[category].skills.find(v => v.name === "Any wise");
-			if (s === undefined) console.error(path);
 			return s as Skill;
 		});
 
 		const mandTraits = [...totals.mandTraits].map(path => {
 			const [category, name] = path.split("➞");
 			const t = TraitCategories[category].traits.find(v => v.name === name);
-			if (t === undefined) console.error(path);
 			return t as Trait;
 		});
 
 		const traits = [...totals.traits].map(path => {
 			const [category, name] = path.split("➞");
 			const t = TraitCategories[category].traits.find(v => v.name === name);
-			if (t === undefined) console.error(path);
 			return t as Trait;
 		});
 

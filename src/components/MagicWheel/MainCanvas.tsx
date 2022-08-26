@@ -19,7 +19,6 @@ const Canvas = styled.canvas`
 export function MainCanvas({ currentAngle, blockAngle }: { currentAngle: number[]; blockAngle: number[]; }): JSX.Element {
 	const canvasRef = createRef<HTMLCanvasElement>();
 	const [context, setContext] = useState<CanvasRenderingContext2D>();
-	const [isFontLoaded, setIsFontLoaded] = useState(false);
 
 	const drawString = useCallback((string: string, radius: number, anglePerCharacter: number): void => {
 		if (context) {
@@ -63,28 +62,15 @@ export function MainCanvas({ currentAngle, blockAngle }: { currentAngle: number[
 	}, [context, blockAngle, drawString]);
 
 	useEffect(() => {
-		if (context && isFontLoaded) {
+		if (context) {
 			context.clearRect(0, 0, MWCONST.canvasSize, MWCONST.canvasSize);
 			drawText(currentAngle);
 		}
-	}, [context, currentAngle, isFontLoaded, drawText]);
+	}, [context, currentAngle, drawText]);
 
 	useEffect(() => {
 		setContext(canvasRef.current?.getContext("2d") as CanvasRenderingContext2D);
 	}, [canvasRef]);
-
-	useEffect(() => {
-		if (!isFontLoaded) {
-			const font = new FontFace("Code", "url(./public/SourceCodePro-SemiBold.ttf)");
-			font.load().then(
-				(font) => {
-					document.fonts.add(font);
-					setIsFontLoaded(true);
-				},
-				console.error
-			);
-		}
-	}, [isFontLoaded]);
 
 	return (
 		<Canvas ref={canvasRef} height={MWCONST.canvasSize} width={MWCONST.canvasSize}>Your browser does not support canvas.</Canvas>

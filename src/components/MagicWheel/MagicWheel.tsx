@@ -1,6 +1,8 @@
 import { ChangeEvent, createRef, Fragment, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 
+import code from "../../fonts/SourceCodePro-SemiBold.ttf";
+
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
@@ -44,6 +46,8 @@ export function MagicWheel() {
 	const [blockAngle, setBlockAngle] = useState([0, 0, 0, 0, 0]);
 	const [currentAngle, setCurrentAngle] = useState([0, 0, 0, 0, 0]);
 	const [isRotating, setIsRotating] = useState(false);
+
+	const [isFontLoaded, setIsFontLoaded] = useState(false);
 
 	const changeAOE = (event: SelectChangeEvent) => {
 		dispatch({ type: "CHANGE_MAGIC_WHEEL_AOE", payload: { aoe: event.target.value } });
@@ -147,6 +151,19 @@ export function MagicWheel() {
 		}
 		setBlockAngle(tempArr);
 	}, []);
+
+	useEffect(() => {
+		if (!isFontLoaded) {
+			const font = new FontFace("Code", `url(${code})`);
+			font.load().then(
+				(font) => {
+					document.fonts.add(font);
+					setIsFontLoaded(true);
+				},
+				console.error
+			);
+		}
+	}, [isFontLoaded]);
 
 	return (
 		<Fragment>
@@ -252,17 +269,22 @@ export function MagicWheel() {
 
 			<Divider sx={{ margin: "10px 0 8px" }} />
 
-			<CanvasWrapper ref={wrapperRef} size={size}>
-				<BackCanvas />
-				<MainCanvas currentAngle={currentAngle} blockAngle={blockAngle} />
-				<FrontCanvas show={cover} />
-			</CanvasWrapper>
+			{isFontLoaded
+				? <Fragment>
+					<CanvasWrapper ref={wrapperRef} size={size}>
+						<BackCanvas />
+						<MainCanvas currentAngle={currentAngle} blockAngle={blockAngle} />
+						<FrontCanvas show={cover} />
+					</CanvasWrapper>
 
-			<FormControlLabel
-				label="Toggle Cover"
-				labelPlacement="start"
-				control={<Checkbox checked={cover} onChange={toggleCover} />}
-			/>
+					<FormControlLabel
+						label="Toggle Cover"
+						labelPlacement="start"
+						control={<Checkbox checked={cover} onChange={toggleCover} />}
+					/>
+				</Fragment>
+				: null
+			}
 		</Fragment >
 	);
 }
