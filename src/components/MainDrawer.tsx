@@ -9,8 +9,6 @@ import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 
-import MailIcon from "@mui/icons-material/Mail";
-
 import { useAppDispatch, useAppSelector } from "../state/store";
 import { DrawerItem } from "../state/reducers/drawer";
 
@@ -69,7 +67,7 @@ export function MainDrawer() {
 						<Fragment key={i}>
 							<Divider />
 							{v.map((item, ii) => {
-								return <DrawerListItem key={ii} text={item} icon={<MailIcon />} onClick={() => setSelectedItem(item)} />;
+								return <DrawerListItem key={ii} text={item} onClick={() => setSelectedItem(item)} />;
 							})}
 						</Fragment>
 					);
