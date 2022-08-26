@@ -1,4 +1,6 @@
-export const Elf: bwgr.data.Stock = {
+import { Stock } from "../stocks";
+
+export const Elf: Stock = {
 	agePool: [
 		{ max: 25, min: 0, m: 7, p: 13 },
 		{ max: 60, min: 26, m: 8, p: 13 },

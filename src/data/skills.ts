@@ -1,4 +1,28 @@
-export const SkillCategories: bwgr.data.SkillCategories = {
+export interface Skill {
+	name: string;
+	description: string;
+
+	allowed: RulesetsList[];
+	magical: boolean;
+	noList: boolean;
+	restriction: string;
+	root: StatsList | `${StatsList}/${StatsList}` | "N/A";
+	tools: [ToolsList, string];
+	training: boolean;
+	type: SkillTypesList | "N/A";
+}
+
+interface SkillCategory {
+	allowed: RulesetsList[];
+	name: string;
+	skills: Skill[];
+}
+
+interface SkillCategories {
+	[key: string]: SkillCategory;
+}
+
+export const SkillCategories: SkillCategories = {
 	"Any General": {
 		allowed: [
 			"bwg",
@@ -4141,6 +4165,24 @@ export const SkillCategories: bwgr.data.SkillCategories = {
 		],
 		name: "Any Wise",
 		skills: [
+			{
+				allowed: [
+					"bwg",
+					"bwc"
+				],
+				description: "Choose any wise skill.",
+				magical: false,
+				name: "Any wise",
+				noList: false,
+				restriction: "N/A",
+				root: "Perception",
+				tools: [
+					"No",
+					""
+				],
+				training: false,
+				type: "Wise"
+			},
 			{
 				allowed: [
 					"bwg",

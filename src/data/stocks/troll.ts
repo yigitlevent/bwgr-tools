@@ -1,4 +1,6 @@
-export const Troll: bwgr.data.Stock = {
+import { Stock } from "../stocks";
+
+export const Troll: Stock = {
 	agePool: [
 		{ max: 5, min: 0, m: 3, p: 11 },
 		{ max: 10, min: 6, m: 4, p: 14 },

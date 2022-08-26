@@ -1,4 +1,11 @@
-export const MagicData: bwgr.data.MagicFacet[][] = [
+export interface MagicFacet {
+	name: string;
+	obstacle: number;
+	actions: number;
+	resource: number;
+}
+
+export const MagicData: MagicFacet[][] = [
 	[ // 3 origin
 		{ name: "Personal", obstacle: 0, actions: 1, resource: 0 },
 		{ name: "Presence", obstacle: 2, actions: 2, resource: 2 },
@@ -49,5 +56,4 @@ export const EmptySpell = {
 	obstacle: "",
 	actions: "",
 	resource: "",
-
 };

@@ -1,4 +1,6 @@
-export const Roden: bwgr.data.Stock = {
+import { Stock } from "../stocks";
+
+export const Roden: Stock = {
 	agePool: [
 		{ max: 5, min: 0, m: 6, p: 10 },
 		{ max: 9, min: 6, m: 7, p: 13 },

@@ -1,4 +1,6 @@
-export const Human: bwgr.data.Stock = {
+import { Stock } from "../stocks";
+
+export const Human: Stock = {
 	agePool: [
 		{ max: 10, min: 0, m: 5, p: 10 },
 		{ max: 14, min: 11, m: 6, p: 13 },

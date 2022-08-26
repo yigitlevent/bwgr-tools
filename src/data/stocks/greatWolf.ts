@@ -1,4 +1,6 @@
-export const GreatWolf: bwgr.data.Stock = {
+import { Stock } from "../stocks";
+
+export const GreatWolf: Stock = {
 	agePool: [
 		{ max: 1, min: 0, m: 6, p: 12 },
 		{ max: 3, min: 2, m: 7, p: 16 },

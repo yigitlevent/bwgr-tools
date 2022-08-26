@@ -4,7 +4,7 @@
 		"browser": true,
 		"es2021": true
 	},
-	"extends": ["react-app", "eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended", "plugin:json/recommended"],
+	"extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended", "plugin:json/recommended"],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		"version": "detect",
@@ -14,8 +14,13 @@
 		"ecmaVersion": 12,
 		"sourceType": "module"
 	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
 	"ignorePatterns": ["node_modules", "dist", "build"],
-	"plugins": ["react", "@typescript-eslint", "json"],
+	"plugins": ["react", "react-hooks", "@typescript-eslint", "json"],
 	"rules": {
 		"eol-last": ["error", "always"],
 		"json/*": ["error", "allowComments"],
@@ -29,6 +34,7 @@
 		"semi": ["error", "always"],
 		"no-unused-vars": "off",
 		"indent": "off",
+		"no-case-declarations": "off",
 		"@typescript-eslint/no-non-null-assertion": "off",
 		"@typescript-eslint/indent": ["error", "tab", { "SwitchCase": 1 }],
 		"@typescript-eslint/no-explicit-any": "off",
@@ -42,9 +48,11 @@
 			{ "selector": ["variable", "parameter"], "format": ["camelCase"] },
 			{ "selector": "variable", "modifiers": ["global"], "format": ["PascalCase"] },
 			{ "selector": "function", "format": ["PascalCase"] },
+			{ "selector": "variable", "filter": { "regex": "^use", "match": true }, "format": ["camelCase"] },
 			{ "selector": "function", "filter": { "regex": "^use", "match": true }, "format": ["camelCase"] },
 			{ "selector": "property", "format": ["camelCase", "snake_case", "PascalCase"] },
 			{ "selector": "typeLike", "format": ["PascalCase"] },
+			{ "selector": "parameter", "format": ["camelCase", "PascalCase"] },
 			{ "selector": "method", "format": ["camelCase"] },
 			{ "selector": "classProperty", "format": ["camelCase", "snake_case"], "leadingUnderscore": "allow" },
 			{ "selector": "objectLiteralProperty", "format": [] }

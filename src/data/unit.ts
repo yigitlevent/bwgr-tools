@@ -1,4 +1,34 @@
-export const EmptyUnit: bwgr.data.UnitCard = {
+
+
+
+interface UnitCard {
+	[key: string]: string | ["B" | "G" | "W", number] | ["B" | "G" | "W", number, number] | number | ListItem[];
+	name: string;
+	commander: string;
+	type: string;
+	status: UnitStatus;
+	composition: string;
+	doctrine: string;
+	tradition: string;
+	traits: ListItem[];
+	ambush: ["B" | "G" | "W", number];
+	battle: ["B" | "G" | "W", number];
+	siege: ["B" | "G" | "W", number];
+	skirmish: ["B" | "G" | "W", number];
+	soldiering: ["B" | "G" | "W", number];
+	seamanship: ["B" | "G" | "W", number];
+	health: ["B" | "G" | "W", number, number];
+	steel: ["B" | "G" | "W", number, number];
+	strature: number;
+	strength: number;
+	stride: number;
+	supply: number;
+	weaponry: string;
+	armor: string;
+	trainings: string;
+}
+
+export const EmptyUnit: UnitCard = {
 	name: "",
 	commander: "",
 	type: "",
@@ -24,6 +54,6 @@ export const EmptyUnit: bwgr.data.UnitCard = {
 	supply: 0
 };
 
-export const UnitStatuses: bwgr.data.UnitStatus[] = [
+export const UnitStatuses: UnitStatus[] = [
 	"Ready", "Out of Supply", "Unscathed", "Bloodied", "Broken"
 ];

@@ -1,4 +1,14 @@
-export const PracticeTable: bwgr.data.PracticeTable = {
+interface PracticeTable {
+	[key: string]: {
+		[key: string]: number;
+		Cycle: number;
+		Routine: number;
+		Difficult: number;
+		Challenging: number;
+	};
+}
+
+export const PracticeTable: PracticeTable = {
 	"Academic": { Cycle: 6, Routine: 2, Difficult: 4, Challenging: 8 },
 	"Artisan": { Cycle: 12, Routine: 4, Difficult: 8, Challenging: 12 },
 	"Artist": { Cycle: 6, Routine: 3, Difficult: 6, Challenging: 12 },

@@ -1,4 +1,23 @@
-export const TraitCategories: bwgr.data.TraitCategories = {
+export interface Trait {
+	allowed: RulesetsList[];
+	cost: number | number[];
+	description: string;
+	name: string;
+	stock: "Any" | StocksList;
+	type: TraitTypesList;
+}
+
+interface TraitCategory {
+	allowed: RulesetsList[];
+	name: string;
+	traits: Trait[];
+}
+
+interface TraitCategories {
+	[key: string]: TraitCategory;
+}
+
+export const TraitCategories: TraitCategories = {
 	"Any Character": {
 		allowed: [
 			"bwg",
@@ -7437,7 +7456,7 @@ export const TraitCategories: bwgr.data.TraitCategories = {
 			}
 		]
 	},
-	
+
 	"Dwarf Common": {
 		allowed: [
 			"bwg",

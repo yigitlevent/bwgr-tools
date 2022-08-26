@@ -1,4 +1,6 @@
-export const Dwarf: bwgr.data.Stock = {
+import { Stock } from "../stocks";
+
+export const Dwarf: Stock = {
 	agePool: [
 		{ max: 20, min: 0, m: 6, p: 13 },
 		{ max: 30, min: 21, m: 7, p: 13 },
@@ -2080,3 +2082,4 @@ export const Dwarf: bwgr.data.Stock = {
 		}
 	}
 };
+

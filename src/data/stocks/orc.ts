@@ -1,4 +1,6 @@
-export const Orc: bwgr.data.Stock = {
+import { Stock } from "../stocks";
+
+export const Orc: Stock = {
 	agePool: [
 		{ max: 10, min: 0, m: 3, p: 10 },
 		{ max: 16, min: 11, m: 4, p: 11 },
