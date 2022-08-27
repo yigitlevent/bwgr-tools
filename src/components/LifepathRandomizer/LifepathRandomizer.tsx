@@ -1,8 +1,8 @@
-import { ChangeEvent, Fragment, useCallback, useState } from "react";
+import { Fragment, useCallback, useState } from "react";
 
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Select from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -15,45 +15,21 @@ import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 import Paper from "@mui/material/Paper";
 
-import { useAppDispatch, useAppSelector } from "../../state/store";
+import { useAppSelector } from "../../state/store";
+import { useStore } from "../../state/useStore";
 import { Lifepath, Stock, Stocks } from "../../data/stocks";
-import { Trait, TraitCategories } from "../../data/traits";
-import { Skill, SkillCategories } from "../../data/skills";
-import { RandomNumber, Clamp } from "../../utils/misc";
+import { RandomNumber } from "../../utils/misc";
 
-import { PopoverLink } from "../Shared/PopoverLink";
-import Box from "@mui/material/Box";
+import { LifepathRandomizerLists } from "./LifepathRandomizerLists";
+import { LifepathRandomizerBasics } from "./LifepathRandomizerBasics";
 
 
 export function LifepathRandomizer() {
 	const { stock, setting, noDuplicates, maxLeads, maxLifepaths, minLifepaths } = useAppSelector(state => state.lifepathRandomizer);
-	const dispatch = useAppDispatch();
+	const { changeMaxLPs, changeMaxLeads, changeMinLPs, changeStock, toggleNoDuplicates } = useStore();
 
 	const [chosenLifepaths, setChosen] = useState<Lifepath[]>([]);
 	const [triedTooMuch, setTriedTooMuch] = useState(false);
-
-	const changeStock = (event: SelectChangeEvent) => {
-		dispatch({ type: "CHANGE_LP_RANDOMIZER_STOCK", payload: { stock: event.target.value } });
-	};
-
-	const changeMaxLeads = (event: ChangeEvent<HTMLInputElement>) => {
-		const value = Clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 10);
-		dispatch({ type: "CHANGE_LP_RANDOMIZER_MAX_LEADS", payload: { maxLeads: value } });
-	};
-
-	const changeMaxLPs = (event: ChangeEvent<HTMLInputElement>) => {
-		const value = Clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 10);
-		dispatch({ type: "CHANGE_LP_RANDOMIZER_MAX_LIFEPATHS", payload: { maxLifepaths: value } });
-	};
-
-	const changeMinLPs = (event: ChangeEvent<HTMLInputElement>) => {
-		const value = Clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 10);
-		dispatch({ type: "CHANGE_LP_RANDOMIZER_MIN_LIFEPATHS", payload: { minLifepaths: value } });
-	};
-
-	const toggleNoDuplicates = () => {
-		dispatch({ type: "TOGGLE_LP_RANDOMIZER_NO_DUPLICATES" });
-	};
 
 	const filterByRequirements = useCallback((combinedPossibleLifepaths: Lifepath[], tempChosenLifepaths: Lifepath[]): Lifepath[] => {
 		const filteredLifepaths: Lifepath[] = [];
@@ -148,7 +124,7 @@ export function LifepathRandomizer() {
 		const lpAmount = RandomNumber(minLifepaths - 1, maxLifepaths - 1);
 		let chosenAmount = 0;
 
-		const maxTries = 10;
+		const maxTries = 20;
 		let tries = 0;
 
 		while (tries < maxTries && chosenAmount < lpAmount) {
@@ -170,176 +146,6 @@ export function LifepathRandomizer() {
 
 		setChosen(tempChosenLifepaths);
 	}, [setting, stock, minLifepaths, maxLifepaths, maxLeads, noDuplicates, filterByRequirements]);
-
-	const basics = useCallback(() => {
-		const totals = {
-			year: 0, yearExt: [] as string[], ageStats: [0, 0],
-			resource: 0, resourcesExt: [] as string[],
-			// Stat
-			either: 0, mental: 0, physical: 0,
-			// Skill
-			general: 0, generalExt: [] as string[],
-			lifepath: 0, lifepathExt: [] as string[],
-			// Trait
-			trait: 0
-		};
-
-		for (const lifepathKey in chosenLifepaths) {
-			const lp = chosenLifepaths[lifepathKey];
-
-			if (parseInt(lifepathKey) !== 0) {
-				const prevLp = chosenLifepaths[parseInt(lifepathKey) - 1];
-				if (lp.setting !== prevLp.setting) totals.year += 1;
-			}
-
-			totals.either += lp.eitherPool;
-			totals.mental += lp.mentalPool;
-			totals.physical += lp.physicalPool;
-
-			if (typeof lp.years === "number") totals.year += lp.years;
-			else totals.yearExt.push(lp.years);
-
-			if (typeof lp.resources === "number") totals.resource += lp.resources;
-			else totals.resourcesExt.push(lp.resources);
-
-			if (typeof lp.generalSkillPool === "number") totals.general += lp.generalSkillPool;
-			else totals.generalExt.push(lp.generalSkillPool);
-
-			if (typeof lp.skillPool === "number") totals.lifepath += lp.skillPool;
-			else totals.lifepathExt.push(lp.skillPool);
-
-			totals.trait += lp.traitPool;
-		}
-
-		const ageBracket = Stocks[chosenLifepaths[0].stock].agePool.filter(v => (v.max >= totals.year && v.min <= totals.year));
-		totals.ageStats = [ageBracket[0].m, ageBracket[0].p];
-
-		return (
-			<Grid container columns={2}>
-				<Grid item xs={1}>
-					<Typography variant="caption">Years: {totals.year}{totals.yearExt.length > 0 ? `, plus ${totals.yearExt.join(" ")}` : ""}</Typography>
-				</Grid>
-				<Grid item xs={1}>
-					<Typography variant="caption">Resources: {totals.resource}{totals.resourcesExt.length > 0 ? `, plus ${totals.resourcesExt.join(" ")}` : ""}</Typography>
-				</Grid>
-				<Grid item xs={1}>
-					<Typography variant="caption">Stats: {totals.ageStats[0] + totals.mental}M, {totals.ageStats[1] + totals.physical}P {(totals.either !== 0) ? `(${totals.either > 0 ? "+" : ""}${totals.either}M/P)` : ""}</Typography>
-				</Grid>
-				<Grid item xs={1}>
-					<Typography variant="caption">Trait Points: {totals.trait}</Typography>
-				</Grid>
-				<Grid item xs={1}>
-					<Typography variant="caption">General Skill Points: {totals.general}{totals.generalExt.length > 0 ? `, plus ${totals.generalExt.join(" ")}` : ""}</Typography>
-				</Grid>
-				<Grid item xs={1}>
-					<Typography variant="caption">Lifepath Skill Points: {totals.lifepath}{totals.lifepathExt.length > 0 ? `, plus ${totals.lifepathExt.join(" ")}` : ""}</Typography>
-				</Grid>
-			</Grid>
-		);
-	}, [chosenLifepaths]);
-
-	const lists = useCallback(() => {
-		const totals = {
-			mandSkills: new Set<string>(),
-			skills: new Set<string>(),
-			mandTraits: new Set<string>(),
-			traits: new Set<string>()
-		};
-
-		for (const lifepathKey in chosenLifepaths) {
-			const lp = chosenLifepaths[lifepathKey];
-
-			let mandatorySkillIndex = lp.skills.findIndex(v => !totals.mandSkills.has(v));
-			if (mandatorySkillIndex === -1) mandatorySkillIndex = 0;
-			lp.skills.forEach((v, i) => { if (i === mandatorySkillIndex) totals.mandSkills.add(v); });
-
-			let mandatoryTraitIndex = lp.traits.findIndex(v => !totals.mandSkills.has(v));
-			if (mandatoryTraitIndex === -1) mandatoryTraitIndex = 0;
-			lp.traits.forEach((v, i) => { if (i === mandatoryTraitIndex) totals.mandTraits.add(v); });
-		}
-
-		for (const lifepathKey in chosenLifepaths) {
-			const lp = chosenLifepaths[lifepathKey];
-			lp.skills.forEach(v => { if (!totals.mandSkills.has(v)) totals.skills.add(v); });
-			lp.traits.forEach(v => { if (!totals.mandTraits.has(v)) totals.traits.add(v); });
-		}
-
-
-		const mandSkills = [...totals.mandSkills].map(path => {
-			const [category, name] = path.split("➞");
-			let s = SkillCategories[category].skills.find(v => v.name === name);
-			if (name === "1*ANY") s = SkillCategories[category].skills.find(v => v.name === "Any wise");
-			return s as Skill;
-		});
-
-		const skills = [...totals.skills].map(path => {
-			const [category, name] = path.split("➞");
-			let s = SkillCategories[category].skills.find(v => v.name === name);
-			if (name === "1*ANY") s = SkillCategories[category].skills.find(v => v.name === "Any wise");
-			return s as Skill;
-		});
-
-		const mandTraits = [...totals.mandTraits].map(path => {
-			const [category, name] = path.split("➞");
-			const t = TraitCategories[category].traits.find(v => v.name === name);
-			return t as Trait;
-		});
-
-		const traits = [...totals.traits].map(path => {
-			const [category, name] = path.split("➞");
-			const t = TraitCategories[category].traits.find(v => v.name === name);
-			return t as Trait;
-		});
-
-		return (
-			<Grid container columns={1} spacing={1}>
-				<Grid item xs={1}>
-					Mandatory Skills:
-					{mandSkills.length > 0
-						? mandSkills.map((skill, i) =>
-							<Paper key={i} elevation={2} sx={{ cursor: "pointer", padding: "0 4px", margin: "3px 3px 0", width: "max-content", display: "inline-block" }}>
-								<PopoverLink data={skill} />
-							</Paper>
-						)
-						: <Box sx={{ padding: "0 4px", display: "inline-block" }}>—</Box>
-					}
-				</Grid>
-				<Grid item xs={1}>
-					Skills:
-					{skills.length > 0
-						? skills.map((skill, i) =>
-							<Paper key={i} elevation={2} sx={{ cursor: "pointer", padding: "0 4px", margin: "3px 3px 0", width: "max-content", display: "inline-block" }}>
-								<PopoverLink data={skill} />
-							</Paper>
-						)
-						: <Box sx={{ padding: "0 4px", display: "inline-block" }}>—</Box>
-					}
-				</Grid>
-				<Grid item xs={1}>
-					Mandatory Traits:
-					{mandTraits.length > 0
-						? mandTraits.map((trait, i) =>
-							<Paper key={i} elevation={2} sx={{ cursor: "pointer", padding: "0 4px", margin: "3px 3px 0", width: "max-content", display: "inline-block" }}>
-								<PopoverLink data={trait} />
-							</Paper>
-						)
-						: <Box sx={{ padding: "0 4px", display: "inline-block" }}>—</Box>
-					}
-				</Grid>
-				<Grid item xs={1}>
-					Traits:
-					{traits.length > 0
-						? traits.map((trait, i) =>
-							<Paper key={i} elevation={2} sx={{ cursor: "pointer", padding: "0 4px", margin: "3px 3px 0", width: "max-content", display: "inline-block" }}>
-								<PopoverLink data={trait} />
-							</Paper>
-						)
-						: <Box sx={{ padding: "0 4px", display: "inline-block" }}>—</Box>
-					}
-				</Grid>
-			</Grid>
-		);
-	}, [chosenLifepaths]);
 
 	return (
 		<Fragment>
@@ -427,7 +233,7 @@ export function LifepathRandomizer() {
 							<Typography>Basic Information</Typography>
 						</Divider>
 
-						{basics()}
+						<LifepathRandomizerBasics chosenLifepaths={chosenLifepaths} />
 					</Grid>
 
 					<Grid item xs={3} md={2}>
@@ -435,7 +241,7 @@ export function LifepathRandomizer() {
 							<Typography>Skills, Traits, and Misc</Typography>
 						</Divider>
 
-						{lists()}
+						<LifepathRandomizerLists chosenLifepaths={chosenLifepaths} />
 					</Grid>
 				</Grid>
 				: null
