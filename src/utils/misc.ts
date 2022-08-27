@@ -3,7 +3,8 @@ export function RandomNumber(min: number, max: number) {
 }
 
 export function Clamp(num: number, min: number, max: number) {
-	return Math.min(Math.max(num, min), max);
+	const val = isNaN(num) ? min : num;
+	return Math.min(Math.max(val, min), max);
 }
 
 export function GetOrdinalSuffix(number: number) {
@@ -35,3 +36,12 @@ export function MakeName(name: string, index: number, extension?: [singular: str
 	}
 	return split[index];
 }
+
+export const GroupBy = <T, K extends keyof any>(list: T[], getKey: (item: T) => K) =>
+	list.reduce((previous, currentItem) => {
+		const group = getKey(currentItem);
+		if (!previous[group]) previous[group] = [];
+		previous[group].push(currentItem);
+		return previous;
+	}, {} as Record<K, T[]>);
+

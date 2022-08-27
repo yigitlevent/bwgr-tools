@@ -40,7 +40,7 @@
 		"no-sparse-arrays": "error",
 		"comma-dangle": ["error", "never"],
 		"@typescript-eslint/no-non-null-assertion": "off",
-		"@typescript-eslint/indent": ["error", "tab", { "SwitchCase": 1 }],
+		"@typescript-eslint/indent": ["error", "tab", { "SwitchCase": 1, "ignoredNodes": [ "PropertyDefinition[decorators]", "TSUnionType" ]}],
 		"@typescript-eslint/no-explicit-any": "off",
 		"@typescript-eslint/no-empty-interface": "off",
 		"@typescript-eslint/no-unused-vars": ["warn", { "args": "after-used" }],

@@ -2,6 +2,8 @@ import { configureStore, combineReducers, Dispatch } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
 import { DrawerActions, DrawerReducer, DrawerState } from "./reducers/drawer";
+import { DuelOfWitsActions, DuelOfWitsReducer, DuelOfWitsState } from "./reducers/duelOfWits";
+import { FightActions, FightReducer, FightState } from "./reducers/fight";
 import { LifepathListActions, LifepathListReducer, LifepathListState } from "./reducers/lifepathList";
 import { LifepathRandomizerActions, LifepathRandomizerReducer, LifepathRandomizerState } from "./reducers/lifepathRandomizer";
 import { MagicWheelActions, MagicWheelReducer, MagicWheelState } from "./reducers/magicWheel";
@@ -9,7 +11,10 @@ import { PracticePlannerActions, PracticePlannerReducer, PracticePlannerState } 
 import { SkillListActions, SkillListReducer, SkillListState } from "./reducers/skillList";
 import { TraitListActions, TraitListReducer, TraitListState } from "./reducers/traitList";
 
-type CombinedActions = DrawerActions | LifepathListActions | SkillListActions | TraitListActions | MagicWheelActions | LifepathRandomizerActions | PracticePlannerActions;
+type CombinedActions = DrawerActions
+	| LifepathListActions | SkillListActions | TraitListActions
+	| MagicWheelActions | LifepathRandomizerActions | PracticePlannerActions
+	| DuelOfWitsActions | FightActions;
 
 type CombinedState = {
 	drawer: DrawerState;
@@ -19,8 +24,9 @@ type CombinedState = {
 	magicWheel: MagicWheelState;
 	lifepathRandomizer: LifepathRandomizerState,
 	practicePlanner: PracticePlannerState;
+	duelOfWits: DuelOfWitsState;
+	fight: FightState;
 };
-
 
 export const STORE = configureStore({
 	reducer: combineReducers<CombinedState>({
@@ -30,7 +36,9 @@ export const STORE = configureStore({
 		traitList: TraitListReducer,
 		magicWheel: MagicWheelReducer,
 		lifepathRandomizer: LifepathRandomizerReducer,
-		practicePlanner: PracticePlannerReducer
+		practicePlanner: PracticePlannerReducer,
+		duelOfWits: DuelOfWitsReducer,
+		fight: FightReducer
 	})
 });
 

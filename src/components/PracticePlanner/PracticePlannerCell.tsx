@@ -24,8 +24,8 @@ export function PracticePlannerCell({ cell, cellIndex, setNotification }: { cell
 				<Typography>
 					Day {cellIndex + 1}
 					<IconButton size="small" sx={{ float: "right" }} onClick={() => prpDeleteCell(cellIndex)}><DeleteOutlineIcon fontSize="small" /></IconButton>
-					<IconButton size="small" sx={{ float: "right" }} onClick={() => setNotification(prpChangeCellHour(cellIndex, -1, cells, setNotification))}><RemoveCircleOutlineIcon fontSize="small" /></IconButton>
-					<IconButton size="small" sx={{ float: "right" }} onClick={() => setNotification(prpChangeCellHour(cellIndex, 1, cells, setNotification))}><AddCircleOutlineIcon fontSize="small" /></IconButton>
+					<IconButton size="small" sx={{ float: "right" }} onClick={() => prpChangeCellHour(cellIndex, -1, cells, setNotification)}><RemoveCircleOutlineIcon fontSize="small" /></IconButton>
+					<IconButton size="small" sx={{ float: "right" }} onClick={() => prpChangeCellHour(cellIndex, 1, cells, setNotification)}><AddCircleOutlineIcon fontSize="small" /></IconButton>
 				</Typography>
 
 				<Box sx={{ margin: "0 5px 0" }}>

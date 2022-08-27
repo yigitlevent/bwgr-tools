@@ -54,7 +54,7 @@ export function PracticePlanner(): JSX.Element {
 				</Grid>
 			</Grid>
 
-			<form onSubmit={(e) => setNotification(prpAddPractice(e, cells, setNotification))}>
+			<form onSubmit={(e) => prpAddPractice(e, cells, setNotification)}>
 				<Grid container spacing={1} sx={{ width: "100%", margin: "10px 0 0" }} columns={5} justifyContent="center" alignItems="center">
 					<Grid item xs={4} sm={2} md={1}>
 						<FormControl fullWidth size="small">

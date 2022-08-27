@@ -11,6 +11,8 @@ import { TraitLists } from "./TraitLists/TraitLists";
 import { MagicWheel } from "./MagicWheel/MagicWheel";
 import { LifepathRandomizer } from "./LifepathRandomizer/LifepathRandomizer";
 import { PracticePlanner } from "./PracticePlanner/PracticePlanner";
+import { DuelOfWitsPlanner } from "./DuelOfWitsPlanner/DuelOfWitsPlanner";
+import { FightPlanner } from "./FightPlanner/FightPlanner";
 
 export function MainBox() {
 	const { selected } = useAppSelector(state => state.drawer);
@@ -29,6 +31,10 @@ export function MainBox() {
 				return <PracticePlanner />;
 			case "Magic Wheel":
 				return <MagicWheel />;
+			case "Duel of Wits Planner":
+				return <DuelOfWitsPlanner />;
+			case "Fight Planner":
+				return <FightPlanner />;
 			default:
 				return <Fragment />;
 		}

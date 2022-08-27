@@ -3,8 +3,12 @@ import { ChangeEvent, FormEvent } from "react";
 import { SelectChangeEvent } from "@mui/material/Select";
 
 import { useAppDispatch } from "./store";
-import { DrawerItem } from "./reducers/drawer";
+import type { DrawerItem } from "./reducers/drawer";
+import type { DuelOfWitsAction } from "./reducers/duelOfWits";
+import { FightActionExtended } from "./reducers/fight";
 import { PracticeTable } from "../data/tables";
+import { DuelOfWitsActions } from "../data/duelOfWits";
+import { FightAction, FightActions } from "../data/fight";
 import { Clamp } from "../utils/misc";
 
 import { Notification } from "../components/Shared/Notification";
@@ -88,17 +92,17 @@ export function useStore() {
 		dispatch({ type: "DELETE_PRACTICE_PLANNER_CELL", payload: { cellIndex } });
 	};
 
-	const prpChangeCellHour = (cellIndex: number, change: 1 | -1, cells: Cell[], onClose: React.Dispatch<React.SetStateAction<JSX.Element | null>>) => {
+	const prpChangeCellHour = (cellIndex: number, change: 1 | -1, cells: Cell[], setNotification: React.Dispatch<React.SetStateAction<JSX.Element | null>>) => {
 		if (cells[cellIndex].remaining === 0 && change === -1) {
-			return <Notification text="Cannot reduce hours from day. It is used by practices." severity="error" onClose={() => onClose(null)} />;
+			setNotification(<Notification text="Cannot reduce hours from day. It is used by practices." severity="error" onClose={() => setNotification(null)} />);
 		}
 		else {
 			dispatch({ type: "CHANGE_PRACTICE_PLANNER_CELL_HOURS", payload: { cellIndex, change } });
-			return null;
+			setNotification(null);
 		}
 	};
 
-	const prpAddPractice = (e: FormEvent<HTMLFormElement>, cells: Cell[], onClose: React.Dispatch<React.SetStateAction<JSX.Element | null>>) => {
+	const prpAddPractice = (e: FormEvent<HTMLFormElement>, cells: Cell[], setNotification: React.Dispatch<React.SetStateAction<JSX.Element | null>>) => {
 		e.preventDefault();
 		const els = Object.values((e.target as HTMLFormElement).elements) as HTMLInputElement[];
 		const [cIndex, sType, tType, sName] = els.filter(v => v.tagName === "INPUT" && v.type === "text").map((v) => v.value);
@@ -106,15 +110,15 @@ export function useStore() {
 		const cellIndex = parseInt(cIndex);
 
 		if (sName === "") {
-			return <Notification text="Please enter a Skill name." severity="error" onClose={() => onClose(null)} />;
+			setNotification(<Notification text="Please enter a Skill name." severity="error" onClose={() => setNotification(null)} />);
 		}
 		else if (cells[cellIndex].remaining - hours < 0) {
-			return <Notification text={`Cannot fit practice into the day. This practice takes ${hours} hours.`} severity="error" onClose={() => onClose(null)} />;
+			setNotification(<Notification text={`Cannot fit practice into the day. This practice takes ${hours} hours.`} severity="error" onClose={() => setNotification(null)} />);
 		}
 		else {
 			const practice: Practice = { skillName: sName, skillType: sType, testType: tType, hours: PracticeTable[sType][tType] };
 			dispatch({ type: "ADD_PRACTICE_PLANNER_PRACTICE", payload: { cellIndex, practice } });
-			return null;
+			setNotification(null);
 		}
 	};
 
@@ -161,6 +165,82 @@ export function useStore() {
 		dispatch({ type: "TOGGLE_MAGIC_WHEEL_COVER" });
 	};
 
+	// DUEL OF WITS
+	const dowChangeVolleyIndex = (volleyIndex: number) => {
+		dispatch({ type: "CHANGE_DUEL_OF_WITS_VOLLEY_INDEX", payload: { volleyIndex: volleyIndex } });
+	};
+
+	const dowChangeAction = (volleyIndex: number, actionName: undefined | string) => {
+		const action = actionName ? DuelOfWitsActions.find(v => v.name === actionName) as DuelOfWitsAction : undefined;
+		dispatch({ type: "CHANGE_DUEL_OF_WITS_ACTION", payload: { volleyIndex, action } });
+	};
+
+	const dowSelectedChangeAction = (volleyIndex: number, actionName: string) => {
+		dispatch({ type: "CHANGE_DUEL_OF_WITS_SELECTED_ACTION", payload: { volleyIndex, actionName } });
+	};
+
+	const dowToggleActionDetails = (volleyIndex: number) => {
+		dispatch({ type: "TOGGLE_DUEL_OF_WITS_ACTION_DETAILS", payload: { volleyIndex } });
+	};
+
+	const dowToggleActionVisibility = (volleyIndex: number) => {
+		dispatch({ type: "TOGGLE_DUEL_OF_WITS_ACTION_VISIBILITY", payload: { volleyIndex } });
+	};
+
+	// FIGHT
+	const fgtChangeReflexes = (reflexes: number, actions: [FightActionExtended[], FightActionExtended[], FightActionExtended[]], setNotification: React.Dispatch<React.SetStateAction<JSX.Element | null>>) => {
+		const flatActions = actions.flat().filter(v => v.name !== "No Action");
+		if (flatActions.length > reflexes) {
+			setNotification(<Notification text="Cannot decrease reflex. Remove some actions and try again." severity="error" onClose={() => setNotification(null)} />);
+		}
+		else {
+			const value = Clamp(reflexes, 0, 12);
+			dispatch({ type: "CHANGE_FIGHT_REFLEXES", payload: { reflexes: value } });
+			setNotification(null);
+		}
+	};
+
+	const fgtChangeVolleyIndex = (volleyIndex: number) => {
+		dispatch({ type: "CHANGE_FIGHT_VOLLEY_INDEX", payload: { volleyIndex: volleyIndex } });
+	};
+
+	const fgtAddAction = (volleyIndex: number, actionName: undefined | string, reflexes: number, actions: [FightActionExtended[], FightActionExtended[], FightActionExtended[]], setNotification: React.Dispatch<React.SetStateAction<JSX.Element | null>>) => {
+		const lengths = [
+			actions[0].filter(v => v.name !== "No Action").length,
+			actions[1].filter(v => v.name !== "No Action").length,
+			actions[2].filter(v => v.name !== "No Action").length
+		];
+		const flatActions = actions.flat().filter(v => v.name !== "No Action");
+
+		if (flatActions.length === reflexes && actionName !== "No Action") {
+			setNotification(<Notification text="Cannot add action because reflex maximum is reached." severity="error" onClose={() => setNotification(null)} />);
+		}
+		else if (lengths[volleyIndex] > Math.min(...lengths)) {
+			setNotification(<Notification text="Cannot add action because volleys would be uneven." severity="error" onClose={() => setNotification(null)} />);
+		}
+		else {
+			const action: FightActionExtended = { ...FightActions.find(v => v.name === actionName) as FightAction, open: false, visible: true };
+			dispatch({ type: "ADD_FIGHT_ACTION", payload: { volleyIndex, action } });
+			setNotification(null);
+		}
+	};
+
+	const fgtDeleteAction = (volleyIndex: number, actionIndex: number) => {
+		dispatch({ type: "DELETE_FIGHT_ACTION", payload: { volleyIndex, actionIndex } });
+	};
+
+	const fgtChangeSelectedAction = (volleyIndex: number, actionName: string) => {
+		dispatch({ type: "CHANGE_FIGHT_SELECTED_ACTION", payload: { volleyIndex, actionName } });
+	};
+
+	const fgtToggleActionDetails = (volleyIndex: number, actionIndex: number) => {
+		dispatch({ type: "TOGGLE_FIGHT_ACTION_DETAILS", payload: { volleyIndex, actionIndex } });
+	};
+
+	const fgtToggleActionVisibility = (volleyIndex: number, actionIndex: number) => {
+		dispatch({ type: "TOGGLE_FIGHT_ACTION_VISIBILITY", payload: { volleyIndex, actionIndex } });
+	};
+
 	return {
 		// DRAWER
 		drwToggleDrawer, drwCloseDrawer, drwSetSelectedItem,
@@ -176,6 +256,10 @@ export function useStore() {
 		prpChangeDays, prpChangeHours, prpAddCells, prpDeleteCell, prpChangeCellHour, prpAddPractice, prpDeletePractice,
 		// MAGIC WHEEL
 		mgwChangeAOE, mgwChangeElement, mgwChangeImpetus, mgwChangeDuration, mgwChangeOrigin,
-		mgwChangeDirection, mgwChangeSteps, mgwToggleCover
+		mgwChangeDirection, mgwChangeSteps, mgwToggleCover,
+		// DUEL OF WITS
+		dowChangeVolleyIndex, dowChangeAction, dowSelectedChangeAction, dowToggleActionDetails, dowToggleActionVisibility,
+		// FIGHT
+		fgtChangeReflexes, fgtChangeVolleyIndex, fgtAddAction, fgtDeleteAction, fgtChangeSelectedAction, fgtToggleActionDetails, fgtToggleActionVisibility
 	};
 }
