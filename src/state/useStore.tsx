@@ -6,8 +6,10 @@ import { useAppDispatch } from "./store";
 import type { DrawerItem } from "./reducers/drawer";
 import { PracticeTable } from "../data/tables";
 import type { DuelOfWitsActionExtended } from "./reducers/duelOfWits";
-import type { FightActionExtended } from "./reducers/fight";
 import { DuelOfWitsAction, DuelOfWitsActions } from "../data/duelOfWits";
+import { RangeAndCoverActionExtended } from "./reducers/rangeAndCover";
+import { RangeAndCoverAction, RangeAndCoverActions } from "../data/rangeAndCover";
+import type { FightActionExtended } from "./reducers/fight";
 import { FightAction, FightActions } from "../data/fight";
 import { Clamp } from "../utils/misc";
 
@@ -187,6 +189,28 @@ export function useStore() {
 		dispatch({ type: "TOGGLE_DUEL_OF_WITS_ACTION_VISIBILITY", payload: { volleyIndex } });
 	};
 
+	// RANGE AND COVER
+	const racChangeVolleyIndex = (volleyIndex: number) => {
+		dispatch({ type: "CHANGE_RANGE_AND_COVER_VOLLEY_INDEX", payload: { volleyIndex: volleyIndex } });
+	};
+
+	const racChangeAction = (volleyIndex: number, actionName: undefined | string) => {
+		const action: RangeAndCoverActionExtended = { ...RangeAndCoverActions.find(v => v.name === actionName) as RangeAndCoverAction, open: false, visible: true };
+		dispatch({ type: "CHANGE_RANGE_AND_COVER_ACTION", payload: { volleyIndex, action } });
+	};
+
+	const racSelectedChangeAction = (volleyIndex: number, actionName: string) => {
+		dispatch({ type: "CHANGE_RANGE_AND_COVER_SELECTED_ACTION", payload: { volleyIndex, actionName } });
+	};
+
+	const racToggleActionDetails = (volleyIndex: number) => {
+		dispatch({ type: "TOGGLE_RANGE_AND_COVER_ACTION_DETAILS", payload: { volleyIndex } });
+	};
+
+	const racToggleActionVisibility = (volleyIndex: number) => {
+		dispatch({ type: "TOGGLE_RANGE_AND_COVER_ACTION_VISIBILITY", payload: { volleyIndex } });
+	};
+
 	// FIGHT
 	const fgtChangeReflexes = (reflexes: number, actions: [FightActionExtended[], FightActionExtended[], FightActionExtended[]], setNotification: React.Dispatch<React.SetStateAction<JSX.Element | null>>) => {
 		const flatActions = actions.flat().filter(v => v.name !== "No Action");
@@ -255,10 +279,11 @@ export function useStore() {
 		// PRACTICE PLANNER
 		prpChangeDays, prpChangeHours, prpAddCells, prpDeleteCell, prpChangeCellHour, prpAddPractice, prpDeletePractice,
 		// MAGIC WHEEL
-		mgwChangeAOE, mgwChangeElement, mgwChangeImpetus, mgwChangeDuration, mgwChangeOrigin,
-		mgwChangeDirection, mgwChangeSteps, mgwToggleCover,
+		mgwChangeAOE, mgwChangeElement, mgwChangeImpetus, mgwChangeDuration, mgwChangeOrigin, mgwChangeDirection, mgwChangeSteps, mgwToggleCover,
 		// DUEL OF WITS
 		dowChangeVolleyIndex, dowChangeAction, dowSelectedChangeAction, dowToggleActionDetails, dowToggleActionVisibility,
+		// RANGE AND COVER
+		racChangeVolleyIndex, racChangeAction, racSelectedChangeAction, racToggleActionDetails, racToggleActionVisibility,
 		// FIGHT
 		fgtChangeReflexes, fgtChangeVolleyIndex, fgtAddAction, fgtDeleteAction, fgtChangeSelectedAction, fgtToggleActionDetails, fgtToggleActionVisibility
 	};

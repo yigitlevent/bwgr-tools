@@ -12,6 +12,7 @@ import { MagicWheel } from "./MagicWheel/MagicWheel";
 import { LifepathRandomizer } from "./LifepathRandomizer/LifepathRandomizer";
 import { PracticePlanner } from "./PracticePlanner/PracticePlanner";
 import { DuelOfWitsPlanner } from "./DuelOfWitsPlanner/DuelOfWitsPlanner";
+import { RangeAndCoverPlanner } from "./RangeAndCover/RangeAndCoverPlanner";
 import { FightPlanner } from "./FightPlanner/FightPlanner";
 
 export function MainBox() {
@@ -33,6 +34,8 @@ export function MainBox() {
 				return <MagicWheel />;
 			case "Duel of Wits Planner":
 				return <DuelOfWitsPlanner />;
+			case "Range and Cover Planner":
+				return <RangeAndCoverPlanner />;
 			case "Fight Planner":
 				return <FightPlanner />;
 			default:

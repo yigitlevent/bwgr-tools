@@ -2,44 +2,51 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 
-import { DuelOfWitsActions, DuelOfWitsAction } from "../../data/duelOfWits";
+import { RangeAndCoverActions, RangeAndCoverAction } from "../../data/rangeAndCover";
 
 
-export function DuelOfWitsActionDetails({ action }: { action: DuelOfWitsAction; }) {
+export function RangeAndCoverActionDetails({ action }: { action: RangeAndCoverAction; }) {
 	return (
 		<Stack spacing={0} sx={{ width: "100%" }}>
-			{action.tests
-				? <Box sx={{ margin: "0 0 10px" }}>
-					<b>Tests:</b>
-					<Typography variant="body2">{action.tests.join(", ")}</Typography>
-				</Box>
-				: null
-			}
+			<Box sx={{ margin: "0 0 10px" }}>
+				<b>Test:</b>
+				<Typography variant="body2">{action.test}</Typography>
+			</Box>
 
-			{action.speakingThePart
+			{action.effect
 				? <Box sx={{ margin: "0 0 10px" }}>
-					<b>Speaking the part:</b>
-					{action.speakingThePart.split("<br>").map((v, i) =>
+					<b>Effect:</b>
+					{action.effect.split("<br>").map((v, i) =>
 						<Typography variant="body2" key={i}>{v}</Typography>
 					)}
 				</Box>
 				: null
 			}
 
-			{action.special
+			{action.specialRestriction
 				? <Box sx={{ margin: "0 0 10px" }}>
-					<b>Special:</b>
-					{action.special.split("<br>").map((v, i) =>
+					<b>Special Restriction:</b>
+					{action.specialRestriction.split("<br>").map((v, i) =>
 						<Typography variant="body2" key={i}>{v}</Typography>
 					)}
 				</Box>
 				: null
 			}
-			
-			{action.effects
+
+			{action.specialAction
 				? <Box sx={{ margin: "0 0 10px" }}>
-					<b>Effects:</b>
-					{action.effects.split("<br>").map((v, i) =>
+					<b>Special Action:</b>
+					{action.specialAction.split("<br>").map((v, i) =>
+						<Typography variant="body2" key={i}>{v}</Typography>
+					)}
+				</Box>
+				: null
+			}
+
+			{action.however
+				? <Box sx={{ margin: "0 0 10px" }}>
+					<b>There is a big &quot;however&quot;:</b>
+					{action.however.split("<br>").map((v, i) =>
 						<Typography variant="body2" key={i}>{v}</Typography>
 					)}
 				</Box>
@@ -49,7 +56,7 @@ export function DuelOfWitsActionDetails({ action }: { action: DuelOfWitsAction; 
 			{action.resolution
 				? <Box sx={{ margin: "0 0 10px" }}>
 					<b>Resolution:</b>
-					{DuelOfWitsActions.map((v, i) => {
+					{RangeAndCoverActions.map((v, i) => {
 						const res = action.resolution[v.name] ? action.resolution[v.name] : "—";
 						return <Typography variant="body2" key={i}>{v.name}: {res}</Typography>;
 					})}

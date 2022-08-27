@@ -8,13 +8,14 @@ import { LifepathListActions, LifepathListReducer, LifepathListState } from "./r
 import { LifepathRandomizerActions, LifepathRandomizerReducer, LifepathRandomizerState } from "./reducers/lifepathRandomizer";
 import { MagicWheelActions, MagicWheelReducer, MagicWheelState } from "./reducers/magicWheel";
 import { PracticePlannerActions, PracticePlannerReducer, PracticePlannerState } from "./reducers/practicePlanner";
+import { RangeAndCoverActions, RangeAndCoverReducer, RangeAndCoverState } from "./reducers/rangeAndCover";
 import { SkillListActions, SkillListReducer, SkillListState } from "./reducers/skillList";
 import { TraitListActions, TraitListReducer, TraitListState } from "./reducers/traitList";
 
 type CombinedActions = DrawerActions
 	| LifepathListActions | SkillListActions | TraitListActions
 	| MagicWheelActions | LifepathRandomizerActions | PracticePlannerActions
-	| DuelOfWitsActions | FightActions;
+	| DuelOfWitsActions | RangeAndCoverActions | FightActions;
 
 type CombinedState = {
 	drawer: DrawerState;
@@ -25,6 +26,7 @@ type CombinedState = {
 	lifepathRandomizer: LifepathRandomizerState,
 	practicePlanner: PracticePlannerState;
 	duelOfWits: DuelOfWitsState;
+	rangeAndCover: RangeAndCoverState;
 	fight: FightState;
 };
 
@@ -38,6 +40,7 @@ export const STORE = configureStore({
 		lifepathRandomizer: LifepathRandomizerReducer,
 		practicePlanner: PracticePlannerReducer,
 		duelOfWits: DuelOfWitsReducer,
+		rangeAndCover: RangeAndCoverReducer,
 		fight: FightReducer
 	})
 });
