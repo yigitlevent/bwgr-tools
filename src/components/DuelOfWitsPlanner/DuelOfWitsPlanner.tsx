@@ -63,7 +63,7 @@ export function DuelOfWitsPlanner() {
 				{actions.map((action, volleyIndex) => {
 					return (
 						<Paper key={volleyIndex}>
-							<Typography variant="h5" sx={{ padding: "6px 10px 0" }}>Volley {volleyIndex + 1}</Typography>
+							<Typography variant="h5" sx={{ padding: "6px 10px" }}>Volley {volleyIndex + 1}</Typography>
 
 							{action
 								? <Grid container columns={2} justifyContent="space-between" sx={{ padding: "10px" }}>
