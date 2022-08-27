@@ -27,7 +27,7 @@ import { DuelOfWitsActionDetails } from "./DuelOfWitsActionDetails";
 
 export function DuelOfWitsPlanner() {
 	const { volleyIndex, actions, selectedAction } = useAppSelector(state => state.duelOfWits);
-	const { dowChangeVolleyIndex, dowChangeAction, dowSelectedChangeAction, dowToggleActionDetails, dowToggleActionVisibility } = useStore();
+	const { dowChangeVolleyIndex, dowAddAction, dowDeleteAction, dowSelectedChangeAction, dowToggleActionDetails, dowToggleActionVisibility } = useStore();
 
 	return (
 		<Fragment>
@@ -56,7 +56,7 @@ export function DuelOfWitsPlanner() {
 					</Grid>
 
 					<Grid item xs={3} sm={3} md={1}>
-						<Button variant="outlined" size="medium" onClick={() => dowChangeAction(volleyIndex, selectedAction)}>Add Action</Button>
+						<Button variant="outlined" size="medium" onClick={() => dowAddAction(volleyIndex, selectedAction)}>Add Action</Button>
 					</Grid>
 				</Grid>
 
@@ -80,7 +80,7 @@ export function DuelOfWitsPlanner() {
 										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => dowToggleActionVisibility(volleyIndex)}>
 											{action.visible ? <VisibilityIcon /> : <VisibilityOffIcon />}
 										</IconButton>
-										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => dowChangeAction(volleyIndex, undefined)}>
+										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => dowDeleteAction(volleyIndex)}>
 											<DeleteOutline />
 										</IconButton>
 									</Grid>

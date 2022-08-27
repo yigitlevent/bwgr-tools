@@ -7,12 +7,13 @@ export interface RangeAndCoverActionExtended extends RangeAndCoverAction {
 }
 
 interface ChangeVolleyIndex { type: "CHANGE_RANGE_AND_COVER_VOLLEY_INDEX"; payload: { volleyIndex: number; }; }
-interface ChangeActionAction { type: "CHANGE_RANGE_AND_COVER_ACTION"; payload: { volleyIndex: number; action: undefined | RangeAndCoverActionExtended; }; }
+interface AddActionAction { type: "ADD_RANGE_AND_COVER_ACTION"; payload: { volleyIndex: number; action: RangeAndCoverActionExtended; }; }
+interface DeleteActionAction { type: "DELETE_RANGE_AND_COVER_ACTION"; payload: { volleyIndex: number; }; }
 interface ChangeSelectedActionAction { type: "CHANGE_RANGE_AND_COVER_SELECTED_ACTION"; payload: { volleyIndex: number; actionName: string; }; }
 interface ToggleActionDetailsAction { type: "TOGGLE_RANGE_AND_COVER_ACTION_DETAILS"; payload: { volleyIndex: number; }; }
 interface ToggleActionVisibilityAction { type: "TOGGLE_RANGE_AND_COVER_ACTION_VISIBILITY"; payload: { volleyIndex: number; }; }
 
-export type RangeAndCoverActions = ChangeVolleyIndex | ChangeActionAction | ChangeSelectedActionAction | ToggleActionDetailsAction | ToggleActionVisibilityAction;
+export type RangeAndCoverActions = ChangeVolleyIndex | AddActionAction | DeleteActionAction | ChangeSelectedActionAction | ToggleActionDetailsAction | ToggleActionVisibilityAction;
 
 export interface RangeAndCoverState {
 	volleyIndex: number;
@@ -30,12 +31,18 @@ export const RangeAndCoverReducer = (state = INITIAL, action: RangeAndCoverActio
 	switch (action.type) {
 		case "CHANGE_RANGE_AND_COVER_VOLLEY_INDEX":
 			return { ...state, volleyIndex: action.payload.volleyIndex };
-		case "CHANGE_RANGE_AND_COVER_ACTION":
-			const cvaa = state.actions.map((v, i) => {
+		case "ADD_RANGE_AND_COVER_ACTION":
+			const avaa = state.actions.map((v, i) => {
 				if (i === action.payload.volleyIndex) return action.payload.action;
 				else return v;
 			}) as [RangeAndCoverActionExtended, RangeAndCoverActionExtended, RangeAndCoverActionExtended];
-			return { ...state, actions: cvaa };
+			return { ...state, actions: avaa };
+		case "DELETE_RANGE_AND_COVER_ACTION":
+			const dvaa = state.actions.map((v, i) => {
+				if (i === action.payload.volleyIndex) return undefined;
+				else return v;
+			}) as [RangeAndCoverActionExtended, RangeAndCoverActionExtended, RangeAndCoverActionExtended];
+			return { ...state, actions: dvaa };
 		case "CHANGE_RANGE_AND_COVER_SELECTED_ACTION":
 			return { ...state, selectedAction: action.payload.actionName };
 		case "TOGGLE_RANGE_AND_COVER_ACTION_DETAILS":

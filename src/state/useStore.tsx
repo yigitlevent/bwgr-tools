@@ -172,9 +172,13 @@ export function useStore() {
 		dispatch({ type: "CHANGE_DUEL_OF_WITS_VOLLEY_INDEX", payload: { volleyIndex: volleyIndex } });
 	};
 
-	const dowChangeAction = (volleyIndex: number, actionName: undefined | string) => {
+	const dowAddAction = (volleyIndex: number, actionName: undefined | string) => {
 		const action: DuelOfWitsActionExtended = { ...DuelOfWitsActions.find(v => v.name === actionName) as DuelOfWitsAction, open: false, visible: true };
-		dispatch({ type: "CHANGE_DUEL_OF_WITS_ACTION", payload: { volleyIndex, action } });
+		dispatch({ type: "ADD_DUEL_OF_WITS_ACTION", payload: { volleyIndex, action } });
+	};
+
+	const dowDeleteAction = (volleyIndex: number) => {
+		dispatch({ type: "DELETE_DUEL_OF_WITS_ACTION", payload: { volleyIndex } });
 	};
 
 	const dowSelectedChangeAction = (volleyIndex: number, actionName: string) => {
@@ -194,9 +198,13 @@ export function useStore() {
 		dispatch({ type: "CHANGE_RANGE_AND_COVER_VOLLEY_INDEX", payload: { volleyIndex: volleyIndex } });
 	};
 
-	const racChangeAction = (volleyIndex: number, actionName: undefined | string) => {
+	const racAddAction = (volleyIndex: number, actionName: string) => {
 		const action: RangeAndCoverActionExtended = { ...RangeAndCoverActions.find(v => v.name === actionName) as RangeAndCoverAction, open: false, visible: true };
-		dispatch({ type: "CHANGE_RANGE_AND_COVER_ACTION", payload: { volleyIndex, action } });
+		dispatch({ type: "ADD_RANGE_AND_COVER_ACTION", payload: { volleyIndex, action } });
+	};
+
+	const racDeleteAction = (volleyIndex: number) => {
+		dispatch({ type: "DELETE_RANGE_AND_COVER_ACTION", payload: { volleyIndex } });
 	};
 
 	const racSelectedChangeAction = (volleyIndex: number, actionName: string) => {
@@ -281,9 +289,9 @@ export function useStore() {
 		// MAGIC WHEEL
 		mgwChangeAOE, mgwChangeElement, mgwChangeImpetus, mgwChangeDuration, mgwChangeOrigin, mgwChangeDirection, mgwChangeSteps, mgwToggleCover,
 		// DUEL OF WITS
-		dowChangeVolleyIndex, dowChangeAction, dowSelectedChangeAction, dowToggleActionDetails, dowToggleActionVisibility,
+		dowChangeVolleyIndex, dowAddAction, dowDeleteAction, dowSelectedChangeAction, dowToggleActionDetails, dowToggleActionVisibility,
 		// RANGE AND COVER
-		racChangeVolleyIndex, racChangeAction, racSelectedChangeAction, racToggleActionDetails, racToggleActionVisibility,
+		racChangeVolleyIndex, racAddAction, racDeleteAction, racSelectedChangeAction, racToggleActionDetails, racToggleActionVisibility,
 		// FIGHT
 		fgtChangeReflexes, fgtChangeVolleyIndex, fgtAddAction, fgtDeleteAction, fgtChangeSelectedAction, fgtToggleActionDetails, fgtToggleActionVisibility
 	};

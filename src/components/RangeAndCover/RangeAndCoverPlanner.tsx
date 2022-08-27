@@ -31,7 +31,7 @@ const GroupedRangeAndCoverActions = GroupBy(RangeAndCoverActions, a => a.group);
 
 export function RangeAndCoverPlanner() {
 	const { volleyIndex, actions, selectedAction } = useAppSelector(state => state.rangeAndCover);
-	const { racChangeVolleyIndex, racChangeAction, racSelectedChangeAction, racToggleActionDetails, racToggleActionVisibility } = useStore();
+	const { racChangeVolleyIndex, racAddAction, racDeleteAction, racSelectedChangeAction, racToggleActionDetails, racToggleActionVisibility } = useStore();
 
 	return (
 		<Fragment>
@@ -68,7 +68,7 @@ export function RangeAndCoverPlanner() {
 					</Grid>
 
 					<Grid item xs={3} sm={3} md={1}>
-						<Button variant="outlined" size="medium" onClick={() => racChangeAction(volleyIndex, selectedAction)}>Add Action</Button>
+						<Button variant="outlined" size="medium" onClick={() => racAddAction(volleyIndex, selectedAction)}>Add Action</Button>
 					</Grid>
 				</Grid>
 
@@ -92,7 +92,7 @@ export function RangeAndCoverPlanner() {
 										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => racToggleActionVisibility(volleyIndex)}>
 											{action.visible ? <VisibilityIcon /> : <VisibilityOffIcon />}
 										</IconButton>
-										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => racChangeAction(volleyIndex, undefined)}>
+										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => racDeleteAction(volleyIndex)}>
 											<DeleteOutline />
 										</IconButton>
 									</Grid>
