@@ -23,7 +23,7 @@ import StopIcon from "@mui/icons-material/Stop";
 import { useAppDispatch, useAppSelector } from "../../state/store";
 import { Practice } from "../../state/reducers/practicePlanner";
 import { PracticeTable } from "../../data/tables";
-import { clamp } from "../../utils/misc";
+import { Clamp } from "../../utils/misc";
 import Alert from "@mui/material/Alert";
 
 
@@ -34,11 +34,11 @@ export function PracticePlanner(): JSX.Element {
 	const [notification, setNotification] = useState<null | JSX.Element>(null);
 
 	const changeDays = (event: ChangeEvent<HTMLInputElement>) => {
-		const value = clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 30);
+		const value = Clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 30);
 		dispatch({ type: "CHANGE_PRACTICE_PLANNER_DAYS", payload: { days: value } });
 	};
 	const changeHours = (event: ChangeEvent<HTMLInputElement>) => {
-		const value = clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 1, 24);
+		const value = Clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 1, 24);
 		dispatch({ type: "CHANGE_PRACTICE_PLANNER_HOURS", payload: { hours: value } });
 	};
 

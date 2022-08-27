@@ -17,7 +17,7 @@ import Checkbox from "@mui/material/Checkbox";
 
 import { useAppDispatch, useAppSelector } from "../../state/store";
 import { MagicData } from "../../data/magic";
-import { clamp, randomNumber } from "../../utils/misc";
+import { Clamp, RandomNumber } from "../../utils/misc";
 
 import { BackCanvas } from "./BackCanvas";
 import { MainCanvas } from "./MainCanvas";
@@ -74,7 +74,7 @@ export function MagicWheel() {
 	};
 
 	const changeSteps = (event: ChangeEvent<HTMLInputElement>) => {
-		const value = clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 10);
+		const value = Clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 10);
 		dispatch({ type: "CHANGE_MAGIC_WHEEL_STEPS", payload: { steps: value } });
 	};
 
@@ -223,7 +223,7 @@ export function MagicWheel() {
 					<Button
 						variant="outlined"
 						disabled={isRotating}
-						onClick={() => { if (!isRotating) rotate(((Math.random() > 0.5) ? 1 : -1) * randomNumber(1, 6)); }}
+						onClick={() => { if (!isRotating) rotate(((Math.random() > 0.5) ? 1 : -1) * RandomNumber(1, 6)); }}
 					>
 						Pray to the Lady Luck
 					</Button>

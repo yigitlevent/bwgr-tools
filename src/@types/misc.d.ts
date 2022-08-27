@@ -44,4 +44,3 @@ interface ListItem {
 	description: string;
 }
 
-type UnitStatus = "Ready" | "Out of Supply" | "Unscathed" | "Bloodied" | "Broken";

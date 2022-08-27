@@ -19,7 +19,7 @@ import { useAppDispatch, useAppSelector } from "../../state/store";
 import { Lifepath, Stock, Stocks } from "../../data/stocks";
 import { Trait, TraitCategories } from "../../data/traits";
 import { Skill, SkillCategories } from "../../data/skills";
-import { randomNumber, clamp } from "../../utils/misc";
+import { RandomNumber, Clamp } from "../../utils/misc";
 
 import { PopoverLink } from "../Shared/PopoverLink";
 import Box from "@mui/material/Box";
@@ -37,17 +37,17 @@ export function LifepathRandomizer() {
 	};
 
 	const changeMaxLeads = (event: ChangeEvent<HTMLInputElement>) => {
-		const value = clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 10);
+		const value = Clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 10);
 		dispatch({ type: "CHANGE_LP_RANDOMIZER_MAX_LEADS", payload: { maxLeads: value } });
 	};
 
 	const changeMaxLPs = (event: ChangeEvent<HTMLInputElement>) => {
-		const value = clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 10);
+		const value = Clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 10);
 		dispatch({ type: "CHANGE_LP_RANDOMIZER_MAX_LIFEPATHS", payload: { maxLifepaths: value } });
 	};
 
 	const changeMinLPs = (event: ChangeEvent<HTMLInputElement>) => {
-		const value = clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 10);
+		const value = Clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 10);
 		dispatch({ type: "CHANGE_LP_RANDOMIZER_MIN_LIFEPATHS", payload: { minLifepaths: value } });
 	};
 
@@ -122,7 +122,7 @@ export function LifepathRandomizer() {
 			}
 
 			const possibilities = filterByRequirements(combinedPossibilities, tempChosenLifepaths);
-			const chosenLP = possibilities[randomNumber(0, possibilities.length - 1)];
+			const chosenLP = possibilities[RandomNumber(0, possibilities.length - 1)];
 
 			if (chosenLP.setting !== tempChosenLifepaths[tempChosenLifepaths.length - 1].setting) {
 				leadsCounter += 1;
@@ -133,19 +133,19 @@ export function LifepathRandomizer() {
 
 		const stockValues = Object.values(Stocks);
 		const chosenStock = (stock === "Random")
-			? Stocks[stockValues[randomNumber(0, stockValues.length - 1)].name]
+			? Stocks[stockValues[RandomNumber(0, stockValues.length - 1)].name]
 			: Stocks[stock];
 
 		const settingValues = Object.values(chosenStock.settings).filter(v => v.type === "Setting");
 		const chosenSetting = (setting === "Random")
-			? chosenStock.settings[settingValues[randomNumber(0, settingValues.length - 1)].name]
+			? chosenStock.settings[settingValues[RandomNumber(0, settingValues.length - 1)].name]
 			: chosenStock.settings[setting];
 
 		const bornLPs = chosenSetting.lifepaths.filter(v => v.born);
 		const bornLPsNum = bornLPs.length - 1;
-		tempChosenLifepaths.push(bornLPs[randomNumber(0, bornLPsNum)]);
+		tempChosenLifepaths.push(bornLPs[RandomNumber(0, bornLPsNum)]);
 
-		const lpAmount = randomNumber(minLifepaths - 1, maxLifepaths - 1);
+		const lpAmount = RandomNumber(minLifepaths - 1, maxLifepaths - 1);
 		let chosenAmount = 0;
 
 		const maxTries = 10;
