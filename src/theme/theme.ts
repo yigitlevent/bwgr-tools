@@ -21,10 +21,10 @@ declare module "@mui/material/styles" {
 
 export const THEME = createTheme({
 	palette: {
-		mode: "dark",
+		mode: "dark"
 	},
 	status: {
-		danger: orange[500],
+		danger: orange[500]
 	},
 	components: {
 		MuiCssBaseline: {
@@ -41,8 +41,8 @@ export const THEME = createTheme({
 				font-family: 'hand';
 				src: url(${hand}) format('truetype');
 			}
-		  `,
-		},
+		  `
+		}
 	},
 	typography: {
 		fontFamily: "text",
@@ -76,5 +76,5 @@ export const THEME = createTheme({
 		"h5": {
 			fontFamily: "title"
 		}
-	},
+	}
 });

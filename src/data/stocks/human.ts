@@ -185,7 +185,7 @@ export const Human: Stock = {
 						"Any General➞Falsehood",
 						"Any Wise➞City-wise",
 						"Any Wise➞City Guard-wise",
-						"Any Wise➞Wealth-wise",
+						"Any Wise➞Wealth-wise"
 					],
 					stock: "Human",
 					traitPool: 1,
@@ -2948,7 +2948,7 @@ export const Human: Stock = {
 								"Human➞Professional Soldier➞Apt Pupil",
 								"Human➞Religious➞Apt Pupil",
 								"Human➞City Dweller➞Neophyte Sorcerer"
-							],
+							]
 						},
 						limits: [
 							"LP➞UNIQUE"
@@ -7915,7 +7915,7 @@ export const Human: Stock = {
 								"Human➞Religious➞Abbot/Abbess",
 								"Human➞Outcast➞Crazy Witch",
 								"Human➞Peasant➞Farmer",
-								"Human➞Peasant➞Itinerant Priest",
+								"Human➞Peasant➞Itinerant Priest"
 							]
 						}
 					},
@@ -9054,7 +9054,7 @@ export const Human: Stock = {
 								"Human➞Professional Soldier➞Bannerman",
 								"Human➞Professional Soldier➞Cavalryman",
 								"Human➞Professional Soldier➞Chaplain",
-								"Human➞Professional Soldier➞Captain",
+								"Human➞Professional Soldier➞Captain"
 							]
 						}
 					},
@@ -13488,7 +13488,7 @@ export const Human: Stock = {
 								"Human➞Outcast➞Smuggler",
 								"Human➞Outcast➞Fence",
 								"Human➞Villager➞Vintner",
-								"Human➞Noble Court➞Chamberlain",
+								"Human➞Noble Court➞Chamberlain"
 							]
 						}
 					},

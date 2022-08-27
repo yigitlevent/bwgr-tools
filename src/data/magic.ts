@@ -48,12 +48,12 @@ export const MagicData: MagicFacet[][] = [
 		{ name: "Presence", obstacle: 0, actions: 1, resource: 0 },
 		{ name: "Half Presence", obstacle: 0, actions: 1, resource: 0 },
 		{ name: "Single Target", obstacle: 0, actions: 1, resource: 0 }
-	],
+	]
 ];
 
 export const EmptySpell = {
 	name: "",
 	obstacle: "",
 	actions: "",
-	resource: "",
+	resource: ""
 };

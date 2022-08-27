@@ -28,7 +28,7 @@ export interface PracticePlannerState {
 const INITIAL: PracticePlannerState = {
 	days: 6,
 	hours: 6,
-	cells: [],
+	cells: []
 };
 
 export const PracticePlannerReducer = (state = INITIAL, action: PracticePlannerActions): PracticePlannerState => {

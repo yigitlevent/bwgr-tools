@@ -34,5 +34,5 @@ export const PracticeTable: PracticeTable = {
 	"Forte": { Cycle: 2, Routine: 4, Difficult: 8, Challenging: 16 },
 
 	"Faith": { Cycle: 12, Routine: 5, Difficult: 10, Challenging: 20 },
-	"Steel": { Cycle: 2, Routine: 1, Difficult: 3, Challenging: 9 },
+	"Steel": { Cycle: 2, Routine: 1, Difficult: 3, Challenging: 9 }
 };

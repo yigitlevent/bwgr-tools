@@ -330,7 +330,7 @@ export const Dwarf: Stock = {
 					traitPool: 1,
 					traits: [],
 					years: 100
-				},
+				}
 			]
 		},
 		"Clansman": {
@@ -2077,7 +2077,7 @@ export const Dwarf: Stock = {
 						"Dwarf Lifepath➞Slave to Fate"
 					],
 					years: 20
-				},
+				}
 			]
 		}
 	}

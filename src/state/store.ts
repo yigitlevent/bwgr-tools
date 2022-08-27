@@ -31,7 +31,7 @@ export const STORE = configureStore({
 		magicWheel: MagicWheelReducer,
 		lifepathRandomizer: LifepathRandomizerReducer,
 		practicePlanner: PracticePlannerReducer
-	}),
+	})
 });
 
 type StoreState = ReturnType<typeof STORE.getState>;
