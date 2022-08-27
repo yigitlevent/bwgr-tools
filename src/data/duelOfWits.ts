@@ -1,5 +1,11 @@
-import { DuelOfWitsAction } from "../state/reducers/duelOfWits";
-
+export interface DuelOfWitsAction {
+	name: string;
+	tests?: string[];
+	speakingThePart?: string;
+	special?: string;
+	effects?: string;
+	resolution: { [key: string]: "Vs" | "Std" | "Ob 1" | `Ob=${StatsList}`; };
+}
 
 export const DuelOfWitsActions: DuelOfWitsAction[] = [
 	{

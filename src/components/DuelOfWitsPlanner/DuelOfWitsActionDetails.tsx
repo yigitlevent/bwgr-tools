@@ -2,8 +2,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 
-import { DuelOfWitsAction } from "../../state/reducers/duelOfWits";
-import { DuelOfWitsActions } from "../../data/duelOfWits";
+import { DuelOfWitsActions, DuelOfWitsAction } from "../../data/duelOfWits";
 
 
 export function DuelOfWitsActionDetails({ action }: { action: DuelOfWitsAction; }) {

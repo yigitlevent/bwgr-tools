@@ -26,7 +26,7 @@ import { DuelOfWitsActionDetails } from "./DuelOfWitsActionDetails";
 
 
 export function DuelOfWitsPlanner() {
-	const { volleyIndex, actions, selectedAction, open, visible } = useAppSelector(state => state.duelOfWits);
+	const { volleyIndex, actions, selectedAction } = useAppSelector(state => state.duelOfWits);
 	const { dowChangeVolleyIndex, dowChangeAction, dowSelectedChangeAction, dowToggleActionDetails, dowToggleActionVisibility } = useStore();
 
 	return (
@@ -69,16 +69,16 @@ export function DuelOfWitsPlanner() {
 								? <Grid container columns={2} justifyContent="space-between" sx={{ padding: "10px" }}>
 									<Grid item xs={2} sm={1} md={1}>
 										<Typography variant="h6" sx={{ display: "inline-block" }}>
-											{visible[volleyIndex] ? action.name : "────────────────────"}
+											{action.visible ? action.name : "────────────────────"}
 										</Typography>
 									</Grid>
 
 									<Grid item>
 										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => dowToggleActionDetails(volleyIndex)}>
-											{open[volleyIndex] ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
+											{action.open ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
 										</IconButton>
 										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => dowToggleActionVisibility(volleyIndex)}>
-											{visible[volleyIndex] ? <VisibilityIcon /> : <VisibilityOffIcon />}
+											{action.visible ? <VisibilityIcon /> : <VisibilityOffIcon />}
 										</IconButton>
 										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => dowChangeAction(volleyIndex, undefined)}>
 											<DeleteOutline />
@@ -89,7 +89,7 @@ export function DuelOfWitsPlanner() {
 										<Divider />
 									</Grid>
 
-									{visible[volleyIndex] && open[volleyIndex] ? <DuelOfWitsActionDetails action={action} /> : null}
+									{action.visible && action.open ? <DuelOfWitsActionDetails action={action} /> : null}
 								</Grid>
 								: null
 							}

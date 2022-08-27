@@ -4,10 +4,10 @@ import { SelectChangeEvent } from "@mui/material/Select";
 
 import { useAppDispatch } from "./store";
 import type { DrawerItem } from "./reducers/drawer";
-import type { DuelOfWitsAction } from "./reducers/duelOfWits";
-import { FightActionExtended } from "./reducers/fight";
 import { PracticeTable } from "../data/tables";
-import { DuelOfWitsActions } from "../data/duelOfWits";
+import type { DuelOfWitsActionExtended } from "./reducers/duelOfWits";
+import type { FightActionExtended } from "./reducers/fight";
+import { DuelOfWitsAction, DuelOfWitsActions } from "../data/duelOfWits";
 import { FightAction, FightActions } from "../data/fight";
 import { Clamp } from "../utils/misc";
 
@@ -171,7 +171,7 @@ export function useStore() {
 	};
 
 	const dowChangeAction = (volleyIndex: number, actionName: undefined | string) => {
-		const action = actionName ? DuelOfWitsActions.find(v => v.name === actionName) as DuelOfWitsAction : undefined;
+		const action: DuelOfWitsActionExtended = { ...DuelOfWitsActions.find(v => v.name === actionName) as DuelOfWitsAction, open: false, visible: true };
 		dispatch({ type: "CHANGE_DUEL_OF_WITS_ACTION", payload: { volleyIndex, action } });
 	};
 
