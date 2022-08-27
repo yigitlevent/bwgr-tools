@@ -91,7 +91,7 @@ export function FightPlannerActionDetails({ action }: { action: FightActionExten
 
 			{action.resolutionAgainst
 				? <Box sx={{ margin: "0 0 10px" }}>
-					<b>Resolution:</b>
+					<b>Resolution (against):</b>
 					{FightResolutionActions.map((v, i) => {
 						if (action.resolutionAgainst) {
 							const res = action.resolutionAgainst[v] ? action.resolutionAgainst[v] : "—";
