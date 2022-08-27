@@ -122,10 +122,6 @@ export function FightPlanner() {
 									</Grid>
 								);
 							})}
-
-							<Grid container columns={2} justifyContent="center" alignContent="center" alignItems="center" sx={{ margin: "10px 0" }}>
-
-							</Grid>
 						</Paper>
 					);
 				})}
