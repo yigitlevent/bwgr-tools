@@ -6,9 +6,10 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import MenuItem from "@mui/material/MenuItem";
 import Paper from "@mui/material/Paper";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Select from "@mui/material/Select";
 
-import { useAppDispatch, useAppSelector } from "../../state/store";
+import { useAppSelector } from "../../state/store";
+import { useStore } from "../../state/useStore";
 import { TraitCategories } from "../../data/traits";
 
 import { PopoverLink } from "../Shared/PopoverLink";
@@ -16,11 +17,7 @@ import { PopoverLink } from "../Shared/PopoverLink";
 
 export function TraitLists() {
 	const { category } = useAppSelector(state => state.traitList);
-	const dispatch = useAppDispatch();
-
-	const changeCategory = (event: SelectChangeEvent) => {
-		dispatch({ type: "CHANGE_TRAIT_LIST_CATEGORY", payload: { category: event.target.value } });
-	};
+	const { trtChangeCategory } = useStore();
 
 	return (
 		<Fragment>
@@ -30,7 +27,7 @@ export function TraitLists() {
 				<Grid item xs={2} md={1}>
 					<FormControl variant="standard" sx={{ m: 1, minWidth: 120, width: "95%" }}>
 						<InputLabel id="tls-label">Trait Category</InputLabel>
-						<Select label="Trait Category" labelId="tls-label" value={category} onChange={changeCategory} placeholder="Select a category">
+						<Select label="Trait Category" labelId="tls-label" value={category} onChange={trtChangeCategory} placeholder="Select a category">
 							{Object.values(TraitCategories).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>

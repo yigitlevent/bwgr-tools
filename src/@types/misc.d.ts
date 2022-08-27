@@ -44,3 +44,15 @@ interface ListItem {
 	description: string;
 }
 
+interface Practice {
+	skillName: string;
+	skillType: string;
+	testType: string;
+	hours: number;
+}
+
+type Cell = {
+	maxHours: number;
+	remaining: number;
+	placed: Practice[];
+};

@@ -1,11 +1,11 @@
-import { ChangeEvent, createRef, Fragment, useCallback, useEffect, useState } from "react";
+import { createRef, Fragment, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 
 import code from "../../fonts/SourceCodePro-SemiBold.ttf";
 
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Select from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -14,10 +14,12 @@ import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import CircularProgress from "@mui/material/CircularProgress";
 
-import { useAppDispatch, useAppSelector } from "../../state/store";
+import { useAppSelector } from "../../state/store";
+import { useStore } from "../../state/useStore";
 import { MagicData } from "../../data/magic";
-import { Clamp, RandomNumber } from "../../utils/misc";
+import { RandomNumber } from "../../utils/misc";
 
 import { BackCanvas } from "./BackCanvas";
 import { MainCanvas } from "./MainCanvas";
@@ -39,7 +41,7 @@ export const MWCONST = { canvasSize: 580, circleRadius: 32, circleOffset: 90, te
 
 export function MagicWheel() {
 	const { aoe, element, impetus, duration, origin, direction, steps, cover } = useAppSelector(state => state.magicWheel);
-	const dispatch = useAppDispatch();
+	const { mgwChangeAOE, mgwChangeElement, mgwChangeImpetus, mgwChangeDuration, mgwChangeOrigin, mgwChangeDirection, mgwChangeSteps, mgwToggleCover } = useStore();
 
 	const wrapperRef = createRef<HTMLDivElement>();
 	const [size, setSize] = useState("0px");
@@ -48,39 +50,6 @@ export function MagicWheel() {
 	const [isRotating, setIsRotating] = useState(false);
 
 	const [isFontLoaded, setIsFontLoaded] = useState(false);
-
-	const changeAOE = (event: SelectChangeEvent) => {
-		dispatch({ type: "CHANGE_MAGIC_WHEEL_AOE", payload: { aoe: event.target.value } });
-	};
-
-	const changeElement = (event: SelectChangeEvent) => {
-		dispatch({ type: "CHANGE_MAGIC_WHEEL_ELEMENT", payload: { element: event.target.value } });
-	};
-
-	const changeImpetus = (event: SelectChangeEvent) => {
-		dispatch({ type: "CHANGE_MAGIC_WHEEL_IMPETUS", payload: { impetus: event.target.value } });
-	};
-
-	const changeDuration = (event: SelectChangeEvent) => {
-		dispatch({ type: "CHANGE_MAGIC_WHEEL_DURATION", payload: { duration: event.target.value } });
-	};
-
-	const changeOrigin = (event: SelectChangeEvent) => {
-		dispatch({ type: "CHANGE_MAGIC_WHEEL_ORIGIN", payload: { origin: event.target.value } });
-	};
-
-	const changeDirection = (event: SelectChangeEvent) => {
-		dispatch({ type: "CHANGE_MAGIC_WHEEL_DIRECTION", payload: { direction: event.target.value as any } });
-	};
-
-	const changeSteps = (event: ChangeEvent<HTMLInputElement>) => {
-		const value = Clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 10);
-		dispatch({ type: "CHANGE_MAGIC_WHEEL_STEPS", payload: { steps: value } });
-	};
-
-	const toggleCover = () => {
-		dispatch({ type: "TOGGLE_MAGIC_WHEEL_COVER" });
-	};
 
 	const rotate = useCallback((amount: number): void => {
 		setIsRotating(true);
@@ -96,11 +65,11 @@ export function MagicWheel() {
 			selected[key] = MagicData[key][newIndex].name;
 		}
 
-		dispatch({ type: "CHANGE_MAGIC_WHEEL_AOE", payload: { aoe: selected[4] } });
-		dispatch({ type: "CHANGE_MAGIC_WHEEL_ELEMENT", payload: { element: selected[3] } });
-		dispatch({ type: "CHANGE_MAGIC_WHEEL_IMPETUS", payload: { impetus: selected[2] } });
-		dispatch({ type: "CHANGE_MAGIC_WHEEL_DURATION", payload: { duration: selected[1] } });
-		dispatch({ type: "CHANGE_MAGIC_WHEEL_ORIGIN", payload: { origin: selected[0] } });
+		mgwChangeAOE(selected[4]);
+		mgwChangeElement(selected[3]);
+		mgwChangeImpetus(selected[2]);
+		mgwChangeDuration(selected[1]);
+		mgwChangeOrigin(selected[0]);
 
 		const currentRotation = [...currentAngle];
 		const targetRotation = [...currentAngle].map((v, i) => v + (amount * (blockAngle[i] / 2)));
@@ -123,7 +92,6 @@ export function MagicWheel() {
 
 			if (!skip) {
 				setCurrentAngle(tempRotation);
-
 				if ((amount > 0 && tempRotation.every((v, i) => v >= targetRotation[i]))
 					|| (amount < 0 && tempRotation.every((v, i) => v <= targetRotation[i]))) {
 					done = true;
@@ -138,7 +106,7 @@ export function MagicWheel() {
 		};
 
 		myReq = requestAnimationFrame(step);
-	}, [blockAngle, currentAngle, aoe, dispatch, duration, element, impetus, origin]);
+	}, [aoe, element, impetus, duration, origin, mgwChangeAOE, mgwChangeElement, mgwChangeImpetus, mgwChangeDuration, mgwChangeOrigin, currentAngle, blockAngle]);
 
 	useEffect(() => {
 		if (wrapperRef && wrapperRef.current) setSize(window.getComputedStyle(wrapperRef.current).width);
@@ -173,7 +141,7 @@ export function MagicWheel() {
 				<Grid item xs={5} sm={2} md={1}>
 					<FormControl fullWidth>
 						<InputLabel id="mw-aoe-l">Area of Effect</InputLabel>
-						<Select labelId="mw-aoe-l" id="mw-aoe" label="Area of Effect" value={isRotating ? "" : aoe} onChange={changeAOE} disabled={isRotating}>
+						<Select labelId="mw-aoe-l" id="mw-aoe" label="Area of Effect" value={isRotating ? "" : aoe} onChange={mgwChangeAOE} disabled={isRotating}>
 							{Object.values(MagicData[4]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
 					</FormControl>
@@ -182,7 +150,7 @@ export function MagicWheel() {
 				<Grid item xs={5} sm={2} md={1}>
 					<FormControl fullWidth>
 						<InputLabel id="mw-el-l">Element</InputLabel>
-						<Select labelId="mw-el-l" id="mw-el" label="Element" value={isRotating ? "" : element} onChange={changeElement} disabled={isRotating}>
+						<Select labelId="mw-el-l" id="mw-el" label="Element" value={isRotating ? "" : element} onChange={mgwChangeElement} disabled={isRotating}>
 							{Object.values(MagicData[3]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
 					</FormControl>
@@ -191,7 +159,7 @@ export function MagicWheel() {
 				<Grid item xs={5} sm={2} md={1}>
 					<FormControl fullWidth>
 						<InputLabel id="mw-imp-l">Impetus</InputLabel>
-						<Select labelId="mw-imp-l" id="mw-imp" label="Impetus" value={isRotating ? "" : impetus} onChange={changeImpetus} disabled={isRotating}>
+						<Select labelId="mw-imp-l" id="mw-imp" label="Impetus" value={isRotating ? "" : impetus} onChange={mgwChangeImpetus} disabled={isRotating}>
 							{Object.values(MagicData[2]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
 					</FormControl>
@@ -200,7 +168,7 @@ export function MagicWheel() {
 				<Grid item xs={5} sm={2} md={1}>
 					<FormControl fullWidth>
 						<InputLabel id="mw-dur-l">Duration</InputLabel>
-						<Select labelId="mw-dur-l" id="mw-dur" label="Duration" value={isRotating ? "" : duration} onChange={changeDuration} disabled={isRotating}>
+						<Select labelId="mw-dur-l" id="mw-dur" label="Duration" value={isRotating ? "" : duration} onChange={mgwChangeDuration} disabled={isRotating}>
 							{Object.values(MagicData[1]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
 					</FormControl>
@@ -209,7 +177,7 @@ export function MagicWheel() {
 				<Grid item xs={5} sm={2} md={1}>
 					<FormControl fullWidth>
 						<InputLabel id="mw-or-l">Origin</InputLabel>
-						<Select labelId="mw-or-l" id="mw-or" label="Origin" value={isRotating ? "" : origin} onChange={changeOrigin} disabled={isRotating}>
+						<Select labelId="mw-or-l" id="mw-or" label="Origin" value={isRotating ? "" : origin} onChange={mgwChangeOrigin} disabled={isRotating}>
 							{Object.values(MagicData[0]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
 					</FormControl>
@@ -238,7 +206,7 @@ export function MagicWheel() {
 				<Grid item xs={2} sm={1}>
 					<FormControl fullWidth>
 						<InputLabel id="mw-dir-l">Direction</InputLabel>
-						<Select labelId="mw-dir-l" id="mw-dir" label="Direction" value={direction} onChange={changeDirection} disabled={isRotating}>
+						<Select labelId="mw-dir-l" id="mw-dir" label="Direction" value={direction} onChange={mgwChangeDirection} disabled={isRotating}>
 							<MenuItem value={"Clockwise"}>Clockwise</MenuItem>
 							<MenuItem value={"Counterclockwise"}>Counterclockwise</MenuItem>
 						</Select>
@@ -250,7 +218,7 @@ export function MagicWheel() {
 						label="Steps"
 						inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
 						value={steps}
-						onChange={changeSteps}
+						onChange={mgwChangeSteps}
 						fullWidth
 						disabled={isRotating}
 					/>
@@ -280,10 +248,10 @@ export function MagicWheel() {
 					<FormControlLabel
 						label="Toggle Cover"
 						labelPlacement="start"
-						control={<Checkbox checked={cover} onChange={toggleCover} />}
+						control={<Checkbox checked={cover} onChange={mgwToggleCover} />}
 					/>
 				</Fragment>
-				: null
+				: <CircularProgress />
 			}
 		</Fragment >
 	);

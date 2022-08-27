@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, Fragment, useState } from "react";
+import { Fragment, useState } from "react";
 
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
@@ -13,89 +13,22 @@ import Stack from "@mui/material/Stack";
 import IconButton from "@mui/material/IconButton";
 import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
-import Snackbar from "@mui/material/Snackbar";
 
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import StopIcon from "@mui/icons-material/Stop";
 
-import { useAppDispatch, useAppSelector } from "../../state/store";
-import { Practice } from "../../state/reducers/practicePlanner";
+import { useAppSelector } from "../../state/store";
+import { useStore } from "../../state/useStore";
 import { PracticeTable } from "../../data/tables";
-import { Clamp } from "../../utils/misc";
-import Alert from "@mui/material/Alert";
 
 
 export function PracticePlanner(): JSX.Element {
 	const { days, hours, cells } = useAppSelector(state => state.practicePlanner);
-	const dispatch = useAppDispatch();
+	const { prpChangeDays, prpChangeHours, prpAddCells, prpDeleteCell, prpChangeCellHour, prpAddPractice, prpDeletePractice } = useStore();
 
 	const [notification, setNotification] = useState<null | JSX.Element>(null);
-
-	const changeDays = (event: ChangeEvent<HTMLInputElement>) => {
-		const value = Clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 30);
-		dispatch({ type: "CHANGE_PRACTICE_PLANNER_DAYS", payload: { days: value } });
-	};
-	const changeHours = (event: ChangeEvent<HTMLInputElement>) => {
-		const value = Clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 1, 24);
-		dispatch({ type: "CHANGE_PRACTICE_PLANNER_HOURS", payload: { hours: value } });
-	};
-
-	const addCells = (days: number, hours: number) => {
-		dispatch({ type: "ADD_PRACTICE_PLANNER_CELLS", payload: { days, hours } });
-	};
-	const deleteCell = (cellIndex: number) => {
-		dispatch({ type: "DELETE_PRACTICE_PLANNER_CELL", payload: { cellIndex } });
-	};
-	const changeCellHour = (cellIndex: number, change: 1 | -1) => {
-		if (cells[cellIndex].remaining === 0 && change === -1) {
-			setNotification(
-				<Snackbar open={true} autoHideDuration={5000} onClose={() => setNotification(null)} anchorOrigin={{ vertical: "top", horizontal: "center" }}>
-					<Alert severity="error" sx={{ width: "100%" }}>
-						Cannot reduce hours from day. It is used by practices.
-					</Alert>
-				</Snackbar>
-			);
-		}
-		else {
-			dispatch({ type: "CHANGE_PRACTICE_PLANNER_CELL_HOURS", payload: { cellIndex, change } });
-		}
-	};
-
-	const addPractice = (e: FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		const els = Object.values((e.target as HTMLFormElement).elements) as HTMLInputElement[];
-		const [cIndex, sType, tType, sName] = els.filter(v => v.tagName === "INPUT" && v.type === "text").map((v) => v.value);
-		const hours = PracticeTable[sType][tType];
-		const cellIndex = parseInt(cIndex);
-
-		if (sName === "") {
-			setNotification(
-				<Snackbar open={true} autoHideDuration={5000} onClose={() => setNotification(null)} anchorOrigin={{ vertical: "top", horizontal: "center" }}>
-					<Alert severity="error" sx={{ width: "100%" }}>
-						Please enter a Skill name.
-					</Alert>
-				</Snackbar>
-			);
-		}
-		else if (cells[cellIndex].remaining - hours < 0) {
-			setNotification(
-				<Snackbar open={true} autoHideDuration={5000} onClose={() => setNotification(null)} anchorOrigin={{ vertical: "top", horizontal: "center" }}>
-					<Alert severity="error" sx={{ width: "100%" }}>
-						Cannot fit practice into the day. This practice takes {hours} hours.
-					</Alert>
-				</Snackbar>
-			);
-		}
-		else {
-			const practice: Practice = { skillName: sName, skillType: sType, testType: tType, hours: PracticeTable[sType][tType] };
-			dispatch({ type: "ADD_PRACTICE_PLANNER_PRACTICE", payload: { cellIndex, practice } });
-		}
-	};
-	const deletePractice = (cellIndex: number, practiceIndex: number) => {
-		dispatch({ type: "DELETE_PRACTICE_PLANNER_PRACTICE", payload: { cellIndex, practiceIndex } });
-	};
 
 	return (
 		<Fragment>
@@ -109,7 +42,7 @@ export function PracticePlanner(): JSX.Element {
 						label="Number of Days"
 						inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
 						value={days}
-						onChange={changeDays}
+						onChange={prpChangeDays}
 						size="small"
 					/>
 				</Grid>
@@ -119,17 +52,17 @@ export function PracticePlanner(): JSX.Element {
 						label="Number of Hours per Day"
 						inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
 						value={hours}
-						onChange={changeHours}
+						onChange={prpChangeHours}
 						size="small"
 					/>
 				</Grid>
 
 				<Grid item>
-					<Button variant="outlined" onClick={() => addCells(days, hours)}>Add Days</Button>
+					<Button variant="outlined" onClick={() => prpAddCells(days, hours)}>Add Days</Button>
 				</Grid>
 			</Grid>
 
-			<form onSubmit={addPractice}>
+			<form onSubmit={(e) => setNotification(prpAddPractice(e, cells, setNotification))}>
 				<Grid container spacing={1} sx={{ width: "100%", margin: "10px 0 0" }} columns={5} justifyContent="center" alignItems="center">
 					<Grid item xs={4} sm={2} md={1}>
 						<FormControl fullWidth size="small">
@@ -186,9 +119,9 @@ export function PracticePlanner(): JSX.Element {
 								<Stack spacing={0}>
 									<Typography>
 										Day {i + 1}
-										<IconButton size="small" sx={{ float: "right" }} onClick={() => deleteCell(i)}><DeleteOutlineIcon fontSize="small" /></IconButton>
-										<IconButton size="small" sx={{ float: "right" }} onClick={() => changeCellHour(i, -1)}><RemoveCircleOutlineIcon fontSize="small" /></IconButton>
-										<IconButton size="small" sx={{ float: "right" }} onClick={() => changeCellHour(i, 1)}><AddCircleOutlineIcon fontSize="small" /></IconButton>
+										<IconButton size="small" sx={{ float: "right" }} onClick={() => prpDeleteCell(i)}><DeleteOutlineIcon fontSize="small" /></IconButton>
+										<IconButton size="small" sx={{ float: "right" }} onClick={() => setNotification(prpChangeCellHour(i, -1, cells, setNotification))}><RemoveCircleOutlineIcon fontSize="small" /></IconButton>
+										<IconButton size="small" sx={{ float: "right" }} onClick={() => setNotification(prpChangeCellHour(i, 1, cells, setNotification))}><AddCircleOutlineIcon fontSize="small" /></IconButton>
 									</Typography>
 
 									<Box sx={{ margin: "0 5px 0" }}>
@@ -211,7 +144,7 @@ export function PracticePlanner(): JSX.Element {
 										{cell.placed.map((placed, ii) =>
 											<Paper key={ii} elevation={4} sx={{ padding: "2px 4px" }}>
 												{placed.skillName} <Typography variant="caption">({placed.skillType}, {placed.testType}, {placed.hours}hr{placed.hours > 1 ? "s" : ""})</Typography>
-												<IconButton size="small" sx={{ float: "right" }} onClick={() => deletePractice(i, ii)}><DeleteOutlineIcon fontSize="small" /></IconButton>
+												<IconButton size="small" sx={{ float: "right" }} onClick={() => prpDeletePractice(i, ii)}><DeleteOutlineIcon fontSize="small" /></IconButton>
 											</Paper>
 										)}
 									</Stack>

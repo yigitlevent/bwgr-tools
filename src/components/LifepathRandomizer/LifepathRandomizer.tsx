@@ -26,7 +26,7 @@ import { LifepathRandomizerBasics } from "./LifepathRandomizerBasics";
 
 export function LifepathRandomizer() {
 	const { stock, setting, noDuplicates, maxLeads, maxLifepaths, minLifepaths } = useAppSelector(state => state.lifepathRandomizer);
-	const { changeMaxLPs, changeMaxLeads, changeMinLPs, changeStock, toggleNoDuplicates } = useStore();
+	const { lprChangeMaxLPs, lprChangeMaxLeads, lprChangeMinLPs, lprChangeStock, lprToggleNoDuplicates } = useStore();
 
 	const [chosenLifepaths, setChosen] = useState<Lifepath[]>([]);
 	const [triedTooMuch, setTriedTooMuch] = useState(false);
@@ -155,7 +155,7 @@ export function LifepathRandomizer() {
 				<Grid item xs={5} sm={2} md={1}>
 					<FormControl fullWidth>
 						<InputLabel id="lr-l">Stock</InputLabel>
-						<Select labelId="lr-l" id="lr" label="Stock" value={stock} onChange={changeStock}>
+						<Select labelId="lr-l" id="lr" label="Stock" value={stock} onChange={lprChangeStock}>
 							<MenuItem key={"Random"} value={"Random"}>Random</MenuItem>
 							{Object.values(Stocks).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
@@ -167,7 +167,7 @@ export function LifepathRandomizer() {
 						label="Max Leads"
 						inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
 						value={maxLeads}
-						onChange={changeMaxLeads}
+						onChange={lprChangeMaxLeads}
 						fullWidth
 					/>
 				</Grid>
@@ -177,7 +177,7 @@ export function LifepathRandomizer() {
 						label="Min Lifepaths"
 						inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
 						value={minLifepaths}
-						onChange={changeMinLPs}
+						onChange={lprChangeMinLPs}
 						fullWidth
 					/>
 				</Grid>
@@ -187,7 +187,7 @@ export function LifepathRandomizer() {
 						label="Max Lifepaths"
 						inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
 						value={maxLifepaths}
-						onChange={changeMaxLPs}
+						onChange={lprChangeMaxLPs}
 						fullWidth
 					/>
 				</Grid>
@@ -196,7 +196,7 @@ export function LifepathRandomizer() {
 					<FormControlLabel
 						label="No Duplicates"
 						labelPlacement="start"
-						control={<Checkbox checked={noDuplicates} onChange={toggleNoDuplicates} />}
+						control={<Checkbox checked={noDuplicates} onChange={lprToggleNoDuplicates} />}
 					/>
 				</Grid>
 

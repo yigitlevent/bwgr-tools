@@ -9,8 +9,10 @@ import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 
-import { useAppDispatch, useAppSelector } from "../state/store";
+import { useAppSelector } from "../state/store";
 import { DrawerItem } from "../state/reducers/drawer";
+import { useStore } from "../state/useStore";
+
 
 function DrawerListItem({ text, icon, onClick }: { text: string; icon?: JSX.Element; onClick?: () => void; }) {
 	return (
@@ -36,15 +38,7 @@ const Items: DrawerItem[][] = [
 
 export function MainDrawer() {
 	const { open, type } = useAppSelector(state => state.drawer);
-	const dispatch = useAppDispatch();
-
-	const closeDrawer = () => {
-		dispatch({ type: "CLOSE_DRAWER" });
-	};
-
-	const setSelectedItem = (value: DrawerItem) => {
-		dispatch({ type: "SELECT_DRAWER_ITEM", payload: { selected: value } });
-	};
+	const { drwCloseDrawer, drwSetSelectedItem } = useStore();
 
 	return (
 		<Drawer
@@ -52,13 +46,13 @@ export function MainDrawer() {
 			variant={type}
 			open={open}
 			hideBackdrop={true}
-			onClose={closeDrawer}
+			onClose={drwCloseDrawer}
 		>
 			<Box
 				sx={{ width: 250, height: "100%" }}
 				role="presentation"
-				onClick={() => { if (type !== "persistent") closeDrawer(); }}
-				onKeyDown={() => { if (type !== "persistent") closeDrawer(); }}
+				onClick={() => { if (type !== "persistent") drwCloseDrawer(); }}
+				onKeyDown={() => { if (type !== "persistent") drwCloseDrawer(); }}
 			>
 				<Typography variant="h4" sx={{ padding: "10px 10px" }}>BWGR Tools</Typography>
 
@@ -67,7 +61,7 @@ export function MainDrawer() {
 						<Fragment key={i}>
 							<Divider />
 							{v.map((item, ii) => {
-								return <DrawerListItem key={ii} text={item} onClick={() => setSelectedItem(item)} />;
+								return <DrawerListItem key={ii} text={item} onClick={() => drwSetSelectedItem(item)} />;
 							})}
 						</Fragment>
 					);

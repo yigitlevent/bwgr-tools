@@ -1,9 +1,4 @@
-export interface Practice {
-	skillName: string;
-	skillType: string;
-	testType: string;
-	hours: number;
-}
+
 
 interface ChangeDaysAction { type: "CHANGE_PRACTICE_PLANNER_DAYS"; payload: { days: number; }; }
 interface ChangeHoursAction { type: "CHANGE_PRACTICE_PLANNER_HOURS"; payload: { hours: number; }; }
@@ -22,11 +17,7 @@ export type PracticePlannerActions =
 	| AddRowsAction | DeleteCellAction
 	| ChangeCellHoursAction;
 
-export type Cell = {
-	maxHours: number;
-	remaining: number;
-	placed: Practice[];
-};
+
 
 export interface PracticePlannerState {
 	days: number;
