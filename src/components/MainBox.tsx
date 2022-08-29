@@ -5,12 +5,13 @@ import Paper from "@mui/material/Paper";
 
 import { useAppSelector } from "../state/store";
 
+import { DiceRoller } from "./DiceRoller/DiceRoller";
 import { Lifepaths } from "./LifepathLists/LifepathLists";
 import { SkillLists } from "./SkillLists/SkillLists";
 import { TraitLists } from "./TraitLists/TraitLists";
-import { MagicWheel } from "./MagicWheel/MagicWheel";
 import { LifepathRandomizer } from "./LifepathRandomizer/LifepathRandomizer";
 import { PracticePlanner } from "./PracticePlanner/PracticePlanner";
+import { MagicWheel } from "./MagicWheel/MagicWheel";
 import { DuelOfWitsPlanner } from "./DuelOfWitsPlanner/DuelOfWitsPlanner";
 import { RangeAndCoverPlanner } from "./RangeAndCover/RangeAndCoverPlanner";
 import { FightPlanner } from "./FightPlanner/FightPlanner";
@@ -20,6 +21,8 @@ export function MainBox() {
 
 	const getElement = () => {
 		switch (selected) {
+			case "Dice Roller":
+				return <DiceRoller />;
 			case "Lifepaths":
 				return <Lifepaths />;
 			case "Skills":

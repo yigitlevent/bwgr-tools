@@ -22,19 +22,19 @@ export function Lifepaths() {
 		<Fragment>
 			<Typography variant="h3">Lifepath Explorer</Typography>
 
-			<Grid container spacing={1} sx={{ width: "100%" }} columns={2}>
+			<Grid container spacing={1} columns={2} sx={{ marginTop: 1 }} justifyContent="center" alignItems="center">
 				<Grid item xs={2} md={1}>
-					<FormControl variant="standard" sx={{ m: 1, minWidth: 120, width: "95%" }}>
-						<InputLabel id="lpls-label">Stock</InputLabel>
-						<Select label="Stock" labelId="lpls-label" value={stock} onChange={lplChangeStock} placeholder="Select a stock">
+					<FormControl variant="standard" fullWidth>
+						<InputLabel>Stock</InputLabel>
+						<Select label="Stock" value={stock} onChange={lplChangeStock} placeholder="Select a stock">
 							{Object.values(Stocks).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>
 				<Grid item xs={2} md={1}>
-					<FormControl variant="standard" sx={{ m: 1, minWidth: 120, width: "95%" }}>
-						<InputLabel id="lplst-label">Setting</InputLabel>
-						<Select label="Setting" labelId="lplst-label" value={setting} onChange={lplChangeSetting} placeholder="Select a setting">
+					<FormControl variant="standard" fullWidth>
+						<InputLabel>Setting</InputLabel>
+						<Select label="Setting" value={setting} onChange={lplChangeSetting} placeholder="Select a setting">
 							{stock !== ""
 								? Object.values(Stocks[stock].settings).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)
 								: <MenuItem value={""}><em>Select stock first</em></MenuItem>

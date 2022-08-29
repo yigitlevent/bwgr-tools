@@ -137,47 +137,47 @@ export function MagicWheel() {
 		<Fragment>
 			<Typography variant="h3">Magic Wheel</Typography>
 
-			<Grid container spacing={1} columns={5} sx={{ marginTop: 1 }}>
+			<Grid container spacing={1} columns={5} sx={{ marginTop: 1 }} justifyContent="center" alignItems="center">
 				<Grid item xs={5} sm={2} md={1}>
-					<FormControl fullWidth>
-						<InputLabel id="mw-aoe-l">Area of Effect</InputLabel>
-						<Select labelId="mw-aoe-l" id="mw-aoe" label="Area of Effect" value={isRotating ? "" : aoe} onChange={mgwChangeAOE} disabled={isRotating}>
+					<FormControl fullWidth variant="standard">
+						<InputLabel>Area of Effect</InputLabel>
+						<Select label="Area of Effect" value={isRotating ? "" : aoe} onChange={mgwChangeAOE} disabled={isRotating}>
 							{Object.values(MagicData[4]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
 					</FormControl>
 				</Grid>
 
 				<Grid item xs={5} sm={2} md={1}>
-					<FormControl fullWidth>
-						<InputLabel id="mw-el-l">Element</InputLabel>
-						<Select labelId="mw-el-l" id="mw-el" label="Element" value={isRotating ? "" : element} onChange={mgwChangeElement} disabled={isRotating}>
+					<FormControl fullWidth variant="standard">
+						<InputLabel>Element</InputLabel>
+						<Select label="Element" value={isRotating ? "" : element} onChange={mgwChangeElement} disabled={isRotating}>
 							{Object.values(MagicData[3]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
 					</FormControl>
 				</Grid>
 
 				<Grid item xs={5} sm={2} md={1}>
-					<FormControl fullWidth>
-						<InputLabel id="mw-imp-l">Impetus</InputLabel>
-						<Select labelId="mw-imp-l" id="mw-imp" label="Impetus" value={isRotating ? "" : impetus} onChange={mgwChangeImpetus} disabled={isRotating}>
+					<FormControl fullWidth variant="standard">
+						<InputLabel>Impetus</InputLabel>
+						<Select label="Impetus" value={isRotating ? "" : impetus} onChange={mgwChangeImpetus} disabled={isRotating}>
 							{Object.values(MagicData[2]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
 					</FormControl>
 				</Grid>
 
 				<Grid item xs={5} sm={2} md={1}>
-					<FormControl fullWidth>
-						<InputLabel id="mw-dur-l">Duration</InputLabel>
-						<Select labelId="mw-dur-l" id="mw-dur" label="Duration" value={isRotating ? "" : duration} onChange={mgwChangeDuration} disabled={isRotating}>
+					<FormControl fullWidth variant="standard">
+						<InputLabel>Duration</InputLabel>
+						<Select label="Duration" value={isRotating ? "" : duration} onChange={mgwChangeDuration} disabled={isRotating}>
 							{Object.values(MagicData[1]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
 					</FormControl>
 				</Grid>
 
 				<Grid item xs={5} sm={2} md={1}>
-					<FormControl fullWidth>
-						<InputLabel id="mw-or-l">Origin</InputLabel>
-						<Select labelId="mw-or-l" id="mw-or" label="Origin" value={isRotating ? "" : origin} onChange={mgwChangeOrigin} disabled={isRotating}>
+					<FormControl fullWidth variant="standard">
+						<InputLabel>Origin</InputLabel>
+						<Select label="Origin" value={isRotating ? "" : origin} onChange={mgwChangeOrigin} disabled={isRotating}>
 							{Object.values(MagicData[0]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
 					</FormControl>
@@ -204,9 +204,9 @@ export function MagicWheel() {
 
 			<Grid container spacing={1} columns={2} sx={{ marginTop: 1 }} justifyContent="center" alignItems="center">
 				<Grid item xs={2} sm={1}>
-					<FormControl fullWidth>
-						<InputLabel id="mw-dir-l">Direction</InputLabel>
-						<Select labelId="mw-dir-l" id="mw-dir" label="Direction" value={direction} onChange={mgwChangeDirection} disabled={isRotating}>
+					<FormControl fullWidth variant="standard">
+						<InputLabel>Direction</InputLabel>
+						<Select label="Direction" value={direction} onChange={mgwChangeDirection} disabled={isRotating}>
 							<MenuItem value={"Clockwise"}>Clockwise</MenuItem>
 							<MenuItem value={"Counterclockwise"}>Counterclockwise</MenuItem>
 						</Select>
@@ -221,6 +221,7 @@ export function MagicWheel() {
 						onChange={mgwChangeSteps}
 						fullWidth
 						disabled={isRotating}
+						variant="standard"
 					/>
 				</Grid>
 

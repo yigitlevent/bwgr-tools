@@ -23,11 +23,11 @@ export function SkillLists() {
 		<Fragment>
 			<Typography variant="h3">Skill Explorer</Typography>
 
-			<Grid container spacing={1} sx={{ width: "100%" }} columns={2}>
+			<Grid container spacing={1} columns={1} sx={{ marginTop: 1 }} justifyContent="center" alignItems="center">
 				<Grid item xs={2} md={1}>
-					<FormControl variant="standard" sx={{ m: 1, minWidth: 120, width: "95%" }}>
-						<InputLabel id="sls-label">Skill Category</InputLabel>
-						<Select label="Skill Category" labelId="sls-label" value={category} onChange={sklChangeCategory} placeholder="Select a category">
+					<FormControl variant="standard" fullWidth>
+						<InputLabel>Skill Category</InputLabel>
+						<Select label="Skill Category" value={category} onChange={sklChangeCategory} placeholder="Select a category">
 							{Object.values(SkillCategories).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>

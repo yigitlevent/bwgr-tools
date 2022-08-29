@@ -153,9 +153,9 @@ export function LifepathRandomizer() {
 
 			<Grid container spacing={1} columns={5} sx={{ marginTop: 1 }} justifyContent="center" alignItems="center">
 				<Grid item xs={5} sm={2} md={1}>
-					<FormControl fullWidth>
-						<InputLabel id="lr-l">Stock</InputLabel>
-						<Select labelId="lr-l" id="lr" label="Stock" value={stock} onChange={lprChangeStock}>
+					<FormControl fullWidth  variant="standard">
+						<InputLabel>Stock</InputLabel>
+						<Select label="Stock" value={stock} onChange={lprChangeStock}>
 							<MenuItem key={"Random"} value={"Random"}>Random</MenuItem>
 							{Object.values(Stocks).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
@@ -169,6 +169,7 @@ export function LifepathRandomizer() {
 						value={maxLeads}
 						onChange={lprChangeMaxLeads}
 						fullWidth
+						variant="standard"
 					/>
 				</Grid>
 
@@ -179,6 +180,7 @@ export function LifepathRandomizer() {
 						value={minLifepaths}
 						onChange={lprChangeMinLPs}
 						fullWidth
+						variant="standard"
 					/>
 				</Grid>
 
@@ -189,6 +191,7 @@ export function LifepathRandomizer() {
 						value={maxLifepaths}
 						onChange={lprChangeMaxLPs}
 						fullWidth
+						variant="standard"
 					/>
 				</Grid>
 

@@ -28,14 +28,14 @@ export function PracticePlanner(): JSX.Element {
 
 			<Typography variant="h3">Practice Planner</Typography>
 
-			<Grid container spacing={1} sx={{ width: "100%", margin: "10px 0 0" }} columns={2} justifyContent="center" alignItems="center">
+			<Grid container spacing={1} columns={2} sx={{ marginTop: 1 }} justifyContent="center" alignItems="center">
 				<Grid item>
 					<TextField
 						label="Number of Days"
 						inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
 						value={days}
 						onChange={prpChangeDays}
-						size="small"
+						variant="standard"
 					/>
 				</Grid>
 
@@ -45,7 +45,7 @@ export function PracticePlanner(): JSX.Element {
 						inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
 						value={hours}
 						onChange={prpChangeHours}
-						size="small"
+						variant="standard"
 					/>
 				</Grid>
 
@@ -57,27 +57,27 @@ export function PracticePlanner(): JSX.Element {
 			<form onSubmit={(e) => prpAddPractice(e, cells, setNotification)}>
 				<Grid container spacing={1} sx={{ width: "100%", margin: "10px 0 0" }} columns={5} justifyContent="center" alignItems="center">
 					<Grid item xs={4} sm={2} md={1}>
-						<FormControl fullWidth size="small">
-							<InputLabel id="pp-c-l">Day</InputLabel>
-							<Select labelId="pp-c-l" id="pp-c" label="Day" defaultValue={0} disabled={cells.length < 1}>
+						<FormControl fullWidth variant="standard">
+							<InputLabel>Day</InputLabel>
+							<Select label="Day" defaultValue={0} disabled={cells.length < 1}>
 								{Object.keys(cells).map(v => <MenuItem key={parseInt(v)} value={parseInt(v)}>{parseInt(v) + 1}</MenuItem>)}
 							</Select>
 						</FormControl>
 					</Grid>
 
 					<Grid item xs={4} sm={2} md={1}>
-						<FormControl fullWidth size="small">
-							<InputLabel id="pp-a-l">Skill Type</InputLabel>
-							<Select labelId="pp-a-l" id="pp-a" label="Skill Type" defaultValue={"Academic"} disabled={cells.length < 1}>
+						<FormControl fullWidth variant="standard">
+							<InputLabel>Skill Type</InputLabel>
+							<Select label="Skill Type" defaultValue={"Academic"} disabled={cells.length < 1}>
 								{Object.keys(PracticeTable).map(v => <MenuItem key={v} value={v}>{v}</MenuItem>)}
 							</Select>
 						</FormControl>
 					</Grid>
 
 					<Grid item xs={4} sm={2} md={1}>
-						<FormControl fullWidth size="small">
-							<InputLabel id="pp-b-l">Test Type</InputLabel>
-							<Select labelId="pp-b-l" id="pp-b" label="Test Type" defaultValue={"Difficult"} disabled={cells.length < 1}>
+						<FormControl fullWidth variant="standard">
+							<InputLabel>Test Type</InputLabel>
+							<Select defaultValue={"Difficult"} disabled={cells.length < 1}>
 								<MenuItem value={"Routine"}>Routine</MenuItem>
 								<MenuItem value={"Difficult"}>Difficult</MenuItem>
 								<MenuItem value={"Challenging"}>Challenging</MenuItem>
@@ -87,9 +87,9 @@ export function PracticePlanner(): JSX.Element {
 
 					<Grid item xs={4} sm={2} md={1}>
 						<TextField
-							label="Skill Name"
-							fullWidth
-							size="small"
+							id="component-simple"
+							label={"Skill Name"}
+							variant="standard"
 							defaultValue={""}
 							disabled={cells.length < 1}
 						/>

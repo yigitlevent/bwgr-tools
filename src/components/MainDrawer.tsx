@@ -31,6 +31,7 @@ function DrawerListItem({ text, icon, onClick }: { text: string; icon?: JSX.Elem
 }
 
 const Items: DrawerItem[][] = [
+	["Dice Roller"],
 	["Lifepaths", "Skills", "Traits"],
 	["Lifepath Randomizer", "Practice Planner", "Magic Wheel"],
 	["Duel of Wits Planner", "Range and Cover Planner", "Fight Planner"]
@@ -66,7 +67,6 @@ export function MainDrawer() {
 						</Fragment>
 					);
 				})}
-
 				<Divider />
 			</Box>
 		</Drawer>

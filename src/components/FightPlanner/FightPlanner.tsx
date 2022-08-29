@@ -42,8 +42,8 @@ export function FightPlanner() {
 
 			<Typography variant="h3">Fight Planner</Typography>
 
-			<Stack spacing={5} sx={{ margin: "20px 0" }}>
-				<Grid container spacing={1} columns={4}>
+			<Stack spacing={5} sx={{ marginTop: 1 }}>
+				<Grid container spacing={1} columns={4} justifyContent="center" alignItems="center">
 					<Grid item xs={4} sm={2} md={1}>
 						<TextField
 							label="Reflexes"
@@ -51,14 +51,14 @@ export function FightPlanner() {
 							value={reflexes}
 							onChange={(e) => fgtChangeReflexes(parseInt(e.target.value), actions, setNotification)}
 							fullWidth
-							size="small"
+							variant="standard"
 						/>
 					</Grid>
 
 					<Grid item xs={4} sm={2} md={1}>
-						<FormControl fullWidth size="small">
-							<InputLabel id="sa">Volley</InputLabel>
-							<Select labelId="sa" label="Volley" value={volleyIndex} onChange={(e) => fgtChangeVolleyIndex(parseInt(e.target.value as string))}>
+						<FormControl fullWidth variant="standard">
+							<InputLabel>Volley</InputLabel>
+							<Select label="Volley" value={volleyIndex} onChange={(e) => fgtChangeVolleyIndex(parseInt(e.target.value as string))}>
 								<MenuItem value={0}>Volley 1</MenuItem>
 								<MenuItem value={1}>Volley 2</MenuItem>
 								<MenuItem value={2}>Volley 3</MenuItem>
@@ -67,9 +67,9 @@ export function FightPlanner() {
 					</Grid>
 
 					<Grid item xs={4} sm={2} md={1}>
-						<FormControl fullWidth size="small">
-							<InputLabel id="sa">Action</InputLabel>
-							<Select labelId="sa" label="Action" value={selectedAction} onChange={(e) => fgtChangeSelectedAction(volleyIndex, e.target.value)}>
+						<FormControl fullWidth variant="standard">
+							<InputLabel>Action</InputLabel>
+							<Select label="Action" value={selectedAction} onChange={(e) => fgtChangeSelectedAction(volleyIndex, e.target.value)}>
 								{Object.keys(GroupedFightActions).map((groupKey, groupIndex) => {
 									const elements = [
 										<ListSubheader key={groupIndex}>{groupKey}</ListSubheader>,

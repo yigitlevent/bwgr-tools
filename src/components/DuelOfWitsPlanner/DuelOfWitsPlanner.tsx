@@ -33,12 +33,12 @@ export function DuelOfWitsPlanner() {
 		<Fragment>
 			<Typography variant="h3">Duel of Wits Planner</Typography>
 
-			<Stack spacing={5} sx={{ margin: "20px 0" }}>
-				<Grid container spacing={1} columns={3}>
+			<Stack spacing={5} sx={{ marginTop: 1 }}>
+				<Grid container spacing={1} columns={3} justifyContent="center" alignItems="center">
 					<Grid item xs={3} sm={3} md={1}>
-						<FormControl fullWidth size="small">
-							<InputLabel id="sa">Volley</InputLabel>
-							<Select labelId="sa" label="Volley" value={volleyIndex} onChange={(e) => dowChangeVolleyIndex(parseInt(e.target.value as string))}>
+						<FormControl fullWidth variant="standard">
+							<InputLabel>Volley</InputLabel>
+							<Select label="Volley" value={volleyIndex} onChange={(e) => dowChangeVolleyIndex(parseInt(e.target.value as string))}>
 								<MenuItem value={0}>Volley 1</MenuItem>
 								<MenuItem value={1}>Volley 2</MenuItem>
 								<MenuItem value={2}>Volley 3</MenuItem>
@@ -47,9 +47,9 @@ export function DuelOfWitsPlanner() {
 					</Grid>
 
 					<Grid item xs={3} sm={3} md={1}>
-						<FormControl fullWidth size="small">
-							<InputLabel id="sa">Action</InputLabel>
-							<Select labelId="sa" label="Action" value={selectedAction} onChange={(e) => dowSelectedChangeAction(volleyIndex, e.target.value)}>
+						<FormControl fullWidth variant="standard">
+							<InputLabel>Action</InputLabel>
+							<Select label="Action" value={selectedAction} onChange={(e) => dowSelectedChangeAction(volleyIndex, e.target.value)}>
 								{DuelOfWitsActions.map(v => <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>)}
 							</Select>
 						</FormControl>

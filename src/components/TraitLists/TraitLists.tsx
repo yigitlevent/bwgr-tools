@@ -23,11 +23,11 @@ export function TraitLists() {
 		<Fragment>
 			<Typography variant="h3">Trait Explorer</Typography>
 
-			<Grid container spacing={1} sx={{ width: "100%" }} columns={2}>
+			<Grid container spacing={1} columns={1} sx={{ marginTop: 1 }} justifyContent="center" alignItems="center">
 				<Grid item xs={2} md={1}>
-					<FormControl variant="standard" sx={{ m: 1, minWidth: 120, width: "95%" }}>
-						<InputLabel id="tls-label">Trait Category</InputLabel>
-						<Select label="Trait Category" labelId="tls-label" value={category} onChange={trtChangeCategory} placeholder="Select a category">
+					<FormControl variant="standard" fullWidth>
+						<InputLabel>Trait Category</InputLabel>
+						<Select label="Trait Category" value={category} onChange={trtChangeCategory} placeholder="Select a category">
 							{Object.values(TraitCategories).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
