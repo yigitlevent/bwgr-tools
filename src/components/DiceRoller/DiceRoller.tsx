@@ -120,7 +120,7 @@ export function DiceRoller() {
 		<Fragment>
 			<Typography variant="h3">Dice Roller</Typography>
 
-			<Grid container columns={6} spacing={1} sx={{ marginTop: 1 }} justifyContent="center" alignItems="center">
+			<Grid container columns={6} spacing={1} sx={{ marginTop: 1 }} justifyContent="space-between" alignItems="center">
 				<Grid item xs={6} sm={2} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Shade</InputLabel>
