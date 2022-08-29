@@ -1,7 +1,7 @@
 import { createRef, Fragment, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 
-import code from "../../fonts/SourceCodePro-SemiBold.ttf";
+import code from "../../assets/fonts/SourceCodePro-SemiBold.woff";
 
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";

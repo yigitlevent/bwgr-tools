@@ -1,9 +1,9 @@
 import { createTheme } from "@mui/material/styles";
 import { orange } from "@mui/material/colors";
 
-import text from "/src/fonts/literata.ttf"; // text
-import title from "/src/fonts/thryromanes.ttf"; // title
-import hand from "/src/fonts/CormorantUpright-SemiBold.ttf"; // hand
+import text from "/src/assets/fonts/literata.woff"; // text
+import title from "/src/assets/fonts/thryromanes.woff"; // title
+import hand from "/src/assets/fonts/CormorantUpright-SemiBold.woff"; // hand
 
 declare module "@mui/material/styles" {
 	interface Theme {
@@ -31,15 +31,15 @@ export const THEME = createTheme({
 			styleOverrides: `
 			@font-face {
 				font-family: 'text';
-				src: url(${text}) format('truetype');
+				src: url(${text}) format('woff');
 			}
 			@font-face {
 				font-family: 'title';
-				src: url(${title}) format('truetype');
+				src: url(${title}) format('woff');
 			}
 			@font-face {
 				font-family: 'hand';
-				src: url(${hand}) format('truetype');
+				src: url(${hand}) format('woff');
 			}
 		  `
 		}
