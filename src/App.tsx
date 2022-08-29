@@ -11,7 +11,7 @@ import { MainBox } from "./components/MainBox";
 
 
 export function App(): JSX.Element {
-	const { drwToggleDrawer } = useStore();
+	const { drwToggleDrawer } = useStore().drawer;
 
 	return (
 		<Fragment>
