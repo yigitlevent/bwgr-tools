@@ -41,7 +41,7 @@ export const MWCONST = { canvasSize: 580, circleRadius: 32, circleOffset: 90, te
 
 export function MagicWheel() {
 	const { aoe, element, impetus, duration, origin, direction, steps, cover } = useAppSelector(state => state.magicWheel);
-	const { mgwChangeAOE, mgwChangeElement, mgwChangeImpetus, mgwChangeDuration, mgwChangeOrigin, mgwChangeDirection, mgwChangeSteps, mgwToggleCover } = useStore();
+	const { mgwChangeAOE, mgwChangeElement, mgwChangeImpetus, mgwChangeDuration, mgwChangeOrigin, mgwChangeDirection, mgwChangeSteps, mgwToggleCover } = useStore().magicWheel;
 
 	const wrapperRef = createRef<HTMLDivElement>();
 	const [size, setSize] = useState("0px");

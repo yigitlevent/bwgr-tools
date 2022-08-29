@@ -17,7 +17,7 @@ import { PopoverLink } from "../Shared/PopoverLink";
 
 export function TraitLists() {
 	const { category } = useAppSelector(state => state.traitList);
-	const { trtChangeCategory } = useStore();
+	const { trtChangeCategory } = useStore().traitList;
 
 	return (
 		<Fragment>

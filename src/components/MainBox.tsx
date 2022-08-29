@@ -13,7 +13,7 @@ import { LifepathRandomizer } from "./LifepathRandomizer/LifepathRandomizer";
 import { PracticePlanner } from "./PracticePlanner/PracticePlanner";
 import { MagicWheel } from "./MagicWheel/MagicWheel";
 import { DuelOfWitsPlanner } from "./DuelOfWitsPlanner/DuelOfWitsPlanner";
-import { RangeAndCoverPlanner } from "./RangeAndCover/RangeAndCoverPlanner";
+import { RangeAndCoverPlanner } from "./RangeAndCoverPlanner/RangeAndCoverPlanner";
 import { FightPlanner } from "./FightPlanner/FightPlanner";
 
 export function MainBox() {

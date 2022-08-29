@@ -17,7 +17,7 @@ import { PopoverLink } from "../Shared/PopoverLink";
 
 export function SkillLists() {
 	const { category } = useAppSelector(state => state.skillList);
-	const { sklChangeCategory } = useStore();
+	const { sklChangeCategory } = useStore().skillList;
 
 	return (
 		<Fragment>

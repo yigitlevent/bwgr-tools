@@ -31,7 +31,7 @@ const GroupedRangeAndCoverActions = GroupBy(RangeAndCoverActions, a => a.group);
 
 export function RangeAndCoverPlanner() {
 	const { volleyIndex, actions, selectedAction } = useAppSelector(state => state.rangeAndCover);
-	const { racChangeVolleyIndex, racAddAction, racDeleteAction, racSelectedChangeAction, racToggleActionDetails, racToggleActionVisibility } = useStore();
+	const { racChangeVolleyIndex, racAddAction, racDeleteAction, racSelectedChangeAction, racToggleActionDetails, racToggleActionVisibility } = useStore().rangeAndCover;
 
 	return (
 		<Fragment>

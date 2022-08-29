@@ -32,7 +32,7 @@ const GroupedFightActions = GroupBy(FightActions, a => a.group);
 
 export function FightPlanner() {
 	const { reflexes, volleyIndex, actions, selectedAction } = useAppSelector(state => state.fight);
-	const { fgtChangeReflexes, fgtChangeVolleyIndex, fgtAddAction, fgtDeleteAction, fgtChangeSelectedAction, fgtToggleActionDetails, fgtToggleActionVisibility } = useStore();
+	const { fgtChangeReflexes, fgtChangeVolleyIndex, fgtAddAction, fgtDeleteAction, fgtChangeSelectedAction, fgtToggleActionDetails, fgtToggleActionVisibility } = useStore().fight;
 
 	const [notification, setNotification] = useState<null | JSX.Element>(null);
 

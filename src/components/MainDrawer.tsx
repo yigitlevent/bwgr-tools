@@ -39,7 +39,7 @@ const Items: DrawerItem[][] = [
 
 export function MainDrawer() {
 	const { open, type } = useAppSelector(state => state.drawer);
-	const { drwCloseDrawer, drwSetSelectedItem } = useStore();
+	const { drwCloseDrawer, drwSetSelectedItem } = useStore().drawer;
 
 	return (
 		<Drawer

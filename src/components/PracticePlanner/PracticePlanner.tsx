@@ -18,7 +18,7 @@ import { PracticePlannerCell } from "./PracticePlannerCell";
 
 export function PracticePlanner(): JSX.Element {
 	const { days, hours, cells } = useAppSelector(state => state.practicePlanner);
-	const { prpChangeDays, prpChangeHours, prpAddCells, prpAddPractice } = useStore();
+	const { prpChangeDays, prpChangeHours, prpAddCells, prpAddPractice } = useStore().practicePlanner;
 
 	const [notification, setNotification] = useState<null | JSX.Element>(null);
 

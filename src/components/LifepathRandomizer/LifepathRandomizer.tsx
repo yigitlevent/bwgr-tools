@@ -26,7 +26,7 @@ import { LifepathRandomizerBasics } from "./LifepathRandomizerBasics";
 
 export function LifepathRandomizer() {
 	const { stock, setting, noDuplicates, maxLeads, maxLifepaths, minLifepaths } = useAppSelector(state => state.lifepathRandomizer);
-	const { lprChangeMaxLPs, lprChangeMaxLeads, lprChangeMinLPs, lprChangeStock, lprToggleNoDuplicates } = useStore();
+	const { lprChangeMaxLPs, lprChangeMaxLeads, lprChangeMinLPs, lprChangeStock, lprToggleNoDuplicates } = useStore().lifepathRandomizer;
 
 	const [chosenLifepaths, setChosen] = useState<Lifepath[]>([]);
 	const [triedTooMuch, setTriedTooMuch] = useState(false);

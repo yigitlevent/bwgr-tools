@@ -16,7 +16,7 @@ import { useStore } from "../../state/useStore";
 
 export function PracticePlannerCell({ cell, cellIndex, setNotification }: { cell: Cell; cellIndex: number; setNotification: (value: React.SetStateAction<JSX.Element | null>) => void; }) {
 	const { cells } = useAppSelector(state => state.practicePlanner);
-	const { prpDeleteCell, prpChangeCellHour, prpDeletePractice } = useStore();
+	const { prpDeleteCell, prpChangeCellHour, prpDeletePractice } = useStore().practicePlanner;
 
 	return (
 		<Paper elevation={3} sx={{ padding: "5px 10px", margin: "10px 10px 10px" }}>

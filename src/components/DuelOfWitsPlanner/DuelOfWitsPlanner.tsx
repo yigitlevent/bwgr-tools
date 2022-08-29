@@ -27,7 +27,7 @@ import { DuelOfWitsActionDetails } from "./DuelOfWitsActionDetails";
 
 export function DuelOfWitsPlanner() {
 	const { volleyIndex, actions, selectedAction } = useAppSelector(state => state.duelOfWits);
-	const { dowChangeVolleyIndex, dowAddAction, dowDeleteAction, dowSelectedChangeAction, dowToggleActionDetails, dowToggleActionVisibility } = useStore();
+	const { dowChangeVolleyIndex, dowAddAction, dowDeleteAction, dowSelectedChangeAction, dowToggleActionDetails, dowToggleActionVisibility } = useStore().duelOfWits;
 
 	return (
 		<Fragment>

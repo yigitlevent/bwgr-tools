@@ -16,7 +16,7 @@ import { LifepathBox } from "./LifepathBox";
 
 export function Lifepaths() {
 	const { stock, setting } = useAppSelector(state => state.lifepathList);
-	const { lplChangeStock, lplChangeSetting } = useStore();
+	const { lplChangeStock, lplChangeSetting } = useStore().lifepathList;
 
 	return (
 		<Fragment>
