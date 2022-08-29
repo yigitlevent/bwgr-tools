@@ -12,6 +12,13 @@ import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 
+import LooksOneIcon from "@mui/icons-material/LooksOne";
+import LooksTwoIcon from "@mui/icons-material/LooksTwo";
+import Looks3Icon from "@mui/icons-material/Looks3";
+import Looks4Icon from "@mui/icons-material/Looks4";
+import Looks5Icon from "@mui/icons-material/Looks5";
+import Looks6Icon from "@mui/icons-material/Looks6";
+
 import { useAppSelector } from "../../state/store";
 import { useStore } from "../../state/useStore";
 import { TestResult } from "../../state/reducers/diceRoller";
@@ -23,14 +30,12 @@ export function DiceRoller() {
 	const { shade, dicePool, obstacle, isOpenEnded, isDoubleObstacle, result } = useAppSelector(state => state.diceRoller);
 	const { dirChangeShade, dirChangeDicePool, dirChangeObstacle, dirToggleIsOpenEnded, dirToggleIsDoubleObstacle, dirSetResult } = useStore().diceRoller;
 
-	const calculateResult = (dice: number[]) => {
+	const calculateResult = (dice: number[], singleFailureRolled = false) => {
 		let successes = 0;
 		let failures = 0;
 
 		dice.forEach((v) => {
-			if (shade === "Black" && v > 3) successes += 1;
-			else if (shade === "Gray" && v > 2) successes += 1;
-			else if (shade === "Black" && v > 1) successes += 1;
+			if ((shade === "Black" && v > 3) || (shade === "Gray" && v > 2) || (shade === "White" && v > 1)) successes += 1;
 			else failures += 1;
 		});
 
@@ -41,28 +46,30 @@ export function DiceRoller() {
 					? "Routine"
 					: "Difficult";
 
-		/*
-
-		const post = `Test type is ${test}. Dice rolled: ${dice.join(", ")}`;*/
-
-		dirSetResult(dice, successes, failures, test);
+		console.log({ dice, successes, failures, test, singleFailureRolled });
+		dirSetResult(dice, successes, failures, test, singleFailureRolled);
 	};
 
-	const rerollDice = (dice: number[]) => {
+	const rerollFailure = (dice: number[]) => {
+		const tempDice = [...dice];
+		const index = tempDice.findIndex(v => (shade === "Black" && v < 4) || (shade === "Gray" && v < 3) || (shade === "White" && v < 2));
+		tempDice[index] = RandomNumber(1, 6);
+		calculateResult(tempDice.sort((a, b) => b - a), true);
+	};
+
+	const rerollSixes = (dice: number[]) => {
 		const rerolled: number[][] = [];
 		if (isOpenEnded) {
-			rerolled.push(dice.filter(v => v === 6).map(v => RandomNumber(1, 6)));
+			rerolled.push(dice.filter(v => v === 6).map(() => RandomNumber(1, 6)));
 			while (rerolled[rerolled.length - 1].filter(v => v === 6).length > 0) {
-				rerolled.push(rerolled[rerolled.length - 1].filter(v => v === 6).map(v => RandomNumber(1, 6)));
+				rerolled.push(rerolled[rerolled.length - 1].filter(v => v === 6).map(() => RandomNumber(1, 6)));
 			}
 		}
-		return dice.map(() => RandomNumber(1, 6));
+		calculateResult([...dice, ...rerolled.flat()].sort((a, b) => b - a));
 	};
 
 	const resolveDiceRoll = () => {
-		const dice = [...Array(dicePool)].map(() => RandomNumber(1, 6));
-		dice.push(...rerollDice(dice).flat());
-		calculateResult(dice.sort((a, b) => b - a));
+		rerollSixes([...Array(dicePool)].map(() => RandomNumber(1, 6)));
 	};
 
 	const getResult = (testResult: TestResult) => {
@@ -74,10 +81,39 @@ export function DiceRoller() {
 				: "Tie.";
 
 		return (
-			<Stack sx={{ margin: [0, 4] }}>
+			<Fragment>
 				<Typography variant="h6">Result</Typography>
 				<Typography>{pre}</Typography>
-			</Stack>
+			</Fragment>
+		);
+	};
+
+	const getIcons = (testResult: TestResult) => {
+		const diceIcons = () => {
+			return testResult.dice.map((v, i) => {
+				if (v === 1) return <LooksOneIcon key={i} color="error" sx={{ margin: "0 0 -6px" }} />;
+				else if (v === 2) return <LooksTwoIcon key={i} color={(shade === "White") ? "success" : "error"} sx={{ margin: "0 0 -6px" }} />;
+				else if (v === 3) return <Looks3Icon key={i} color={(shade === "Gray") ? "success" : "error"} sx={{ margin: "0 0 -6px" }} />;
+				else if (v === 4) return <Looks4Icon key={i} color={"success"} sx={{ margin: "0 0 -6px" }} />;
+				else if (v === 5) return <Looks5Icon key={i} color={"success"} sx={{ margin: "0 0 -6px" }} />;
+				else return <Looks6Icon key={i} color={"success"} sx={{ margin: "0 0 -6px" }} />;
+			});
+		};
+
+		return (
+			<Fragment>
+				<Typography variant="h6">Dice</Typography>
+				<Typography>{diceIcons()}</Typography>
+			</Fragment>
+		);
+	};
+
+	const getTest = (testResult: TestResult) => {
+		return (
+			<Fragment>
+				<Typography variant="h6">Test</Typography>
+				<Typography>{testResult.test}</Typography>
+			</Fragment>
 		);
 	};
 
@@ -140,7 +176,30 @@ export function DiceRoller() {
 				</Grid>
 			</Grid>
 
-			{result ? getResult(result) : null}
-		</Fragment>
+			{result
+				? <Grid container columns={3} spacing={1} sx={{ margin: 3 }}>
+					<Grid item xs={3} sm={1}>
+						{getResult(result)}
+					</Grid>
+					<Grid item xs={3} sm={1}>
+						{getIcons(result)}
+
+						{!isOpenEnded
+							? <Button variant="outlined" size="medium" onClick={() => rerollSixes(result.dice)} sx={{ margin: "24px 0 0" }}>Reroll sixes using Fate</Button>
+							: null
+						}
+
+						{result && isOpenEnded && result.failures > 0 && !result.singleFailureRolled
+							? <Button variant="outlined" size="medium" onClick={() => rerollFailure(result.dice)} sx={{ margin: "6px 0 0" }}>Reroll a single failure using Fate</Button>
+							: null
+						}
+					</Grid>
+					<Grid item xs={3} sm={1}>
+						{getTest(result)}
+					</Grid>
+				</Grid>
+				: null
+			}
+		</Fragment >
 	);
 }

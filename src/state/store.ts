@@ -2,6 +2,7 @@ import { configureStore, combineReducers, Dispatch } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
 import { DrawerActions, DrawerReducer, DrawerState } from "./reducers/drawer";
+import { DiceRollerActions, DiceRollerReducer, DiceRollerState } from "./reducers/diceRoller";
 import { DuelOfWitsActions, DuelOfWitsReducer, DuelOfWitsState } from "./reducers/duelOfWits";
 import { FightActions, FightReducer, FightState } from "./reducers/fight";
 import { LifepathListActions, LifepathListReducer, LifepathListState } from "./reducers/lifepathList";
@@ -13,12 +14,14 @@ import { SkillListActions, SkillListReducer, SkillListState } from "./reducers/s
 import { TraitListActions, TraitListReducer, TraitListState } from "./reducers/traitList";
 
 type CombinedActions = DrawerActions
+	| DiceRollerActions
 	| LifepathListActions | SkillListActions | TraitListActions
 	| MagicWheelActions | LifepathRandomizerActions | PracticePlannerActions
 	| DuelOfWitsActions | RangeAndCoverActions | FightActions;
 
 type CombinedState = {
 	drawer: DrawerState;
+	diceRoller: DiceRollerState;
 	lifepathList: LifepathListState;
 	skillList: SkillListState;
 	traitList: TraitListState;
@@ -33,6 +36,7 @@ type CombinedState = {
 export const STORE = configureStore({
 	reducer: combineReducers<CombinedState>({
 		drawer: DrawerReducer,
+		diceRoller: DiceRollerReducer,
 		lifepathList: LifepathListReducer,
 		skillList: SkillListReducer,
 		traitList: TraitListReducer,

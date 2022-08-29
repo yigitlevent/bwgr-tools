@@ -4,6 +4,7 @@ import { SelectChangeEvent } from "@mui/material/Select";
 
 import { useAppDispatch } from "./store";
 import type { DrawerItem } from "./reducers/drawer";
+import { TestResult } from "./reducers/diceRoller";
 import { PracticeTable } from "../data/tables";
 import type { DuelOfWitsActionExtended } from "./reducers/duelOfWits";
 import { DuelOfWitsAction, DuelOfWitsActions } from "../data/duelOfWits";
@@ -32,8 +33,29 @@ export function useStore() {
 		}
 	};
 
-	const drwSetSelectedItem = (value: DrawerItem) => {
-		dispatch({ type: "SELECT_DRAWER_ITEM", payload: { selected: value } });
+	// DICE ROLLER
+	const diceRoller = {
+		dirChangeShade: (shade: string) => {
+			dispatch({ type: "CHANGE_DICE_ROLLER_SHADE", payload: { shade } });
+		},
+		dirChangeDicePool: (dicePool: number) => {
+			const value = Clamp(dicePool, 1, 50);
+			dispatch({ type: "CHANGE_DICE_ROLLER_DICE_POOL", payload: { dicePool: value } });
+		},
+		dirChangeObstacle: (obstacle: number) => {
+			const value = Clamp(obstacle, 1, 50);
+			dispatch({ type: "CHANGE_DICE_ROLLER_OBSTACLE", payload: { obstacle: value } });
+		},
+		dirToggleIsOpenEnded: () => {
+			dispatch({ type: "TOGGLE_DICE_ROLLER_IS_OPEN_ENDED" });
+		},
+		dirToggleIsDoubleObstacle: () => {
+			dispatch({ type: "TOGGLE_DICE_ROLLER_IS_DOUBLE_OBSTACLE" });
+		},
+		dirSetResult: (dice: number[], successes: number, failures: number, test: string, singleFailureRolled: boolean) => {
+			const result: TestResult = { dice, successes, failures, test, singleFailureRolled };
+			dispatch({ type: "SET_DICE_ROLLER_RESULT", payload: { result } });
+		}
 	};
 
 	// LIFEPATH LIST
