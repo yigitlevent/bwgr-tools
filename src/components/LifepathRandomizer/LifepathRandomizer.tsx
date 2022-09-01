@@ -213,15 +213,15 @@ export function LifepathRandomizer() {
 			</Grid>
 
 			{(chosenLifepaths.length > 0)
-				? <Grid container spacing={1} columns={3} sx={{ margin: "6px 0 0" }}>
+				? <Grid container spacing={1} columns={2} sx={{ margin: "6px 0 0" }}>
 					{triedTooMuch
-						? <Grid item xs={3}>
+						? <Grid item xs={2}>
 							<Alert severity="warning">There might be lifepaths missing because of the chosen options.</Alert>
 						</Grid>
 						: null
 					}
 
-					<Grid item xs={3} md={1}>
+					<Grid item xs={2} md={1}>
 						<Divider sx={{ margin: "0 0 6px" }}>
 							<Typography>Lifepaths</Typography>
 						</Divider>
@@ -239,7 +239,7 @@ export function LifepathRandomizer() {
 						<LifepathRandomizerBasics chosenLifepaths={chosenLifepaths} />
 					</Grid>
 
-					<Grid item xs={3} md={2}>
+					<Grid item xs={2} md={1}>
 						<Divider sx={{ margin: "0 0 6px" }}>
 							<Typography>Skills, Traits, and Misc</Typography>
 						</Divider>
