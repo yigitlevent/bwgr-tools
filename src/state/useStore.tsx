@@ -52,8 +52,8 @@ export function useStore() {
 		dirToggleIsDoubleObstacle: () => {
 			dispatch({ type: "TOGGLE_DICE_ROLLER_IS_DOUBLE_OBSTACLE" });
 		},
-		dirSetResult: (dice: number[], successes: number, failures: number, test: string, singleFailureRolled: boolean) => {
-			const result: TestResult = { dice, successes, failures, test, singleFailureRolled };
+		dirSetResult: (dice: number[], successes: number, failures: number, test: string, usedFate: boolean) => {
+			const result: TestResult = { dice, successes, failures, test, usedFate };
 			dispatch({ type: "SET_DICE_ROLLER_RESULT", payload: { result } });
 		}
 	};

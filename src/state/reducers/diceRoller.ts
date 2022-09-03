@@ -3,7 +3,7 @@ export interface TestResult {
 	successes: number;
 	failures: number;
 	test: string;
-	singleFailureRolled: boolean;
+	usedFate: boolean;
 }
 
 interface ChangeShadeAction { type: "CHANGE_DICE_ROLLER_SHADE"; payload: { shade: string; }; }

@@ -29,7 +29,7 @@ export function DiceRoller() {
 	const { shade, dicePool, obstacle, isOpenEnded, isDoubleObstacle, result } = useAppSelector(state => state.diceRoller);
 	const { dirChangeShade, dirChangeDicePool, dirChangeObstacle, dirToggleIsOpenEnded, dirToggleIsDoubleObstacle, dirSetResult } = useStore().diceRoller;
 
-	const calculateResult = (dice: number[], singleFailureRolled = false) => {
+	const calculateResult = (dice: number[], usedFate: boolean) => {
 		let successes = 0;
 		let failures = 0;
 
@@ -45,8 +45,7 @@ export function DiceRoller() {
 					? "Routine"
 					: "Difficult";
 
-		console.log({ dice, successes, failures, test, singleFailureRolled });
-		dirSetResult(dice, successes, failures, test, singleFailureRolled);
+		dirSetResult(dice, successes, failures, test, usedFate);
 	};
 
 	const rerollFailure = (dice: number[]) => {
@@ -56,19 +55,19 @@ export function DiceRoller() {
 		calculateResult(tempDice.sort((a, b) => b - a), true);
 	};
 
-	const rerollSixes = (dice: number[]) => {
+	const rerollSixes = (dice: number[], spendingFate: boolean) => {
 		const rerolled: number[][] = [];
-		if (isOpenEnded) {
+		if (isOpenEnded || spendingFate) {
 			rerolled.push(dice.filter(v => v === 6).map(() => RandomNumber(1, 6)));
 			while (rerolled[rerolled.length - 1].filter(v => v === 6).length > 0) {
 				rerolled.push(rerolled[rerolled.length - 1].filter(v => v === 6).map(() => RandomNumber(1, 6)));
 			}
 		}
-		calculateResult([...dice, ...rerolled.flat()].sort((a, b) => b - a));
+		calculateResult([...dice, ...rerolled.flat()].sort((a, b) => b - a), spendingFate);
 	};
 
 	const resolveDiceRoll = () => {
-		rerollSixes([...Array(dicePool)].map(() => RandomNumber(1, 6)));
+		rerollSixes([...Array(dicePool)].map(() => RandomNumber(1, 6)), false);
 	};
 
 	const getResult = (testResult: TestResult) => {
