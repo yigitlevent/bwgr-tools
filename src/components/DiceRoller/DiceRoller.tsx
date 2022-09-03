@@ -182,12 +182,12 @@ export function DiceRoller() {
 					<Grid item xs={3} sm={1}>
 						{getIcons(result)}
 
-						{!isOpenEnded
-							? <Button variant="outlined" size="medium" onClick={() => rerollSixes(result.dice)} sx={{ margin: "24px 0 0" }}>Reroll sixes using Fate</Button>
+						{!isOpenEnded && result.dice.includes(6) && !result.usedFate
+							? <Button variant="outlined" size="medium" onClick={() => rerollSixes(result.dice, true)} sx={{ margin: "24px 0 0" }}>Reroll sixes using Fate</Button>
 							: null
 						}
 
-						{result && isOpenEnded && result.failures > 0 && !result.singleFailureRolled
+						{isOpenEnded && result.failures > 0 && !result.usedFate
 							? <Button variant="outlined" size="medium" onClick={() => rerollFailure(result.dice)} sx={{ margin: "6px 0 0" }}>Reroll a single failure using Fate</Button>
 							: null
 						}
@@ -198,6 +198,6 @@ export function DiceRoller() {
 				</Grid>
 				: null
 			}
-		</Fragment >
+		</Fragment>
 	);
 }

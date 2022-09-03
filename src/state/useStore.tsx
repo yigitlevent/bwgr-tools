@@ -39,11 +39,11 @@ export function useStore() {
 			dispatch({ type: "CHANGE_DICE_ROLLER_SHADE", payload: { shade } });
 		},
 		dirChangeDicePool: (dicePool: number) => {
-			const value = Clamp(dicePool, 1, 50);
+			const value = Clamp(dicePool, 0, 50);
 			dispatch({ type: "CHANGE_DICE_ROLLER_DICE_POOL", payload: { dicePool: value } });
 		},
 		dirChangeObstacle: (obstacle: number) => {
-			const value = Clamp(obstacle, 1, 50);
+			const value = Clamp(obstacle, 0, 50);
 			dispatch({ type: "CHANGE_DICE_ROLLER_OBSTACLE", payload: { obstacle: value } });
 		},
 		dirToggleIsOpenEnded: () => {
