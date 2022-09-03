@@ -1,4 +1,4 @@
-import { Fragment, MouseEvent, useState } from "react";
+import { MouseEvent, useState } from "react";
 
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
@@ -10,7 +10,7 @@ import { Trait } from "../../data/traits";
 
 function SkillPop({ skill }: { skill: Skill; }) {
 	return (
-		<Grid container spacing={1} sx={{ width: "400px", padding: 1 }} columns={2}>
+		<Grid container spacing={1} columns={2}>
 			<Grid item xs={2}>
 				<Typography variant="h6">{skill.name}</Typography>
 			</Grid>
@@ -41,7 +41,7 @@ function SkillPop({ skill }: { skill: Skill; }) {
 
 function TraitPop({ trait }: { trait: Trait; }) {
 	return (
-		<Grid container spacing={1} sx={{ width: "400px", padding: 1 }} columns={3}>
+		<Grid container spacing={1} columns={3}>
 			<Grid item xs={3}>
 				<Typography variant="h6">{trait.name}</Typography>
 			</Grid>
@@ -83,7 +83,7 @@ function Pop({ anchor, data, onClose }: { anchor: HTMLElement | null; data: Skil
 			anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
 			transformOrigin={{ vertical: "top", horizontal: "left" }}
 		>
-			<Grid container spacing={1} sx={{ width: "400px", padding: "4px 10px 0px" }} columns={2}>
+			<Grid container spacing={1} sx={{ maxWidth: "400px", padding: "12px 16px" }} columns={2}>
 				{"root" in data
 					? <SkillPop skill={data} />
 					: <TraitPop trait={data} />
@@ -102,11 +102,9 @@ export function PopoverLink({ data }: { data: Skill | Trait; }) {
 	};
 
 	return (
-		<Fragment>
-			<Link underline="hover" onMouseDown={openPopover}>
-				{data.name}
-				<Pop anchor={anchor} data={data} onClose={closePopover} />
-			</Link>
-		</Fragment>
+		<Link underline="hover" onMouseDown={openPopover}>
+			{data.name}
+			<Pop anchor={anchor} data={data} onClose={closePopover} />
+		</Link>
 	);
 }
