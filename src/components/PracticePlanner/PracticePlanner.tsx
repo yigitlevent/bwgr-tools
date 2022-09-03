@@ -60,7 +60,7 @@ export function PracticePlanner(): JSX.Element {
 					<Grid item xs={4} sm={2} md={1}>
 						<FormControl fullWidth variant="standard">
 							<InputLabel>Day</InputLabel>
-							<Select label="Day" defaultValue={0} disabled={cells.length < 1}>
+							<Select label="Day" defaultValue={""} disabled={cells.length < 1}>
 								{Object.keys(cells).map(v => <MenuItem key={parseInt(v)} value={parseInt(v)}>{parseInt(v) + 1}</MenuItem>)}
 							</Select>
 						</FormControl>
