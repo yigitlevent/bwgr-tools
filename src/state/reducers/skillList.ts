@@ -7,7 +7,7 @@ export interface SkillListState {
 }
 
 const INITIAL: SkillListState = {
-	category: ""
+	category: "Any General"
 };
 
 export const SkillListReducer = (state = INITIAL, action: SkillListActions): SkillListState => {

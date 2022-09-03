@@ -7,7 +7,7 @@ export interface TraitListState {
 }
 
 const INITIAL: TraitListState = {
-	category: ""
+	category: "Any Character"
 };
 
 export const TraitListReducer = (state = INITIAL, action: TraitListActions): TraitListState => {
