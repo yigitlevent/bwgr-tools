@@ -6,7 +6,7 @@ import Paper from "@mui/material/Paper";
 import { useAppSelector } from "../state/store";
 
 import { DiceRoller } from "./DiceRoller/DiceRoller";
-import { Lifepaths } from "./LifepathLists/LifepathLists";
+import { LifepathLists } from "./LifepathLists/LifepathLists";
 import { SkillLists } from "./SkillLists/SkillLists";
 import { TraitLists } from "./TraitLists/TraitLists";
 import { LifepathRandomizer } from "./LifepathRandomizer/LifepathRandomizer";
@@ -24,7 +24,7 @@ export function MainBox() {
 			case "Dice Roller":
 				return <DiceRoller />;
 			case "Lifepaths":
-				return <Lifepaths />;
+				return <LifepathLists />;
 			case "Skills":
 				return <SkillLists />;
 			case "Traits":

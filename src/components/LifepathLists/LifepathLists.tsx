@@ -12,9 +12,10 @@ import { useStore } from "../../state/useStore";
 import { Stocks } from "../../data/stocks";
 
 import { LifepathBox } from "./LifepathBox";
+import { GenericGrid } from "../Shared/Grids";
 
 
-export function Lifepaths() {
+export function LifepathLists() {
 	const { stock, setting } = useAppSelector(state => state.lifepathList);
 	const { lplChangeStock, lplChangeSetting } = useStore().lifepathList;
 
@@ -22,7 +23,7 @@ export function Lifepaths() {
 		<Fragment>
 			<Typography variant="h3">Lifepath Explorer</Typography>
 
-			<Grid container spacing={1} columns={2} sx={{ marginTop: 1 }} justifyContent="center" alignItems="center">
+			<GenericGrid columns={2} center>
 				<Grid item xs={2} md={1}>
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Stock</InputLabel>
@@ -42,12 +43,18 @@ export function Lifepaths() {
 						</Select>
 					</FormControl>
 				</Grid>
-			</Grid>
+			</GenericGrid>
 
-			{stock !== "" && setting !== ""
-				? Stocks[stock].settings[setting].lifepaths.map((v, i) => <LifepathBox key={i} lifepath={v} />)
-				: null
-			}
+			<GenericGrid columns={1} spacing={2} center>
+				{stock !== "" && setting !== ""
+					? Stocks[stock].settings[setting].lifepaths.map((v, i) =>
+						<Grid item xs={1} key={i}>
+							<LifepathBox lifepath={v} />
+						</Grid>
+					)
+					: null
+				}
+			</GenericGrid>
 		</Fragment>
 	);
 }

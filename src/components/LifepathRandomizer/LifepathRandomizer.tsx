@@ -22,6 +22,7 @@ import { RandomNumber } from "../../utils/misc";
 
 import { LifepathRandomizerLists } from "./LifepathRandomizerLists";
 import { LifepathRandomizerBasics } from "./LifepathRandomizerBasics";
+import { GenericGrid } from "../Shared/Grids";
 
 
 export function LifepathRandomizer() {
@@ -151,9 +152,9 @@ export function LifepathRandomizer() {
 		<Fragment>
 			<Typography variant="h3">Lifepath Randomizer</Typography>
 
-			<Grid container spacing={1} columns={5} sx={{ marginTop: 1 }} justifyContent="center" alignItems="center">
+			<GenericGrid columns={5} center>
 				<Grid item xs={5} sm={2} md={1}>
-					<FormControl fullWidth  variant="standard">
+					<FormControl fullWidth variant="standard">
 						<InputLabel>Stock</InputLabel>
 						<Select label="Stock" value={stock} onChange={lprChangeStock}>
 							<MenuItem key={"Random"} value={"Random"}>Random</MenuItem>
@@ -207,18 +208,18 @@ export function LifepathRandomizer() {
 					<Alert severity="info">Random lifepath selection does not consider the gender, age, and emotional attribute limits. Please make sure to check those requirements seperately.</Alert>
 				</Grid>
 
-				<Grid item>
-					<Button variant="outlined" onClick={() => createRandom()}>Generate Random Character</Button>
+				<Grid item xs={5}>
+					<Button variant="outlined" onClick={() => createRandom()} fullWidth>Generate Random Character</Button>
 				</Grid>
-			</Grid>
+			</GenericGrid>
 
 			{(chosenLifepaths.length > 0)
-				? <Grid container spacing={1} columns={2} sx={{ margin: "6px 0 0" }}>
+				? <GenericGrid columns={2}>
 					{triedTooMuch
 						? <Grid item xs={2}>
 							<Alert severity="warning">There might be lifepaths missing because of the chosen options.</Alert>
 						</Grid>
-						: null
+						: <Fragment></Fragment>
 					}
 
 					<Grid item xs={2} md={1}>
@@ -246,7 +247,7 @@ export function LifepathRandomizer() {
 
 						<LifepathRandomizerLists chosenLifepaths={chosenLifepaths} />
 					</Grid>
-				</Grid>
+				</GenericGrid>
 				: null
 			}
 

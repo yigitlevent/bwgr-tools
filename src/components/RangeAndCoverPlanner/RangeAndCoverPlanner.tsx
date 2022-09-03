@@ -1,8 +1,6 @@
 import { Fragment } from "react";
 
 import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack";
-import Paper from "@mui/material/Paper";
 import IconButton from "@mui/material/IconButton";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
@@ -25,6 +23,7 @@ import { RangeAndCoverActions } from "../../data/rangeAndCover";
 import { GroupBy } from "../../utils/misc";
 
 import { RangeAndCoverActionDetails } from "./RangeAndCoverActionDetails";
+import { GenericGrid } from "../Shared/Grids";
 
 
 const GroupedRangeAndCoverActions = GroupBy(RangeAndCoverActions, a => a.group);
@@ -37,78 +36,76 @@ export function RangeAndCoverPlanner() {
 		<Fragment>
 			<Typography variant="h3">Range and Cover Planner</Typography>
 
-			<Stack spacing={5} sx={{ marginTop: 1 }}>
-				<Grid container spacing={1} columns={3} justifyContent="center" alignItems="center">
-					<Grid item xs={3} sm={3} md={1}>
-						<FormControl fullWidth  variant="standard">
-							<InputLabel >Volley</InputLabel>
-							<Select label="Volley" value={volleyIndex} onChange={(e) => racChangeVolleyIndex(parseInt(e.target.value as string))}>
-								<MenuItem value={0}>Volley 1</MenuItem>
-								<MenuItem value={1}>Volley 2</MenuItem>
-								<MenuItem value={2}>Volley 3</MenuItem>
-							</Select>
-						</FormControl>
-					</Grid>
-
-					<Grid item xs={3} sm={3} md={1}>
-						<FormControl fullWidth  variant="standard">
-							<InputLabel>Action</InputLabel>
-							<Select label="Action" value={selectedAction} onChange={(e) => racSelectedChangeAction(volleyIndex, e.target.value)}>
-								{Object.keys(GroupedRangeAndCoverActions).map((groupKey, groupIndex) => {
-									const elements = [
-										<ListSubheader key={groupIndex}>{groupKey}</ListSubheader>,
-										Object.values(GroupedRangeAndCoverActions)[groupIndex].map((action, actionIndex) =>
-											<MenuItem key={actionIndex} value={action.name}>{action.name}</MenuItem>
-										)
-									];
-									return elements;
-								})}
-							</Select>
-						</FormControl>
-					</Grid>
-
-					<Grid item xs={3} sm={3} md={1}>
-						<Button variant="outlined" size="medium" onClick={() => racAddAction(volleyIndex, selectedAction)}>Add Action</Button>
-					</Grid>
+			<GenericGrid columns={3} center>
+				<Grid item xs={3} sm={3} md={1}>
+					<FormControl fullWidth variant="standard">
+						<InputLabel >Volley</InputLabel>
+						<Select label="Volley" value={volleyIndex} onChange={(e) => racChangeVolleyIndex(parseInt(e.target.value as string))}>
+							<MenuItem value={0}>Volley 1</MenuItem>
+							<MenuItem value={1}>Volley 2</MenuItem>
+							<MenuItem value={2}>Volley 3</MenuItem>
+						</Select>
+					</FormControl>
 				</Grid>
 
-				{actions.map((action, volleyIndex) => {
-					return (
-						<Paper key={volleyIndex}>
-							<Typography variant="h5" sx={{ padding: "6px 10px" }}>Volley {volleyIndex + 1}</Typography>
+				<Grid item xs={3} sm={3} md={1}>
+					<FormControl fullWidth variant="standard">
+						<InputLabel>Action</InputLabel>
+						<Select label="Action" value={selectedAction} onChange={(e) => racSelectedChangeAction(volleyIndex, e.target.value)}>
+							{Object.keys(GroupedRangeAndCoverActions).map((groupKey, groupIndex) => {
+								const elements = [
+									<ListSubheader key={groupIndex}>{groupKey}</ListSubheader>,
+									Object.values(GroupedRangeAndCoverActions)[groupIndex].map((action, actionIndex) =>
+										<MenuItem key={actionIndex} value={action.name}>{action.name}</MenuItem>
+									)
+								];
+								return elements;
+							})}
+						</Select>
+					</FormControl>
+				</Grid>
 
-							{action
-								? <Grid container columns={2} justifyContent="space-between" sx={{ padding: "10px" }}>
-									<Grid item xs={2} sm={1} md={1}>
-										<Typography variant="h6" sx={{ display: "inline-block" }}>
-											{action.visible ? action.name : "────────────────────"}
-										</Typography>
-									</Grid>
+				<Grid item xs={3} sm={3} md={1}>
+					<Button variant="outlined" size="medium" onClick={() => racAddAction(volleyIndex, selectedAction)}>Add Action</Button>
+				</Grid>
+			</GenericGrid>
 
-									<Grid item>
-										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => racToggleActionDetails(volleyIndex)}>
-											{action.open ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
-										</IconButton>
-										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => racToggleActionVisibility(volleyIndex)}>
-											{action.visible ? <VisibilityIcon /> : <VisibilityOffIcon />}
-										</IconButton>
-										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => racDeleteAction(volleyIndex)}>
-											<DeleteOutline />
-										</IconButton>
-									</Grid>
+			<GenericGrid columns={1}>
+				{actions.map((action, volleyIndex) =>
+					<Grid item xs={1} key={volleyIndex}>
+						<Typography variant="h5" sx={{ padding: "6px 10px" }}>Volley {volleyIndex + 1}</Typography>
 
-									<Grid item xs={2}>
-										<Divider />
-									</Grid>
-
-									{action.visible && action.open ? <RangeAndCoverActionDetails action={action} /> : null}
+						{action
+							? <Grid container columns={2} justifyContent="space-between" sx={{ padding: "10px" }}>
+								<Grid item xs={2} sm={1} md={1}>
+									<Typography variant="h6" sx={{ display: "inline-block" }}>
+										{action.visible ? action.name : "────────────────────"}
+									</Typography>
 								</Grid>
-								: null
-							}
-						</Paper>
-					);
-				})}
-			</Stack>
-		</Fragment>
+
+								<Grid item>
+									<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => racToggleActionDetails(volleyIndex)}>
+										{action.open ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
+									</IconButton>
+									<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => racToggleActionVisibility(volleyIndex)}>
+										{action.visible ? <VisibilityIcon /> : <VisibilityOffIcon />}
+									</IconButton>
+									<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => racDeleteAction(volleyIndex)}>
+										<DeleteOutline />
+									</IconButton>
+								</Grid>
+
+								<Grid item xs={2}>
+									<Divider />
+								</Grid>
+
+								{action.visible && action.open ? <RangeAndCoverActionDetails action={action} /> : null}
+							</Grid>
+							: <Typography variant="body2">No action selected</Typography>
+						}
+					</Grid>
+				)}
+			</GenericGrid>
+		</Fragment >
 	);
 }

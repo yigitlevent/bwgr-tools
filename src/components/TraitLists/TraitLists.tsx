@@ -13,6 +13,7 @@ import { useStore } from "../../state/useStore";
 import { TraitCategories } from "../../data/traits";
 
 import { PopoverLink } from "../Shared/PopoverLink";
+import { GenericGrid } from "../Shared/Grids";
 
 
 export function TraitLists() {
@@ -34,20 +35,18 @@ export function TraitLists() {
 				</Grid>
 			</Grid>
 
-			{category !== ""
-				? <Grid container spacing={2} sx={{ marginTop: 1 }}>
-					{TraitCategories[category].traits.map((trait, i) => {
-						return (
-							<Grid item key={i}>
-								<Paper elevation={2} sx={{ cursor: "pointer", padding: "2px 6px" }}>
-									<PopoverLink data={trait} />
-								</Paper>
-							</Grid>
-						);
-					})}
-				</Grid>
-				: null
-			}
+			<GenericGrid spacing={2}>
+				{category !== ""
+					? TraitCategories[category].traits.map((trait, i) =>
+						<Grid item key={i}>
+							<Paper elevation={2} sx={{ cursor: "pointer", padding: "2px 6px" }}>
+								<PopoverLink data={trait} />
+							</Paper>
+						</Grid>
+					)
+					: null
+				}
+			</GenericGrid>
 		</Fragment>
 	);
 }

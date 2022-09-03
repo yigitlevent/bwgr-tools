@@ -13,6 +13,7 @@ import { useStore } from "../../state/useStore";
 import { SkillCategories } from "../../data/skills";
 
 import { PopoverLink } from "../Shared/PopoverLink";
+import { GenericGrid } from "../Shared/Grids";
 
 
 export function SkillLists() {
@@ -34,20 +35,18 @@ export function SkillLists() {
 				</Grid>
 			</Grid>
 
-			{category !== ""
-				? <Grid container spacing={2} sx={{ marginTop: 1 }}>
-					{SkillCategories[category].skills.map((skill, i) => {
-						return (
-							<Grid item key={i}>
-								<Paper elevation={2} sx={{ cursor: "pointer", padding: "2px 6px" }}>
-									<PopoverLink data={skill} />
-								</Paper>
-							</Grid>
-						);
-					})}
-				</Grid>
-				: null
-			}
-		</Fragment>
+			<GenericGrid spacing={2}>
+				{category !== ""
+					? SkillCategories[category].skills.map((skill, i) =>
+						<Grid item key={i}>
+							<Paper elevation={2} sx={{ cursor: "pointer", padding: "2px 6px" }}>
+								<PopoverLink data={skill} />
+							</Paper>
+						</Grid>
+					)
+					: null
+				}
+			</GenericGrid>
+		</Fragment >
 	);
 }

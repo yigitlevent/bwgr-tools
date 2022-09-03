@@ -14,6 +14,7 @@ import { useAppSelector } from "../../state/store";
 import { useStore } from "../../state/useStore";
 import { PracticeTable } from "../../data/tables";
 import { PracticePlannerCell } from "./PracticePlannerCell";
+import { GenericGrid } from "../Shared/Grids";
 
 
 export function PracticePlanner(): JSX.Element {
@@ -28,7 +29,7 @@ export function PracticePlanner(): JSX.Element {
 
 			<Typography variant="h3">Practice Planner</Typography>
 
-			<Grid container spacing={1} columns={2} sx={{ marginTop: 1 }} justifyContent="center" alignItems="center">
+			<GenericGrid columns={3} center={"v"}>
 				<Grid item>
 					<TextField
 						label="Number of Days"
@@ -52,10 +53,10 @@ export function PracticePlanner(): JSX.Element {
 				<Grid item>
 					<Button variant="outlined" onClick={() => prpAddCells(days, hours)}>Add Days</Button>
 				</Grid>
-			</Grid>
+			</GenericGrid>
 
 			<form onSubmit={(e) => prpAddPractice(e, cells, setNotification)}>
-				<Grid container spacing={1} sx={{ width: "100%", margin: "10px 0 0" }} columns={5} justifyContent="center" alignItems="center">
+				<GenericGrid columns={5} center>
 					<Grid item xs={4} sm={2} md={1}>
 						<FormControl fullWidth variant="standard">
 							<InputLabel>Day</InputLabel>
@@ -98,20 +99,18 @@ export function PracticePlanner(): JSX.Element {
 					<Grid item xs={4} sm={2} md={1}>
 						<Button type="submit" variant="outlined" size="medium" disabled={cells.length < 1}>Add Practice</Button>
 					</Grid>
-				</Grid>
+				</GenericGrid>
 			</form>
 
 			{cells.length > 0 ? <Divider sx={{ margin: "10px 0 0 " }}>Timetable</Divider> : null}
 
-			<Grid container columns={4} spacing={0}>
-				{cells.map((cell, cellIndex) => {
-					return (
-						<Grid item key={cellIndex} xs={4} sm={4} md={2} lg={2}>
-							<PracticePlannerCell cell={cell} cellIndex={cellIndex} setNotification={setNotification} />
-						</Grid>
-					);
-				})}
-			</Grid>
+			<GenericGrid columns={4}>
+				{cells.map((cell, cellIndex) =>
+					<Grid item key={cellIndex} xs={4} sm={4} md={2} lg={2}>
+						<PracticePlannerCell cell={cell} cellIndex={cellIndex} setNotification={setNotification} />
+					</Grid>
+				)}
+			</GenericGrid>
 		</Fragment>
 	);
 }

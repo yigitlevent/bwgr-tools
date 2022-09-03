@@ -23,6 +23,7 @@ import { useStore } from "../../state/useStore";
 import { TestResult } from "../../state/reducers/diceRoller";
 import { Tests } from "../../data/tests";
 import { RandomNumber } from "../../utils/misc";
+import { GenericGrid } from "../Shared/Grids";
 
 
 export function DiceRoller() {
@@ -119,7 +120,7 @@ export function DiceRoller() {
 		<Fragment>
 			<Typography variant="h3">Dice Roller</Typography>
 
-			<Grid container columns={6} spacing={1} sx={{ marginTop: 1 }} justifyContent="space-between" alignItems="center">
+			<GenericGrid columns={6} center>
 				<Grid item xs={6} sm={2} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Shade</InputLabel>
@@ -172,13 +173,14 @@ export function DiceRoller() {
 				<Grid item>
 					<Button variant="outlined" size="medium" onClick={resolveDiceRoll}>Roll Dice</Button>
 				</Grid>
-			</Grid>
+			</GenericGrid>
 
 			{result
-				? <Grid container columns={3} spacing={1} sx={{ margin: 3 }}>
+				? <GenericGrid columns={3}>
 					<Grid item xs={3} sm={1}>
 						{getResult(result)}
 					</Grid>
+
 					<Grid item xs={3} sm={1}>
 						{getIcons(result)}
 
@@ -192,10 +194,11 @@ export function DiceRoller() {
 							: null
 						}
 					</Grid>
+
 					<Grid item xs={3} sm={1}>
 						{getTest(result)}
 					</Grid>
-				</Grid>
+				</GenericGrid>
 				: null
 			}
 		</Fragment>

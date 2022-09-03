@@ -41,7 +41,7 @@ export function LifepathBox({ lifepath }: { lifepath: Lifepath; }) {
 	};
 
 	return (
-		<Grid container spacing={0} sx={{ width: "100%", margin: "10px 0 16px" }} columns={18}>
+		<Grid container rowSpacing={0} columnSpacing={0} columns={18}>
 			<Grid item lg={6} md={12} sm={18} xs={18}>
 				<Paper elevation={3} square sx={{ padding: "2px 6px 4px" }}>
 					<Typography variant="body1">{lifepath.name}</Typography>

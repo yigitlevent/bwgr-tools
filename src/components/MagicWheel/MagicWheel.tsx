@@ -24,6 +24,7 @@ import { RandomNumber } from "../../utils/misc";
 import { BackCanvas } from "./BackCanvas";
 import { MainCanvas } from "./MainCanvas";
 import { FrontCanvas } from "./FrontCanvas";
+import { GenericGrid } from "../Shared/Grids";
 
 
 const CanvasWrapper = styled.div<{ size: string; }>`
@@ -137,7 +138,7 @@ export function MagicWheel() {
 		<Fragment>
 			<Typography variant="h3">Magic Wheel</Typography>
 
-			<Grid container spacing={1} columns={5} sx={{ marginTop: 1 }} justifyContent="center" alignItems="center">
+			<GenericGrid columns={5} center>
 				<Grid item xs={5} sm={2} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Area of Effect</InputLabel>
@@ -182,27 +183,24 @@ export function MagicWheel() {
 						</Select>
 					</FormControl>
 				</Grid>
-			</Grid>
+			</GenericGrid>
 
 			<Divider sx={{ margin: "10px 0 10px" }} />
 
-			<Grid container spacing={1} columns={1} justifyContent="center" alignItems="center">
-				<Grid item>
-					<Button
-						variant="outlined"
-						disabled={isRotating}
-						onClick={() => { if (!isRotating) rotate(((Math.random() > 0.5) ? 1 : -1) * RandomNumber(1, 6)); }}
-					>
-						Pray to the Lady Luck
-					</Button>
-				</Grid>
-			</Grid>
+			<Button
+				variant="outlined"
+				disabled={isRotating}
+				onClick={() => { if (!isRotating) rotate(((Math.random() > 0.5) ? 1 : -1) * RandomNumber(1, 6)); }}
+				fullWidth
+			>
+				Pray to the Lady Luck
+			</Button>
 
 			<Divider sx={{ margin: "2px 0 -8px" }}>
 				<Typography>OR</Typography>
 			</Divider>
 
-			<Grid container spacing={1} columns={2} sx={{ marginTop: 1 }} justifyContent="center" alignItems="center">
+			<GenericGrid columns={2} center>
 				<Grid item xs={2} sm={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Direction</InputLabel>
@@ -225,16 +223,17 @@ export function MagicWheel() {
 					/>
 				</Grid>
 
-				<Grid item>
+				<Grid item xs={2}>
 					<Button
 						variant="outlined"
 						disabled={isRotating}
 						onClick={() => { if (!isRotating) rotate((direction === "Clockwise" ? 1 : 0) * steps); }}
+						fullWidth
 					>
 						Turn the Wheel
 					</Button>
 				</Grid>
-			</Grid>
+			</GenericGrid>
 
 			<Divider sx={{ margin: "10px 0 8px" }} />
 
