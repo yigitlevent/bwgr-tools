@@ -1,4 +1,4 @@
-export type DrawerItem = "Dice Roller" | "Lifepaths" | "Skills" | "Traits" | "Equipments" | "Lifepath Randomizer" | "Practice Planner" | "Magic Wheel" | "Duel of Wits Planner" | "Range and Cover Planner" | "Fight Planner";
+export type DrawerItem = "Dice Roller" | "Lifepaths" | "Skills" | "Traits" | "Resources" | "Lifepath Randomizer" | "Practice Planner" | "Magic Wheel" | "Duel of Wits Planner" | "Range and Cover Planner" | "Fight Planner";
 
 interface OpenAction { type: "OPEN_DRAWER"; }
 interface CloseAction { type: "CLOSE_DRAWER"; }

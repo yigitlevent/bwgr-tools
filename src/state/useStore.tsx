@@ -82,6 +82,14 @@ export function useStore() {
 		}
 	};
 
+
+	// RESOURCE LIST
+	const resourceList = {
+		rscChangeStock: (event: SelectChangeEvent) => {
+			dispatch({ type: "CHANGE_RESOURCE_LIST_STOCK", payload: { stock: event.target.value } });
+		}
+	};
+
 	// LIFEPATH RANDOMIZER
 	const lifepathRandomizer = {
 		lprChangeStock: (event: SelectChangeEvent) => {
@@ -286,7 +294,7 @@ export function useStore() {
 	return {
 		drawer,
 		diceRoller,
-		lifepathList, skillList, traitList,
+		lifepathList, skillList, traitList, resourceList,
 		lifepathRandomizer, practicePlanner, magicWheel,
 		duelOfWits, rangeAndCover, fight
 	};

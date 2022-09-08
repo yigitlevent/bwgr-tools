@@ -132,7 +132,8 @@ export const THEME = createTheme({
 			fontFamily: "text",
 			textIndent: "8px",
 			textAlign: "justify",
-			textJustify: "inter-word"
+			textJustify: "inter-word",
+			marginTop: "3px"
 		},
 		button: {
 			fontFamily: "text"
