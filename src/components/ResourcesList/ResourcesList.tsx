@@ -12,6 +12,7 @@ import Checkbox from "@mui/material/Checkbox";
 import ListItemText from "@mui/material/ListItemText";
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 
 import { useAppSelector } from "../../state/store";
 import { useStore } from "../../state/useStore";
@@ -19,9 +20,7 @@ import { Resource, Resources } from "../../data/resources";
 
 import { useSearch } from "../../hooks/useSearch";
 
-import { PopoverLink } from "../Shared/PopoverLink";
 import { GenericGrid } from "../Shared/Grids";
-import Divider from "@mui/material/Divider";
 
 
 function ResourceItem({ resource }: { resource: Resource; }) {
