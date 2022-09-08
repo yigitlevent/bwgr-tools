@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 
 import IconButton from "@mui/material/IconButton";
+import Paper from "@mui/material/Paper";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -15,9 +16,11 @@ export function App(): JSX.Element {
 
 	return (
 		<Fragment>
-			<IconButton sx={{ position: "absolute", top: "0", left: "0" }} onClick={drwToggleDrawer}>
-				<MenuIcon />
-			</IconButton>
+			<Paper square elevation={10} sx={{ position: "fixed", top: "0", left: "0", width: "max-content" }}>
+				<IconButton onClick={drwToggleDrawer}>
+					<MenuIcon />
+				</IconButton>
+			</Paper>
 			<MainDrawer />
 			<MainBox />
 		</Fragment>
