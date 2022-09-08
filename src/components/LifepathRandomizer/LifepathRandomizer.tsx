@@ -32,32 +32,33 @@ export function LifepathRandomizer() {
 	const [chosenLifepaths, setChosen] = useState<Lifepath[]>([]);
 	const [triedTooMuch, setTriedTooMuch] = useState(false);
 
-	const filterByRequirements = useCallback((combinedPossibleLifepaths: Lifepath[], tempChosenLifepaths: Lifepath[]): Lifepath[] => {
+	const checkString = useCallback((chosenLifepaths: Lifepath[], conditionString: string): boolean => {
+		if (conditionString.startsWith("Skill")) {
+			const hasSkill = chosenLifepaths.some(lifepath => lifepath.skills.includes((conditionString as any).slice(6)));
+			if (!hasSkill) return false;
+		}
+		else if (conditionString.startsWith("Trait")) {
+			const hasTrait = !chosenLifepaths.some(lifepath => lifepath.traits.includes((conditionString as any).slice(6)));
+			if (!hasTrait) return false;
+		}
+		else if (!chosenLifepaths.some(lifepath => lifepath.name === conditionString.split("➞")[2])) {
+			return false;
+		}
+
+		return true;
+	}, []);
+
+	const checkBlock = useCallback((chosenLifepaths: Lifepath[], condition: Condition): boolean => {
+		if (condition.type === "AND") return condition.items.every(v => (typeof v === "string") ? checkString(chosenLifepaths, v) : checkBlock(chosenLifepaths, v));
+		else if (condition.type === "OR") return condition.items.some(v => (typeof v === "string") ? checkString(chosenLifepaths, v) : checkBlock(chosenLifepaths, v));
+		else if (condition.type === "NOT") return !condition.items.every(v => (typeof v === "string") ? checkString(chosenLifepaths, v) : checkBlock(chosenLifepaths, v));
+		return true;
+	}, [checkString]);
+
+	const filterByRequirements = useCallback((combinedPossibleLifepaths: Lifepath[], chosenLifepaths: Lifepath[], currentAge: number): Lifepath[] => {
 		const filteredLifepaths: Lifepath[] = [];
 
 		combinedPossibleLifepaths = combinedPossibleLifepaths.filter(v => v.born === false);
-
-		const checkString = (conditionString: string): boolean => {
-			if (conditionString.startsWith("Skill")) {
-				const hasSkill = tempChosenLifepaths.some(lifepath => lifepath.skills.includes((conditionString as any).slice(6)));
-				if (!hasSkill) return false;
-			}
-			else if (conditionString.startsWith("Trait")) {
-				const hasTrait = !tempChosenLifepaths.some(lifepath => lifepath.traits.includes((conditionString as any).slice(6)));
-				if (!hasTrait) return false;
-			}
-			else if (!tempChosenLifepaths.some(lifepath => lifepath.name === conditionString.split("➞")[2])) return false;
-
-			return true;
-		};
-
-		const checkBlock = (condition: Condition): boolean => {
-			let add = true;
-			if (condition.type === "AND") add = condition.items.every(v => (typeof v === "string") ? checkString(v) : checkBlock(v));
-			else if (condition.type === "OR") add = condition.items.some(v => (typeof v === "string") ? checkString(v) : checkBlock(v));
-			else if (condition.type === "NOT") add = !condition.items.every(v => (typeof v === "string") ? checkString(v) : checkBlock(v));
-			return add;
-		};
 
 		for (const lifepathKey in combinedPossibleLifepaths) {
 			const lp = combinedPossibleLifepaths[lifepathKey];
@@ -65,48 +66,57 @@ export function LifepathRandomizer() {
 			const limits = lp.requirements.limits;
 
 			let add = true;
-			if (conditions) add = checkBlock(conditions);
+			if (conditions) add = checkBlock(chosenLifepaths, conditions);
 			if (limits) limits.forEach(v => {
 				// NOT CONSIDERED: GENDER➞FEMALE/MALE, GRIEF➞MIN/MAX, YEARS➞MIN/MAX
 				if (v === "LP➞UNIQUE" && chosenLifepaths.includes(lp)) add = false;
 				else if (v.startsWith("LP➞MIN") && chosenLifepaths.length < parseInt(v.split("➞")[2])) add = false;
 				else if (v.startsWith("LP➞MAX") && chosenLifepaths.length > parseInt(v.split("➞")[2])) add = false;
+				else if (v.startsWith("YEARS➞MIN") && currentAge <= parseInt(v.split("➞")[2])) add = false;
+				else if (v.startsWith("YEARS➞MAX") && currentAge >= parseInt(v.split("➞")[2])) add = false;
 			});
 
 			if (add) filteredLifepaths.push(lp);
 		}
 
 		return filteredLifepaths;
-	}, [chosenLifepaths]);
+	}, [checkBlock]);
+
+	const getCurrentAge = useCallback((chosenLifepaths: Lifepath[], leadCount: number) => {
+		const yrs = chosenLifepaths.map(v => v.years).filter(v => typeof v === "number") as number[];
+		const sum = yrs.reduce((prev, curr) => prev + curr);
+		return sum + leadCount;
+	}, []);
+
+	const chooseNext = useCallback((currentStock: Stock, chosenLifepaths: Lifepath[], leadsCount: number) => {
+		const lastLP = chosenLifepaths[chosenLifepaths.length - 1];
+
+		let combinedPossibilities = [...currentStock.settings[lastLP.setting].lifepaths];
+
+		if (leadsCount < maxLeads) {
+			for (const leadKey in lastLP.leads) {
+				combinedPossibilities = [
+					...combinedPossibilities,
+					...currentStock.settings[lastLP.leads[leadKey].split("➞")[1]].lifepaths
+				];
+			}
+		}
+
+		const currentAge = getCurrentAge(chosenLifepaths, leadsCount);
+		const possibilities = filterByRequirements(combinedPossibilities, chosenLifepaths, currentAge);
+		const chosenLP = possibilities[RandomNumber(0, possibilities.length - 1)];
+
+		if (chosenLP.setting !== chosenLifepaths[chosenLifepaths.length - 1].setting) {
+			leadsCount = leadsCount + 1;
+		}
+
+		return { chosenLP, leadsCount };
+	}, [filterByRequirements, getCurrentAge, maxLeads]);
 
 	const createRandom = useCallback((): void => {
 		const tempChosenLifepaths: Lifepath[] = [];
 
 		let leadsCounter = 0;
-
-		const chooseNext = (currentStock: Stock): Lifepath => {
-			const lastLP = tempChosenLifepaths[tempChosenLifepaths.length - 1];
-
-			let combinedPossibilities = [...currentStock.settings[lastLP.setting].lifepaths];
-
-			if (leadsCounter < maxLeads) {
-				for (const leadKey in lastLP.leads) {
-					combinedPossibilities = [
-						...combinedPossibilities,
-						...currentStock.settings[lastLP.leads[leadKey].split("➞")[1]].lifepaths
-					];
-				}
-			}
-
-			const possibilities = filterByRequirements(combinedPossibilities, tempChosenLifepaths);
-			const chosenLP = possibilities[RandomNumber(0, possibilities.length - 1)];
-
-			if (chosenLP.setting !== tempChosenLifepaths[tempChosenLifepaths.length - 1].setting) {
-				leadsCounter += 1;
-			}
-
-			return chosenLP;
-		};
 
 		const stockValues = Object.values(Stocks);
 		const chosenStock = (stock === "Random")
@@ -129,9 +139,10 @@ export function LifepathRandomizer() {
 		let tries = 0;
 
 		while (tries < maxTries && chosenAmount < lpAmount) {
-			const lp = chooseNext(chosenStock);
+			const { chosenLP, leadsCount } = chooseNext(chosenStock, tempChosenLifepaths, leadsCounter);
+			leadsCounter = leadsCount;
 
-			const isDuplicate = tempChosenLifepaths.filter(v => (v.name === lp.name && v.setting === lp.setting)).length > 0;
+			const isDuplicate = tempChosenLifepaths.filter(v => (v.name === chosenLP.name && v.setting === chosenLP.setting)).length > 0;
 			if (isDuplicate && noDuplicates) {
 				tries += 1;
 				continue;
@@ -139,14 +150,14 @@ export function LifepathRandomizer() {
 			else {
 				tries = 0;
 				chosenAmount += 1;
-				tempChosenLifepaths.push(lp);
+				tempChosenLifepaths.push(chosenLP);
 			}
 		}
 
 		if (tempChosenLifepaths.length < minLifepaths) setTriedTooMuch(true);
 
 		setChosen(tempChosenLifepaths);
-	}, [setting, stock, minLifepaths, maxLifepaths, maxLeads, noDuplicates, filterByRequirements]);
+	}, [stock, setting, minLifepaths, maxLifepaths, chooseNext, noDuplicates]);
 
 	return (
 		<Fragment>
@@ -205,7 +216,7 @@ export function LifepathRandomizer() {
 				</Grid>
 
 				<Grid item xs={5}>
-					<Alert severity="info">Random lifepath selection does not consider the gender, age, and emotional attribute limits. Please make sure to check those requirements seperately.</Alert>
+					<Alert severity="info">Random lifepath selection does not consider the gender, lifepaths with variable ages, and emotional attribute limits. Please make sure to check those requirements seperately.</Alert>
 				</Grid>
 
 				<Grid item xs={5}>
