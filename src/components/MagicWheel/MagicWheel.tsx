@@ -5,7 +5,7 @@ import code from "../../assets/fonts/SourceCodePro-SemiBold.woff";
 
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Select from "@mui/material/Select";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -46,19 +46,22 @@ export function MagicWheel() {
 
 	const wrapperRef = createRef<HTMLDivElement>();
 	const [size, setSize] = useState("0px");
-	const [blockAngle, setBlockAngle] = useState([0, 0, 0, 0, 0]);
-	const [currentAngle, setCurrentAngle] = useState([0, 0, 0, 0, 0]);
-	const [isRotating, setIsRotating] = useState(false);
-
+	const [isRotating, setIsRotating] = useState(0);
 	const [isFontLoaded, setIsFontLoaded] = useState(false);
 
-	const rotate = useCallback((amount: number): void => {
-		setIsRotating(true);
+	const [entryAngleSpan, setEntryAngleSpan] = useState([0, 0, 0, 0, 0]);
 
-		const facets = [aoe, element, impetus, duration, origin];
-		const selected: string[] = ["", "", "", "", ""];
+	const [currentOriginAngle, setCurrentOriginAngle] = useState(0);
+	const [currentDurationAngle, setCurrentDurationAngle] = useState(0);
+	const [currentImpetusAngle, setCurrentImpetusAngle] = useState(0);
+	const [currentElementAngle, setCurrentElementAngle] = useState(0);
+	const [currentAOEAngle, setCurrentAOEAngle] = useState(0);
+
+	const updateFacets = useCallback((amount: number) => {
+		const selected: string[] = [origin, duration, impetus, element, aoe];
+
 		for (const key in MagicData) {
-			const currentIndex = MagicData[key].findIndex(v => facets.includes(v.name));
+			const currentIndex = MagicData[key].findIndex(v => v.name === selected[key]);
 			let newIndex = currentIndex + amount;
 			if (newIndex > MagicData[key].length - 1) { newIndex = newIndex % MagicData[key].length; }
 			else if (newIndex < 0) { newIndex = (newIndex % MagicData[key].length + MagicData[key].length) % MagicData[key].length; }
@@ -66,48 +69,85 @@ export function MagicWheel() {
 			selected[key] = MagicData[key][newIndex].name;
 		}
 
-		mgwChangeAOE(selected[4]);
-		mgwChangeElement(selected[3]);
-		mgwChangeImpetus(selected[2]);
-		mgwChangeDuration(selected[1]);
 		mgwChangeOrigin(selected[0]);
+		mgwChangeDuration(selected[1]);
+		mgwChangeImpetus(selected[2]);
+		mgwChangeElement(selected[3]);
+		mgwChangeAOE(selected[4]);
+	}, [aoe, duration, element, impetus, origin, mgwChangeAOE, mgwChangeDuration, mgwChangeElement, mgwChangeImpetus, mgwChangeOrigin]);
 
-		const currentRotation = [...currentAngle];
-		const targetRotation = [...currentAngle].map((v, i) => v + (amount * (blockAngle[i] / 2)));
+	const getFacetMapping = useCallback((type: string) => {
+		switch (type) {
+			case "Area of Effect":
+				return { bandIndex: 4, currentAngle: currentAOEAngle, setFunction: setCurrentAOEAngle, setStoreFunction: mgwChangeAOE };
+			case "Element":
+				return { bandIndex: 3, currentAngle: currentElementAngle, setFunction: setCurrentElementAngle, setStoreFunction: mgwChangeElement };
+			case "Impetus":
+				return { bandIndex: 2, currentAngle: currentImpetusAngle, setFunction: setCurrentImpetusAngle, setStoreFunction: mgwChangeImpetus };
+			case "Duration":
+				return { bandIndex: 1, currentAngle: currentDurationAngle, setFunction: setCurrentDurationAngle, setStoreFunction: mgwChangeDuration };
+			case "Origin":
+				return { bandIndex: 0, currentAngle: currentOriginAngle, setFunction: setCurrentOriginAngle, setStoreFunction: mgwChangeOrigin };
+			default:
+				throw "Facet type invalid.";
+		}
+	}, [currentAOEAngle, currentDurationAngle, currentElementAngle, currentImpetusAngle, currentOriginAngle, mgwChangeAOE, mgwChangeDuration, mgwChangeElement, mgwChangeImpetus, mgwChangeOrigin]);
 
-		let myReq: number = 0;
+	const rotateBand = useCallback((amount: number, type: string) => {
+		const { bandIndex, currentAngle, setFunction } = getFacetMapping(type);
 
-		let tempRotation = [...currentRotation];
+		const targetRotation = currentAngle + (amount * (entryAngleSpan[bandIndex] / 2));
+		let intermediateRotation = currentAngle;
 
+		let animationFrame = 0;
 		let skip = true;
 		let done = false;
+
 		const step = () => {
 			skip = !skip;
 
-			tempRotation = [...tempRotation].map((v, i) => {
-				const tempVal = (v + (0.05 * amount));
-				if ((amount > 0 && tempVal >= targetRotation[i])
-					|| (amount < 0 && tempVal <= targetRotation[i])) return targetRotation[i];
-				return tempVal;
-			});
+			const tempVal = (intermediateRotation + (0.05 * amount));
+			intermediateRotation = ((amount > 0 && tempVal >= targetRotation) || (amount < 0 && tempVal <= targetRotation))
+				? targetRotation
+				: tempVal;
 
 			if (!skip) {
-				setCurrentAngle(tempRotation);
-				if ((amount > 0 && tempRotation.every((v, i) => v >= targetRotation[i]))
-					|| (amount < 0 && tempRotation.every((v, i) => v <= targetRotation[i]))) {
-					done = true;
-				}
+				setFunction(intermediateRotation);
+				if ((amount > 0 && intermediateRotation >= targetRotation) || (amount < 0 && intermediateRotation <= targetRotation)) done = true;
 			}
 
 			if (done) {
-				cancelAnimationFrame(myReq);
-				setIsRotating(false);
+				cancelAnimationFrame(animationFrame);
+				setIsRotating(v => v - 1);
 			}
-			else myReq = requestAnimationFrame(step);
+			else animationFrame = requestAnimationFrame(step);
 		};
 
-		myReq = requestAnimationFrame(step);
-	}, [aoe, element, impetus, duration, origin, mgwChangeAOE, mgwChangeElement, mgwChangeImpetus, mgwChangeDuration, mgwChangeOrigin, currentAngle, blockAngle]);
+		animationFrame = requestAnimationFrame(step);
+	}, [entryAngleSpan, getFacetMapping]);
+
+	const rotate = useCallback((amount: number) => {
+		updateFacets(amount);
+		setIsRotating(5);
+		const facetTypes = ["Area of Effect", "Element", "Impetus", "Duration", "Origin"];
+		facetTypes.forEach(type => rotateBand(amount, type));
+	}, [rotateBand, updateFacets]);
+
+	const changeStartingFacet = useCallback((event: SelectChangeEvent<string>) => {
+		const name = event.target.name;
+		const value = event.target.value;
+
+		const getStartAngle = (circleIndex: number) => {
+			const selectionIndex = MagicData[circleIndex].findIndex(v => v.name === value);
+			if (selectionIndex > -1) return (entryAngleSpan[circleIndex] / 2) * selectionIndex;
+			throw "Facet not found.";
+		};
+
+		const { bandIndex, setFunction, setStoreFunction } = getFacetMapping(name as any);
+
+		setFunction(getStartAngle(bandIndex));
+		setStoreFunction(value);
+	}, [entryAngleSpan, getFacetMapping]);
 
 	useEffect(() => {
 		if (wrapperRef && wrapperRef.current) setSize(window.getComputedStyle(wrapperRef.current).width);
@@ -118,17 +158,13 @@ export function MagicWheel() {
 		for (const arrayKey in MagicData) {
 			tempArr[parseInt(arrayKey)] = 4 * Math.PI / MagicData[arrayKey].length;
 		}
-		setBlockAngle(tempArr);
-	}, []);
+		setEntryAngleSpan(tempArr);
+	}, [aoe, element, impetus, duration, origin]);
 
 	useEffect(() => {
 		if (!isFontLoaded) {
-			const font = new FontFace("Code", `url(${code})`);
-			font.load().then(
-				(font) => {
-					document.fonts.add(font);
-					setIsFontLoaded(true);
-				},
+			(new FontFace("Code", `url(${code})`)).load().then(
+				(font) => { document.fonts.add(font); setIsFontLoaded(true); },
 				console.error
 			);
 		}
@@ -142,7 +178,7 @@ export function MagicWheel() {
 				<Grid item xs={5} sm={2} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Area of Effect</InputLabel>
-						<Select label="Area of Effect" value={isRotating ? "" : aoe} onChange={mgwChangeAOE} disabled={isRotating}>
+						<Select label="Area of Effect" name="Area of Effect" value={isRotating > 0 ? "" : aoe} onChange={changeStartingFacet} disabled={isRotating > 0}>
 							{Object.values(MagicData[4]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
 					</FormControl>
@@ -151,7 +187,7 @@ export function MagicWheel() {
 				<Grid item xs={5} sm={2} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Element</InputLabel>
-						<Select label="Element" value={isRotating ? "" : element} onChange={mgwChangeElement} disabled={isRotating}>
+						<Select label="Element" name="Element" value={isRotating > 0 ? "" : element} onChange={changeStartingFacet} disabled={isRotating > 0}>
 							{Object.values(MagicData[3]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
 					</FormControl>
@@ -160,7 +196,7 @@ export function MagicWheel() {
 				<Grid item xs={5} sm={2} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Impetus</InputLabel>
-						<Select label="Impetus" value={isRotating ? "" : impetus} onChange={mgwChangeImpetus} disabled={isRotating}>
+						<Select label="Impetus" name="Impetus" value={isRotating > 0 ? "" : impetus} onChange={changeStartingFacet} disabled={isRotating > 0}>
 							{Object.values(MagicData[2]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
 					</FormControl>
@@ -169,7 +205,7 @@ export function MagicWheel() {
 				<Grid item xs={5} sm={2} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Duration</InputLabel>
-						<Select label="Duration" value={isRotating ? "" : duration} onChange={mgwChangeDuration} disabled={isRotating}>
+						<Select label="Duration" name="Duration" value={isRotating > 0 ? "" : duration} onChange={changeStartingFacet} disabled={isRotating > 0}>
 							{Object.values(MagicData[1]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
 					</FormControl>
@@ -178,7 +214,7 @@ export function MagicWheel() {
 				<Grid item xs={5} sm={2} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Origin</InputLabel>
-						<Select label="Origin" value={isRotating ? "" : origin} onChange={mgwChangeOrigin} disabled={isRotating}>
+						<Select label="Origin" name="Origin" value={isRotating > 0 ? "" : origin} onChange={changeStartingFacet} disabled={isRotating > 0}>
 							{Object.values(MagicData[0]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
 					</FormControl>
@@ -189,8 +225,8 @@ export function MagicWheel() {
 
 			<Button
 				variant="outlined"
-				disabled={isRotating}
-				onClick={() => { if (!isRotating) rotate(((Math.random() > 0.5) ? 1 : -1) * RandomNumber(1, 6)); }}
+				disabled={isRotating > 0}
+				onClick={() => rotate(((Math.random() > 0.5) ? 1 : -1) * RandomNumber(1, 6))}
 				fullWidth
 			>
 				Pray to the Lady Luck
@@ -204,7 +240,7 @@ export function MagicWheel() {
 				<Grid item xs={2} sm={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Direction</InputLabel>
-						<Select label="Direction" value={direction} onChange={mgwChangeDirection} disabled={isRotating}>
+						<Select label="Direction" value={direction} onChange={mgwChangeDirection} disabled={isRotating > 0}>
 							<MenuItem value={"Clockwise"}>Clockwise</MenuItem>
 							<MenuItem value={"Counterclockwise"}>Counterclockwise</MenuItem>
 						</Select>
@@ -218,7 +254,7 @@ export function MagicWheel() {
 						value={steps}
 						onChange={mgwChangeSteps}
 						fullWidth
-						disabled={isRotating}
+						disabled={isRotating > 0}
 						variant="standard"
 					/>
 				</Grid>
@@ -226,7 +262,7 @@ export function MagicWheel() {
 				<Grid item xs={2}>
 					<Button
 						variant="outlined"
-						disabled={isRotating}
+						disabled={isRotating > 0}
 						onClick={() => { if (!isRotating) rotate((direction === "Clockwise" ? 1 : 0) * steps); }}
 						fullWidth
 					>
@@ -241,7 +277,7 @@ export function MagicWheel() {
 				? <Fragment>
 					<CanvasWrapper ref={wrapperRef} size={size}>
 						<BackCanvas />
-						<MainCanvas currentAngle={currentAngle} blockAngle={blockAngle} />
+						<MainCanvas currentAngles={[currentOriginAngle, currentDurationAngle, currentImpetusAngle, currentElementAngle, currentAOEAngle]} blockAngle={entryAngleSpan} />
 						<FrontCanvas show={cover} />
 					</CanvasWrapper>
 

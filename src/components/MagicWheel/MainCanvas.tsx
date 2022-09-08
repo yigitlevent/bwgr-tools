@@ -16,7 +16,7 @@ const Canvas = styled.canvas`
 	width: 100%;
 `;
 
-export function MainCanvas({ currentAngle, blockAngle }: { currentAngle: number[]; blockAngle: number[]; }): JSX.Element {
+export function MainCanvas({ currentAngles, blockAngle }: { currentAngles: number[]; blockAngle: number[]; }): JSX.Element {
 	const canvasRef = createRef<HTMLCanvasElement>();
 	const [context, setContext] = useState<CanvasRenderingContext2D>();
 
@@ -64,9 +64,9 @@ export function MainCanvas({ currentAngle, blockAngle }: { currentAngle: number[
 	useEffect(() => {
 		if (context) {
 			context.clearRect(0, 0, MWCONST.canvasSize, MWCONST.canvasSize);
-			drawText(currentAngle);
+			drawText(currentAngles);
 		}
-	}, [context, currentAngle, drawText]);
+	}, [context, blockAngle, currentAngles, drawText]);
 
 	useEffect(() => {
 		setContext(canvasRef.current?.getContext("2d") as CanvasRenderingContext2D);
