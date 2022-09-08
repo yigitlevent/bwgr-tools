@@ -53,8 +53,8 @@ export function MainDrawer() {
 			anchor={"left"}
 			variant={type}
 			open={open}
-			hideBackdrop={true}
-			onClose={drwCloseDrawer}
+			hideBackdrop={type === "persistent"}
+			onClose={closeDrawer}
 		>
 			<Box sx={{ width: 250, height: "100%" }} onClick={closeDrawer} onKeyDown={closeDrawer}>
 				<Typography variant="h4" sx={{ padding: "10px 10px" }}>BWGR Tools</Typography>
