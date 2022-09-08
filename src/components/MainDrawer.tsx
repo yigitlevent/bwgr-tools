@@ -55,6 +55,8 @@ export function MainDrawer() {
 			open={open}
 			hideBackdrop={type === "persistent"}
 			onClose={closeDrawer}
+			sx={{ background: "paper" }}
+			PaperProps={{ elevation: 2 }}
 		>
 			<Box sx={{ width: 250, height: "100%" }} onClick={closeDrawer} onKeyDown={closeDrawer}>
 				<Typography variant="h4" sx={{ padding: "10px 10px" }}>BWGR Tools</Typography>
