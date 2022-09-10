@@ -1,4 +1,5 @@
 import { Fragment, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
@@ -27,6 +28,16 @@ export function SkillLists() {
 	const { category } = useAppSelector(state => state.skillList);
 	const { sklChangeCategory } = useStore().skillList;
 	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Skill>(SkillCategories[category].skills);
+
+	const [searchParams, setSearchParams] = useSearchParams();
+
+	useEffect(() => {
+		const arr = [...searchParams.entries()];
+		const prms: { [key: string]: string; } = {};
+		for (const item in arr) { prms[arr[item][0]] = arr[item][1]; }
+		prms["category"] = category;
+		setSearchParams(prms);
+	}, [category, searchParams, setSearchParams]);
 
 	useEffect(() => {
 		setList(SkillCategories[category].skills);

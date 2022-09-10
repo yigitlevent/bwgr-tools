@@ -1,4 +1,5 @@
 import { Fragment, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
@@ -27,6 +28,16 @@ export function TraitLists() {
 	const { category } = useAppSelector(state => state.traitList);
 	const { trtChangeCategory } = useStore().traitList;
 	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Trait>(TraitCategories[category].traits);
+
+	const [searchParams, setSearchParams] = useSearchParams();
+
+	useEffect(() => {
+		const arr = [...searchParams.entries()];
+		const prms: { [key: string]: string; } = {};
+		for (const item in arr) { prms[arr[item][0]] = arr[item][1]; }
+		prms["category"] = category;
+		setSearchParams(prms);
+	}, [category, searchParams, setSearchParams]);
 
 	useEffect(() => {
 		setList(TraitCategories[category].traits);

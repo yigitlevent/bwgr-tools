@@ -1,4 +1,5 @@
 import { Fragment, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
@@ -67,6 +68,16 @@ export function ResourcesList() {
 	const { stock } = useAppSelector(state => state.resourceList);
 	const { rscChangeStock } = useStore().resourceList;
 	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Resource>(Resources[stock].resources);
+
+	const [searchParams, setSearchParams] = useSearchParams();
+
+	useEffect(() => {
+		const arr = [...searchParams.entries()];
+		const prms: { [key: string]: string; } = {};
+		for (const item in arr) { prms[arr[item][0]] = arr[item][1]; }
+		prms["stock"] = stock;
+		setSearchParams(prms);
+	}, [searchParams, setSearchParams, stock]);
 
 	useEffect(() => {
 		setList(Resources[stock].resources);

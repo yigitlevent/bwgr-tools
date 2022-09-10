@@ -18,7 +18,7 @@ ReactDOM
 			<Provider store={STORE}>
 				<ThemeProvider theme={THEME}>
 					<CssBaseline />
-					<BrowserRouter>
+					<BrowserRouter basename="/bwgr-tools">
 						<App />
 					</BrowserRouter>
 				</ThemeProvider >
