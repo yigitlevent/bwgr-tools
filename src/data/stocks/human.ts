@@ -14,30 +14,21 @@ export const Human: Stock = {
 		{ max: 79, min: 66, m: 7, p: 10 },
 		{ max: 99999, min: 80, m: 6, p: 9 }
 	],
-	allowed: [
-		"bwg",
-		"bwc"
-	],
+	allowed: "bwg",
 	hasSetting: true,
 	hasSubsetting: true,
 	name: "Human",
 	stride: 7,
 	settings: {
 		"City Dweller": {
-			allowed: [
-				"bwg",
-				"bwc"
-			],
+			allowed: "bwg",
 			name: "City Dweller",
 			short: "City",
 			stock: "Human",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 4,
@@ -62,9 +53,7 @@ export const Human: Stock = {
 					years: 12
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -92,10 +81,7 @@ export const Human: Stock = {
 					years: 9
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -120,10 +106,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -159,10 +142,7 @@ export const Human: Stock = {
 					years: 2
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -198,10 +178,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -227,10 +204,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -260,10 +234,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -294,10 +265,7 @@ export const Human: Stock = {
 					years: 2
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -330,10 +298,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -380,10 +345,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -414,10 +376,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -447,10 +406,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -481,10 +437,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -518,10 +471,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -550,10 +500,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -587,10 +534,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -624,10 +568,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -671,10 +612,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -707,10 +645,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -741,10 +676,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -779,10 +711,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -816,10 +745,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -850,10 +776,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -885,10 +808,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -920,10 +840,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -953,10 +870,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -989,10 +903,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1019,10 +930,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1053,10 +961,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1086,10 +991,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1117,10 +1019,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1147,10 +1046,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1179,10 +1075,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1217,10 +1110,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1252,10 +1142,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1285,10 +1172,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1331,10 +1215,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1377,10 +1258,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1436,10 +1314,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1468,10 +1343,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1505,10 +1377,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1544,10 +1413,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1591,10 +1457,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1624,10 +1487,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1672,10 +1532,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1718,10 +1575,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1755,10 +1609,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1792,10 +1643,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1839,10 +1687,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1879,10 +1724,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1921,10 +1763,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1964,10 +1803,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2005,10 +1841,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2044,10 +1877,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2085,10 +1915,7 @@ export const Human: Stock = {
 					years: 9
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2129,10 +1956,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2174,10 +1998,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2219,10 +2040,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2263,10 +2081,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2308,10 +2123,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -2352,10 +2164,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2405,10 +2214,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2446,10 +2252,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2498,10 +2301,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2542,10 +2342,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2595,10 +2392,7 @@ export const Human: Stock = {
 					years: 9
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2638,10 +2432,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 3,
@@ -2699,10 +2490,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2744,10 +2532,7 @@ export const Human: Stock = {
 					years: 12
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 1,
@@ -2796,10 +2581,7 @@ export const Human: Stock = {
 					years: 12
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2827,9 +2609,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -2876,18 +2656,14 @@ export const Human: Stock = {
 			]
 		},
 		"College of Magic": {
-			allowed: [
-				"bwc"
-			],
+			allowed: "bwc",
 			name: "College of Magic",
 			short: "College",
 			stock: "Human",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2923,9 +2699,7 @@ export const Human: Stock = {
 					years: 1
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2974,9 +2748,7 @@ export const Human: Stock = {
 					years: 2
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3022,9 +2794,7 @@ export const Human: Stock = {
 					years: 2
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3063,9 +2833,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3105,9 +2873,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3149,9 +2915,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3195,9 +2959,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3249,9 +3011,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3290,9 +3050,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 1,
@@ -3334,18 +3092,14 @@ export const Human: Stock = {
 			]
 		},
 		"Death Cult": {
-			allowed: [
-				"bwc"
-			],
+			allowed: "bwc",
 			name: "Death Cult",
 			short: "Cult",
 			stock: "Human",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3374,9 +3128,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3406,9 +3158,7 @@ export const Human: Stock = {
 					years: 2
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3438,9 +3188,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3481,9 +3229,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -3529,9 +3275,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3572,9 +3316,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3615,9 +3357,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -3666,20 +3406,14 @@ export const Human: Stock = {
 			]
 		},
 		"Noble": {
-			allowed: [
-				"bwg",
-				"bwc"
-			],
+			allowed: "bwg",
 			name: "Noble",
 			short: "Noble",
 			stock: "Human",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 5,
@@ -3713,10 +3447,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -3754,10 +3485,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3792,10 +3520,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3825,10 +3550,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3869,10 +3591,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3905,10 +3624,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3940,10 +3656,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -3982,10 +3695,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -4026,10 +3736,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -4079,10 +3786,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 1,
@@ -4120,10 +3824,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -4162,10 +3863,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 1,
@@ -4220,10 +3918,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 2,
@@ -4275,10 +3970,7 @@ export const Human: Stock = {
 					years: 9
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 3,
@@ -4329,10 +4021,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 3,
@@ -4381,10 +4070,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 4,
@@ -4433,10 +4119,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -4479,19 +4162,14 @@ export const Human: Stock = {
 			]
 		},
 		"Noble Court": {
-			allowed: [
-				"bwg",
-				"bwc"
-			],
+			allowed: "bwg",
 			name: "Noble Court",
 			short: "Court",
 			stock: "Human",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -4529,10 +4207,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -4561,10 +4236,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -4596,10 +4268,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -4640,10 +4309,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -4673,10 +4339,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -4707,10 +4370,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -4740,10 +4400,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -4778,10 +4435,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -4811,10 +4465,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -4850,10 +4501,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -4886,10 +4534,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -4923,10 +4568,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -4968,10 +4610,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -5002,10 +4641,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -5036,10 +4672,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5069,10 +4702,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5099,10 +4729,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5152,10 +4779,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5194,10 +4818,7 @@ export const Human: Stock = {
 					years: 9
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5237,10 +4858,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5273,10 +4891,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5322,10 +4937,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -5372,10 +4984,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5417,10 +5026,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5462,10 +5068,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5509,10 +5112,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5561,10 +5161,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5604,10 +5201,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5644,10 +5238,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5689,10 +5280,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5737,10 +5325,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5782,10 +5367,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5830,10 +5412,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -5876,10 +5455,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -5921,10 +5497,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -5967,10 +5540,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6015,10 +5585,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6062,10 +5629,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6116,10 +5680,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 1,
@@ -6169,10 +5730,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: "1/yr",
@@ -6228,9 +5786,7 @@ export const Human: Stock = {
 					years: "*"
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6275,9 +5831,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -6330,19 +5884,14 @@ export const Human: Stock = {
 			]
 		},
 		"Outcast": {
-			allowed: [
-				"bwg",
-				"bwc"
-			],
+			allowed: "bwg",
 			name: "Outcast",
 			short: "Outcast",
 			stock: "Human",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6379,10 +5928,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6417,10 +5963,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6449,10 +5992,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6484,10 +6024,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6518,10 +6055,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6552,10 +6086,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6583,10 +6114,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6616,10 +6144,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -6648,10 +6173,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6682,10 +6204,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -6716,10 +6235,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -6766,10 +6282,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6800,10 +6313,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6829,10 +6339,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6862,10 +6369,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: -1,
 					generalSkillPool: 0,
@@ -6897,10 +6401,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6933,10 +6434,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -6982,10 +6480,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7019,10 +6514,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7053,10 +6545,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7090,10 +6579,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7123,10 +6609,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7156,10 +6639,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7191,10 +6671,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7221,10 +6698,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7260,10 +6734,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7296,10 +6767,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7352,10 +6820,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7400,10 +6865,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -7447,10 +6909,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7499,10 +6958,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -7546,10 +7002,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7597,10 +7050,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 1,
@@ -7640,9 +7090,7 @@ export const Human: Stock = {
 					years: 15
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7685,9 +7133,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7730,20 +7176,14 @@ export const Human: Stock = {
 			]
 		},
 		"Peasant": {
-			allowed: [
-				"bwg",
-				"bwc"
-			],
+			allowed: "bwg",
 			name: "Peasant",
 			short: "Peasant",
 			stock: "Human",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 3,
@@ -7768,9 +7208,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -7798,10 +7236,7 @@ export const Human: Stock = {
 					years: 9
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7839,10 +7274,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7880,10 +7312,7 @@ export const Human: Stock = {
 					years: 15
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7936,10 +7365,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -7969,10 +7395,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8001,10 +7424,7 @@ export const Human: Stock = {
 					years: 1
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8034,10 +7454,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8065,10 +7482,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8100,10 +7514,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8133,10 +7544,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8165,10 +7573,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8199,10 +7604,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8234,10 +7636,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8273,10 +7672,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8310,10 +7706,7 @@ export const Human: Stock = {
 					years: 15
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8361,10 +7754,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8410,10 +7800,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8454,10 +7841,7 @@ export const Human: Stock = {
 					years: 15
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8485,9 +7869,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8532,19 +7914,14 @@ export const Human: Stock = {
 			]
 		},
 		"Professional Soldier": {
-			allowed: [
-				"bwg",
-				"bwc"
-			],
+			allowed: "bwg",
 			name: "Professional Soldier",
 			short: "Soldier",
 			stock: "Human",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8581,10 +7958,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8617,10 +7991,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8654,10 +8025,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8685,10 +8053,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8719,10 +8084,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8752,10 +8114,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8785,10 +8144,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8825,10 +8181,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8858,10 +8211,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8894,10 +8244,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -8927,10 +8274,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -8970,10 +8314,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9016,10 +8357,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9076,10 +8414,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -9117,10 +8452,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9160,10 +8492,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9202,10 +8531,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -9256,10 +8582,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9302,10 +8625,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9350,10 +8670,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9401,10 +8718,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9457,19 +8771,14 @@ export const Human: Stock = {
 			]
 		},
 		"Religious": {
-			allowed: [
-				"bwg",
-				"bwc"
-			],
+			allowed: "bwg",
 			name: "Religious",
 			short: "Religious",
 			stock: "Human",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9507,10 +8816,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9544,10 +8850,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9579,10 +8882,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9615,10 +8915,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9666,10 +8963,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9701,10 +8995,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9735,10 +9026,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9766,10 +9054,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9821,10 +9106,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9872,10 +9154,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9906,10 +9185,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9942,10 +9218,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -9979,10 +9252,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10014,10 +9284,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10060,10 +9327,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10112,10 +9376,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -10161,10 +9422,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10217,10 +9475,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -10269,10 +9524,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -10312,10 +9564,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -10355,10 +9604,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10410,20 +9656,14 @@ export const Human: Stock = {
 			]
 		},
 		"Seafaring": {
-			allowed: [
-				"bwg",
-				"bwc"
-			],
+			allowed: "bwg",
 			name: "Seafaring",
 			short: "Seafaring",
 			stock: "Human",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 3,
@@ -10449,9 +9689,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -10479,10 +9717,7 @@ export const Human: Stock = {
 					years: 9
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10518,10 +9753,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10557,10 +9789,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10591,10 +9820,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10625,10 +9851,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10658,10 +9881,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10695,10 +9915,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10744,10 +9961,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10792,10 +10006,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10823,10 +10034,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10872,10 +10080,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10918,10 +10123,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -10964,10 +10166,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11008,10 +10207,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11060,10 +10256,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11108,10 +10301,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11155,10 +10345,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -11201,10 +10388,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11249,10 +10433,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11285,10 +10466,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11330,10 +10508,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11363,10 +10538,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11414,10 +10586,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -11460,10 +10629,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11505,10 +10671,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11550,10 +10713,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -11600,20 +10760,14 @@ export const Human: Stock = {
 			]
 		},
 		"Servitude and Captive": {
-			allowed: [
-				"bwg",
-				"bwc"
-			],
+			allowed: "bwg",
 			name: "Servitude and Captive",
 			short: "Servitude",
 			stock: "Human",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: true,
 					eitherPool: -1,
 					generalSkillPool: 2,
@@ -11642,9 +10796,7 @@ export const Human: Stock = {
 					years: 12
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -11672,10 +10824,7 @@ export const Human: Stock = {
 					years: 9
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11704,10 +10853,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11738,10 +10884,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11772,10 +10915,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11805,10 +10945,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11837,10 +10974,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11868,10 +11002,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -11902,20 +11033,14 @@ export const Human: Stock = {
 			]
 		},
 		"Villager": {
-			allowed: [
-				"bwg",
-				"bwc"
-			],
+			allowed: "bwg",
 			name: "Villager",
 			short: "Villager",
 			stock: "Human",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 3,
@@ -11940,9 +11065,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -11970,10 +11093,7 @@ export const Human: Stock = {
 					years: 9
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12013,10 +11133,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12048,10 +11165,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12083,10 +11197,7 @@ export const Human: Stock = {
 					years: 2
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12113,10 +11224,7 @@ export const Human: Stock = {
 					years: 1
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12145,10 +11253,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12178,10 +11283,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12215,10 +11317,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12245,10 +11344,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12279,10 +11375,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12317,10 +11410,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12353,10 +11443,7 @@ export const Human: Stock = {
 					years: 4
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12400,10 +11487,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12445,10 +11529,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12485,10 +11566,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12523,10 +11601,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12559,10 +11634,7 @@ export const Human: Stock = {
 					years: 3
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -12609,10 +11681,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -12657,10 +11726,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12688,10 +11754,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12726,10 +11789,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12768,10 +11828,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12809,10 +11866,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12845,10 +11899,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12880,10 +11931,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12914,10 +11962,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12954,10 +11999,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -12987,10 +12029,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -13032,10 +12071,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -13083,10 +12119,7 @@ export const Human: Stock = {
 					years: 9
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -13120,10 +12153,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -13163,10 +12193,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -13205,10 +12232,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -13248,10 +12272,7 @@ export const Human: Stock = {
 					years: 6
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -13292,10 +12313,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -13330,10 +12348,7 @@ export const Human: Stock = {
 					years: 10
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -13364,10 +12379,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -13415,10 +12427,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -13462,10 +12471,7 @@ export const Human: Stock = {
 					years: 5
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -13510,10 +12516,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwg",
-						"bwc"
-					],
+					allowed: "bwg",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -13543,9 +12546,7 @@ export const Human: Stock = {
 					years: 8
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -13581,9 +12582,7 @@ export const Human: Stock = {
 					years: 7
 				},
 				{
-					allowed: [
-						"bwc"
-					],
+					allowed: "bwc",
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,

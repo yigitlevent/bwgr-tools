@@ -1,4 +1,4 @@
-type RulesetsList = "bwg" | "bwc";
+type Ruleset = "bwg" | "bwc" | "msc";
 type StocksList = "Dwarf" | "Elf" | "Human" | "Orc" | "Roden" | "Troll" | "Great Wolf";
 type SettingTypesList = "Setting" | "Subsetting";
 type ToolsList = "No" | "Tools" | "Workshop" | "Traveling Gear" | "Other";

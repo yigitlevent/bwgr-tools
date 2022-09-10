@@ -23,6 +23,7 @@ import { GenericGrid } from "../Shared/Grids";
 
 
 export function TraitLists() {
+	const { datasets } = useAppSelector(state => state.dataset);
 	const { category } = useAppSelector(state => state.traitList);
 	const { trtChangeCategory } = useStore().traitList;
 	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Trait>(TraitCategories[category].traits);
@@ -40,7 +41,7 @@ export function TraitLists() {
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Trait Category</InputLabel>
 						<Select label="Trait Category" value={category} onChange={trtChangeCategory} placeholder="Select a category">
-							{Object.values(TraitCategories).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
+							{Object.values(TraitCategories).filter(v => datasets.includes(v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>

@@ -22,6 +22,7 @@ import { GenericGrid } from "../Shared/Grids";
 
 
 export function LifepathLists() {
+	const { datasets } = useAppSelector(state => state.dataset);
 	const { stock, setting } = useAppSelector(state => state.lifepathList);
 	const { lplChangeStock, lplChangeSetting } = useStore().lifepathList;
 	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Lifepath>(Stocks[stock].settings[setting].lifepaths);
@@ -39,7 +40,7 @@ export function LifepathLists() {
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Stock</InputLabel>
 						<Select label="Stock" value={stock} onChange={lplChangeStock} placeholder="Select a stock">
-							{Object.values(Stocks).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
+							{Object.values(Stocks).filter(v => datasets.includes(v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>
@@ -47,9 +48,7 @@ export function LifepathLists() {
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Setting</InputLabel>
 						<Select label="Setting" value={setting} onChange={lplChangeSetting} placeholder="Select a setting">
-							{Object.values(Stocks[stock].settings).map((v, i) =>
-								<MenuItem key={i} value={v.name}>{v.name}</MenuItem>)
-							}
+							{Object.values(Stocks[stock].settings).filter(v => datasets.includes(v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>

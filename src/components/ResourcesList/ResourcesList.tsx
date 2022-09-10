@@ -63,12 +63,13 @@ function ResourceItem({ resource }: { resource: Resource; }) {
 
 
 export function ResourcesList() {
+	const { datasets } = useAppSelector(state => state.dataset);
 	const { stock } = useAppSelector(state => state.resourceList);
 	const { rscChangeStock } = useStore().resourceList;
-	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Resource>(Resources[stock]);
+	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Resource>(Resources[stock].resources);
 
 	useEffect(() => {
-		setList(Resources[stock]);
+		setList(Resources[stock].resources);
 	}, [setList, stock]);
 
 	return (
@@ -80,7 +81,7 @@ export function ResourcesList() {
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Resource Stock</InputLabel>
 						<Select label="Resource Stock" value={stock} onChange={rscChangeStock} placeholder="Select a stock">
-							{Object.keys(Resources).map((v, i) => <MenuItem key={i} value={v}>{v}</MenuItem>)}
+							{Object.values(Resources).filter(v => datasets.includes(v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>

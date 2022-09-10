@@ -20,6 +20,13 @@ import { Notification } from "../components/Shared/Notification";
 export function useStore() {
 	const dispatch = useAppDispatch();
 
+	// DATASET
+	const dataset = {
+		dtsToggleDataset: (value: "bwg" | "bwc" | "msc") => {
+			dispatch({ type: "TOGGLE_DATASET", payload: { dataset: value } });
+		}
+	};
+
 	// DRAWER
 	const drawer = {
 		drwToggleDrawer: () => {
@@ -292,7 +299,7 @@ export function useStore() {
 	};
 
 	return {
-		drawer,
+		dataset, drawer,
 		diceRoller,
 		lifepathList, skillList, traitList, resourceList,
 		lifepathRandomizer, practicePlanner, magicWheel,

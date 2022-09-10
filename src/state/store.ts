@@ -13,14 +13,16 @@ import { RangeAndCoverActions, RangeAndCoverReducer, RangeAndCoverState } from "
 import { SkillListActions, SkillListReducer, SkillListState } from "./reducers/skillList";
 import { TraitListActions, TraitListReducer, TraitListState } from "./reducers/traitList";
 import { ResourceListActions, ResourceListReducer, ResourceListState } from "./reducers/resourceList";
+import { DatasetActions, DatasetReducer, DatasetState } from "./reducers/dataset";
 
-type CombinedActions = DrawerActions
+type CombinedActions = DrawerActions | DatasetActions
 	| DiceRollerActions
 	| LifepathListActions | SkillListActions | TraitListActions | ResourceListActions
 	| MagicWheelActions | LifepathRandomizerActions | PracticePlannerActions
 	| DuelOfWitsActions | RangeAndCoverActions | FightActions;
 
 type CombinedState = {
+	dataset: DatasetState;
 	drawer: DrawerState;
 	diceRoller: DiceRollerState;
 	lifepathList: LifepathListState;
@@ -37,6 +39,7 @@ type CombinedState = {
 
 export const STORE = configureStore({
 	reducer: combineReducers<CombinedState>({
+		dataset: DatasetReducer,
 		drawer: DrawerReducer,
 		diceRoller: DiceRollerReducer,
 		lifepathList: LifepathListReducer,

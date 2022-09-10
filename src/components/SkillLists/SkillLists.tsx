@@ -23,6 +23,7 @@ import { GenericGrid } from "../Shared/Grids";
 
 
 export function SkillLists() {
+	const { datasets } = useAppSelector(state => state.dataset);
 	const { category } = useAppSelector(state => state.skillList);
 	const { sklChangeCategory } = useStore().skillList;
 	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Skill>(SkillCategories[category].skills);
@@ -40,7 +41,7 @@ export function SkillLists() {
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Skill Category</InputLabel>
 						<Select label="Skill Category" value={category} onChange={sklChangeCategory} placeholder="Select a category">
-							{Object.values(SkillCategories).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
+							{Object.values(SkillCategories).filter(v => datasets.includes(v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>
