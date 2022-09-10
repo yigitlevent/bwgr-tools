@@ -31,7 +31,7 @@ export const Resources: ResourceGroup = {
 				allowed: "bwg",
 				type: "Gear",
 				cost: 20,
-				description: "All Dwarven Arms are considered superior quality items. In addition, they add a +1 D balance die to the skill of the wielder. Traditionally, Dwarves use axes and hammers, throwing axes and knives. But swords and maces are acceptable as well. Players may purchase beaks, spikes and weights for their character's weapons at +4 rps per modification, per weapon."
+				description: "All Dwarven Arms are considered superior quality items. In addition, they add a +1D balance die to the skill of the wielder. Traditionally, Dwarves use axes and hammers, throwing axes and knives. But swords and maces are acceptable as well. Players may purchase beaks, spikes and weights for their character's weapons at +4rps per modification, per weapon."
 			},
 			{
 				name: "Shoddy Crossbow",
@@ -45,7 +45,7 @@ export const Resources: ResourceGroup = {
 				allowed: "bwg",
 				type: "Gear",
 				cost: 20,
-				description: "The arbalest is a special Dwarven make of the traditional crossbow. It can fire rocks or bolts. It counts as a crossbow but only requires 10 actions to load when firing bolts, or 6 actions when firing rocks. These devices are so well-made they add a +1D balance die to the wielder 's skill.<br>Rocks IMS: I B3, M B6, S B9 VA-. When firing rocks, the arbalest counts as an arquebus for Range and Cover and DoF rules.<br>It can fire bolts using the range and damage of a crossbow."
+				description: "The arbalest is a special Dwarven make of the traditional crossbow. It can fire rocks or bolts. It counts as a crossbow but only requires 10 actions to load when firing bolts, or 6 actions when firing rocks. These devices are so well-made they add a +1D balance die to the wielder 's skill.<br>Rocks IMS: I: B3, M: B6, S: B9, VA: —. When firing rocks, the arbalest counts as an arquebus for Range and Cover and DoF rules.<br>It can fire bolts using the range and damage of a crossbow."
 			},
 			{
 				name: "Dwarven-made Armor",
@@ -93,7 +93,7 @@ export const Resources: ResourceGroup = {
 				allowed: "bwg",
 				type: "Gear",
 				cost: 1,
-				description: "This is all the necessary bits, odds and ends and what-no ts that are needed for survival on the road-candles, matches, flint and steel, a pocket knife, a rain cloak, a rain hat, a good sturdy rucksack, a thick leather belt, a money purse or wallet, a warm coat, etc. The exact choices are up to the player, but th e GM has some say —no flamethrowers or Elven cloaks in traveling gear. Oh, yes, I almost forgot... don't forget to bring a good length of rope; you'll want one if you don't."
+				description: "This is all the necessary bits, odds and ends and what-no ts that are needed for survival on the road-candles, matches, flint and steel, a pocket knife, a rain cloak, a rain hat, a good sturdy rucksack, a thick leather belt, a money purse or wallet, a warm coat, etc. The exact choices are up to the player, but the GM has some say —no flamethrowers or Elven cloaks in traveling gear. Oh, yes, I almost forgot... don't forget to bring a good length of rope; you'll want one if you don't."
 			},
 			{
 				name: "Sturdy Shoes",
@@ -153,7 +153,7 @@ export const Resources: ResourceGroup = {
 				name: "Carts and Baggage",
 				allowed: "bwg",
 				type: "Property",
-				description: "Guilders bring th eir wares down from the holds in great lumbering carts. Carts and Baggage represents trade and salable go ods for Guilder Dwarves . They count as property when factoring resources and may be purc ha sed multiple times for multiple bonuses.",
+				description: "Guilders bring their wares down from the holds in great lumbering carts. Carts and Baggage represents trade and salable go ods for Guilder Dwarves . They count as property when factoring resources and may be purc ha sed multiple times for multiple bonuses.",
 				cost: 15
 			}
 		]
@@ -188,7 +188,7 @@ export const Resources: ResourceGroup = {
 				allowed: "bwg",
 				type: "Gear",
 				cost: 25,
-				description: "These are the weapons made using the Elven Bowcraft skill. Elven Bows are bigger than hunting bows, but not as big as the great bows of men. Th ey provide 3D of range dice at extreme, and 3D at optimal. Maximum range is 250 paces. In the Fight rules, they have a Nock and Draw time of five actions.<br>When purchasing an Elven Bow, Elves may choose from these arrows:<br>Hunting Head: I: B4, M: B8, S: B11, VA 2, Free<br>Leaf Head: I: BS, M: B9, S: B12, VA 1, +1 rp<br>Bodkin: I: B4, M: B7, S: B10, VA 3, +2 rps<br>Elven characters who take four or fewer lifepaths and whose last lifepath is Elven Bowyer may take an Elven Bow for 5 rps."
+				description: "These are the weapons made using the Elven Bowcraft skill. Elven Bows are bigger than hunting bows, but not as big as the great bows of men. They provide 3D of range dice at extreme, and 3D at optimal. Maximum range is 250 paces. In the Fight rules, they have a Nock and Draw time of five actions.<br>When purchasing an Elven Bow, Elves may choose from these arrows:<br>Hunting Head: I: B4, M: B8, S: B11, VA 2, Free<br>Leaf Head: I: BS, M: B9, S: B12, VA 1, +1rp<br>Bodkin: I: B4, M: B7, S: B10, VA 3, +2rps<br>Elven characters who take four or fewer lifepaths and whose last lifepath is Elven Bowyer may take an Elven Bow for 5 rps."
 			},
 			{
 				name: "Elven Cloak",
@@ -269,7 +269,7 @@ export const Resources: ResourceGroup = {
 				allowed: "bwg",
 				type: "Gear",
 				cost: 2,
-				description: "This is all the necessary bits, odds and ends and what-no ts that are needed for survival on the road-candles, matches, flint and steel, a pocket knife, a rain cloak, a rain hat, a good sturdy rucksack, a thick leather belt, a money purse or wallet, a warm coat, etc. The exact choices are up to the player, but th e GM has some say —no flamethrowers or Elven cloaks in traveling gear. Oh, yes, I almost forgot... don't forget to bring a good length of rope; you'll want one if you don't."
+				description: "This is all the necessary bits, odds and ends and what-no ts that are needed for survival on the road-candles, matches, flint and steel, a pocket knife, a rain cloak, a rain hat, a good sturdy rucksack, a thick leather belt, a money purse or wallet, a warm coat, etc. The exact choices are up to the player, but the GM has some say —no flamethrowers or Elven cloaks in traveling gear. Oh, yes, I almost forgot... don't forget to bring a good length of rope; you'll want one if you don't."
 			},
 			{
 				name: "Personal Effects",
@@ -361,7 +361,7 @@ export const Resources: ResourceGroup = {
 					["Plated mail", 20],
 					["Full plated mail", 50]
 				],
-				description: "When you buy armor, you buy the whole suit-helmet, arms, chest and legs. The player may choose individual pieces if he likes. A helmet or br eastplate costs half th e full suit. Grea ves or leggin gs cost a third of the full price. Round up any fractional costs. Shields may be included in an armor kit at no extra cost.<br>Poor Quality Armor - Half of th e run of th e mill cost rounded up. This armor falls apart; all 1s count for losing armor dice.<br>Superior Quality Armor - 4x cost of a full suit. Only the first 1 counts, which is rerolled; if that die comes up a 1 again, an armor die is lost."
+				description: "When you buy armor, you buy the whole suit-helmet, arms, chest and legs. The player may choose individual pieces if he likes. A helmet or br eastplate costs half the full suit. Grea ves or leggin gs cost a third of the full price. Round up any fractional costs. Shields may be included in an armor kit at no extra cost.<br>Poor Quality Armor - Half of the run of the mill cost rounded up. This armor falls apart; all 1s count for losing armor dice.<br>Superior Quality Armor - 4x cost of a full suit. Only the first 1 counts, which is rerolled; if that die comes up a 1 again, an armor die is lost."
 			},
 			{
 				name: "Riding Mount or Pack Animal",
@@ -389,7 +389,7 @@ export const Resources: ResourceGroup = {
 				allowed: "bwg",
 				type: "Gear",
 				cost: 1,
-				description: "This is all the necessary bits, odds and ends and what-no ts that are needed for survival on the road-candles, matches, flint and steel, a pocket knife, a rain cloak, a rain hat, a good sturdy rucksack, a thick leather belt, a money purse or wallet, a warm coat, etc. The exact choices are up to the player, but th e GM has some say —no flamethrowers or Elven cloaks in traveling gear. Oh, yes, I almost forgot... don't forget to bring a good length of rope; you'll want one if you don't."
+				description: "This is all the necessary bits, odds and ends and what-no ts that are needed for survival on the road-candles, matches, flint and steel, a pocket knife, a rain cloak, a rain hat, a good sturdy rucksack, a thick leather belt, a money purse or wallet, a warm coat, etc. The exact choices are up to the player, but the GM has some say —no flamethrowers or Elven cloaks in traveling gear. Oh, yes, I almost forgot... don't forget to bring a good length of rope; you'll want one if you don't."
 			},
 			{
 				name: "Shoes",
@@ -486,14 +486,186 @@ export const Resources: ResourceGroup = {
 				allowed: "bwg",
 				type: "Gear",
 				cost: "various",
-				description: "Starting sorcerer characters purchase their spells with resource points. Resource point costs are provided with each spell. But in case yo u n ee d to price your own spells, the costs are as follows: The resource point cost for each spe ll is 2 rps for every point of obstacle. If the spell is li sted with a '^', the cost is 4 rps per obstacle point. If the obstacle is listed as a 'range', price the spell using the obstacle in the middle of the variable range. For example, if a spell obstacle is 1-10, price th e spell as an Ob 5 spell. If the spell Obstacle is based on a stat , price the spell based on a stat of 5 plus the cost of any base obstacle."
+				description: "Starting sorcerer characters purchase their spells with resource points. Resource point costs are provided with each spell. But in case yo u n ee d to price your own spells, the costs are as follows: The resource point cost for each spe ll is 2 rps for every point of obstacle. If the spell is li sted with a '^', the cost is 4 rps per obstacle point. If the obstacle is listed as a 'range', price the spell using the obstacle in the middle of the variable range. For example, if a spell obstacle is 1-10, price the spell as an Ob 5 spell. If the spell Obstacle is based on a stat , price the spell based on a stat of 5 plus the cost of any base obstacle."
 			}
 		]
 	},
 	"Orc": {
 		name: "Orc",
 		allowed: "bwg",
-		resources: []
+		resources: [
+			{
+				name: "Rags",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 1
+			},
+			{
+				name: "Traveling Gear",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 3
+			},
+			{
+				name: "Hobnailed Boots",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 1
+			},
+			{
+				name: "Orc Arms",
+				allowed: "bwg",
+				type: "Gear",
+				cost: [["Poor quality arms", 3], ["Run of the mill arms", 5]],
+				description: "You may purchase run of the mill or poor quality weapons for your character. You may purchase beaks, spikes and weights for your character's weapons at +1 rp per modification, per weapon."
+			},
+			{
+				name: "Orc Armor",
+				allowed: "bwg",
+				type: "Gear",
+				cost: [
+					["Poor quality hides (gambeson equivalent)", 1],
+					["Poor quality reinforced hides (reinforced leather equivalent)", 3],
+					["Poor quality light mail", 5],
+					["Poor quality heavy mail", 8],
+					["Run of the mill reinforced leather", 8],
+					["Run of the mill light mail", 12],
+					["Run of the mill heavy mail", 20],
+					["Superior quality reinforced leather", 25]
+				],
+				description: "Orc players may purchase the following types of armor for their characters. They may purchase armor piecemeal as described in the Human Resources section. See the Spoils of War for more options."
+			},
+			{
+				name: "Orc Missiles",
+				allowed: "bwg",
+				type: "Gear",
+				cost: [
+					["Poor qualit y bow ( + 1 Ob to hit)", 3],
+					["Poor quality crossbow (+1 Ob to hit)", 4],
+					["Run of the mill bow", 5],
+					["Run of the mill crossbow", 6],
+					["Iron-cased bombs", 10]
+				],
+				description: "Included in the costs of these weapons are enough missiles to adequately outfit the character. Special heads for arrows and bolts can be purchased for 1 rp apiece. Take as many of each head as you like. Rules for special arrowheads are given in the Weapon Appendix of the Burning Wheel."
+			},
+			{
+				name: "Black Iron Helmet",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 5,
+				description: "A helmet complete with spikes, horse hair tassels and a prison-gate mask. 5D, +2 Ob to Perception tests."
+			},
+			{
+				name: "Black Iron Shield",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 4,
+				description: "A large, iron, circular shield, stained coal black. The outer edge is sharpened to add a little surprise for those who want to get close. 3D shield. Power 2, Add 2, VA 1, WS 1, short weapon."
+			},
+			{
+				name: "Riding Mount or Pack Animal",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 9
+			},
+			{
+				name: "Great Wolf Mount",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 15,
+				description: "The Great Wolf is the pr eferred mount of the Orcish cavalry. Though not as swift as horses, they mak e up for their loss in cunning and ferocity. Use the stats in the Monsters section in the Burning Wheel for the Black Destroyer and Astride the Beast wolves (they're too long to li st here) or burn up th e wolf using the Great Wolf lifepaths in the Codex. Burned wolves have one less lifepath than their master and obey the other rules for relationships. Lastly, the wolf can be burned up as a character by another player. This creates a powerful partnership, rather than a master/slave, rider/mount relation ship. When using a player character wolf, lifepath limits are the same as for any other character."
+			},
+			{
+				name: "Whip",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 2,
+				description: "The lash is required for making use of the Where There's a Whip, There's a Way trait. The whip is not a weapon of any consequence. This may only be purchased by characters with the Where There's a Whip, There's a Way trait."
+			},
+			{
+				name: "Poison",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 5,
+				description: "Three doses of one of the types of poison listed under Vile Poisoner."
+			},
+			{
+				name: "Brazen Horn or Clan Banner",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 9,
+				description: "The Brazen Horn adds +1D to the Brazen Horn of Despair skill and allows Despair Shouters to help a Named with Command or Brutal Intimidation. The banner reduces hesitation by one for all in the clan who can see it."
+			},
+			{
+				name: "Skill Toolkits",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 9
+			},
+			{
+				name: "Riding Harness for Wolf",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 5,
+				description: "The saddle, bit and bridle, stirrups and reins add +1D to Riding tests for wolves."
+			},
+			{
+				name: "Spoils of War",
+				allowed: "bwg",
+				type: "Gear",
+				cost: "various",
+				description: "Named, Great Ones , Whisperers, Head Takers, Summoners and Masters may purchase one item from any character stock resources/gear list they wish. Troll Lords may purchase gear from the Troll resources list in the Codex. Any Orc character who has 'failed' a Brutal Life test may also pur chase Spoils of War from other character stocks, but the cost of the item/prop erty may not exceed half the Orc's total resource points. Named, Great Ones, etc. may take a second item, but to do so counts as failing a Brutal Life roll at his current lifepath level. If an Orc player takes property as part of their Spoils of War, be sure to include its cost when calculating his Resources."
+			},
+			{
+				name: "Clans and Warbands",
+				allowed: "bwg",
+				type: "Gear",
+				cost: "various",
+				description: "Orcs frequently gather together in groups, warbands, clans and hordes. A typical/minor clan falls into the 1D affiliation cat egory. An important or powerful clan or horde is a 2D affiliation. Relationships in the group/clan are purchased as normal. Additional characters and functionaries can be generated using the Circles rules in play. Orc commanders are often unaware of who precisely is working under them. It's usually a nest of rabble, a few bitter enemies and one or two die hard heavies. The exact nature of who's who is up to the Circles tests. The character's own position in the warband/horde is dependent on his reputation. Use the standard rules described in Step 8. Spending Resource Points to generate this."
+			},
+			{
+				name: "Black Robes",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 1,
+				description: "Servants only."
+			},
+			{
+				name: "Leather Apron",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 1,
+				description: "Servants only."
+			},
+			{
+				name: "Ceremonial Knives",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 3,
+				description: "Servants only. These ornate and hallowed weapons are vital to the Servant for performing his dark rituals. Otherwise they are simply ornate run of the mill weapons."
+			},
+			{
+				name: "Ceremonial Axe or Sword",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 7,
+				description: "Servants only. These ornate and hallowed weapons are vital to the Servant for performing his dark rituals. Otherwise they are simply ornate run of the mill weapons."
+			},
+			{
+				name: "Tools of the Trade",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 7,
+				description: "Servants only. These are a collection of knives, blades, pins, clamps and other strange devices. Tools of the Trade add +1D to the Torture skill."
+			},
+			{
+				name: "Poisoner's Toolkit",
+				allowed: "bwg",
+				type: "Gear",
+				cost: 7,
+				description: "Servants only. This kit allows the Knower of Secrets to mix poisons. All of the ingredients necessary for concocting the poisons listed under the Vile Poisoner skill are present in this foul smelling pouch. After using this kit, roll the Die of Fate. On a 1, the supplies have run out and the character must refill the kit via a Resources, Foraging or Scavenging test (or another means sanctioned by the GM)."
+			}
+		]
 	},
 	"Roden": {
 		name: "Roden",

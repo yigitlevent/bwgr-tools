@@ -30,38 +30,27 @@ function ResourceItem({ resource }: { resource: Resource; }) {
 			<Grid item xs={2}>
 				<Typography variant="h4">{resource.name} </Typography>
 			</Grid>
-
 			<Grid item xs={1}>
 				<Typography sx={{ float: "right" }}>{resource.type}</Typography>
 			</Grid>
-
 			<Grid item xs={3}>
 				{typeof resource.cost === "string"
 					? <Typography>Cost: {resource.cost}</Typography>
 					: typeof resource.cost === "number"
 						? <Typography>Cost: {resource.cost}{resource.cost > 1 ? "rps" : "rp"}</Typography>
-						: <Box>
-							Cost: {resource.cost.map((v, i) => <Typography variant="body2" key={i}>{v[0]}: {v[1]}{v[1] > 1 ? "rps" : "rp"}</Typography>)}
-						</Box>
+						: <Box>Cost: {resource.cost.map((v, i) => <Typography variant="body2" key={i}>{v[0]}: {v[1]}{v[1] > 1 ? "rps" : "rp"}</Typography>)}</Box>
 				}
 			</Grid>
-
 			{resource.description
 				? <Fragment>
-					<Grid item xs={3}>
-						<Divider />
-					</Grid>
-
-					<Grid item xs={3}>
-						{resource.description.split("<br>").map((v, i) => <Typography key={i} variant="body2">{v}</Typography>)}
-					</Grid>
+					<Grid item xs={3}><Divider /></Grid>
+					<Grid item xs={3}>{resource.description.split("<br>").map((v, i) => <Typography key={i} variant="body2">{v}</Typography>)}</Grid>
 				</Fragment>
 				: null
 			}
 		</GenericGrid>
 	);
 }
-
 
 export function ResourcesList() {
 	const { datasets } = useAppSelector(state => state.dataset);
