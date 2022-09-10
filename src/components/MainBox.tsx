@@ -1,9 +1,8 @@
 import { Fragment } from "react";
+import { Route, Routes } from "react-router-dom";
 
 import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
-
-import { useAppSelector } from "../state/store";
 
 import { DiceRoller } from "./DiceRoller/DiceRoller";
 import { LifepathLists } from "./LifepathLists/LifepathLists";
@@ -18,41 +17,23 @@ import { FightPlanner } from "./FightPlanner/FightPlanner";
 import { ResourcesList } from "./ResourcesList/ResourcesList";
 
 export function MainBox() {
-	const { selected } = useAppSelector(state => state.drawer);
-
-	const getElement = () => {
-		switch (selected) {
-			case "Dice Roller":
-				return <DiceRoller />;
-			case "Lifepaths":
-				return <LifepathLists />;
-			case "Skills":
-				return <SkillLists />;
-			case "Traits":
-				return <TraitLists />;
-			case "Resources":
-				return <ResourcesList />;
-			case "Lifepath Randomizer":
-				return <LifepathRandomizer />;
-			case "Practice Planner":
-				return <PracticePlanner />;
-			case "Magic Wheel":
-				return <MagicWheel />;
-			case "Duel of Wits Planner":
-				return <DuelOfWitsPlanner />;
-			case "Range and Cover Planner":
-				return <RangeAndCoverPlanner />;
-			case "Fight Planner":
-				return <FightPlanner />;
-			default:
-				return <Fragment />;
-		}
-	};
-
 	return (
 		<Container maxWidth="lg" sx={{ margin: "10px auto" }}>
 			<Paper sx={{ padding: "10px 20px" }}>
-				{getElement()}
+				<Routes>
+					<Route path="/" element={<Fragment />} />
+					<Route path="/diceroller" element={<DiceRoller />} />
+					<Route path="/lifepaths" element={<LifepathLists />} />
+					<Route path="/skills" element={<SkillLists />} />
+					<Route path="/traits" element={<TraitLists />} />
+					<Route path="/resources" element={<ResourcesList />} />
+					<Route path="/lprandomizer" element={<LifepathRandomizer />} />
+					<Route path="/practiceplanner" element={<PracticePlanner />} />
+					<Route path="/magicwheel" element={<MagicWheel />} />
+					<Route path="/dowplanner" element={<DuelOfWitsPlanner />} />
+					<Route path="/racplanner" element={<RangeAndCoverPlanner />} />
+					<Route path="/fightplanner" element={<FightPlanner />} />
+				</Routes>
 			</Paper>
 		</Container>
 	);

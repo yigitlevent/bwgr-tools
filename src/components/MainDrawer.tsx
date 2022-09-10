@@ -1,9 +1,9 @@
-import { Fragment } from "react";
+import { forwardRef, Fragment, useMemo } from "react";
+import { Link as RouterLink, LinkProps as RouterLinkProps } from "react-router-dom";
 
 import Drawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
 import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
@@ -17,32 +17,29 @@ import { DrawerItem } from "../state/reducers/drawer";
 import { useStore } from "../state/useStore";
 
 
-function DrawerListItem({ text, icon, onClick }: { text: string; icon?: JSX.Element; onClick?: () => void; }) {
+function ListItemLink({ item, icon }: { item: [DrawerItem, string]; icon?: JSX.Element; }) {
+	const renderLink = useMemo(() => forwardRef<HTMLAnchorElement, Omit<RouterLinkProps, "to">>(function Link(itemProps, ref) {
+		return <RouterLink to={item[1]} ref={ref} {...itemProps} role={undefined} />;
+	}), [item]);
+
 	return (
-		<ListItem key={text} disablePadding>
-			<ListItemButton onClick={onClick}>
-				{icon ?
-					<ListItemIcon>
-						{icon}
-					</ListItemIcon>
-					: null
-				}
-				<ListItemText primary={text} />
-			</ListItemButton>
+		<ListItem key={item[0]} component={renderLink} button>
+			{icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
+			<ListItemText primary={item[0]} />
 		</ListItem>
 	);
 }
 
-const Items: DrawerItem[][] = [
-	["Dice Roller"],
-	["Lifepaths", "Skills", "Traits", "Resources"],
-	["Lifepath Randomizer", "Practice Planner", "Magic Wheel"],
-	["Duel of Wits Planner", "Range and Cover Planner", "Fight Planner"]
+const Items: [DrawerItem, string][][] = [
+	[["Dice Roller", "/diceroller"]],
+	[["Lifepaths", "/lifepaths"], ["Skills", "/skills"], ["Traits", "/traits"], ["Resources", "/resources"]],
+	[["Lifepath Randomizer", "/lprandomizer"], ["Practice Planner", "/practiceplanner"], ["Magic Wheel", "/magicwheel"]],
+	[["Duel of Wits Planner", "/dowplanner"], ["Range and Cover Planner", "/racplanner"], ["Fight Planner", "/fightplanner"]]
 ];
 
 export function MainDrawer() {
 	const { open, type } = useAppSelector(state => state.drawer);
-	const { drwCloseDrawer, drwSetSelectedItem } = useStore().drawer;
+	const { drwCloseDrawer } = useStore().drawer;
 
 	const closeDrawer = () => {
 		if (type !== "persistent") drwCloseDrawer();
@@ -61,13 +58,11 @@ export function MainDrawer() {
 			<Box sx={{ width: 250, height: "100%" }} onClick={closeDrawer} onKeyDown={closeDrawer}>
 				<Typography variant="h4" sx={{ padding: "10px 10px" }}>BWGR Tools</Typography>
 
-				{Items.map((v, i) => {
+				{Items.map((itemgroup, i) => {
 					return (
 						<Fragment key={i}>
 							<Divider />
-							{v.map((item, ii) => {
-								return <DrawerListItem key={ii} text={item} onClick={() => drwSetSelectedItem(item)} />;
-							})}
+							{itemgroup.map((item, ii) => <ListItemLink key={ii} item={item} />)}
 						</Fragment>
 					);
 				})}
