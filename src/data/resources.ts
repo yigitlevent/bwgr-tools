@@ -772,17 +772,17 @@ export const Resources: ResourceGroup = {
 	},
 	"Roden": {
 		name: "Roden",
-		allowed: "bwg",
+		allowed: "bwc",
 		resources: []
 	},
 	"Troll": {
 		name: "Troll",
-		allowed: "bwg",
+		allowed: "bwc",
 		resources: []
 	},
 	"Great Wolf": {
 		name: "Great Wolf",
-		allowed: "bwg",
+		allowed: "bwc",
 		resources: []
 	}
 };
