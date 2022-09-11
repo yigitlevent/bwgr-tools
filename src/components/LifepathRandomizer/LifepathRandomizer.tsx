@@ -26,6 +26,7 @@ import { GenericGrid } from "../Shared/Grids";
 
 
 export function LifepathRandomizer() {
+	const { datasets } = useAppSelector(state => state.dataset);
 	const { stock, setting, noDuplicates, maxLeads, maxLifepaths, minLifepaths } = useAppSelector(state => state.lifepathRandomizer);
 	const { lprChangeMaxLPs, lprChangeMaxLeads, lprChangeMinLPs, lprChangeStock, lprToggleNoDuplicates } = useStore().lifepathRandomizer;
 
@@ -58,7 +59,7 @@ export function LifepathRandomizer() {
 	const filterByRequirements = useCallback((combinedPossibleLifepaths: Lifepath[], chosenLifepaths: Lifepath[], currentAge: number): Lifepath[] => {
 		const filteredLifepaths: Lifepath[] = [];
 
-		combinedPossibleLifepaths = combinedPossibleLifepaths.filter(v => v.born === false);
+		combinedPossibleLifepaths = combinedPossibleLifepaths.filter(v => v.born === false).filter(v => datasets.includes(v.allowed));
 
 		for (const lifepathKey in combinedPossibleLifepaths) {
 			const lp = combinedPossibleLifepaths[lifepathKey];
@@ -80,7 +81,7 @@ export function LifepathRandomizer() {
 		}
 
 		return filteredLifepaths;
-	}, [checkBlock]);
+	}, [checkBlock, datasets]);
 
 	const getCurrentAge = useCallback((chosenLifepaths: Lifepath[], leadCount: number) => {
 		const yrs = chosenLifepaths.map(v => v.years).filter(v => typeof v === "number") as number[];
@@ -128,7 +129,7 @@ export function LifepathRandomizer() {
 			? chosenStock.settings[settingValues[RandomNumber(0, settingValues.length - 1)].name]
 			: chosenStock.settings[setting];
 
-		const bornLPs = chosenSetting.lifepaths.filter(v => v.born);
+		const bornLPs = chosenSetting.lifepaths.filter(v => v.born).filter(v => datasets.includes(v.allowed));
 		const bornLPsNum = bornLPs.length - 1;
 		tempChosenLifepaths.push(bornLPs[RandomNumber(0, bornLPsNum)]);
 
@@ -157,7 +158,7 @@ export function LifepathRandomizer() {
 		if (tempChosenLifepaths.length < minLifepaths) setTriedTooMuch(true);
 
 		setChosen(tempChosenLifepaths);
-	}, [stock, setting, minLifepaths, maxLifepaths, chooseNext, noDuplicates]);
+	}, [stock, setting, minLifepaths, maxLifepaths, datasets, chooseNext, noDuplicates]);
 
 	return (
 		<Fragment>
