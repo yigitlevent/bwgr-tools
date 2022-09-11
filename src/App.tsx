@@ -5,6 +5,8 @@ import Paper from "@mui/material/Paper";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
+import { DataDebug } from "./utils/dataDebug";
+
 import { useStore } from "./hooks/useStore";
 
 import { MainDrawer } from "./components/MainDrawer";
@@ -13,6 +15,8 @@ import { MainBox } from "./components/MainBox";
 
 export function App(): JSX.Element {
 	const { drwToggleDrawer } = useStore().drawer;
+
+	if (import.meta.env.MODE === "development") DataDebug();
 
 	return (
 		<Fragment>
