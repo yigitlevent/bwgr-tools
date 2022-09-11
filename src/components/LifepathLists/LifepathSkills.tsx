@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 
+import { useAppSelector } from "../../state/store";
 import type { Lifepath } from "../../data/stocks";
 import { Skill, SkillCategories } from "../../data/skills";
 
@@ -10,14 +11,23 @@ import { PopoverLink } from "../Shared/PopoverLink";
 
 
 export function LifepathSkills({ lifepath }: { lifepath: Lifepath; }) {
+	const { datasets } = useAppSelector(state => state.dataset);
+
 	const hasGeneralSkill = typeof lifepath.generalSkillPool === "string" || lifepath.generalSkillPool > 0;
 	const hasLifepathSkill = typeof lifepath.skillPool === "string" || lifepath.skillPool > 0;
 
 	const general = hasGeneralSkill ? SkillCategories["Any General"].skills.find(v => v.name === "General") : undefined;
-	const lifepathSkills = lifepath.skills.map(path => {
-		const [category, name] = path.split("➞");
-		return SkillCategories[category].skills.find(v => v.name === name) as Skill;
-	});
+	const lifepathSkills =
+		lifepath.skills
+			.filter(entry => {
+				const [category, name] = entry.split("➞");
+				const s = SkillCategories[category].skills.find(v => v.name === name) as Skill;
+				return datasets.includes(s.allowed);
+			})
+			.map(path => {
+				const [category, name] = path.split("➞");
+				return SkillCategories[category].skills.find(v => v.name === name) as Skill;
+			});
 
 	return (
 		<Fragment>

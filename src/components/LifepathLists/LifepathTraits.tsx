@@ -3,17 +3,27 @@ import { Fragment } from "react";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 
+import { useAppSelector } from "../../state/store";
 import type { Lifepath } from "../../data/stocks";
+import { Trait, TraitCategories } from "../../data/traits";
 
 import { PopoverLink } from "../Shared/PopoverLink";
-import { Trait, TraitCategories } from "../../data/traits";
 
 
 export function LifepathTraits({ lifepath }: { lifepath: Lifepath; }) {
-	const traits = lifepath.traits.map(path => {
-		const [category, name] = path.split("➞");
-		return TraitCategories[category].traits.find(v => v.name === name) as Trait;
-	});
+	const { datasets } = useAppSelector(state => state.dataset);
+
+	const traits =
+		lifepath.traits
+			.filter(entry => {
+				const [category, name] = entry.split("➞");
+				const s = TraitCategories[category].traits.find(v => v.name === name) as Trait;
+				return datasets.includes(s.allowed);
+			})
+			.map(path => {
+				const [category, name] = path.split("➞");
+				return TraitCategories[category].traits.find(v => v.name === name) as Trait;
+			});
 
 	return (
 		<Fragment>

@@ -8,9 +8,12 @@ import { Stocks } from "../../data/stocks";
 import { LifepathSkills } from "./LifepathSkills";
 import { LifepathTraits } from "./LifepathTraits";
 import { LifepathRequirements } from "./LifepathRequirements";
+import { useAppSelector } from "../../state/store";
 
 
 export function LifepathBox({ lifepath }: { lifepath: Lifepath; }) {
+	const { datasets } = useAppSelector(state => state.dataset);
+
 	const getYears = (l: Lifepath) => {
 		return l.years + (typeof l.years !== "number" ? "" : (l.skillPool > 1) ? "yrs" : "yr");
 	};
@@ -31,10 +34,17 @@ export function LifepathBox({ lifepath }: { lifepath: Lifepath; }) {
 	};
 
 	const getLeads = (l: Lifepath) => {
-		const leads = (l.leads.length === 0) ? "—" : l.leads.map((lead) => {
-			const path = lead.split("➞");
-			return Stocks[path[0]].settings[path[1]].short;
-		});
+		const leads = (l.leads.length === 0)
+			? "—"
+			: l.leads
+				.filter((lead) => {
+					const path = lead.split("➞");
+					return datasets.includes(Stocks[path[0]].settings[path[1]].allowed);
+				})
+				.map((lead) => {
+					const path = lead.split("➞");
+					return Stocks[path[0]].settings[path[1]].short;
+				});
 
 		if (typeof leads === "string") return leads;
 		return leads.join(", ");
