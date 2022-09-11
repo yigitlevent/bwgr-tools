@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useCallback } from "react";
+import { ChangeEvent, FormEvent, SyntheticEvent, useCallback } from "react";
 
 import { SelectChangeEvent } from "@mui/material/Select";
 
@@ -21,7 +21,7 @@ export function useStore() {
 
 	// DATASET
 	const dataset = {
-		dtsToggleDataset: (value: "bwg" | "bwc" | "msc") => {
+		dtsToggleDataset: (value: Ruleset) => {
 			dispatch({ type: "TOGGLE_DATASET", payload: { dataset: value } });
 		}
 	};

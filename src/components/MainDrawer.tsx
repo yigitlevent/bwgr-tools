@@ -9,11 +9,15 @@ import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Switch from "@mui/material/Switch";
 
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 import { useAppSelector } from "../state/store";
 import { useStore } from "../hooks/useStore";
+import { GenericGrid } from "./Shared/Grids";
+import Grid from "@mui/material/Grid";
 
 
 function ListItemLink({ item, icon }: { item: [string, string]; icon?: JSX.Element; }) {
@@ -37,8 +41,10 @@ const Items: [string, string][][] = [
 ];
 
 export function MainDrawer() {
+	const { datasets } = useAppSelector(state => state.dataset);
 	const { open, type } = useAppSelector(state => state.drawer);
 	const { drwCloseDrawer } = useStore().drawer;
+	const { dtsToggleDataset } = useStore().dataset;
 
 	const closeDrawer = () => {
 		if (type !== "persistent") drwCloseDrawer();
@@ -68,11 +74,50 @@ export function MainDrawer() {
 				<Divider />
 			</Box>
 
-			<Box sx={{ width: 250, position: "absolute", bottom: "0", padding: 1 }} onClick={closeDrawer} onKeyDown={closeDrawer}>
-				<IconButton aria-label="delete" href="https://github.com/yigitlevent/bwgr-tools">
+			<Box sx={{ width: 250, position: "absolute", bottom: "0" }} onClick={closeDrawer} onKeyDown={closeDrawer}>
+				<Divider />
+
+				<GenericGrid columns={3} sx={{ overflow: "hidden" }} center>
+					{/*<Grid item xs={3}>
+						<Typography variant="h5" sx={{ width: "100%", margin: "-6px 0 0", padding: 0, textAlign: "center" }}>Datasets</Typography>
+					</Grid>*/}
+
+					<Grid item xs={1}>
+						<FormControlLabel
+							label="Core"
+							labelPlacement="top"
+							checked={datasets.includes("bwg")}
+							control={<Switch color="primary" />}
+							onChange={() => dtsToggleDataset("bwg")}
+						/>
+					</Grid>
+					<Grid item xs={1}>
+						<FormControlLabel
+							label="Codex"
+							labelPlacement="top"
+							checked={datasets.includes("bwc")}
+							control={<Switch color="primary" />}
+							onChange={() => dtsToggleDataset("bwc")}
+						/>
+					</Grid>
+					<Grid item xs={1}>
+						<FormControlLabel
+							label="Misc"
+							labelPlacement="top"
+							checked={datasets.includes("msc")}
+							control={<Switch color="primary" />}
+							onChange={() => dtsToggleDataset("msc")}
+						/>
+					</Grid>
+				</GenericGrid>
+
+
+				<Divider />
+
+				<IconButton href="https://github.com/yigitlevent/bwgr-tools" sx={{ padding: 1, margin: "6px 10px" }}>
 					<GitHubIcon />
 				</IconButton>
 			</Box>
-		</Drawer>
+		</Drawer >
 	);
 }
