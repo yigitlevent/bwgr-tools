@@ -87,7 +87,7 @@ export function TraitLists() {
 
 			<GenericGrid spacing={2}>
 				{searchResults.length > 0
-					? searchResults.map((trait, i) =>
+					? searchResults.sort((a, b) => a.name.localeCompare(b.name)).map((trait, i) =>
 						<Grid item key={i}>
 							<Paper elevation={2} sx={{ cursor: "pointer", padding: "2px 6px" }}>
 								<PopoverLink data={trait} />

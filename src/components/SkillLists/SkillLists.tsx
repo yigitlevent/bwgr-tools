@@ -87,7 +87,7 @@ export function SkillLists() {
 
 			<GenericGrid spacing={2}>
 				{searchResults.length > 0
-					? searchResults.map((skill, i) =>
+					? searchResults.sort((a, b) => a.name.localeCompare(b.name)).map((skill, i) =>
 						<Grid item key={i}>
 							<Paper elevation={2} sx={{ cursor: "pointer", padding: "2px 6px" }}>
 								<PopoverLink data={skill} />
