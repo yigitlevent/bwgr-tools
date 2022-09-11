@@ -7,7 +7,7 @@ export interface DatasetState {
 }
 
 const INITIAL: DatasetState = {
-	datasets: ["bwg", "bwc", "msc"]
+	datasets: ["bwg", "bwc"]
 };
 
 export const DatasetReducer = (state = INITIAL, action: DatasetActions): DatasetState => {

@@ -77,7 +77,7 @@ export function MainDrawer() {
 			<Box sx={{ width: 250, position: "absolute", bottom: "0" }} onClick={closeDrawer} onKeyDown={closeDrawer}>
 				<Divider />
 
-				<GenericGrid columns={3} sx={{ overflow: "hidden" }} center>
+				<GenericGrid columns={3} sx={{ overflow: "hidden", marginTop: "-3px" }} center>
 					{/*<Grid item xs={3}>
 						<Typography variant="h5" sx={{ width: "100%", margin: "-6px 0 0", padding: 0, textAlign: "center" }}>Datasets</Typography>
 					</Grid>*/}
