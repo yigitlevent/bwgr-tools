@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, SyntheticEvent, useCallback } from "react";
+import { ChangeEvent, FormEvent, useCallback } from "react";
 
 import { SelectChangeEvent } from "@mui/material/Select";
 
