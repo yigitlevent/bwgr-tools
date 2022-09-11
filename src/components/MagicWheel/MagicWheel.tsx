@@ -18,7 +18,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 import { useAppSelector } from "../../state/store";
 import { useStore } from "../../hooks/useStore";
-import { MagicData, MiscMagicElements, MiscMagicFacets } from "../../data/magic";
+import { MagicData, MagicFacet, MiscMagicElements, MiscMagicFacets } from "../../data/magic";
 import { RandomNumber } from "../../utils/misc";
 
 import { BackCanvas } from "./BackCanvas";
@@ -157,6 +157,22 @@ export function MagicWheel() {
 		mgwChangeElementIndex(parseInt(value));
 	}, [mgwChangeElementIndex]);
 
+	const resetStartingFacets = useCallback((data: MagicFacet[][]) => {
+		mgwChangeAOE(data[4][0].name);
+		mgwChangeElement(data[3][0].name);
+		mgwChangeImpetus(data[2][0].name);
+		mgwChangeDuration(data[1][0].name);
+		mgwChangeOrigin(data[0][0].name);
+	}, [mgwChangeAOE, mgwChangeDuration, mgwChangeElement, mgwChangeImpetus, mgwChangeOrigin]);
+
+	const resetCurrentAngles = useCallback(() => {
+		setCurrentOriginAngle(0);
+		setCurrentDurationAngle(0);
+		setCurrentImpetusAngle(0);
+		setCurrentElementAngle(0);
+		setCurrentAOEAngle(0);
+	}, []);
+
 	useEffect(() => {
 		if (wrapperRef && wrapperRef.current) setSize(window.getComputedStyle(wrapperRef.current).width);
 	}, [wrapperRef]);
@@ -166,13 +182,15 @@ export function MagicWheel() {
 			const d = MiscMagicFacets;
 			d[3] = MiscMagicElements[elementIndex];
 			setMagicData([...d]);
-			mgwChangeElement(MiscMagicElements[elementIndex][0].name);
-			mgwChangeImpetus("Alteration");
+			resetStartingFacets(d);
+			resetCurrentAngles();
 		}
 		else {
-			setMagicData(MiscMagicFacets);
+			setMagicData(MagicData);
+			resetStartingFacets(MagicData);
+			resetCurrentAngles();
 		}
-	}, [datasets, elementIndex, mgwChangeElement, mgwChangeImpetus]);
+	}, [datasets, elementIndex, resetCurrentAngles, resetStartingFacets]);
 
 	useEffect(() => {
 		const tempArr = [0, 0, 0, 0, 0];
@@ -180,7 +198,7 @@ export function MagicWheel() {
 			tempArr[parseInt(arrayKey)] = 4 * Math.PI / magicData[arrayKey].length;
 		}
 		setEntryAngleSpan(tempArr);
-	}, [aoe, element, impetus, duration, origin, magicData]);
+	}, [aoe, element, impetus, duration, origin, magicData, datasets]);
 
 	useEffect(() => {
 		if (!isFontLoaded) {
@@ -232,7 +250,7 @@ export function MagicWheel() {
 
 				<Grid item xs={columns} sm={2} md={1}>
 					<FormControl fullWidth variant="standard">
-						<InputLabel>Impetus</InputLabel>
+						<InputLabel>{datasets.includes("msc") ? "Law" : "Impetus"}</InputLabel>
 						<Select label="Impetus" name="Impetus" value={isRotating > 0 ? "" : impetus} onChange={changeStartingFacet} disabled={isRotating > 0}>
 							{Object.values(magicData[2]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>

@@ -165,10 +165,10 @@ export function useStore() {
 
 	// MAGIC WHEEL
 	const magicWheel = {
-		mgwChangeAOE: (event: SelectChangeEvent | string) => {
+		mgwChangeAOE: useCallback((event: SelectChangeEvent | string) => {
 			const aoe = (typeof event === "string") ? event : event.target.value;
 			dispatch({ type: "CHANGE_MAGIC_WHEEL_AOE", payload: { aoe } });
-		},
+		}, [dispatch]),
 		mgwChangeElement: useCallback((event: SelectChangeEvent | string) => {
 			const element = (typeof event === "string") ? event : event.target.value;
 			dispatch({ type: "CHANGE_MAGIC_WHEEL_ELEMENT", payload: { element } });
@@ -177,27 +177,27 @@ export function useStore() {
 			const impetus = (typeof event === "string") ? event : event.target.value;
 			dispatch({ type: "CHANGE_MAGIC_WHEEL_IMPETUS", payload: { impetus } });
 		}, [dispatch]),
-		mgwChangeDuration: (event: SelectChangeEvent | string) => {
+		mgwChangeDuration: useCallback((event: SelectChangeEvent | string) => {
 			const duration = (typeof event === "string") ? event : event.target.value;
 			dispatch({ type: "CHANGE_MAGIC_WHEEL_DURATION", payload: { duration } });
-		},
-		mgwChangeOrigin: (event: SelectChangeEvent | string) => {
+		}, [dispatch]),
+		mgwChangeOrigin: useCallback((event: SelectChangeEvent | string) => {
 			const origin = (typeof event === "string") ? event : event.target.value;
 			dispatch({ type: "CHANGE_MAGIC_WHEEL_ORIGIN", payload: { origin } });
-		},
-		mgwChangeDirection: (event: SelectChangeEvent) => {
+		}, [dispatch]),
+		mgwChangeDirection: useCallback((event: SelectChangeEvent) => {
 			dispatch({ type: "CHANGE_MAGIC_WHEEL_DIRECTION", payload: { direction: event.target.value as any } });
-		},
-		mgwChangeSteps: (event: ChangeEvent<HTMLInputElement>) => {
+		}, [dispatch]),
+		mgwChangeSteps: useCallback((event: ChangeEvent<HTMLInputElement>) => {
 			const value = Clamp(event.target.value === "" ? 0 : parseInt(event.target.value), 0, 10);
 			dispatch({ type: "CHANGE_MAGIC_WHEEL_STEPS", payload: { steps: value } });
-		},
-		mgwToggleCover: () => {
+		}, [dispatch]),
+		mgwToggleCover: useCallback(() => {
 			dispatch({ type: "TOGGLE_MAGIC_WHEEL_COVER" });
-		},
-		mgwChangeElementIndex: (elementIndex: number) => {
+		}, [dispatch]),
+		mgwChangeElementIndex: useCallback((elementIndex: number) => {
 			dispatch({ type: "CHANGE_MAGIC_WHEEL_ELEMENT_INDEX", payload: { elementIndex } });
-		}
+		}, [dispatch])
 	};
 
 	// DUEL OF WITS
