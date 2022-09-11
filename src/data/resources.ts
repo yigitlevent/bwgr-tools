@@ -590,6 +590,23 @@ export const Resources: ResourceGroup = {
 				type: "Gear",
 				cost: "various",
 				description: "Starting sorcerer characters purchase their spells with resource points. Resource point costs are provided with each spell. But in case yo u n ee d to price your own spells, the costs are as follows: The resource point cost for each spe ll is 2 rps for every point of obstacle. If the spell is li sted with a '^', the cost is 4 rps per obstacle point. If the obstacle is listed as a 'range', price the spell using the obstacle in the middle of the variable range. For example, if a spell obstacle is 1-10, price the spell as an Ob 5 spell. If the spell Obstacle is based on a stat , price the spell based on a stat of 5 plus the cost of any base obstacle."
+			},
+			{
+				name: "Exotic Beast",
+				allowed: "msc",
+				type: "Property",
+				cost: 20,
+				description: "Characters with the Animal Instruction skill, or the Merchant, Magnate, Lord, Baron, Viscount, Count, Duke, or Noble Prince lifepath, may take an appropriate exotic animal foreign to their land. This purchase counts as property when factoring Resources."
+			},
+			{
+				name: "Flails, Whips, Slings",
+				allowed: "msc",
+				type: "Gear",
+				cost: [
+					["Shepherd sling", 2],
+					["War sling", 3]
+				],
+				description: "For Flails and Whip, resource points cost found in the Arms section on pg. 202 of the Burning Wheel Gold"
 			}
 		]
 	},
