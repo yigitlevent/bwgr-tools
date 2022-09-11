@@ -3,7 +3,6 @@ import { ChangeEvent, FormEvent } from "react";
 import { SelectChangeEvent } from "@mui/material/Select";
 
 import { useAppDispatch } from "./store";
-import type { DrawerItem } from "./reducers/drawer";
 import { TestResult } from "./reducers/diceRoller";
 import { PracticeTable } from "../data/tables";
 import type { DuelOfWitsActionExtended } from "./reducers/duelOfWits";
@@ -34,9 +33,6 @@ export function useStore() {
 		},
 		drwCloseDrawer: () => {
 			dispatch({ type: "CLOSE_DRAWER" });
-		},
-		drwSetSelectedItem: (value: DrawerItem) => {
-			dispatch({ type: "SELECT_DRAWER_ITEM", payload: { selected: value } });
 		}
 	};
 

@@ -13,11 +13,10 @@ import IconButton from "@mui/material/IconButton";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 import { useAppSelector } from "../state/store";
-import { DrawerItem } from "../state/reducers/drawer";
 import { useStore } from "../state/useStore";
 
 
-function ListItemLink({ item, icon }: { item: [DrawerItem, string]; icon?: JSX.Element; }) {
+function ListItemLink({ item, icon }: { item: [string, string]; icon?: JSX.Element; }) {
 	const renderLink = useMemo(() => forwardRef<HTMLAnchorElement, Omit<RouterLinkProps, "to">>(function Link(itemProps, ref) {
 		return <RouterLink to={item[1]} ref={ref} {...itemProps} role={undefined} />;
 	}), [item]);
@@ -30,7 +29,7 @@ function ListItemLink({ item, icon }: { item: [DrawerItem, string]; icon?: JSX.E
 	);
 }
 
-const Items: [DrawerItem, string][][] = [
+const Items: [string, string][][] = [
 	[["Dice Roller", "/diceroller"]],
 	[["Lifepaths", "/lifepaths"], ["Skills", "/skills"], ["Traits", "/traits"], ["Resources", "/resources"]],
 	[["Lifepath Randomizer", "/lprandomizer"], ["Practice Planner", "/practiceplanner"], ["Magic Wheel", "/magicwheel"]],
