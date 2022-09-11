@@ -17,7 +17,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 import { useAppSelector } from "../../state/store";
-import { useStore } from "../../state/useStore";
+import { useStore } from "../../hooks/useStore";
 import { DuelOfWitsActions } from "../../data/duelOfWits";
 
 import { DuelOfWitsActionDetails } from "./DuelOfWitsActionDetails";

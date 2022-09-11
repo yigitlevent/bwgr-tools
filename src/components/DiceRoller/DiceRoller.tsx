@@ -19,7 +19,7 @@ import Looks5Icon from "@mui/icons-material/Looks5";
 import Looks6Icon from "@mui/icons-material/Looks6";
 
 import { useAppSelector } from "../../state/store";
-import { useStore } from "../../state/useStore";
+import { useStore } from "../../hooks/useStore";
 import { TestResult } from "../../state/reducers/diceRoller";
 import { Tests } from "../../data/tests";
 import { RandomNumber } from "../../utils/misc";

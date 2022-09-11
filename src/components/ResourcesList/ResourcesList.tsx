@@ -16,7 +16,7 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 
 import { useAppSelector } from "../../state/store";
-import { useStore } from "../../state/useStore";
+import { useStore } from "../../hooks/useStore";
 import { Resource, Resources } from "../../data/resources";
 
 import { useSearch } from "../../hooks/useSearch";

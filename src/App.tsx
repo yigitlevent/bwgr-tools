@@ -5,7 +5,7 @@ import Paper from "@mui/material/Paper";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
-import { useStore } from "./state/useStore";
+import { useStore } from "./hooks/useStore";
 
 import { MainDrawer } from "./components/MainDrawer";
 import { MainBox } from "./components/MainBox";

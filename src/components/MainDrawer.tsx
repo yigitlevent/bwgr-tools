@@ -13,7 +13,7 @@ import IconButton from "@mui/material/IconButton";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 import { useAppSelector } from "../state/store";
-import { useStore } from "../state/useStore";
+import { useStore } from "../hooks/useStore";
 
 
 function ListItemLink({ item, icon }: { item: [string, string]; icon?: JSX.Element; }) {

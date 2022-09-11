@@ -19,7 +19,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 import { useAppSelector } from "../../state/store";
-import { useStore } from "../../state/useStore";
+import { useStore } from "../../hooks/useStore";
 import { FightActions } from "../../data/fight";
 import { GroupBy } from "../../utils/misc";
 

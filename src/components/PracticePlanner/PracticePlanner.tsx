@@ -11,7 +11,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
 
 import { useAppSelector } from "../../state/store";
-import { useStore } from "../../state/useStore";
+import { useStore } from "../../hooks/useStore";
 import { PracticeTable } from "../../data/tables";
 import { PracticePlannerCell } from "./PracticePlannerCell";
 import { GenericGrid } from "../Shared/Grids";

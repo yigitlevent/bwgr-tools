@@ -1,15 +1,15 @@
-import { ChangeEvent, FormEvent } from "react";
+import { ChangeEvent, FormEvent, useCallback } from "react";
 
 import { SelectChangeEvent } from "@mui/material/Select";
 
-import { useAppDispatch } from "./store";
-import { TestResult } from "./reducers/diceRoller";
+import { useAppDispatch } from "../state/store";
+import { TestResult } from "../state/reducers/diceRoller";
 import { PracticeTable } from "../data/tables";
-import type { DuelOfWitsActionExtended } from "./reducers/duelOfWits";
+import type { DuelOfWitsActionExtended } from "../state/reducers/duelOfWits";
 import { DuelOfWitsAction, DuelOfWitsActions } from "../data/duelOfWits";
-import { RangeAndCoverActionExtended } from "./reducers/rangeAndCover";
+import { RangeAndCoverActionExtended } from "../state/reducers/rangeAndCover";
 import { RangeAndCoverAction, RangeAndCoverActions } from "../data/rangeAndCover";
-import type { FightActionExtended } from "./reducers/fight";
+import type { FightActionExtended } from "../state/reducers/fight";
 import { FightAction, FightActions } from "../data/fight";
 import { Clamp } from "../utils/misc";
 
@@ -84,7 +84,6 @@ export function useStore() {
 			dispatch({ type: "CHANGE_TRAIT_LIST_CATEGORY", payload: { category: event.target.value } });
 		}
 	};
-
 
 	// RESOURCE LIST
 	const resourceList = {
@@ -170,14 +169,14 @@ export function useStore() {
 			const aoe = (typeof event === "string") ? event : event.target.value;
 			dispatch({ type: "CHANGE_MAGIC_WHEEL_AOE", payload: { aoe } });
 		},
-		mgwChangeElement: (event: SelectChangeEvent | string) => {
+		mgwChangeElement: useCallback((event: SelectChangeEvent | string) => {
 			const element = (typeof event === "string") ? event : event.target.value;
 			dispatch({ type: "CHANGE_MAGIC_WHEEL_ELEMENT", payload: { element } });
-		},
-		mgwChangeImpetus: (event: SelectChangeEvent | string) => {
+		}, [dispatch]),
+		mgwChangeImpetus: useCallback((event: SelectChangeEvent | string) => {
 			const impetus = (typeof event === "string") ? event : event.target.value;
 			dispatch({ type: "CHANGE_MAGIC_WHEEL_IMPETUS", payload: { impetus } });
-		},
+		}, [dispatch]),
 		mgwChangeDuration: (event: SelectChangeEvent | string) => {
 			const duration = (typeof event === "string") ? event : event.target.value;
 			dispatch({ type: "CHANGE_MAGIC_WHEEL_DURATION", payload: { duration } });
@@ -195,6 +194,9 @@ export function useStore() {
 		},
 		mgwToggleCover: () => {
 			dispatch({ type: "TOGGLE_MAGIC_WHEEL_COVER" });
+		},
+		mgwChangeElementIndex: (elementIndex: number) => {
+			dispatch({ type: "CHANGE_MAGIC_WHEEL_ELEMENT_INDEX", payload: { elementIndex } });
 		}
 	};
 

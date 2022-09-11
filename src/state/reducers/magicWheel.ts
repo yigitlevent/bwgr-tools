@@ -6,8 +6,9 @@ interface ChangeOriginAction { type: "CHANGE_MAGIC_WHEEL_ORIGIN"; payload: { ori
 interface ChangeDirectionAction { type: "CHANGE_MAGIC_WHEEL_DIRECTION"; payload: { direction: "Clockwise" | "Counterclockwise"; }; }
 interface ChangeStepsAction { type: "CHANGE_MAGIC_WHEEL_STEPS"; payload: { steps: number; }; }
 interface ToggleCoverAction { type: "TOGGLE_MAGIC_WHEEL_COVER"; }
+interface ElementIndexAction { type: "CHANGE_MAGIC_WHEEL_ELEMENT_INDEX"; payload: { elementIndex: number; }; }
 
-export type MagicWheelActions = ChangeAOEAction | ChangeElementAction | ChangeImpetusAction | ChangeDurationAction | ChangeOriginAction | ChangeDirectionAction | ChangeStepsAction | ToggleCoverAction;
+export type MagicWheelActions = ChangeAOEAction | ChangeElementAction | ChangeImpetusAction | ChangeDurationAction | ChangeOriginAction | ChangeDirectionAction | ChangeStepsAction | ToggleCoverAction | ElementIndexAction;
 
 export interface MagicWheelState {
 	aoe: string;
@@ -19,6 +20,8 @@ export interface MagicWheelState {
 	direction: "Clockwise" | "Counterclockwise";
 	steps: number;
 	cover: boolean;
+
+	elementIndex: number;
 }
 
 const INITIAL: MagicWheelState = {
@@ -30,7 +33,9 @@ const INITIAL: MagicWheelState = {
 
 	direction: "Clockwise",
 	steps: 1,
-	cover: true
+	cover: true,
+
+	elementIndex: 0
 };
 
 export const MagicWheelReducer = (state = INITIAL, action: MagicWheelActions): MagicWheelState => {
@@ -51,6 +56,8 @@ export const MagicWheelReducer = (state = INITIAL, action: MagicWheelActions): M
 			return { ...state, steps: action.payload.steps };
 		case "TOGGLE_MAGIC_WHEEL_COVER":
 			return { ...state, cover: !state.cover };
+		case "CHANGE_MAGIC_WHEEL_ELEMENT_INDEX":
+			return { ...state, elementIndex: action.payload.elementIndex };
 		default:
 			return { ...state };
 	}

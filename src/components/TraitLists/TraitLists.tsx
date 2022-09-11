@@ -14,7 +14,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Alert from "@mui/material/Alert";
 
 import { useAppSelector } from "../../state/store";
-import { useStore } from "../../state/useStore";
+import { useStore } from "../../hooks/useStore";
 import { Trait, TraitCategories } from "../../data/traits";
 
 import { useSearch } from "../../hooks/useSearch";

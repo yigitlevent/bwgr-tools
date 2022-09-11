@@ -11,7 +11,7 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import StopIcon from "@mui/icons-material/Stop";
 
 import { useAppSelector } from "../../state/store";
-import { useStore } from "../../state/useStore";
+import { useStore } from "../../hooks/useStore";
 
 
 export function PracticePlannerCell({ cell, cellIndex, setNotification }: { cell: Cell; cellIndex: number; setNotification: (value: React.SetStateAction<JSX.Element | null>) => void; }) {

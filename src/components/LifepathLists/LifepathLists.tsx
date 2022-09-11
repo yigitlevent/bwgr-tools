@@ -13,7 +13,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Alert from "@mui/material/Alert";
 
 import { useAppSelector } from "../../state/store";
-import { useStore } from "../../state/useStore";
+import { useStore } from "../../hooks/useStore";
 import { Lifepath, Stocks } from "../../data/stocks";
 
 import { useSearch } from "../../hooks/useSearch";

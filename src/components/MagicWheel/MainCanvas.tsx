@@ -1,9 +1,9 @@
 import { createRef, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { THEME } from "../../theme/theme";
+import { MagicFacet } from "../../data/magic";
 
-import { MagicData } from "../../data/magic";
+import { THEME } from "../../theme/theme";
 
 import { MWCONST } from "./MagicWheel";
 
@@ -16,7 +16,7 @@ const Canvas = styled.canvas`
 	width: 100%;
 `;
 
-export function MainCanvas({ currentAngles, blockAngle }: { currentAngles: number[]; blockAngle: number[]; }): JSX.Element {
+export function MainCanvas({ currentAngles, blockAngle, magicData }: { currentAngles: number[]; blockAngle: number[]; magicData: MagicFacet[][]; }): JSX.Element {
 	const canvasRef = createRef<HTMLCanvasElement>();
 	const [context, setContext] = useState<CanvasRenderingContext2D>();
 
@@ -39,9 +39,9 @@ export function MainCanvas({ currentAngles, blockAngle }: { currentAngles: numbe
 
 	const drawText = useCallback((rotationArray: number[]): void => {
 		if (context) {
-			for (const arrayKey in MagicData) {
-				for (const stringKey in MagicData[arrayKey]) {
-					const length = MagicData[arrayKey][stringKey].name.length;
+			for (const arrayKey in magicData) {
+				for (const stringKey in magicData[arrayKey]) {
+					const length = magicData[arrayKey][stringKey].name.length;
 
 					const radius = MWCONST.circleRadius * (parseInt(arrayKey) + 1) + MWCONST.textOffset;
 					const anglePerCharacter = 8 * (1 / radius);
@@ -53,13 +53,13 @@ export function MainCanvas({ currentAngles, blockAngle }: { currentAngles: numbe
 					context.translate(MWCONST.canvasSize / 2, MWCONST.canvasSize / 2);
 					context.rotate(rotationArray[parseInt(arrayKey)] + stringStartAngle + blockStartAngle - (blockAngle[parseInt(arrayKey)] / 2));
 
-					drawString(MagicData[arrayKey][stringKey].name, radius, anglePerCharacter);
+					drawString(magicData[arrayKey][stringKey].name, radius, anglePerCharacter);
 
 					context.restore();
 				}
 			}
 		}
-	}, [context, blockAngle, drawString]);
+	}, [context, magicData, blockAngle, drawString]);
 
 	useEffect(() => {
 		if (context) {

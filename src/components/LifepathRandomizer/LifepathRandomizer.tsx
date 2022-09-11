@@ -16,7 +16,7 @@ import Stack from "@mui/material/Stack";
 import Paper from "@mui/material/Paper";
 
 import { useAppSelector } from "../../state/store";
-import { useStore } from "../../state/useStore";
+import { useStore } from "../../hooks/useStore";
 import { Lifepath, Stock, Stocks } from "../../data/stocks";
 import { RandomNumber } from "../../utils/misc";
 
