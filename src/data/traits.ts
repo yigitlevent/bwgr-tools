@@ -3325,6 +3325,158 @@ export const TraitCategories: TraitCategories = {
 				name: "Yowling",
 				stock: "Any",
 				type: "Character"
+			},
+			{
+				name: "Adventurous",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Cruel",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Deadpan",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Easygoing",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Eccentric",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Fretful",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Impulsive",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Mind for Small Details",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Musky",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Mystical",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Naive",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Never Satisfied",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Outsider",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Placid",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Rambling",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Reclusive",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Selfish",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Soft-Spoken",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
+			},
+			{
+				name: "Thoughtful",
+				allowed: "msc",
+				stock: "Any",
+				type: "Character",
+				cost: 1,
+				description: ""
 			}
 		]
 	},
@@ -3635,6 +3787,14 @@ export const TraitCategories: TraitCategories = {
 				name: "Wolverine",
 				stock: "Any",
 				type: "Call-on and Die"
+			},
+			{
+				allowed: "bwg",
+				cost: 2,
+				description: "This character's dexterous fingers make complex movements look easy. This is a call-on for Hand Speech.",
+				name: "Graceful Fingers",
+				stock: "Any",
+				type: "Call-on"
 			}
 		]
 	},
@@ -4513,6 +4673,62 @@ export const TraitCategories: TraitCategories = {
 				name: "Wolverine",
 				stock: "Any",
 				type: "Call-on and Die"
+			},
+			{
+				name: "Debt-Ridden",
+				allowed: "msc",
+				stock: "Any",
+				type: "Die",
+				cost: 3,
+				description: "This character once took out a sizable loan but has since piddled away the money with nothing to show for it. The size of the debt is double the character's current Resources exponent or Ob 2 if the character has Resources 0 (see the rules for paying back a debt on pg. 375 of the Burning Wheel Gold). Additionally, this character possesses a 1D infamous reputation for being bad with money."
+			},
+			{
+				name: "Dedicated",
+				allowed: "msc",
+				stock: "Any",
+				type: "Die",
+				cost: 3,
+				description: "This character's relentless dedication allows them to make efficient use of their time. When using the Practice rules, this character may treat their Will as one higher when determining the number of hours that they can practice per day."
+			},
+			{
+				name: "Deeper than Skin",
+				allowed: "msc",
+				stock: "Any",
+				type: "Die",
+				cost: 3,
+				description: "It takes more than words for this character to adequately express their emotions. Gain +1D to the Body Art skill when using it on a character you have a Relationship with"
+			},
+			{
+				name: "Fierce Rival",
+				allowed: "msc",
+				stock: "Any",
+				type: "Die",
+				cost: 3,
+				description: "This trait grants the character a minor relationship. This relationship must be with a rival character who is constantly trying to surpass and humiliate them. When creating this rival, choose a skill highly valued by both characters; the rival's skill exponent is always one higher.<br>You may invest additional Resource Points and increase the value of this Relationship."
+			},
+			{
+				name: "Fragile",
+				allowed: "msc",
+				stock: "Any",
+				type: "Die",
+				cost: 4,
+				description: "Even the smallest wounds pose a threat to this character. Light wounds bleed to Midi if they are not treated before the conclusion of the session, though the wound ceases to bleed at Midi. For any medical skill, it is an Ob 1 test to staunch the flow of blood for one scene. Characters with one or two total lifepaths may purchase this trait for only 1 pt."
+			},
+			{
+				name: "Nocturnal",
+				allowed: "msc",
+				stock: "Any",
+				type: "Die",
+				cost: 2,
+				description: "This character is well accustomed to the dead of night. Nocturnal reduces obstacle penalties for darkness by one."
+			},
+			{
+				name: "Frafile",
+				allowed: "msc",
+				stock: "Any",
+				type: "Die",
+				cost: 4,
+				description: "Through strength of will this character refuses to let any wound take them down. Every time this character is incapacitated due to wound dice, they may attempt to shrug off wound penalties and remain standing. If the character's lowest stat(s) is at 0, it is an Ob 4 Health test to shrug off -1D of wound penalties and remain standing. If the character's lowest stat(s) is at -1, it is an Ob 5 Health test to shrug off -2D of wound penalties and remain standing. For -2, it is Ob 6 and so on. Mortal wounds cannot be shrugged off in this manner. The full wound penalties return at the end of the scene."
 			}
 		]
 	},
