@@ -1,5 +1,4 @@
-import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
@@ -16,12 +15,13 @@ import { RangeAndCoverPlanner } from "./RangeAndCoverPlanner/RangeAndCoverPlanne
 import { FightPlanner } from "./FightPlanner/FightPlanner";
 import { ResourcesList } from "./ResourcesList/ResourcesList";
 
+
 export function MainBox() {
 	return (
 		<Container maxWidth="lg" sx={{ margin: "10px auto" }}>
 			<Paper sx={{ padding: "10px 20px" }}>
 				<Routes>
-					<Route path="/" element={<Fragment />} />
+					<Route path="/" element={<Navigate replace to="/diceroller" />} />
 					<Route path="/diceroller" element={<DiceRoller />} />
 					<Route path="/lifepaths" element={<LifepathLists />} />
 					<Route path="/skills" element={<SkillLists />} />
