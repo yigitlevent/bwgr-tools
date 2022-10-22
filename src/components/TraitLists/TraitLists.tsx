@@ -21,6 +21,7 @@ import { useSearch } from "../../hooks/useSearch";
 
 import { PopoverLink } from "../Shared/PopoverLink";
 import { GenericGrid } from "../Shared/Grids";
+import { CheckDatasets } from "../../utils/checkDatasets";
 
 
 export function TraitLists() {
@@ -52,7 +53,7 @@ export function TraitLists() {
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Trait Category</InputLabel>
 						<Select label="Trait Category" value={category} onChange={trtChangeCategory} placeholder="Select a category">
-							{Object.values(TraitCategories).filter(v => datasets.includes(v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
+							{Object.values(TraitCategories).filter(v => CheckDatasets(datasets, v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>

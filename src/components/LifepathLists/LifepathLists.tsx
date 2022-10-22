@@ -12,10 +12,11 @@ import Checkbox from "@mui/material/Checkbox";
 import ListItemText from "@mui/material/ListItemText";
 import Alert from "@mui/material/Alert";
 
+import { CheckDatasets } from "../../utils/checkDatasets";
 import { useAppSelector } from "../../state/store";
-import { useStore } from "../../hooks/useStore";
 import { Lifepath, Stocks } from "../../data/stocks";
 
+import { useStore } from "../../hooks/useStore";
 import { useSearch } from "../../hooks/useSearch";
 
 import { LifepathBox } from "./LifepathBox";
@@ -52,7 +53,7 @@ export function LifepathLists() {
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Stock</InputLabel>
 						<Select label="Stock" value={stock} onChange={lplChangeStock} placeholder="Select a stock">
-							{Object.values(Stocks).filter(v => datasets.includes(v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
+							{Object.values(Stocks).filter(v => CheckDatasets(datasets, v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>
@@ -60,7 +61,7 @@ export function LifepathLists() {
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Setting</InputLabel>
 						<Select label="Setting" value={setting} onChange={lplChangeSetting} placeholder="Select a setting">
-							{Object.values(Stocks[stock].settings).filter(v => datasets.includes(v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
+							{Object.values(Stocks[stock].settings).filter(v => CheckDatasets(datasets, v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>

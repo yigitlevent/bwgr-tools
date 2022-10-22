@@ -23,6 +23,7 @@ import { RandomNumber } from "../../utils/misc";
 import { LifepathRandomizerLists } from "./LifepathRandomizerLists";
 import { LifepathRandomizerBasics } from "./LifepathRandomizerBasics";
 import { GenericGrid } from "../Shared/Grids";
+import { CheckDatasets } from "../../utils/checkDatasets";
 
 
 export function LifepathRandomizer() {
@@ -59,7 +60,7 @@ export function LifepathRandomizer() {
 	const filterByRequirements = useCallback((combinedPossibleLifepaths: Lifepath[], chosenLifepaths: Lifepath[], currentAge: number): Lifepath[] => {
 		const filteredLifepaths: Lifepath[] = [];
 
-		combinedPossibleLifepaths = combinedPossibleLifepaths.filter(v => v.born === false).filter(v => datasets.includes(v.allowed));
+		combinedPossibleLifepaths = combinedPossibleLifepaths.filter(v => v.born === false).filter(v => CheckDatasets(datasets, v.allowed));
 
 		for (const lifepathKey in combinedPossibleLifepaths) {
 			const lp = combinedPossibleLifepaths[lifepathKey];
@@ -129,7 +130,7 @@ export function LifepathRandomizer() {
 			? chosenStock.settings[settingValues[RandomNumber(0, settingValues.length - 1)].name]
 			: chosenStock.settings[setting];
 
-		const bornLPs = chosenSetting.lifepaths.filter(v => v.born).filter(v => datasets.includes(v.allowed));
+		const bornLPs = chosenSetting.lifepaths.filter(v => v.born).filter(v => CheckDatasets(datasets, v.allowed));
 		const bornLPsNum = bornLPs.length - 1;
 		tempChosenLifepaths.push(bornLPs[RandomNumber(0, bornLPsNum)]);
 

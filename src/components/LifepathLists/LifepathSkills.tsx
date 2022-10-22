@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import { useAppSelector } from "../../state/store";
 import type { Lifepath } from "../../data/stocks";
 import { Skill, SkillCategories } from "../../data/skills";
+import { CheckDatasets } from "../../utils/checkDatasets";
 
 import { PopoverLink } from "../Shared/PopoverLink";
 
@@ -22,7 +23,7 @@ export function LifepathSkills({ lifepath }: { lifepath: Lifepath; }) {
 			.filter(entry => {
 				const [category, name] = entry.split("➞");
 				const s = SkillCategories[category].skills.find(v => v.name === name) as Skill;
-				return datasets.includes(s.allowed);
+				return CheckDatasets(datasets, s.allowed);
 			})
 			.map(path => {
 				const [category, name] = path.split("➞");

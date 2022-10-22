@@ -22,6 +22,7 @@ import { Resource, Resources } from "../../data/resources";
 import { useSearch } from "../../hooks/useSearch";
 
 import { GenericGrid } from "../Shared/Grids";
+import { CheckDatasets } from "../../utils/checkDatasets";
 
 
 function ResourceItem({ resource }: { resource: Resource; }) {
@@ -81,7 +82,7 @@ export function ResourcesList() {
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Resource Stock</InputLabel>
 						<Select label="Resource Stock" value={stock} onChange={rscChangeStock} placeholder="Select a stock">
-							{Object.values(Resources).filter(v => datasets.includes(v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
+							{Object.values(Resources).filter(v => CheckDatasets(datasets, v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>

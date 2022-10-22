@@ -9,6 +9,7 @@ import { LifepathSkills } from "./LifepathSkills";
 import { LifepathTraits } from "./LifepathTraits";
 import { LifepathRequirements } from "./LifepathRequirements";
 import { useAppSelector } from "../../state/store";
+import { CheckDatasets } from "../../utils/checkDatasets";
 
 
 export function LifepathBox({ lifepath }: { lifepath: Lifepath; }) {
@@ -39,7 +40,7 @@ export function LifepathBox({ lifepath }: { lifepath: Lifepath; }) {
 			: l.leads
 				.filter((lead) => {
 					const path = lead.split("➞");
-					return datasets.includes(Stocks[path[0]].settings[path[1]].allowed);
+					return CheckDatasets(datasets, Stocks[path[0]].settings[path[1]].allowed);
 				})
 				.map((lead) => {
 					const path = lead.split("➞");

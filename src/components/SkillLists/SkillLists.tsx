@@ -21,6 +21,7 @@ import { useSearch } from "../../hooks/useSearch";
 
 import { PopoverLink } from "../Shared/PopoverLink";
 import { GenericGrid } from "../Shared/Grids";
+import { CheckDatasets } from "../../utils/checkDatasets";
 
 
 export function SkillLists() {
@@ -52,7 +53,7 @@ export function SkillLists() {
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Skill Category</InputLabel>
 						<Select label="Skill Category" value={category} onChange={sklChangeCategory} placeholder="Select a category">
-							{Object.values(SkillCategories).filter(v => datasets.includes(v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
+							{Object.values(SkillCategories).filter(v => CheckDatasets(datasets, v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>

@@ -8,6 +8,7 @@ import type { Lifepath } from "../../data/stocks";
 import { Trait, TraitCategories } from "../../data/traits";
 
 import { PopoverLink } from "../Shared/PopoverLink";
+import { CheckDatasets } from "../../utils/checkDatasets";
 
 
 export function LifepathTraits({ lifepath }: { lifepath: Lifepath; }) {
@@ -17,8 +18,8 @@ export function LifepathTraits({ lifepath }: { lifepath: Lifepath; }) {
 		lifepath.traits
 			.filter(entry => {
 				const [category, name] = entry.split("➞");
-				const s = TraitCategories[category].traits.find(v => v.name === name) as Trait;
-				return datasets.includes(s.allowed);
+				const t = TraitCategories[category].traits.find(v => v.name === name) as Trait;
+				return CheckDatasets(datasets, t.allowed);
 			})
 			.map(path => {
 				const [category, name] = path.split("➞");
