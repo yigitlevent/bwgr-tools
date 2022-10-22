@@ -1,23 +1,23 @@
 {
 	"compilerOptions": {
-		"target": "ESNext",
-		"useDefineForClassFields": true,
+		"target": "ES2022",
+		"module": "ES2022",
+		"moduleResolution": "Node",
 		"lib": [
 			"DOM",
 			"DOM.Iterable",
-			"ESNext"
+			"ES2022"
 		],
 		"allowJs": false,
-		"skipLibCheck": true,
-		"esModuleInterop": false,
 		"allowSyntheticDefaultImports": true,
-		"strict": true,
+		"esModuleInterop": false,
 		"forceConsistentCasingInFileNames": true,
-		"module": "ESNext",
-		"moduleResolution": "Node",
-		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"noEmit": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"useDefineForClassFields": true,
 		"jsx": "react-jsx",
 		"paths": {
 			"@mui/styled-engine": [
@@ -26,14 +26,12 @@
 		}
 	},
 	"include": [
-		"src"
+		"src",
+		"vite.config.ts"
 	],
 	"exclude": [
-		"node_modules"
-	],
-	"references": [
-		{
-			"path": "./tsconfig.node.json"
-		}
+		"node_modules",
+		"./node_modules",
+		"./node_modules/*"
 	]
 }
