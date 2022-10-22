@@ -1,10 +1,10 @@
-import { Dwarf } from "./stocks/dwarf";
-import { Elf } from "./stocks/elf";
-import { Human } from "./stocks/human";
-import { Orc } from "./stocks/orc";
-import { Roden } from "./stocks/roden";
-import { Troll } from "./stocks/troll";
-import { GreatWolf } from "./stocks/greatWolf";
+import { Dwarf } from "./dwarf";
+import { Elf } from "./elf";
+import { Human } from "./human";
+import { Orc } from "./orc";
+import { Roden } from "./roden";
+import { Troll } from "./troll";
+import { GreatWolf } from "./greatWolf";
 
 
 export interface Lifepath {

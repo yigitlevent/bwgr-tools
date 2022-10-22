@@ -1,9 +1,9 @@
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 
-import { Lifepath } from "../../data/stocks";
-import { Trait, TraitCategories } from "../../data/traits";
-import { Skill, SkillCategories } from "../../data/skills";
+import { Lifepath } from "../../data/stocks/_stocks";
+import { Trait, TraitCategories } from "../../data/traits/_traits";
+import { Skill, SkillCategories } from "../../data/skills/_skills";
 
 import { PopoverLink } from "../Shared/PopoverLink";
 import Box from "@mui/material/Box";

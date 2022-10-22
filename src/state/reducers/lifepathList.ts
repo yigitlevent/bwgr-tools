@@ -1,4 +1,4 @@
-import { Stocks } from "../../data/stocks";
+import { Stocks } from "../../data/stocks/_stocks";
 
 interface ChangeStockAction { type: "CHANGE_LIFEPATH_LIST_STOCK"; payload: { stock: string; }; }
 interface ChangeSettingAction { type: "CHANGE_LIFEPATH_LIST_SETTING"; payload: { setting: string; }; }

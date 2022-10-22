@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import type { Lifepath } from "../../data/stocks";
+import type { Lifepath } from "../../data/stocks/_stocks";
 import { GetOrdinalSuffix, MakeName } from "../../utils/misc";
 
 

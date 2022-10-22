@@ -4,8 +4,8 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 
 import { useAppSelector } from "../../state/store";
-import type { Lifepath } from "../../data/stocks";
-import { Skill, SkillCategories } from "../../data/skills";
+import type { Lifepath } from "../../data/stocks/_stocks";
+import { Skill, SkillCategories } from "../../data/skills/_skills";
 import { CheckDatasets } from "../../utils/checkDatasets";
 
 import { PopoverLink } from "../Shared/PopoverLink";

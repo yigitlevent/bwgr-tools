@@ -2,8 +2,8 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 
-import type { Lifepath } from "../../data/stocks";
-import { Stocks } from "../../data/stocks";
+import type { Lifepath } from "../../data/stocks/_stocks";
+import { Stocks } from "../../data/stocks/_stocks";
 
 import { LifepathSkills } from "./LifepathSkills";
 import { LifepathTraits } from "./LifepathTraits";

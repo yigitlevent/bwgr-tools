@@ -1,6 +1,6 @@
-import { Lifepath, Stocks } from "../data/stocks";
-import { SkillCategories } from "../data/skills";
-import { TraitCategories } from "../data/traits";
+import { Lifepath, Stocks } from "../data/stocks/_stocks";
+import { SkillCategories } from "../data/skills/_skills";
+import { TraitCategories } from "../data/traits/_traits";
 
 interface Error {
 	path: string;

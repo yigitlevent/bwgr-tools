@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
-import { Lifepath, Stocks } from "../../data/stocks";
+import { Lifepath, Stocks } from "../../data/stocks/_stocks";
 
 
 export function LifepathRandomizerBasics({ chosenLifepaths }: { chosenLifepaths: Lifepath[]; }) {

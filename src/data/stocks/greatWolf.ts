@@ -1,4 +1,4 @@
-import { Stock } from "../stocks";
+import { Stock } from "./_stocks";
 
 export const GreatWolf: Stock = {
 	agePool: [

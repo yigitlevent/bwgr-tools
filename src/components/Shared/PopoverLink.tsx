@@ -5,8 +5,8 @@ import Link from "@mui/material/Link";
 import Popover from "@mui/material/Popover";
 import Grid from "@mui/material/Grid";
 
-import { Skill } from "../../data/skills";
-import { Trait } from "../../data/traits";
+import { Skill } from "../../data/skills/_skills";
+import { Trait } from "../../data/traits/_traits";
 
 function SkillPop({ skill }: { skill: Skill; }) {
 	return (

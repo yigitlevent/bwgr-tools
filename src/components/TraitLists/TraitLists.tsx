@@ -15,7 +15,7 @@ import Alert from "@mui/material/Alert";
 
 import { useAppSelector } from "../../state/store";
 import { useStore } from "../../hooks/useStore";
-import { Trait, TraitCategories } from "../../data/traits";
+import { Trait, TraitCategories } from "../../data/traits/_traits";
 
 import { useSearch } from "../../hooks/useSearch";
 

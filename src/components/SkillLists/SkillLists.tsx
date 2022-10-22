@@ -15,7 +15,7 @@ import Alert from "@mui/material/Alert";
 
 import { useAppSelector } from "../../state/store";
 import { useStore } from "../../hooks/useStore";
-import { Skill, SkillCategories } from "../../data/skills";
+import { Skill, SkillCategories } from "../../data/skills/_skills";
 
 import { useSearch } from "../../hooks/useSearch";
 

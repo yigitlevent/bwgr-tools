@@ -14,7 +14,7 @@ import Alert from "@mui/material/Alert";
 
 import { CheckDatasets } from "../../utils/checkDatasets";
 import { useAppSelector } from "../../state/store";
-import { Lifepath, Stocks } from "../../data/stocks";
+import { Lifepath, Stocks } from "../../data/stocks/_stocks";
 
 import { useStore } from "../../hooks/useStore";
 import { useSearch } from "../../hooks/useSearch";
