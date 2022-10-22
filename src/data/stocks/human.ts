@@ -2593,7 +2593,7 @@ export const Human: Stock = {
 					physicalPool: 0,
 					requirements: {
 						texts: [
-							"Players who take the Village Wife lifepath may also choose their husban's lifepath from the Villager setting. The Village Wife may choose from her husband's skills -she gets half of his skill points, rounded down- and she gets half of her husband's Resources."
+							"Players who take the Village Wife lifepath may also choose their husband's lifepath from the Villager setting. The Village Wife may choose from her husband's skills -she gets half of his skill points, rounded down- and she gets half of her husband's Resources."
 						]
 					},
 					resources: 5,
@@ -7729,8 +7729,6 @@ export const Human: Stock = {
 							// TODO: These two are the "otherwise" case, so maybe fold limits into conditions in the future
 							"GENDER➞FEMALE",
 							"LP➞MAX➞4"
-						],
-						texts: [
 						]
 					},
 					resources: 10,
@@ -12530,7 +12528,7 @@ export const Human: Stock = {
 					physicalPool: 1,
 					requirements: {
 						texts: [
-							"Players who take the Village Wife lifepath may also choose their husban's lifepath from the Villager setting. The Village Wife may choose from her husband's skills —she gets half of his skill points (including General points), rounded down— and she gets half of her husband's resources."
+							"Players who take the Village Wife lifepath may also choose their husband's lifepath from the Villager setting. The Village Wife may choose from her husband's skills —she gets half of his skill points (including General points), rounded down— and she gets half of her husband's resources."
 						]
 					},
 					resources: 5,

@@ -519,7 +519,7 @@ export const Elf: Stock = {
 					requirements: {
 						// TODO: Second part of this must be turned into a limit maybe
 						texts: [
-							"The character must be 750 years old after taking this path or the oldest character in the group by 100 years"
+							"The character must be 750 years old after taking this path or the oldest character in the group by 100 years."
 						]
 					},
 					resources: 30,
