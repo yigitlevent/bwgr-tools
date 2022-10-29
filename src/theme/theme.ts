@@ -123,7 +123,13 @@ export const THEME = createTheme({
 			fontFamily: "hand"
 		},
 		subtitle2: {
-			fontFamily: "hand"
+			fontFamily: "hand",
+			textIndent: "8px",
+			textAlign: "justify",
+			lineHeight: "20px",
+			textJustify: "inter-word",
+			marginTop: "3px",
+			fontSize: "16px"
 		},
 		body1: {
 			fontFamily: "text"
