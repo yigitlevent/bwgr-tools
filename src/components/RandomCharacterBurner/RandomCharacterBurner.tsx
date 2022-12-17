@@ -61,9 +61,6 @@ export function RandomCharacterBurner() {
 		let tries = 0;
 
 		while (tries < maxTries && chosenAmount < lpAmount) {
-			console.log({ chosenLifepaths });
-			console.log({ tempChosenLifepaths });
-
 			const possibilities = FilterLifepaths(datasets, chosenStock, tempChosenLifepaths, maxLeads, leadsCounter);
 			const chosenLP = possibilities[RandomNumber(0, possibilities.length - 1)];
 
@@ -87,7 +84,7 @@ export function RandomCharacterBurner() {
 		if (tempChosenLifepaths.length < minLifepaths) setTriedTooMuch(true);
 
 		setChosen(tempChosenLifepaths);
-	}, [chosenLifepaths, datasets, maxLeads, maxLifepaths, minLifepaths, noDuplicates, setting, stock]);
+	}, [datasets, maxLeads, maxLifepaths, minLifepaths, noDuplicates, setting, stock]);
 
 	return (
 		<Fragment>

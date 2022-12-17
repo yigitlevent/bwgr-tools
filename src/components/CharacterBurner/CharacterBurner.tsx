@@ -18,6 +18,7 @@ import { Lifepath, Stocks } from "../../data/stocks/_stocks";
 import { GetLifepathFromPath, GetPathFromLifepath } from "../../utils/pathFinder";
 import { FilterLifepaths } from "../../utils/lifepathFilter";
 import { CheckDatasets } from "../../utils/checkDatasets";
+import { CalculateLifepathTotals, LifepathTotals } from "../../utils/lifepathTotals";
 
 import { GenericGrid } from "../Shared/Grids";
 import { LifepathBox } from "../LifepathLists/LifepathBox";
@@ -30,8 +31,9 @@ export function CharacterBurner(): JSX.Element {
 
 	const [open, setOpen] = useState(false);
 	const [chosenLP, setChosenLP] = useState("");
+	const [totals, setTotals] = useState<LifepathTotals | undefined>(undefined);
 
-	const getLifepaths = useCallback(() => {
+	const getPossibleLifepaths = useCallback(() => {
 		const possibilities =
 			lifepathPaths.length === 0
 				? Object.values(Stocks[stock].settings).map(setting => setting.lifepaths.filter(lp => lp.born)).flat().filter(v => CheckDatasets(datasets, v.allowed))
@@ -41,8 +43,19 @@ export function CharacterBurner(): JSX.Element {
 	}, [datasets, lifepathPaths, stock]);
 
 	const resetDefaultChosen = useCallback(() => {
-		setChosenLP(GetPathFromLifepath(getLifepaths()[0]));
-	}, [getLifepaths]);
+		setChosenLP(GetPathFromLifepath(getPossibleLifepaths()[0]));
+	}, [getPossibleLifepaths]);
+
+	const addNewLifepath = () => {
+		cbAddLifepath(chosenLP);
+		resetDefaultChosen(); 
+	};
+
+	useEffect(() => {
+		lifepathPaths.length > 0
+			? setTotals(CalculateLifepathTotals(lifepathPaths.map((lp) => GetLifepathFromPath(lp) as Lifepath)))
+			: setTotals(undefined);
+	}, [lifepathPaths]);
 
 	useEffect(() => {
 		resetDefaultChosen();
@@ -58,7 +71,7 @@ export function CharacterBurner(): JSX.Element {
 						<Grid item xs={1}>
 							<Autocomplete
 								value={chosenLP}
-								options={getLifepaths().map(GetPathFromLifepath)}
+								options={getPossibleLifepaths().map(GetPathFromLifepath).sort((a, b) => a.localeCompare(b))}
 								getOptionLabel={(option) => option.split("➞")[2]}
 								groupBy={(option) => option.split("➞")[1]}
 								renderInput={(params) => <TextField {...params} label="Chosen Lifepath" />}
@@ -76,14 +89,14 @@ export function CharacterBurner(): JSX.Element {
 						}
 
 						<Grid item xs={1}>
-							<Button variant="outlined" size="medium" onClick={() => { cbAddLifepath(chosenLP); resetDefaultChosen(); }} fullWidth>Add Lifepath</Button>
+							<Button variant="outlined" size="medium" onClick={addNewLifepath} fullWidth>Add Lifepath</Button>
 						</Grid>
 					</GenericGrid>
 				</Paper>
 			</Modal>
 
-			<GenericGrid columns={2} center>
-				<Grid item xs={2} sm={1}>
+			<GenericGrid columns={4} center>
+				<Grid item xs={2} sm={1} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Stock</InputLabel>
 						<Select value={stock} onChange={(e) => cbChangeStock(e.target.value)}>
@@ -92,7 +105,17 @@ export function CharacterBurner(): JSX.Element {
 					</FormControl>
 				</Grid>
 
-				<Grid item xs={2} sm={1}>
+				<Grid item xs={2} sm={1} md={1}>
+					<TextField
+						label="Age"
+						value={totals ? `${totals.year}${totals.yearExt.length > 0 ? `, plus ${totals.yearExt.join(" ")}` : ""}` : ""}
+						fullWidth
+						variant="standard"
+						disabled
+					/>
+				</Grid>
+
+				<Grid item xs={4} sm={2} md={2}>
 					<TextField
 						label="Concept"
 						value={concept}
