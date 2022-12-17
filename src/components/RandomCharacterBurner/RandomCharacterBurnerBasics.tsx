@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import { Lifepath, Stocks } from "../../data/stocks/_stocks";
 
 
-export function LifepathRandomizerBasics({ chosenLifepaths }: { chosenLifepaths: Lifepath[]; }) {
+export function RandomCharacterBurnerBasics({ chosenLifepaths }: { chosenLifepaths: Lifepath[]; }) {
 	const totals = {
 		year: 0, yearExt: [] as string[], ageStats: [0, 0],
 		resource: 0, resourcesExt: [] as string[],

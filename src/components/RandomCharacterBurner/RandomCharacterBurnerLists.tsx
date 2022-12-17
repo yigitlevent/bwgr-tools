@@ -9,7 +9,7 @@ import { PopoverLink } from "../Shared/PopoverLink";
 import Box from "@mui/material/Box";
 
 
-export function LifepathRandomizerLists({ chosenLifepaths }: { chosenLifepaths: Lifepath[]; }) {
+export function RandomCharacterBurnerLists({ chosenLifepaths }: { chosenLifepaths: Lifepath[]; }) {
 	const totals = {
 		mandSkills: new Set<string>(),
 		skills: new Set<string>(),

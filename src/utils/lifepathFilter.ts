@@ -31,7 +31,6 @@ function GetCurrentAge(chosenLifepaths: Lifepath[], leadCount: number) {
 	return sum + leadCount;
 }
 
-
 function FilterByRequirements(datasets: Ruleset[], combinedPossibleLifepaths: Lifepath[], chosenLifepaths: Lifepath[], currentAge: number): Lifepath[] {
 	const filteredLifepaths: Lifepath[] = [];
 

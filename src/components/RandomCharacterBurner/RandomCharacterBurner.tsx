@@ -22,12 +22,12 @@ import { RandomNumber } from "../../utils/misc";
 import { CheckDatasets } from "../../utils/checkDatasets";
 import { FilterLifepaths } from "../../utils/lifepathFilter";
 
-import { LifepathRandomizerLists } from "./LifepathRandomizerLists";
-import { LifepathRandomizerBasics } from "./LifepathRandomizerBasics";
+import { RandomCharacterBurnerLists } from "./RandomCharacterBurnerLists";
+import { RandomCharacterBurnerBasics } from "./RandomCharacterBurnerBasics";
 import { GenericGrid } from "../Shared/Grids";
 
 
-export function LifepathRandomizer() {
+export function RandomCharacterBurner() {
 	const { datasets } = useAppSelector(state => state.dataset);
 	const { stock, setting, noDuplicates, maxLeads, maxLifepaths, minLifepaths } = useAppSelector(state => state.lifepathRandomizer);
 	const { lprChangeMaxLPs, lprChangeMaxLeads, lprChangeMinLPs, lprChangeStock, lprToggleNoDuplicates } = useStore().lifepathRandomizer;
@@ -178,7 +178,7 @@ export function LifepathRandomizer() {
 							<Typography>Basic Information</Typography>
 						</Divider>
 
-						<LifepathRandomizerBasics chosenLifepaths={chosenLifepaths} />
+						<RandomCharacterBurnerBasics chosenLifepaths={chosenLifepaths} />
 					</Grid>
 
 					<Grid item xs={2} md={1}>
@@ -186,7 +186,7 @@ export function LifepathRandomizer() {
 							<Typography>Skills, Traits, and Misc</Typography>
 						</Divider>
 
-						<LifepathRandomizerLists chosenLifepaths={chosenLifepaths} />
+						<RandomCharacterBurnerLists chosenLifepaths={chosenLifepaths} />
 					</Grid>
 				</GenericGrid>
 				: null

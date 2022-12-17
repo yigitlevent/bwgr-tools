@@ -7,7 +7,7 @@ import { DiceRoller } from "./DiceRoller/DiceRoller";
 import { LifepathLists } from "./LifepathLists/LifepathLists";
 import { SkillLists } from "./SkillLists/SkillLists";
 import { TraitLists } from "./TraitLists/TraitLists";
-import { LifepathRandomizer } from "./LifepathRandomizer/LifepathRandomizer";
+import { RandomCharacterBurner } from "./RandomCharacterBurner/RandomCharacterBurner";
 import { PracticePlanner } from "./PracticePlanner/PracticePlanner";
 import { MagicWheel } from "./MagicWheel/MagicWheel";
 import { DuelOfWitsPlanner } from "./DuelOfWitsPlanner/DuelOfWitsPlanner";
@@ -28,13 +28,13 @@ export function MainBox() {
 					<Route path="/skills" element={<SkillLists />} />
 					<Route path="/traits" element={<TraitLists />} />
 					<Route path="/resources" element={<ResourcesList />} />
-					<Route path="/lprandomizer" element={<LifepathRandomizer />} />
 					<Route path="/practiceplanner" element={<PracticePlanner />} />
 					<Route path="/magicwheel" element={<MagicWheel />} />
 					<Route path="/dowplanner" element={<DuelOfWitsPlanner />} />
 					<Route path="/racplanner" element={<RangeAndCoverPlanner />} />
 					<Route path="/fightplanner" element={<FightPlanner />} />
 					<Route path="/characterburner" element={<CharacterBurner />} />
+					<Route path="/randomcharacterburner" element={<RandomCharacterBurner />} />
 				</Routes>
 			</Paper>
 		</Container>
