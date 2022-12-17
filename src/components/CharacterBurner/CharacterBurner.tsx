@@ -103,7 +103,6 @@ export function CharacterBurner(): JSX.Element {
 				</Grid>
 			</GenericGrid>
 
-
 			<GenericGrid columns={2} center>
 				<Grid item xs={2}>
 					<Typography variant="h5">Lifepaths</Typography>

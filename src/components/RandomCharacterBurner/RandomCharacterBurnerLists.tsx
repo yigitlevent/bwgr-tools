@@ -1,12 +1,12 @@
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
 
 import { Lifepath } from "../../data/stocks/_stocks";
 import { Trait, TraitCategories } from "../../data/traits/_traits";
 import { Skill, SkillCategories } from "../../data/skills/_skills";
 
 import { PopoverLink } from "../Shared/PopoverLink";
-import Box from "@mui/material/Box";
 
 
 export function RandomCharacterBurnerLists({ chosenLifepaths }: { chosenLifepaths: Lifepath[]; }) {
