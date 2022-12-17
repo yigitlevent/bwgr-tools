@@ -14,12 +14,14 @@ import { SkillListActions, SkillListReducer, SkillListState } from "./reducers/s
 import { TraitListActions, TraitListReducer, TraitListState } from "./reducers/traitList";
 import { ResourceListActions, ResourceListReducer, ResourceListState } from "./reducers/resourceList";
 import { DatasetActions, DatasetReducer, DatasetState } from "./reducers/dataset";
+import { CharacterBurnerActions, CharacterBurnerReducer, CharacterBurnerState } from "./reducers/characterBurner";
 
 type CombinedActions = DrawerActions | DatasetActions
 	| DiceRollerActions
 	| LifepathListActions | SkillListActions | TraitListActions | ResourceListActions
 	| MagicWheelActions | LifepathRandomizerActions | PracticePlannerActions
-	| DuelOfWitsActions | RangeAndCoverActions | FightActions;
+	| DuelOfWitsActions | RangeAndCoverActions | FightActions
+	| CharacterBurnerActions;
 
 type CombinedState = {
 	dataset: DatasetState;
@@ -35,6 +37,7 @@ type CombinedState = {
 	duelOfWits: DuelOfWitsState;
 	rangeAndCover: RangeAndCoverState;
 	fight: FightState;
+	characterBurner: CharacterBurnerState;
 };
 
 export const STORE = configureStore({
@@ -51,7 +54,8 @@ export const STORE = configureStore({
 		practicePlanner: PracticePlannerReducer,
 		duelOfWits: DuelOfWitsReducer,
 		rangeAndCover: RangeAndCoverReducer,
-		fight: FightReducer
+		fight: FightReducer,
+		characterBurner: CharacterBurnerReducer
 	})
 });
 

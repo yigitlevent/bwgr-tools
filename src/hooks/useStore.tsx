@@ -296,11 +296,28 @@ export function useStore() {
 		}
 	};
 
+	// CHARACTER BURNER
+	const characterBurner = {
+		cbChangeStock: (stock: string) => {
+			dispatch({ type: "CHANGE_CB_STOCK", payload: { stock } });
+		},
+		cbChangeConcept: (concept: string) => {
+			dispatch({ type: "CHANGE_CB_CONCEPT", payload: { concept } });
+		},
+		cbAddLifepath: (lifepathPath: string) => {
+			dispatch({ type: "CHANGE_CB_ADD_LIFEPATH", payload: { lifepathPath } });
+		},
+		cbRemoveLifepath: () => {
+			dispatch({ type: "CHANGE_CB_REMOVE_LIFEPATH" });
+		}
+	};
+
 	return {
 		dataset, drawer,
 		diceRoller,
 		lifepathList, skillList, traitList, resourceList,
 		lifepathRandomizer, practicePlanner, magicWheel,
-		duelOfWits, rangeAndCover, fight
+		duelOfWits, rangeAndCover, fight,
+		characterBurner
 	};
 }

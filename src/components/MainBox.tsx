@@ -14,6 +14,7 @@ import { DuelOfWitsPlanner } from "./DuelOfWitsPlanner/DuelOfWitsPlanner";
 import { RangeAndCoverPlanner } from "./RangeAndCoverPlanner/RangeAndCoverPlanner";
 import { FightPlanner } from "./FightPlanner/FightPlanner";
 import { ResourcesList } from "./ResourcesList/ResourcesList";
+import { CharacterBurner } from "./CharacterBurner/CharacterBurner";
 
 
 export function MainBox() {
@@ -33,6 +34,7 @@ export function MainBox() {
 					<Route path="/dowplanner" element={<DuelOfWitsPlanner />} />
 					<Route path="/racplanner" element={<RangeAndCoverPlanner />} />
 					<Route path="/fightplanner" element={<FightPlanner />} />
+					<Route path="/characterburner" element={<CharacterBurner />} />
 				</Routes>
 			</Paper>
 		</Container>
