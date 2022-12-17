@@ -1,13 +1,10 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
-import { Lifepath } from "../../data/stocks/_stocks";
-import { CalculateLifepathTotals } from "../../utils/lifepathTotals";
+import { LifepathTotals } from "../../utils/lifepathTotals";
 
 
-export function RandomCharacterBurnerBasics({ chosenLifepaths }: { chosenLifepaths: Lifepath[]; }) {
-	const totals = CalculateLifepathTotals(chosenLifepaths);
-
+export function RandomCharacterBurnerBasics({ totals }: { totals: LifepathTotals; }) {
 	return (
 		<Grid container columns={2}>
 			<Grid item xs={1}>

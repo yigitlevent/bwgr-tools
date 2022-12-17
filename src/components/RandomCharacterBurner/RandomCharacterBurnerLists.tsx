@@ -2,40 +2,14 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 
-import { Lifepath } from "../../data/stocks/_stocks";
 import { Trait, TraitCategories } from "../../data/traits/_traits";
 import { Skill, SkillCategories } from "../../data/skills/_skills";
+import { LifepathTotals } from "../../utils/lifepathTotals";
 
 import { PopoverLink } from "../Shared/PopoverLink";
 
 
-export function RandomCharacterBurnerLists({ chosenLifepaths }: { chosenLifepaths: Lifepath[]; }) {
-	const totals = {
-		mandSkills: new Set<string>(),
-		skills: new Set<string>(),
-		mandTraits: new Set<string>(),
-		traits: new Set<string>()
-	};
-
-	for (const lifepathKey in chosenLifepaths) {
-		const lp = chosenLifepaths[lifepathKey];
-
-		let mandatorySkillIndex = lp.skills.findIndex(v => !totals.mandSkills.has(v));
-		if (mandatorySkillIndex === -1) mandatorySkillIndex = 0;
-		lp.skills.forEach((v, i) => { if (i === mandatorySkillIndex) totals.mandSkills.add(v); });
-
-		let mandatoryTraitIndex = lp.traits.findIndex(v => !totals.mandSkills.has(v));
-		if (mandatoryTraitIndex === -1) mandatoryTraitIndex = 0;
-		lp.traits.forEach((v, i) => { if (i === mandatoryTraitIndex) totals.mandTraits.add(v); });
-	}
-
-	for (const lifepathKey in chosenLifepaths) {
-		const lp = chosenLifepaths[lifepathKey];
-		lp.skills.forEach(v => { if (!totals.mandSkills.has(v)) totals.skills.add(v); });
-		lp.traits.forEach(v => { if (!totals.mandTraits.has(v)) totals.traits.add(v); });
-	}
-
-
+export function RandomCharacterBurnerLists({ totals }: { totals: LifepathTotals; }) {
 	const mandSkills = [...totals.mandSkills].map(path => {
 		const [category, name] = path.split("➞");
 		let s = SkillCategories[category].skills.find(v => v.name === name);

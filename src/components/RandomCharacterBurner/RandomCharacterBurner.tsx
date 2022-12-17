@@ -25,6 +25,7 @@ import { FilterLifepaths } from "../../utils/lifepathFilter";
 import { RandomCharacterBurnerLists } from "./RandomCharacterBurnerLists";
 import { RandomCharacterBurnerBasics } from "./RandomCharacterBurnerBasics";
 import { GenericGrid } from "../Shared/Grids";
+import { CalculateLifepathTotals } from "../../utils/lifepathTotals";
 
 
 export function RandomCharacterBurner() {
@@ -86,9 +87,11 @@ export function RandomCharacterBurner() {
 		setChosen(tempChosenLifepaths);
 	}, [datasets, maxLeads, maxLifepaths, minLifepaths, noDuplicates, setting, stock]);
 
+	const totals = (chosenLifepaths.length > 0) ? CalculateLifepathTotals(chosenLifepaths) : undefined;
+
 	return (
 		<Fragment>
-			<Typography variant="h3">Lifepath Randomizer</Typography>
+			<Typography variant="h3">Random Character Burner</Typography>
 
 			<GenericGrid columns={5} center>
 				<Grid item xs={5} sm={2} md={1}>
@@ -151,7 +154,7 @@ export function RandomCharacterBurner() {
 				</Grid>
 			</GenericGrid>
 
-			{(chosenLifepaths.length > 0)
+			{chosenLifepaths.length > 0 && totals
 				? <GenericGrid columns={2}>
 					{triedTooMuch
 						? <Grid item xs={2}>
@@ -175,7 +178,7 @@ export function RandomCharacterBurner() {
 							<Typography>Basic Information</Typography>
 						</Divider>
 
-						<RandomCharacterBurnerBasics chosenLifepaths={chosenLifepaths} />
+						<RandomCharacterBurnerBasics totals={totals} />
 					</Grid>
 
 					<Grid item xs={2} md={1}>
@@ -183,7 +186,7 @@ export function RandomCharacterBurner() {
 							<Typography>Skills, Traits, and Misc</Typography>
 						</Divider>
 
-						<RandomCharacterBurnerLists chosenLifepaths={chosenLifepaths} />
+						<RandomCharacterBurnerLists totals={totals} />
 					</Grid>
 				</GenericGrid>
 				: null
