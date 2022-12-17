@@ -37,7 +37,8 @@ const Items: [string, string][][] = [
 	[["Dice Roller", "/diceroller"]],
 	[["Lifepaths", "/lifepaths"], ["Skills", "/skills"], ["Traits", "/traits"], ["Resources", "/resources"]],
 	[["Lifepath Randomizer", "/lprandomizer"], ["Practice Planner", "/practiceplanner"], ["Magic Wheel", "/magicwheel"]],
-	[["Duel of Wits Planner", "/dowplanner"], ["Range and Cover Planner", "/racplanner"], ["Fight Planner", "/fightplanner"]]
+	[["Duel of Wits Planner", "/dowplanner"], ["Range and Cover Planner", "/racplanner"], ["Fight Planner", "/fightplanner"]],
+	[["Lifepath Maker", "/lifepathmaker"]]
 ];
 
 export function MainDrawer() {
