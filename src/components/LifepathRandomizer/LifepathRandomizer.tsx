@@ -61,10 +61,14 @@ export function LifepathRandomizer() {
 		let tries = 0;
 
 		while (tries < maxTries && chosenAmount < lpAmount) {
+			console.log({ chosenLifepaths });
+			console.log({ tempChosenLifepaths });
+
 			const possibilities = FilterLifepaths(datasets, chosenStock, tempChosenLifepaths, maxLeads, leadsCounter);
 			const chosenLP = possibilities[RandomNumber(0, possibilities.length - 1)];
 
-			if (chosenLP.setting !== chosenLifepaths[chosenLifepaths.length - 1].setting) {
+
+			if (chosenLP.setting !== tempChosenLifepaths[tempChosenLifepaths.length - 1].setting) {
 				leadsCounter = leadsCounter + 1;
 			}
 
