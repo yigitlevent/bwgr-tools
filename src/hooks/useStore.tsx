@@ -4,12 +4,12 @@ import { SelectChangeEvent } from "@mui/material/Select";
 
 import { useAppDispatch } from "../state/store";
 import { TestResult } from "../state/reducers/diceRoller";
-import { PracticeTable } from "../data/tables";
 import type { DuelOfWitsActionExtended } from "../state/reducers/duelOfWits";
-import { DuelOfWitsAction, DuelOfWitsActions } from "../data/duelOfWits";
 import { RangeAndCoverActionExtended } from "../state/reducers/rangeAndCover";
-import { RangeAndCoverAction, RangeAndCoverActions } from "../data/rangeAndCover";
 import type { FightActionExtended } from "../state/reducers/fight";
+import { PracticeTable } from "../data/tables";
+import { DuelOfWitsAction, DuelOfWitsActions } from "../data/duelOfWits";
+import { RangeAndCoverAction, RangeAndCoverActions } from "../data/rangeAndCover";
 import { FightAction, FightActions } from "../data/fight";
 import { Clamp } from "../utils/misc";
 
@@ -309,6 +309,14 @@ export function useStore() {
 		},
 		cbRemoveLifepath: () => {
 			dispatch({ type: "CHANGE_CB_REMOVE_LIFEPATH" });
+		},
+		cbChangeStatShade: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, statName: string, change: 1 | -1) => {
+			e.preventDefault();
+			dispatch({ type: "CHANGE_CB_CHANGE_SHADE", payload: { statName, change } });
+		},
+		cbChangeStatExponent: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, statName: string, change: 1 | -1) => {
+			e.preventDefault();
+			dispatch({ type: "CHANGE_CB_CHANGE_EXPONENT", payload: { statName, change } });
 		}
 	};
 
