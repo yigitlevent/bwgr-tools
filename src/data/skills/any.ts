@@ -192,7 +192,9 @@ export const AnyGeneral: SkillCategory = {
 			name: "Appropriate Weapons",
 			noList: false,
 			restriction: "N/A",
-			root: ["Agility"], // BUG: This is wrong. Each weapon skill has its own root.
+			// FIX: Create a modal to select weapons when this skill is in mandatory or lifepath skills list
+			// BUG: This is wrong. Each weapon skill has its own root. 
+			root: ["Agility"], 
 			tools: [
 				"No",
 				""
