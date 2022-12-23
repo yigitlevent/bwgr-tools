@@ -1628,10 +1628,10 @@ export const Human: Stock = {
 						"Any Wise➞Artisan-wise",
 						"Any General➞Mason",
 						"Any General➞Blacksmith", // FIX: These five is actually "any 'smith' skill"
-						"Any General➞Coppersmith",
-						"Any General➞Locksmith",
-						"Any General➞Weaponsmith",
-						"Any General➞Whitesmith",
+						"Any General➞Coppersmith", //
+						"Any General➞Locksmith", //
+						"Any General➞Weaponsmith", //
+						"Any General➞Whitesmith", //
 						"Any General➞Carpentry",
 						"Any General➞Read",
 						"Any General➞Write",
@@ -7596,7 +7596,7 @@ export const Human: Stock = {
 						"Any General➞Cooking",
 						"Any General➞Orienteering",
 						"Any General➞Javelin", // FIX: This is actually Javelin OR Bow
-						"Any General➞Bow"
+						"Any General➞Bow" //
 					],
 					stock: "Human",
 					traitPool: 1,
