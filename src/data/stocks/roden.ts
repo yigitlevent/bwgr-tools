@@ -1867,7 +1867,7 @@ export const Roden: Stock = {
 					skills: [
 						"Any General➞Animal Husbandry",
 						"Any General➞Inconspicuous",
-						"Any General➞Etiquette" // NODATA: Actually Rattiquette but I couldn't find any other reference to it
+						"Any General➞Ratiquette" 
 					],
 					stock: "Roden",
 					traitPool: 2,
