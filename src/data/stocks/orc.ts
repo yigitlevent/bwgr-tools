@@ -878,7 +878,7 @@ export const Orc: Stock = {
 								"Orc➞Chattel➞Forger",
 								"Orc➞Great and Black➞1*ANY",
 								"Orc➞Black Legion➞1*ANY",
-								"Orc➞Servant of the Dark Blood➞4*ANY" // NOTE: I'm not sure if they mean this
+								"Orc➞Chattel➞4*ANY" 
 							]
 						}
 					},
