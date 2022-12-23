@@ -1361,7 +1361,6 @@ export const Roden: Stock = {
 						conditions: {
 							type: "OR",
 							items: [
-								"Roden➞Exile➞Hermit", // NODATA: Missing "Philosopher" lifepath, added hermit instead
 								"Roden➞Exile➞Albino",
 								"Roden➞Below➞Sawbones",
 								"Roden➞Field➞Hand",
@@ -1507,8 +1506,7 @@ export const Roden: Stock = {
 								"Roden➞Field➞Healer",
 								"Roden➞Field➞Baker",
 								"Roden➞Field➞Meadmaker",
-								"Roden➞Below➞Negotiator",
-								"Roden➞Exile➞Hermit" // NODATA: Missing "Philosopher" lifepath, added hermit instead
+								"Roden➞Below➞Negotiator"
 							]
 						}
 					},
@@ -2004,8 +2002,7 @@ export const Roden: Stock = {
 							type: "OR",
 							items: [
 								"Roden➞Society➞Cultist",
-								"Roden➞Field➞Missionary",
-								"Roden➞Exile➞Hermit" // NODATA: Missing "Philosopher" lifepath, added hermit instead
+								"Roden➞Field➞Missionary"
 							]
 						}
 					},
