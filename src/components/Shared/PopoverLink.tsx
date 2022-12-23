@@ -8,6 +8,7 @@ import Grid from "@mui/material/Grid";
 import { Skill } from "../../data/skills/_skills";
 import { Trait } from "../../data/traits/_traits";
 
+
 function SkillPop({ skill }: { skill: Skill; }) {
 	return (
 		<Grid container spacing={1} columns={2}>
@@ -16,7 +17,7 @@ function SkillPop({ skill }: { skill: Skill; }) {
 			</Grid>
 
 			<Grid item xs={2} md={1}>
-				<Typography variant="caption">Root: {skill.root}</Typography>
+				<Typography variant="caption">Root: {skill.root.join("/")}</Typography>
 			</Grid>
 
 			<Grid item xs={2} md={1}>
@@ -53,7 +54,7 @@ function TraitPop({ trait }: { trait: Trait; }) {
 			{trait.cost !== 0
 				? <Grid item sm={3} md={1}>
 					<Typography variant="caption">
-						Cost: {typeof trait.cost === "number" ? trait.cost : trait.cost.join(", ")}
+						Cost: {trait.cost}
 					</Typography>
 				</Grid>
 				: null
@@ -84,16 +85,13 @@ function Pop({ anchor, data, onClose }: { anchor: HTMLElement | null; data: Skil
 			transformOrigin={{ vertical: "top", horizontal: "left" }}
 		>
 			<Grid container spacing={1} sx={{ maxWidth: "400px", padding: "12px 16px" }} columns={2}>
-				{"root" in data
-					? <SkillPop skill={data} />
-					: <TraitPop trait={data} />
-				}
+				{"root" in data ? <SkillPop skill={data} /> : <TraitPop trait={data} />}
 			</Grid>
 		</Popover>
 	);
 }
 
-export function PopoverLink({ data }: { data: Skill | Trait; }) {
+export function PopoverLink({ data, noColor }: { data: Skill | Trait; noColor?: boolean; }) {
 	const [anchor, setAnchor] = useState<HTMLElement | null>(null);
 
 	const closePopover = () => { setAnchor(null); };
@@ -102,7 +100,7 @@ export function PopoverLink({ data }: { data: Skill | Trait; }) {
 	};
 
 	return (
-		<Link underline="hover" onMouseDown={openPopover}>
+		<Link underline="hover" onMouseDown={openPopover} color={noColor ? "text.primary" : "primary.main"}>
 			{data.name}
 			<Pop anchor={anchor} data={data} onClose={closePopover} />
 		</Link>

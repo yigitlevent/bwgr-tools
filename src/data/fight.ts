@@ -7,8 +7,8 @@ export interface FightAction {
 	special?: string;
 	cost?: string;
 	interactions?: string;
-	resolution?: { [key: string]: "Vs" | "Std" | "Ob 1" | "Skill" | `Ob=${StatsList | "Skill"}` | `vs ${StatsList | "Skill"}` | `+vs ${StatsList | "Skill"}` | `vs + ${StatsList | "Skill"}` | `½ ${StatsList | "Skill"}`; };
-	resolutionAgainst?: { [key: string]: "Vs" | "Std" | "Ob 1" | "Skill" | `Ob=${StatsList | "Skill"}` | `vs ${StatsList | "Skill"}` | `+vs ${StatsList | "Skill"}` | `vs + ${StatsList | "Skill"}` | `½ ${StatsList | "Skill"}`; };
+	resolution?: { [key: string]: "Vs" | "Std" | "Ob 1" | "Skill" | `Ob=${StatsAndAttributesList | "Skill"}` | `vs ${StatsAndAttributesList | "Skill"}` | `+vs ${StatsAndAttributesList | "Skill"}` | `vs + ${StatsAndAttributesList | "Skill"}` | `½ ${StatsAndAttributesList | "Skill"}`; };
+	resolutionAgainst?: { [key: string]: "Vs" | "Std" | "Ob 1" | "Skill" | `Ob=${StatsAndAttributesList | "Skill"}` | `vs ${StatsAndAttributesList | "Skill"}` | `+vs ${StatsAndAttributesList | "Skill"}` | `vs + ${StatsAndAttributesList | "Skill"}` | `½ ${StatsAndAttributesList | "Skill"}`; };
 }
 
 export const FightActions: FightAction[] = [

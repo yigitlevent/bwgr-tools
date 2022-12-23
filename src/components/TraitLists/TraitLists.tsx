@@ -86,7 +86,7 @@ export function TraitLists() {
 				</Grid>
 			</GenericGrid>
 
-			<GenericGrid spacing={2}>
+			<GenericGrid spacing={[2, 2]}>
 				{searchResults.length > 0
 					? searchResults.sort((a, b) => a.name.localeCompare(b.name)).map((trait, i) =>
 						<Grid item key={i}>

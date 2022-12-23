@@ -1,109 +1,192 @@
-import { Lifepath } from "../../data/stocks/_stocks";
-import { CalculateLifepathTotals, LifepathTotals } from "../../utils/lifepathTotals";
-import { GetLifepathFromPath } from "../../utils/pathFinder";
-import { GetRemainingEitherPool, GetRemainingMentalPool, GetRemainingPhysicalPool } from "../../utils/spentPools";
+import { RefreshAttributesList } from "../../utils/characterAttributeUtils";
+import { TryOpenSkill, RefreshSkillList, ModifySkillExponentSpending } from "../../utils/characterSkillUtils";
+import { ModifyStatExponentSpending, ModifyStatShadeSpending } from "../../utils/characterStatUtils";
+import { RefreshTraitList, TryOpenTrait } from "../../utils/characterTraitUtils";
+import { CalculateLifepathTotals, EmptyTotals, LifepathTotals } from "../../utils/lifepathTotals";
+import { GetLifepathsFromPaths } from "../../utils/pathFinder";
 
 
-interface ChangeCharacterStock { type: "CHANGE_CB_STOCK"; payload: { stock: string; }; }
+interface ChangeCharacterStock { type: "CHANGE_CB_STOCK"; payload: { stock: StocksList; }; }
 interface ChangeCharacterConcept { type: "CHANGE_CB_CONCEPT"; payload: { concept: string; }; }
-interface AddLifepath { type: "CHANGE_CB_ADD_LIFEPATH"; payload: { lifepathPath: string; }; }
-interface RemoveLifepath { type: "CHANGE_CB_REMOVE_LIFEPATH"; }
-interface ChangeShade { type: "CHANGE_CB_CHANGE_SHADE"; payload: { statName: string; change: 1 | -1; }; }
-interface ChangeExponent { type: "CHANGE_CB_CHANGE_EXPONENT"; payload: { statName: string; change: 1 | -1; }; }
 
-export type CharacterBurnerActions = ChangeCharacterStock | ChangeCharacterConcept | AddLifepath | RemoveLifepath | ChangeShade | ChangeExponent;
+interface AddLifepath { type: "ADD_CB_LIFEPATH"; payload: { lifepathPath: string; }; }
+interface RemoveLifepath { type: "REMOVE_CB_LIFEPATH"; }
 
-export interface CharacterBurnerStatsState {
-	[key: string]: { shade: "B" | "G"; main: number; either: number; };
-	Perception: { shade: "B" | "G"; main: number; either: number; };
-	Will: { shade: "B" | "G"; main: number; either: number; };
-	Power: { shade: "B" | "G"; main: number; either: number; };
-	Agility: { shade: "B" | "G"; main: number; either: number; };
-	Forte: { shade: "B" | "G"; main: number; either: number; };
-	Speed: { shade: "B" | "G"; main: number; either: number; };
+interface ChangeStatShade { type: "CHANGE_CB_STAT_SHADE"; payload: { statName: StatsList; }; }
+interface ChangeStatExponent { type: "CHANGE_CB_STAT_EXPONENT"; payload: { statName: StatsList; change: 1 | -1; }; }
+
+interface ChangeAttributeShade { type: "CHANGE_CB_ATTRIBUTE_SHADE"; payload: { attributeName: AttributesList; change: 1 | -1; }; }
+
+interface OpenSkill { type: "OPEN_CB_SKILL"; payload: { skillName: string; open: boolean; isLifepath: boolean; }; }
+interface ChangeSkillAdvancement { type: "CHANGE_CB_SKILL_EXPONENT"; payload: { skillName: string; change: 1 | -1; isLifepath: boolean; }; }
+
+interface OpenTrait { type: "OPEN_CB_TRAIT"; payload: { traitName: string; open: boolean; isLifepath: boolean; }; }
+
+export type CharacterBurnerActions =
+	ChangeCharacterStock | ChangeCharacterConcept |
+	AddLifepath | RemoveLifepath |
+	ChangeStatShade | ChangeStatExponent |
+	ChangeAttributeShade |
+	OpenSkill | ChangeSkillAdvancement |
+	OpenTrait;
+
+export interface StatSpending {
+	shade: number;
+	exponent: number;
+}
+
+export interface SkillSpending {
+	exponent: number;
+}
+
+interface MentalPoolSpending {
+	mentalPool: StatSpending;
+	eitherPool: StatSpending;
+}
+
+interface PhysicalPoolSpending {
+	physicalPool: StatSpending;
+	eitherPool: StatSpending;
+}
+
+export type SpendingForStat = StrictUnion<MentalPoolSpending | PhysicalPoolSpending>;
+
+export interface SpendingForAttribute {
+	shadeShifted: 0 | 5 | 10;
+}
+
+export interface SpendingForSkill {
+	general: {
+		open: 0 | 1 | 2;
+		advance: number;
+	};
+	lifepath: {
+		open: 0 | 1 | 2;
+		advance: number;
+	};
+}
+
+export interface SpendingForTrait {
+	open: number;
+}
+
+export interface CharacterSpending {
+	stats: { [key in StatsList]: SpendingForStat; };
+	attributes: { [key: string]: SpendingForAttribute; };
+	skills: { [key: string]: SpendingForSkill; };
+	traits: { [key: string]: SpendingForTrait; };
 }
 
 export interface CharacterBurnerState {
-	stock: string;
+	stock: StocksList;
 	concept: string;
 	lifepathPaths: string[];
-	stats: CharacterBurnerStatsState;
-	totals?: LifepathTotals;
+	totals: LifepathTotals;
+	spending: CharacterSpending;
 }
+
+const EmptySpending: CharacterSpending = {
+	stats: {
+		Will: { mentalPool: { shade: 0, exponent: 0 }, eitherPool: { shade: 0, exponent: 0 } },
+		Perception: { mentalPool: { shade: 0, exponent: 0 }, eitherPool: { shade: 0, exponent: 0 } },
+		Power: { physicalPool: { shade: 0, exponent: 0 }, eitherPool: { shade: 0, exponent: 0 } },
+		Agility: { physicalPool: { shade: 0, exponent: 0 }, eitherPool: { shade: 0, exponent: 0 } },
+		Forte: { physicalPool: { shade: 0, exponent: 0 }, eitherPool: { shade: 0, exponent: 0 } },
+		Speed: { physicalPool: { shade: 0, exponent: 0 }, eitherPool: { shade: 0, exponent: 0 } }
+	},
+	attributes: {},
+	skills: {},
+	traits: {}
+};
 
 const INITIAL: CharacterBurnerState = {
 	stock: "Dwarf",
 	concept: "",
 	lifepathPaths: [],
-	stats: {
-		Perception: { shade: "B", main: 0, either: 0 },
-		Will: { shade: "B", main: 0, either: 0 },
-		Power: { shade: "B", main: 0, either: 0 },
-		Agility: { shade: "B", main: 0, either: 0 },
-		Forte: { shade: "B", main: 0, either: 0 },
-		Speed: { shade: "B", main: 0, either: 0 }
-	},
-	totals: undefined
+	totals: EmptyTotals,
+	spending: EmptySpending
 };
 
 export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerActions): CharacterBurnerState => {
 	switch (action.type) {
 		case "CHANGE_CB_STOCK":
-			return { ...state, stock: action.payload.stock, lifepathPaths: [], totals: undefined };
+			return {
+				...state,
+				stock: action.payload.stock,
+				lifepathPaths: [],
+				totals: JSON.parse(JSON.stringify(EmptyTotals)),
+				spending: JSON.parse(JSON.stringify((EmptySpending)))
+			};
 
 		case "CHANGE_CB_CONCEPT":
 			return { ...state, concept: action.payload.concept };
 
-		case "CHANGE_CB_ADD_LIFEPATH":
-			const lp1 = [...state.lifepathPaths];
-			lp1.push(action.payload.lifepathPath);
-			const totals1 = lp1.length > 0 ? CalculateLifepathTotals(lp1.map((lp) => GetLifepathFromPath(lp) as Lifepath)) : undefined;
-			return { ...state, lifepathPaths: lp1, totals: JSON.parse(JSON.stringify(totals1)) };
+		case "ADD_CB_LIFEPATH":
+			const addedLifepaths = [...state.lifepathPaths];
+			addedLifepaths.push(action.payload.lifepathPath);
+			const lifepathAddedTotals: LifepathTotals = addedLifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(addedLifepaths)) : EmptyTotals;
+			const newAddedSpendings: CharacterSpending = {
+				...state.spending,
+				skills: RefreshSkillList(lifepathAddedTotals, state.spending).skills,
+				traits: RefreshTraitList(lifepathAddedTotals, state.spending).traits,
+				attributes: RefreshAttributesList(state.spending).attributes
+			};
+			return {
+				...state,
+				lifepathPaths: addedLifepaths,
+				totals: JSON.parse(JSON.stringify(lifepathAddedTotals)),
+				spending: JSON.parse(JSON.stringify(newAddedSpendings))
+			};
 
-		case "CHANGE_CB_REMOVE_LIFEPATH":
-			const lp2 = [...state.lifepathPaths];
-			lp2.pop();
-			const totals2 = lp2.length > 0 ? CalculateLifepathTotals(lp2.map((lp) => GetLifepathFromPath(lp) as Lifepath)) : undefined;
-			return { ...state, lifepathPaths: lp2, totals: JSON.parse(JSON.stringify(totals2)) };
+		case "REMOVE_CB_LIFEPATH":
+			const removedLifepaths = [...state.lifepathPaths];
+			removedLifepaths.pop();
+			const lifepathRemovedTotals = removedLifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(removedLifepaths)) : EmptyTotals;
+			const newRemovedSpendings: CharacterSpending = {
+				...state.spending,
+				skills: RefreshSkillList(lifepathRemovedTotals, state.spending).skills,
+				traits: RefreshTraitList(lifepathRemovedTotals, state.spending).traits,
+				attributes: RefreshAttributesList(state.spending).attributes
+			};
+			return {
+				...state,
+				lifepathPaths: removedLifepaths,
+				totals: JSON.parse(JSON.stringify(lifepathRemovedTotals)),
+				spending: JSON.parse(JSON.stringify(newRemovedSpendings))
+			};
 
-		case "CHANGE_CB_CHANGE_SHADE":
-			const shadeStatName = action.payload.statName;
-			const shadeStats = JSON.parse(JSON.stringify(state.stats)) as CharacterBurnerStatsState;
-			if (action.payload.change === 1 && shadeStats[shadeStatName].shade === "B" && state.stats[shadeStatName].main + state.stats[shadeStatName].either > 5) {
-				shadeStats[shadeStatName].shade = "G";
-			}
-			else if (action.payload.change === -1 && shadeStats[shadeStatName].shade === "G") {
-				shadeStats[shadeStatName].shade = "B";
-			}
-			return { ...state, stats: { ...shadeStats } };
+		case "CHANGE_CB_STAT_SHADE":
+			const spendingStatShade = JSON.parse(JSON.stringify(state.spending)) as CharacterSpending;
+			spendingStatShade.stats[action.payload.statName] = ModifyStatShadeSpending(action.payload.statName, spendingStatShade, state.totals);
+			return { ...state, spending: { ...spendingStatShade } };
 
-		case "CHANGE_CB_CHANGE_EXPONENT":
-			const expStatName = action.payload.statName;
-			const expStats = JSON.parse(JSON.stringify(state.stats)) as CharacterBurnerStatsState;
+		case "CHANGE_CB_STAT_EXPONENT":
+			const spendingStatExp = JSON.parse(JSON.stringify(state.spending)) as CharacterSpending;
+			spendingStatExp.stats[action.payload.statName] = ModifyStatExponentSpending(action.payload.statName, spendingStatExp, state.totals, action.payload.change);
+			return { ...state, spending: { ...spendingStatExp } };
 
-			if (state.totals) {
-				if (action.payload.change === 1) {
-					const isMental = expStatName === "Perception" || expStatName === "Will";
-					if ((isMental && GetRemainingMentalPool(state.totals, expStats) > 0)
-						|| (!isMental && GetRemainingPhysicalPool(state.totals, expStats) > 0)) {
-						expStats[expStatName].main = expStats[expStatName].main + 1;
-					}
-					else if (GetRemainingEitherPool(state.totals, expStats) > 0) {
-						expStats[expStatName].either = expStats[expStatName].either + 1;
-					}
+		case "CHANGE_CB_ATTRIBUTE_SHADE":
+			return state;
+
+		case "OPEN_CB_SKILL":
+			const spendingSkillOpen = TryOpenSkill(action.payload.skillName, state.totals, JSON.parse(JSON.stringify(state.spending)), action.payload.open, action.payload.isLifepath);
+			return { ...state, spending: { ...spendingSkillOpen } };
+
+		case "CHANGE_CB_SKILL_EXPONENT":
+			const spendingSkillExp = JSON.parse(JSON.stringify(state.spending)) as CharacterSpending;
+			spendingSkillExp.skills[action.payload.skillName] = ModifySkillExponentSpending(action.payload.skillName, spendingSkillExp, state.totals, action.payload.change, action.payload.isLifepath);
+			return { ...state, spending: { ...spendingSkillExp } };
+
+		case "OPEN_CB_TRAIT":
+			const spendingTraitOpen = TryOpenTrait(action.payload.traitName, state.totals, JSON.parse(JSON.stringify(state.spending)) as CharacterSpending, action.payload.open, action.payload.isLifepath);
+			return {
+				...state,
+				spending: {
+					...spendingTraitOpen,
+					traits: spendingTraitOpen.traits,
+					attributes: RefreshAttributesList(spendingTraitOpen).attributes
 				}
-				else if (action.payload.change === -1) {
-					if (expStats[expStatName].either + expStats[expStatName].main - (state.stats[expStatName].shade === "G" ? 5 : 0) > 0) {
-						if (expStats[expStatName].either > 0) {
-							expStats[expStatName].either = expStats[expStatName].either - 1;
-						}
-						else if (expStats[expStatName].main > 0) {
-							expStats[expStatName].main = expStats[expStatName].main - 1;
-						}
-					}
-				}
-			}
-			return { ...state, stats: { ...expStats } };
+			};
 
 		default:
 			return { ...state };

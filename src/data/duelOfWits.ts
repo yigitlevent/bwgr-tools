@@ -4,7 +4,7 @@ export interface DuelOfWitsAction {
 	speakingThePart?: string;
 	special?: string;
 	effects?: string;
-	resolution: { [key: string]: "Vs" | "Std" | "Ob 1" | `Ob=${StatsList}`; };
+	resolution: { [key: string]: "Vs" | "Std" | "Ob 1" | `Ob=${StatsAndAttributesList}`; };
 }
 
 export const DuelOfWitsActions: DuelOfWitsAction[] = [

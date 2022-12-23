@@ -1,29 +1,40 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
+import { GetMentalTotal, GetPhysicalTotal } from "../../utils/characterStatUtils";
 import { LifepathTotals } from "../../utils/lifepathTotals";
 
 
 export function RandomCharacterBurnerBasics({ totals }: { totals: LifepathTotals; }) {
+	const yearsExtension = totals.years.extensions.length > 0 ? `, plus ${totals.years.extensions.join(" ")}` : "";
+	const resourcesExtension = totals.resources.extensions.length > 0 ? `, plus ${totals.resources.extensions.join(" ")}` : "";
+
+	const mentalPool = GetMentalTotal(totals);
+	const physicalPool = GetPhysicalTotal(totals);
+	const eitherPool = (totals.stats.fromLifepaths.eitherPoints !== 0) ? `(${totals.stats.fromLifepaths.eitherPoints > 0 ? "+" : ""}${totals.stats.fromLifepaths.eitherPoints}M/P)` : "";
+
+	const generalSkillExtension = totals.skills.generalPoints.extensions.length > 0 ? `, plus ${totals.skills.generalPoints.extensions.join(" ")}` : "";
+	const lifepathSkillExtension = totals.skills.lifepathPoints.extensions.length > 0 ? `, plus ${totals.skills.lifepathPoints.extensions.join(" ")}` : "";
+
 	return (
 		<Grid container columns={2}>
 			<Grid item xs={1}>
-				<Typography variant="caption">Years: {totals.year}{totals.yearExt.length > 0 ? `, plus ${totals.yearExt.join(" ")}` : ""}</Typography>
+				<Typography variant="caption">Years: {totals.years.points}{yearsExtension}</Typography>
 			</Grid>
 			<Grid item xs={1}>
-				<Typography variant="caption">Resources: {totals.resource}{totals.resourcesExt.length > 0 ? `, plus ${totals.resourcesExt.join(" ")}` : ""}</Typography>
+				<Typography variant="caption">Resources: {totals.resources.points}{resourcesExtension}</Typography>
 			</Grid>
 			<Grid item xs={1}>
-				<Typography variant="caption">Stats: {totals.ageStats[0] + totals.mental}M, {totals.ageStats[1] + totals.physical}P {(totals.either !== 0) ? `(${totals.either > 0 ? "+" : ""}${totals.either}M/P)` : ""}</Typography>
+				<Typography variant="caption">Stats: {mentalPool}M, {physicalPool}P, {eitherPool}</Typography>
 			</Grid>
 			<Grid item xs={1}>
-				<Typography variant="caption">Trait Points: {totals.trait}</Typography>
+				<Typography variant="caption">Trait Points: {totals.traits.points}</Typography>
 			</Grid>
 			<Grid item xs={1}>
-				<Typography variant="caption">General Skill Points: {totals.general}{totals.generalExt.length > 0 ? `, plus ${totals.generalExt.join(" ")}` : ""}</Typography>
+				<Typography variant="caption">General Skill Points: {totals.skills.generalPoints.points}{generalSkillExtension}</Typography>
 			</Grid>
 			<Grid item xs={1}>
-				<Typography variant="caption">Lifepath Skill Points: {totals.lifepath}{totals.lifepathExt.length > 0 ? `, plus ${totals.lifepathExt.join(" ")}` : ""}</Typography>
+				<Typography variant="caption">Lifepath Skill Points: {totals.skills.lifepathPoints.points}{lifepathSkillExtension}</Typography>
 			</Grid>
 		</Grid>
 	);

@@ -517,7 +517,7 @@ export const Elf: Stock = {
 					name: "Elder",
 					physicalPool: 0,
 					requirements: {
-						// TODO: Second part of this must be turned into a limit maybe
+						// NOTE: Second part of this must be turned into a limit maybe
 						texts: [
 							"The character must be 750 years old after taking this path or the oldest character in the group by 100 years."
 						]

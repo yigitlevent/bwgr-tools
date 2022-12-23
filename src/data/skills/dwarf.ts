@@ -12,7 +12,7 @@ export const DwarfArt: SkillCategory = {
 			name: "Black-Metal Artifice",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Will/Agility",
+			root: ["Will", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -27,7 +27,7 @@ export const DwarfArt: SkillCategory = {
 			name: "Coarse Persuasion",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Will/Forte",
+			root: ["Will", "Forte"],
 			tools: [
 				"No",
 				""
@@ -42,7 +42,7 @@ export const DwarfArt: SkillCategory = {
 			name: "Drunking",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Will/Forte",
+			root: ["Will", "Forte"],
 			tools: [
 				"No",
 				""
@@ -57,7 +57,7 @@ export const DwarfArt: SkillCategory = {
 			name: "Excavation",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Perception/Power",
+			root: ["Perception", "Power"],
 			tools: [
 				"Tools",
 				""
@@ -72,7 +72,7 @@ export const DwarfArt: SkillCategory = {
 			name: "Forge Artifice",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Workshop",
 				""
@@ -87,7 +87,7 @@ export const DwarfArt: SkillCategory = {
 			name: "Gem Artifice",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Will/Agility",
+			root: ["Will", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -102,7 +102,7 @@ export const DwarfArt: SkillCategory = {
 			name: "Hallmaster",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Workshop",
 				""
@@ -117,7 +117,7 @@ export const DwarfArt: SkillCategory = {
 			name: "Lithography",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -132,7 +132,7 @@ export const DwarfArt: SkillCategory = {
 			name: "Nogger",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Workshop",
 				""
@@ -147,7 +147,7 @@ export const DwarfArt: SkillCategory = {
 			name: "Reason of Old Stone",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -162,7 +162,7 @@ export const DwarfArt: SkillCategory = {
 			name: "Rune Casting",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Tools",
 				"Rune stones"
@@ -177,7 +177,7 @@ export const DwarfArt: SkillCategory = {
 			name: "Shrewd Appraisal",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -192,7 +192,7 @@ export const DwarfArt: SkillCategory = {
 			name: "Stentorious Debate",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				"a big Dwarvy mouth"
@@ -207,7 +207,7 @@ export const DwarfArt: SkillCategory = {
 			name: "Stentorious Singing",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -222,7 +222,7 @@ export const DwarfArt: SkillCategory = {
 			name: "Stone Artifice",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Will/Power",
+			root: ["Will", "Power"],
 			tools: [
 				"Workshop",
 				""
@@ -237,7 +237,7 @@ export const DwarfArt: SkillCategory = {
 			name: "War Art",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Will/Agility",
+			root: ["Will", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -252,7 +252,7 @@ export const DwarfArt: SkillCategory = {
 			name: "War Engineer",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Workshop",
 				""
@@ -267,7 +267,7 @@ export const DwarfArt: SkillCategory = {
 			name: "White-Metal Artifice",
 			noList: false,
 			restriction: "Dwarves only",
-			root: "Will/Agility",
+			root: ["Will", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -289,7 +289,7 @@ export const DwarfSpecial: SkillCategory = {
 			name: "Artillery Hand",
 			noList: false,
 			restriction: "Dwarves only in chracter burning",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -304,7 +304,7 @@ export const DwarfSpecial: SkillCategory = {
 			name: "Beer Appraisal",
 			noList: false,
 			restriction: "Dwarves only in chracter burning",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -319,7 +319,7 @@ export const DwarfSpecial: SkillCategory = {
 			name: "Clan History",
 			noList: false,
 			restriction: "Dwarves only in chracter burning",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -334,7 +334,7 @@ export const DwarfSpecial: SkillCategory = {
 			name: "Dwarven Rune Script",
 			noList: false,
 			restriction: "Dwarves only in chracter burning",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				"Writing only, Expendable"
@@ -349,7 +349,7 @@ export const DwarfSpecial: SkillCategory = {
 			name: "Fence Building",
 			noList: false,
 			restriction: "Dwarves only in chracter burning",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -364,7 +364,7 @@ export const DwarfSpecial: SkillCategory = {
 			name: "Games of Chance",
 			noList: false,
 			restriction: "Dwarves only in chracter burning",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Traveling Gear",
 				""
@@ -379,7 +379,7 @@ export const DwarfSpecial: SkillCategory = {
 			name: "Grain Appraisal",
 			noList: false,
 			restriction: "Dwarves only in chracter burning",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -394,7 +394,7 @@ export const DwarfSpecial: SkillCategory = {
 			name: "Khirurgy",
 			noList: false,
 			restriction: "Dwarves only in chracter burning",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -409,7 +409,7 @@ export const DwarfSpecial: SkillCategory = {
 			name: "Links",
 			noList: false,
 			restriction: "Dwarves only in chracter burning",
-			root: "Will/Forte",
+			root: ["Will", "Forte"],
 			tools: [
 				"Other",
 				"A big brass horn"
@@ -424,7 +424,7 @@ export const DwarfSpecial: SkillCategory = {
 			name: "Stuff-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""

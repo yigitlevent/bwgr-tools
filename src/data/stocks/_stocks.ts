@@ -49,7 +49,7 @@ export interface Stock {
 	allowed: Ruleset[];
 	hasSetting: boolean;
 	hasSubsetting: boolean;
-	name: string;
+	name: StocksList;
 	stride: number;
 	settings: Settings;
 }

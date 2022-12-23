@@ -12,7 +12,7 @@ export const TrollSpecial: SkillCategory = {
 			name: "Bridge-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -27,7 +27,7 @@ export const TrollSpecial: SkillCategory = {
 			name: "Camouflage",
 			noList: false,
 			restriction: "Trolls only",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"No",
 				""
@@ -42,7 +42,7 @@ export const TrollSpecial: SkillCategory = {
 			name: "Extortion",
 			noList: false,
 			restriction: "Trolls only",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -57,7 +57,7 @@ export const TrollSpecial: SkillCategory = {
 			name: "Lash",
 			noList: false,
 			restriction: "Trolls only",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Tools",
 				""
@@ -72,7 +72,7 @@ export const TrollSpecial: SkillCategory = {
 			name: "Mine-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""

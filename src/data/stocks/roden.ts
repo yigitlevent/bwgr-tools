@@ -1361,7 +1361,7 @@ export const Roden: Stock = {
 						conditions: {
 							type: "OR",
 							items: [
-								"Roden➞Exile➞Hermit", // TODO: Missing "Philosopher" lifepath, added hermit instead
+								"Roden➞Exile➞Hermit", // NODATA: Missing "Philosopher" lifepath, added hermit instead
 								"Roden➞Exile➞Albino",
 								"Roden➞Below➞Sawbones",
 								"Roden➞Field➞Hand",
@@ -1508,7 +1508,7 @@ export const Roden: Stock = {
 								"Roden➞Field➞Baker",
 								"Roden➞Field➞Meadmaker",
 								"Roden➞Below➞Negotiator",
-								"Roden➞Exile➞Hermit" // TODO: Missing "Philosopher" lifepath, added hermit instead
+								"Roden➞Exile➞Hermit" // NODATA: Missing "Philosopher" lifepath, added hermit instead
 							]
 						}
 					},
@@ -1869,7 +1869,7 @@ export const Roden: Stock = {
 					skills: [
 						"Any General➞Animal Husbandry",
 						"Any General➞Inconspicuous",
-						"Any General➞Etiquette" // TODO: Actually Rattiquette but I couldn't find any other reference to it
+						"Any General➞Etiquette" // NODATA: Actually Rattiquette but I couldn't find any other reference to it
 					],
 					stock: "Roden",
 					traitPool: 2,
@@ -2005,7 +2005,7 @@ export const Roden: Stock = {
 							items: [
 								"Roden➞Society➞Cultist",
 								"Roden➞Field➞Missionary",
-								"Roden➞Exile➞Hermit" // TODO: Missing "Philosopher" lifepath, added hermit instead
+								"Roden➞Exile➞Hermit" // NODATA: Missing "Philosopher" lifepath, added hermit instead
 							]
 						}
 					},

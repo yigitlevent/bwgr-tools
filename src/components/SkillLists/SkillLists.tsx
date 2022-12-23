@@ -86,7 +86,7 @@ export function SkillLists() {
 				</Grid>
 			</GenericGrid>
 
-			<GenericGrid spacing={2}>
+			<GenericGrid spacing={[2, 2]}>
 				{searchResults.length > 0
 					? searchResults.sort((a, b) => a.name.localeCompare(b.name)).map((skill, i) =>
 						<Grid item key={i}>

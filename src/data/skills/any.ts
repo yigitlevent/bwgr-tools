@@ -12,7 +12,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Accounting",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				""
@@ -27,7 +27,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Acting",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -42,7 +42,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Administration",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -57,7 +57,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Almanac",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -72,7 +72,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Amercement",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -87,7 +87,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Anatomy",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -102,7 +102,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Ancient and Obscure History",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -117,7 +117,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Ancient History",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -132,7 +132,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Ancient Languages",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -147,7 +147,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Animal Husbandry",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"Tools",
 				""
@@ -162,7 +162,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Apothecary",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -177,7 +177,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Appraisal",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -192,13 +192,13 @@ export const AnyGeneral: SkillCategory = {
 			name: "Appropriate Weapons",
 			noList: false,
 			restriction: "N/A",
-			root: "N/A",
+			root: ["Agility"], // BUG: This is wrong. Each weapon skill has its own root.
 			tools: [
 				"No",
 				""
 			],
 			training: false,
-			type: "N/A"
+			type: []
 		},
 		{
 			allowed: ["bwg", "bwc", "msc"],
@@ -207,7 +207,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Architect",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Workshop",
 				""
@@ -222,7 +222,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Armor Training",
 			noList: false,
 			restriction: "N/A",
-			root: "Power/Speed",
+			root: ["Power", "Speed"],
 			tools: [
 				"No",
 				""
@@ -237,7 +237,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Armorer",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -252,7 +252,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Artillerist",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Workshop",
 				""
@@ -267,7 +267,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Atilliator",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -282,7 +282,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Aura Reading",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -297,7 +297,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Axe",
 			noList: false,
 			restriction: "N/A",
-			root: "Power/Agility",
+			root: ["Power", "Agility"],
 			tools: [
 				"Other",
 				"An axe"
@@ -312,7 +312,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Baking",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -327,7 +327,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Beggardry",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -342,7 +342,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Bird Husbandry",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"Tools",
 				""
@@ -357,7 +357,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Blacksmith",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility/Power",
+			root: ["Agility", "Power"],
 			tools: [
 				"Workshop",
 				""
@@ -372,7 +372,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Bloodletting",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				""
@@ -387,7 +387,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Boatwright",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -402,7 +402,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Bow",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Other",
 				"A bow"
@@ -417,7 +417,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Bowyer",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -432,7 +432,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Boxing",
 			noList: false,
 			restriction: "N/A",
-			root: "Power/Agility",
+			root: ["Power", "Agility"],
 			tools: [
 				"No",
 				""
@@ -447,7 +447,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Brawling",
 			noList: false,
 			restriction: "N/A",
-			root: "Power",
+			root: ["Power"],
 			tools: [
 				"No",
 				""
@@ -462,7 +462,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Brewer",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Workshop",
 				""
@@ -477,7 +477,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Bureaucracy",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -492,7 +492,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Butchery",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -507,7 +507,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Calligraphy",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -522,7 +522,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Campaign History",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -537,7 +537,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Carpentry",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -552,7 +552,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Cartography",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -567,7 +567,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Cartwright",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -582,7 +582,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Carving",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Traveling Gear",
 				""
@@ -597,7 +597,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Chandler",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -612,7 +612,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Child-Rearing",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -627,7 +627,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Chronology of Kings",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -642,7 +642,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Church Law",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -657,7 +657,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Climbing",
 			noList: false,
 			restriction: "N/A",
-			root: "Speed",
+			root: ["Speed"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -672,7 +672,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Cloth Dyeing",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -687,7 +687,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Cobbler",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -702,7 +702,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Command",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -717,7 +717,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Composition",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -732,7 +732,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Conspicuous",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -747,7 +747,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Cooking",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Traveling Gear",
 				""
@@ -762,7 +762,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Cooper",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -777,7 +777,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Coppersmith",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -792,7 +792,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Counterfeiting",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -807,7 +807,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Crossbow",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Other",
 				"A crossbow"
@@ -822,7 +822,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Cryptography",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -837,7 +837,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Cudgel",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Other",
 				"A big stick"
@@ -852,7 +852,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Cult Doctrine",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -867,7 +867,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Dance",
 			noList: false,
 			restriction: "N/A",
-			root: "Speed",
+			root: ["Speed"],
 			tools: [
 				"No",
 				""
@@ -882,7 +882,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Demonology",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -897,7 +897,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Disguise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -912,7 +912,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Ditch Digging",
 			noList: false,
 			restriction: "N/A",
-			root: "Power",
+			root: ["Power"],
 			tools: [
 				"Tools",
 				""
@@ -927,7 +927,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Doctrine",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -942,7 +942,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Dog Husbandry",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"Tools",
 				""
@@ -957,7 +957,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Drinking",
 			noList: false,
 			restriction: "N/A",
-			root: "Forte",
+			root: ["Forte"],
 			tools: [
 				"No",
 				""
@@ -972,7 +972,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Driving",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Agility",
+			root: ["Will", "Agility"],
 			tools: [
 				"No",
 				""
@@ -987,7 +987,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Drum Maker",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"No",
 				""
@@ -1002,7 +1002,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Drum",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Agility",
+			root: ["Will", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -1017,7 +1017,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Dye Manufacture",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -1032,7 +1032,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Embroidery",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -1047,7 +1047,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Empyrealia",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -1062,7 +1062,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Engineering",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				""
@@ -1077,7 +1077,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Engraving",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -1092,7 +1092,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Estate Management",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Other",
 				"An estate"
@@ -1107,7 +1107,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Etching",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -1122,7 +1122,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Etiquette",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -1137,7 +1137,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Extortion",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -1152,7 +1152,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Falconry",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Other",
 				"A falcon"
@@ -1167,7 +1167,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Falsehood",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -1182,7 +1182,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Farming",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				""
@@ -1197,7 +1197,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Field Dressing",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Traveling Gear",
 				"Expendable"
@@ -1212,7 +1212,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Firearms",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"A gun"
@@ -1227,7 +1227,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Firebuilding",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Traveling Gear",
 				"Expendable"
@@ -1242,7 +1242,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Fishing",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -1257,7 +1257,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Fletcher",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -1272,7 +1272,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Flute",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Agility",
+			root: ["Will", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -1287,7 +1287,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Folklore",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -1302,7 +1302,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Foraging",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -1317,7 +1317,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Foreign Doctrine",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -1332,7 +1332,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Foreign History",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -1347,7 +1347,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Foreign Languages",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -1362,7 +1362,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Forgery",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -1377,7 +1377,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Formation Fighting Training",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -1392,7 +1392,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Fortifications",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				""
@@ -1407,7 +1407,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Gambling",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Traveling Gear",
 				""
@@ -1422,13 +1422,13 @@ export const AnyGeneral: SkillCategory = {
 			name: "General",
 			noList: true,
 			restriction: "N/A",
-			root: "N/A",
+			root: [],
 			tools: [
 				"No",
 				""
 			],
 			training: false,
-			type: "N/A"
+			type: []
 		},
 		{
 			allowed: ["bwg", "bwc", "msc"],
@@ -1437,7 +1437,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Great Wolf Husbandry",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"Tools",
 				""
@@ -1452,7 +1452,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Haggling",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -1467,7 +1467,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Hammer",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Other",
 				"A hammer"
@@ -1482,7 +1482,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Hauling",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Power",
+			root: ["Will", "Power"],
 			tools: [
 				"No",
 				""
@@ -1497,7 +1497,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Heraldry",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -1512,7 +1512,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Herbalism",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -1527,7 +1527,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Heretical Doctrine",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -1542,7 +1542,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "History",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -1557,7 +1557,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Horse Husbandry",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"Tools",
 				""
@@ -1572,7 +1572,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Hunting",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Other",
 				"A bow or javelin"
@@ -1587,7 +1587,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Illuminations",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -1602,7 +1602,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Inconspicuous",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -1617,7 +1617,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Insect Husbandry",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"Tools",
 				""
@@ -1632,7 +1632,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Instruction",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -1647,7 +1647,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Interrogation",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -1662,7 +1662,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Intimidation",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -1677,7 +1677,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Jargon",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -1692,7 +1692,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Javelin",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"No",
 				""
@@ -1707,7 +1707,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Jeweler",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -1722,7 +1722,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Knives",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Other",
 				"Something knife-like"
@@ -1737,7 +1737,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Knots",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Traveling Gear",
 				"Expendable"
@@ -1752,7 +1752,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Lance",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility/Power",
+			root: ["Agility", "Power"],
 			tools: [
 				"Tools",
 				"A really big, pointy stick"
@@ -1767,7 +1767,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Lapidary",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Workshop",
 				""
@@ -1782,7 +1782,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Local History",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -1797,7 +1797,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Lock Pick",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -1812,7 +1812,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Locksmith",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -1827,7 +1827,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Logistics",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Other",
 				"Supplies for an army"
@@ -1842,7 +1842,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Lyre",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Agility",
+			root: ["Will", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -1857,7 +1857,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Mace",
 			noList: false,
 			restriction: "N/A",
-			root: "Power/Agility",
+			root: ["Power", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -1872,13 +1872,13 @@ export const AnyGeneral: SkillCategory = {
 			name: "Martial Arts",
 			noList: false,
 			restriction: "N/A",
-			root: "Power/Agility",
+			root: ["Power", "Agility"],
 			tools: [
 				"No",
 				""
 			],
 			training: false,
-			type: "N/A"
+			type: []
 		},
 		{
 			allowed: ["bwg", "bwc", "msc"],
@@ -1887,7 +1887,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Mason",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -1902,7 +1902,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Meditation",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -1917,7 +1917,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Mending",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -1932,7 +1932,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Midwifery",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -1947,7 +1947,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Miller",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Workshop",
 				"A mill"
@@ -1962,7 +1962,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Mimicry",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -1977,7 +1977,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Mining",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				""
@@ -1992,7 +1992,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Mounted Combat Training",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Power",
+			root: ["Will", "Power"],
 			tools: [
 				"No",
 				""
@@ -2007,7 +2007,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Mounted Combat Bowman Training",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Power",
+			root: ["Will", "Power"],
 			tools: [
 				"No",
 				""
@@ -2022,7 +2022,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Music Composition",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -2037,7 +2037,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Musical Instrument",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Agility",
+			root: ["Will", "Agility"],
 			tools: [
 				"Tools",
 				"An instrument"
@@ -2052,7 +2052,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Navigation",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				""
@@ -2067,7 +2067,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Obscure History",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -2082,7 +2082,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Observation",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -2097,7 +2097,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Oratory",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -2112,7 +2112,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Orienteering",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -2127,7 +2127,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Painting",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Agility",
+			root: ["Will", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -2142,7 +2142,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Persuasion",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -2157,7 +2157,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Philosophy",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -2172,7 +2172,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Pilot",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Power",
+			root: ["Perception", "Power"],
 			tools: [
 				"No",
 				""
@@ -2187,7 +2187,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Playwright",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -2202,7 +2202,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Plumbing",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				""
@@ -2217,7 +2217,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Poetry",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -2232,7 +2232,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Poisons",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -2247,7 +2247,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Polearm",
 			noList: false,
 			restriction: "N/A",
-			root: "Power/Agility",
+			root: ["Power", "Agility"],
 			tools: [
 				"Other",
 				"A halberd, a glaive, or a voulge"
@@ -2262,7 +2262,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Potter",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -2277,7 +2277,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Prospecting",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -2292,7 +2292,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Ratiquette",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -2307,7 +2307,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Read",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -2322,7 +2322,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Religious Diatribe",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -2337,7 +2337,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Religious History",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -2352,7 +2352,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Research",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -2367,7 +2367,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Rhetoric",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -2382,7 +2382,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Riding",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"Other",
 				"A horse or some such thing"
@@ -2397,7 +2397,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Rigging",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility/Speed",
+			root: ["Agility", "Speed"],
 			tools: [
 				"No",
 				""
@@ -2412,7 +2412,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Ritual",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -2427,7 +2427,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Rule of Law",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -2442,7 +2442,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Saddlery",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -2457,7 +2457,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Scavenging",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -2472,7 +2472,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Sculpture",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Agility",
+			root: ["Will", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -2487,7 +2487,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Seamanship",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -2502,7 +2502,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Seduction",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -2517,7 +2517,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Sewing",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -2532,7 +2532,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Shield Training",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"No",
 				""
@@ -2547,7 +2547,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Ship Management",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -2562,7 +2562,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Shipwright",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Workshop",
 				""
@@ -2577,7 +2577,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Signaling",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				""
@@ -2592,7 +2592,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Sing",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -2607,7 +2607,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Skirmish Tactics Training",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -2622,7 +2622,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Sleight of Hand",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"No",
 				""
@@ -2637,7 +2637,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Soldiering",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Tools",
 				""
@@ -2652,7 +2652,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Soothing Platitudes",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -2667,7 +2667,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Spear",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"No",
 				""
@@ -2682,7 +2682,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Staff",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Other",
 				"A staff"
@@ -2697,7 +2697,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Stealthy",
 			noList: false,
 			restriction: "N/A",
-			root: "Speed",
+			root: ["Speed"],
 			tools: [
 				"No",
 				""
@@ -2712,7 +2712,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Strategy Games",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Tools",
 				"A game"
@@ -2727,7 +2727,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Strategy",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -2742,7 +2742,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Streetwise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -2757,7 +2757,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Suasion",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -2772,7 +2772,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Surgery",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -2787,7 +2787,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Survival",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Traveling Gear",
 				""
@@ -2802,7 +2802,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Sword",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Other",
 				"A sword"
@@ -2817,7 +2817,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Symbology",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -2832,7 +2832,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Tactics",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -2847,7 +2847,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Tanner",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility/Forte",
+			root: ["Agility", "Forte"],
 			tools: [
 				"Workshop",
 				"A tannery"
@@ -2862,7 +2862,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Taxidermy",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				""
@@ -2877,7 +2877,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Theatrics",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Tools",
 				""
@@ -2892,7 +2892,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Throwing",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Other",
 				"Something to throw"
@@ -2907,7 +2907,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Torture",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Tools",
 				""
@@ -2922,7 +2922,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Tracking",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -2937,7 +2937,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Trapper",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -2952,7 +2952,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Tree Cutting",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Power",
+			root: ["Perception", "Power"],
 			tools: [
 				"Tools",
 				""
@@ -2967,7 +2967,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Troll Etiquette",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -2982,7 +2982,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Two-Fisted Fighting Training",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"No",
 				""
@@ -2997,7 +2997,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Ugly Truth",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3012,7 +3012,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Vintner",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Workshop",
 				""
@@ -3027,7 +3027,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Waiting Tables",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -3042,7 +3042,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Weaponsmith",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -3057,7 +3057,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Weaving",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -3072,7 +3072,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Whitesmith",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
 				""
@@ -3087,7 +3087,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Wine Tasting",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3102,7 +3102,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Wises",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3117,7 +3117,7 @@ export const AnyGeneral: SkillCategory = {
 			name: "Write",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -3139,7 +3139,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Ancient Ways",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"Tools",
 				""
@@ -3154,7 +3154,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Begging ",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -3169,7 +3169,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Camouflage",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"No",
 				""
@@ -3184,7 +3184,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Combat Mount Training",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Power",
+			root: ["Will", "Power"],
 			tools: [
 				"No",
 				""
@@ -3199,7 +3199,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Escape Artist",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"No",
 				""
@@ -3214,7 +3214,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Extortion",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -3229,7 +3229,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Firebombs",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -3244,7 +3244,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Garrote",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Tools",
 				""
@@ -3259,7 +3259,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Hoof-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3274,7 +3274,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Howling",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -3289,7 +3289,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Lash",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Tools",
 				""
@@ -3304,7 +3304,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Nature of All Things",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -3319,7 +3319,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Nursing",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -3334,7 +3334,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Pack Etiquette",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3349,7 +3349,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Pack Hunting",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception/Speed",
+			root: ["Perception", "Speed"],
 			tools: [
 				"No",
 				""
@@ -3364,7 +3364,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Preaching",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -3379,7 +3379,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Rearing",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -3394,7 +3394,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Rider Training",
 			noList: false,
 			restriction: "N/A",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -3409,7 +3409,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Savage Attack",
 			noList: false,
 			restriction: "N/A",
-			root: "Agility/Speed",
+			root: ["Agility", "Speed"],
 			tools: [
 				"No",
 				""
@@ -3424,7 +3424,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Scent Tracking",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3439,7 +3439,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Tongue of the Ancient One",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3454,7 +3454,7 @@ export const AnyMonstrous: SkillCategory = {
 			name: "Way of the First Hunter",
 			noList: false,
 			restriction: "N/A",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -3476,7 +3476,7 @@ export const AnyWise: SkillCategory = {
 			name: "Any wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3491,7 +3491,7 @@ export const AnyWise: SkillCategory = {
 			name: "Abbey-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3506,7 +3506,7 @@ export const AnyWise: SkillCategory = {
 			name: "Aecer-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3521,7 +3521,7 @@ export const AnyWise: SkillCategory = {
 			name: "Alms-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3536,7 +3536,7 @@ export const AnyWise: SkillCategory = {
 			name: "Althing-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3551,7 +3551,7 @@ export const AnyWise: SkillCategory = {
 			name: "Ambition-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3566,7 +3566,7 @@ export const AnyWise: SkillCategory = {
 			name: "Ambush-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3581,7 +3581,7 @@ export const AnyWise: SkillCategory = {
 			name: "Animal-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3596,7 +3596,7 @@ export const AnyWise: SkillCategory = {
 			name: "Antique-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3611,7 +3611,7 @@ export const AnyWise: SkillCategory = {
 			name: "Any wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3626,7 +3626,7 @@ export const AnyWise: SkillCategory = {
 			name: "Apocalypse-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3641,7 +3641,7 @@ export const AnyWise: SkillCategory = {
 			name: "Apostate-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3656,7 +3656,7 @@ export const AnyWise: SkillCategory = {
 			name: "Apprentice-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3671,7 +3671,7 @@ export const AnyWise: SkillCategory = {
 			name: "Army-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3686,7 +3686,7 @@ export const AnyWise: SkillCategory = {
 			name: "Arson-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3701,7 +3701,7 @@ export const AnyWise: SkillCategory = {
 			name: "Artificer-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3716,7 +3716,7 @@ export const AnyWise: SkillCategory = {
 			name: "Artisan-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3731,7 +3731,7 @@ export const AnyWise: SkillCategory = {
 			name: "Assassination-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3746,7 +3746,7 @@ export const AnyWise: SkillCategory = {
 			name: "Aura-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3761,7 +3761,7 @@ export const AnyWise: SkillCategory = {
 			name: "Authority-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3776,7 +3776,7 @@ export const AnyWise: SkillCategory = {
 			name: "Back Alley-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3791,7 +3791,7 @@ export const AnyWise: SkillCategory = {
 			name: "Bad End-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3806,7 +3806,7 @@ export const AnyWise: SkillCategory = {
 			name: "Baggage Train-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3821,7 +3821,7 @@ export const AnyWise: SkillCategory = {
 			name: "Bandit-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3836,7 +3836,7 @@ export const AnyWise: SkillCategory = {
 			name: "Banner-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3851,7 +3851,7 @@ export const AnyWise: SkillCategory = {
 			name: "Bannerman-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3866,7 +3866,7 @@ export const AnyWise: SkillCategory = {
 			name: "Bat-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3881,7 +3881,7 @@ export const AnyWise: SkillCategory = {
 			name: "Battle-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3896,7 +3896,7 @@ export const AnyWise: SkillCategory = {
 			name: "Bay-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3911,7 +3911,7 @@ export const AnyWise: SkillCategory = {
 			name: "Beast of Burden-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3926,7 +3926,7 @@ export const AnyWise: SkillCategory = {
 			name: "Bee-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3941,7 +3941,7 @@ export const AnyWise: SkillCategory = {
 			name: "Beer-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3956,7 +3956,7 @@ export const AnyWise: SkillCategory = {
 			name: "Beggar-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3971,7 +3971,7 @@ export const AnyWise: SkillCategory = {
 			name: "Below-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -3986,7 +3986,7 @@ export const AnyWise: SkillCategory = {
 			name: "Bishop-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4001,7 +4001,7 @@ export const AnyWise: SkillCategory = {
 			name: "Black Legion-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4016,7 +4016,7 @@ export const AnyWise: SkillCategory = {
 			name: "Bone Headed-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4031,7 +4031,7 @@ export const AnyWise: SkillCategory = {
 			name: "Bone-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4046,7 +4046,7 @@ export const AnyWise: SkillCategory = {
 			name: "Books-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4061,7 +4061,7 @@ export const AnyWise: SkillCategory = {
 			name: "Border-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4076,7 +4076,7 @@ export const AnyWise: SkillCategory = {
 			name: "Boss-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4091,7 +4091,7 @@ export const AnyWise: SkillCategory = {
 			name: "Bow-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4106,7 +4106,7 @@ export const AnyWise: SkillCategory = {
 			name: "Bread-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4121,7 +4121,7 @@ export const AnyWise: SkillCategory = {
 			name: "Brew-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4136,7 +4136,7 @@ export const AnyWise: SkillCategory = {
 			name: "Bribe-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4151,7 +4151,7 @@ export const AnyWise: SkillCategory = {
 			name: "Bridge-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4166,7 +4166,7 @@ export const AnyWise: SkillCategory = {
 			name: "Bully-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4181,7 +4181,7 @@ export const AnyWise: SkillCategory = {
 			name: "Burden of the Crown-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4196,7 +4196,7 @@ export const AnyWise: SkillCategory = {
 			name: "Cadence-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4211,7 +4211,7 @@ export const AnyWise: SkillCategory = {
 			name: "Campaign-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4226,7 +4226,7 @@ export const AnyWise: SkillCategory = {
 			name: "Captain-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4241,7 +4241,7 @@ export const AnyWise: SkillCategory = {
 			name: "Caravan-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4256,7 +4256,7 @@ export const AnyWise: SkillCategory = {
 			name: "Cargo-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4271,7 +4271,7 @@ export const AnyWise: SkillCategory = {
 			name: "Cat-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4286,7 +4286,7 @@ export const AnyWise: SkillCategory = {
 			name: "Caulking-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4301,7 +4301,7 @@ export const AnyWise: SkillCategory = {
 			name: "Cavalry-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4316,7 +4316,7 @@ export const AnyWise: SkillCategory = {
 			name: "Cave-In-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4331,7 +4331,7 @@ export const AnyWise: SkillCategory = {
 			name: "Cave-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4346,7 +4346,7 @@ export const AnyWise: SkillCategory = {
 			name: "Cell-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4361,7 +4361,7 @@ export const AnyWise: SkillCategory = {
 			name: "Cemetary-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4376,7 +4376,7 @@ export const AnyWise: SkillCategory = {
 			name: "Cemetery-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4391,7 +4391,7 @@ export const AnyWise: SkillCategory = {
 			name: "Chain-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4406,7 +4406,7 @@ export const AnyWise: SkillCategory = {
 			name: "Champion-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4421,7 +4421,7 @@ export const AnyWise: SkillCategory = {
 			name: "Charcoal-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4436,7 +4436,7 @@ export const AnyWise: SkillCategory = {
 			name: "Chattel-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4451,7 +4451,7 @@ export const AnyWise: SkillCategory = {
 			name: "Cheat-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4466,7 +4466,7 @@ export const AnyWise: SkillCategory = {
 			name: "Cheating-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4481,7 +4481,7 @@ export const AnyWise: SkillCategory = {
 			name: "Child-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4496,7 +4496,7 @@ export const AnyWise: SkillCategory = {
 			name: "Church Politics-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4511,7 +4511,7 @@ export const AnyWise: SkillCategory = {
 			name: "Church Treasure-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4526,7 +4526,7 @@ export const AnyWise: SkillCategory = {
 			name: "Church-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4541,7 +4541,7 @@ export const AnyWise: SkillCategory = {
 			name: "Circuit-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4556,7 +4556,7 @@ export const AnyWise: SkillCategory = {
 			name: "Citadel-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4571,7 +4571,7 @@ export const AnyWise: SkillCategory = {
 			name: "City Guard-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4586,7 +4586,7 @@ export const AnyWise: SkillCategory = {
 			name: "City-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4601,7 +4601,7 @@ export const AnyWise: SkillCategory = {
 			name: "Clan-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4616,7 +4616,7 @@ export const AnyWise: SkillCategory = {
 			name: "Clique-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4631,7 +4631,7 @@ export const AnyWise: SkillCategory = {
 			name: "Clothing-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4646,7 +4646,7 @@ export const AnyWise: SkillCategory = {
 			name: "Coin-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4661,7 +4661,7 @@ export const AnyWise: SkillCategory = {
 			name: "Commodities-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4676,7 +4676,7 @@ export const AnyWise: SkillCategory = {
 			name: "Contract-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4691,7 +4691,7 @@ export const AnyWise: SkillCategory = {
 			name: "Countryside-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4706,7 +4706,7 @@ export const AnyWise: SkillCategory = {
 			name: "Court Gossip-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4721,7 +4721,7 @@ export const AnyWise: SkillCategory = {
 			name: "Court-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4736,7 +4736,7 @@ export const AnyWise: SkillCategory = {
 			name: "Craft-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4751,7 +4751,7 @@ export const AnyWise: SkillCategory = {
 			name: "Craftsman-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4766,7 +4766,7 @@ export const AnyWise: SkillCategory = {
 			name: "Creepy Priest-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4781,7 +4781,7 @@ export const AnyWise: SkillCategory = {
 			name: "Crew-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4796,7 +4796,7 @@ export const AnyWise: SkillCategory = {
 			name: "Criminal-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4811,7 +4811,7 @@ export const AnyWise: SkillCategory = {
 			name: "Crop-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4826,7 +4826,7 @@ export const AnyWise: SkillCategory = {
 			name: "Crowd-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4841,7 +4841,7 @@ export const AnyWise: SkillCategory = {
 			name: "Cult-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4856,7 +4856,7 @@ export const AnyWise: SkillCategory = {
 			name: "Cultist-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4871,7 +4871,7 @@ export const AnyWise: SkillCategory = {
 			name: "Currency-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4886,7 +4886,7 @@ export const AnyWise: SkillCategory = {
 			name: "Current-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4901,7 +4901,7 @@ export const AnyWise: SkillCategory = {
 			name: "Customer-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4916,7 +4916,7 @@ export const AnyWise: SkillCategory = {
 			name: "Daily Bread-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4931,7 +4931,7 @@ export const AnyWise: SkillCategory = {
 			name: "Dark Arts-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4946,7 +4946,7 @@ export const AnyWise: SkillCategory = {
 			name: "Dark Elf-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4961,7 +4961,7 @@ export const AnyWise: SkillCategory = {
 			name: "Dark Secret-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4976,7 +4976,7 @@ export const AnyWise: SkillCategory = {
 			name: "Darkened Streets-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -4991,7 +4991,7 @@ export const AnyWise: SkillCategory = {
 			name: "Darkness-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5006,7 +5006,7 @@ export const AnyWise: SkillCategory = {
 			name: "Deal-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5021,7 +5021,7 @@ export const AnyWise: SkillCategory = {
 			name: "Death Cult-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5036,7 +5036,7 @@ export const AnyWise: SkillCategory = {
 			name: "Death-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5051,7 +5051,7 @@ export const AnyWise: SkillCategory = {
 			name: "Debt-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5066,7 +5066,7 @@ export const AnyWise: SkillCategory = {
 			name: "Dirty Secrets-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5081,7 +5081,7 @@ export const AnyWise: SkillCategory = {
 			name: "Disgusting Necromancer-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5096,7 +5096,7 @@ export const AnyWise: SkillCategory = {
 			name: "Dog-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5111,7 +5111,7 @@ export const AnyWise: SkillCategory = {
 			name: "Domain-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5126,7 +5126,7 @@ export const AnyWise: SkillCategory = {
 			name: "Drama-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5141,7 +5141,7 @@ export const AnyWise: SkillCategory = {
 			name: "Drink-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5156,7 +5156,7 @@ export const AnyWise: SkillCategory = {
 			name: "Drunk Husband-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5171,7 +5171,7 @@ export const AnyWise: SkillCategory = {
 			name: "Drunk-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5186,7 +5186,7 @@ export const AnyWise: SkillCategory = {
 			name: "Drunkard-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5201,7 +5201,7 @@ export const AnyWise: SkillCategory = {
 			name: "Dupe-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5216,7 +5216,7 @@ export const AnyWise: SkillCategory = {
 			name: "Dwarf-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5231,7 +5231,7 @@ export const AnyWise: SkillCategory = {
 			name: "Dwarven Art-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5246,7 +5246,7 @@ export const AnyWise: SkillCategory = {
 			name: "Dwarven Heroes-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5261,7 +5261,7 @@ export const AnyWise: SkillCategory = {
 			name: "Earth-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5276,7 +5276,7 @@ export const AnyWise: SkillCategory = {
 			name: "Elf-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5291,7 +5291,7 @@ export const AnyWise: SkillCategory = {
 			name: "Elven Art-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5306,7 +5306,7 @@ export const AnyWise: SkillCategory = {
 			name: "Elven Artifact-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5321,7 +5321,7 @@ export const AnyWise: SkillCategory = {
 			name: "Elven Blade-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5336,7 +5336,7 @@ export const AnyWise: SkillCategory = {
 			name: "Elven Citadel-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5351,7 +5351,7 @@ export const AnyWise: SkillCategory = {
 			name: "Elven Politics-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5366,7 +5366,7 @@ export const AnyWise: SkillCategory = {
 			name: "Elven Ranger-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5381,7 +5381,7 @@ export const AnyWise: SkillCategory = {
 			name: "Elven Songs-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5396,7 +5396,7 @@ export const AnyWise: SkillCategory = {
 			name: "Estate-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5411,7 +5411,7 @@ export const AnyWise: SkillCategory = {
 			name: "Etharch-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5426,7 +5426,7 @@ export const AnyWise: SkillCategory = {
 			name: "Everybody's Innocent-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5441,7 +5441,7 @@ export const AnyWise: SkillCategory = {
 			name: "Evil Necromancer-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5456,7 +5456,7 @@ export const AnyWise: SkillCategory = {
 			name: "Excuses-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5471,7 +5471,7 @@ export const AnyWise: SkillCategory = {
 			name: "Extortion-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5486,7 +5486,7 @@ export const AnyWise: SkillCategory = {
 			name: "Fabric-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5501,7 +5501,7 @@ export const AnyWise: SkillCategory = {
 			name: "Facet-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5516,7 +5516,7 @@ export const AnyWise: SkillCategory = {
 			name: "Faith-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5531,7 +5531,7 @@ export const AnyWise: SkillCategory = {
 			name: "Fake-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5546,7 +5546,7 @@ export const AnyWise: SkillCategory = {
 			name: "Fall Grass-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5561,7 +5561,7 @@ export const AnyWise: SkillCategory = {
 			name: "Family Secret-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5576,7 +5576,7 @@ export const AnyWise: SkillCategory = {
 			name: "Family Secrets-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5591,7 +5591,7 @@ export const AnyWise: SkillCategory = {
 			name: "Family-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5606,7 +5606,7 @@ export const AnyWise: SkillCategory = {
 			name: "Fashion-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5621,7 +5621,7 @@ export const AnyWise: SkillCategory = {
 			name: "Fat Merchant-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5636,7 +5636,7 @@ export const AnyWise: SkillCategory = {
 			name: "Fealty-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5651,7 +5651,7 @@ export const AnyWise: SkillCategory = {
 			name: "Feet-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5666,7 +5666,7 @@ export const AnyWise: SkillCategory = {
 			name: "Fire and Steel-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5681,7 +5681,7 @@ export const AnyWise: SkillCategory = {
 			name: "Flock-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5696,7 +5696,7 @@ export const AnyWise: SkillCategory = {
 			name: "Flower-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5711,7 +5711,7 @@ export const AnyWise: SkillCategory = {
 			name: "Fool-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5726,7 +5726,7 @@ export const AnyWise: SkillCategory = {
 			name: "Forest-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5741,7 +5741,7 @@ export const AnyWise: SkillCategory = {
 			name: "Fortress-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5756,7 +5756,7 @@ export const AnyWise: SkillCategory = {
 			name: "Gaol-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5771,7 +5771,7 @@ export const AnyWise: SkillCategory = {
 			name: "Gas Pocket-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5786,7 +5786,7 @@ export const AnyWise: SkillCategory = {
 			name: "Genius-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5801,7 +5801,7 @@ export const AnyWise: SkillCategory = {
 			name: "God of Death-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5816,7 +5816,7 @@ export const AnyWise: SkillCategory = {
 			name: "Gossip-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5831,7 +5831,7 @@ export const AnyWise: SkillCategory = {
 			name: "Graft-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5846,7 +5846,7 @@ export const AnyWise: SkillCategory = {
 			name: "Grain-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5861,7 +5861,7 @@ export const AnyWise: SkillCategory = {
 			name: "Grape-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5876,7 +5876,7 @@ export const AnyWise: SkillCategory = {
 			name: "Grave-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5891,7 +5891,7 @@ export const AnyWise: SkillCategory = {
 			name: "Graveyard-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5906,7 +5906,7 @@ export const AnyWise: SkillCategory = {
 			name: "Graybeard-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5921,7 +5921,7 @@ export const AnyWise: SkillCategory = {
 			name: "Great and Black-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5936,7 +5936,7 @@ export const AnyWise: SkillCategory = {
 			name: "Great Masters-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5951,7 +5951,7 @@ export const AnyWise: SkillCategory = {
 			name: "Great Wolf-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5966,7 +5966,7 @@ export const AnyWise: SkillCategory = {
 			name: "Grift-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5981,7 +5981,7 @@ export const AnyWise: SkillCategory = {
 			name: "Guard-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -5996,7 +5996,7 @@ export const AnyWise: SkillCategory = {
 			name: "Guest-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6011,7 +6011,7 @@ export const AnyWise: SkillCategory = {
 			name: "Guilder-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6026,7 +6026,7 @@ export const AnyWise: SkillCategory = {
 			name: "Guts-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6041,7 +6041,7 @@ export const AnyWise: SkillCategory = {
 			name: "Handwriting-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6056,7 +6056,7 @@ export const AnyWise: SkillCategory = {
 			name: "Hatchet-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6071,7 +6071,7 @@ export const AnyWise: SkillCategory = {
 			name: "Hazing-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6086,7 +6086,7 @@ export const AnyWise: SkillCategory = {
 			name: "Herb-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6101,7 +6101,7 @@ export const AnyWise: SkillCategory = {
 			name: "Herbalist-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6116,7 +6116,7 @@ export const AnyWise: SkillCategory = {
 			name: "Heresy-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6131,7 +6131,7 @@ export const AnyWise: SkillCategory = {
 			name: "Hills-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6146,7 +6146,7 @@ export const AnyWise: SkillCategory = {
 			name: "Hold-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6161,7 +6161,7 @@ export const AnyWise: SkillCategory = {
 			name: "Honey-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6176,7 +6176,7 @@ export const AnyWise: SkillCategory = {
 			name: "Hoof-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6191,7 +6191,7 @@ export const AnyWise: SkillCategory = {
 			name: "Horse-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6206,7 +6206,7 @@ export const AnyWise: SkillCategory = {
 			name: "Hospital-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6221,7 +6221,7 @@ export const AnyWise: SkillCategory = {
 			name: "Hospital-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6236,7 +6236,7 @@ export const AnyWise: SkillCategory = {
 			name: "Host-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6251,7 +6251,7 @@ export const AnyWise: SkillCategory = {
 			name: "Hostel-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6266,7 +6266,7 @@ export const AnyWise: SkillCategory = {
 			name: "Hurt-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6281,7 +6281,7 @@ export const AnyWise: SkillCategory = {
 			name: "Husband-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6296,7 +6296,7 @@ export const AnyWise: SkillCategory = {
 			name: "Hypocritical Bastards-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6311,7 +6311,7 @@ export const AnyWise: SkillCategory = {
 			name: "Imperfections-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6326,7 +6326,7 @@ export const AnyWise: SkillCategory = {
 			name: "Inane Requst-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6341,7 +6341,7 @@ export const AnyWise: SkillCategory = {
 			name: "Infection-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6356,7 +6356,7 @@ export const AnyWise: SkillCategory = {
 			name: "Inner Workings-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6371,7 +6371,7 @@ export const AnyWise: SkillCategory = {
 			name: "Intrigue-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6386,7 +6386,7 @@ export const AnyWise: SkillCategory = {
 			name: "Junior Student-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6401,7 +6401,7 @@ export const AnyWise: SkillCategory = {
 			name: "Junk-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6416,7 +6416,7 @@ export const AnyWise: SkillCategory = {
 			name: "Kick Me-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6431,7 +6431,7 @@ export const AnyWise: SkillCategory = {
 			name: "Kingdom-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6446,7 +6446,7 @@ export const AnyWise: SkillCategory = {
 			name: "Knife-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6461,7 +6461,7 @@ export const AnyWise: SkillCategory = {
 			name: "Laborer-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6476,7 +6476,7 @@ export const AnyWise: SkillCategory = {
 			name: "Landlord-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6491,7 +6491,7 @@ export const AnyWise: SkillCategory = {
 			name: "Latrine-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6506,7 +6506,7 @@ export const AnyWise: SkillCategory = {
 			name: "Law-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6521,7 +6521,7 @@ export const AnyWise: SkillCategory = {
 			name: "Lazy Bastard-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6536,7 +6536,7 @@ export const AnyWise: SkillCategory = {
 			name: "Lazy-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6551,7 +6551,7 @@ export const AnyWise: SkillCategory = {
 			name: "Leather-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6566,7 +6566,7 @@ export const AnyWise: SkillCategory = {
 			name: "Ledger-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6581,7 +6581,7 @@ export const AnyWise: SkillCategory = {
 			name: "Leper-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6596,7 +6596,7 @@ export const AnyWise: SkillCategory = {
 			name: "Leverage-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6611,7 +6611,7 @@ export const AnyWise: SkillCategory = {
 			name: "Library-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6626,7 +6626,7 @@ export const AnyWise: SkillCategory = {
 			name: "Local Law-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6641,7 +6641,7 @@ export const AnyWise: SkillCategory = {
 			name: "Lock-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6656,7 +6656,7 @@ export const AnyWise: SkillCategory = {
 			name: "Loot-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6671,7 +6671,7 @@ export const AnyWise: SkillCategory = {
 			name: "Lord-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6686,7 +6686,7 @@ export const AnyWise: SkillCategory = {
 			name: "Lost Secret-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6701,7 +6701,7 @@ export const AnyWise: SkillCategory = {
 			name: "Lost Treasures-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6716,7 +6716,7 @@ export const AnyWise: SkillCategory = {
 			name: "Mad Invention-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6731,7 +6731,7 @@ export const AnyWise: SkillCategory = {
 			name: "Maker's Mark-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6746,7 +6746,7 @@ export const AnyWise: SkillCategory = {
 			name: "Human-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6761,7 +6761,7 @@ export const AnyWise: SkillCategory = {
 			name: "Manor-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6776,7 +6776,7 @@ export const AnyWise: SkillCategory = {
 			name: "Map-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6791,7 +6791,7 @@ export const AnyWise: SkillCategory = {
 			name: "Materials-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6806,7 +6806,7 @@ export const AnyWise: SkillCategory = {
 			name: "Mead-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6821,7 +6821,7 @@ export const AnyWise: SkillCategory = {
 			name: "Mercenary Company-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6836,7 +6836,7 @@ export const AnyWise: SkillCategory = {
 			name: "Merchant-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6851,7 +6851,7 @@ export const AnyWise: SkillCategory = {
 			name: "Metal-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6866,7 +6866,7 @@ export const AnyWise: SkillCategory = {
 			name: "Mill-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6881,7 +6881,7 @@ export const AnyWise: SkillCategory = {
 			name: "Mineral-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6896,7 +6896,7 @@ export const AnyWise: SkillCategory = {
 			name: "Minister-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6911,7 +6911,7 @@ export const AnyWise: SkillCategory = {
 			name: "Monk-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6926,7 +6926,7 @@ export const AnyWise: SkillCategory = {
 			name: "Mount-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6941,7 +6941,7 @@ export const AnyWise: SkillCategory = {
 			name: "Mountain-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6956,7 +6956,7 @@ export const AnyWise: SkillCategory = {
 			name: "Mouth of Hell-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6971,7 +6971,7 @@ export const AnyWise: SkillCategory = {
 			name: "Mule-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -6986,7 +6986,7 @@ export const AnyWise: SkillCategory = {
 			name: "Murder-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7001,7 +7001,7 @@ export const AnyWise: SkillCategory = {
 			name: "Mystery Meat-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7016,7 +7016,7 @@ export const AnyWise: SkillCategory = {
 			name: "Nail-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7031,7 +7031,7 @@ export const AnyWise: SkillCategory = {
 			name: "Nest-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7046,7 +7046,7 @@ export const AnyWise: SkillCategory = {
 			name: "Night Watch-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7061,7 +7061,7 @@ export const AnyWise: SkillCategory = {
 			name: "Noble-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7076,7 +7076,7 @@ export const AnyWise: SkillCategory = {
 			name: "Nut and Berry-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7091,7 +7091,7 @@ export const AnyWise: SkillCategory = {
 			name: "Oath-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7106,7 +7106,7 @@ export const AnyWise: SkillCategory = {
 			name: "Obligation-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7121,7 +7121,7 @@ export const AnyWise: SkillCategory = {
 			name: "Obscure Text-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7136,7 +7136,7 @@ export const AnyWise: SkillCategory = {
 			name: "Omen-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7151,7 +7151,7 @@ export const AnyWise: SkillCategory = {
 			name: "Orc Rituals-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7166,7 +7166,7 @@ export const AnyWise: SkillCategory = {
 			name: "Orc Servant-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7181,7 +7181,7 @@ export const AnyWise: SkillCategory = {
 			name: "Orc-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7196,7 +7196,7 @@ export const AnyWise: SkillCategory = {
 			name: "Ore-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7211,7 +7211,7 @@ export const AnyWise: SkillCategory = {
 			name: "Outlaw-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7226,7 +7226,7 @@ export const AnyWise: SkillCategory = {
 			name: "Pack-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7241,7 +7241,7 @@ export const AnyWise: SkillCategory = {
 			name: "Paint-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7256,7 +7256,7 @@ export const AnyWise: SkillCategory = {
 			name: "Papal Bull-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7271,7 +7271,7 @@ export const AnyWise: SkillCategory = {
 			name: "Paperwork-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7286,7 +7286,7 @@ export const AnyWise: SkillCategory = {
 			name: "Parish-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7301,7 +7301,7 @@ export const AnyWise: SkillCategory = {
 			name: "Park-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7316,7 +7316,7 @@ export const AnyWise: SkillCategory = {
 			name: "Paths-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7331,7 +7331,7 @@ export const AnyWise: SkillCategory = {
 			name: "Pattern-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7346,7 +7346,7 @@ export const AnyWise: SkillCategory = {
 			name: "Peasant-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7361,7 +7361,7 @@ export const AnyWise: SkillCategory = {
 			name: "Pecking Order-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7376,7 +7376,7 @@ export const AnyWise: SkillCategory = {
 			name: "Personal Effects-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7391,7 +7391,7 @@ export const AnyWise: SkillCategory = {
 			name: "Pest-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7406,7 +7406,7 @@ export const AnyWise: SkillCategory = {
 			name: "Petitioner-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7421,7 +7421,7 @@ export const AnyWise: SkillCategory = {
 			name: "Pig-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7436,7 +7436,7 @@ export const AnyWise: SkillCategory = {
 			name: "Pilgrim-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7451,7 +7451,7 @@ export const AnyWise: SkillCategory = {
 			name: "Pilgrimage-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7466,7 +7466,7 @@ export const AnyWise: SkillCategory = {
 			name: "Pirate Cove-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7481,7 +7481,7 @@ export const AnyWise: SkillCategory = {
 			name: "Pirates-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7496,7 +7496,7 @@ export const AnyWise: SkillCategory = {
 			name: "Plant-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7511,7 +7511,7 @@ export const AnyWise: SkillCategory = {
 			name: "Poacher-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7526,7 +7526,7 @@ export const AnyWise: SkillCategory = {
 			name: "Poison-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7541,7 +7541,7 @@ export const AnyWise: SkillCategory = {
 			name: "Pope Joke-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7556,7 +7556,7 @@ export const AnyWise: SkillCategory = {
 			name: "Prayer-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7571,7 +7571,7 @@ export const AnyWise: SkillCategory = {
 			name: "Priest-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7586,7 +7586,7 @@ export const AnyWise: SkillCategory = {
 			name: "Profanity-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7601,7 +7601,7 @@ export const AnyWise: SkillCategory = {
 			name: "Promise-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7616,7 +7616,7 @@ export const AnyWise: SkillCategory = {
 			name: "Prostitute-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7631,7 +7631,7 @@ export const AnyWise: SkillCategory = {
 			name: "Protector-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7646,7 +7646,7 @@ export const AnyWise: SkillCategory = {
 			name: "Quack-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7661,7 +7661,7 @@ export const AnyWise: SkillCategory = {
 			name: "Ransom-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7676,7 +7676,7 @@ export const AnyWise: SkillCategory = {
 			name: "Relic-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7691,7 +7691,7 @@ export const AnyWise: SkillCategory = {
 			name: "Religious Rumor-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7706,7 +7706,7 @@ export const AnyWise: SkillCategory = {
 			name: "Reputation-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7721,7 +7721,7 @@ export const AnyWise: SkillCategory = {
 			name: "Rhythm of the City-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7736,7 +7736,7 @@ export const AnyWise: SkillCategory = {
 			name: "Ridiculous Request-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7751,7 +7751,7 @@ export const AnyWise: SkillCategory = {
 			name: "Righteous Priest-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7766,7 +7766,7 @@ export const AnyWise: SkillCategory = {
 			name: "Riot-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7781,7 +7781,7 @@ export const AnyWise: SkillCategory = {
 			name: "Rituals-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7796,7 +7796,7 @@ export const AnyWise: SkillCategory = {
 			name: "Road-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7811,7 +7811,7 @@ export const AnyWise: SkillCategory = {
 			name: "Rock-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7826,7 +7826,7 @@ export const AnyWise: SkillCategory = {
 			name: "Roof-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7841,7 +7841,7 @@ export const AnyWise: SkillCategory = {
 			name: "Rope-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7856,7 +7856,7 @@ export const AnyWise: SkillCategory = {
 			name: "Royal Parks-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7871,7 +7871,7 @@ export const AnyWise: SkillCategory = {
 			name: "Royal Secret-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7886,7 +7886,7 @@ export const AnyWise: SkillCategory = {
 			name: "Rumor-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7901,7 +7901,7 @@ export const AnyWise: SkillCategory = {
 			name: "Sail-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7916,7 +7916,7 @@ export const AnyWise: SkillCategory = {
 			name: "Sailor-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7931,7 +7931,7 @@ export const AnyWise: SkillCategory = {
 			name: "Saint-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7946,7 +7946,7 @@ export const AnyWise: SkillCategory = {
 			name: "Sacrament-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7961,7 +7961,7 @@ export const AnyWise: SkillCategory = {
 			name: "Scheme-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7976,7 +7976,7 @@ export const AnyWise: SkillCategory = {
 			name: "School of Magic-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -7991,7 +7991,7 @@ export const AnyWise: SkillCategory = {
 			name: "Scurvy-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8006,7 +8006,7 @@ export const AnyWise: SkillCategory = {
 			name: "Scutwork-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8021,7 +8021,7 @@ export const AnyWise: SkillCategory = {
 			name: "Sea-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8036,7 +8036,7 @@ export const AnyWise: SkillCategory = {
 			name: "Seaman-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8051,7 +8051,7 @@ export const AnyWise: SkillCategory = {
 			name: "Secret Cult Worship-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8066,7 +8066,7 @@ export const AnyWise: SkillCategory = {
 			name: "Secret-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8081,7 +8081,7 @@ export const AnyWise: SkillCategory = {
 			name: "Seed-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8096,7 +8096,7 @@ export const AnyWise: SkillCategory = {
 			name: "Ship-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8111,7 +8111,7 @@ export const AnyWise: SkillCategory = {
 			name: "Shoal-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8126,7 +8126,7 @@ export const AnyWise: SkillCategory = {
 			name: "Shoe-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8141,7 +8141,7 @@ export const AnyWise: SkillCategory = {
 			name: "Shortcut-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8156,7 +8156,7 @@ export const AnyWise: SkillCategory = {
 			name: "Shovel-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8171,7 +8171,7 @@ export const AnyWise: SkillCategory = {
 			name: "Shrine-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8186,7 +8186,7 @@ export const AnyWise: SkillCategory = {
 			name: "Slave Deck-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8201,7 +8201,7 @@ export const AnyWise: SkillCategory = {
 			name: "Slavery-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8216,7 +8216,7 @@ export const AnyWise: SkillCategory = {
 			name: "Society-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8231,7 +8231,7 @@ export const AnyWise: SkillCategory = {
 			name: "Soldier-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8246,7 +8246,7 @@ export const AnyWise: SkillCategory = {
 			name: "Soot-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8261,7 +8261,7 @@ export const AnyWise: SkillCategory = {
 			name: "Sorcery-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8276,7 +8276,7 @@ export const AnyWise: SkillCategory = {
 			name: "Spiel-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8291,7 +8291,7 @@ export const AnyWise: SkillCategory = {
 			name: "Spirit-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8306,7 +8306,7 @@ export const AnyWise: SkillCategory = {
 			name: "Staff-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8321,7 +8321,7 @@ export const AnyWise: SkillCategory = {
 			name: "Stone-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8336,7 +8336,7 @@ export const AnyWise: SkillCategory = {
 			name: "Structural Weakness-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8351,7 +8351,7 @@ export const AnyWise: SkillCategory = {
 			name: "Suicidal Bravery-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8366,7 +8366,7 @@ export const AnyWise: SkillCategory = {
 			name: "Summoner-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8381,7 +8381,7 @@ export const AnyWise: SkillCategory = {
 			name: "Superstition-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8396,7 +8396,7 @@ export const AnyWise: SkillCategory = {
 			name: "Supplier-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8411,7 +8411,7 @@ export const AnyWise: SkillCategory = {
 			name: "Supply-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8426,7 +8426,7 @@ export const AnyWise: SkillCategory = {
 			name: "Sweet Tooth-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8441,7 +8441,7 @@ export const AnyWise: SkillCategory = {
 			name: "Sword-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8456,7 +8456,7 @@ export const AnyWise: SkillCategory = {
 			name: "Swordsman-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8471,7 +8471,7 @@ export const AnyWise: SkillCategory = {
 			name: "Tail-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8486,7 +8486,7 @@ export const AnyWise: SkillCategory = {
 			name: "Tall Grass-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8501,7 +8501,7 @@ export const AnyWise: SkillCategory = {
 			name: "Tar-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8516,7 +8516,7 @@ export const AnyWise: SkillCategory = {
 			name: "Taskmaster-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8531,7 +8531,7 @@ export const AnyWise: SkillCategory = {
 			name: "Tavern Tales-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8546,7 +8546,7 @@ export const AnyWise: SkillCategory = {
 			name: "Tax-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8561,7 +8561,7 @@ export const AnyWise: SkillCategory = {
 			name: "Tax-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8576,7 +8576,7 @@ export const AnyWise: SkillCategory = {
 			name: "Temple-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8591,7 +8591,7 @@ export const AnyWise: SkillCategory = {
 			name: "Territory-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8606,7 +8606,7 @@ export const AnyWise: SkillCategory = {
 			name: "Terroir-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8621,7 +8621,7 @@ export const AnyWise: SkillCategory = {
 			name: "Tithe-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8636,7 +8636,7 @@ export const AnyWise: SkillCategory = {
 			name: "Tomb-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8651,7 +8651,7 @@ export const AnyWise: SkillCategory = {
 			name: "Tools-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8666,7 +8666,7 @@ export const AnyWise: SkillCategory = {
 			name: "Torture Devices-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8681,7 +8681,7 @@ export const AnyWise: SkillCategory = {
 			name: "Town-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8696,7 +8696,7 @@ export const AnyWise: SkillCategory = {
 			name: "Toxin-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8711,7 +8711,7 @@ export const AnyWise: SkillCategory = {
 			name: "Tragic End-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8726,7 +8726,7 @@ export const AnyWise: SkillCategory = {
 			name: "Trail-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8741,7 +8741,7 @@ export const AnyWise: SkillCategory = {
 			name: "Trails-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8756,7 +8756,7 @@ export const AnyWise: SkillCategory = {
 			name: "Traitor-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8771,7 +8771,7 @@ export const AnyWise: SkillCategory = {
 			name: "Traveler-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8786,7 +8786,7 @@ export const AnyWise: SkillCategory = {
 			name: "Treasure-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8801,7 +8801,7 @@ export const AnyWise: SkillCategory = {
 			name: "Tree-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8816,7 +8816,7 @@ export const AnyWise: SkillCategory = {
 			name: "Trial by Combat-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8831,7 +8831,7 @@ export const AnyWise: SkillCategory = {
 			name: "Troll-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8846,7 +8846,7 @@ export const AnyWise: SkillCategory = {
 			name: "Trouble-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8861,7 +8861,7 @@ export const AnyWise: SkillCategory = {
 			name: "Troubled Student-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8876,7 +8876,7 @@ export const AnyWise: SkillCategory = {
 			name: "Tunnel-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8891,7 +8891,7 @@ export const AnyWise: SkillCategory = {
 			name: "Undermining-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8906,7 +8906,7 @@ export const AnyWise: SkillCategory = {
 			name: "Vagrant-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8921,7 +8921,7 @@ export const AnyWise: SkillCategory = {
 			name: "Vein-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8936,7 +8936,7 @@ export const AnyWise: SkillCategory = {
 			name: "Vessel-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8951,7 +8951,7 @@ export const AnyWise: SkillCategory = {
 			name: "Village Secret-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8966,7 +8966,7 @@ export const AnyWise: SkillCategory = {
 			name: "Village Secrets-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8981,7 +8981,7 @@ export const AnyWise: SkillCategory = {
 			name: "Village-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -8996,7 +8996,7 @@ export const AnyWise: SkillCategory = {
 			name: "Vine-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9011,7 +9011,7 @@ export const AnyWise: SkillCategory = {
 			name: "Vintage-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9026,7 +9026,7 @@ export const AnyWise: SkillCategory = {
 			name: "Visage-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9041,7 +9041,7 @@ export const AnyWise: SkillCategory = {
 			name: "Wagon-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9056,7 +9056,7 @@ export const AnyWise: SkillCategory = {
 			name: "Walking Corpse-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9071,7 +9071,7 @@ export const AnyWise: SkillCategory = {
 			name: "War-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9086,7 +9086,7 @@ export const AnyWise: SkillCategory = {
 			name: "Wasteland-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9101,7 +9101,7 @@ export const AnyWise: SkillCategory = {
 			name: "Waterworks-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9116,7 +9116,7 @@ export const AnyWise: SkillCategory = {
 			name: "Wealth-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9131,7 +9131,7 @@ export const AnyWise: SkillCategory = {
 			name: "Wealthy-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9146,7 +9146,7 @@ export const AnyWise: SkillCategory = {
 			name: "Web-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9161,7 +9161,7 @@ export const AnyWise: SkillCategory = {
 			name: "Well-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9176,7 +9176,7 @@ export const AnyWise: SkillCategory = {
 			name: "Whip-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9191,7 +9191,7 @@ export const AnyWise: SkillCategory = {
 			name: "Whispered Secrets-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9206,7 +9206,7 @@ export const AnyWise: SkillCategory = {
 			name: "Wholesale-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9221,7 +9221,7 @@ export const AnyWise: SkillCategory = {
 			name: "Wife-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9236,7 +9236,7 @@ export const AnyWise: SkillCategory = {
 			name: "Windage-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9251,7 +9251,7 @@ export const AnyWise: SkillCategory = {
 			name: "Window-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9266,7 +9266,7 @@ export const AnyWise: SkillCategory = {
 			name: "Wolf-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9281,7 +9281,7 @@ export const AnyWise: SkillCategory = {
 			name: "Wood-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9296,7 +9296,7 @@ export const AnyWise: SkillCategory = {
 			name: "Work-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9311,7 +9311,7 @@ export const AnyWise: SkillCategory = {
 			name: "World Domination-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9326,7 +9326,7 @@ export const AnyWise: SkillCategory = {
 			name: "Worshipper-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -9341,7 +9341,7 @@ export const AnyWise: SkillCategory = {
 			name: "Writ-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""

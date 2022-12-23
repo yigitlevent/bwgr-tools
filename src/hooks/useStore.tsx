@@ -298,25 +298,39 @@ export function useStore() {
 
 	// CHARACTER BURNER
 	const characterBurner = {
-		cbChangeStock: (stock: string) => {
+		cbChangeStock: (stock: StocksList) => {
 			dispatch({ type: "CHANGE_CB_STOCK", payload: { stock } });
 		},
 		cbChangeConcept: (concept: string) => {
 			dispatch({ type: "CHANGE_CB_CONCEPT", payload: { concept } });
 		},
 		cbAddLifepath: (lifepathPath: string) => {
-			dispatch({ type: "CHANGE_CB_ADD_LIFEPATH", payload: { lifepathPath } });
+			dispatch({ type: "ADD_CB_LIFEPATH", payload: { lifepathPath } });
 		},
 		cbRemoveLifepath: () => {
-			dispatch({ type: "CHANGE_CB_REMOVE_LIFEPATH" });
+			dispatch({ type: "REMOVE_CB_LIFEPATH" });
 		},
-		cbChangeStatShade: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, statName: string, change: 1 | -1) => {
+		cbChangeStatShade: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, statName: StatsList) => {
 			e.preventDefault();
-			dispatch({ type: "CHANGE_CB_CHANGE_SHADE", payload: { statName, change } });
+			dispatch({ type: "CHANGE_CB_STAT_SHADE", payload: { statName } });
 		},
-		cbChangeStatExponent: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, statName: string, change: 1 | -1) => {
+		cbChangeStatExponent: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, statName: StatsList, change: 1 | -1) => {
 			e.preventDefault();
-			dispatch({ type: "CHANGE_CB_CHANGE_EXPONENT", payload: { statName, change } });
+			dispatch({ type: "CHANGE_CB_STAT_EXPONENT", payload: { statName, change } });
+		},
+		cbChangeAttributeShade: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, attributeName: AttributesList, change: 1 | -1) => {
+			e.preventDefault();
+			dispatch({ type: "CHANGE_CB_ATTRIBUTE_SHADE", payload: { attributeName, change } });
+		},
+		cbOpenSkill: (skillName: string, open: boolean, isLifepath: boolean) => {
+			dispatch({ type: "OPEN_CB_SKILL", payload: { skillName, open, isLifepath } });
+		},
+		cbChangeSkillExponent: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, skillName: string, change: 1 | -1, isLifepath: boolean) => {
+			e.preventDefault();
+			dispatch({ type: "CHANGE_CB_SKILL_EXPONENT", payload: { skillName, change, isLifepath } });
+		},
+		cbOpenTrait: (traitName: string, open: boolean, isLifepath: boolean) => {
+			dispatch({ type: "OPEN_CB_TRAIT", payload: { traitName, open, isLifepath } });
 		}
 	};
 

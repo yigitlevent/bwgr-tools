@@ -12,7 +12,7 @@ export const RodenSpecial: SkillCategory = {
 			name: "Firebombs",
 			noList: false,
 			restriction: "Roden only",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -27,7 +27,7 @@ export const RodenSpecial: SkillCategory = {
 			name: "Garrote",
 			noList: false,
 			restriction: "Roden only",
-			root: "Agility",
+			root: ["Agility"],
 			tools: [
 				"Tools",
 				""
@@ -42,7 +42,7 @@ export const RodenSpecial: SkillCategory = {
 			name: "Preaching",
 			noList: false,
 			restriction: "Roden only",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""

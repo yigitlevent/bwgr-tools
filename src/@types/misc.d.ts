@@ -2,9 +2,13 @@ type Ruleset = "bwg" | "bwc" | "msc";
 type StocksList = "Dwarf" | "Elf" | "Human" | "Orc" | "Roden" | "Troll" | "Great Wolf";
 type SettingTypesList = "Setting" | "Subsetting";
 type ToolsList = "No" | "Tools" | "Workshop" | "Traveling Gear" | "Other";
-type StatsList = "Will" | "Perception" | "Agility" | "Speed" | "Power" | "Forte" | "Faith" | "Steel" | "Grief" | "Hatred" | "Spite" | "Ancestral Taint";
+type StatsList = "Will" | "Perception" | "Agility" | "Speed" | "Power" | "Forte";
+type AttributesList = "Health" | "Steel" | "Reflexes" | "Hesitation" | "Stride" | "Greed" | "Grief" | "Spite" | "Faith" | "Faith in Dead Gods" | "Hatred" | "Void Embrace" | "Ancestral Taint" | "Corruption";
+type StatsAndAttributesList = StatsList | AttributesList;
 type SkillTypesList = "Academic" | "Artisan" | "Artist" | "Craftsman" | "Forester" | "Martial" | "Medicinal" | "Military" | "Musical" | "Peasant" | "Physical" | "School of Thought" | "Seafaring" | "Social" | "Sorcerous" | "Special" | "Wise";
 type TraitTypesList = "Character" | "Call-on" | "Die" | "Call-on and Die";
+type ShadesList = "B" | "G" | "W";
+type ShadesListLimited = Exclude<ShadesList, "W">;
 
 type StockPath = `${StocksList}`;
 type SettingPath = `${StockPath}➞${string}`;

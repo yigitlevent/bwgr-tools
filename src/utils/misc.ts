@@ -37,6 +37,10 @@ export function MakeName(name: string, index: number, extension?: [singular: str
 	return split[index];
 }
 
+export function GetAverage(arr: number[]): number {
+	return arr.reduce((a, b) => a + b) / arr.length;
+}
+
 export const GroupBy = <T, K extends keyof any>(list: T[], getKey: (item: T) => K) =>
 	list.reduce((previous, currentItem) => {
 		const group = getKey(currentItem);
@@ -44,4 +48,3 @@ export const GroupBy = <T, K extends keyof any>(list: T[], getKey: (item: T) => 
 		previous[group].push(currentItem);
 		return previous;
 	}, {} as Record<K, T[]>);
-

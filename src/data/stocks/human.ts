@@ -1627,7 +1627,7 @@ export const Human: Stock = {
 					skills: [
 						"Any Wise➞Artisan-wise",
 						"Any General➞Mason",
-						"Any General➞Blacksmith", // TODO: This five is actually "any 'smith' skill"
+						"Any General➞Blacksmith", // FIX: These five is actually "any 'smith' skill"
 						"Any General➞Coppersmith",
 						"Any General➞Locksmith",
 						"Any General➞Weaponsmith",
@@ -7595,7 +7595,7 @@ export const Human: Stock = {
 						"Any General➞Stealthy",
 						"Any General➞Cooking",
 						"Any General➞Orienteering",
-						"Any General➞Javelin", // TODO: This is actually Javelin OR Bow
+						"Any General➞Javelin", // FIX: This is actually Javelin OR Bow
 						"Any General➞Bow"
 					],
 					stock: "Human",
@@ -7726,7 +7726,7 @@ export const Human: Stock = {
 							]
 						},
 						limits: [
-							// TODO: These two are the "otherwise" case, so maybe fold limits into conditions in the future
+							// FIX: These two are the "otherwise" case, so maybe fold limits into conditions in the future
 							"GENDER➞FEMALE",
 							"LP➞MAX➞4"
 						]

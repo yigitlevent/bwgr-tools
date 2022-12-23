@@ -10,7 +10,7 @@ import { TrollCommon, TrollLifepath, TrollSpecial } from "./troll";
 
 export interface Trait {
 	allowed: Ruleset[];
-	cost: number | number[];
+	cost: number;
 	description: string;
 	name: string;
 	stock: "Any" | StocksList;

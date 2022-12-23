@@ -12,7 +12,7 @@ export const OrcSpecial: SkillCategory = {
 			name: "Bastions of Hatred",
 			noList: false,
 			restriction: "Orcs only",
-			root: "Hatred",
+			root: ["Hatred"],
 			tools: [
 				"Workshop",
 				""
@@ -27,7 +27,7 @@ export const OrcSpecial: SkillCategory = {
 			name: "Brazen Horn of Despair",
 			noList: false,
 			restriction: "Orcs only",
-			root: "Hatred",
+			root: ["Hatred"],
 			tools: [
 				"Other",
 				"The Brazen Horn"
@@ -42,7 +42,7 @@ export const OrcSpecial: SkillCategory = {
 			name: "Brutal Intimidation",
 			noList: false,
 			restriction: "Orcs only",
-			root: "Hatred",
+			root: ["Hatred"],
 			tools: [
 				"No",
 				""
@@ -57,7 +57,7 @@ export const OrcSpecial: SkillCategory = {
 			name: "Doctrine of Night's Blood",
 			noList: false,
 			restriction: "Orcs only in character burning",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -72,7 +72,7 @@ export const OrcSpecial: SkillCategory = {
 			name: "Name Ritual",
 			noList: false,
 			restriction: "Orcs only in character burning",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -87,7 +87,7 @@ export const OrcSpecial: SkillCategory = {
 			name: "Poisonous Platitudes",
 			noList: false,
 			restriction: "Orcs only",
-			root: "Hatred",
+			root: ["Hatred"],
 			tools: [
 				"No",
 				""
@@ -102,7 +102,7 @@ export const OrcSpecial: SkillCategory = {
 			name: "Rituals of Blood",
 			noList: false,
 			restriction: "Orcs only",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"Tools",
 				"Ritual knives"
@@ -117,7 +117,7 @@ export const OrcSpecial: SkillCategory = {
 			name: "Rituals of Night",
 			noList: false,
 			restriction: "Orcs only",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -132,7 +132,7 @@ export const OrcSpecial: SkillCategory = {
 			name: "Rude Carpentry",
 			noList: false,
 			restriction: "Orcs only in character burning",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -147,7 +147,7 @@ export const OrcSpecial: SkillCategory = {
 			name: "Servant-wise",
 			noList: false,
 			restriction: "Orcs only in character burning",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -162,7 +162,7 @@ export const OrcSpecial: SkillCategory = {
 			name: "Siege Engineer",
 			noList: false,
 			restriction: "Orcs only in character burning",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				""
@@ -177,7 +177,7 @@ export const OrcSpecial: SkillCategory = {
 			name: "Spider Husbandry",
 			noList: false,
 			restriction: "Orcs only in character burning",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -192,7 +192,7 @@ export const OrcSpecial: SkillCategory = {
 			name: "Tree Pulling",
 			noList: false,
 			restriction: "Orcs only",
-			root: "Hatred",
+			root: ["Hatred"],
 			tools: [
 				"Tools",
 				"Expendable rope and goblins"
@@ -207,7 +207,7 @@ export const OrcSpecial: SkillCategory = {
 			name: "Vile Poisoner",
 			noList: false,
 			restriction: "Orcs only",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"

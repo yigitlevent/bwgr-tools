@@ -16,10 +16,10 @@ export interface Skill {
 	magical: boolean;
 	noList: boolean;
 	restriction: string;
-	root: StatsList | `${StatsList}/${StatsList}` | "N/A";
+	root: StatsAndAttributesList[];
 	tools: [ToolsList, string];
 	training: boolean;
-	type: SkillTypesList | "N/A";
+	type: SkillTypesList | [];
 }
 
 export interface SkillCategory {

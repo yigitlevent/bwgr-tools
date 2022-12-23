@@ -12,7 +12,7 @@ export const HumanMagical: SkillCategory = {
 			name: "Alchemy",
 			noList: false,
 			restriction: "Men only",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				""
@@ -27,7 +27,7 @@ export const HumanMagical: SkillCategory = {
 			name: "Bargaining",
 			noList: false,
 			restriction: "Men only",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -42,7 +42,7 @@ export const HumanMagical: SkillCategory = {
 			name: "Circination",
 			noList: false,
 			restriction: "Men only",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"No",
 				""
@@ -57,7 +57,7 @@ export const HumanMagical: SkillCategory = {
 			name: "Death Art",
 			noList: false,
 			restriction: "Men only",
-			root: "Will/Forte",
+			root: ["Will", "Forte"],
 			tools: [
 				"Tools",
 				""
@@ -72,7 +72,7 @@ export const HumanMagical: SkillCategory = {
 			name: "Enchanting",
 			noList: false,
 			restriction: "Men only",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				""
@@ -87,7 +87,7 @@ export const HumanMagical: SkillCategory = {
 			name: "Sorcery",
 			noList: false,
 			restriction: "Men only in character burning",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -102,7 +102,7 @@ export const HumanMagical: SkillCategory = {
 			name: "Spirit Binding",
 			noList: false,
 			restriction: "Men only",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -117,7 +117,7 @@ export const HumanMagical: SkillCategory = {
 			name: "Summoning",
 			noList: false,
 			restriction: "Men only",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -139,7 +139,7 @@ export const HumanSpecial: SkillCategory = {
 			name: "Arson",
 			noList: false,
 			restriction: "Men only in character burning.",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
 				"Expendable"
@@ -154,7 +154,7 @@ export const HumanSpecial: SkillCategory = {
 			name: "Astrology",
 			noList: false,
 			restriction: "Men only",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"Tools",
 				""
@@ -169,7 +169,7 @@ export const HumanSpecial: SkillCategory = {
 			name: "Munitions",
 			noList: false,
 			restriction: "Men only",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
 				""

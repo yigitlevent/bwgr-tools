@@ -12,7 +12,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Ancient Ways",
 			noList: false,
 			restriction: "Great Wolf only",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -27,7 +27,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Cage-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -42,7 +42,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Begging",
 			noList: false,
 			restriction: "Great Wolf only",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -57,7 +57,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Combat Mount Training",
 			noList: false,
 			restriction: "Great Wolf only",
-			root: "Will/Power",
+			root: ["Will", "Power"],
 			tools: [
 				"No",
 				""
@@ -72,7 +72,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Dog-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -87,7 +87,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Elf-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -102,7 +102,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Escape Artist",
 			noList: false,
 			restriction: "Great Wolf only",
-			root: "Perception/Agility",
+			root: ["Perception", "Agility"],
 			tools: [
 				"No",
 				""
@@ -117,7 +117,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Forest-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -132,7 +132,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Hoof-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -147,7 +147,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Howling",
 			noList: false,
 			restriction: "Great Wolf only",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -162,7 +162,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Legion-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -177,7 +177,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Nature of All Things",
 			noList: false,
 			restriction: "Great Wolf only",
-			root: "Perception/Will",
+			root: ["Perception", "Will"],
 			tools: [
 				"No",
 				""
@@ -192,7 +192,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Nursing",
 			noList: false,
 			restriction: "Great Wolf only",
-			root: "Perception/Will",
+			root: ["Perception", "Will"],
 			tools: [
 				"No",
 				""
@@ -207,7 +207,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Old World-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -222,7 +222,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Orc-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -237,7 +237,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Pack Hunting",
 			noList: false,
 			restriction: "Great Wolf only",
-			root: "Perception/Speed",
+			root: ["Perception", "Speed"],
 			tools: [
 				"No",
 				""
@@ -252,7 +252,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Pack Etiquette",
 			noList: false,
 			restriction: "Great Wolf only",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -267,7 +267,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Pack-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -282,7 +282,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Path-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -297,7 +297,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Poisons-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -312,7 +312,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Pup-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -327,7 +327,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Rearing",
 			noList: false,
 			restriction: "Great Wolf only",
-			root: "Perception/Will",
+			root: ["Perception", "Will"],
 			tools: [
 				"No",
 				""
@@ -342,7 +342,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Rider Training",
 			noList: false,
 			restriction: "Great Wolf only",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -357,7 +357,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Rituals-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -372,7 +372,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "River-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -387,7 +387,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Savage Attack",
 			noList: false,
 			restriction: "Great Wolf only",
-			root: "Agility/Speed",
+			root: ["Agility", "Speed"],
 			tools: [
 				"No",
 				""
@@ -402,7 +402,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Scent Tracking",
 			noList: false,
 			restriction: "Great Wolf only",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -417,7 +417,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Scent-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -432,7 +432,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Spirit Hunter-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -447,7 +447,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Village-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -462,7 +462,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Tongue of the Ancient One",
 			noList: false,
 			restriction: "Great Wolf only",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -477,7 +477,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Way of the First Hunter",
 			noList: false,
 			restriction: "Great Wolf only",
-			root: "Will/Perception",
+			root: ["Will", "Perception"],
 			tools: [
 				"No",
 				""
@@ -492,7 +492,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			name: "Wolf-wise",
 			noList: false,
 			restriction: "N/A",
-			root: "Perception",
+			root: ["Perception"],
 			tools: [
 				"No",
 				""
@@ -514,7 +514,7 @@ export const GreatWolfSpiritHunterSong: SkillCategory = {
 			name: "Ancestral Jaw",
 			noList: false,
 			restriction: "Great Wolves only",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""
@@ -529,7 +529,7 @@ export const GreatWolfSpiritHunterSong: SkillCategory = {
 			name: "Grandfather's Song",
 			noList: false,
 			restriction: "Great Wolves only",
-			root: "Ancestral Taint",
+			root: ["Ancestral Taint"],
 			tools: [
 				"No",
 				""
@@ -544,7 +544,7 @@ export const GreatWolfSpiritHunterSong: SkillCategory = {
 			name: "Primal Bark",
 			noList: false,
 			restriction: "Great Wolves only",
-			root: "Will",
+			root: ["Will"],
 			tools: [
 				"No",
 				""

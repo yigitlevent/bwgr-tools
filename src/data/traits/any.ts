@@ -5612,12 +5612,18 @@ export const AnyMonstrous: TraitCategory = {
 		},
 		{
 			allowed: ["bwc", "msc"],
-			cost: [
-				4,
-				7
-			],
+			cost: 4,
 			description: "Tentacles are supple, strong, sticky and agile additional limbs. This trait comes in two grades: Two tentacles cost 4 pts and give a +1D advantage to all Lock, Push and grabbing related tests. More than two tentacles cost 7 pts and grant +2D advantage to all Lock, Push and grabbing related tests. These extra limbs cause a +1 Ob and a +2 Ob to Inconspicuous tests respectively.",
-			name: "Tentacles",
+			name: "Tentacles (4)",
+			stock: "Any",
+			type: "Die"
+		},
+		{
+			allowed: ["bwc", "msc"],
+			cost: 
+				7,
+			description: "Tentacles are supple, strong, sticky and agile additional limbs. This trait comes in two grades: Two tentacles cost 4 pts and give a +1D advantage to all Lock, Push and grabbing related tests. More than two tentacles cost 7 pts and grant +2D advantage to all Lock, Push and grabbing related tests. These extra limbs cause a +1 Ob and a +2 Ob to Inconspicuous tests respectively.",
+			name: "Tentacles (7)",
 			stock: "Any",
 			type: "Die"
 		},

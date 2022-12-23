@@ -94,7 +94,7 @@ export function LifepathLists() {
 				</Grid>
 			</GenericGrid>
 
-			<GenericGrid columns={1} spacing={2} center>
+			<GenericGrid columns={1} spacing={[2, 2]} center>
 				{searchResults.length > 0
 					? searchResults.map((v, i) =>
 						<Grid item xs={1} key={i}>
