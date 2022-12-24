@@ -30,6 +30,7 @@ export function CharacterBurner(): JSX.Element {
 
 			<BasicsBlock />
 			<LifepathsBlock openLpModal={openLpModal} openQuModal={openQuModal} />
+			
 			{totals.years.points > 0
 				? <Fragment>
 					<BlockDivider />

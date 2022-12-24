@@ -14,6 +14,7 @@ import { FightAction, FightActions } from "../data/fight";
 import { Clamp } from "../utils/misc";
 
 import { Notification } from "../components/Shared/Notification";
+import { AttributeQuestionsKeys } from "../data/attributes";
 
 
 export function useStore() {
@@ -331,6 +332,9 @@ export function useStore() {
 		},
 		cbOpenTrait: (traitName: string, open: boolean, isLifepath: boolean) => {
 			dispatch({ type: "OPEN_CB_TRAIT", payload: { traitName, open, isLifepath } });
+		},
+		cbSwitchAnswer: (questionKey: AttributeQuestionsKeys) => {
+			dispatch({ type: "SWITCH_CB_ANSWER", payload: { questionKey } });
 		}
 	};
 

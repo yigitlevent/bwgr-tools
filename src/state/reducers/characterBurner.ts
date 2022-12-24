@@ -1,6 +1,6 @@
 import { AttributeQuestionsKeys } from "../../data/attributes";
 import { ModifyAttributeShadeSpending, RefreshAttributesList } from "../../utils/characterAttributeUtils";
-import { RefreshQuestionsList } from "../../utils/characterQuestionUtils";
+import { RefreshQuestionsList, SwitchAnswer } from "../../utils/characterQuestionUtils";
 import { TryOpenSkill, RefreshSkillList, ModifySkillExponentSpending } from "../../utils/characterSkillUtils";
 import { ModifyStatExponentSpending, ModifyStatShadeSpending } from "../../utils/characterStatUtils";
 import { RefreshTraitList, TryOpenTrait } from "../../utils/characterTraitUtils";
@@ -24,13 +24,16 @@ interface ChangeSkillAdvancement { type: "CHANGE_CB_SKILL_EXPONENT"; payload: { 
 
 interface OpenTrait { type: "OPEN_CB_TRAIT"; payload: { traitName: string; open: boolean; isLifepath: boolean; }; }
 
+interface SwitchAnswer { type: "SWITCH_CB_ANSWER"; payload: { questionKey: AttributeQuestionsKeys; }; }
+
 export type CharacterBurnerActions =
 	ChangeCharacterStock | ChangeCharacterConcept |
 	AddLifepath | RemoveLifepath |
 	ChangeStatShade | ChangeStatExponent |
 	ChangeAttributeShade |
 	OpenSkill | ChangeSkillAdvancement |
-	OpenTrait;
+	OpenTrait |
+	SwitchAnswer;
 
 export interface StatSpending {
 	shade: number;
@@ -109,17 +112,10 @@ const INITIAL: CharacterBurnerState = {
 	questions: {}
 };
 
-function GetSpending(state: CharacterBurnerState): CharacterSpendings {
-	return JSON.parse(JSON.stringify(state.spendings));
-}
-
-function GetEmptySpending(): CharacterSpendings {
-	return JSON.parse(JSON.stringify(EmptySpendings));
-}
-
-function GetEmptyTotals(): LifepathTotals {
-	return JSON.parse(JSON.stringify(EmptyTotals));
-}
+function GetEmptyTotals(): LifepathTotals { return JSON.parse(JSON.stringify(EmptyTotals)); }
+function GetSpending(state: CharacterBurnerState): CharacterSpendings { return JSON.parse(JSON.stringify(state.spendings)); }
+function GetEmptySpending(): CharacterSpendings { return JSON.parse(JSON.stringify(EmptySpendings)); }
+function GetQuestions(state: CharacterBurnerState): CharacterQuestions { return JSON.parse(JSON.stringify(state.questions)); }
 
 export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerActions): CharacterBurnerState => {
 	switch (action.type) {
@@ -147,9 +143,9 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 				...state.spendings,
 				skills: RefreshSkillList(lifepathAddedTotals, state.spendings).skills,
 				traits: RefreshTraitList(lifepathAddedTotals, state.spendings).traits,
-				attributes: RefreshAttributesList(state.spendings).attributes
+				attributes: RefreshAttributesList(lifepathAddedTotals, state.spendings).attributes
 			};
-			const addLifepathQuestions: CharacterQuestions = RefreshQuestionsList(newAddedSpendings, state.questions);
+			const addLifepathQuestions: CharacterQuestions = RefreshQuestionsList(lifepathAddedTotals, newAddedSpendings, GetQuestions(state));
 			return {
 				...state,
 				lifepathPaths: addedLifepaths,
@@ -166,9 +162,9 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 				...state.spendings,
 				skills: RefreshSkillList(lifepathRemovedTotals, state.spendings).skills,
 				traits: RefreshTraitList(lifepathRemovedTotals, state.spendings).traits,
-				attributes: RefreshAttributesList(state.spendings).attributes
+				attributes: RefreshAttributesList(lifepathRemovedTotals, state.spendings).attributes
 			};
-			const removeLifepathQuestions: CharacterQuestions = RefreshQuestionsList(newRemovedSpendings, state.questions);
+			const removeLifepathQuestions: CharacterQuestions = RefreshQuestionsList(lifepathRemovedTotals, newRemovedSpendings, GetQuestions(state));
 			return {
 				...state,
 				lifepathPaths: removedLifepaths,
@@ -220,15 +216,22 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		case "OPEN_CB_TRAIT":
 			const spendingTraitOpen = GetSpending(state);
 			spendingTraitOpen.traits[action.payload.traitName] = TryOpenTrait(action.payload.traitName, state.totals, spendingTraitOpen, action.payload.open, action.payload.isLifepath);
-			const openTraitQuestions: CharacterQuestions = RefreshQuestionsList(spendingTraitOpen, state.questions);
+			const openTraitQuestions: CharacterQuestions = RefreshQuestionsList(state.totals, spendingTraitOpen, GetQuestions(state));
 			return {
 				...state,
 				spendings: {
 					...spendingTraitOpen,
 					traits: spendingTraitOpen.traits,
-					attributes: RefreshAttributesList(spendingTraitOpen).attributes
+					attributes: RefreshAttributesList(state.totals, spendingTraitOpen).attributes
 				},
 				questions: JSON.parse(JSON.stringify(openTraitQuestions))
+			};
+
+		case "SWITCH_CB_ANSWER":
+			const newAnswers = SwitchAnswer(action.payload.questionKey, GetQuestions(state));
+			return {
+				...state,
+				questions: JSON.parse(JSON.stringify(newAnswers))
 			};
 
 		default:

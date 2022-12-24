@@ -1,6 +1,6 @@
 type AttributeQuestionAttributes = "Always" | Exclude<AttributesList, "Health" | "Steel" | "Reflexes" | "Hesitation" | "Stride">;
 
-interface AttributeQuestion {
+export interface AttributeQuestion {
 	attribute: AttributeQuestionAttributes | AttributeQuestionAttributes[];
 	text: string;
 }

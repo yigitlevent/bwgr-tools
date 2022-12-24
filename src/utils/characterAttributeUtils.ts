@@ -1,6 +1,7 @@
 import { Attributes } from "../data/attributes";
 import { Stocks } from "../data/stocks/_stocks";
 import { CharacterQuestions, CharacterSpendings, StatSpending } from "../state/reducers/characterBurner";
+import { IsTraitInCommonOrOpen } from "./characterQuestionUtils";
 import { GetSkillOpenness } from "./characterSkillUtils";
 import { GetStatExponent, GetStatShade } from "./characterStatUtils";
 import { GetTraitOpenness } from "./characterTraitUtils";
@@ -243,14 +244,14 @@ export function ModifyAttributeShadeSpending(attributeName: AttributesList, chan
 }
 
 // REFRESH
-export function RefreshAttributesList(spendings: CharacterSpendings): CharacterSpendings {
+export function RefreshAttributesList(totals: LifepathTotals, spendings: CharacterSpendings): CharacterSpendings {
 	const newSpending = JSON.parse(JSON.stringify(spendings)) as CharacterSpendings;
 
 	for (const key in Attributes) {
 		const attr = Attributes[key];
 
 		if (attr.requiredTrait) {
-			if (attr.requiredTrait in spendings.traits && spendings.traits[attr.requiredTrait].open > 0) {
+			if (IsTraitInCommonOrOpen(attr.requiredTrait, totals, spendings)) {
 				if (!(attr.name in spendings.attributes)) {
 					newSpending.attributes[attr.name] = { shadeShifted: 0 };
 				}

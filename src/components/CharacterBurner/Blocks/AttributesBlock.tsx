@@ -14,7 +14,7 @@ import { BlockText } from "../BlockText";
 
 
 export function AttributesBlock() {
-	const { stock, lifepathPaths, totals, spendings: spending, questions } = useAppSelector(state => state.characterBurner);
+	const { stock, lifepathPaths, totals, spendings, questions } = useAppSelector(state => state.characterBurner);
 	const { cbChangeAttributeShade } = useStore().characterBurner;
 
 	return (
@@ -25,7 +25,7 @@ export function AttributesBlock() {
 
 			<Fragment>
 				{Attributes
-					.filter(v => (v.requiredTrait && totals.traits.commonList.includes(v.requiredTrait)) || Object.keys(spending.attributes).includes(v.name))
+					.filter(v => (v.requiredTrait && totals.traits.commonList.includes(v.requiredTrait)) || Object.keys(spendings.attributes).includes(v.name))
 					.map((v, i) =>
 						<Grid key={i} item xs={6} sm={3} md={2}>
 							<GenericGrid columns={5} center="h" hasBackground={1}>
@@ -34,14 +34,14 @@ export function AttributesBlock() {
 									{v.hasShade
 										? <AttributeButton
 											name={v.name}
-											value={GetAttributeShade(v.name, spending)}
-											disabled={GetAttributeExponent(v.name, stock, lifepathPaths, totals, spending, questions) < 6}
+											value={GetAttributeShade(v.name, spendings)}
+											disabled={GetAttributeExponent(v.name, stock, lifepathPaths, totals, spendings, questions) < 6}
 											onClick={cbChangeAttributeShade}
 											onContext={cbChangeAttributeShade}
 										/>
 										: null
 									}
-									<AttributeButton name={v.name} value={GetAttributeExponent(v.name, stock, lifepathPaths, totals, spending, questions)} disabled />
+									<AttributeButton name={v.name} value={GetAttributeExponent(v.name, stock, lifepathPaths, totals, spendings, questions)} disabled />
 								</Grid>
 							</GenericGrid>
 						</Grid>

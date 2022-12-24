@@ -215,11 +215,11 @@ function ScanFaultyPaths(): void {
 		}
 	}
 
-	console.log("/// ERRORS ///");
-	console.log(errors);
-	console.log("/// WARNINGS ///");
-	console.log(warnings);
-	console.log("/// END ///");
+	console.debug("/// ERRORS ///");
+	console.debug(errors);
+	console.debug("/// WARNINGS ///");
+	console.debug(warnings);
+	console.debug("/// END ///");
 }
 
 export function DataDebug(): void {
