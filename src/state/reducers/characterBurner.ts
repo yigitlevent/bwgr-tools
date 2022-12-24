@@ -163,6 +163,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 			return { ...state, spending: { ...spendingStatExp } };
 
 		case "CHANGE_CB_ATTRIBUTE_SHADE":
+			// BUG: Unimplemented
 			return state;
 
 		case "OPEN_CB_SKILL":

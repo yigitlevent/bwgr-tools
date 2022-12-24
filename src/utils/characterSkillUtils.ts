@@ -56,14 +56,13 @@ export function TryOpenSkill(skillName: string, totals: LifepathTotals, spending
 	const skill = GetSkillFromPath(skillName);
 	const skillRemainings = GetRemainingSkillTotals(totals, spending);
 
-	// BUG: Implement isLifepath for general skills
 	if (toOpen) {
 		const cost = skill.magical || skill.training ? 2 : 1;
 
-		if (skillRemainings.lifepathPoints >= cost) {
+		if (isLifepath && skillRemainings.lifepathPoints >= cost) {
 			spending.skills[skillName].lifepath.open = cost;
 		}
-		else if (cost === 2 && skillRemainings.lifepathPoints > 0 && skillRemainings.generalPoints > 0) {
+		else if (isLifepath && cost === 2 && skillRemainings.lifepathPoints > 0 && skillRemainings.generalPoints > 0) {
 			spending.skills[skillName].lifepath.open = 1;
 			spending.skills[skillName].general.open = 1;
 		}
@@ -83,9 +82,8 @@ export function ModifySkillExponentSpending(skillName: string, spendings: Charac
 	const spending = spendings.skills[skillName];
 	const remaining = GetRemainingSkillTotals(totals, spendings);
 
-	// BUG: Implement isLifepath for general skills
 	if (change === 1) {
-		if (remaining.lifepathPoints > 0) spending.lifepath.advance += 1;
+		if (isLifepath && remaining.lifepathPoints > 0) spending.lifepath.advance += 1;
 		else if (remaining.generalPoints > 0) spending.general.advance += 1;
 	}
 	else if (change === -1) {
