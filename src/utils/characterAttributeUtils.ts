@@ -107,9 +107,7 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 
 // SPEND
 export function ModifyAttributeShadeSpending(statName: StatsList, spendings: CharacterSpending, totals: LifepathTotals) {
-	// BUG: unimplemented
-
-
+	// BUG: Unimplemented
 	return 0;
 }
 

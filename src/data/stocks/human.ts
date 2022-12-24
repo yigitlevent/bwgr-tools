@@ -1627,7 +1627,7 @@ export const Human: Stock = {
 					skills: [
 						"Any Wise➞Artisan-wise",
 						"Any General➞Mason",
-						"Any General➞Blacksmith", // FIX: These five is actually "any 'smith' skill"
+						"Any General➞Blacksmith", // FIX: These five should be "Any General➞Any -smith", have a noList "Any General➞Any -smith" entry and have a modal to select which.
 						"Any General➞Coppersmith", //
 						"Any General➞Locksmith", //
 						"Any General➞Weaponsmith", //
@@ -7595,7 +7595,7 @@ export const Human: Stock = {
 						"Any General➞Stealthy",
 						"Any General➞Cooking",
 						"Any General➞Orienteering",
-						"Any General➞Javelin", // FIX: This is actually Javelin OR Bow
+						"Any General➞Javelin", // FIX: These two should be "Any General➞Javelin or Bow", have a noList "Any General➞Javelin or Bow" entry and have a modal to select which.
 						"Any General➞Bow" //
 					],
 					stock: "Human",
@@ -7726,7 +7726,7 @@ export const Human: Stock = {
 							]
 						},
 						limits: [
-							// FIX: These two are the "otherwise" case, so maybe fold limits into conditions in the future
+							// FIX: These two are the "otherwise" case for the condition above. Either this or condition should be met.
 							"GENDER➞FEMALE",
 							"LP➞MAX➞4"
 						]

@@ -131,7 +131,7 @@ export function CalculateLifepathTotals(chosenLifepaths: Lifepath[]) {
 
 	const stock = chosenLifepaths[0].stock;
 
-	// BUG: This does not take extension-related age changes into account
+	// BUG: This does not take extensions into account
 	const ageBracket = Stocks[stock].agePool.filter(v => (v.max >= totals.years.points && v.min <= totals.years.points));
 	totals.stats.fromAge = [ageBracket[0].m, ageBracket[0].p];
 
