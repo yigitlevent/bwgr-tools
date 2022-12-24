@@ -177,7 +177,7 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 
 			let extras = 0;
 			if (questions.WOUND) extras += 1;
-			// FIX: Implement "for each 1 rolled on the brutal life table"
+			// FIX: [BRUTAL LIFE] Implement "for each 1 rolled on the brutal life table"
 			if (questions.TORTURE) extras += 1;
 			if (questions.SLAVE) extras += 1;
 			if (questions.FRATRICIDE) extras += 1;
@@ -212,8 +212,8 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 			if (GetTraitOpenness("Human Special➞Gifted", spendings)) extras += 1;
 			if (GetTraitOpenness("Human Special➞Faithful", spendings) || GetTraitOpenness("Human Lifepath➞Faith in Dead Gods", spendings)) extras += 1;
 			if (GetTraitOpenness("Human Special➞Chosen One", spendings)) extras += 1;
-			// FIX: Implement "+1 for each point of spirit marks"
-			// FIX: Implement "+1 for each point of orders"
+			// FIX: [RESOURCES] Implement "+1 for each point of spirit marks"
+			// FIX: [RESOURCES] Implement "+1 for each point of orders"
 			if (questions.PRAY) extras += 1;
 			if (questions.PACT) extras += 1;
 
