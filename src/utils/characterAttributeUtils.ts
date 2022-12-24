@@ -6,7 +6,6 @@ import { GetStatExponent, GetStatShade } from "./characterStatUtils";
 import { GetTraitOpenness } from "./characterTraitUtils";
 import { LifepathTotals } from "./lifepathTotals";
 import { GetAverage } from "./misc";
-import { GetLifepathFromPath } from "./pathFinder";
 
 
 // GET
