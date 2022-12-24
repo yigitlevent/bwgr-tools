@@ -27,6 +27,25 @@ export function TraitsBlock() {
 				<Typography>Trait Points: {totals.traits.points}, Remaining: {traitRemaining ? traitRemaining.traitPoints : []}</Typography>
 			</Grid>
 
+			{totals.traits.commonList.length > 0
+				? <Fragment>
+					<Grid item xs={6}>
+						<Typography variant="h5" sx={{ margin: "12px 0 0 24px" }}>Common</Typography>
+					</Grid>
+
+					<Fragment>
+						{totals.traits.commonList.map((traitName, i) =>
+							<Grid key={i} item xs={6} sm={3} md={2}>
+								<GenericGrid columns={5} center="h" hasBackground={1}>
+									<BlockTraitPopover traitName={traitName} checkbox={{ checked: true, disabled: true }} />
+								</GenericGrid>
+							</Grid>
+						)}
+					</Fragment>
+				</Fragment>
+				: null
+			}
+
 			{totals.traits.mandatoryList.length > 0
 				? <Fragment>
 					<Grid item xs={6}>

@@ -14,7 +14,7 @@ import { BlockText } from "../BlockText";
 
 
 export function AttributesBlock() {
-	const { stock, spending } = useAppSelector(state => state.characterBurner);
+	const { stock, totals, spending } = useAppSelector(state => state.characterBurner);
 	const { cbChangeAttributeShade } = useStore().characterBurner;
 
 	return (
@@ -24,26 +24,28 @@ export function AttributesBlock() {
 			</Grid>
 
 			<Fragment>
-				{Attributes.filter(v => Object.keys(spending.attributes).includes(v.name)).map((v, i) =>
-					<Grid key={i} item xs={6} sm={3} md={2}>
-						<GenericGrid columns={5} center="h" hasBackground={1}>
-							<BlockText text={v.name} hasLeftPadding />
-							<Grid item>
-								{v.hasShade
-									? <AttributeButton
-										name={v.name}
-										value={GetAttributeShade(v.name, spending)}
-										disabled={GetAttributeExponent(v.name, stock, spending) < 6}
-										onClick={cbChangeAttributeShade}
-										onContext={cbChangeAttributeShade}
-									/>
-									: null
-								}
-								<AttributeButton name={v.name} value={GetAttributeExponent(v.name, stock, spending)} disabled />
-							</Grid>
-						</GenericGrid>
-					</Grid>
-				)}
+				{Attributes
+					.filter(v => (v.requiredTrait && totals.traits.commonList.includes(v.requiredTrait)) || Object.keys(spending.attributes).includes(v.name))
+					.map((v, i) =>
+						<Grid key={i} item xs={6} sm={3} md={2}>
+							<GenericGrid columns={5} center="h" hasBackground={1}>
+								<BlockText text={v.name} hasLeftPadding />
+								<Grid item>
+									{v.hasShade
+										? <AttributeButton
+											name={v.name}
+											value={GetAttributeShade(v.name, spending)}
+											disabled={GetAttributeExponent(v.name, stock, spending) < 6}
+											onClick={cbChangeAttributeShade}
+											onContext={cbChangeAttributeShade}
+										/>
+										: null
+									}
+									<AttributeButton name={v.name} value={GetAttributeExponent(v.name, stock, spending)} disabled />
+								</Grid>
+							</GenericGrid>
+						</Grid>
+					)}
 			</Fragment>
 		</GenericGrid>
 	);

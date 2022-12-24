@@ -56,14 +56,8 @@ export interface SpendingForAttribute {
 }
 
 export interface SpendingForSkill {
-	general: {
-		open: 0 | 1 | 2;
-		advance: number;
-	};
-	lifepath: {
-		open: 0 | 1 | 2;
-		advance: number;
-	};
+	general: { open: 0 | 1 | 2; advance: number; };
+	lifepath: { open: 0 | 1 | 2; advance: number; };
 }
 
 export interface SpendingForTrait {
@@ -110,12 +104,15 @@ const INITIAL: CharacterBurnerState = {
 export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerActions): CharacterBurnerState => {
 	switch (action.type) {
 		case "CHANGE_CB_STOCK":
+			const newStock = action.payload.stock;
+			const stockTotals: LifepathTotals = JSON.parse(JSON.stringify(EmptyTotals));
+			const stockSpending: CharacterSpending = JSON.parse(JSON.stringify((EmptySpending)));
 			return {
 				...state,
-				stock: action.payload.stock,
+				stock: newStock,
 				lifepathPaths: [],
-				totals: JSON.parse(JSON.stringify(EmptyTotals)),
-				spending: JSON.parse(JSON.stringify((EmptySpending)))
+				totals: stockTotals,
+				spending: stockSpending
 			};
 
 		case "CHANGE_CB_CONCEPT":

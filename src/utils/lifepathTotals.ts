@@ -1,4 +1,5 @@
 import { Lifepath, Stocks } from "../data/stocks/_stocks";
+import { TraitCategories } from "../data/traits/_traits";
 
 
 export interface LifepathTotals {
@@ -32,6 +33,7 @@ export interface LifepathTotals {
 	};
 	traits: {
 		points: number;
+		commonList: string[];
 		mandatoryList: string[];
 		lifepathList: string[];
 	};
@@ -73,6 +75,7 @@ export const EmptyTotals: LifepathTotals = {
 	},
 	traits: {
 		points: 0,
+		commonList: [],
 		mandatoryList: [],
 		lifepathList: []
 	}
@@ -126,12 +129,16 @@ export function CalculateLifepathTotals(chosenLifepaths: Lifepath[]) {
 		}
 	}
 
+	const stock = chosenLifepaths[0].stock;
+
 	// BUG: This does not take extension-related age changes into account
-	const ageBracket = Stocks[chosenLifepaths[0].stock].agePool.filter(v => (v.max >= totals.years.points && v.min <= totals.years.points));
+	const ageBracket = Stocks[stock].agePool.filter(v => (v.max >= totals.years.points && v.min <= totals.years.points));
 	totals.stats.fromAge = [ageBracket[0].m, ageBracket[0].p];
 
 	const mandSkills = new Set<string>();
 	const skills = new Set<string>();
+
+	const commonTraits = new Set<string>(`${stock} Common` in TraitCategories ? TraitCategories[`${stock} Common`].traits.map(trait => `${stock} Common➞${trait.name}`) : []);
 	const mandTraits = new Set<string>();
 	const traits = new Set<string>();
 
@@ -148,12 +155,14 @@ export function CalculateLifepathTotals(chosenLifepaths: Lifepath[]) {
 
 	for (const lifepathKey in chosenLifepaths) {
 		const lp = chosenLifepaths[lifepathKey];
-		lp.skills.forEach(v => { if (!mandSkills.has(v)) skills.add(v); });
-		lp.traits.forEach(v => { if (!mandTraits.has(v)) traits.add(v); });
+		lp.skills.forEach(v => { if (!commonTraits.has(v) && !mandSkills.has(v)) skills.add(v); });
+		lp.traits.forEach(v => { if (!commonTraits.has(v) && !mandTraits.has(v)) traits.add(v); });
 	}
 
 	totals.skills.mandatoryList = Array.from(mandSkills);
 	totals.skills.lifepathList = Array.from(skills);
+
+	totals.traits.commonList = Array.from(commonTraits);
 	totals.traits.mandatoryList = Array.from(mandTraits);
 	totals.traits.lifepathList = Array.from(traits);
 
