@@ -14,7 +14,7 @@ import { BlockText } from "../BlockText";
 
 
 export function AttributesBlock() {
-	const { stock, totals, spending } = useAppSelector(state => state.characterBurner);
+	const { stock, lifepathPaths, totals, spendings: spending, questions } = useAppSelector(state => state.characterBurner);
 	const { cbChangeAttributeShade } = useStore().characterBurner;
 
 	return (
@@ -35,13 +35,13 @@ export function AttributesBlock() {
 										? <AttributeButton
 											name={v.name}
 											value={GetAttributeShade(v.name, spending)}
-											disabled={GetAttributeExponent(v.name, stock, spending) < 6}
+											disabled={GetAttributeExponent(v.name, stock, lifepathPaths, totals, spending, questions) < 6}
 											onClick={cbChangeAttributeShade}
 											onContext={cbChangeAttributeShade}
 										/>
 										: null
 									}
-									<AttributeButton name={v.name} value={GetAttributeExponent(v.name, stock, spending)} disabled />
+									<AttributeButton name={v.name} value={GetAttributeExponent(v.name, stock, lifepathPaths, totals, spending, questions)} disabled />
 								</Grid>
 							</GenericGrid>
 						</Grid>

@@ -1,4 +1,4 @@
-import { CharacterSpending } from "../state/reducers/characterBurner";
+import { CharacterSpendings } from "../state/reducers/characterBurner";
 import { LifepathTotals } from "./lifepathTotals";
 import { GetTraitFromPath } from "./pathFinder";
 
@@ -8,13 +8,13 @@ export interface TraitRemaining {
 }
 
 // GET
-export function GetTraitOpenness(traitName: string, spending: CharacterSpending): boolean {
-	return spending.traits[traitName].open > 0;
+export function GetTraitOpenness(traitName: string, spendings: CharacterSpendings): boolean {
+	return traitName in spendings.traits && spendings.traits[traitName].open > 0;
 }
 
 // REMAINING
-export function GetRemainingTraitTotals(totals: LifepathTotals, spending: CharacterSpending): TraitRemaining {
-	const traitPointSpending = Object.values(spending.traits).map(v => v.open);
+export function GetRemainingTraitTotals(totals: LifepathTotals, spendings: CharacterSpendings): TraitRemaining {
+	const traitPointSpending = Object.values(spendings.traits).map(v => v.open);
 
 	// BUG: This does not take extensions into account
 	return {
@@ -23,7 +23,7 @@ export function GetRemainingTraitTotals(totals: LifepathTotals, spending: Charac
 }
 
 // SPEND
-export function TryOpenTrait(traitName: string, totals: LifepathTotals, spendings: CharacterSpending, toOpen: boolean, isLifepath: boolean) {
+export function TryOpenTrait(traitName: string, totals: LifepathTotals, spendings: CharacterSpendings, toOpen: boolean, isLifepath: boolean) {
 	const spending = spendings.traits[traitName];
 
 	const trait = GetTraitFromPath(traitName);
@@ -45,12 +45,12 @@ export function TryOpenTrait(traitName: string, totals: LifepathTotals, spending
 }
 
 // REFRESH
-export function RefreshTraitList(totals: LifepathTotals, spending: CharacterSpending): CharacterSpending {
-	const newSpending = JSON.parse(JSON.stringify(spending)) as CharacterSpending;
+export function RefreshTraitList(totals: LifepathTotals, spendings: CharacterSpendings): CharacterSpendings {
+	const newSpending = JSON.parse(JSON.stringify(spendings)) as CharacterSpendings;
 
-	for (const key in spending.traits) {
+	for (const key in spendings.traits) {
 		if (key in totals.traits.mandatoryList || key in totals.traits.lifepathList) {
-			newSpending.traits[key] = spending.traits[key];
+			newSpending.traits[key] = spendings.traits[key];
 		}
 		else delete newSpending.traits[key];
 	}

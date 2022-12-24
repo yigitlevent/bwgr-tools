@@ -1,6 +1,6 @@
 import { Attributes } from "../data/attributes";
 import { Stats } from "../data/stats";
-import { CharacterSpending } from "../state/reducers/characterBurner";
+import { CharacterQuestions, CharacterSpendings } from "../state/reducers/characterBurner";
 import { GetAttributeExponent, GetAttributeShade } from "./characterAttributeUtils";
 import { GetStatExponent, GetStatShade } from "./characterStatUtils";
 import { LifepathTotals } from "./lifepathTotals";
@@ -14,35 +14,35 @@ export interface SkillRemaining {
 }
 
 // GET
-export function GetSkillShade(skillName: string, spending: CharacterSpending): ShadesListLimited {
+export function GetSkillShade(skillName: string, spendings: CharacterSpendings): ShadesListLimited {
 	const skill = GetSkillFromPath(skillName);
 	const statShades = [
-		...Stats.filter(v => skill.root.includes(v.name)).map(v => GetStatShade(v.name, spending)),
-		...Attributes.filter(v => skill.root.includes(v.name)).map(v => GetAttributeShade(v.name, spending))
+		...Stats.filter(v => skill.root.includes(v.name)).map(v => GetStatShade(v.name, spendings)),
+		...Attributes.filter(v => skill.root.includes(v.name)).map(v => GetAttributeShade(v.name, spendings))
 	];
 	return statShades.every(v => v === "G") ? "G" : "B";
 }
 
-export function GetSkillExponent(skillName: string, stock: StocksList, spending: CharacterSpending): number {
+export function GetSkillExponent(skillName: string, stock: StocksList, lifepaths: string[], totals: LifepathTotals, spendings: CharacterSpendings, questions: CharacterQuestions): number {
 	const skill = GetSkillFromPath(skillName);
 
 	return Math.floor(GetAverage([
-		...Stats.filter(v => skill.root.includes(v.name)).map(v => GetStatExponent(v.name, spending)),
-		...Attributes.filter(v => skill.root.includes(v.name)).map(v => GetAttributeExponent(v.name, stock, spending))
-	]) / 2) + spending.skills[skillName].general.advance + spending.skills[skillName].lifepath.advance;
+		...Stats.filter(v => skill.root.includes(v.name)).map(v => GetStatExponent(v.name, spendings)),
+		...Attributes.filter(v => skill.root.includes(v.name)).map(v => GetAttributeExponent(v.name, stock, lifepaths, totals, spendings, questions))
+	]) / 2) + spendings.skills[skillName].general.advance + spendings.skills[skillName].lifepath.advance;
 }
 
-export function GetSkillOpenness(skillName: string, spending: CharacterSpending): boolean {
-	return spending.skills[skillName].general.open + spending.skills[skillName].lifepath.open > 0;
+export function GetSkillOpenness(skillName: string, spendings: CharacterSpendings): boolean {
+	return spendings.skills[skillName].general.open + spendings.skills[skillName].lifepath.open > 0;
 }
 
 // REMAINING
-export function GetRemainingSkillTotals(totals: LifepathTotals, spending: CharacterSpending): SkillRemaining {
+export function GetRemainingSkillTotals(totals: LifepathTotals, spendings: CharacterSpendings): SkillRemaining {
 	const generalSpending =
-		Object.values(spending.skills).map(v => v.general.open + v.general.advance);
+		Object.values(spendings.skills).map(v => v.general.open + v.general.advance);
 
 	const lifepathSpending =
-		Object.values(spending.skills).map(v => v.lifepath.open + v.lifepath.advance);
+		Object.values(spendings.skills).map(v => v.lifepath.open + v.lifepath.advance);
 
 	// BUG: This does not take extensions into account
 	return {
@@ -52,7 +52,7 @@ export function GetRemainingSkillTotals(totals: LifepathTotals, spending: Charac
 }
 
 // SPEND
-export function TryOpenSkill(skillName: string, totals: LifepathTotals, spendings: CharacterSpending, toOpen: boolean, isLifepath: boolean) {
+export function TryOpenSkill(skillName: string, totals: LifepathTotals, spendings: CharacterSpendings, toOpen: boolean, isLifepath: boolean) {
 	const spending = spendings.skills[skillName];
 
 	const skill = GetSkillFromPath(skillName);
@@ -80,7 +80,7 @@ export function TryOpenSkill(skillName: string, totals: LifepathTotals, spending
 	return spending;
 }
 
-export function ModifySkillExponentSpending(skillName: string, spendings: CharacterSpending, totals: LifepathTotals, change: 1 | -1, isLifepath: boolean) {
+export function ModifySkillExponentSpending(skillName: string, spendings: CharacterSpendings, totals: LifepathTotals, change: 1 | -1, isLifepath: boolean) {
 	const spending = spendings.skills[skillName];
 	const remaining = GetRemainingSkillTotals(totals, spendings);
 
@@ -97,12 +97,12 @@ export function ModifySkillExponentSpending(skillName: string, spendings: Charac
 }
 
 // REFRESH
-export function RefreshSkillList(totals: LifepathTotals, spending: CharacterSpending): CharacterSpending {
-	const newSpending = JSON.parse(JSON.stringify(spending)) as CharacterSpending;
+export function RefreshSkillList(totals: LifepathTotals, spendings: CharacterSpendings): CharacterSpendings {
+	const newSpending = JSON.parse(JSON.stringify(spendings)) as CharacterSpendings;
 
-	for (const key in spending.skills) {
+	for (const key in spendings.skills) {
 		if (key in totals.skills.mandatoryList || key in totals.skills.lifepathList) {
-			newSpending.skills[key] = spending.skills[key];
+			newSpending.skills[key] = spendings.skills[key];
 		}
 		else delete newSpending.skills[key];
 	}

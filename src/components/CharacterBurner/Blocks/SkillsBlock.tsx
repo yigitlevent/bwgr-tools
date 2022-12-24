@@ -13,7 +13,7 @@ import { BlockSkillPopover } from "../BlockText";
 
 
 export function SkillsBlock() {
-	const { stock, totals, spending } = useAppSelector(state => state.characterBurner);
+	const { stock, lifepathPaths, totals, spendings: spending, questions } = useAppSelector(state => state.characterBurner);
 	const { cbOpenSkill, cbChangeSkillExponent } = useStore().characterBurner;
 
 	const skillRemaining = GetRemainingSkillTotals(totals, spending);
@@ -50,7 +50,7 @@ export function SkillsBlock() {
 										<SkillButton name={skillName} value={GetSkillShade(skillName, spending)} disabled />
 										<SkillButton
 											name={skillName}
-											value={GetSkillExponent(skillName, stock, spending)}
+											value={GetSkillExponent(skillName, stock, lifepathPaths, totals, spending, questions)}
 											onClick={e => cbChangeSkillExponent(e, skillName, 1, true)}
 											onContext={e => cbChangeSkillExponent(e, skillName, -1, true)}
 										/>
@@ -84,7 +84,7 @@ export function SkillsBlock() {
 										<SkillButton name={skillName} value={GetSkillShade(skillName, spending)} disabled />
 										<SkillButton
 											name={skillName}
-											value={GetSkillExponent(skillName, stock, spending)}
+											value={GetSkillExponent(skillName, stock, lifepathPaths, totals, spending, questions)}
 											disabled={!GetSkillOpenness(skillName, spending)}
 											onClick={e => cbChangeSkillExponent(e, skillName, 1, true)}
 											onContext={e => cbChangeSkillExponent(e, skillName, -1, true)}

@@ -12,7 +12,7 @@ import { BlockTraitPopover } from "../BlockText";
 
 
 export function TraitsBlock() {
-	const { totals, spending } = useAppSelector(state => state.characterBurner);
+	const { totals, spendings: spending } = useAppSelector(state => state.characterBurner);
 	const { cbOpenTrait } = useStore().characterBurner;
 
 	const traitRemaining = GetRemainingTraitTotals(totals, spending);

@@ -14,7 +14,7 @@ import { BlockText } from "../BlockText";
 
 
 export function StatsBlock() {
-	const { totals, spending } = useAppSelector(state => state.characterBurner);
+	const { totals, spendings: spending } = useAppSelector(state => state.characterBurner);
 	const { cbChangeStatShade, cbChangeStatExponent } = useStore().characterBurner;
 
 	const statRemaining = GetRemainingStatTotals(totals, spending);

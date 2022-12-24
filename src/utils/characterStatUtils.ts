@@ -1,5 +1,5 @@
 import { Stat, Stats } from "../data/stats";
-import { CharacterSpending, StatSpending } from "../state/reducers/characterBurner";
+import { CharacterSpendings, StatSpending } from "../state/reducers/characterBurner";
 import { LifepathTotals } from "./lifepathTotals";
 
 
@@ -18,36 +18,36 @@ export function GetPhysicalTotal(totals: LifepathTotals) {
 	return totals.stats.fromAge[1] + totals.stats.fromLifepaths.physicalPoints;
 }
 
-export function GetStatShade(name: StatsList, spending: CharacterSpending): ShadesListLimited {
+export function GetStatShade(name: StatsList, spendings: CharacterSpendings): ShadesListLimited {
 	const totalSpent =
-		spending.stats[name].eitherPool.shade +
+		spendings.stats[name].eitherPool.shade +
 		((Stats.find(v => v.name === name) as Stat).pool === "Mental"
-			? (spending.stats[name].mentalPool as StatSpending).shade
-			: (spending.stats[name].physicalPool as StatSpending).shade);
+			? (spendings.stats[name].mentalPool as StatSpending).shade
+			: (spendings.stats[name].physicalPool as StatSpending).shade);
 
 	return totalSpent === 0 ? "B" : "G";
 }
 
-export function GetStatExponent(name: StatsList, spending: CharacterSpending): number {
+export function GetStatExponent(name: StatsList, spendings: CharacterSpendings): number {
 	const total =
-		spending.stats[name].eitherPool.exponent +
+		spendings.stats[name].eitherPool.exponent +
 		((Stats.find(v => v.name === name) as Stat).pool === "Mental"
-			? (spending.stats[name].mentalPool as StatSpending).exponent
-			: (spending.stats[name].physicalPool as StatSpending).exponent);
+			? (spendings.stats[name].mentalPool as StatSpending).exponent
+			: (spendings.stats[name].physicalPool as StatSpending).exponent);
 
 	return total;
 }
 
 // REMAINING
-export function GetRemainingStatTotals(totals: LifepathTotals, spending: CharacterSpending): StatRemaining {
+export function GetRemainingStatTotals(totals: LifepathTotals, spendings: CharacterSpendings): StatRemaining {
 	const eitherSpending =
-		Object.values(spending.stats).map(v => v.eitherPool.exponent + v.eitherPool.shade).reduce((v, a) => v + a);
+		Object.values(spendings.stats).map(v => v.eitherPool.exponent + v.eitherPool.shade).reduce((v, a) => v + a);
 
 	const mentalSpending =
-		Object.values(spending.stats).map(v => ("mentalPool" in v) ? (v.mentalPool as StatSpending).exponent + (v.mentalPool as StatSpending).shade : 0).reduce((v, a) => v + a);
+		Object.values(spendings.stats).map(v => ("mentalPool" in v) ? (v.mentalPool as StatSpending).exponent + (v.mentalPool as StatSpending).shade : 0).reduce((v, a) => v + a);
 
 	const physicalSpending =
-		Object.values(spending.stats).map(v => ("physicalPool" in v) ? (v.physicalPool as StatSpending).exponent + (v.physicalPool as StatSpending).shade : 0).reduce((v, a) => v + a);
+		Object.values(spendings.stats).map(v => ("physicalPool" in v) ? (v.physicalPool as StatSpending).exponent + (v.physicalPool as StatSpending).shade : 0).reduce((v, a) => v + a);
 
 	return {
 		eitherPool: totals.stats.fromLifepaths.eitherPoints - eitherSpending,
@@ -57,7 +57,7 @@ export function GetRemainingStatTotals(totals: LifepathTotals, spending: Charact
 }
 
 // SPENT
-export function ModifyStatShadeSpending(statName: StatsList, spendings: CharacterSpending, totals: LifepathTotals) {
+export function ModifyStatShadeSpending(statName: StatsList, spendings: CharacterSpendings, totals: LifepathTotals) {
 	const spending = spendings.stats[statName];
 	const remaining = GetRemainingStatTotals(totals, spendings);
 	const key = (Stats.find(v => v.name === statName) as Stat).pool === "Mental" ? "mentalPool" : "physicalPool";
@@ -82,7 +82,7 @@ export function ModifyStatShadeSpending(statName: StatsList, spendings: Characte
 	return spending;
 }
 
-export function ModifyStatExponentSpending(statName: StatsList, spendings: CharacterSpending, totals: LifepathTotals, change: 1 | -1) {
+export function ModifyStatExponentSpending(statName: StatsList, spendings: CharacterSpendings, totals: LifepathTotals, change: 1 | -1) {
 	const spending = spendings.stats[statName];
 	const remaining = GetRemainingStatTotals(totals, spendings);
 	const key = (Stats.find(v => v.name === statName) as Stat).pool === "Mental" ? "mentalPool" : "physicalPool";

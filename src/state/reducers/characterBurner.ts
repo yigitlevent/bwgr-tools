@@ -1,3 +1,4 @@
+import { AttributeQuestionsKeys } from "../../data/attributes";
 import { ModifyAttributeShadeSpending, RefreshAttributesList } from "../../utils/characterAttributeUtils";
 import { RefreshQuestionsList } from "../../utils/characterQuestionUtils";
 import { TryOpenSkill, RefreshSkillList, ModifySkillExponentSpending } from "../../utils/characterSkillUtils";
@@ -65,27 +66,27 @@ export interface SpendingForTrait {
 	open: number;
 }
 
-export interface CharacterSpending {
+export interface CharacterSpendings {
 	stats: { [key in StatsList]: SpendingForStat; };
 	attributes: { [key: string]: SpendingForAttribute; };
 	skills: { [key: string]: SpendingForSkill; };
 	traits: { [key: string]: SpendingForTrait; };
 }
 
-export interface CharacterQuestions {
-	[key: string]: boolean;
-}
+export type CharacterQuestions = {
+	[key in AttributeQuestionsKeys]?: boolean;
+};
 
 export interface CharacterBurnerState {
 	stock: StocksList;
 	concept: string;
 	lifepathPaths: string[];
 	totals: LifepathTotals;
-	spending: CharacterSpending;
+	spendings: CharacterSpendings;
 	questions: CharacterQuestions;
 }
 
-const EmptySpending: CharacterSpending = {
+const EmptySpendings: CharacterSpendings = {
 	stats: {
 		Will: { mentalPool: { shade: 0, exponent: 0 }, eitherPool: { shade: 0, exponent: 0 } },
 		Perception: { mentalPool: { shade: 0, exponent: 0 }, eitherPool: { shade: 0, exponent: 0 } },
@@ -104,16 +105,16 @@ const INITIAL: CharacterBurnerState = {
 	concept: "",
 	lifepathPaths: [],
 	totals: EmptyTotals,
-	spending: EmptySpending,
+	spendings: EmptySpendings,
 	questions: {}
 };
 
-function GetSpending(state: CharacterBurnerState): CharacterSpending {
-	return JSON.parse(JSON.stringify(state.spending));
+function GetSpending(state: CharacterBurnerState): CharacterSpendings {
+	return JSON.parse(JSON.stringify(state.spendings));
 }
 
-function GetEmptySpending(): CharacterSpending {
-	return JSON.parse(JSON.stringify(EmptySpending));
+function GetEmptySpending(): CharacterSpendings {
+	return JSON.parse(JSON.stringify(EmptySpendings));
 }
 
 function GetEmptyTotals(): LifepathTotals {
@@ -125,13 +126,13 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		case "CHANGE_CB_STOCK":
 			const newStock = action.payload.stock;
 			const stockTotals: LifepathTotals = GetEmptyTotals();
-			const stockSpending: CharacterSpending = GetEmptySpending();
+			const stockSpendings: CharacterSpendings = GetEmptySpending();
 			return {
 				...state,
 				stock: newStock,
 				lifepathPaths: [],
 				totals: stockTotals,
-				spending: stockSpending,
+				spendings: stockSpendings,
 				questions: {}
 			};
 
@@ -142,18 +143,18 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 			const addedLifepaths = [...state.lifepathPaths];
 			addedLifepaths.push(action.payload.lifepathPath);
 			const lifepathAddedTotals: LifepathTotals = addedLifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(addedLifepaths)) : EmptyTotals;
-			const newAddedSpendings: CharacterSpending = {
-				...state.spending,
-				skills: RefreshSkillList(lifepathAddedTotals, state.spending).skills,
-				traits: RefreshTraitList(lifepathAddedTotals, state.spending).traits,
-				attributes: RefreshAttributesList(state.spending).attributes
+			const newAddedSpendings: CharacterSpendings = {
+				...state.spendings,
+				skills: RefreshSkillList(lifepathAddedTotals, state.spendings).skills,
+				traits: RefreshTraitList(lifepathAddedTotals, state.spendings).traits,
+				attributes: RefreshAttributesList(state.spendings).attributes
 			};
 			const addLifepathQuestions: CharacterQuestions = RefreshQuestionsList(newAddedSpendings, state.questions);
 			return {
 				...state,
 				lifepathPaths: addedLifepaths,
 				totals: JSON.parse(JSON.stringify(lifepathAddedTotals)),
-				spending: JSON.parse(JSON.stringify(newAddedSpendings)),
+				spendings: JSON.parse(JSON.stringify(newAddedSpendings)),
 				questions: JSON.parse(JSON.stringify(addLifepathQuestions))
 			};
 
@@ -161,18 +162,18 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 			const removedLifepaths = [...state.lifepathPaths];
 			removedLifepaths.pop();
 			const lifepathRemovedTotals = removedLifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(removedLifepaths)) : EmptyTotals;
-			const newRemovedSpendings: CharacterSpending = {
-				...state.spending,
-				skills: RefreshSkillList(lifepathRemovedTotals, state.spending).skills,
-				traits: RefreshTraitList(lifepathRemovedTotals, state.spending).traits,
-				attributes: RefreshAttributesList(state.spending).attributes
+			const newRemovedSpendings: CharacterSpendings = {
+				...state.spendings,
+				skills: RefreshSkillList(lifepathRemovedTotals, state.spendings).skills,
+				traits: RefreshTraitList(lifepathRemovedTotals, state.spendings).traits,
+				attributes: RefreshAttributesList(state.spendings).attributes
 			};
 			const removeLifepathQuestions: CharacterQuestions = RefreshQuestionsList(newRemovedSpendings, state.questions);
 			return {
 				...state,
 				lifepathPaths: removedLifepaths,
 				totals: JSON.parse(JSON.stringify(lifepathRemovedTotals)),
-				spending: JSON.parse(JSON.stringify(newRemovedSpendings)),
+				spendings: JSON.parse(JSON.stringify(newRemovedSpendings)),
 				questions: JSON.parse(JSON.stringify(removeLifepathQuestions))
 			};
 
@@ -181,7 +182,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 			spendingStatShade.stats[action.payload.statName] = ModifyStatShadeSpending(action.payload.statName, spendingStatShade, state.totals);
 			return {
 				...state,
-				spending: { ...spendingStatShade }
+				spendings: { ...spendingStatShade }
 			};
 
 		case "CHANGE_CB_STAT_EXPONENT":
@@ -189,15 +190,15 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 			spendingStatExp.stats[action.payload.statName] = ModifyStatExponentSpending(action.payload.statName, spendingStatExp, state.totals, action.payload.change);
 			return {
 				...state,
-				spending: { ...spendingStatExp }
+				spendings: { ...spendingStatExp }
 			};
 
 		case "CHANGE_CB_ATTRIBUTE_SHADE":
 			const spendingAttributeShade = GetSpending(state);
-			spendingAttributeShade.attributes[action.payload.attributeName] = ModifyAttributeShadeSpending(action.payload.attributeName, action.payload.change, state.stock, spendingAttributeShade);
+			spendingAttributeShade.attributes[action.payload.attributeName] = ModifyAttributeShadeSpending(action.payload.attributeName, action.payload.change, state.stock, state.lifepathPaths, state.totals, spendingAttributeShade, state.questions);
 			return {
 				...state,
-				spending: { ...spendingAttributeShade }
+				spendings: { ...spendingAttributeShade }
 			};
 
 		case "OPEN_CB_SKILL":
@@ -205,7 +206,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 			spendingSkillOpen.skills[action.payload.skillName] = TryOpenSkill(action.payload.skillName, state.totals, spendingSkillOpen, action.payload.open, action.payload.isLifepath);
 			return {
 				...state,
-				spending: { ...spendingSkillOpen }
+				spendings: { ...spendingSkillOpen }
 			};
 
 		case "CHANGE_CB_SKILL_EXPONENT":
@@ -213,7 +214,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 			spendingSkillExp.skills[action.payload.skillName] = ModifySkillExponentSpending(action.payload.skillName, spendingSkillExp, state.totals, action.payload.change, action.payload.isLifepath);
 			return {
 				...state,
-				spending: { ...spendingSkillExp }
+				spendings: { ...spendingSkillExp }
 			};
 
 		case "OPEN_CB_TRAIT":
@@ -222,7 +223,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 			const openTraitQuestions: CharacterQuestions = RefreshQuestionsList(spendingTraitOpen, state.questions);
 			return {
 				...state,
-				spending: {
+				spendings: {
 					...spendingTraitOpen,
 					traits: spendingTraitOpen.traits,
 					attributes: RefreshAttributesList(spendingTraitOpen).attributes
