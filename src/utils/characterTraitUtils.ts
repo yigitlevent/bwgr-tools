@@ -23,20 +23,22 @@ export function GetRemainingTraitTotals(totals: LifepathTotals, spending: Charac
 }
 
 // SPEND
-export function TryOpenTrait(traitName: string, totals: LifepathTotals, spending: CharacterSpending, toOpen: boolean, isLifepath: boolean) {
+export function TryOpenTrait(traitName: string, totals: LifepathTotals, spendings: CharacterSpending, toOpen: boolean, isLifepath: boolean) {
+	const spending = spendings.traits[traitName];
+
 	const trait = GetTraitFromPath(traitName);
-	const traitRemainings = GetRemainingTraitTotals(totals, spending);
+	const traitRemainings = GetRemainingTraitTotals(totals, spendings);
 
 	if (toOpen) {
 		if (isLifepath && traitRemainings.traitPoints >= 1) {
-			spending.traits[traitName].open = 1;
+			spending.open = 1;
 		}
 		else if (!isLifepath && traitRemainings.traitPoints >= trait.cost) {
-			spending.traits[traitName].open = trait.cost;
+			spending.open = trait.cost;
 		}
 	}
 	else {
-		spending.traits[traitName].open = 0;
+		spending.open = 0;
 	}
 
 	return spending;

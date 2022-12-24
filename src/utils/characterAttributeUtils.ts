@@ -1,7 +1,6 @@
 import { Attributes } from "../data/attributes";
 import { Stocks } from "../data/stocks/_stocks";
 import { CharacterSpending, StatSpending } from "../state/reducers/characterBurner";
-import { LifepathTotals } from "./lifepathTotals";
 import { GetAverage } from "./misc";
 
 
@@ -31,6 +30,12 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 			const shades = [willShade, forteShade];
 			const roots = [willExp, forteExp];
 			if (shades.some(v => v === "G") && shades.some(v => v === "B")) { roots.push(2); }
+
+			const extras = 0;
+
+
+
+
 			// BUG: Implement Questions
 			exponent = Math.floor(GetAverage(roots)) - spending.attributes[attributeName].shadeShifted;
 		}
@@ -106,9 +111,20 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 }
 
 // SPEND
-export function ModifyAttributeShadeSpending(statName: StatsList, spendings: CharacterSpending, totals: LifepathTotals) {
-	// BUG: Unimplemented
-	return 0;
+export function ModifyAttributeShadeSpending(attributeName: AttributesList, change: 5 | -5, stock: StocksList, spendings: CharacterSpending) {
+	const spending = spendings.attributes[attributeName];
+
+	const shade = GetAttributeShade(attributeName, spendings);
+	const exponent = GetAttributeExponent(attributeName, stock, spendings);
+
+	if (change === 5 && exponent > 5 && shade !== "W") {
+		spending.shadeShifted += change;
+	}
+	else if (change === -5 && spending.shadeShifted > 0 && shade !== "B") {
+		spending.shadeShifted -= change;
+	}
+
+	return spending;
 }
 
 // REFRESH

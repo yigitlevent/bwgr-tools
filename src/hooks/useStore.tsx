@@ -318,7 +318,7 @@ export function useStore() {
 			e.preventDefault();
 			dispatch({ type: "CHANGE_CB_STAT_EXPONENT", payload: { statName, change } });
 		},
-		cbChangeAttributeShade: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, attributeName: AttributesList, change: 1 | -1) => {
+		cbChangeAttributeShade: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, attributeName: AttributesList, change: 5 | -5) => {
 			e.preventDefault();
 			dispatch({ type: "CHANGE_CB_ATTRIBUTE_SHADE", payload: { attributeName, change } });
 		},

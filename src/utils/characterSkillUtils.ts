@@ -52,27 +52,29 @@ export function GetRemainingSkillTotals(totals: LifepathTotals, spending: Charac
 }
 
 // SPEND
-export function TryOpenSkill(skillName: string, totals: LifepathTotals, spending: CharacterSpending, toOpen: boolean, isLifepath: boolean) {
+export function TryOpenSkill(skillName: string, totals: LifepathTotals, spendings: CharacterSpending, toOpen: boolean, isLifepath: boolean) {
+	const spending = spendings.skills[skillName];
+
 	const skill = GetSkillFromPath(skillName);
-	const skillRemainings = GetRemainingSkillTotals(totals, spending);
+	const skillRemainings = GetRemainingSkillTotals(totals, spendings);
 
 	if (toOpen) {
 		const cost = skill.magical || skill.training ? 2 : 1;
 
 		if (isLifepath && skillRemainings.lifepathPoints >= cost) {
-			spending.skills[skillName].lifepath.open = cost;
+			spending.lifepath.open = cost;
 		}
 		else if (isLifepath && cost === 2 && skillRemainings.lifepathPoints > 0 && skillRemainings.generalPoints > 0) {
-			spending.skills[skillName].lifepath.open = 1;
-			spending.skills[skillName].general.open = 1;
+			spending.lifepath.open = 1;
+			spending.general.open = 1;
 		}
 		else if (skillRemainings.generalPoints >= cost) {
-			spending.skills[skillName].general.open = cost;
+			spending.general.open = cost;
 		}
 	}
 	else {
-		spending.skills[skillName].lifepath.open = 0;
-		spending.skills[skillName].general.open = 0;
+		spending.lifepath.open = 0;
+		spending.general.open = 0;
 	}
 
 	return spending;
