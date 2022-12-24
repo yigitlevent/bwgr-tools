@@ -13,12 +13,12 @@ import { GenericGrid } from "../../Shared/Grids";
 import { LifepathBox } from "../../LifepathLists/LifepathBox";
 
 
-export function LifepathsBlock({ openModal }: { openModal: (open: boolean) => void; }) {
+export function LifepathsBlock({ openLpModal, openQuModal }: { openLpModal: (open: boolean) => void; openQuModal: (open: boolean) => void; }) {
 	const { lifepathPaths } = useAppSelector(state => state.characterBurner);
 	const { cbRemoveLifepath } = useStore().characterBurner;
 
 	return (
-		<GenericGrid columns={2} center>
+		<GenericGrid columns={2} center="v">
 			<Grid item xs={2}>
 				<Typography variant="h4">Lifepaths</Typography>
 			</Grid>
@@ -32,11 +32,15 @@ export function LifepathsBlock({ openModal }: { openModal: (open: boolean) => vo
 			</Fragment>
 
 			<Grid item>
-				<Button variant="outlined" size="medium" onClick={() => openModal(true)}>Add Lifepath</Button>
+				<Button variant="outlined" size="medium" onClick={() => openLpModal(true)}>Add Lifepath</Button>
 			</Grid>
 
 			<Grid item>
 				<Button variant="outlined" size="medium" onClick={() => cbRemoveLifepath()} disabled={lifepathPaths.length === 0}>Remove Lifepath</Button>
+			</Grid>
+
+			<Grid item>
+				<Button variant="outlined" size="medium" onClick={() => openQuModal(true)} disabled={lifepathPaths.length === 0}>Answer Questions</Button>
 			</Grid>
 		</GenericGrid>
 	);
