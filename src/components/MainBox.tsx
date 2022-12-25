@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 
 import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
 
 import { DiceRoller } from "./DiceRoller/DiceRoller";
 import { LifepathLists } from "./LifepathLists/LifepathLists";
@@ -35,6 +36,8 @@ export function MainBox() {
 					<Route path="/characterburner" element={<CharacterBurner />} />
 				</Routes>
 			</Paper>
+
+			<Box sx={{ margin: "0 0 200px" }} />
 		</Container>
 	);
 }
