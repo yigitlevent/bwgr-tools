@@ -151,7 +151,6 @@ export function CalculateLifepathTotals(chosenLifepaths: Lifepath[], specialSkil
 		if (repeatCount === 1 && lp.skills.length > 1) mandSkills.add(lp.skills[1]);
 
 		if (mandSkills.has("Any General➞Appropriate Weapons")) {
-			mandSkills.delete("Any General➞Appropriate Weapons");
 			mandSkills.add(specialSkills.appropriateWeapons.mandatory);
 		}
 
@@ -162,23 +161,20 @@ export function CalculateLifepathTotals(chosenLifepaths: Lifepath[], specialSkil
 	for (const lifepathKey in chosenLifepaths) {
 		const lp = chosenLifepaths[lifepathKey];
 
+		lp.skills.forEach(skill => { if (!mandSkills.has(skill)) skills.add(skill); });
+		lp.traits.forEach(skill => { if (!commonTraits.has(skill) && !mandTraits.has(skill)) traits.add(skill); });
+
 		if (mandSkills.has("Any General➞Appropriate Weapons") || skills.has("Any General➞Appropriate Weapons")) {
-			skills.delete("Any General➞Appropriate Weapons");
 			specialSkills.appropriateWeapons.selected.forEach(skill => { if (!mandSkills.has(skill)) skills.add(skill); });
 		}
-		
+
 		if (skills.has("Any General➞Javelin or Bow")) {
-			skills.delete("Any General➞Javelin or Bow");
 			if (!mandSkills.has(specialSkills.javelinOrBow)) skills.add(specialSkills.javelinOrBow);
 		}
 
 		if (skills.has("Any General➞Any -smith")) {
-			skills.delete("Any General➞Any -smith");
 			specialSkills.anySmith.forEach(skill => { if (!mandSkills.has(skill)) skills.add(skill); });
 		}
-
-		lp.skills.forEach(skill => { if (!mandSkills.has(skill)) skills.add(skill); });
-		lp.traits.forEach(skill => { if (!commonTraits.has(skill) && !mandTraits.has(skill)) traits.add(skill); });
 	}
 
 	totals.skills.mandatoryList = Array.from(mandSkills);
@@ -187,6 +183,8 @@ export function CalculateLifepathTotals(chosenLifepaths: Lifepath[], specialSkil
 	totals.traits.commonList = Array.from(commonTraits);
 	totals.traits.mandatoryList = Array.from(mandTraits);
 	totals.traits.lifepathList = Array.from(traits);
+
+	console.log(totals);
 
 	return totals;
 }

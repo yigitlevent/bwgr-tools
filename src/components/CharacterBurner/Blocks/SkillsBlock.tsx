@@ -13,10 +13,12 @@ import { BlockSkillPopover } from "../BlockText";
 
 
 export function SkillsBlock() {
-	const { stock, lifepathPaths, totals, spendings: spending, questions } = useAppSelector(state => state.characterBurner);
+	const { stock, lifepathPaths, totals, spendings, questions } = useAppSelector(state => state.characterBurner);
 	const { cbOpenSkill, cbChangeSkillExponent } = useStore().characterBurner;
 
-	const skillRemaining = GetRemainingSkillTotals(totals, spending);
+	const skillRemaining = GetRemainingSkillTotals(totals, spendings);
+
+	const specialSkills = ["Any General➞Appropriate Weapons", "Any General➞Javelin or Bow", "Any General➞Any -smith"];
 
 	return (
 		<GenericGrid columns={6} center spacing={[0, 2]}>
@@ -36,28 +38,30 @@ export function SkillsBlock() {
 					</Grid>
 
 					<Fragment>
-						{totals.skills.mandatoryList.map((skillName, i) =>
-							<Grid key={i} item xs={6} sm={3} md={2}>
-								<GenericGrid columns={5} center="h" hasBackground={1}>
-									<BlockSkillPopover
-										skillName={skillName}
-										checkbox={{
-											checked: GetSkillOpenness(skillName, spending),
-											disabled: true
-										}}
-									/>
-									<Grid item>
-										<SkillButton name={skillName} value={GetSkillShade(skillName, spending)} disabled />
-										<SkillButton
-											name={skillName}
-											value={GetSkillExponent(skillName, stock, lifepathPaths, totals, spending, questions)}
-											onClick={e => cbChangeSkillExponent(e, skillName, 1, true)}
-											onContext={e => cbChangeSkillExponent(e, skillName, -1, true)}
+						{totals.skills.mandatoryList
+							.filter(v => !specialSkills.includes(v))
+							.map((skillName, i) =>
+								<Grid key={i} item xs={6} sm={3} md={2}>
+									<GenericGrid columns={5} center="h" hasBackground={1}>
+										<BlockSkillPopover
+											skillName={skillName}
+											checkbox={{
+												checked: GetSkillOpenness(skillName, spendings),
+												disabled: true
+											}}
 										/>
-									</Grid>
-								</GenericGrid>
-							</Grid>
-						)}
+										<Grid item>
+											<SkillButton name={skillName} value={GetSkillShade(skillName, spendings)} disabled />
+											<SkillButton
+												name={skillName}
+												value={GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions)}
+												onClick={e => cbChangeSkillExponent(e, skillName, 1, true)}
+												onContext={e => cbChangeSkillExponent(e, skillName, -1, true)}
+											/>
+										</Grid>
+									</GenericGrid>
+								</Grid>
+							)}
 					</Fragment>
 				</Fragment>
 				: null
@@ -70,29 +74,31 @@ export function SkillsBlock() {
 					</Grid>
 
 					<Fragment>
-						{totals.skills.lifepathList.map((skillName, i) =>
-							<Grid key={i} item xs={6} sm={3} md={2}>
-								<GenericGrid columns={5} center="h" hasBackground={1}>
-									<BlockSkillPopover
-										skillName={skillName}
-										checkbox={{
-											checked: GetSkillOpenness(skillName, spending),
-											onChange: (e, c) => cbOpenSkill(skillName, c, true)
-										}}
-									/>
-									<Grid item sx={{ marginTop: "3px" }}>
-										<SkillButton name={skillName} value={GetSkillShade(skillName, spending)} disabled />
-										<SkillButton
-											name={skillName}
-											value={GetSkillExponent(skillName, stock, lifepathPaths, totals, spending, questions)}
-											disabled={!GetSkillOpenness(skillName, spending)}
-											onClick={e => cbChangeSkillExponent(e, skillName, 1, true)}
-											onContext={e => cbChangeSkillExponent(e, skillName, -1, true)}
+						{totals.skills.lifepathList
+							.filter(v => !specialSkills.includes(v))
+							.map((skillName, i) =>
+								<Grid key={i} item xs={6} sm={3} md={2}>
+									<GenericGrid columns={5} center="h" hasBackground={1}>
+										<BlockSkillPopover
+											skillName={skillName}
+											checkbox={{
+												checked: GetSkillOpenness(skillName, spendings),
+												onChange: (e, c) => cbOpenSkill(skillName, c, true)
+											}}
 										/>
-									</Grid>
-								</GenericGrid>
-							</Grid>
-						)}
+										<Grid item sx={{ marginTop: "3px" }}>
+											<SkillButton name={skillName} value={GetSkillShade(skillName, spendings)} disabled />
+											<SkillButton
+												name={skillName}
+												value={GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions)}
+												disabled={!GetSkillOpenness(skillName, spendings)}
+												onClick={e => cbChangeSkillExponent(e, skillName, 1, true)}
+												onContext={e => cbChangeSkillExponent(e, skillName, -1, true)}
+											/>
+										</Grid>
+									</GenericGrid>
+								</Grid>
+							)}
 					</Fragment>
 				</Fragment>
 				: null
