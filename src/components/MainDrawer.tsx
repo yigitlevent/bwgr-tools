@@ -38,7 +38,7 @@ const Items: [string, string][][] = [
 	[["Lifepaths", "/lifepaths"], ["Skills", "/skills"], ["Traits", "/traits"], ["Resources", "/resources"]],
 	[["Practice Planner", "/practiceplanner"], ["Magic Wheel", "/magicwheel"]],
 	[["Duel of Wits Planner", "/dowplanner"], ["Range and Cover Planner", "/racplanner"], ["Fight Planner", "/fightplanner"]],
-	[["Character Burner", "/characterburner"], ["Random Character Burner", "/randomcharacterburner"]]
+	[["Character Burner", "/characterburner"]]
 ];
 
 export function MainDrawer() {
