@@ -22,6 +22,7 @@ export function AppropriateWeaponsSelection() {
 	const { specialSkills } = useAppSelector(state => state.characterBurner);
 	const { cbSelectApprWeapon, cbSelectMandApprWeapon } = useStore().characterBurner;
 
+	// FIX: [SPECIAL SKILLS] These need to be filtered by the dataset
 	const subskills = GetSkillFromPath("Any General➞Appropriate Weapons").subskills as SkillPath[];
 
 	return (
@@ -63,6 +64,7 @@ export function JavelinOrBowSelection() {
 	const { specialSkills } = useAppSelector(state => state.characterBurner);
 	const { cbSelectJavelinOrBow } = useStore().characterBurner;
 
+	// FIX: [SPECIAL SKILLS] These need to be filtered by the dataset
 	return (
 		<Fragment>
 			<Grid item xs={2}>
@@ -86,6 +88,7 @@ export function AnySmithSelection() {
 	const { specialSkills } = useAppSelector(state => state.characterBurner);
 	const { cbSelectAnySmith } = useStore().characterBurner;
 
+	// FIX: [SPECIAL SKILLS] These need to be filtered by the dataset
 	const subskills = GetSkillFromPath("Any General➞Any -smith").subskills as SkillPath[];
 
 	return (
