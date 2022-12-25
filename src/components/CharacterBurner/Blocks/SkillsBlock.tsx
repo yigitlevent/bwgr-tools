@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 
 import { useAppSelector } from "../../../state/store";
+import { SpecialSkills } from "../../../data/skills/specialSkills";
 import { useStore } from "../../../hooks/useStore";
 import { GetRemainingSkillTotals, GetSkillExponent, GetSkillOpenness, GetSkillShade } from "../../../utils/characterSkillUtils";
 
@@ -17,8 +18,6 @@ export function SkillsBlock() {
 	const { cbOpenSkill, cbChangeSkillExponent } = useStore().characterBurner;
 
 	const skillRemaining = GetRemainingSkillTotals(totals, spendings);
-
-	const specialSkills = ["Any General➞Appropriate Weapons", "Any General➞Javelin or Bow", "Any General➞Any -smith"];
 
 	return (
 		<GenericGrid columns={6} center spacing={[0, 2]}>
@@ -39,7 +38,7 @@ export function SkillsBlock() {
 
 					<Fragment>
 						{totals.skills.mandatoryList
-							.filter(v => !specialSkills.includes(v))
+							.filter(v => !SpecialSkills.includes(v))
 							.map((skillName, i) =>
 								<Grid key={i} item xs={6} sm={3} md={2}>
 									<GenericGrid columns={5} center="h" hasBackground={1}>
@@ -75,7 +74,7 @@ export function SkillsBlock() {
 
 					<Fragment>
 						{totals.skills.lifepathList
-							.filter(v => !specialSkills.includes(v))
+							.filter(v => !SpecialSkills.includes(v))
 							.map((skillName, i) =>
 								<Grid key={i} item xs={6} sm={3} md={2}>
 									<GenericGrid columns={5} center="h" hasBackground={1}>
