@@ -353,7 +353,7 @@ export const Troll: Stock = {
 					skillPool: 3,
 					skills: [
 						"Any General➞Torture",
-						"Troll Special➞Lash"
+						"Any Monstrous➞Lash"
 					],
 					stock: "Troll",
 					traitPool: 1,

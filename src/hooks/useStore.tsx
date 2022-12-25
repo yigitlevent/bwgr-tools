@@ -305,7 +305,7 @@ export function useStore() {
 		cbChangeConcept: (concept: string) => {
 			dispatch({ type: "CHANGE_CB_CONCEPT", payload: { concept } });
 		},
-		cbAddLifepath: (lifepathPath: string) => {
+		cbAddLifepath: (lifepathPath: LifepathPath) => {
 			dispatch({ type: "ADD_CB_LIFEPATH", payload: { lifepathPath } });
 		},
 		cbRemoveLifepath: () => {
@@ -335,6 +335,18 @@ export function useStore() {
 		},
 		cbSwitchAnswer: (questionKey: AttributeQuestionsKeys) => {
 			dispatch({ type: "SWITCH_CB_ANSWER", payload: { questionKey } });
+		},
+		cbSelectApprWeapon: (skillName: SkillPath) => {
+			dispatch({ type: "SELECT_CB_APPR_WEAPON", payload: { skillName } });
+		},
+		cbSelectMandApprWeapon: (skillName: SkillPath) => {
+			dispatch({ type: "SELECT_CB_MAND_APPR_WEAPON", payload: { skillName } });
+		},
+		cbSelectJavelinOrBow: (skillName: SkillPath) => {
+			dispatch({ type: "SELECT_CB_JAVELIN_OR_BOW", payload: { skillName } });
+		},
+		cbSelectAnySmith: (skillName: SkillPath) => {
+			dispatch({ type: "SELECT_CB_ANY_SMITH", payload: { skillName } });
 		}
 	};
 

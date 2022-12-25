@@ -13,7 +13,7 @@ import { GenericGrid } from "../../Shared/Grids";
 import { LifepathBox } from "../../LifepathLists/LifepathBox";
 
 
-export function LifepathsBlock({ openLpModal, openQuModal }: { openLpModal: (open: boolean) => void; openQuModal: (open: boolean) => void; }) {
+export function LifepathsBlock({ openLpModal, openQuModal, openSuModal }: { openLpModal: (open: boolean) => void; openQuModal: (open: boolean) => void; openSuModal: (open: boolean) => void; }) {
 	const { lifepathPaths } = useAppSelector(state => state.characterBurner);
 	const { cbRemoveLifepath } = useStore().characterBurner;
 
@@ -41,6 +41,10 @@ export function LifepathsBlock({ openLpModal, openQuModal }: { openLpModal: (ope
 
 			<Grid item>
 				<Button variant="outlined" size="medium" onClick={() => openQuModal(true)} disabled={lifepathPaths.length === 0}>Answer Questions</Button>
+			</Grid>
+
+			<Grid item>
+				<Button variant="outlined" size="medium" onClick={() => openSuModal(true)} disabled={lifepathPaths.length === 0}>Special Skills</Button>
 			</Grid>
 		</GenericGrid>
 	);

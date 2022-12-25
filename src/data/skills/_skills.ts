@@ -20,6 +20,8 @@ export interface Skill {
 	tools: [ToolsList, string];
 	training: boolean;
 	type: SkillTypesList | [];
+
+	subskills?: SkillPath[]
 }
 
 export interface SkillCategory {

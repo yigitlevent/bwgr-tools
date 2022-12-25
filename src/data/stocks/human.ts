@@ -1627,11 +1627,7 @@ export const Human: Stock = {
 					skills: [
 						"Any Wise➞Artisan-wise",
 						"Any General➞Mason",
-						"Any General➞Blacksmith", // FIX: [SELECTION MODAL] These five should be "Any General➞Any -smith", have a noList "Any General➞Any -smith" entry and have a modal to select which.
-						"Any General➞Coppersmith", //
-						"Any General➞Locksmith", //
-						"Any General➞Weaponsmith", //
-						"Any General➞Whitesmith", //
+						"Any General➞Any -smith",
 						"Any General➞Carpentry",
 						"Any General➞Read",
 						"Any General➞Write",
@@ -7595,8 +7591,7 @@ export const Human: Stock = {
 						"Any General➞Stealthy",
 						"Any General➞Cooking",
 						"Any General➞Orienteering",
-						"Any General➞Javelin", // FIX: [SELECTION MODAL] These two should be "Any General➞Javelin or Bow", have a noList "Any General➞Javelin or Bow" entry and have a modal to select which.
-						"Any General➞Bow" //
+						"Any General➞Javelin or Bow"
 					],
 					stock: "Human",
 					traitPool: 1,

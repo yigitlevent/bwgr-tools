@@ -44,7 +44,7 @@ export function GetRemainingSkillTotals(totals: LifepathTotals, spendings: Chara
 	const lifepathSpending =
 		Object.values(spendings.skills).map(v => v.lifepath.open + v.lifepath.advance);
 
-	// BUG: [EXTENSIONS] This does not take extensions into account
+	// FIX: [EXTENSIONS] This does not take extensions into account
 	return {
 		generalPoints: totals.skills.generalPoints.points - ((generalSpending.length > 0) ? generalSpending.reduce((v, a) => v + a) : 0),
 		lifepathPoints: totals.skills.lifepathPoints.points - ((lifepathSpending.length > 0) ? lifepathSpending.reduce((v, a) => v + a) : 0)

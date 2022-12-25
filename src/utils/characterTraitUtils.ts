@@ -16,7 +16,7 @@ export function GetTraitOpenness(traitName: string, spendings: CharacterSpending
 export function GetRemainingTraitTotals(totals: LifepathTotals, spendings: CharacterSpendings): TraitRemaining {
 	const traitPointSpending = Object.values(spendings.traits).map(v => v.open);
 
-	// BUG: [EXTENSIONS] This does not take extensions into account
+	// FIX: [EXTENSIONS] This does not take extensions into account
 	return {
 		traitPoints: totals.traits.points - ((traitPointSpending.length > 0) ? traitPointSpending.reduce((v, a) => v + a) : 0)
 	};

@@ -1834,7 +1834,7 @@ export const Roden: Stock = {
 						"Any General➞Stealthy",
 						"Any General➞Intimidation",
 						"Any General➞Inconspicuous",
-						"Roden Special➞Garrote"
+						"Any Monstrous➞Garrote"
 					],
 					stock: "Roden",
 					traitPool: 1,

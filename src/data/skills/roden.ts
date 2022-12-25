@@ -22,21 +22,6 @@ export const RodenSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc", "msc"],
-			description: "A garrote is a two- to three-foot length of cord strung between two small wooden handles or leather loops. Roden use it to throttle victims to death. To use this skill, the would-be-muyrderer must attack from stealth or surprise (or against a victim already in a Lock. Thet Garrote versus Power or Agility (victim's choice, but at double obstacle). If the attacked lands a 2D or greater lock, the victim loses 1D Forte every exchange thereafter. If Forte reaches zero, the victim falls unconscious.",
-			magical: false,
-			name: "Garrote",
-			noList: false,
-			restriction: "Roden only",
-			root: ["Agility"],
-			tools: [
-				"Tools",
-				""
-			],
-			training: false,
-			type: "Martial"
-		},
-		{
-			allowed: ["bwc", "msc"],
 			description: "Preaching relies upon religious doctrine, real-life anecdotes and folk wisdom.",
 			magical: false,
 			name: "Preaching",

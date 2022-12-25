@@ -1,5 +1,6 @@
 import { Lifepath, Stocks } from "../data/stocks/_stocks";
 import { TraitCategories } from "../data/traits/_traits";
+import { SpecialSkills } from "../state/reducers/characterBurner";
 
 
 export interface LifepathTotals {
@@ -81,7 +82,7 @@ export const EmptyTotals: LifepathTotals = {
 	}
 };
 
-export function CalculateLifepathTotals(chosenLifepaths: Lifepath[]) {
+export function CalculateLifepathTotals(chosenLifepaths: Lifepath[], specialSkills: SpecialSkills) {
 	const totals: LifepathTotals = JSON.parse(JSON.stringify(EmptyTotals));
 
 	for (let i = 0; i < chosenLifepaths.length; i++) {
@@ -131,7 +132,7 @@ export function CalculateLifepathTotals(chosenLifepaths: Lifepath[]) {
 
 	const stock = chosenLifepaths[0].stock;
 
-	// BUG: [EXTENSIONS] This does not take extensions into account
+	// FIX: [EXTENSIONS] This does not take extensions into account
 	const ageBracket = Stocks[stock].agePool.filter(v => (v.max >= totals.years.points && v.min <= totals.years.points));
 	totals.stats.fromAge = [ageBracket[0].m, ageBracket[0].p];
 
@@ -149,14 +150,35 @@ export function CalculateLifepathTotals(chosenLifepaths: Lifepath[]) {
 		if (lp.skills.length > 0) mandSkills.add(lp.skills[0]);
 		if (repeatCount === 1 && lp.skills.length > 1) mandSkills.add(lp.skills[1]);
 
+		if (mandSkills.has("Any General➞Appropriate Weapons")) {
+			mandSkills.delete("Any General➞Appropriate Weapons");
+			mandSkills.add(specialSkills.appropriateWeapons.mandatory);
+		}
+
 		if (lp.traits.length > 0) mandTraits.add(lp.traits[0]);
 		if (repeatCount === 1 && lp.traits.length > 1) mandTraits.add(lp.traits[1]);
 	}
 
 	for (const lifepathKey in chosenLifepaths) {
 		const lp = chosenLifepaths[lifepathKey];
-		lp.skills.forEach(v => { if (!commonTraits.has(v) && !mandSkills.has(v)) skills.add(v); });
-		lp.traits.forEach(v => { if (!commonTraits.has(v) && !mandTraits.has(v)) traits.add(v); });
+
+		if (mandSkills.has("Any General➞Appropriate Weapons") || skills.has("Any General➞Appropriate Weapons")) {
+			skills.delete("Any General➞Appropriate Weapons");
+			specialSkills.appropriateWeapons.selected.forEach(skill => { if (!mandSkills.has(skill)) skills.add(skill); });
+		}
+		
+		if (skills.has("Any General➞Javelin or Bow")) {
+			skills.delete("Any General➞Javelin or Bow");
+			if (!mandSkills.has(specialSkills.javelinOrBow)) skills.add(specialSkills.javelinOrBow);
+		}
+
+		if (skills.has("Any General➞Any -smith")) {
+			skills.delete("Any General➞Any -smith");
+			specialSkills.anySmith.forEach(skill => { if (!mandSkills.has(skill)) skills.add(skill); });
+		}
+
+		lp.skills.forEach(skill => { if (!mandSkills.has(skill)) skills.add(skill); });
+		lp.traits.forEach(skill => { if (!commonTraits.has(skill) && !mandTraits.has(skill)) traits.add(skill); });
 	}
 
 	totals.skills.mandatoryList = Array.from(mandSkills);

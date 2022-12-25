@@ -52,21 +52,6 @@ export const TrollSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc", "msc"],
-			description: "Bellowers bear a massive lash with which they drive on their lessers. So terrible and huge is this whip that it may be used as a weapon.<br>Obstacles as a melee weapon. See Resources section for stats.",
-			magical: false,
-			name: "Lash",
-			noList: false,
-			restriction: "Trolls only",
-			root: ["Agility"],
-			tools: [
-				"Tools",
-				""
-			],
-			training: false,
-			type: "Martial"
-		},
-		{
-			allowed: ["bwc", "msc"],
 			description: "",
 			magical: false,
 			name: "Mine-wise",

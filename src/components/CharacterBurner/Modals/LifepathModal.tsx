@@ -40,7 +40,7 @@ export function LifepathModal({ openLp, openLpModal }: { openLp: boolean; openLp
 
 	const addNewLifepath = () => {
 		openLpModal(false);
-		cbAddLifepath(chosenLP);
+		cbAddLifepath(chosenLP as LifepathPath);
 		resetDefaultChosen();
 	};
 

@@ -190,16 +190,35 @@ export const AnyGeneral: SkillCategory = {
 			description: "This blanket entry is provided so the player may choose any and all of the weapons appropriate to his lifepaths, character concept and game setting. See thee listing for the individual weapons obstacles and roots.",
 			magical: false,
 			name: "Appropriate Weapons",
-			noList: false,
+			noList: true,
 			restriction: "N/A",
-			// BUG: [SELECTION MODAL] Create a modal to select weapons when this skill is in mandatory or lifepath skills list, as each weapon skill has its own root, and the following root is wrong 
-			root: ["Agility"],
+			root: [],
 			tools: [
 				"No",
 				""
 			],
 			training: false,
-			type: []
+			type: [],
+
+			subskills: [
+				"Any General➞Axe",
+				"Any General➞Bow",
+				"Any General➞Crossbow",
+				"Any General➞Cudgel",
+				"Any General➞Firearms",
+				"Any General➞Hammer",
+				"Any General➞Javelin",
+				"Any General➞Knives",
+				"Any General➞Lance",
+				"Any General➞Mace",
+				"Any General➞Polearm",
+				"Any General➞Spear",
+				"Any General➞Staff",
+				"Any General➞Sword",
+				"Any General➞Throwing",
+				"Any Monstrous➞Garrote",
+				"Any Monstrous➞Lash"
+			]
 		},
 		{
 			allowed: ["bwg", "bwc", "msc"],
@@ -3125,6 +3144,39 @@ export const AnyGeneral: SkillCategory = {
 			],
 			training: false,
 			type: "Academic"
+		},
+		{
+			allowed: ["bwg", "bwc", "msc"],
+			description: "With this skill you can choose either Javelin or Bow as a skill.",
+			magical: false,
+			name: "Javelin or Bow",
+			noList: true,
+			restriction: "N/A",
+			root: ["Perception", "Agility"],
+			tools: ["No", ""],
+			training: false,
+			type: "Martial",
+
+			subskills: ["Any General➞Javelin", "Any General➞Bow"]
+		},
+		{
+			allowed: ["bwg", "bwc", "msc"],
+			description: "With this skill you can choose any -smith skills your character might possess.",
+			magical: false,
+			name: "Any -smith",
+			noList: true,
+			restriction: "N/A",
+			root: ["Perception", "Agility"],
+			tools: ["No", ""],
+			training: false,
+			type: "Craftsman",
+			subskills: [
+				"Any General➞Blacksmith",
+				"Any General➞Whitesmith",
+				"Any General➞Coppersmith",
+				"Any General➞Locksmith",
+				"Any General➞Weaponsmith"
+			]
 		}
 	]
 };
@@ -3240,7 +3292,7 @@ export const AnyMonstrous: SkillCategory = {
 		},
 		{
 			allowed: ["bwc", "msc"],
-			description: "A garrote is a two- to three-foot lenght of cord strung between two small wooden handles or leather loops.Roden use it to throttle victimts to death. To use this skill, the would-be-murderer must attack from stealth or surprise (or against a victim already in Lock). Test Garrote versus Power or Agility (victim's choice, but at double obstacle. If the attacker lands a 2D or greater Lock, the victim loses 1D Forte every exchange thereafter. If Forte reaches zero, the victim falls unconscious.",
+			description: "A garrote is a two- to three-foot length of cord strung between two small wooden handles or leather loops. Roden use it to throttle victims to death. To use this skill, the would-be-muyrderer must attack from stealth or surprise (or against a victim already in a Lock. Thet Garrote versus Power or Agility (victim's choice, but at double obstacle). If the attacked lands a 2D or greater lock, the victim loses 1D Forte every exchange thereafter. If Forte reaches zero, the victim falls unconscious.",
 			magical: false,
 			name: "Garrote",
 			noList: false,
@@ -3285,7 +3337,7 @@ export const AnyMonstrous: SkillCategory = {
 		},
 		{
 			allowed: ["bwc", "msc"],
-			description: "Bellowers bear a massive lash with which they drive on their lessers. So terrible and huge is this whip that it may be used as a weapon.",
+			description: "Bellowers bear a massive lash with which they drive on their lessers. So terrible and huge is this whip that it may be used as a weapon.<br>Obstacles as a melee weapon. See Resources section for stats.",
 			magical: false,
 			name: "Lash",
 			noList: false,

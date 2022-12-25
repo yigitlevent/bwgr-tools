@@ -11,7 +11,7 @@ import { GetLifepathsFromPaths } from "../../utils/pathFinder";
 interface ChangeCharacterStock { type: "CHANGE_CB_STOCK"; payload: { stock: StocksList; }; }
 interface ChangeCharacterConcept { type: "CHANGE_CB_CONCEPT"; payload: { concept: string; }; }
 
-interface AddLifepath { type: "ADD_CB_LIFEPATH"; payload: { lifepathPath: string; }; }
+interface AddLifepath { type: "ADD_CB_LIFEPATH"; payload: { lifepathPath: LifepathPath; }; }
 interface RemoveLifepath { type: "REMOVE_CB_LIFEPATH"; }
 
 interface ChangeStatShade { type: "CHANGE_CB_STAT_SHADE"; payload: { statName: StatsList; }; }
@@ -24,7 +24,12 @@ interface ChangeSkillAdvancement { type: "CHANGE_CB_SKILL_EXPONENT"; payload: { 
 
 interface OpenTrait { type: "OPEN_CB_TRAIT"; payload: { traitName: string; open: boolean; isLifepath: boolean; }; }
 
-interface SwitchAnswer { type: "SWITCH_CB_ANSWER"; payload: { questionKey: AttributeQuestionsKeys; }; }
+interface SwitchQuestionAnswer { type: "SWITCH_CB_ANSWER"; payload: { questionKey: AttributeQuestionsKeys; }; }
+
+interface SelectApprWeapon { type: "SELECT_CB_APPR_WEAPON"; payload: { skillName: SkillPath; }; }
+interface SelectMandApprWeapon { type: "SELECT_CB_MAND_APPR_WEAPON"; payload: { skillName: SkillPath; }; }
+interface SelectJavelinOrBow { type: "SELECT_CB_JAVELIN_OR_BOW"; payload: { skillName: SkillPath; }; }
+interface SelectAnySmith { type: "SELECT_CB_ANY_SMITH"; payload: { skillName: SkillPath; }; }
 
 export type CharacterBurnerActions =
 	ChangeCharacterStock | ChangeCharacterConcept |
@@ -33,7 +38,8 @@ export type CharacterBurnerActions =
 	ChangeAttributeShade |
 	OpenSkill | ChangeSkillAdvancement |
 	OpenTrait |
-	SwitchAnswer;
+	SwitchQuestionAnswer |
+	SelectApprWeapon | SelectMandApprWeapon | SelectJavelinOrBow | SelectAnySmith;
 
 export interface StatSpending {
 	shade: number;
@@ -80,10 +86,17 @@ export type CharacterQuestions = {
 	[key in AttributeQuestionsKeys]?: boolean;
 };
 
+export interface SpecialSkills {
+	appropriateWeapons: { selected: SkillPath[]; mandatory: SkillPath; },
+	javelinOrBow: SkillPath;
+	anySmith: SkillPath[];
+}
+
 export interface CharacterBurnerState {
 	stock: StocksList;
 	concept: string;
-	lifepathPaths: string[];
+	lifepathPaths: LifepathPath[];
+	specialSkills: SpecialSkills;
 	totals: LifepathTotals;
 	spendings: CharacterSpendings;
 	questions: CharacterQuestions;
@@ -107,6 +120,11 @@ const INITIAL: CharacterBurnerState = {
 	stock: "Dwarf",
 	concept: "",
 	lifepathPaths: [],
+	specialSkills: {
+		appropriateWeapons: { selected: ["Any General➞Sword"], mandatory: "Any General➞Sword" },
+		javelinOrBow: "Any General➞Javelin",
+		anySmith: ["Any General➞Blacksmith"]
+	},
 	totals: EmptyTotals,
 	spendings: EmptySpendings,
 	questions: {}
@@ -118,123 +136,215 @@ function GetEmptySpending(): CharacterSpendings { return JSON.parse(JSON.stringi
 function GetQuestions(state: CharacterBurnerState): CharacterQuestions { return JSON.parse(JSON.stringify(state.questions)); }
 
 export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerActions): CharacterBurnerState => {
-	switch (action.type) {
-		case "CHANGE_CB_STOCK":
-			const newStock = action.payload.stock;
-			const stockTotals: LifepathTotals = GetEmptyTotals();
-			const stockSpendings: CharacterSpendings = GetEmptySpending();
-			return {
-				...state,
-				stock: newStock,
-				lifepathPaths: [],
-				totals: stockTotals,
-				spendings: stockSpendings,
-				questions: {}
-			};
-
-		case "CHANGE_CB_CONCEPT":
-			return { ...state, concept: action.payload.concept };
-
-		case "ADD_CB_LIFEPATH":
-			const addedLifepaths = [...state.lifepathPaths];
-			addedLifepaths.push(action.payload.lifepathPath);
-			const lifepathAddedTotals: LifepathTotals = addedLifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(addedLifepaths)) : EmptyTotals;
-			const newAddedSpendings: CharacterSpendings = {
-				...state.spendings,
-				skills: RefreshSkillList(lifepathAddedTotals, state.spendings).skills,
-				traits: RefreshTraitList(lifepathAddedTotals, state.spendings).traits,
-				attributes: RefreshAttributesList(lifepathAddedTotals, state.spendings).attributes
-			};
-			const addLifepathQuestions: CharacterQuestions = RefreshQuestionsList(lifepathAddedTotals, newAddedSpendings, GetQuestions(state));
-			return {
-				...state,
-				lifepathPaths: addedLifepaths,
-				totals: JSON.parse(JSON.stringify(lifepathAddedTotals)),
-				spendings: JSON.parse(JSON.stringify(newAddedSpendings)),
-				questions: JSON.parse(JSON.stringify(addLifepathQuestions))
-			};
-
-		case "REMOVE_CB_LIFEPATH":
-			const removedLifepaths = [...state.lifepathPaths];
-			removedLifepaths.pop();
-			const lifepathRemovedTotals = removedLifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(removedLifepaths)) : EmptyTotals;
-			const newRemovedSpendings: CharacterSpendings = {
-				...state.spendings,
-				skills: RefreshSkillList(lifepathRemovedTotals, state.spendings).skills,
-				traits: RefreshTraitList(lifepathRemovedTotals, state.spendings).traits,
-				attributes: RefreshAttributesList(lifepathRemovedTotals, state.spendings).attributes
-			};
-			const removeLifepathQuestions: CharacterQuestions = RefreshQuestionsList(lifepathRemovedTotals, newRemovedSpendings, GetQuestions(state));
-			return {
-				...state,
-				lifepathPaths: removedLifepaths,
-				totals: JSON.parse(JSON.stringify(lifepathRemovedTotals)),
-				spendings: JSON.parse(JSON.stringify(newRemovedSpendings)),
-				questions: JSON.parse(JSON.stringify(removeLifepathQuestions))
-			};
-
-		case "CHANGE_CB_STAT_SHADE":
-			const spendingStatShade = GetSpending(state);
-			spendingStatShade.stats[action.payload.statName] = ModifyStatShadeSpending(action.payload.statName, spendingStatShade, state.totals);
-			return {
-				...state,
-				spendings: { ...spendingStatShade }
-			};
-
-		case "CHANGE_CB_STAT_EXPONENT":
-			const spendingStatExp = GetSpending(state);
-			spendingStatExp.stats[action.payload.statName] = ModifyStatExponentSpending(action.payload.statName, spendingStatExp, state.totals, action.payload.change);
-			return {
-				...state,
-				spendings: { ...spendingStatExp }
-			};
-
-		case "CHANGE_CB_ATTRIBUTE_SHADE":
-			const spendingAttributeShade = GetSpending(state);
-			spendingAttributeShade.attributes[action.payload.attributeName] = ModifyAttributeShadeSpending(action.payload.attributeName, action.payload.change, state.stock, state.lifepathPaths, state.totals, spendingAttributeShade, state.questions);
-			return {
-				...state,
-				spendings: { ...spendingAttributeShade }
-			};
-
-		case "OPEN_CB_SKILL":
-			const spendingSkillOpen = GetSpending(state);
-			spendingSkillOpen.skills[action.payload.skillName] = TryOpenSkill(action.payload.skillName, state.totals, spendingSkillOpen, action.payload.open, action.payload.isLifepath);
-			return {
-				...state,
-				spendings: { ...spendingSkillOpen }
-			};
-
-		case "CHANGE_CB_SKILL_EXPONENT":
-			const spendingSkillExp = GetSpending(state);
-			spendingSkillExp.skills[action.payload.skillName] = ModifySkillExponentSpending(action.payload.skillName, spendingSkillExp, state.totals, action.payload.change, action.payload.isLifepath);
-			return {
-				...state,
-				spendings: { ...spendingSkillExp }
-			};
-
-		case "OPEN_CB_TRAIT":
-			const spendingTraitOpen = GetSpending(state);
-			spendingTraitOpen.traits[action.payload.traitName] = TryOpenTrait(action.payload.traitName, state.totals, spendingTraitOpen, action.payload.open, action.payload.isLifepath);
-			const openTraitQuestions: CharacterQuestions = RefreshQuestionsList(state.totals, spendingTraitOpen, GetQuestions(state));
-			return {
-				...state,
-				spendings: {
-					...spendingTraitOpen,
-					traits: spendingTraitOpen.traits,
-					attributes: RefreshAttributesList(state.totals, spendingTraitOpen).attributes
-				},
-				questions: JSON.parse(JSON.stringify(openTraitQuestions))
-			};
-
-		case "SWITCH_CB_ANSWER":
-			const newAnswers = SwitchAnswer(action.payload.questionKey, GetQuestions(state));
-			return {
-				...state,
-				questions: JSON.parse(JSON.stringify(newAnswers))
-			};
-
-		default:
-			return { ...state };
+	if (action.type === "CHANGE_CB_STOCK") {
+		const newStock = action.payload.stock;
+		const newTotals: LifepathTotals = GetEmptyTotals();
+		const newSpendings: CharacterSpendings = GetEmptySpending();
+		return {
+			...state,
+			stock: newStock,
+			lifepathPaths: [],
+			totals: newTotals,
+			spendings: newSpendings,
+			questions: {}
+		};
 	}
+	else if (action.type === "CHANGE_CB_CONCEPT") {
+		return { ...state, concept: action.payload.concept };
+	}
+	else if (action.type === "ADD_CB_LIFEPATH") {
+		const lifepaths = [...state.lifepathPaths];
+		lifepaths.push(action.payload.lifepathPath);
+		const newTotals: LifepathTotals = lifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(lifepaths), state.specialSkills) : EmptyTotals;
+		const newSpendings: CharacterSpendings = {
+			...state.spendings,
+			skills: RefreshSkillList(newTotals, state.spendings).skills,
+			traits: RefreshTraitList(newTotals, state.spendings).traits,
+			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
+		};
+		const newQuestions: CharacterQuestions = RefreshQuestionsList(newTotals, newSpendings, GetQuestions(state));
+		return {
+			...state,
+			lifepathPaths: lifepaths,
+			totals: JSON.parse(JSON.stringify(newTotals)),
+			spendings: JSON.parse(JSON.stringify(newSpendings)),
+			questions: JSON.parse(JSON.stringify(newQuestions))
+		};
+	}
+	else if (action.type === "REMOVE_CB_LIFEPATH") {
+		const lifepaths = [...state.lifepathPaths];
+		lifepaths.pop();
+		const newTotals = lifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(lifepaths), state.specialSkills) : EmptyTotals;
+		const newSpendings: CharacterSpendings = {
+			...state.spendings,
+			skills: RefreshSkillList(newTotals, state.spendings).skills,
+			traits: RefreshTraitList(newTotals, state.spendings).traits,
+			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
+		};
+		const newQuestions: CharacterQuestions = RefreshQuestionsList(newTotals, newSpendings, GetQuestions(state));
+		return {
+			...state,
+			lifepathPaths: lifepaths,
+			totals: JSON.parse(JSON.stringify(newTotals)),
+			spendings: JSON.parse(JSON.stringify(newSpendings)),
+			questions: JSON.parse(JSON.stringify(newQuestions))
+		};
+	}
+	else if (action.type === "CHANGE_CB_STAT_SHADE") {
+		const spending = GetSpending(state);
+		spending.stats[action.payload.statName] = ModifyStatShadeSpending(action.payload.statName, spending, state.totals);
+		return {
+			...state,
+			spendings: { ...spending }
+		};
+	}
+	else if (action.type === "CHANGE_CB_STAT_EXPONENT") {
+		const spending = GetSpending(state);
+		spending.stats[action.payload.statName] = ModifyStatExponentSpending(action.payload.statName, spending, state.totals, action.payload.change);
+		return {
+			...state,
+			spendings: { ...spending }
+		};
+	}
+	else if (action.type === "CHANGE_CB_ATTRIBUTE_SHADE") {
+		const spending = GetSpending(state);
+		spending.attributes[action.payload.attributeName] = ModifyAttributeShadeSpending(action.payload.attributeName, action.payload.change, state.stock, state.lifepathPaths, state.totals, spending, state.questions);
+		return {
+			...state,
+			spendings: { ...spending }
+		};
+	}
+	else if (action.type === "OPEN_CB_SKILL") {
+		const spending = GetSpending(state);
+		spending.skills[action.payload.skillName] = TryOpenSkill(action.payload.skillName, state.totals, spending, action.payload.open, action.payload.isLifepath);
+		return {
+			...state,
+			spendings: { ...spending }
+		};
+	}
+	else if (action.type === "CHANGE_CB_SKILL_EXPONENT") {
+		const spending = GetSpending(state);
+		spending.skills[action.payload.skillName] = ModifySkillExponentSpending(action.payload.skillName, spending, state.totals, action.payload.change, action.payload.isLifepath);
+		return {
+			...state,
+			spendings: { ...spending }
+		};
+	}
+	else if (action.type === "OPEN_CB_TRAIT") {
+		const spending = GetSpending(state);
+		spending.traits[action.payload.traitName] = TryOpenTrait(action.payload.traitName, state.totals, spending, action.payload.open, action.payload.isLifepath);
+		const newQuestions: CharacterQuestions = RefreshQuestionsList(state.totals, spending, GetQuestions(state));
+		return {
+			...state,
+			spendings: {
+				...spending,
+				traits: spending.traits,
+				attributes: RefreshAttributesList(state.totals, spending).attributes
+			},
+			questions: JSON.parse(JSON.stringify(newQuestions))
+		};
+	}
+	else if (action.type === "SWITCH_CB_ANSWER") {
+		const newAnswers = SwitchAnswer(action.payload.questionKey, GetQuestions(state));
+		return {
+			...state,
+			questions: JSON.parse(JSON.stringify(newAnswers))
+		};
+	}
+	else if (action.type === "SELECT_CB_APPR_WEAPON") {
+		const newSpecialSkills = JSON.parse(JSON.stringify(state.specialSkills)) as SpecialSkills;
+		if (newSpecialSkills.appropriateWeapons.selected.length > 1 && newSpecialSkills.appropriateWeapons.selected.includes(action.payload.skillName)) {
+			newSpecialSkills.appropriateWeapons.selected = newSpecialSkills.appropriateWeapons.selected.filter(v => v !== action.payload.skillName);
+		}
+		else {
+			newSpecialSkills.appropriateWeapons.selected.push(action.payload.skillName);
+		}
+		
+		newSpecialSkills.appropriateWeapons.mandatory =
+			(newSpecialSkills.appropriateWeapons.selected.includes(newSpecialSkills.appropriateWeapons.mandatory))
+				? newSpecialSkills.appropriateWeapons.mandatory
+				: newSpecialSkills.appropriateWeapons.selected[0];
+
+		const lifepaths = GetLifepathsFromPaths(state.lifepathPaths);
+		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills) : EmptyTotals;
+		const newSpendings: CharacterSpendings = {
+			...state.spendings,
+			skills: RefreshSkillList(newTotals, state.spendings).skills,
+			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
+		};
+
+		return {
+			...state,
+			totals: newTotals,
+			spendings: newSpendings,
+			specialSkills: newSpecialSkills
+		};
+	}
+	else if (action.type === "SELECT_CB_MAND_APPR_WEAPON") {
+		const newSpecialSkills = JSON.parse(JSON.stringify(state.specialSkills)) as SpecialSkills;
+		newSpecialSkills.appropriateWeapons.mandatory =
+			(newSpecialSkills.appropriateWeapons.selected.includes(action.payload.skillName))
+				? action.payload.skillName
+				: newSpecialSkills.appropriateWeapons.selected[0];
+
+		const lifepaths = GetLifepathsFromPaths(state.lifepathPaths);
+		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills) : EmptyTotals;
+		const newSpendings: CharacterSpendings = {
+			...state.spendings,
+			skills: RefreshSkillList(newTotals, state.spendings).skills,
+			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
+		};
+
+		return {
+			...state,
+			totals: newTotals,
+			spendings: newSpendings,
+			specialSkills: newSpecialSkills
+		};
+	}
+	else if (action.type === "SELECT_CB_JAVELIN_OR_BOW") {
+		const newSpecialSkills = JSON.parse(JSON.stringify(state.specialSkills)) as SpecialSkills;
+		newSpecialSkills.javelinOrBow = action.payload.skillName;
+
+		const lifepaths = GetLifepathsFromPaths(state.lifepathPaths);
+		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills) : EmptyTotals;
+		const newSpendings: CharacterSpendings = {
+			...state.spendings,
+			skills: RefreshSkillList(newTotals, state.spendings).skills,
+			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
+		};
+
+		return {
+			...state,
+			totals: newTotals,
+			spendings: newSpendings,
+			specialSkills: newSpecialSkills
+		};
+	}
+	else if (action.type === "SELECT_CB_ANY_SMITH") {
+		const newSpecialSkills = JSON.parse(JSON.stringify(state.specialSkills)) as SpecialSkills;
+		if (newSpecialSkills.anySmith.includes(action.payload.skillName)) {
+			newSpecialSkills.anySmith = newSpecialSkills.anySmith.filter(v => v !== action.payload.skillName);
+		}
+		else {
+			newSpecialSkills.anySmith.push(action.payload.skillName);
+		}
+
+		const lifepaths = GetLifepathsFromPaths(state.lifepathPaths);
+		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills) : EmptyTotals;
+		const newSpendings: CharacterSpendings = {
+			...state.spendings,
+			skills: RefreshSkillList(newTotals, state.spendings).skills,
+			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
+		};
+
+		return {
+			...state,
+			totals: newTotals,
+			spendings: newSpendings,
+			specialSkills: newSpecialSkills
+		};
+	}
+
+	return { ...state };
 };
