@@ -16,6 +16,7 @@ export const Roden: Stock = {
 	hasSetting: true,
 	hasSubsetting: true,
 	name: "Roden",
+	namePlural: "Roden",
 	stride: 8,
 	settings: {
 		"Below": {

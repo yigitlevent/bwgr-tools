@@ -11,7 +11,7 @@ export const ElfSpecial: SkillCategory = {
 			magical: false,
 			name: "Elven Script",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Perception"],
 			tools: [
 				"Tools",
@@ -26,7 +26,7 @@ export const ElfSpecial: SkillCategory = {
 			magical: false,
 			name: "Silver Trumpet",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"Tools",
@@ -48,7 +48,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Ages of the Etharch",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Perception"],
 			tools: [
 				"No",
@@ -63,7 +63,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Antiphon Union Training",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -78,7 +78,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Archcraft",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Agility"],
 			tools: [
 				"Workshop",
@@ -93,7 +93,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Ballad of History",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Perception"],
 			tools: [
 				"No",
@@ -108,7 +108,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Bowcraft",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Agility"],
 			tools: [
 				"Tools",
@@ -123,7 +123,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Call of the Wild",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
@@ -138,7 +138,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Code of Citadels",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Perception"],
 			tools: [
 				"No",
@@ -153,7 +153,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Dignity of the Wilderlands",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Perception"],
 			tools: [
 				"No",
@@ -168,7 +168,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Gemcraft",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Agility"],
 			tools: [
 				"Workshop",
@@ -183,7 +183,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Grain Song",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Perception"],
 			tools: [
 				"Workshop",
@@ -198,7 +198,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Hymn of Scales and Fins",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
@@ -213,7 +213,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Jewelcraft",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Agility"],
 			tools: [
 				"Workshop",
@@ -228,7 +228,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Leathercraft",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Agility"],
 			tools: [
 				"Workshop",
@@ -243,7 +243,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Lyric of Law",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Perception"],
 			tools: [
 				"No",
@@ -258,7 +258,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Paean of Deeds",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -273,7 +273,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Purple Song",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Perception", "Agility"],
 			tools: [
 				"Workshop",
@@ -288,7 +288,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Rhyme of the Gatherer",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Perception"],
 			tools: [
 				"No",
@@ -303,7 +303,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Rhyme of the Mariner",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Agility", "Speed"],
 			tools: [
 				"No",
@@ -318,7 +318,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Rhyme of the Pathfinder",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Perception"],
 			tools: [
 				"No",
@@ -333,7 +333,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Riddle of Steel",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Agility"],
 			tools: [
 				"Workshop",
@@ -348,7 +348,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Rope Chant",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Agility"],
 			tools: [
 				"Traveling Gear",
@@ -363,7 +363,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Round of Harvest",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Perception"],
 			tools: [
 				"Tools",
@@ -378,7 +378,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Silent Fury",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -393,7 +393,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Slip of Currents",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Perception"],
 			tools: [
 				"No",
@@ -408,7 +408,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Smithcraft",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Agility"],
 			tools: [
 				"Workshop",
@@ -423,7 +423,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Song of Feasting",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
@@ -438,7 +438,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Song of Flocks and Herds",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -453,7 +453,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Song of Form",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"Tools",
@@ -468,7 +468,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Song of Lordship",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -483,7 +483,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Song of Paths and Ways",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Perception"],
 			tools: [
 				"No",
@@ -498,7 +498,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Song of Soothing",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Perception"],
 			tools: [
 				"Tools",
@@ -513,7 +513,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Song of the Eldar",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Perception"],
 			tools: [
 				"No",
@@ -528,7 +528,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Spearcraft",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Agility"],
 			tools: [
 				"Tools",
@@ -543,7 +543,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Starcraft",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Agility"],
 			tools: [
 				"Workshop",
@@ -558,7 +558,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Stonecraft",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Agility"],
 			tools: [
 				"Workshop",
@@ -573,7 +573,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Threading Chant",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
@@ -588,7 +588,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Voice of Thunder",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Forte"],
 			tools: [
 				"No",
@@ -603,7 +603,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Weaving Way",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Agility"],
 			tools: [
 				"Tools",
@@ -618,7 +618,7 @@ export const ElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Woodcraft",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will", "Agility"],
 			tools: [
 				"No",
@@ -640,7 +640,7 @@ export const DarkElfSkillSong: SkillCategory = {
 			magical: true,
 			name: "Litany of Fools",
 			noList: false,
-			restriction: "Dark Elves only",
+			restriction: "ONLY➞Elf➞WITH➞Spite",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -662,7 +662,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Air of Gates",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -677,7 +677,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Alarm",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -692,7 +692,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Anthem of Courage",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -707,7 +707,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Ballad of Rage",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Grief"],
 			tools: [
 				"No",
@@ -722,7 +722,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Canticle of Years",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -737,7 +737,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Chant of Offering",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -752,7 +752,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Council-Caller",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -767,7 +767,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Discerner",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -782,7 +782,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Doom of Strength",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -797,7 +797,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Doom Sayer",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -812,7 +812,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Evensong",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -827,7 +827,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "The Gift of Speed",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -842,7 +842,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Homesong",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -857,7 +857,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "The Hymn of Victory",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -872,7 +872,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Lament for the Fallen",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -887,7 +887,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Lament of Mourning",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -902,7 +902,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Lament of Stars",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -917,7 +917,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Lament of the Westering Sun",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -932,7 +932,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Lay of the Horse",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -947,7 +947,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Litany of Responsibilities",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -962,7 +962,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Lyric of Healing",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -977,7 +977,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Monody of the March",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -992,7 +992,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Mornsong",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1007,7 +1007,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Recitation of Ages",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1022,7 +1022,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Rhyme of Rules",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1037,7 +1037,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Rhyme of Tongues",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1052,7 +1052,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Song of Arbors",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1067,7 +1067,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Song of Bonding",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1082,7 +1082,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Song of Burning Bright",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1097,7 +1097,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Song of Merriment",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1112,7 +1112,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Song of Silence",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Grief"],
 			tools: [
 				"No",
@@ -1127,7 +1127,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Song of Songs",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1142,7 +1142,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Song of the Sword",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1157,7 +1157,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Strain of Far Sight",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1172,7 +1172,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Supplication to the Wind",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1187,7 +1187,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Threne of the Chameleon",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1202,7 +1202,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Tract of Enmity",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1217,7 +1217,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Verse of Decision",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1232,7 +1232,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Verse of Friendship",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1247,7 +1247,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Voice of Ages",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1262,7 +1262,7 @@ export const ElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Weathersong",
 			noList: false,
-			restriction: "Elves only",
+			restriction: "ONLY➞Elf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1284,7 +1284,7 @@ export const DarkElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Cut of the Quickened Mind",
 			noList: false,
-			restriction: "Dark Elves only",
+			restriction: "ONLY➞Elf➞WITH➞Spite",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1299,7 +1299,7 @@ export const DarkElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Dirge of Night",
 			noList: false,
-			restriction: "Dark Elves only",
+			restriction: "ONLY➞Elf➞WITH➞Spite",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1314,7 +1314,7 @@ export const DarkElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Fugue of Discord",
 			noList: false,
-			restriction: "Dark Elves only",
+			restriction: "ONLY➞Elf➞WITH➞Spite",
 			root: ["Spite"],
 			tools: [
 				"No",
@@ -1329,7 +1329,7 @@ export const DarkElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Keen of Terror",
 			noList: false,
-			restriction: "Dark Elves only",
+			restriction: "ONLY➞Elf➞WITH➞Spite",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1344,7 +1344,7 @@ export const DarkElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Paean to the Dark Fire",
 			noList: false,
-			restriction: "Dark Elves only",
+			restriction: "ONLY➞Elf➞WITH➞Spite",
 			root: ["Spite"],
 			tools: [
 				"No",
@@ -1359,7 +1359,7 @@ export const DarkElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Rhyme of the Unraveler",
 			noList: false,
-			restriction: "Dark Elves only",
+			restriction: "ONLY➞Elf➞WITH➞Spite",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1374,7 +1374,7 @@ export const DarkElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Sorrow of Truth",
 			noList: false,
-			restriction: "Dark Elves only",
+			restriction: "ONLY➞Elf➞WITH➞Spite",
 			root: ["Spite"],
 			tools: [
 				"No",
@@ -1389,7 +1389,7 @@ export const DarkElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Supplication to Shadows",
 			noList: false,
-			restriction: "Dark Elves only",
+			restriction: "ONLY➞Elf➞WITH➞Spite",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -1404,7 +1404,7 @@ export const DarkElfSpellSong: SkillCategory = {
 			magical: true,
 			name: "Twisted Tongue",
 			noList: false,
-			restriction: "Dark Elves only",
+			restriction: "ONLY➞Elf➞WITH➞Spite",
 			root: ["Spite"],
 			tools: [
 				"No",

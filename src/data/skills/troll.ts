@@ -26,7 +26,7 @@ export const TrollSpecial: SkillCategory = {
 			magical: false,
 			name: "Camouflage",
 			noList: false,
-			restriction: "Trolls only",
+			restriction: "ONLY➞Troll",
 			root: ["Perception", "Agility"],
 			tools: [
 				"No",
@@ -41,7 +41,7 @@ export const TrollSpecial: SkillCategory = {
 			magical: false,
 			name: "Extortion",
 			noList: false,
-			restriction: "Trolls only",
+			restriction: "ONLY➞Troll",
 			root: ["Will", "Perception"],
 			tools: [
 				"No",

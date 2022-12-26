@@ -9,8 +9,8 @@ import { Attributes } from "../../../data/attributes";
 import { GetAttributeExponent, GetAttributeShade } from "../../../utils/characterAttributeUtils";
 
 import { GenericGrid } from "../../Shared/Grids";
-import { AttributeButton } from "../AbilityButtons";
 import { BlockText } from "../BlockText";
+import { AbilityButton } from "../../Shared/AbilityButton";
 
 
 export function AttributesBlock() {
@@ -32,16 +32,16 @@ export function AttributesBlock() {
 								<BlockText text={v.name} hasLeftPadding />
 								<Grid item>
 									{v.hasShade
-										? <AttributeButton
+										? <AbilityButton
 											name={v.name}
 											value={GetAttributeShade(v.name, spendings)}
 											disabled={GetAttributeExponent(v.name, stock, lifepathPaths, totals, spendings, questions) < 6}
-											onClick={cbChangeAttributeShade}
-											onContext={cbChangeAttributeShade}
+											onClick={e => cbChangeAttributeShade(e, v.name, 5)}
+											onContextMenu={e => cbChangeAttributeShade(e, v.name, -5)}
 										/>
 										: null
 									}
-									<AttributeButton name={v.name} value={GetAttributeExponent(v.name, stock, lifepathPaths, totals, spendings, questions)} disabled />
+									<AbilityButton name={v.name} value={GetAttributeExponent(v.name, stock, lifepathPaths, totals, spendings, questions)} disabled />
 								</Grid>
 							</GenericGrid>
 						</Grid>

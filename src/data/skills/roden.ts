@@ -11,7 +11,7 @@ export const RodenSpecial: SkillCategory = {
 			magical: false,
 			name: "Firebombs",
 			noList: false,
-			restriction: "Roden only",
+			restriction: "ONLY➞Roden",
 			root: ["Perception", "Agility"],
 			tools: [
 				"Tools",
@@ -26,7 +26,7 @@ export const RodenSpecial: SkillCategory = {
 			magical: false,
 			name: "Preaching",
 			noList: false,
-			restriction: "Roden only",
+			restriction: "ONLY➞Roden",
 			root: ["Will"],
 			tools: [
 				"No",

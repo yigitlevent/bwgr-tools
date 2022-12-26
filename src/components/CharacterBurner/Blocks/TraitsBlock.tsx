@@ -6,9 +6,9 @@ import Button from "@mui/material/Button";
 
 import { useAppSelector } from "../../../state/store";
 import { useStore } from "../../../hooks/useStore";
+import { GetRemainingTraitTotals, GetTraitOpenness } from "../../../utils/characterTraitUtils";
 
 import { GenericGrid } from "../../Shared/Grids";
-import { GetRemainingTraitTotals, GetTraitOpenness } from "../../../utils/characterTraitUtils";
 import { BlockTraitPopover } from "../BlockText";
 import { GeneralTraitModal } from "../Modals/GeneralTraitModal";
 

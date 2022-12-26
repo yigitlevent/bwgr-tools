@@ -3661,21 +3661,6 @@ export const AnyWise: SkillCategory = {
 			allowed: ["bwg", "bwc", "msc"],
 			description: "",
 			magical: false,
-			name: "Any wise",
-			noList: false,
-			restriction: "N/A",
-			root: ["Perception"],
-			tools: [
-				"No",
-				""
-			],
-			training: false,
-			type: "Wise"
-		},
-		{
-			allowed: ["bwg", "bwc", "msc"],
-			description: "",
-			magical: false,
 			name: "Apocalypse-wise",
 			noList: false,
 			restriction: "N/A",
@@ -6271,21 +6256,6 @@ export const AnyWise: SkillCategory = {
 			allowed: ["bwg", "bwc", "msc"],
 			description: "",
 			magical: false,
-			name: "Hospital-wise",
-			noList: false,
-			restriction: "N/A",
-			root: ["Perception"],
-			tools: [
-				"No",
-				""
-			],
-			training: false,
-			type: "Wise"
-		},
-		{
-			allowed: ["bwg", "bwc", "msc"],
-			description: "",
-			magical: false,
 			name: "Host-wise",
 			noList: false,
 			restriction: "N/A",
@@ -8607,21 +8577,7 @@ export const AnyWise: SkillCategory = {
 			training: false,
 			type: "Wise"
 		},
-		{
-			allowed: ["bwg", "bwc", "msc"],
-			description: "",
-			magical: false,
-			name: "Tax-wise",
-			noList: false,
-			restriction: "N/A",
-			root: ["Perception"],
-			tools: [
-				"No",
-				""
-			],
-			training: false,
-			type: "Wise"
-		},
+
 		{
 			allowed: ["bwg", "bwc", "msc"],
 			description: "",

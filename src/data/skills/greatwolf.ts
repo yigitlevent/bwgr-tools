@@ -11,7 +11,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			magical: true,
 			name: "Ancient Ways",
 			noList: false,
-			restriction: "Great Wolf only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Will", "Perception"],
 			tools: [
 				"No",
@@ -41,7 +41,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			magical: false,
 			name: "Begging",
 			noList: false,
-			restriction: "Great Wolf only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -56,7 +56,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			magical: false,
 			name: "Combat Mount Training",
 			noList: false,
-			restriction: "Great Wolf only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Will", "Power"],
 			tools: [
 				"No",
@@ -101,7 +101,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			magical: false,
 			name: "Escape Artist",
 			noList: false,
-			restriction: "Great Wolf only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Perception", "Agility"],
 			tools: [
 				"No",
@@ -146,7 +146,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			magical: false,
 			name: "Howling",
 			noList: false,
-			restriction: "Great Wolf only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -176,7 +176,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			magical: false,
 			name: "Nature of All Things",
 			noList: false,
-			restriction: "Great Wolf only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Perception", "Will"],
 			tools: [
 				"No",
@@ -191,7 +191,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			magical: false,
 			name: "Nursing",
 			noList: false,
-			restriction: "Great Wolf only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Perception", "Will"],
 			tools: [
 				"No",
@@ -236,7 +236,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			magical: false,
 			name: "Pack Hunting",
 			noList: false,
-			restriction: "Great Wolf only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Perception", "Speed"],
 			tools: [
 				"No",
@@ -251,7 +251,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			magical: false,
 			name: "Pack Etiquette",
 			noList: false,
-			restriction: "Great Wolf only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Perception"],
 			tools: [
 				"No",
@@ -326,7 +326,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			magical: false,
 			name: "Rearing",
 			noList: false,
-			restriction: "Great Wolf only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Perception", "Will"],
 			tools: [
 				"No",
@@ -341,7 +341,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			magical: false,
 			name: "Rider Training",
 			noList: false,
-			restriction: "Great Wolf only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -386,7 +386,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			magical: false,
 			name: "Savage Attack",
 			noList: false,
-			restriction: "Great Wolf only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Agility", "Speed"],
 			tools: [
 				"No",
@@ -401,7 +401,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			magical: false,
 			name: "Scent Tracking",
 			noList: false,
-			restriction: "Great Wolf only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Perception"],
 			tools: [
 				"No",
@@ -461,7 +461,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			magical: true,
 			name: "Tongue of the Ancient One",
 			noList: false,
-			restriction: "Great Wolf only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Perception"],
 			tools: [
 				"No",
@@ -476,7 +476,7 @@ export const GreatWolfSpecial: SkillCategory = {
 			magical: false,
 			name: "Way of the First Hunter",
 			noList: false,
-			restriction: "Great Wolf only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Will", "Perception"],
 			tools: [
 				"No",
@@ -513,7 +513,7 @@ export const GreatWolfSpiritHunterSong: SkillCategory = {
 			magical: true,
 			name: "Ancestral Jaw",
 			noList: false,
-			restriction: "Great Wolves only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Will"],
 			tools: [
 				"No",
@@ -528,7 +528,7 @@ export const GreatWolfSpiritHunterSong: SkillCategory = {
 			magical: true,
 			name: "Grandfather's Song",
 			noList: false,
-			restriction: "Great Wolves only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Ancestral Taint"],
 			tools: [
 				"No",
@@ -543,7 +543,7 @@ export const GreatWolfSpiritHunterSong: SkillCategory = {
 			magical: true,
 			name: "Primal Bark",
 			noList: false,
-			restriction: "Great Wolves only",
+			restriction: "ONLY➞Great Wolf",
 			root: ["Will"],
 			tools: [
 				"No",

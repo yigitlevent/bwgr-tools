@@ -18,6 +18,7 @@ export const Human: Stock = {
 	hasSetting: true,
 	hasSubsetting: true,
 	name: "Human",
+	namePlural: "Humans",
 	stride: 7,
 	settings: {
 		"City Dweller": {

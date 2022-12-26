@@ -9,8 +9,8 @@ import { Stats } from "../../../data/stats";
 import { GetMentalTotal, GetPhysicalTotal, GetRemainingStatTotals, GetStatExponent, GetStatShade } from "../../../utils/characterStatUtils";
 
 import { GenericGrid } from "../../Shared/Grids";
-import { StatButton } from "../AbilityButtons";
 import { BlockText } from "../BlockText";
+import { AbilityButton } from "../../Shared/AbilityButton";
 
 
 export function StatsBlock() {
@@ -37,8 +37,8 @@ export function StatsBlock() {
 						<GenericGrid columns={5} center="h" hasBackground={1}>
 							<BlockText text={v.name} hasLeftPadding />
 							<Grid item sx={{}}>
-								<StatButton name={v.name} value={GetStatShade(v.name, spending)} onClick={cbChangeStatShade} onContext={cbChangeStatShade} />
-								<StatButton name={v.name} value={GetStatExponent(v.name, spending)} onClick={cbChangeStatExponent} onContext={cbChangeStatExponent} />
+								<AbilityButton name={v.name} value={GetStatShade(v.name, spending)} onClick={e => cbChangeStatShade(e, v.name)} onContextMenu={e => cbChangeStatShade(e, v.name)} />
+								<AbilityButton name={v.name} value={GetStatExponent(v.name, spending)} onClick={e => cbChangeStatExponent(e, v.name, 1)} onContextMenu={e => cbChangeStatExponent(e, v.name, -1)} />
 							</Grid>
 						</GenericGrid>
 					</Grid>

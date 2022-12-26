@@ -14,6 +14,7 @@ export const GreatWolf: Stock = {
 	hasSetting: true,
 	hasSubsetting: true,
 	name: "Great Wolf",
+	namePlural: "Great Wolves",
 	stride: 11,
 	settings: {
 		"Captive": {

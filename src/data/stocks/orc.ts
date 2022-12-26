@@ -19,6 +19,7 @@ export const Orc: Stock = {
 	hasSetting: true,
 	hasSubsetting: true,
 	name: "Orc",
+	namePlural: "Orcs",
 	stride: 7,
 	settings: {
 		"Black Legion": {

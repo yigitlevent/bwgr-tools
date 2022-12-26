@@ -6,16 +6,16 @@ import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Paper from "@mui/material/Paper";
 import Autocomplete from "@mui/material/Autocomplete";
+import Typography from "@mui/material/Typography";
 
 import { useAppSelector } from "../../../state/store";
 import { useStore } from "../../../hooks/useStore";
 import { TraitCategories } from "../../../data/traits/_traits";
 import { CheckDatasets } from "../../../utils/checkDatasets";
+import { GetTraitFromPath } from "../../../utils/pathFinder";
+import { GetRemainingTraitTotals } from "../../../utils/characterTraitUtils";
 
 import { GenericGrid } from "../../Shared/Grids";
-import { GetRemainingTraitTotals } from "../../../utils/characterTraitUtils";
-import Typography from "@mui/material/Typography";
-import { GetTraitFromPath } from "../../../utils/pathFinder";
 
 
 export function GeneralTraitModal({ open, setOpen }: { open: boolean; setOpen: (open: boolean) => void; }) {
@@ -38,21 +38,18 @@ export function GeneralTraitModal({ open, setOpen }: { open: boolean; setOpen: (
 			for (const traitKey in category.traits) {
 				const trait = category.traits[traitKey];
 				const traitPath = `${category.name}➞${trait.name}`;
+				const traitRemaining = GetRemainingTraitTotals(totals, spendings);
 
 				const allowedByDataset = CheckDatasets(datasets, trait.allowed);
 				const allowedByStock = trait.stock === "Any" || trait.stock === stock;
-				const isAnyList = totals.traits.commonList.includes(traitPath) || totals.traits.mandatoryList.includes(traitPath)
-					|| totals.traits.lifepathList.includes(traitPath) || totals.traits.generalList.includes(traitPath);
-				if (!(allowedByDataset && allowedByStock) || isAnyList) continue;
-
-				const traitRemaining = GetRemainingTraitTotals(totals, spendings);
-				if (traitRemaining.traitPoints >= trait.cost) {
+				const notInLists = !(totals.traits.commonList.includes(traitPath) || totals.traits.mandatoryList.includes(traitPath)
+					|| totals.traits.lifepathList.includes(traitPath) || totals.traits.generalList.includes(traitPath));
+				const canPayCost = traitRemaining.traitPoints >= trait.cost;
+				if (allowedByDataset && allowedByStock && notInLists && canPayCost) {
 					possibilities.push(traitPath);
 				}
 			}
 		}
-		console.log(possibilities.length);
-		console.log(possibilities);
 		return possibilities;
 	}, [datasets, spendings, stock, totals]);
 

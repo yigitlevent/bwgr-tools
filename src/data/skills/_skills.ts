@@ -15,13 +15,13 @@ export interface Skill {
 	allowed: Ruleset[];
 	magical: boolean;
 	noList: boolean;
-	restriction: string;
+	restriction: "N/A" | `${"ONLY" | "ONLYBURN"}➞${StocksList}${"" | `➞WITH➞${AttributesList}`}`;
 	root: StatsAndAttributesList[];
 	tools: [ToolsList, string];
 	training: boolean;
 	type: SkillTypesList | [];
 
-	subskills?: SkillPath[]
+	subskills?: SkillPath[];
 }
 
 export interface SkillCategory {

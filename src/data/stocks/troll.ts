@@ -17,6 +17,7 @@ export const Troll: Stock = {
 	hasSetting: true,
 	hasSubsetting: false,
 	name: "Troll",
+	namePlural: "Trolls",
 	stride: 7,
 	settings: {
 		"Cavedweller": {

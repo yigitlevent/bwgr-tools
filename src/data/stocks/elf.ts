@@ -25,6 +25,7 @@ export const Elf: Stock = {
 	hasSetting: true,
 	hasSubsetting: true,
 	name: "Elf",
+	namePlural: "Elves",
 	stride: 8,
 	settings: {
 		"Wilderlands": {

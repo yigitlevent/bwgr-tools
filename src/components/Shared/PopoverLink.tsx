@@ -7,6 +7,7 @@ import Grid from "@mui/material/Grid";
 
 import { Skill } from "../../data/skills/_skills";
 import { Trait } from "../../data/traits/_traits";
+import { GetSkillRestrictionString } from "../../utils/getSkillRestriction";
 
 
 function SkillPop({ skill }: { skill: Skill; }) {
@@ -29,7 +30,7 @@ function SkillPop({ skill }: { skill: Skill; }) {
 			</Grid>
 
 			<Grid item xs={2}>
-				<Typography variant="caption">Restrictions: {skill.restriction}</Typography>
+				<Typography variant="caption">Restrictions: {GetSkillRestrictionString(skill)}</Typography>
 			</Grid>
 
 			<Grid item xs={2}>

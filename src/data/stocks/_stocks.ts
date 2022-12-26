@@ -50,6 +50,7 @@ export interface Stock {
 	hasSetting: boolean;
 	hasSubsetting: boolean;
 	name: StocksList;
+	namePlural: string;
 	stride: number;
 	settings: Settings;
 }

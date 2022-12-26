@@ -21,6 +21,7 @@ export const Dwarf: Stock = {
 	hasSetting: true,
 	hasSubsetting: true,
 	name: "Dwarf",
+	namePlural: "Dwarves",
 	stride: 6,
 	settings: {
 		"Artificer": {
