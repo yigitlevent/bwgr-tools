@@ -3202,21 +3202,6 @@ export const AnyMonstrous: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "Begging is the Wolf's version of the Persuasion skill. This skill may be used as Persuasion in a Duel of Wits between Great Wolves or their friends. When a submissive wolf wants something, whether it be food or permission, he must beg the dominant for it. Begging is not humiliating to a wolf; it is part of their nature. Sometimes the female dominant will even need to beg when she is nursing her pups -she begs the pack to bring them food.",
-			magical: false,
-			name: "Begging ",
-			noList: false,
-			restriction: "N/A",
-			root: ["Will"],
-			tools: [
-				"No",
-				""
-			],
-			training: false,
-			type: "Social"
-		},
-		{
-			allowed: ["bwc"],
 			description: "Using this skill, a Troll may take on the appearance of his surroundings and remain hidden. The Dread Stone love to build up false stone walls around themselves and then wait for an unsuspecting passerby to wander into reach.<br>Using this skill effectively requires that the Troll remain motionless while camouflaged. Test this skill as a Stealthy skill.",
 			magical: false,
 			name: "Camouflage",

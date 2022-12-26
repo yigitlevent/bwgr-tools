@@ -3041,7 +3041,7 @@ export const Human: Stock = {
 					stock: "Human",
 					traitPool: 1,
 					traits: [
-						"Human Special➞Council of Mages ",
+						"Human Special➞Council of Mages",
 						"Human Lifepath➞Imperious Demeanor"
 					],
 					years: 5

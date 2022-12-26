@@ -143,7 +143,7 @@ export const RangeAndCoverActions: RangeAndCoverAction[] = [
 	{
 		name: "Sneak Out",
 		group: "Withdrawal",
-		test: "Sneak Out tests Stealthy plus FoRKs, advantage from weapon range, position and stride. ",
+		test: "Sneak Out tests Stealthy plus FoRKs, advantage from weapon range, position and stride.",
 		effect: "Using guile and subterfuge, you move unseen away from your opponent's position. If successful, the character withdraws one range category. Position dice are not carried to the next volley. You abandon your position. You may allocate margin of success to finding a new position in this maneuver if appropriate.",
 		resolution: {
 			"Close": "vs Speed",

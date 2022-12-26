@@ -3751,7 +3751,7 @@ export const AnyCallon: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 4,
-			description: "This character understands the dangers and customs of city living. This trait may be used as a call-on for Streetwise, City-wise and Circles in the City Dweller Setting. ",
+			description: "This character understands the dangers and customs of city living. This trait may be used as a call-on for Streetwise, City-wise and Circles in the City Dweller Setting.",
 			name: "Street Smart",
 			stock: "Any",
 			type: "Call-on"

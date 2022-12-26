@@ -254,7 +254,7 @@ export const DarkElfLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "Dark Elves trade their Grief for a burning Spite. Something has snapped inside the Dark Elf's soul -Grief seems folly to him. Whatever the truth of an immortal life is, Dark Elves know that it does not lay silently grieving with his Elven brothers. ",
+			description: "Dark Elves trade their Grief for a burning Spite. Something has snapped inside the Dark Elf's soul -Grief seems folly to him. Whatever the truth of an immortal life is, Dark Elves know that it does not lay silently grieving with his Elven brothers.",
 			name: "Spite",
 			stock: "Elf",
 			type: "Die"

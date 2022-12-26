@@ -584,7 +584,7 @@ export const HumanSpecial: TraitCategory = {
 			allowed: ["bwc"],
 			cost: 6,
 			description: "The Council of Mages is a small, secretive, yet powerful entity. This trait grants 1D reputation and a 1D affiliation with this organization. This combines with other appropriate reputations and affiliations.",
-			name: "Council of Mages ",
+			name: "Council of Mages",
 			stock: "Human",
 			type: "Die"
 		},
