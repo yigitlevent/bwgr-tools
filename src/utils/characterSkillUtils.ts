@@ -86,7 +86,7 @@ export function ModifySkillExponentSpending(skillName: string, spendings: Charac
 
 	if (change === 1) {
 		if (isLifepath && remaining.lifepathPoints > 0) spending.lifepath.advance += 1;
-		else if (remaining.generalPoints > 0) spending.general.advance += 1;
+		else if (!isLifepath && remaining.generalPoints > 0) spending.general.advance += 1;
 	}
 	else if (change === -1) {
 		if (spending.general.advance > 0) spending.general.advance -= 1;
@@ -97,12 +97,17 @@ export function ModifySkillExponentSpending(skillName: string, spendings: Charac
 }
 
 // REFRESH
-export function RefreshSkillList(totals: LifepathTotals, spendings: CharacterSpendings): CharacterSpendings {
+export function RefreshSkillsList(totals: LifepathTotals, spendings: CharacterSpendings): CharacterSpendings {
 	const newSpending = JSON.parse(JSON.stringify(spendings)) as CharacterSpendings;
 
 	for (const key in spendings.skills) {
-		if (key in totals.skills.mandatoryList || key in totals.skills.lifepathList) {
-			newSpending.skills[key] = spendings.skills[key];
+		if (key in totals.skills.mandatoryList || key in totals.skills.lifepathList || key in totals.skills.generalList) {
+			if (key in totals.skills.generalList) {
+				newSpending.skills[key] = { ...spendings.skills[key], lifepath: { open: 0, advance: 0 } };
+			}
+			else {
+				newSpending.skills[key] = spendings.skills[key];
+			}
 		}
 		else delete newSpending.skills[key];
 	}
@@ -115,6 +120,10 @@ export function RefreshSkillList(totals: LifepathTotals, spendings: CharacterSpe
 	});
 
 	totals.skills.lifepathList.map(skillName => {
+		if (!(skillName in newSpending.skills)) newSpending.skills[skillName] = { general: { open: 0, advance: 0 }, lifepath: { open: 0, advance: 0 } };
+	});
+
+	totals.skills.generalList.map(skillName => {
 		if (!(skillName in newSpending.skills)) newSpending.skills[skillName] = { general: { open: 0, advance: 0 }, lifepath: { open: 0, advance: 0 } };
 	});
 

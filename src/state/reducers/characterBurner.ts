@@ -1,9 +1,9 @@
 import { AttributeQuestionsKeys } from "../../data/attributes";
 import { ModifyAttributeShadeSpending, RefreshAttributesList } from "../../utils/characterAttributeUtils";
 import { RefreshQuestionsList, SwitchAnswer } from "../../utils/characterQuestionUtils";
-import { TryOpenSkill, RefreshSkillList, ModifySkillExponentSpending } from "../../utils/characterSkillUtils";
+import { TryOpenSkill, RefreshSkillsList, ModifySkillExponentSpending } from "../../utils/characterSkillUtils";
 import { ModifyStatExponentSpending, ModifyStatShadeSpending } from "../../utils/characterStatUtils";
-import { RefreshTraitList, TryOpenTrait } from "../../utils/characterTraitUtils";
+import { RefreshTraitsList, TryOpenTrait } from "../../utils/characterTraitUtils";
 import { CalculateLifepathTotals, EmptyTotals, LifepathTotals } from "../../utils/lifepathTotals";
 import { GetLifepathsFromPaths } from "../../utils/pathFinder";
 
@@ -31,13 +31,18 @@ interface SelectMandApprWeapon { type: "SELECT_CB_MAND_APPR_WEAPON"; payload: { 
 interface SelectJavelinOrBow { type: "SELECT_CB_JAVELIN_OR_BOW"; payload: { skillName: SkillPath; }; }
 interface SelectAnySmith { type: "SELECT_CB_ANY_SMITH"; payload: { skillName: SkillPath; }; }
 
+interface AddTrait { type: "ADD_CB_TRAIT"; payload: { traitName: TraitPath; }; }
+interface RemoveTrait { type: "REMOVE_CB_TRAIT"; payload: { traitName: TraitPath; }; }
+interface AddSkill { type: "ADD_CB_SKILL"; payload: { skillName: SkillPath; }; }
+interface RemoveSkill { type: "REMOVE_CB_SKILL"; payload: { skillName: SkillPath; }; }
+
 export type CharacterBurnerActions =
 	ChangeCharacterStock | ChangeCharacterConcept |
 	AddLifepath | RemoveLifepath |
 	ChangeStatShade | ChangeStatExponent |
 	ChangeAttributeShade |
-	OpenSkill | ChangeSkillAdvancement |
-	OpenTrait |
+	OpenSkill | ChangeSkillAdvancement | AddSkill | RemoveSkill |
+	OpenTrait | AddTrait | RemoveTrait |
 	SwitchQuestionAnswer |
 	SelectApprWeapon | SelectMandApprWeapon | SelectJavelinOrBow | SelectAnySmith;
 
@@ -130,9 +135,12 @@ const INITIAL: CharacterBurnerState = {
 	questions: {}
 };
 
+function GetTotals(state: CharacterBurnerState): LifepathTotals { return JSON.parse(JSON.stringify(state.totals)); }
 function GetEmptyTotals(): LifepathTotals { return JSON.parse(JSON.stringify(EmptyTotals)); }
+
 function GetSpending(state: CharacterBurnerState): CharacterSpendings { return JSON.parse(JSON.stringify(state.spendings)); }
 function GetEmptySpending(): CharacterSpendings { return JSON.parse(JSON.stringify(EmptySpendings)); }
+
 function GetQuestions(state: CharacterBurnerState): CharacterQuestions { return JSON.parse(JSON.stringify(state.questions)); }
 
 export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerActions): CharacterBurnerState => {
@@ -158,8 +166,8 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		const newTotals: LifepathTotals = lifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(lifepaths), state.specialSkills) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
-			skills: RefreshSkillList(newTotals, state.spendings).skills,
-			traits: RefreshTraitList(newTotals, state.spendings).traits,
+			skills: RefreshSkillsList(newTotals, state.spendings).skills,
+			traits: RefreshTraitsList(newTotals, state.spendings).traits,
 			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
 		};
 		const newQuestions: CharacterQuestions = RefreshQuestionsList(newTotals, newSpendings, GetQuestions(state));
@@ -177,8 +185,8 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		const newTotals = lifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(lifepaths), state.specialSkills) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
-			skills: RefreshSkillList(newTotals, state.spendings).skills,
-			traits: RefreshTraitList(newTotals, state.spendings).traits,
+			skills: RefreshSkillsList(newTotals, state.spendings).skills,
+			traits: RefreshTraitsList(newTotals, state.spendings).traits,
 			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
 		};
 		const newQuestions: CharacterQuestions = RefreshQuestionsList(newTotals, newSpendings, GetQuestions(state));
@@ -259,7 +267,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		else {
 			newSpecialSkills.appropriateWeapons.selected.push(action.payload.skillName);
 		}
-		
+
 		newSpecialSkills.appropriateWeapons.mandatory =
 			(newSpecialSkills.appropriateWeapons.selected.includes(newSpecialSkills.appropriateWeapons.mandatory))
 				? newSpecialSkills.appropriateWeapons.mandatory
@@ -269,7 +277,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
-			skills: RefreshSkillList(newTotals, state.spendings).skills,
+			skills: RefreshSkillsList(newTotals, state.spendings).skills,
 			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
 		};
 
@@ -291,7 +299,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
-			skills: RefreshSkillList(newTotals, state.spendings).skills,
+			skills: RefreshSkillsList(newTotals, state.spendings).skills,
 			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
 		};
 
@@ -310,7 +318,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
-			skills: RefreshSkillList(newTotals, state.spendings).skills,
+			skills: RefreshSkillsList(newTotals, state.spendings).skills,
 			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
 		};
 
@@ -334,7 +342,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
-			skills: RefreshSkillList(newTotals, state.spendings).skills,
+			skills: RefreshSkillsList(newTotals, state.spendings).skills,
 			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
 		};
 
@@ -343,6 +351,62 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 			totals: newTotals,
 			spendings: newSpendings,
 			specialSkills: newSpecialSkills
+		};
+	}
+	else if (action.type === "ADD_CB_TRAIT") {
+		const newTotals = GetTotals(state);
+		newTotals.traits.generalList.push(action.payload.traitName);
+		const newSpendings: CharacterSpendings = {
+			...state.spendings,
+			traits: RefreshTraitsList(newTotals, state.spendings).traits,
+			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
+		};
+		return {
+			...state,
+			totals: newTotals,
+			spendings: newSpendings
+		};
+	}
+	else if (action.type === "REMOVE_CB_TRAIT") {
+		const newTotals = GetTotals(state);
+		newTotals.traits.generalList = newTotals.traits.generalList.filter(v => v !== action.payload.traitName);
+		const newSpendings: CharacterSpendings = {
+			...state.spendings,
+			traits: RefreshTraitsList(newTotals, state.spendings).traits,
+			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
+		};
+		return {
+			...state,
+			totals: newTotals,
+			spendings: newSpendings
+		};
+	}
+	else if (action.type === "ADD_CB_SKILL") {
+		const newTotals = GetTotals(state);
+		newTotals.skills.generalList.push(action.payload.skillName);
+		const newSpendings: CharacterSpendings = {
+			...state.spendings,
+			skills: RefreshSkillsList(newTotals, state.spendings).skills,
+			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
+		};
+		return {
+			...state,
+			totals: newTotals,
+			spendings: newSpendings
+		};
+	}
+	else if (action.type === "REMOVE_CB_SKILL") {
+		const newTotals = GetTotals(state);
+		newTotals.skills.generalList = newTotals.skills.generalList.filter(v => v !== action.payload.skillName);
+		const newSpendings: CharacterSpendings = {
+			...state.spendings,
+			skills: RefreshSkillsList(newTotals, state.spendings).skills,
+			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
+		};
+		return {
+			...state,
+			totals: newTotals,
+			spendings: newSpendings
 		};
 	}
 

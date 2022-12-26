@@ -347,6 +347,18 @@ export function useStore() {
 		},
 		cbSelectAnySmith: (skillName: SkillPath) => {
 			dispatch({ type: "SELECT_CB_ANY_SMITH", payload: { skillName } });
+		},
+		cbAddTrait: (traitName: TraitPath) => {
+			dispatch({ type: "ADD_CB_TRAIT", payload: { traitName } });
+		},
+		cbRemoveTrait: (traitName: TraitPath) => {
+			dispatch({ type: "REMOVE_CB_TRAIT", payload: { traitName } });
+		},
+		cbAddSkill: (skillName: SkillPath) => {
+			dispatch({ type: "ADD_CB_SKILL", payload: { skillName } });
+		},
+		cbRemoveSkill: (skillName: SkillPath) => {
+			dispatch({ type: "REMOVE_CB_SKILL", payload: { skillName } });
 		}
 	};
 

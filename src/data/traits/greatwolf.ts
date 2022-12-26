@@ -190,14 +190,6 @@ export const GreatWolfLifepath: TraitCategory = {
 		},
 		{
 			allowed: ["bwc", "msc"],
-			cost: 1,
-			description: "",
-			name: "Scavenger",
-			stock: "Any",
-			type: "Character"
-		},
-		{
-			allowed: ["bwc", "msc"],
 			cost: 0,
 			description: "After life in the cage, you can't help but act against the world that has hurt you. Instincts that get you into weird or deep trouble earn a persona point instead of a fate point.",
 			name: "Slave No More",

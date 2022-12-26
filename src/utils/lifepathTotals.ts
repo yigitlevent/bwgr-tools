@@ -31,12 +31,14 @@ export interface LifepathTotals {
 		};
 		mandatoryList: string[];
 		lifepathList: string[];
+		generalList: string[];
 	};
 	traits: {
 		points: number;
 		commonList: string[];
 		mandatoryList: string[];
 		lifepathList: string[];
+		generalList: string[];
 	};
 }
 
@@ -72,13 +74,15 @@ export const EmptyTotals: LifepathTotals = {
 			extensions: []
 		},
 		mandatoryList: [],
-		lifepathList: []
+		lifepathList: [],
+		generalList: []
 	},
 	traits: {
 		points: 0,
 		commonList: [],
 		mandatoryList: [],
-		lifepathList: []
+		lifepathList: [],
+		generalList: []
 	}
 };
 
@@ -183,8 +187,6 @@ export function CalculateLifepathTotals(chosenLifepaths: Lifepath[], specialSkil
 	totals.traits.commonList = Array.from(commonTraits);
 	totals.traits.mandatoryList = Array.from(mandTraits);
 	totals.traits.lifepathList = Array.from(traits);
-
-	console.log(totals);
 
 	return totals;
 }

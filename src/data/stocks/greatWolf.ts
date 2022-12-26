@@ -312,7 +312,7 @@ export const GreatWolf: Stock = {
 					stock: "Great Wolf",
 					traitPool: 1,
 					traits: [
-						"Great Wolf Lifepath➞Scavenger"
+						"Any Character➞Scavenger"
 					],
 					years: 1
 				}

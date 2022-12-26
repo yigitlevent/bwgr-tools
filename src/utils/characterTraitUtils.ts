@@ -30,12 +30,8 @@ export function TryOpenTrait(traitName: string, totals: LifepathTotals, spending
 	const traitRemainings = GetRemainingTraitTotals(totals, spendings);
 
 	if (toOpen) {
-		if (isLifepath && traitRemainings.traitPoints >= 1) {
-			spending.open = 1;
-		}
-		else if (!isLifepath && traitRemainings.traitPoints >= trait.cost) {
-			spending.open = trait.cost;
-		}
+		if (isLifepath && traitRemainings.traitPoints >= 1) spending.open = 1;
+		else if (!isLifepath && traitRemainings.traitPoints >= trait.cost) spending.open = trait.cost;
 	}
 	else {
 		spending.open = 0;
@@ -45,11 +41,11 @@ export function TryOpenTrait(traitName: string, totals: LifepathTotals, spending
 }
 
 // REFRESH
-export function RefreshTraitList(totals: LifepathTotals, spendings: CharacterSpendings): CharacterSpendings {
+export function RefreshTraitsList(totals: LifepathTotals, spendings: CharacterSpendings): CharacterSpendings {
 	const newSpending = JSON.parse(JSON.stringify(spendings)) as CharacterSpendings;
 
 	for (const key in spendings.traits) {
-		if (key in totals.traits.mandatoryList || key in totals.traits.lifepathList) {
+		if (key in totals.traits.mandatoryList || key in totals.traits.lifepathList || key in totals.traits.generalList) {
 			newSpending.traits[key] = spendings.traits[key];
 		}
 		else delete newSpending.traits[key];
@@ -63,6 +59,10 @@ export function RefreshTraitList(totals: LifepathTotals, spendings: CharacterSpe
 	});
 
 	totals.traits.lifepathList.map(traitName => {
+		if (!(traitName in newSpending.traits)) newSpending.traits[traitName] = { open: 0 };
+	});
+
+	totals.traits.generalList.map(traitName => {
 		if (!(traitName in newSpending.traits)) newSpending.traits[traitName] = { open: 0 };
 	});
 
