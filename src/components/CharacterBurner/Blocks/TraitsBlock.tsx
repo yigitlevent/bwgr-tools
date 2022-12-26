@@ -13,7 +13,6 @@ import { BlockTraitPopover } from "../BlockText";
 import { GeneralTraitModal } from "../Modals/GeneralTraitModal";
 
 
-
 function CommonTraitsBlock() {
 	const { totals } = useAppSelector(state => state.characterBurner);
 
@@ -149,7 +148,6 @@ export function TraitsBlock() {
 					variant="outlined"
 					size="medium"
 					onClick={() => setOpen(true)}
-					disabled={GetRemainingTraitTotals(totals, spendings).traitPoints === 0}
 					sx={{ margin: "16px 0 16px 0" }}
 				>
 					Add General Trait

@@ -163,7 +163,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	else if (action.type === "ADD_CB_LIFEPATH") {
 		const lifepaths = [...state.lifepathPaths];
 		lifepaths.push(action.payload.lifepathPath);
-		const newTotals: LifepathTotals = lifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(lifepaths), state.specialSkills) : EmptyTotals;
+		const newTotals: LifepathTotals = lifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(lifepaths), state.specialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			skills: RefreshSkillsList(newTotals, state.spendings).skills,
@@ -182,7 +182,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	else if (action.type === "REMOVE_CB_LIFEPATH") {
 		const lifepaths = [...state.lifepathPaths];
 		lifepaths.pop();
-		const newTotals = lifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(lifepaths), state.specialSkills) : EmptyTotals;
+		const newTotals = lifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(lifepaths), state.specialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			skills: RefreshSkillsList(newTotals, state.spendings).skills,
@@ -274,7 +274,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 				: newSpecialSkills.appropriateWeapons.selected[0];
 
 		const lifepaths = GetLifepathsFromPaths(state.lifepathPaths);
-		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills) : EmptyTotals;
+		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			skills: RefreshSkillsList(newTotals, state.spendings).skills,
@@ -296,7 +296,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 				: newSpecialSkills.appropriateWeapons.selected[0];
 
 		const lifepaths = GetLifepathsFromPaths(state.lifepathPaths);
-		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills) : EmptyTotals;
+		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			skills: RefreshSkillsList(newTotals, state.spendings).skills,
@@ -315,7 +315,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		newSpecialSkills.javelinOrBow = action.payload.skillName;
 
 		const lifepaths = GetLifepathsFromPaths(state.lifepathPaths);
-		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills) : EmptyTotals;
+		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			skills: RefreshSkillsList(newTotals, state.spendings).skills,
@@ -339,7 +339,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		}
 
 		const lifepaths = GetLifepathsFromPaths(state.lifepathPaths);
-		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills) : EmptyTotals;
+		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			skills: RefreshSkillsList(newTotals, state.spendings).skills,

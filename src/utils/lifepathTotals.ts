@@ -86,7 +86,7 @@ export const EmptyTotals: LifepathTotals = {
 	}
 };
 
-export function CalculateLifepathTotals(chosenLifepaths: Lifepath[], specialSkills: SpecialSkills) {
+export function CalculateLifepathTotals(chosenLifepaths: Lifepath[], specialSkills: SpecialSkills, generalSkills: string[], generalTraits: string[]) {
 	const totals: LifepathTotals = JSON.parse(JSON.stringify(EmptyTotals));
 
 	for (let i = 0; i < chosenLifepaths.length; i++) {
@@ -183,10 +183,22 @@ export function CalculateLifepathTotals(chosenLifepaths: Lifepath[], specialSkil
 
 	totals.skills.mandatoryList = Array.from(mandSkills);
 	totals.skills.lifepathList = Array.from(skills);
+	for (const key in generalSkills) {
+		const skillPath = generalSkills[key];
+		if (!(skillPath in totals.skills.mandatoryList || skillPath in totals.skills.lifepathList)) {
+			totals.skills.generalList.push(skillPath);
+		}
+	}
 
 	totals.traits.commonList = Array.from(commonTraits);
 	totals.traits.mandatoryList = Array.from(mandTraits);
 	totals.traits.lifepathList = Array.from(traits);
+	for (const key in generalTraits) {
+		const traitPath = generalTraits[key];
+		if (!(traitPath in totals.traits.commonList || traitPath in totals.traits.mandatoryList || traitPath in totals.traits.lifepathList)) {
+			totals.traits.generalList.push(traitPath);
+		}
+	}
 
 	return totals;
 }
