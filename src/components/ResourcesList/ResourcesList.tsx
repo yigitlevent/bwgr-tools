@@ -53,6 +53,16 @@ function ResourceItem({ resource }: { resource: Resource; }) {
 				</Fragment>
 				: null
 			}
+			<Grid item xs={3}>
+				{resource.modifiers
+					? <Fragment>
+						<Box>
+							Modifiers: {resource.modifiers.map((v, i) => <Typography variant="body2" key={i}>{v[0]}: {v[1]}{v[1] > 1 ? "rps" : "rp"}</Typography>)}
+						</Box>
+					</Fragment>
+					: null
+				}
+			</Grid>
 			{resource.magical
 				? <Fragment>
 					<Grid item xs={3}><Divider /></Grid>
