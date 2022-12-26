@@ -26,27 +26,63 @@ import { CheckDatasets } from "../../utils/checkDatasets";
 
 
 function ResourceItem({ resource }: { resource: Resource; }) {
-	// FIX: [RESOURCES] handle modifiers
 	return (
-		<GenericGrid columns={3} center>
+		<GenericGrid columns={3}>
 			<Grid item xs={2}>
 				<Typography variant="h4">{resource.name} </Typography>
 			</Grid>
 			<Grid item xs={1}>
 				<Typography sx={{ float: "right" }}>{resource.type}</Typography>
 			</Grid>
-			<Grid item xs={3}>
+			<Grid item xs={resource.magical ? 1 : 3}>
 				{typeof resource.cost === "string"
 					? <Typography>Cost: {resource.cost}</Typography>
 					: typeof resource.cost === "number"
-						? <Typography>Cost: {resource.cost}{resource.cost > 1 ? "rps" : "rp"}</Typography>
+						? <Typography variant="body2">Cost: {resource.cost}{resource.cost > 1 ? "rps" : "rp"}</Typography>
 						: <Box>Cost: {resource.cost.map((v, i) => <Typography variant="body2" key={i}>{v[0]}: {v[1]}{v[1] > 1 ? "rps" : "rp"}</Typography>)}</Box>
 				}
 			</Grid>
+			{resource.magical
+				? <Fragment>
+					<Grid item xs={1}>
+						<Typography variant="body2">Obstacle: {resource.magical.obstacle}</Typography>
+					</Grid>
+					<Grid item xs={1}>
+						<Typography variant="body2">Actions: {resource.magical.actions}</Typography>
+					</Grid>
+				</Fragment>
+				: null
+			}
+			{resource.magical
+				? <Fragment>
+					<Grid item xs={3}><Divider /></Grid>
+					<Grid item xs={1}>
+						<Typography variant="body2">Origin: {resource.magical.origin}</Typography>
+					</Grid>
+					<Grid item xs={1}>
+						<Typography variant="body2">Element: {resource.magical.element.join("/")}</Typography>
+					</Grid>
+					<Grid item xs={1}>
+						<Typography variant="body2">Duration: {resource.magical.duration}</Typography>
+					</Grid>
+					<Grid item xs={1}>
+						<Typography variant="body2">Area of Effect: {resource.magical.areaOfEffect}</Typography>
+					</Grid>
+					<Grid item xs={1}>
+						<Typography variant="body2">Impetus: {resource.magical.impetus.join("/")}</Typography>
+					</Grid>
+				</Fragment>
+				: null
+			}
 			{resource.description
 				? <Fragment>
 					<Grid item xs={3}><Divider /></Grid>
-					<Grid item xs={3}>{resource.description.split("<br>").map((v, i) => <Typography key={i} variant="body2">{v}</Typography>)}</Grid>
+					<Grid item xs={3}>
+						{resource.description.split("<br>").map((v, i) => {
+							if (resource.magical && i === 0) return <Typography key={i} variant="subtitle2">{v}</Typography>;
+							return <Typography key={i} variant="body2">{v}</Typography>;
+						})}
+					</Grid>
 				</Fragment>
 				: null
 			}

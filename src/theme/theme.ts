@@ -129,7 +129,7 @@ export const THEME = createTheme({
 			lineHeight: "20px",
 			textJustify: "inter-word",
 			marginTop: "3px",
-			fontSize: "16px"
+			fontSize: "18px"
 		},
 		body1: {
 			fontFamily: "text"
