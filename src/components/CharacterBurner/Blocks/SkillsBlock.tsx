@@ -39,12 +39,10 @@ function MandatorySkillsBlock() {
 									}}
 								/>
 								<Grid item>
-									<AbilityButton name={skillName} value={GetSkillShade(skillName, spendings)} disabled />
-									<AbilityButton
-										value={GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions)}
-										onClick={e => cbChangeSkillExponent(e, skillName, 1, true)}
-										onContextMenu={e => cbChangeSkillExponent(e, skillName, -1, true)}
-									/>
+									<AbilityButton name={skillName} disabled>{GetSkillShade(skillName, spendings)}</AbilityButton>
+									<AbilityButton onClick={e => cbChangeSkillExponent(e, skillName, 1, true)} onContextMenu={e => cbChangeSkillExponent(e, skillName, -1, true)}>
+										{GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions)}
+									</AbilityButton>
 								</Grid>
 							</GenericGrid>
 						</Grid>
@@ -78,13 +76,14 @@ function LifepathSkillsBlock() {
 									}}
 								/>
 								<Grid item sx={{ marginTop: "3px" }}>
-									<AbilityButton name={skillName} value={GetSkillShade(skillName, spendings)} disabled />
+									<AbilityButton name={skillName} disabled>{GetSkillShade(skillName, spendings)}</AbilityButton>
 									<AbilityButton
-										value={GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions)}
 										disabled={!GetSkillOpenness(skillName, spendings)}
 										onClick={e => cbChangeSkillExponent(e, skillName, 1, true)}
 										onContextMenu={e => cbChangeSkillExponent(e, skillName, -1, true)}
-									/>
+									>
+										{GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions)}
+									</AbilityButton>
 								</Grid>
 							</GenericGrid>
 						</Grid>
@@ -118,14 +117,15 @@ function GeneralSkillsBlock() {
 									}}
 								/>
 								<Grid item sx={{ marginTop: "3px" }}>
-									<AbilityButton name={skillName} value={GetSkillShade(skillName, spendings)} disabled />
+									<AbilityButton name={skillName} disabled>{GetSkillShade(skillName, spendings)}</AbilityButton>
 									<AbilityButton
 										name={skillName}
-										value={GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions)}
 										disabled={!GetSkillOpenness(skillName, spendings)}
 										onClick={e => cbChangeSkillExponent(e, skillName, 1, false)}
 										onContextMenu={e => cbChangeSkillExponent(e, skillName, -1, false)}
-									/>
+									>
+										{GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions)}
+									</AbilityButton>
 								</Grid>
 							</GenericGrid>
 						</Grid>

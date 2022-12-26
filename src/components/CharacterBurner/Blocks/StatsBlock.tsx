@@ -37,8 +37,8 @@ export function StatsBlock() {
 						<GenericGrid columns={5} center="h" hasBackground={1}>
 							<BlockText text={v.name} hasLeftPadding />
 							<Grid item sx={{}}>
-								<AbilityButton name={v.name} value={GetStatShade(v.name, spending)} onClick={e => cbChangeStatShade(e, v.name)} onContextMenu={e => cbChangeStatShade(e, v.name)} />
-								<AbilityButton name={v.name} value={GetStatExponent(v.name, spending)} onClick={e => cbChangeStatExponent(e, v.name, 1)} onContextMenu={e => cbChangeStatExponent(e, v.name, -1)} />
+								<AbilityButton name={v.name} onClick={e => cbChangeStatShade(e, v.name)} onContextMenu={e => cbChangeStatShade(e, v.name)}>{GetStatShade(v.name, spending)}</AbilityButton>
+								<AbilityButton name={v.name} onClick={e => cbChangeStatExponent(e, v.name, 1)} onContextMenu={e => cbChangeStatExponent(e, v.name, -1)}>{GetStatExponent(v.name, spending)}</AbilityButton>
 							</Grid>
 						</GenericGrid>
 					</Grid>

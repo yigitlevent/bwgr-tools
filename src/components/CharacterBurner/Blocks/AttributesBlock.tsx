@@ -34,14 +34,17 @@ export function AttributesBlock() {
 									{v.hasShade
 										? <AbilityButton
 											name={v.name}
-											value={GetAttributeShade(v.name, spendings)}
 											disabled={GetAttributeExponent(v.name, stock, lifepathPaths, totals, spendings, questions) < 6}
 											onClick={e => cbChangeAttributeShade(e, v.name, 5)}
 											onContextMenu={e => cbChangeAttributeShade(e, v.name, -5)}
-										/>
+										>
+											{GetAttributeShade(v.name, spendings)}
+										</AbilityButton>
 										: null
 									}
-									<AbilityButton name={v.name} value={GetAttributeExponent(v.name, stock, lifepathPaths, totals, spendings, questions)} disabled />
+									<AbilityButton name={v.name} disabled>
+										{GetAttributeExponent(v.name, stock, lifepathPaths, totals, spendings, questions)}
+									</AbilityButton>
 								</Grid>
 							</GenericGrid>
 						</Grid>
