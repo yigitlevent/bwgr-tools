@@ -189,7 +189,7 @@ const SorcerySpells: Resource[] = [
 		}
 	},
 	{
-		name: "Cat+s Eye",
+		name: "Cat's Eye",
 		allowed: ["bwg"],
 		type: "Magical",
 		description: "",
@@ -317,7 +317,7 @@ const SorcerySpells: Resource[] = [
 		}
 	},
 	{
-		name: "Dog+s Ear",
+		name: "Dog's Ear",
 		allowed: ["bwg"],
 		type: "Magical",
 		description: "",
@@ -349,7 +349,7 @@ const SorcerySpells: Resource[] = [
 		}
 	},
 	{
-		name: "Emperor+s Hand",
+		name: "Emperor's Hand",
 		allowed: ["bwg"],
 		type: "Magical",
 		description: "",
@@ -509,7 +509,7 @@ const SorcerySpells: Resource[] = [
 		}
 	},
 	{
-		name: "Havoc+s Hand",
+		name: "Havoc's Hand",
 		allowed: ["bwg"],
 		type: "Magical",
 		description: "",
@@ -541,7 +541,7 @@ const SorcerySpells: Resource[] = [
 		}
 	},
 	{
-		name: "Horse+s Stride",
+		name: "Horse's Stride",
 		allowed: ["bwg"],
 		type: "Magical",
 		description: "",
@@ -717,7 +717,7 @@ const SorcerySpells: Resource[] = [
 		}
 	},
 	{
-		name: "Philosopher+s Perch",
+		name: "Philosopher's Perch",
 		allowed: ["bwg"],
 		type: "Magical",
 		description: "",
@@ -781,7 +781,7 @@ const SorcerySpells: Resource[] = [
 		}
 	},
 	{
-		name: "Sarch+s Glare",
+		name: "Sarch's Glare",
 		allowed: ["bwg"],
 		type: "Magical",
 		description: "",
