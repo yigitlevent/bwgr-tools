@@ -26,6 +26,7 @@ import { CheckDatasets } from "../../utils/checkDatasets";
 
 
 function ResourceItem({ resource }: { resource: Resource; }) {
+	// FIX: [RESOURCES] handle modifiers
 	return (
 		<GenericGrid columns={3} center>
 			<Grid item xs={2}>

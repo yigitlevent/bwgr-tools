@@ -15,7 +15,7 @@ export const Orc: Stock = {
 		{ max: 150, min: 126, m: 9, p: 18 },
 		{ max: 99999, min: 151, m: 9, p: 19 }
 	],
-	allowed: ["bwg", "bwc", "msc"],
+	allowed: ["bwg"],
 	hasSetting: true,
 	hasSubsetting: true,
 	name: "Orc",
@@ -23,14 +23,14 @@ export const Orc: Stock = {
 	stride: 7,
 	settings: {
 		"Black Legion": {
-			allowed: ["bwg", "bwc", "msc"],
+			allowed: ["bwg"],
 			name: "Black Legion",
 			short: "Legion",
 			stock: "Orc",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -67,7 +67,7 @@ export const Orc: Stock = {
 					years: 3
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -102,7 +102,7 @@ export const Orc: Stock = {
 					years: 3
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -139,7 +139,7 @@ export const Orc: Stock = {
 					years: 4
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -172,7 +172,7 @@ export const Orc: Stock = {
 					years: 4
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -209,7 +209,7 @@ export const Orc: Stock = {
 					years: 1
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -245,7 +245,7 @@ export const Orc: Stock = {
 					years: 3
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -282,7 +282,7 @@ export const Orc: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -322,7 +322,7 @@ export const Orc: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -363,7 +363,7 @@ export const Orc: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -405,7 +405,7 @@ export const Orc: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -445,7 +445,7 @@ export const Orc: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -486,14 +486,14 @@ export const Orc: Stock = {
 			]
 		},
 		"Chattel": {
-			allowed: ["bwg", "bwc", "msc"],
+			allowed: ["bwg"],
 			name: "Chattel",
 			short: "Chattel",
 			stock: "Orc",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -515,7 +515,7 @@ export const Orc: Stock = {
 					years: 10
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -541,7 +541,7 @@ export const Orc: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -571,7 +571,7 @@ export const Orc: Stock = {
 					years: 3
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -597,7 +597,7 @@ export const Orc: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -625,7 +625,7 @@ export const Orc: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -651,7 +651,7 @@ export const Orc: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -677,7 +677,7 @@ export const Orc: Stock = {
 					years: 4
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -704,7 +704,7 @@ export const Orc: Stock = {
 					years: 3
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -734,7 +734,7 @@ export const Orc: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -764,7 +764,7 @@ export const Orc: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -795,7 +795,7 @@ export const Orc: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -826,7 +826,7 @@ export const Orc: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -861,7 +861,7 @@ export const Orc: Stock = {
 					years: 10
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -902,14 +902,14 @@ export const Orc: Stock = {
 			]
 		},
 		"Great and Black": {
-			allowed: ["bwg", "bwc", "msc"],
+			allowed: ["bwg"],
 			name: "Great and Black",
 			short: "Great",
 			stock: "Orc",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 3,
@@ -933,7 +933,7 @@ export const Orc: Stock = {
 					years: 10
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -967,7 +967,7 @@ export const Orc: Stock = {
 					years: 3
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -996,7 +996,7 @@ export const Orc: Stock = {
 					years: 4
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1037,7 +1037,7 @@ export const Orc: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1076,7 +1076,7 @@ export const Orc: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1112,7 +1112,7 @@ export const Orc: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1147,7 +1147,7 @@ export const Orc: Stock = {
 					years: 10
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1181,7 +1181,7 @@ export const Orc: Stock = {
 					years: 10
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1221,7 +1221,7 @@ export const Orc: Stock = {
 					years: 9
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 1,
@@ -1258,14 +1258,14 @@ export const Orc: Stock = {
 			]
 		},
 		"Servant of the Dark Blood": {
-			allowed: ["bwg", "bwc", "msc"],
+			allowed: ["bwg"],
 			name: "Servant of the Dark Blood",
 			short: "Servant",
 			stock: "Orc",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1291,7 +1291,7 @@ export const Orc: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1325,7 +1325,7 @@ export const Orc: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1358,7 +1358,7 @@ export const Orc: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1391,7 +1391,7 @@ export const Orc: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1429,7 +1429,7 @@ export const Orc: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1463,7 +1463,7 @@ export const Orc: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1492,7 +1492,7 @@ export const Orc: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 1,
@@ -1520,7 +1520,7 @@ export const Orc: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 1,
@@ -1550,7 +1550,7 @@ export const Orc: Stock = {
 					years: 10
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -1586,7 +1586,7 @@ export const Orc: Stock = {
 					years: 50
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,

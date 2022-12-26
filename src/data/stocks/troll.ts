@@ -13,7 +13,7 @@ export const Troll: Stock = {
 		{ max: 390, min: 214, m: 5, p: 16 },
 		{ max: 712, min: 391, m: 6, p: 15 }
 	],
-	allowed: ["bwc", "msc"],
+	allowed: ["bwc"],
 	hasSetting: true,
 	hasSubsetting: false,
 	name: "Troll",
@@ -21,14 +21,14 @@ export const Troll: Stock = {
 	stride: 7,
 	settings: {
 		"Cavedweller": {
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			name: "Cavedweller",
 			short: "Cave",
 			stock: "Troll",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -49,7 +49,7 @@ export const Troll: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -74,7 +74,7 @@ export const Troll: Stock = {
 					years: 4
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -99,7 +99,7 @@ export const Troll: Stock = {
 					years: 12
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -125,7 +125,7 @@ export const Troll: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -157,14 +157,14 @@ export const Troll: Stock = {
 			]
 		},
 		"Pit": {
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			name: "Pit",
 			short: "Pit",
 			stock: "Troll",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 1,
@@ -187,7 +187,7 @@ export const Troll: Stock = {
 					years: 4
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -209,7 +209,7 @@ export const Troll: Stock = {
 					years: 3
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -235,7 +235,7 @@ export const Troll: Stock = {
 					years: 9
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -261,7 +261,7 @@ export const Troll: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -298,7 +298,7 @@ export const Troll: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -332,7 +332,7 @@ export const Troll: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -366,7 +366,7 @@ export const Troll: Stock = {
 					years: 16
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 1,
@@ -400,14 +400,14 @@ export const Troll: Stock = {
 			]
 		},
 		"Wild": {
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			name: "Wild",
 			short: "Wild",
 			stock: "Troll",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -428,7 +428,7 @@ export const Troll: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -453,7 +453,7 @@ export const Troll: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -477,7 +477,7 @@ export const Troll: Stock = {
 					years: 10
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -501,7 +501,7 @@ export const Troll: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 1,
@@ -524,7 +524,7 @@ export const Troll: Stock = {
 					years: 13
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -562,7 +562,7 @@ export const Troll: Stock = {
 					years: 15
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -600,7 +600,7 @@ export const Troll: Stock = {
 					years: 33
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,

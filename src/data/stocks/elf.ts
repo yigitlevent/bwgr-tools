@@ -21,7 +21,7 @@ export const Elf: Stock = {
 		{ max: 1325, min: 1226, m: 15, p: 24 },
 		{ max: 99999, min: 1326, m: 16, p: 24 }
 	],
-	allowed: ["bwg", "bwc", "msc"],
+	allowed: ["bwg"],
 	hasSetting: true,
 	hasSubsetting: true,
 	name: "Elf",
@@ -29,14 +29,14 @@ export const Elf: Stock = {
 	stride: 8,
 	settings: {
 		"Wilderlands": {
-			allowed: ["bwg", "bwc", "msc"],
+			allowed: ["bwg"],
 			name: "Wilderlands",
 			short: "Wilderlands",
 			stock: "Elf",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 4,
@@ -61,7 +61,7 @@ export const Elf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -90,7 +90,7 @@ export const Elf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -119,7 +119,7 @@ export const Elf: Stock = {
 					years: 50
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -146,7 +146,7 @@ export const Elf: Stock = {
 					years: 40
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -179,7 +179,7 @@ export const Elf: Stock = {
 					years: 50
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -207,7 +207,7 @@ export const Elf: Stock = {
 					years: 45
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -234,7 +234,7 @@ export const Elf: Stock = {
 					years: 75
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -266,7 +266,7 @@ export const Elf: Stock = {
 					years: 45
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -294,7 +294,7 @@ export const Elf: Stock = {
 					years: 50
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -322,7 +322,7 @@ export const Elf: Stock = {
 					years: 50
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -352,7 +352,7 @@ export const Elf: Stock = {
 					years: 90
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -382,7 +382,7 @@ export const Elf: Stock = {
 					years: 60
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -412,7 +412,7 @@ export const Elf: Stock = {
 					years: 60
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -442,7 +442,7 @@ export const Elf: Stock = {
 					years: 45
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -470,7 +470,7 @@ export const Elf: Stock = {
 					years: 75
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -505,7 +505,7 @@ export const Elf: Stock = {
 					years: 100
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -540,14 +540,14 @@ export const Elf: Stock = {
 			]
 		},
 		"Citadel": {
-			allowed: ["bwg", "bwc", "msc"],
+			allowed: ["bwg"],
 			name: "Citadel",
 			short: "Citadel",
 			stock: "Elf",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 5,
@@ -572,7 +572,7 @@ export const Elf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -603,7 +603,7 @@ export const Elf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -632,7 +632,7 @@ export const Elf: Stock = {
 					years: 75
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -662,7 +662,7 @@ export const Elf: Stock = {
 					years: 25
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -692,7 +692,7 @@ export const Elf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -722,7 +722,7 @@ export const Elf: Stock = {
 					years: 75
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -770,7 +770,7 @@ export const Elf: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -803,7 +803,7 @@ export const Elf: Stock = {
 					years: 50
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -844,7 +844,7 @@ export const Elf: Stock = {
 					years: 100
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -872,7 +872,7 @@ export const Elf: Stock = {
 					years: 10
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -908,7 +908,7 @@ export const Elf: Stock = {
 					years: 35
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -945,7 +945,7 @@ export const Elf: Stock = {
 					years: 75
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -981,7 +981,7 @@ export const Elf: Stock = {
 					years: 150
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1017,7 +1017,7 @@ export const Elf: Stock = {
 					years: 100
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1044,7 +1044,7 @@ export const Elf: Stock = {
 					years: 60
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1084,7 +1084,7 @@ export const Elf: Stock = {
 					years: 65
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1127,7 +1127,7 @@ export const Elf: Stock = {
 					years: 75
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1167,7 +1167,7 @@ export const Elf: Stock = {
 					years: 200
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1215,14 +1215,14 @@ export const Elf: Stock = {
 			]
 		},
 		"Etharch": {
-			allowed: ["bwg", "bwc", "msc"],
+			allowed: ["bwg"],
 			name: "Etharch",
 			short: "Etharch",
 			stock: "Elf",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 5,
@@ -1253,7 +1253,7 @@ export const Elf: Stock = {
 					years: 25
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1285,7 +1285,7 @@ export const Elf: Stock = {
 					years: 25
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1316,7 +1316,7 @@ export const Elf: Stock = {
 					years: 25
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1362,7 +1362,7 @@ export const Elf: Stock = {
 					years: 35
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1405,7 +1405,7 @@ export const Elf: Stock = {
 					years: 40
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1447,7 +1447,7 @@ export const Elf: Stock = {
 					years: 110
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 4,
@@ -1489,7 +1489,7 @@ export const Elf: Stock = {
 					years: 150
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 4,
@@ -1535,14 +1535,14 @@ export const Elf: Stock = {
 			]
 		},
 		"Protector": {
-			allowed: ["bwg", "bwc", "msc"],
+			allowed: ["bwg"],
 			name: "Protector",
 			short: "Protector",
 			stock: "Elf",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1572,7 +1572,7 @@ export const Elf: Stock = {
 					years: 15
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1603,7 +1603,7 @@ export const Elf: Stock = {
 					years: 35
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1631,7 +1631,7 @@ export const Elf: Stock = {
 					years: 30
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1675,7 +1675,7 @@ export const Elf: Stock = {
 					years: 45
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1705,7 +1705,7 @@ export const Elf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1733,7 +1733,7 @@ export const Elf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1777,7 +1777,7 @@ export const Elf: Stock = {
 					years: 30
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1818,7 +1818,7 @@ export const Elf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1857,7 +1857,7 @@ export const Elf: Stock = {
 					years: 50
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1901,7 +1901,7 @@ export const Elf: Stock = {
 					years: 65
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1948,7 +1948,7 @@ export const Elf: Stock = {
 					years: 85
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1987,7 +1987,7 @@ export const Elf: Stock = {
 					years: 90
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2026,7 +2026,7 @@ export const Elf: Stock = {
 					years: 80
 				},
 				{
-					allowed: ["bwg", "bwc", "msc"],
+					allowed: ["bwg"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2071,14 +2071,14 @@ export const Elf: Stock = {
 			]
 		},
 		"Path of Spite": {
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			name: "Path of Spite",
 			short: "Spite",
 			stock: "Elf",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2106,7 +2106,7 @@ export const Elf: Stock = {
 					years: 3
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2141,7 +2141,7 @@ export const Elf: Stock = {
 					years: 25
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -2175,7 +2175,7 @@ export const Elf: Stock = {
 					years: 18
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2210,7 +2210,7 @@ export const Elf: Stock = {
 					years: 15
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2248,7 +2248,7 @@ export const Elf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2281,7 +2281,7 @@ export const Elf: Stock = {
 					years: 35
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2314,7 +2314,7 @@ export const Elf: Stock = {
 					years: 25
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -2353,7 +2353,7 @@ export const Elf: Stock = {
 					years: 55
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2397,7 +2397,7 @@ export const Elf: Stock = {
 					years: 150
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 5,

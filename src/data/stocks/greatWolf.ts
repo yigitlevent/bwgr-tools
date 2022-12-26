@@ -10,7 +10,7 @@ export const GreatWolf: Stock = {
 		{ max: 11, min: 10, m: 6, p: 12 },
 		{ max: 99999, min: 12, m: 5, p: 10 }
 	],
-	allowed: ["bwc", "msc"],
+	allowed: ["bwc"],
 	hasSetting: true,
 	hasSubsetting: true,
 	name: "Great Wolf",
@@ -18,14 +18,14 @@ export const GreatWolf: Stock = {
 	stride: 11,
 	settings: {
 		"Captive": {
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			name: "Captive",
 			short: "Captive",
 			stock: "Great Wolf",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -56,14 +56,14 @@ export const GreatWolf: Stock = {
 			]
 		},
 		"Ghost of the Deeping Wood": {
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			name: "Ghost of the Deeping Wood",
 			short: "Ghost",
 			stock: "Great Wolf",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -95,7 +95,7 @@ export const GreatWolf: Stock = {
 					years: 0
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -123,7 +123,7 @@ export const GreatWolf: Stock = {
 					years: 1
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -154,7 +154,7 @@ export const GreatWolf: Stock = {
 					years: 0
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -186,7 +186,7 @@ export const GreatWolf: Stock = {
 					years: 2
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 1,
@@ -227,14 +227,14 @@ export const GreatWolf: Stock = {
 			]
 		},
 		"Outcast Wolf": {
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			name: "Outcast Wolf",
 			short: "Outcast",
 			stock: "Great Wolf",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -279,7 +279,7 @@ export const GreatWolf: Stock = {
 					years: 1
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -320,14 +320,14 @@ export const GreatWolf: Stock = {
 			]
 		},
 		"Slave to the Legion": {
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			name: "Slave to the Legion",
 			short: "Slave",
 			stock: "Great Wolf",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -353,7 +353,7 @@ export const GreatWolf: Stock = {
 					years: 1
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -386,7 +386,7 @@ export const GreatWolf: Stock = {
 					years: 0
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -417,7 +417,7 @@ export const GreatWolf: Stock = {
 					years: 1
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -453,7 +453,7 @@ export const GreatWolf: Stock = {
 					years: 0
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -484,7 +484,7 @@ export const GreatWolf: Stock = {
 					years: 1
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -517,7 +517,7 @@ export const GreatWolf: Stock = {
 					years: 1
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -554,7 +554,7 @@ export const GreatWolf: Stock = {
 					years: 2
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -589,7 +589,7 @@ export const GreatWolf: Stock = {
 					years: 2
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 1,
@@ -629,14 +629,14 @@ export const GreatWolf: Stock = {
 			]
 		},
 		"Spirit Hunter": {
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			name: "Spirit Hunter",
 			short: "Hunter",
 			stock: "Great Wolf",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -670,7 +670,7 @@ export const GreatWolf: Stock = {
 					years: 1
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -701,7 +701,7 @@ export const GreatWolf: Stock = {
 					years: 1
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -735,14 +735,14 @@ export const GreatWolf: Stock = {
 			]
 		},
 		"Wild Pack": {
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			name: "Wild Pack",
 			short: "Pack",
 			stock: "Great Wolf",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -765,7 +765,7 @@ export const GreatWolf: Stock = {
 					years: 1
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -799,7 +799,7 @@ export const GreatWolf: Stock = {
 					years: 1
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -830,7 +830,7 @@ export const GreatWolf: Stock = {
 					years: 1
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -873,7 +873,7 @@ export const GreatWolf: Stock = {
 					years: 1
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -902,7 +902,7 @@ export const GreatWolf: Stock = {
 					years: 0
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -931,7 +931,7 @@ export const GreatWolf: Stock = {
 					years: 0
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 1,
@@ -963,7 +963,7 @@ export const GreatWolf: Stock = {
 					years: 2
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,

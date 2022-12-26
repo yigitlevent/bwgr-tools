@@ -1,9 +1,19 @@
 export interface Resource {
 	name: string;
 	allowed: Ruleset[];
-	type: "Gear" | "Property";
+	type: "Gear" | "Property" | "Relationship" | "Affiliation" | "Reputation" | "Magical";
 	description?: string;
 	cost: number | [string, number][] | "various";
+	modifiers?: [string, number][];
+	magical?: {
+		origin: "Personal" | "Presence" | "Double Presence" | "Sight";
+		element: ("Anima" | "Arcana" | "Heaven" | "White" | "Fire" | "Air" | "Earth" | "Water")[];
+		duration: "Instantaneous" | "Sustained" | `Elapsed Time (${"Exchanges" | "Minutes" | "Hours"})` | "Permanent";
+		areaOfEffect: "Caster" | "Double Area" | `Measured Area (${"paces" | "10s of paces" | "100s of paces" | "miles"})` | "Half Area" | "Double Natural Effect" | "Natural Effect" | "Half Natural Eff." | "Double Presence" | "Presence" | "Half Presence" | "Single Target";
+		impetus: ("Create" | "Destroy" | "Tax" | "Transmute" | "Control" | "Influence" | "Enhance")[];
+		obstacle: number | `${number}^` | StatsAndAttributesList | `${StatsAndAttributesList}^` | `${number}+${StatsAndAttributesList}` | `${StatsAndAttributesList}/${StatsAndAttributesList}` | "See description";
+		actions: number | string;
+	};
 }
 
 interface ResourceGroup {
@@ -14,144 +24,1513 @@ interface ResourceGroup {
 	};
 }
 
+const Relationship: Resource = {
+	name: "Relationship",
+	allowed: ["bwg"],
+	type: "Relationship",
+	cost: [
+		["A relationship with a character who is considered powerful and who plays a large role in the game setting", 15],
+		["A relationship with a character who is considered significant or important to the game setting", 10],
+		["A relationship with a character who plays a minor role in the setting or situation", 5]
+	],
+	modifiers: [
+		["Immediate family", -2],
+		["Other family", -1],
+		["Romantic", -2],
+		["Forbidden", -1],
+		["Hateful", -2]
+	]
+};
+
+const Reputation: Resource = {
+	name: "Reputation",
+	allowed: ["bwg"],
+	type: "Reputation",
+	cost: [
+		["1D: Local or minor reputation", 7],
+		["2D: Regional or notable reputation", 25],
+		["3D: National or major reputation", 45]
+	]
+};
+
+const Affiliation: Resource = {
+	name: "Affiliation",
+	allowed: ["bwg"],
+	type: "Affiliation",
+	cost: [
+		["1D: A small, local or specialized group", 10],
+		["2D: A large, regional or expansive group", 25],
+		["3D: A national, powerful or ruling group", 50]
+	]
+};
+
+const OrcAffiliation: Resource = {
+	name: "Clans and Warbands",
+	allowed: ["bwg"],
+	type: "Affiliation",
+	description: "Orcs frequently gather together in groups, warbands, clans and hordes. Relationships in the group/clan are purchased as normal. Additional characters and functionaries can be generated using the Circles rules in play. Orc commanders are often unaware of who precisely is working under them. It's usually a nest of rabble, a few bitter enemies and one or two die hard heavies. The exact nature of who's who is up to the Circles tests. The character's own position in the warband/horde is dependent on his reputation. Use the standard rules described in Step 8. Spending Resource Points to generate this.",
+	cost: [
+		["1D: A typical/minor clan", 10],
+		["2D: An important or powerful clan or horde", 25]
+	]
+};
+
+const SorcerySpells: Resource[] = [
+	{
+		name: "Arcane Kindness",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 16,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Caster",
+			impetus: ["Enhance"],
+			obstacle: "4^",
+			actions: 10
+		}
+	},
+	{
+		name: "Bilious Smoke",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 24,
+		magical: {
+			origin: "Personal",
+			element: ["Fire", "Air"],
+			duration: "Sustained",
+			areaOfEffect: "Measured Area (10s of paces)",
+			impetus: ["Create", "Tax"],
+			obstacle: 5,
+			actions: 16
+		}
+	},
+	{
+		name: "Binding",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 4,
+		magical: {
+			origin: "Personal",
+			element: ["Earth"],
+			duration: "Sustained",
+			areaOfEffect: "Half Presence",
+			impetus: ["Control"],
+			obstacle: 2,
+			actions: 2
+		}
+	},
+	{
+		name: "Blessed Hands",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 20,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Instantaneous",
+			areaOfEffect: "Single Target",
+			impetus: ["Enhance"],
+			obstacle: "Health^",
+			actions: 750
+		}
+	},
+	{
+		name: "Blue-Blooded Heart",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 8,
+		magical: {
+			origin: "Presence",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Control"],
+			obstacle: 4,
+			actions: 15
+		}
+	},
+	{
+		name: "Breath of Wind",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 16,
+		magical: {
+			origin: "Personal",
+			element: ["Air"],
+			duration: "Instantaneous",
+			areaOfEffect: "Natural Effect",
+			impetus: ["Destroy"],
+			obstacle: "4^",
+			actions: 4
+		}
+	},
+	{
+		name: "Call of Iron",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 6,
+		magical: {
+			origin: "Double Presence",
+			element: ["Earth"],
+			duration: "Instantaneous",
+			areaOfEffect: "Single Target",
+			impetus: ["Control"],
+			obstacle: 3,
+			actions: 2
+		}
+	},
+	{
+		name: "Cat+s Eye",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 6,
+		magical: {
+			origin: "Presence",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Enhance"],
+			obstacle: 3,
+			actions: 7
+		}
+	},
+	{
+		name: "Chameleon",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 16,
+		magical: {
+			origin: "Personal",
+			element: ["Heaven"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Control"],
+			obstacle: "4^",
+			actions: 8
+		}
+	},
+	{
+		name: "Chaos Ward",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 20,
+		magical: {
+			origin: "Sight",
+			element: ["Heaven"],
+			duration: "Sustained",
+			areaOfEffect: "Measured Area (10s of paces)",
+			impetus: ["Influence", "Tax"],
+			obstacle: "5^",
+			actions: 45
+		}
+	},
+	{
+		name: "Choking Hand",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Presence",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Tax"],
+			obstacle: "3^",
+			actions: 4
+		}
+	},
+	{
+		name: "Courage",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 16,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Instantaneous",
+			areaOfEffect: "Presence",
+			impetus: ["Influence"],
+			obstacle: 4,
+			actions: 2
+		}
+	},
+	{
+		name: "Dark of Night",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Heaven"],
+			duration: "Sustained",
+			areaOfEffect: "Measured Area (10s of paces)",
+			impetus: ["Tax"],
+			obstacle: "3^",
+			actions: 5
+		}
+	},
+	{
+		name: "Delirium Tremens",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 10,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Instantaneous",
+			areaOfEffect: "Single Target",
+			impetus: ["Tax"],
+			obstacle: "Forte",
+			actions: 3
+		}
+	},
+	{
+		name: "Dexterity of the Cat",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Enhance"],
+			obstacle: "1+Speed",
+			actions: 35
+		}
+	},
+	{
+		name: "Dog+s Ear",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Enhance"],
+			obstacle: "Perception",
+			actions: 35
+		}
+	},
+	{
+		name: "Eldritch Shield",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Arcana"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Control"],
+			obstacle: "3^",
+			actions: 9
+		}
+	},
+	{
+		name: "Emperor+s Hand",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Presence",
+			element: ["White"],
+			duration: "Instantaneous",
+			areaOfEffect: "Single Target",
+			impetus: ["Tax"],
+			obstacle: "Forte^",
+			actions: 4
+		}
+	},
+	{
+		name: "Falcon Skin",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 8,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Caster",
+			impetus: ["Transmute"],
+			obstacle: 4,
+			actions: 12
+		}
+	},
+	{
+		name: "The Fear",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 6,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Instantaneous",
+			areaOfEffect: "Presence",
+			impetus: ["Influence"],
+			obstacle: 3,
+			actions: 1
+		}
+	},
+	{
+		name: "Fire Breath",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Fire"],
+			duration: "Instantaneous",
+			areaOfEffect: "Measured Area (paces)",
+			impetus: ["Destroy"],
+			obstacle: "3^",
+			actions: 3
+		}
+	},
+	{
+		name: "Fire Fan",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Fire"],
+			duration: "Instantaneous",
+			areaOfEffect: "Presence",
+			impetus: ["Destroy"],
+			obstacle: "3^",
+			actions: 1
+		}
+	},
+	{
+		name: "Firewalker",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 10,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Control"],
+			obstacle: 4,
+			actions: 4
+		}
+	},
+	{
+		name: "Fish Lung",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 10,
+		magical: {
+			origin: "Presence",
+			element: ["Water", "Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Enhance"],
+			obstacle: 5,
+			actions: 10
+		}
+	},
+	{
+		name: "Flame Finger",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 6,
+		magical: {
+			origin: "Presence",
+			element: ["Fire"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Create"],
+			obstacle: 4,
+			actions: 12
+		}
+	},
+	{
+		name: "Force of Will",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 22,
+		magical: {
+			origin: "Presence",
+			element: ["Anima"],
+			duration: "Permanent",
+			areaOfEffect: "Single Target",
+			impetus: ["Control"],
+			obstacle: "6+Will",
+			actions: 133
+		}
+	},
+	{
+		name: "Gray Cloak",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 8,
+		magical: {
+			origin: "Personal",
+			element: ["Water", "Air"],
+			duration: "Elapsed Time (Minutes)",
+			areaOfEffect: "Measured Area (10s of paces)",
+			impetus: ["Control"],
+			obstacle: 5,
+			actions: 12
+		}
+	},
+	{
+		name: "Havoc+s Hand",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Destroy"],
+			obstacle: "3^",
+			actions: 4
+		}
+	},
+	{
+		name: "Horror",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 16,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Instantaneous",
+			areaOfEffect: "Presence",
+			impetus: ["Influence"],
+			obstacle: "4^",
+			actions: 2
+		}
+	},
+	{
+		name: "Horse+s Stride",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 6,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Enhance"],
+			obstacle: 3,
+			actions: 4
+		}
+	},
+	{
+		name: "Lights of St. Andrew",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Heaven"],
+			duration: "Instantaneous",
+			areaOfEffect: "Measured Area (paces)",
+			impetus: ["Tax"],
+			obstacle: "3^",
+			actions: 2
+		}
+	},
+	{
+		name: "Low Speech",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 8,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Presence",
+			impetus: ["Enhance"],
+			obstacle: "See description",
+			actions: "×3"
+		}
+	},
+	{
+		name: "Mage Light",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 16,
+		magical: {
+			origin: "Personal",
+			element: ["Heaven"],
+			duration: "Sustained",
+			areaOfEffect: "Presence",
+			impetus: ["Create"],
+			obstacle: "4^",
+			actions: 12
+		}
+	},
+	{
+		name: "Magesense",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 16,
+		magical: {
+			origin: "Personal",
+			element: ["Anima", "Arcana"],
+			duration: "Sustained",
+			areaOfEffect: "Measured Area (10s of paces)",
+			impetus: ["Enhance"],
+			obstacle: "4^",
+			actions: 300
+		}
+	},
+	{
+		name: "Magic Whistle",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 2,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Instantaneous",
+			areaOfEffect: "Measured Area (paces)",
+			impetus: ["Influence"],
+			obstacle: 1,
+			actions: 2
+		}
+	},
+	{
+		name: "Mask",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Heaven"],
+			duration: "Sustained",
+			areaOfEffect: "Caster",
+			impetus: ["Control"],
+			obstacle: "3^",
+			actions: 4
+		}
+	},
+	{
+		name: "Mend",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 16,
+		magical: {
+			origin: "Personal",
+			element: ["Earth"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Control"],
+			obstacle: "4^",
+			actions: 27
+		}
+	},
+	{
+		name: "Minor Maker",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Earth"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Create"],
+			obstacle: "3^",
+			actions: 12
+		}
+	},
+	{
+		name: "Persuasion",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 10,
+		magical: {
+			origin: "Presence",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Influence"],
+			obstacle: "Will",
+			actions: 4
+		}
+	},
+	{
+		name: "Phantasmagoria",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Presence",
+			element: ["Heaven", "Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Natural Effect",
+			impetus: ["Control"],
+			obstacle: "3^",
+			actions: 56
+		}
+	},
+	{
+		name: "Philosopher+s Perch",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 6,
+		magical: {
+			origin: "Presence",
+			element: ["Air"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Control"],
+			obstacle: 3,
+			actions: 4
+		}
+	},
+	{
+		name: "Pyrotechnics",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 6,
+		magical: {
+			origin: "Presence",
+			element: ["Fire"],
+			duration: "Instantaneous",
+			areaOfEffect: "Single Target",
+			impetus: ["Control"],
+			obstacle: 3,
+			actions: 8
+		}
+	},
+	{
+		name: "Rain of Fire",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 20,
+		magical: {
+			origin: "Sight",
+			element: ["Fire", "Air"],
+			duration: "Instantaneous",
+			areaOfEffect: "Measured Area (10s of paces)",
+			impetus: ["Destroy"],
+			obstacle: "5^",
+			actions: 7
+		}
+	},
+	{
+		name: "Rainstorm",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 16,
+		magical: {
+			origin: "Sight",
+			element: ["Water", "Air"],
+			duration: "Instantaneous",
+			areaOfEffect: "Measured Area (100s of paces)",
+			impetus: ["Control"],
+			obstacle: "4^",
+			actions: 256
+		}
+	},
+	{
+		name: "Sarch+s Glare",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Presence",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Tax"],
+			obstacle: "Will/Forte",
+			actions: 4
+		}
+	},
+	{
+		name: "Shards",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 8,
+		magical: {
+			origin: "Presence",
+			element: ["Earth"],
+			duration: "Instantaneous",
+			areaOfEffect: "Measured Area (paces)",
+			impetus: ["Destroy"],
+			obstacle: "2^",
+			actions: 1
+		}
+	},
+	{
+		name: "Sight of the Eagle",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 10,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Enhance"],
+			obstacle: "Perception",
+			actions: 30
+		}
+	},
+	{
+		name: "Spark Shower",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 8,
+		magical: {
+			origin: "Presence",
+			element: ["Fire"],
+			duration: "Instantaneous",
+			areaOfEffect: "Single Target",
+			impetus: ["Destroy"],
+			obstacle: "2^",
+			actions: 1
+		}
+	},
+	{
+		name: "Spirit Servant",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 6,
+		magical: {
+			origin: "Presence",
+			element: ["Arcana", "Earth"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Control"],
+			obstacle: 3,
+			actions: 50
+		}
+	},
+	{
+		name: "Storm of Lightning",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 24,
+		magical: {
+			origin: "Sight",
+			element: ["White", "Air"],
+			duration: "Instantaneous",
+			areaOfEffect: "Measured Area (10s of paces)",
+			impetus: ["Destroy"],
+			obstacle: 6,
+			actions: 20
+		}
+	},
+	{
+		name: "Strength of the Ox",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 10,
+		magical: {
+			origin: "Presence",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Enhance"],
+			obstacle: "Power",
+			actions: 30
+		}
+	},
+	{
+		name: "Thunderclap",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 6,
+		magical: {
+			origin: "Personal",
+			element: ["Air"],
+			duration: "Instantaneous",
+			areaOfEffect: "Presence",
+			impetus: ["Tax"],
+			obstacle: 3,
+			actions: 2
+		}
+	},
+	{
+		name: "Turn Aside the Blade",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 16,
+		magical: {
+			origin: "Personal",
+			element: ["Anima", "Earth"],
+			duration: "Sustained",
+			areaOfEffect: "Caster",
+			impetus: ["Control"],
+			obstacle: "4^",
+			actions: 11
+		}
+	},
+	{
+		name: "Valor",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 16,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Presence",
+			impetus: ["Enhance"],
+			obstacle: "4^",
+			actions: 6
+		}
+	},
+	{
+		name: "Voice Caster",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 8,
+		magical: {
+			origin: "Presence",
+			element: ["Anima", "Air"],
+			duration: "Sustained",
+			areaOfEffect: "Natural Effect",
+			impetus: ["Control"],
+			obstacle: 4,
+			actions: 5
+		}
+	},
+	{
+		name: "Wall Walker",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 10,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Caster",
+			impetus: ["Control", "Enhance"],
+			obstacle: 3,
+			actions: 3
+		}
+	},
+	{
+		name: "Water Walker",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 10,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Control"],
+			obstacle: 5,
+			actions: 4
+		}
+	},
+	{
+		name: "Wave",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 16,
+		magical: {
+			origin: "Personal",
+			element: ["Water"],
+			duration: "Instantaneous",
+			areaOfEffect: "Measured Area (100s of paces)",
+			impetus: ["Control", "Destroy"],
+			obstacle: "4^",
+			actions: 8
+		}
+	},
+	{
+		name: "Weatherworker",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 10,
+		magical: {
+			origin: "Sight",
+			element: ["Air", "Water"],
+			duration: "Elapsed Time (Hours)",
+			areaOfEffect: "Natural Effect",
+			impetus: ["Influence"],
+			obstacle: 5,
+			actions: 12
+		}
+	},
+	{
+		name: "Whisper on the Wind",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Air"],
+			duration: "Instantaneous",
+			areaOfEffect: "Single Target",
+			impetus: ["Control"],
+			obstacle: "3^",
+			actions: 8
+		}
+	},
+	{
+		name: "White Fire ",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 16,
+		magical: {
+			origin: "Personal",
+			element: ["White"],
+			duration: "Instantaneous",
+			areaOfEffect: "Natural Effect",
+			impetus: ["Destroy"],
+			obstacle: "4^",
+			actions: 3
+		}
+	},
+	{
+		name: "Windlash",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 8,
+		magical: {
+			origin: "Sight",
+			element: ["Air"],
+			duration: "Sustained",
+			areaOfEffect: "Measured Area (10s of paces)",
+			impetus: ["Control", "Tax"],
+			obstacle: 4,
+			actions: 10
+		}
+	},
+	{
+		name: "Wisdom of the Ancients",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 10,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Enhance"],
+			obstacle: "Will",
+			actions: 30
+		}
+	},
+	{
+		name: "Witch Flight",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 6,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Instantaneous",
+			areaOfEffect: "Single Target",
+			impetus: ["Enhance"],
+			obstacle: "3^",
+			actions: 4
+		}
+	},
+	{
+		name: "Witch Key",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Earth"],
+			duration: "Instantaneous",
+			areaOfEffect: "Single Target",
+			impetus: ["Control"],
+			obstacle: 3,
+			actions: 4
+		}
+	},
+	{
+		name: "Wolf Snout",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Enhance"],
+			obstacle: "Perception",
+			actions: 32
+		}
+	},
+	{
+		name: "Wyrd Light",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "",
+		cost: 4,
+		magical: {
+			origin: "Presence",
+			element: ["Heaven"],
+			duration: "Sustained",
+			areaOfEffect: "Natural Effect",
+			impetus: ["Control"],
+			obstacle: 2,
+			actions: 9
+		}
+	}
+];
+
+const RitualsOfNightRituals: Resource[] = [
+	{
+		name: "Black-Blooded Rage",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "Calling upon memories of torture in the pits, goading them with visions of hated enemies, the Black-Blooded Rage sends Ores into a howling fury.<br>While under this spell, Orcs add +2D to Steel and half hesitation (round up). Also, so furious are they, these Ores ignore pain-they do not suffer the +1 Ob effects of superficial wounds.",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Elapsed Time (Minutes)",
+			areaOfEffect: "Double Presence",
+			impetus: ["Influence"],
+			obstacle: 6,
+			actions: 8
+		}
+	},
+	{
+		name: "Black Cloak",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "The Servant covers himself in a humming field of ebon eldritch power.<br>This spell combines the effects of Eldritch Shield and Turn Aside the Blade. Divide successes between physical and spell protection.",
+		cost: 16,
+		magical: {
+			origin: "Personal",
+			element: ["Arcana", "Earth"],
+			duration: "Sustained",
+			areaOfEffect: "Caster",
+			impetus: ["Tax", "Control"],
+			obstacle: "4^",
+			actions: 10
+		}
+	},
+	{
+		name: "Black Rust",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "At the touch of the Servant's black hand, the Black Rust turns flesh into a charred, twisted ruin.<br>The Black Rust ruptures skin and bone. Damaging Effect: Power exponent of caster plus 1 per extra success; straight damage, no DoF or IMS. Caster need only touch his victim (Ob 1 Agility test or Strike). Armor does not work against this spell. The caster may poison his hand as he would a blade and use the touch of the Black Rust to deliver the venom.<br>Weapon length: as Knife. Range dice: as Melee.",
+		cost: 8,
+		magical: {
+			origin: "Personal",
+			element: ["Anima"],
+			duration: "Sustained",
+			areaOfEffect: "Single Target",
+			impetus: ["Destroy"],
+			obstacle: "2^",
+			actions: 3
+		}
+	},
+	{
+		name: "Call of the Pit",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "Violent, black words tear a rift in the skin of the earth, spewing fire and vapors: tremors shiver the ground into shards like a hammer shatters a mirror.<br>This spell counts as five successes of Siege Engineer against materials. Extra successes allocated to effect (rather than area) increase the Siege Engineer successes by one per success. All characters caught in the area of effect must make a Speed test with an obstacle equal to all effect successes. Failure indicates they have fallen into the pit and must climb out or be rescued.<br>Weapon length: as Missile. Range dice: as Heavy Crossbow +2D.",
+		cost: 20,
+		magical: {
+			origin: "Sight",
+			element: ["Earth"],
+			duration: "Instantaneous",
+			areaOfEffect: "Measured Area (100s of paces)",
+			impetus: ["Destroy"],
+			obstacle: "5^",
+			actions: 14
+		}
+	},
+	{
+		name: "Dark of Night",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "A dim pall suffocates the hall as the Servant enters; shadows lengthen and deepen; lamps shine but give no light.<br>This spell creates darkness and smothers light. Successful casting creates the dim light condition (+1 Ob to any action requiring light). Extra successes can be spent to increase the level of darkness up to a maximum of +4 Ob. Extra successes can also increase the area of effect.",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Heaven"],
+			duration: "Sustained",
+			areaOfEffect: "Measured Area (10s of paces)",
+			impetus: ["Tax"],
+			obstacle: "3^",
+			actions: 5
+		}
+	},
+	{
+		name: "Death's Howl",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "A frigid wind erupts howling from the mouth of the Servant of Night. The cold is so terrible it freezes flesh on the bone, the wind so powerful it topples trees.<br>Damaging effect: Base Power equals caster's Will. Roll DoF for IMS. VA 8. Weapon length: as Missile. Ranged dice: as Great Bow.<br>The caster may also allocate successes to knock down targets. Successes so allocated count as the obstacle for a Forte test. Failure indicates the character is knocked supine. These successes count on the Natural Effect list, too.",
+		cost: 12,
+		magical: {
+			origin: "Personal",
+			element: ["Air"],
+			duration: "Instantaneous",
+			areaOfEffect: "Natural Effect",
+			impetus: ["Destroy", "Control"],
+			obstacle: "3^",
+			actions: 7
+		}
+	},
+	{
+		name: "Enemy of the Sun",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "A gray haze falls across the sky, shielding the Ores from the sun's rays.<br>This spell turns the light in the sky to a dim twilight —ideal conditions for Orcs going to war.",
+		cost: 10,
+		magical: {
+			origin: "Personal",
+			element: ["Heaven"],
+			duration: "Sustained",
+			areaOfEffect: "Measured Area (miles)",
+			impetus: ["Influence"],
+			obstacle: 5,
+			actions: 8
+		}
+	},
+	{
+		name: "His Creeping Hand",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "His Creeping Hand flings forth a crawling black vapor.<br>The vapor is noxious to breathe and obscures light. However, once released, His Creeping Hand has a will of its own and is not under the control of the caster —it goes where it wants, moving with a Speed equal to the ca ster's Will and a Stride of 8. Successes over the spell obstacle increase obstacles for all in the cloud due to the darkness and noxious vapors (+1 Ob per success). Anyone touched by His Creeping Hand must make a Steel test. Extra successes may also be spent to increase the duration (one exchange per extra success).",
+		cost: 16,
+		magical: {
+			origin: "Personal",
+			element: ["Air", "Heaven"],
+			duration: "Elapsed Time (Exchanges)",
+			areaOfEffect: "Double Presence",
+			impetus: ["Tax"],
+			obstacle: "4^",
+			actions: 6
+		}
+	},
+	{
+		name: "Impenetrable Gloom",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "The Servant summons gloom to conceal his den from the prying eyes of Elves and Men.<br>Impenetrable Gloom conceals caves and warrens from normal sight. Spotting them require s an Ob 5 Observation test. Any attempts to track the Ores to their den suffer an +5 Ob penalty. Impenetrable Gloom also conceals the Ores from magical detection; even the spell itself is difficult to detect. Increase Magesense or Second Sight obstacles by +2 Ob. Air of Gates requires an Ob 5 test in order to detect Impenetrable Gloom and those it protects.",
+		cost: 20,
+		magical: {
+			origin: "Personal",
+			element: ["Arcana", "Heaven"],
+			duration: "Sustained",
+			areaOfEffect: "Natural Effect",
+			impetus: ["Control"],
+			obstacle: 5,
+			actions: 10
+		}
+	},
+	{
+		name: "Intonation of Earth's Dark Secrets",
+		allowed: ["bwg"],
+		type: "Magical",
+		description: "Dirt and loam foam and froth, marking a pathway to the nearest caves.<br>The Servant may guide those in his charge to the safety of the underworld. Caves are never more than a mile or two away.",
+		cost: 8,
+		magical: {
+			origin: "Personal",
+			element: ["Earth"],
+			duration: "Sustained",
+			areaOfEffect: "Measured Area (miles)",
+			impetus: ["Influence"],
+			obstacle: 4,
+			actions: 7
+		}
+	}
+];
+
+const PracticalMagicSchools: Resource[] = [
+	{
+		name: "Practical Magic — Schools",
+		allowed: ["bwc"],
+		type: "Magical",
+		cost: [
+			["Academic", 16],
+			["Artisan", 12],
+			["Artist", 7],
+			["Craftsman", 18],
+			["Forester", 15],
+			["Martial", 12],
+			["Medicinal", 13],
+			["Military", 9],
+			["Musical", 7],
+			["Peasant", 12],
+			["Physical", 7],
+			["School of Thought", 9],
+			["Seafaring", 12],
+			["Social", 25],
+			["Sorcerous", 0],
+			["Special", 18]
+		]
+	}
+];
+
+const SpiritBindingDomainBindingLevels: Resource[] = [
+	{
+		name: "Spirit Binding — Domain Binding Levels",
+		allowed: ["bwc"],
+		type: "Magical",
+		cost: [
+			["0D: Bound", 5],
+			["1D: Sworn", 7],
+			["2D: Embodied", 25],
+			["3D: Mastered", 45]
+		]
+	}
+];
+
+const SpiritBindingSpiritMarkLevels: Resource[] = [
+	{
+		name: "Spirit Binding — Spirit Mark Levels",
+		allowed: ["bwc"],
+		type: "Magical",
+		cost: [
+			["1D: Touched", 10],
+			["2D: Marked", 25],
+			["3D: Infused", 50]
+		]
+	}
+];
+
+const SummoningAffiliatedOrderLevels: Resource[] = [
+	{
+		name: "Summoning — Affiliated Order Levels",
+		allowed: ["bwc"],
+		type: "Magical",
+		cost: [
+			["0D: Journeyman Order", 10],
+			["1D: First Order", 20],
+			["2D: Second Order", 25],
+			["3D: Third Order", 50]
+		],
+		modifiers: [
+			["Restless Dead", 0],
+			["Sanctified Dead", 4],
+			["Minor Major Corporal Spirit", 5],
+			["Corporal Spirit", 6],
+			["Major Corporal Spirit", 7],
+			["Minor Deity", 8],
+			["Deity", 9],
+			["Chief Deity", 10]
+		]
+	}
+];
+
 export const Resources: ResourceGroup = {
 	"Dwarf": {
 		name: "Dwarf",
-		allowed: ["bwg", "bwc", "msc"],
+		allowed: ["bwg"],
 		resources: [
+			Relationship,
+			Reputation,
+			Affiliation,
 			{
 				name: "Shoddy Arms",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 5,
 				description: "Any gear choice listed as 'shoddy' merely means the is not Dwarf-made. It counts as run of the mill gear and provides none of the bonuses of the more expensive Dwarven gear."
 			},
 			{
 				name: "Dwarven Arms",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 20,
 				description: "All Dwarven Arms are considered superior quality items. In addition, they add a +1D balance die to the skill of the wielder. Traditionally, Dwarves use axes and hammers, throwing axes and knives. But swords and maces are acceptable as well. Players may purchase beaks, spikes and weights for their character's weapons at +4rps per modification, per weapon."
 			},
 			{
 				name: "Shoddy Crossbow",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 6,
 				description: "Any gear choice listed as 'shoddy' merely means the is not Dwarf-made. It counts as run of the mill gear and provides none of the bonuses of the more expensive Dwarven gear."
 			},
 			{
 				name: "Dwarven Arbalest",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 20,
 				description: "The arbalest is a special Dwarven make of the traditional crossbow. It can fire rocks or bolts. It counts as a crossbow but only requires 10 actions to load when firing bolts, or 6 actions when firing rocks. These devices are so well-made they add a +1D balance die to the wielder 's skill.<br>Rocks IMS: I: B3, M: B6, S: B9, VA: —. When firing rocks, the arbalest counts as an arquebus for Range and Cover and DoF rules.<br>It can fire bolts using the range and damage of a crossbow."
 			},
 			{
 				name: "Dwarven-made Armor",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: [["Light Mail", 9], ["Heavy Mail", 10], ["Plated Mail", 20]],
 				description: "This is run of the mill armor made by Dwarves. It obeys the standard rules for armor, except that the first '1' rolled on an armor test per piece may be ignored. After that, it obeys the normal rules for armor failure. Once the 1 is gone, the special ability is gone. Lastly, Dwarven-made armor does not cause a Clumsy Weight Speed penalty (no obstacle penalty or -1D)."
 			},
 			{
 				name: "Dwarven Armor",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 100,
 				description: "This is the most precious of all armors. Dwarven mail covers the bearer in fine and supple chainmail. It gives no clumsy weight penalties except for gauntlets and penalties for Stealthy. The armor counts as gray shade heavy mail from head to hand to boot. It is, of course, superior quality. Dwarven mail counts as property when factoring Resources."
 			},
 			{
 				name: "Forge Mask",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 40,
 				description: "This is a highly coveted piece of Dwarven craftsmanship. Forge Masks are constructed under great secrecy using the most complex and obscure Dwarven forging techniques. Designed to withstand the extreme heat of the Dwarven forge and errant heavy blows of the smithing process, they are requisite protection for every Artificer and Mask Bearer, as well as a sign of rank and skill. The mask may also be worn as a piece of armor added onto another suit and counts as 4D of gray shade armor for the face and head (with only a +1 Ob clumsy weight penalty). The mask is highly resistant to heat and flame. It allows an armor test against flames directed at the head. Also, the mask can cause an opponent to make a Steel test at the time of the wearer's choosing. This fear effect only works once per target, costs one action to activate and can only be us ed on a target face to face with the Mask Bearer."
 			},
 			{
 				name: "Dwarven Shield",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 20,
 				description: "This magnificent device counts as a 3D gray shade superior quality shield. Against heat and flame, the shield counts as magical armor. The bearer of a Dwarven shield may make an armor test (3D) against any incoming flame attacks. Black s hade fire has no VA, gray shade is VA 1, and white shade is VA 2. Use these VAs instead of any spell VA . If the shield bearer is wearing a Forge Mask, he may add +2D to this armor test. When used as a weapon, the shield's weapon shade is that of its bearer 's Power."
 			},
 			{
 				name: "Riding Mount or Pack Animal",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 8,
 				description: "Dwarves tend to ride ponies or mules."
 			},
 			{
 				name: "Clothes",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 1
 			},
 			{
 				name: "Traveling Gear",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 1,
 				description: "This is all the necessary bits, odds and ends and what-no ts that are needed for survival on the road-candles, matches, flint and steel, a pocket knife, a rain cloak, a rain hat, a good sturdy rucksack, a thick leather belt, a money purse or wallet, a warm coat, etc. The exact choices are up to the player, but the GM has some say —no flamethrowers or Elven cloaks in traveling gear. Oh, yes, I almost forgot... don't forget to bring a good length of rope; you'll want one if you don't."
 			},
 			{
 				name: "Sturdy Shoes",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 1
 			},
 			{
 				name: "Finery",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 5
 			},
 			{
 				name: "Chronicles",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 15,
 				description: "Chronicles add +1D to any history type test about Dwarves."
 			},
 			{
 				name: "Keg o' Nog",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 20,
 				description: "A Keg o' Nog provides the Dwarf with 12 tall mugfuls of the fabled drink. Each mug is worth +1D to one Health test, but +1 Ob to social skill tests for the scene. (Only one bonus/penalty is in effect, no matter how much of the brew is quaffed by Dwarves.) One sip is enough to get any non-Dwarf drunk."
 			},
 			{
 				name: "Shoddy Tools",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 5,
 				description: "Any gear choice listed as 'shoddy' merely means the stuff is not Dwarf-made. It counts as run of the mill gear and provides none of the bonuses of the more expensive Dwarven gear."
 			},
 			{
 				name: "Dwarven Tools",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 10,
 				description: "Every Master Artificer builds and maintain s his own tools. It is an ancient and proud art passed down from master to student: a vital tradition, for the tools are the Artificer's fingers and hands in the forge. Dwarven Tools (of any type) provide the user with +1D of equipment dice when used with the appropriate skill."
 			},
 			{
 				name: "Property",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Property",
 				cost: [["A small house", 10], ["Large house", 15], ["A Dwarven hall (a large apartment in a hold)", 30], ["A Graybeard's hold*", 40], ["An Engineer's hold*", 45], ["A Master Artificer's hold*", 60], ["A Warden's hold*", 75], ["A High Captain's hold*", 90], ["A Prince's hold*", 105]],
 				description: "These all count as property when factoring Resources. *Only Dwarves of the listed rank or higher may take this kind of property."
 			},
 			{
 				name: "Workshop",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Property",
 				cost: 60,
 				description: "Workshops are necessary to completely utilize Dwarven Artificer and Dwarven craftsman skills-without one, the Dwarf may only undertake smaller projects (Ob 3 tests or lower). Also, Dwarven Workshops are required if the character will be building special Dwarven items like masks, shields, arms or mail. Dwarven Workshops include (portable) skill tool kits as part of their cost (see below). Workshops count as property when factoring Resources."
 			},
 			{
 				name: "Carts and Baggage",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Property",
 				description: "Guilders bring their wares down from the holds in great lumbering carts. Carts and Baggage represents trade and salable go ods for Guilder Dwarves . They count as property when factoring resources and may be purc ha sed multiple times for multiple bonuses.",
 				cost: 15
@@ -160,148 +1539,151 @@ export const Resources: ResourceGroup = {
 	},
 	"Elf": {
 		name: "Elf",
-		allowed: ["bwg", "bwc", "msc"],
+		allowed: ["bwg"],
 		resources: [
+			Relationship,
+			Reputation,
+			Affiliation,
 			{
 				name: "Run of the Mill Weapons and Armor",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: [["Bow", 5], ["Arms", 5], ["Reinforced Leather", 3], ["Light Mail", 6], ["Heavy Mail", 10], ["Plated Mail", 20]],
 				description: "Use the stats for the equipment listed in the Human Lifepaths and run of the mill lists for this gear."
 			},
 			{
 				name: "Elven Armor",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: [["Elven gambeson", 9], ["Elven reinforced leather", 20], ["Elven light mail", 30], ["Elven heavy mail", 40], ["Elven plated mail", 75]],
 				description: "Elven Armor is superior quality armor. Also, there are no Clumsy Weight penalties for all, except plated mail. Elves may buy armor piecemeal as described in the Human Resources section."
 			},
 			{
 				name: "Elven Arms",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 15,
 				description: "Elven Arms are considered superior quality weapons. Players may purchase beaks, spikes and weights for their characters' weapons at +3 rps per modification, per weapon."
 			},
 			{
 				name: "Elven Bow",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 25,
 				description: "These are the weapons made using the Elven Bowcraft skill. Elven Bows are bigger than hunting bows, but not as big as the great bows of men. They provide 3D of range dice at extreme, and 3D at optimal. Maximum range is 250 paces. In the Fight rules, they have a Nock and Draw time of five actions.<br>When purchasing an Elven Bow, Elves may choose from these arrows:<br>Hunting Head: I: B4, M: B8, S: B11, VA 2, Free<br>Leaf Head: I: BS, M: B9, S: B12, VA 1, +1rp<br>Bodkin: I: B4, M: B7, S: B10, VA 3, +2rps<br>Elven characters who take four or fewer lifepaths and whose last lifepath is Elven Bowyer may take an Elven Bow for 5 rps."
 			},
 			{
 				name: "Elven Cloak",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 30,
 				description: "Elven Cloaks are also known as Gray Mantles. They are imbued with the Threne of the Chameleon and conceal Elven rangers who guard the fences of the hidden kingdoms of the Elves. Gray Mantles count as a 4D Threne of the Chameleon. If the character is using Stealthy and/or the actual Threne, he may add the cloak's dice to the skill or song when rolling to hide. In addition, Elven Cloaks are warm in winter, cool in summer, covering in rain and quick to dry."
 			},
 			{
 				name: "Elven Steed",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 8,
 				description: "Elven Steeds are swift in travel and steadfast in war. Pe: B3(4), Wi: B2, Ag: B3, Sp: B6, Po: B6, Fo: B6. Hea: B6, Ste: B6 , Ref: B3, MW: B12 (Tough). Hesitation: 7 (Determined), Stride: 13. Skills: Mounted Combat Training, Rider Training, Intimidation B3, Foraging B4. Traits: Good Bone, Fleet of Hoof, Obedient, Loyal, Tough, Brute, Determined, Long-Limbed, Keen Hearing, Hooved, Ungulate."
 			},
 			{
 				name: "Elven Clothes",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 2
 			},
 			{
 				name: "Elven Shoes",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 1
 			},
 			{
 				name: "Elven Finery",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 5
 			},
 			{
 				name: "Elven Rope",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 12,
 				description: "Elven Rope is light and strong. It weighs half as much as its normal counterpart and holds twice as much for its thickness. Climbing, Knots and Rigging tests taken using Elven Rope may add +1D. It counts as tools for Knots and Climbing. Any Elf or Elf-friend may cue his rope to unknot and untie itself with a tug, nod or gesture."
 			},
 			{
 				name: "Elven Bread",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 10,
 				description: "This rare and cherished bread is nourishing and restorative. After it is eaten, it grants +3D to all Health tests taken for the day after it is eaten. One portion of Elven Bread will suffice as a meal for a day. 10 rps buys six portions."
 			},
 			{
 				name: "Elven Mirrorwine",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 8,
 				description: "Mirrorwine refreshes and restores those who taste it. Add two open-ended dice to the next Health test taken. 8 rps buys four draughts."
 			},
 			{
 				name: "Starlight",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 50,
 				description: "A bottle of starlight to illuminate the darkest times with the silver halo of the favored star. The Starlight is as bright as Mage Light with four successes over the obstacle. Counts as sunlight for creatures with Cold Black Blood or Enemy of the Sun traits."
 			},
 			{
 				name: "Tome of Lore",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 20,
 				description: "The tome of lore contains knowledge both prosaic and rare. It grants + 1D to all Elven academic skills, skill songs and appropriate wises."
 			},
 			{
 				name: "Elven Instrument",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 6,
 				description: "Elves are renowned for their music, both in song and instrument. Elven instruments —flutes, trumpets, lyres, etc.— grant +1D to the bearer 's musical instrument skill."
 			},
 			{
 				name: "Traveling Gear",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 2,
 				description: "This is all the necessary bits, odds and ends and what-no ts that are needed for survival on the road-candles, matches, flint and steel, a pocket knife, a rain cloak, a rain hat, a good sturdy rucksack, a thick leather belt, a money purse or wallet, a warm coat, etc. The exact choices are up to the player, but the GM has some say —no flamethrowers or Elven cloaks in traveling gear. Oh, yes, I almost forgot... don't forget to bring a good length of rope; you'll want one if you don't."
 			},
 			{
 				name: "Personal Effects",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 1,
 				description: "A player may purchase for his character personal effects of sentimental value: a lock of hair, a mirror, a book, a ring, a cane, a locket or any other similar item."
 			},
 			{
 				name: "Skill Tools",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 9,
 				description: "Many skills require tools. This resource can represent anything from medicine to books. If a skill is listed with 'Tools: Yes,' then a character must spend resource points on a toolkit in order to be able to adequately perform skill tests. Tests without tools (for skills that require them) are at a double obstacle penalty.<br>A toolkit that has finite supplies —like medicine for Herbalism— can run dry. Each use after the first, roll a d6. If a 1 comes up, the kit is empty. The character must make an Ob 2-5 Resources test to replenish it. The GM may set the obstacle depending on how rare the contents of the kit are. Ob 2 for peasant tools, Ob 4 for surgeon's tools, Ob 5 for sorcerous tools. Only one character can help you when you're using a toolkit."
 			},
 			{
 				name: "Workshops",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Property",
 				cost: [["Elven Smithy", 50], ["Artisan's Shop", 60]],
 				description: "Workshops are necessary to completely utilize Stonecraft, Smithcraft, Starcraft and Gemcraft skills-without one, the Elf may only undertake smaller projects (Ob 3 or lower). Also, Elven Workshops are required if the character will be building special 'Elven works'. Workshops count as property when factoring Resources."
 			},
 			{
 				name: "Elven Ship",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Property",
 				cost: 80,
 				description: "This is a beautiful, sleek and sturdy sea-going vessel. She has two masts and can accommodate a crew of about twenty. The crew is included so long as the player purchases a relationship with an Elf who acts as his pilot, navigator or first mate. Their exact abilities are determined via the I Need a Gang or Crew rules. A ship counts as property when factoring Resources."
 			},
 			{
 				name: "Elven Land",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Property",
 				cost: [
 					["Pastoral lands. This includes a single important terrain feature like a lake, a length of river, a hill or prairie and a modest but comfortable dwelling for the Elf's family.", 20],
@@ -316,95 +1698,104 @@ export const Resources: ResourceGroup = {
 	},
 	"Dark Elf": {
 		name: "Dark Elf",
-		allowed: ["bwc", "msc"],
+		allowed: ["bwc"],
 		resources: [
-			{
+			Relationship,
+			Reputation,
+			Affiliation,
+			{ // FIX: [RESOURCES] This needs a cost number button
 				name: "Bitter Reminder",
-				allowed: ["bwc", "msc"],
+				allowed: ["bwc"],
 				type: "Gear",
 				cost: "various",
-				description: "Dark Elf characters may purchase items frmn the Elven Resources list on page 156 of die Burning Wheel. Each 10 rps spent on this items adds +1D to starting Spite."
+				description: "Dark Elf characters may purchase items from the Elven Resources list on page 156 of die Burning Wheel. Each 10 rps spent on this items adds +1D to starting Spite."
 			},
 			{
 				name: "Bitter Poison",
-				allowed: ["bwc", "msc"],
+				allowed: ["bwc"],
 				type: "Gear",
 				cost: 10,
 				description: "One dose of this ingested poison causes victim to lose 1D of Health per day for five days. If Health drops to zero, the victim dies. If not, the victim recovers his Health at 1D per week."
 			},
 			{
 				name: "Spiteful Poison",
-				allowed: ["bwc", "msc"],
+				allowed: ["bwc"],
 				type: "Gear",
 				cost: 20,
 				description: "One small cut from a needle or blade so poisoned is enough to kill. If an Incidental hit is delivered from a blade or barb with this poison, roll a die of fate. On a 1-2, the victim is poisoned. If a Mark hit is delivered, the victim is poisoned on a 1-4. Superb hits always deliver the poison. If poisoned, the victim must pass an Ob 5 Health test. If failed, the victim —unaware that he or she has been poisoned— will exhibit no symptoms for eight hours or more, after which time he or she will fall into a swoon and die. If somehow detected in the interim, the poison can be countered usign the Song of Soothing. If the victim passes the Health test, the victim's Forte is taxed by four. Recover as per Sickness rules, but in days of hours."
 			},
 			{
 				name: "Lock Pick",
-				allowed: ["bwc", "msc"],
+				allowed: ["bwc"],
 				type: "Gear",
 				cost: 10,
 				description: "These tppşs are required to use the Lock Pick skill."
 			},
 			{
 				name: "Long Knife",
-				allowed: ["bwc", "msc"],
+				allowed: ["bwc"],
 				type: "Gear",
 				cost: 5,
 				description: "These insidious weapons count as daggers and are designed to cause maximum harm to their targets. Pow 2, Add 1, VA —, WS 3, Short. Can be concealed like a dagger or knife."
 			},
 			{
 				name: "Barbed Javelins",
-				allowed: ["bwc", "msc"],
+				allowed: ["bwc"],
 				type: "Gear",
 				cost: 3,
 				description: "Barbed Javelins are designed to cause their victims grievous harm even after impact. If a Superb hit is scored, the javelin has embedded itself in the victim. All medicinal skill rolls to stop bleeding or being recovery suffer +2 Ob penalty due to the javelin's ugly barbs that must be extracted before the victim can heal."
 			},
 			{
 				name: "Garrote",
-				allowed: ["bwc", "msc"],
+				allowed: ["bwc"],
 				type: "Gear",
 				cost: 3,
 				description: "A garrote is a two- to three-foot length of cord strung between two small wooden handles. It is used to throttle victims to death. To use this weapon, a character must win positioning at hands fighting distance. Once there, a 2D or greater Lock must be estabilished around the neck with garrote. If such a Lock is achieved, the victim loses 1D Forte every volley thereafter. If Forte reaches zero, the victim falls unconscious."
 			},
 			{
 				name: "Caltrops",
-				allowed: ["bwc", "msc"],
+				allowed: ["bwc"],
 				type: "Gear",
 				cost: 3,
 				description: "Caltrops are sharp barbs scattered on the ground to interfere with a creature's movement. If approached while moving quickly or if simply walking into the trap unawared, make an Ob 3 Speed test to avoid. Failure indicates damage. Roll the Die of Fate. 1: B7; 2-4: B5; 5-6: B4."
 			},
 			{
 				name: "Tools of the Trade",
-				allowed: ["bwc", "msc"],
+				allowed: ["bwc"],
 				type: "Gear",
 				cost: 9,
 				description: "Skill kits for Disguise, Poisons or any other kit the Dark Elf may need."
 			},
 			{
 				name: "Cloak of Darkness",
-				allowed: ["bwc", "msc"],
+				allowed: ["bwc"],
 				type: "Gear",
 				cost: 30,
 				description: "Adds +4D of open ended helping dice to Stealthy skill. If you have no Stealthy skill, roll the cloak's own four dice to create the Observation obstacle."
 			},
 			{
 				name: "Climbing Claws",
-				allowed: ["bwc", "msc"],
+				allowed: ["bwc"],
 				type: "Gear",
 				cost: 5,
 				description: "These odd devices help the Dark Elf thieves in their second-story operations. Add +1D to the Climbing skill, but +1 Ob to all other Agility based skills while wearing them (except when using Climbing Claws with Brawling). They can also act as a weapon: Pow 1, Add 2, VA —, WS 2, Shortest."
 			},
 			{
 				name: "Remote Refuge",
-				allowed: ["bwc", "msc"],
+				allowed: ["bwc"],
 				type: "Property",
-				cost: "various",
+				cost: [
+					["Pastoral lands. This includes a single important terrain feature like a lake, a length of river, a hill or prairie and a modest but comfortable dwelling for the Elf's family.", 20],
+					["A large country manor and land", 50],
+					["A palace", 100],
+					["Allows the Elf and his family to occupy a major terrain feature like a forest, bay or mountain.", 150],
+					["A sumptuous apartment in the Citadel.", 25]
+				],
 				description: "Dark Elves often find remote refuges where they can live in isolation: deep in ancient woods, lost in wastelands or even under the earth in vast caves. Use the Elven Land list for prices and translate the actual purchases into something suitably dark and forlorn."
 			},
 			{
 				name: "Morlin Armor",
-				allowed: ["bwc", "msc"],
+				allowed: ["bwc"],
 				type: "Gear",
 				cost: [
 					["Black metal light mail", 30],
@@ -415,7 +1806,7 @@ export const Resources: ResourceGroup = {
 			},
 			{
 				name: "Morlin Weapons",
-				allowed: ["bwc", "msc"],
+				allowed: ["bwc"],
 				type: "Gear",
 				cost: 15,
 				description: "Weapons made of the Dark Elven black metal count as superior quality. You may modify the weapon thusly:<br>For an additional +15 rps, you may add an additional point of weapon speed or VA to the weapon's stats.<br>For +30 rps, you may add +1 Power to the weapon.<br>However, to qualify for this bonus, you must name the weapon and it must be unique in your campaign. For example, if you take a black metal dagger with VA 2, it can be the only one of its type."
@@ -424,11 +1815,14 @@ export const Resources: ResourceGroup = {
 	},
 	"Human": {
 		name: "Human",
-		allowed: ["bwg", "bwc", "msc"],
+		allowed: ["bwg"],
 		resources: [
+			Relationship,
+			Reputation,
+			Affiliation,
 			{
 				name: "Arms",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: [
 					["Poor Quality Arms", 3],
@@ -439,7 +1833,7 @@ export const Resources: ResourceGroup = {
 			},
 			{
 				name: "Missiles",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: [
 					["Throwing weapons like knives or javelins", 3],
@@ -454,7 +1848,7 @@ export const Resources: ResourceGroup = {
 			},
 			{
 				name: "Armor",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: [
 					["Gambeson", 3],
@@ -468,98 +1862,98 @@ export const Resources: ResourceGroup = {
 			},
 			{
 				name: "Riding Mount or Pack Animal",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 5,
 				description: "A horse, pony, camel and so forth can be bought with this choice. Basic riding horse stats follow: Stats: Pe: B3(4), Wi: B2, Ag: B2, Sp: B6, Po: B6, Fo: B6. Attributes: He: B4, St: B3, Re: B4 , MW: B12. Hesitation: 8. Skills: Rider Training, Foraging B2. Traits: Gelded, Docile, Obedient, Proud, Long-Limbed, Keen Hearing, Hooved, Ungulate. Stride: 12."
 			},
 			{
 				name: "Warhorse (Courser)",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 12,
 				description: "A warhorse is trained to carry its master into battle. Basic warhorse stats: Pe: B3(4), Wi: B2, Ag: B4, Sp: B6, Po: B7, Fo: B7. Attributes: He: B5, St: B7, Re: B4, MW: B13. Hesitation: 5 (Fearless and Determined). Skills: Rider Training, Mounted Combat Training, Armor Training, Formation Fighting Training, Intimidation B2, Brawling B3, Foraging B2. Traits: Level-Headed, Loyal, Determined, Fearless, Aggressive, Long-Limbed, Keen Hearing, Hooved, Ungulate. Stride : 12."
 			},
 			{
 				name: "Clothes",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 1,
 				description: "This resource purchase includes all of the clothing a character would need for everyday life in his station. It is not just one outfit. Like the Arms purchase, Clothing allows the player to take what he needs to trick out his character (short of finery)."
 			},
 			{
 				name: "Traveling Gear",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 1,
 				description: "This is all the necessary bits, odds and ends and what-no ts that are needed for survival on the road-candles, matches, flint and steel, a pocket knife, a rain cloak, a rain hat, a good sturdy rucksack, a thick leather belt, a money purse or wallet, a warm coat, etc. The exact choices are up to the player, but the GM has some say —no flamethrowers or Elven cloaks in traveling gear. Oh, yes, I almost forgot... don't forget to bring a good length of rope; you'll want one if you don't."
 			},
 			{
 				name: "Shoes",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 1,
 				description: "Shoes"
 			},
 			{
 				name: "Personal Effects",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 1,
 				description: "A player may purchase for his character personal effects of sentimental value: a religious trinket, a mirror, a book, a ring, a cane, a locket or any other similar item."
 			},
 			{
 				name: "Finery",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 5,
 				description: "Finery covers specialty clothing and expensive items that one would wear either on special occasions or when trying to make a point: courtly regalia for nobles, vestments for priests, shining robes for mages, etc. Like clothing, this purchase includes a whole wardrobe, not just a single outfit. Take as much or as little as you like. Improper dress imposes obstacle penalties to Inconspicuous and Etiquette tests among others"
 			},
 			{
 				name: "Cash",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 6,
 				description: "A player may start with a pocketful of cash. This grants 1D of cash that can be used as per the Resources rules. Once used, the cash is expended."
 			},
 			{
 				name: "Skill Toolkits",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 8,
 				description: "Many skills require tools. This resource can represent anything from medicine to books. If a skill is listed with 'Tools: Yes,' then a character must spend resource points on a toolkit in order to be able to adequately perform skill tests. Tests without tools (for skills that require them) are at a double obstacle penalty.<br>A toolkit that has finite supplies —like medicine for Herbalism— can run dry. Each use after the first, roll a d6. If a 1 comes up, the kit is empty. The character must make an Ob 2-5 Resources test to replenish it. The GM may set the obstacle depending on how rare the contents of the kit are. Ob 2 for peasant tools, Ob 4 for surgeon's tools, Ob 5 for sorcerous tools. Only one character can help you when you're using a toolkit."
 			},
 			{
 				name: "Workshop",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Property",
 				cost: 20,
 				description: "A workshop is just a big toolkit. It is used for artisan and craftsman skill tests that require more than just simple tools. Purchasing this gives the character an appropriate room/building/tower to house the workshop. Workshops allow for more than one character to help on a skill test. This counts as property when factoring resources."
 			},
 			{
 				name: "Companion Animal",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 3,
 				description: "Some players may wish to take a dog, cat or falcon as an accoutrement to their character. Stats are provided for these beasties in the Creature Codex PDF, but they are really there more for show than for stealing the spotlight in an adventure."
 			},
 			{
 				name: "Herd of Animals",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Property",
 				cost: 20,
 				description: "Characters with the Animal Husbandry skill, or the Master of Horses, Merchant or Magnate lifepath, may take an appropriate herd of animals. This purchase counts as property when factoring resources."
 			},
 			{
 				name: "Rent",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Property",
 				cost: 5,
 				description: "Characters who cannot afford to own property live on leased land or rented houses/apartments. It's a common condition of the age. This purchase gives the character a place to live and counts as an Ob 2 Resources maintenan ce test. Paying rent counts as property when factoring Resources."
 			},
 			{
 				name: "Property",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Property",
 				cost: [
 					["A leaky shack", 1],
@@ -585,13 +1979,6 @@ export const Resources: ResourceGroup = {
 				description: "Property counts as property when factoring Resources.<br>*Note that only Noble Born chara cters or characters with the Minister, Town Official, Merchant, Magnate, Steward, Master of Horse, Master of Hounds, Bailiff, Justiciar, Coroner, Constable, Treasurer, Bishop or Abbot LPs may spend more than 40 rps on property. Other characters simply may not own that degree of property (unless otherwi sespecified). The property purchase comes with appropriate staff, buildings and accoutrements. It does not provide the character with other free purchases from the Resources list."
 			},
 			{
-				name: "Spells",
-				allowed: ["bwg", "bwc", "msc"],
-				type: "Gear",
-				cost: "various",
-				description: "Starting sorcerer characters purchase their spells with resource points. Resource point costs are provided with each spell. But in case yo u n ee d to price your own spells, the costs are as follows: The resource point cost for each spe ll is 2 rps for every point of obstacle. If the spell is li sted with a '^', the cost is 4 rps per obstacle point. If the obstacle is listed as a 'range', price the spell using the obstacle in the middle of the variable range. For example, if a spell obstacle is 1-10, price the spell as an Ob 5 spell. If the spell Obstacle is based on a stat , price the spell based on a stat of 5 plus the cost of any base obstacle."
-			},
-			{
 				name: "Exotic Beast",
 				allowed: ["msc"],
 				type: "Property",
@@ -607,41 +1994,49 @@ export const Resources: ResourceGroup = {
 					["War sling", 3]
 				],
 				description: "For Flails and Whip, resource points cost found in the Arms section on pg. 202 of the Burning Wheel Gold"
-			}
+			},
+			...SorcerySpells,
+			...PracticalMagicSchools,
+			...SpiritBindingDomainBindingLevels,
+			...SpiritBindingSpiritMarkLevels,
+			...SummoningAffiliatedOrderLevels
 		]
 	},
 	"Orc": {
 		name: "Orc",
-		allowed: ["bwg", "bwc", "msc"],
+		allowed: ["bwg"],
 		resources: [
+			Relationship,
+			Reputation,
+			OrcAffiliation,
 			{
 				name: "Rags",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 1
 			},
 			{
 				name: "Traveling Gear",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 3
 			},
 			{
 				name: "Hobnailed Boots",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 1
 			},
 			{
 				name: "Orc Arms",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: [["Poor quality arms", 3], ["Run of the mill arms", 5]],
 				description: "You may purchase run of the mill or poor quality weapons for your character. You may purchase beaks, spikes and weights for your character's weapons at +1 rp per modification, per weapon."
 			},
 			{
 				name: "Orc Armor",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: [
 					["Poor quality hides (gambeson equivalent)", 1],
@@ -657,10 +2052,10 @@ export const Resources: ResourceGroup = {
 			},
 			{
 				name: "Orc Missiles",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: [
-					["Poor qualit y bow ( + 1 Ob to hit)", 3],
+					["Poor quality bow (+1 Ob to hit)", 3],
 					["Poor quality crossbow (+1 Ob to hit)", 4],
 					["Run of the mill bow", 5],
 					["Run of the mill crossbow", 6],
@@ -670,136 +2065,145 @@ export const Resources: ResourceGroup = {
 			},
 			{
 				name: "Black Iron Helmet",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 5,
 				description: "A helmet complete with spikes, horse hair tassels and a prison-gate mask. 5D, +2 Ob to Perception tests."
 			},
 			{
 				name: "Black Iron Shield",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 4,
 				description: "A large, iron, circular shield, stained coal black. The outer edge is sharpened to add a little surprise for those who want to get close. 3D shield. Power 2, Add 2, VA 1, WS 1, short weapon."
 			},
 			{
 				name: "Riding Mount or Pack Animal",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 9
 			},
 			{
 				name: "Great Wolf Mount",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 15,
 				description: "The Great Wolf is the pr eferred mount of the Orcish cavalry. Though not as swift as horses, they mak e up for their loss in cunning and ferocity. Use the stats in the Monsters section in the Burning Wheel for the Black Destroyer and Astride the Beast wolves (they're too long to li st here) or burn up th e wolf using the Great Wolf lifepaths in the Codex. Burned wolves have one less lifepath than their master and obey the other rules for relationships. Lastly, the wolf can be burned up as a character by another player. This creates a powerful partnership, rather than a master/slave, rider/mount relation ship. When using a player character wolf, lifepath limits are the same as for any other character."
 			},
 			{
 				name: "Whip",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 2,
 				description: "The lash is required for making use of the Where There's a Whip, There's a Way trait. The whip is not a weapon of any consequence. This may only be purchased by characters with the Where There's a Whip, There's a Way trait."
 			},
 			{
 				name: "Poison",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 5,
 				description: "Three doses of one of the types of poison listed under Vile Poisoner."
 			},
 			{
 				name: "Brazen Horn or Clan Banner",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 9,
 				description: "The Brazen Horn adds +1D to the Brazen Horn of Despair skill and allows Despair Shouters to help a Named with Command or Brutal Intimidation. The banner reduces hesitation by one for all in the clan who can see it."
 			},
 			{
 				name: "Skill Toolkits",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 9
 			},
 			{
 				name: "Riding Harness for Wolf",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 5,
 				description: "The saddle, bit and bridle, stirrups and reins add +1D to Riding tests for wolves."
 			},
-			{
+			{ // FIX: [RESOURCES] This needs a cost number button
 				name: "Spoils of War",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: "various",
-				description: "Named, Great Ones , Whisperers, Head Takers, Summoners and Masters may purchase one item from any character stock resources/gear list they wish. Troll Lords may purchase gear from the Troll resources list in the Codex. Any Orc character who has 'failed' a Brutal Life test may also pur chase Spoils of War from other character stocks, but the cost of the item/prop erty may not exceed half the Orc's total resource points. Named, Great Ones, etc. may take a second item, but to do so counts as failing a Brutal Life roll at his current lifepath level. If an Orc player takes property as part of their Spoils of War, be sure to include its cost when calculating his Resources."
-			},
-			{
-				name: "Clans and Warbands",
-				allowed: ["bwg", "bwc", "msc"],
-				type: "Gear",
-				cost: "various",
-				description: "Orcs frequently gather together in groups, warbands, clans and hordes. A typical/minor clan falls into the 1D affiliation cat egory. An important or powerful clan or horde is a 2D affiliation. Relationships in the group/clan are purchased as normal. Additional characters and functionaries can be generated using the Circles rules in play. Orc commanders are often unaware of who precisely is working under them. It's usually a nest of rabble, a few bitter enemies and one or two die hard heavies. The exact nature of who's who is up to the Circles tests. The character's own position in the warband/horde is dependent on his reputation. Use the standard rules described in Step 8. Spending Resource Points to generate this."
+				description: "Named, Great Ones, Whisperers, Head Takers, Summoners and Masters may purchase one item from any character stock resources/gear list they wish. Troll Lords may purchase gear from the Troll resources list in the Codex. Any Orc character who has 'failed' a Brutal Life test may also purchase Spoils of War from other character stocks, but the cost of the item/property may not exceed half the Orc's total resource points. Named, Great Ones, etc. may take a second item, but to do so counts as failing a Brutal Life roll at his current lifepath level. If an Orc player takes property as part of their Spoils of War, be sure to include its cost when calculating his Resources."
 			},
 			{
 				name: "Black Robes",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 1,
 				description: "Servants only."
 			},
 			{
 				name: "Leather Apron",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 1,
 				description: "Servants only."
 			},
 			{
 				name: "Ceremonial Knives",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 3,
 				description: "Servants only. These ornate and hallowed weapons are vital to the Servant for performing his dark rituals. Otherwise they are simply ornate run of the mill weapons."
 			},
 			{
 				name: "Ceremonial Axe or Sword",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 7,
 				description: "Servants only. These ornate and hallowed weapons are vital to the Servant for performing his dark rituals. Otherwise they are simply ornate run of the mill weapons."
 			},
 			{
 				name: "Tools of the Trade",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 7,
 				description: "Servants only. These are a collection of knives, blades, pins, clamps and other strange devices. Tools of the Trade add +1D to the Torture skill."
 			},
 			{
 				name: "Poisoner's Toolkit",
-				allowed: ["bwg", "bwc", "msc"],
+				allowed: ["bwg"],
 				type: "Gear",
 				cost: 7,
 				description: "Servants only. This kit allows the Knower of Secrets to mix poisons. All of the ingredients necessary for concocting the poisons listed under the Vile Poisoner skill are present in this foul smelling pouch. After using this kit, roll the Die of Fate. On a 1, the supplies have run out and the character must refill the kit via a Resources, Foraging or Scavenging test (or another means sanctioned by the GM)."
-			}
+			},
+			...RitualsOfNightRituals
 		]
 	},
 	"Roden": {
 		name: "Roden",
-		allowed: ["bwc", "msc"],
-		resources: []
+		allowed: ["bwc"],
+		resources: [
+			Relationship,
+			Reputation,
+			Affiliation
+			// TODO: [RESOURCES] Add Roden resources
+		]
 	},
 	"Troll": {
 		name: "Troll",
-		allowed: ["bwc", "msc"],
-		resources: []
+		allowed: ["bwc"],
+		resources: [
+			Relationship,
+			Reputation,
+			Affiliation
+			// TODO: [RESOURCES] Add Troll resources
+		]
 	},
 	"Great Wolf": {
 		name: "Great Wolf",
-		allowed: ["bwc", "msc"],
-		resources: []
+		allowed: ["bwc"],
+		resources: [
+			Relationship,
+			Reputation,
+			Affiliation
+			// TODO: [RESOURCES] Add Great Wolf resources
+		]
 	}
 };

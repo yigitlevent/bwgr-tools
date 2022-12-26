@@ -2,11 +2,11 @@ import { SkillCategory } from "./_skills";
 
 
 export const TrollSpecial: SkillCategory = {
-	allowed: ["bwc", "msc"],
+	allowed: ["bwc"],
 	name: "Troll Special",
 	skills: [
 		{
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			description: "",
 			magical: false,
 			name: "Bridge-wise",
@@ -21,7 +21,7 @@ export const TrollSpecial: SkillCategory = {
 			type: "Wise"
 		},
 		{
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			description: "Using this skill, a Troll may take on the appearance of his surroundings and remain hidden. The Dread Stone love to build false stone walls around themselves and they wait for an unsuspecting passerby to wander into reach.<br>Using this skill effectively requires that the Troll remain motionless while camouflaged. Test this skill as a Stealthy skill.<br>Camouflage is used in versus tests against Observation.",
 			magical: false,
 			name: "Camouflage",
@@ -36,7 +36,7 @@ export const TrollSpecial: SkillCategory = {
 			type: "Forester"
 		},
 		{
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			description: "Bull Trolls sometimes learn that it is more fruitful to let their victims live to extort food and shiny bits from them over the years. This way they can get more than a single meal out of them!<br>Obstacles are equal to the Will of the victim.",
 			magical: false,
 			name: "Extortion",
@@ -51,7 +51,7 @@ export const TrollSpecial: SkillCategory = {
 			type: "Social"
 		},
 		{
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			description: "",
 			magical: false,
 			name: "Mine-wise",

@@ -12,7 +12,7 @@ export const Roden: Stock = {
 		{ max: 45, min: 41, m: 7, p: 11 },
 		{ max: 99999, min: 46, m: 6, p: 10 }
 	],
-	allowed: ["bwc", "msc"],
+	allowed: ["bwc"],
 	hasSetting: true,
 	hasSubsetting: true,
 	name: "Roden",
@@ -20,14 +20,14 @@ export const Roden: Stock = {
 	stride: 8,
 	settings: {
 		"Below": {
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			name: "Below",
 			short: "Below",
 			stock: "Roden",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 3,
@@ -50,7 +50,7 @@ export const Roden: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -77,7 +77,7 @@ export const Roden: Stock = {
 					years: 2
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -107,7 +107,7 @@ export const Roden: Stock = {
 					years: 4
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -133,7 +133,7 @@ export const Roden: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -162,7 +162,7 @@ export const Roden: Stock = {
 					years: 4
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -190,7 +190,7 @@ export const Roden: Stock = {
 					years: 1
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -225,7 +225,7 @@ export const Roden: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -263,7 +263,7 @@ export const Roden: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -300,7 +300,7 @@ export const Roden: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -335,7 +335,7 @@ export const Roden: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -372,7 +372,7 @@ export const Roden: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -411,7 +411,7 @@ export const Roden: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -448,7 +448,7 @@ export const Roden: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -484,7 +484,7 @@ export const Roden: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -523,7 +523,7 @@ export const Roden: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -565,7 +565,7 @@ export const Roden: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -617,7 +617,7 @@ export const Roden: Stock = {
 					years: 9
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -660,7 +660,7 @@ export const Roden: Stock = {
 					years: 10
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -701,14 +701,14 @@ export const Roden: Stock = {
 			]
 		},
 		"Exile": {
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			name: "Exile",
 			short: "Exile",
 			stock: "Roden",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -746,7 +746,7 @@ export const Roden: Stock = {
 					years: 4
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -787,7 +787,7 @@ export const Roden: Stock = {
 					years: 3
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -822,7 +822,7 @@ export const Roden: Stock = {
 					years: 10
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -852,7 +852,7 @@ export const Roden: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -898,7 +898,7 @@ export const Roden: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -939,7 +939,7 @@ export const Roden: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -971,14 +971,14 @@ export const Roden: Stock = {
 			]
 		},
 		"Field": {
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			name: "Field",
 			short: "Field",
 			stock: "Roden",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 3,
@@ -1001,7 +1001,7 @@ export const Roden: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1028,7 +1028,7 @@ export const Roden: Stock = {
 					years: 3
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1056,7 +1056,7 @@ export const Roden: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1084,7 +1084,7 @@ export const Roden: Stock = {
 					years: 4
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1109,7 +1109,7 @@ export const Roden: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1134,7 +1134,7 @@ export const Roden: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1174,7 +1174,7 @@ export const Roden: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1211,7 +1211,7 @@ export const Roden: Stock = {
 					years: 9
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1242,7 +1242,7 @@ export const Roden: Stock = {
 					years: 9
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1278,7 +1278,7 @@ export const Roden: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1313,7 +1313,7 @@ export const Roden: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1350,7 +1350,7 @@ export const Roden: Stock = {
 					years: 10
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1390,7 +1390,7 @@ export const Roden: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1423,7 +1423,7 @@ export const Roden: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1457,7 +1457,7 @@ export const Roden: Stock = {
 					years: 4
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1491,7 +1491,7 @@ export const Roden: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1530,7 +1530,7 @@ export const Roden: Stock = {
 					years: 10
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1562,7 +1562,7 @@ export const Roden: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1602,7 +1602,7 @@ export const Roden: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1641,7 +1641,7 @@ export const Roden: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1676,14 +1676,14 @@ export const Roden: Stock = {
 			]
 		},
 		"Society": {
-			allowed: ["bwc", "msc"],
+			allowed: ["bwc"],
 			name: "Society",
 			short: "Society",
 			stock: "Roden",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1709,7 +1709,7 @@ export const Roden: Stock = {
 					years: 3
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1743,7 +1743,7 @@ export const Roden: Stock = {
 					years: 4
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1777,7 +1777,7 @@ export const Roden: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1811,7 +1811,7 @@ export const Roden: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1846,7 +1846,7 @@ export const Roden: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1880,7 +1880,7 @@ export const Roden: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1920,7 +1920,7 @@ export const Roden: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1953,7 +1953,7 @@ export const Roden: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1990,7 +1990,7 @@ export const Roden: Stock = {
 					years: 6
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -2025,7 +2025,7 @@ export const Roden: Stock = {
 					years: 8
 				},
 				{
-					allowed: ["bwc", "msc"],
+					allowed: ["bwc"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
