@@ -4126,7 +4126,7 @@ export const Human: Stock = {
 						"Human➞Religious"
 					],
 					mentalPool: 0,
-					name: "Prince of Blood",
+					name: "Prince of the Blood",
 					physicalPool: 0,
 					requirements: {
 						conditions: {
@@ -5765,7 +5765,7 @@ export const Human: Stock = {
 								"Human➞Noble➞Viscount",
 								"Human➞Noble➞Count",
 								"Human➞Noble➞Duke",
-								"Human➞Noble➞Prince of Blood",
+								"Human➞Noble➞Prince of the Blood",
 								"Human➞Noble➞Noble Prince"
 							]
 						},
