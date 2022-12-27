@@ -15,8 +15,8 @@ import { LifepathBox } from "../../LifepathLists/LifepathBox";
 
 type Generic = (open: boolean) => void;
 
-export function LifepathsBlock({ openLpModal, openRlModal, openQuModal, openSuModal }: { openLpModal: Generic; openRlModal: Generic; openQuModal: Generic; openSuModal: Generic; }) {
-	const { lifepathPaths } = useAppSelector(state => state.characterBurner);
+export function LifepathsBlock({ openLpModal, openRlModal, openQuModal, openSuModal, openSsModal }: { openLpModal: Generic; openRlModal: Generic; openQuModal: Generic; openSuModal: Generic; openSsModal: Generic; }) {
+	const { stock, lifepathPaths } = useAppSelector(state => state.characterBurner);
 	const { cbRemoveLifepath } = useStore().characterBurner;
 
 	return (
@@ -51,6 +51,10 @@ export function LifepathsBlock({ openLpModal, openRlModal, openQuModal, openSuMo
 
 			<Grid item>
 				<Button variant="outlined" size="medium" onClick={() => openSuModal(true)} disabled={lifepathPaths.length === 0}>Special Skills</Button>
+			</Grid>
+
+			<Grid item>
+				<Button variant="outlined" size="medium" onClick={() => openSsModal(true)} disabled={lifepathPaths.length === 0 || (stock === "Orc" && lifepathPaths.length < 5)}>Stock Specific</Button>
 			</Grid>
 		</GenericGrid>
 	);

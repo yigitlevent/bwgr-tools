@@ -21,26 +21,28 @@ interface ChangeStatExponent { type: "CHANGE_CB_STAT_EXPONENT"; payload: { statN
 
 interface ChangeAttributeShade { type: "CHANGE_CB_ATTRIBUTE_SHADE"; payload: { attributeName: AttributesList; change: 5 | -5; }; }
 
-interface OpenSkill { type: "OPEN_CB_SKILL"; payload: { skillName: string; open: boolean; isLifepath: boolean; }; }
-interface ChangeSkillAdvancement { type: "CHANGE_CB_SKILL_EXPONENT"; payload: { skillName: string; change: 1 | -1; isLifepath: boolean; }; }
+interface OpenSkill { type: "OPEN_CB_SKILL"; payload: { skillPath: string; open: boolean; isLifepath: boolean; }; }
+interface ChangeSkillAdvancement { type: "CHANGE_CB_SKILL_EXPONENT"; payload: { skillPath: string; change: 1 | -1; isLifepath: boolean; }; }
 
-interface OpenTrait { type: "OPEN_CB_TRAIT"; payload: { traitName: string; open: boolean; isLifepath: boolean; }; }
+interface OpenTrait { type: "OPEN_CB_TRAIT"; payload: { traitPath: string; open: boolean; isLifepath: boolean; }; }
 
 interface SwitchQuestionAnswer { type: "SWITCH_CB_ANSWER"; payload: { questionKey: AttributeQuestionsKeys; }; }
 
-interface SelectApprWeapon { type: "SELECT_CB_APPR_WEAPON"; payload: { skillName: SkillPath; }; }
-interface SelectMandApprWeapon { type: "SELECT_CB_MAND_APPR_WEAPON"; payload: { skillName: SkillPath; }; }
-interface SelectJavelinOrBow { type: "SELECT_CB_JAVELIN_OR_BOW"; payload: { skillName: SkillPath; }; }
-interface SelectAnySmith { type: "SELECT_CB_ANY_SMITH"; payload: { skillName: SkillPath; }; }
+interface SelectApprWeapon { type: "SELECT_CB_APPR_WEAPON"; payload: { skillPath: SkillPath; }; }
+interface SelectMandApprWeapon { type: "SELECT_CB_MAND_APPR_WEAPON"; payload: { skillPath: SkillPath; }; }
+interface SelectJavelinOrBow { type: "SELECT_CB_JAVELIN_OR_BOW"; payload: { skillPath: SkillPath; }; }
+interface SelectAnySmith { type: "SELECT_CB_ANY_SMITH"; payload: { skillPath: SkillPath; }; }
 
-interface AddTrait { type: "ADD_CB_TRAIT"; payload: { traitName: TraitPath; }; }
-interface RemoveTrait { type: "REMOVE_CB_TRAIT"; payload: { traitName: TraitPath; }; }
+interface AddTrait { type: "ADD_CB_TRAIT"; payload: { traitPath: TraitPath; }; }
+interface RemoveTrait { type: "REMOVE_CB_TRAIT"; payload: { traitPath: TraitPath; }; }
 
-interface AddSkill { type: "ADD_CB_SKILL"; payload: { skillName: SkillPath; }; }
-interface RemoveSkill { type: "REMOVE_CB_SKILL"; payload: { skillName: SkillPath; }; }
+interface AddSkill { type: "ADD_CB_SKILL"; payload: { skillPath: SkillPath; }; }
+interface RemoveSkill { type: "REMOVE_CB_SKILL"; payload: { skillPath: SkillPath; }; }
 
 interface AddResource { type: "ADD_CB_RESOURCE"; payload: { resource: SpendingForResource; }; }
 interface RemoveResource { type: "REMOVE_CB_RESOURCE"; payload: { guid: string; }; }
+
+interface AddBrutalLifeTrait { type: "ADD_CB_BRUTAL_LIFE_TRAIT"; payload: { traitPath: TraitPath | undefined; }; }
 
 export type CharacterBurnerActions =
 	ChangeCharacterStock | ChangeCharacterConcept |
@@ -51,7 +53,8 @@ export type CharacterBurnerActions =
 	OpenTrait | AddTrait | RemoveTrait |
 	SwitchQuestionAnswer |
 	SelectApprWeapon | SelectMandApprWeapon | SelectJavelinOrBow | SelectAnySmith |
-	AddResource | RemoveResource;
+	AddResource | RemoveResource |
+	AddBrutalLifeTrait;
 
 export interface StatSpending {
 	shade: number;
@@ -113,6 +116,12 @@ export interface SpecialSkills {
 	anySmith: SkillPath[];
 }
 
+export interface CharacterStockSpecific {
+	brutalLife: {
+		traits: (TraitPath | undefined)[];
+	};
+}
+
 export interface CharacterBurnerState {
 	stock: StocksList;
 	concept: string;
@@ -121,6 +130,7 @@ export interface CharacterBurnerState {
 	totals: LifepathTotals;
 	spendings: CharacterSpendings;
 	questions: CharacterQuestions;
+	stockSpecific: CharacterStockSpecific;
 }
 
 const EmptySpendings: CharacterSpendings = {
@@ -149,7 +159,12 @@ const INITIAL: CharacterBurnerState = {
 	},
 	totals: EmptyTotals,
 	spendings: EmptySpendings,
-	questions: {}
+	questions: {},
+	stockSpecific: {
+		brutalLife: {
+			traits: []
+		}
+	}
 };
 
 function GetTotals(state: CharacterBurnerState): LifepathTotals { return JSON.parse(JSON.stringify(state.totals)); }
@@ -207,12 +222,15 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 			attributes: RefreshAttributesList(newTotals, state.spendings).attributes
 		};
 		const newQuestions: CharacterQuestions = RefreshQuestionsList(newTotals, newSpendings, GetQuestions(state));
+		const newStockSpecific = JSON.parse(JSON.stringify(state.stockSpecific)) as CharacterStockSpecific;
+		newStockSpecific.brutalLife.traits.pop();
 		return {
 			...state,
 			lifepathPaths: lifepaths,
 			totals: JSON.parse(JSON.stringify(newTotals)),
 			spendings: JSON.parse(JSON.stringify(newSpendings)),
-			questions: JSON.parse(JSON.stringify(newQuestions))
+			questions: JSON.parse(JSON.stringify(newQuestions)),
+			stockSpecific: newStockSpecific
 		};
 	}
 	else if (action.type === "CHANGE_CB_STAT_SHADE") {
@@ -241,7 +259,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	}
 	else if (action.type === "OPEN_CB_SKILL") {
 		const spending = GetSpending(state);
-		spending.skills[action.payload.skillName] = TryOpenSkill(action.payload.skillName, state.totals, spending, action.payload.open, action.payload.isLifepath);
+		spending.skills[action.payload.skillPath] = TryOpenSkill(action.payload.skillPath, state.totals, spending, action.payload.open, action.payload.isLifepath);
 		return {
 			...state,
 			spendings: { ...spending }
@@ -249,7 +267,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	}
 	else if (action.type === "CHANGE_CB_SKILL_EXPONENT") {
 		const spending = GetSpending(state);
-		spending.skills[action.payload.skillName] = ModifySkillExponentSpending(action.payload.skillName, spending, state.totals, action.payload.change, action.payload.isLifepath);
+		spending.skills[action.payload.skillPath] = ModifySkillExponentSpending(action.payload.skillPath, spending, state.totals, action.payload.change, action.payload.isLifepath);
 		return {
 			...state,
 			spendings: { ...spending }
@@ -257,7 +275,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	}
 	else if (action.type === "OPEN_CB_TRAIT") {
 		const spending = GetSpending(state);
-		spending.traits[action.payload.traitName] = TryOpenTrait(action.payload.traitName, state.totals, spending, action.payload.open, action.payload.isLifepath);
+		spending.traits[action.payload.traitPath] = TryOpenTrait(action.payload.traitPath, state.totals, spending, action.payload.open, action.payload.isLifepath);
 		const newQuestions: CharacterQuestions = RefreshQuestionsList(state.totals, spending, GetQuestions(state));
 		return {
 			...state,
@@ -278,11 +296,11 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	}
 	else if (action.type === "SELECT_CB_APPR_WEAPON") {
 		const newSpecialSkills = JSON.parse(JSON.stringify(state.specialSkills)) as SpecialSkills;
-		if (newSpecialSkills.appropriateWeapons.selected.length > 1 && newSpecialSkills.appropriateWeapons.selected.includes(action.payload.skillName)) {
-			newSpecialSkills.appropriateWeapons.selected = newSpecialSkills.appropriateWeapons.selected.filter(v => v !== action.payload.skillName);
+		if (newSpecialSkills.appropriateWeapons.selected.length > 1 && newSpecialSkills.appropriateWeapons.selected.includes(action.payload.skillPath)) {
+			newSpecialSkills.appropriateWeapons.selected = newSpecialSkills.appropriateWeapons.selected.filter(v => v !== action.payload.skillPath);
 		}
 		else {
-			newSpecialSkills.appropriateWeapons.selected.push(action.payload.skillName);
+			newSpecialSkills.appropriateWeapons.selected.push(action.payload.skillPath);
 		}
 
 		newSpecialSkills.appropriateWeapons.mandatory =
@@ -308,8 +326,8 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	else if (action.type === "SELECT_CB_MAND_APPR_WEAPON") {
 		const newSpecialSkills = JSON.parse(JSON.stringify(state.specialSkills)) as SpecialSkills;
 		newSpecialSkills.appropriateWeapons.mandatory =
-			(newSpecialSkills.appropriateWeapons.selected.includes(action.payload.skillName))
-				? action.payload.skillName
+			(newSpecialSkills.appropriateWeapons.selected.includes(action.payload.skillPath))
+				? action.payload.skillPath
 				: newSpecialSkills.appropriateWeapons.selected[0];
 
 		const lifepaths = GetLifepathsFromPaths(state.lifepathPaths);
@@ -329,7 +347,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	}
 	else if (action.type === "SELECT_CB_JAVELIN_OR_BOW") {
 		const newSpecialSkills = JSON.parse(JSON.stringify(state.specialSkills)) as SpecialSkills;
-		newSpecialSkills.javelinOrBow = action.payload.skillName;
+		newSpecialSkills.javelinOrBow = action.payload.skillPath;
 
 		const lifepaths = GetLifepathsFromPaths(state.lifepathPaths);
 		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
@@ -348,11 +366,11 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	}
 	else if (action.type === "SELECT_CB_ANY_SMITH") {
 		const newSpecialSkills = JSON.parse(JSON.stringify(state.specialSkills)) as SpecialSkills;
-		if (newSpecialSkills.anySmith.includes(action.payload.skillName)) {
-			newSpecialSkills.anySmith = newSpecialSkills.anySmith.filter(v => v !== action.payload.skillName);
+		if (newSpecialSkills.anySmith.includes(action.payload.skillPath)) {
+			newSpecialSkills.anySmith = newSpecialSkills.anySmith.filter(v => v !== action.payload.skillPath);
 		}
 		else {
-			newSpecialSkills.anySmith.push(action.payload.skillName);
+			newSpecialSkills.anySmith.push(action.payload.skillPath);
 		}
 
 		const lifepaths = GetLifepathsFromPaths(state.lifepathPaths);
@@ -372,7 +390,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	}
 	else if (action.type === "ADD_CB_TRAIT") {
 		const newTotals = GetTotals(state);
-		newTotals.traits.generalList.push(action.payload.traitName);
+		newTotals.traits.generalList.push(action.payload.traitPath);
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			traits: RefreshTraitsList(newTotals, state.spendings).traits,
@@ -386,7 +404,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	}
 	else if (action.type === "REMOVE_CB_TRAIT") {
 		const newTotals = GetTotals(state);
-		newTotals.traits.generalList = newTotals.traits.generalList.filter(v => v !== action.payload.traitName);
+		newTotals.traits.generalList = newTotals.traits.generalList.filter(v => v !== action.payload.traitPath);
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			traits: RefreshTraitsList(newTotals, state.spendings).traits,
@@ -400,7 +418,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	}
 	else if (action.type === "ADD_CB_SKILL") {
 		const newTotals = GetTotals(state);
-		newTotals.skills.generalList.push(action.payload.skillName);
+		newTotals.skills.generalList.push(action.payload.skillPath);
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			skills: RefreshSkillsList(newTotals, state.spendings).skills,
@@ -414,7 +432,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	}
 	else if (action.type === "REMOVE_CB_SKILL") {
 		const newTotals = GetTotals(state);
-		newTotals.skills.generalList = newTotals.skills.generalList.filter(v => v !== action.payload.skillName);
+		newTotals.skills.generalList = newTotals.skills.generalList.filter(v => v !== action.payload.skillPath);
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			skills: RefreshSkillsList(newTotals, state.spendings).skills,
@@ -440,6 +458,14 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		return {
 			...state,
 			spendings: newSpendings
+		};
+	}
+	else if (action.type === "ADD_CB_BRUTAL_LIFE_TRAIT") {
+		const newStockSpecific = JSON.parse(JSON.stringify(state.stockSpecific)) as CharacterStockSpecific;
+		newStockSpecific.brutalLife.traits.push(action.payload.traitPath);
+		return {
+			...state,
+			stockSpecific: newStockSpecific
 		};
 	}
 

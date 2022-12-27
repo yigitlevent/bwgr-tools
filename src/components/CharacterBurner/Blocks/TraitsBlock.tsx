@@ -120,8 +120,31 @@ function GeneralTraitsBlock() {
 	);
 }
 
+
+function BrutalLifeTraitsBlock() {
+	const { stockSpecific } = useAppSelector(state => state.characterBurner);
+
+	return (
+		<Fragment>
+			<Grid item xs={6}>
+				<Typography variant="h5" sx={{ margin: "12px 0 0 24px" }}>Brutal Life</Typography>
+			</Grid>
+
+			<Fragment>
+				{(stockSpecific.brutalLife.traits.filter(v => v !== undefined && v !== null) as TraitPath[]).map((traitName, i) =>
+					<Grid key={i} item xs={6} sm={3} md={2}>
+						<GenericGrid columns={5} center="h" hasBackground={1}>
+							<BlockTraitPopover traitName={traitName} checkbox={{ checked: true, disabled: true }} />
+						</GenericGrid>
+					</Grid>
+				)}
+			</Fragment>
+		</Fragment>
+	);
+}
+
 export function TraitsBlock() {
-	const { totals, spendings } = useAppSelector(state => state.characterBurner);
+	const { totals, spendings, stockSpecific } = useAppSelector(state => state.characterBurner);
 
 	const [open, setOpen] = useState(false);
 
@@ -145,6 +168,7 @@ export function TraitsBlock() {
 			{totals.traits.mandatoryList.length > 0 ? <MandatoryTraitsBlock /> : null}
 			{totals.traits.lifepathList.length > 0 ? <LifepathTraitsBlock /> : null}
 			{totals.traits.generalList.length > 0 ? <GeneralTraitsBlock /> : null}
+			{stockSpecific.brutalLife.traits.filter(v => v !== undefined && v !== null).length > 0 ? <BrutalLifeTraitsBlock /> : null}
 
 			<GeneralTraitModal open={open} setOpen={setOpen} />
 		</GenericGrid>

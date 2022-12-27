@@ -324,48 +324,51 @@ export function useStore() {
 			e.preventDefault();
 			dispatch({ type: "CHANGE_CB_ATTRIBUTE_SHADE", payload: { attributeName, change } });
 		},
-		cbOpenSkill: (skillName: string, open: boolean, isLifepath: boolean) => {
-			dispatch({ type: "OPEN_CB_SKILL", payload: { skillName, open, isLifepath } });
+		cbOpenSkill: (skillPath: string, open: boolean, isLifepath: boolean) => {
+			dispatch({ type: "OPEN_CB_SKILL", payload: { skillPath, open, isLifepath } });
 		},
-		cbChangeSkillExponent: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, skillName: string, change: 1 | -1, isLifepath: boolean) => {
+		cbChangeSkillExponent: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, skillPath: string, change: 1 | -1, isLifepath: boolean) => {
 			e.preventDefault();
-			dispatch({ type: "CHANGE_CB_SKILL_EXPONENT", payload: { skillName, change, isLifepath } });
+			dispatch({ type: "CHANGE_CB_SKILL_EXPONENT", payload: { skillPath, change, isLifepath } });
 		},
-		cbOpenTrait: (traitName: string, open: boolean, isLifepath: boolean) => {
-			dispatch({ type: "OPEN_CB_TRAIT", payload: { traitName, open, isLifepath } });
+		cbOpenTrait: (traitPath: string, open: boolean, isLifepath: boolean) => {
+			dispatch({ type: "OPEN_CB_TRAIT", payload: { traitPath, open, isLifepath } });
 		},
 		cbSwitchAnswer: (questionKey: AttributeQuestionsKeys) => {
 			dispatch({ type: "SWITCH_CB_ANSWER", payload: { questionKey } });
 		},
-		cbSelectApprWeapon: (skillName: SkillPath) => {
-			dispatch({ type: "SELECT_CB_APPR_WEAPON", payload: { skillName } });
+		cbSelectApprWeapon: (skillPath: SkillPath) => {
+			dispatch({ type: "SELECT_CB_APPR_WEAPON", payload: { skillPath } });
 		},
-		cbSelectMandApprWeapon: (skillName: SkillPath) => {
-			dispatch({ type: "SELECT_CB_MAND_APPR_WEAPON", payload: { skillName } });
+		cbSelectMandApprWeapon: (skillPath: SkillPath) => {
+			dispatch({ type: "SELECT_CB_MAND_APPR_WEAPON", payload: { skillPath } });
 		},
-		cbSelectJavelinOrBow: (skillName: SkillPath) => {
-			dispatch({ type: "SELECT_CB_JAVELIN_OR_BOW", payload: { skillName } });
+		cbSelectJavelinOrBow: (skillPath: SkillPath) => {
+			dispatch({ type: "SELECT_CB_JAVELIN_OR_BOW", payload: { skillPath } });
 		},
-		cbSelectAnySmith: (skillName: SkillPath) => {
-			dispatch({ type: "SELECT_CB_ANY_SMITH", payload: { skillName } });
+		cbSelectAnySmith: (skillPath: SkillPath) => {
+			dispatch({ type: "SELECT_CB_ANY_SMITH", payload: { skillPath } });
 		},
-		cbAddTrait: (traitName: TraitPath) => {
-			dispatch({ type: "ADD_CB_TRAIT", payload: { traitName } });
+		cbAddTrait: (traitPath: TraitPath) => {
+			dispatch({ type: "ADD_CB_TRAIT", payload: { traitPath } });
 		},
-		cbRemoveTrait: (traitName: TraitPath) => {
-			dispatch({ type: "REMOVE_CB_TRAIT", payload: { traitName } });
+		cbRemoveTrait: (traitPath: TraitPath) => {
+			dispatch({ type: "REMOVE_CB_TRAIT", payload: { traitPath } });
 		},
-		cbAddSkill: (skillName: SkillPath) => {
-			dispatch({ type: "ADD_CB_SKILL", payload: { skillName } });
+		cbAddSkill: (skillPath: SkillPath) => {
+			dispatch({ type: "ADD_CB_SKILL", payload: { skillPath } });
 		},
-		cbRemoveSkill: (skillName: SkillPath) => {
-			dispatch({ type: "REMOVE_CB_SKILL", payload: { skillName } });
+		cbRemoveSkill: (skillPath: SkillPath) => {
+			dispatch({ type: "REMOVE_CB_SKILL", payload: { skillPath } });
 		},
 		cbAddResource: (resource: SpendingForResource) => {
 			dispatch({ type: "ADD_CB_RESOURCE", payload: { resource } });
 		},
 		cbRemoveResource: (guid: string) => {
 			dispatch({ type: "REMOVE_CB_RESOURCE", payload: { guid } });
+		},
+		cbAddBrutalLifeTrait: (traitPath: TraitPath | undefined) => {
+			dispatch({ type: "ADD_CB_BRUTAL_LIFE_TRAIT", payload: { traitPath } });
 		}
 	};
 
