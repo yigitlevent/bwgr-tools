@@ -5,7 +5,7 @@ import { SxProps, Theme } from "@mui/material/styles";
 interface GenericGridProps {
 	children: JSX.Element | JSX.Element[] | null | (null | JSX.Element)[];
 	columns?: number;
-	center?: boolean | "h" | "v";
+	center?: boolean | "h" | "v" | "c" | "l";
 	spacing?: [row: 0 | 1 | 2 | 3, column: 0 | 1 | 2 | 3];
 	sx?: SxProps<Theme>;
 	hasBackground?: boolean | number;
@@ -16,6 +16,8 @@ export function GenericGrid({ children, columns, center, spacing, sx, hasBackgro
 	if (center === true) centered = { justifyContent: "space-between", alignItems: "center" };
 	else if (center === "h") centered = { justifyContent: "space-between" };
 	else if (center === "v") centered = { alignItems: "center" };
+	else if (center === "c") centered = { justifyContent: "center", alignItems: "center", flexFlow: "row" };
+	else if (center === "l") centered = { justifyContent: "start", alignItems: "center", flexFlow: "row" };
 
 	const bg: { [key: string]: string | number; } = {};
 	if (hasBackground) {

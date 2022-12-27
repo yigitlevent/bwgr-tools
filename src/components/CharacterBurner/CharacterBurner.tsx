@@ -16,6 +16,7 @@ import { LifepathModal } from "./Modals/LifepathModal";
 import { QuestionModal } from "./Modals/QuestionModal";
 import { SpecialSkillsModal } from "./Modals/SpecialSkillsModal";
 import { ResourceModal } from "./Modals/ResourceModal";
+import { TolerancesBlock } from "./Blocks/TolerancesBlock";
 
 
 export function CharacterBurner(): JSX.Element {
@@ -44,6 +45,8 @@ export function CharacterBurner(): JSX.Element {
 					<StatsBlock />
 					<BlockDivider />
 					<AttributesBlock />
+					<BlockDivider />
+					<TolerancesBlock />
 					<BlockDivider />
 					<SkillsBlock />
 					<BlockDivider />
