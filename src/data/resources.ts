@@ -1703,7 +1703,7 @@ export const Resources: ResourceGroup = {
 			Relationship,
 			Reputation,
 			Affiliation,
-			{ // FIX: [RESOURCES] This needs a cost number button
+			{ 
 				name: "Bitter Reminder",
 				allowed: ["bwc"],
 				type: "Gear",
@@ -2124,7 +2124,7 @@ export const Resources: ResourceGroup = {
 				cost: 5,
 				description: "The saddle, bit and bridle, stirrups and reins add +1D to Riding tests for wolves."
 			},
-			{ // FIX: [RESOURCES] This needs a cost number button
+			{ 
 				name: "Spoils of War",
 				allowed: ["bwg"],
 				type: "Gear",
