@@ -123,7 +123,7 @@ export const Elf: Stock = {
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
-					leads: [ 
+					leads: [
 						"Elf➞Path of Spite"
 					],
 					mentalPool: 0,
@@ -518,7 +518,7 @@ export const Elf: Stock = {
 					name: "Elder",
 					physicalPool: 0,
 					requirements: {
-						// NOTE: First part of this must be turned into a limit maybe
+						// NOTE: [LIFEPATHS] First part of this must be turned into a limit maybe
 						texts: [
 							"The character must be 750 years old after taking this path or the oldest character in the group by 100 years."
 						]

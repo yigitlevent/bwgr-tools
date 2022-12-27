@@ -94,6 +94,8 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 
 			const lifepathsToCheck = ["Dwarf➞Guilder➞Trader", "Dwarf➞Artificer➞Mask Bearer", "Dwarf➞Artificer➞Master of Arches", "Dwarf➞Artificer➞Master of Forges", "Dwarf➞Artificer➞Master Engraver", "Dwarf➞Noble➞Treasurer", "Dwarf➞Host➞Quartermaster", "Dwarf➞Noble➞Seneschal", "Dwarf➞Noble➞Prince"];
 
+			const relationships = Object.values(spendings.resources).filter(v => v.type === "Relationship");
+
 			let extras = 0;
 			if (willExp <= 4) extras += 1;
 			extras += Math.floor(totals.resources.points / 60);
@@ -105,9 +107,9 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 			if (questions.POSSESSION) extras += 1;
 			if (totals.years.points > 400) extras += 2;
 			else if (totals.years.points > 200) extras += 1;
-			// FIX: [RELATIONSHIPS] Add "each romantic relationship -1"
-			// FIX: [RELATIONSHIPS] Add "each hateful immediate family relationship +2"
-			// FIX: [RELATIONSHIPS] Add "each hateful relationship +1"
+			extras += -1 * relationships.filter(v => v.modifiers.includes("Romantic")).length;
+			extras += 1 * relationships.filter(v => v.modifiers.includes("Hateful")).length;
+			extras += 2 * relationships.filter(v => v.modifiers.includes("Immediate family") && v.modifiers.includes("Hateful")).length;
 			if (GetTraitOpenness("Dwarf Special➞Virtuous", spendings)) extras -= 1;
 
 			exponent = 0 + extras - spendings.attributes[attributeName].shadeShifted;
@@ -120,6 +122,8 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 			const lifepathsToCheck2 = ["Elf➞Protector➞Lord Protector", "Elf➞Protector➞Soother"];
 			const lifepathsToCheck3 = ["Elf➞Citadel➞Loremaster", "Elf➞Citadel➞Adjutant", "Elf➞Citadel➞Althing"];
 
+			const knowsLament = Object.keys(spendings.skills).filter(v => v.toLowerCase().includes("lament") && GetSkillOpenness(v, spendings));
+
 			let extras = 0;
 			if (lifepaths.filter(v => v.split("➞")[1] === "Protector").length > 0) extras += 1;
 			if (lifepaths.some(v => lifepathsToCheck.includes(v))) extras += 1;
@@ -127,7 +131,7 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 			if (lifepaths.some(v => v === "Elf➞Etharch➞Born Etharch")) extras += 1;
 			if (lifepaths.some(v => lifepathsToCheck3.includes(v))) extras += 1;
 			if (lifepaths.some(v => v === "Elf➞Wilderlands➞Elder")) extras += 1;
-			// FIX: [RESOURCES] Add "knows no lamentations +1"
+			extras += knowsLament ? 0 : 1;
 			if (questions.TRAGEDY) extras += 1;
 			if (questions.OUTSIDER) extras += 1;
 			if (steelExp > 5) extras += (steelExp - 5);
@@ -139,8 +143,10 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 			if (attributeName === "Spite") {
 				const traitsToCheck = ["Elf Special➞Slayer", "Elf Special➞Exile", "Dark Elf Lifepath➞Feral", "Any Character➞Murderous", "Dark Elf Lifepath➞Saturnine", "Dark Elf Lifepath➞Femme Fatale/Homme Fatal", "Dark Elf Lifepath➞Cold", "Any Character➞Bitter"];
 
+				const bitterReminders = Object.values(spendings.resources).filter(v => v.name === "Bitter Reminder");
+
 				if (traitsToCheck.filter(v => GetTraitOpenness(v, spendings))) extras += 1;
-				// FIX: [RESOURCES] Add "if taken bitter reminders, each 10 rps spent +1"
+				extras += bitterReminders.length > 0 ? Math.floor(bitterReminders.map(v => v.cost).reduce((a, b) => a + b) / 10) : 0;
 				if (questions.OUTSIDER) extras += 1;
 				if (questions.LOVESICK) extras += 1;
 				if (questions.ABANDON) extras += 1;
@@ -205,12 +211,15 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 			exponent = 0 + extras - spendings.attributes[attributeName].shadeShifted;
 		}
 		else if (attributeName === "Corruption") {
+			const spiritMarks = Object.values(spendings.resources).filter(v => v.name === "Spirit Binding — Spirit Mark Levels");
+			const orders = Object.values(spendings.resources).filter(v => v.name === "Summoning — Affiliated Order Levels");
+
 			let extras = 0;
 			if (GetTraitOpenness("Human Special➞Gifted", spendings)) extras += 1;
 			if (GetTraitOpenness("Human Special➞Faithful", spendings) || GetTraitOpenness("Human Lifepath➞Faith in Dead Gods", spendings)) extras += 1;
 			if (GetTraitOpenness("Human Special➞Chosen One", spendings)) extras += 1;
-			// FIX: [RESOURCES] Implement "+1 for each point of spirit marks"
-			// FIX: [RESOURCES] Implement "+1 for each point of orders"
+			extras += spiritMarks.length > 0 ? spiritMarks.map(v => v.cost).reduce((a, b) => a + (b === 10 ? 1 : b === 25 ? 2 : 3), 0) : 0;
+			extras += orders.length > 0 ? orders.map(v => v.cost).reduce((a, b) => a + (b === 10 ? 1 : b === 20 ? 2 : b === 25 ? 3 : 4), 0) : 0;
 			if (questions.PRAY) extras += 1;
 			if (questions.PACT) extras += 1;
 

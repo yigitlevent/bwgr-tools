@@ -7722,7 +7722,7 @@ export const Human: Stock = {
 							]
 						},
 						limits: [
-							// FIX: These two are the "otherwise" case for the condition above. Either this or condition should be met.
+							// FIX: [LIFEPATHS] These two are the "otherwise" case for the condition above. Either this or condition should be met.
 							"GENDER➞FEMALE",
 							"LP➞MAX➞4"
 						]
