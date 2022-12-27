@@ -95,7 +95,7 @@ function LifepathSkillsBlock() {
 
 function GeneralSkillsBlock() {
 	const { stock, lifepathPaths, totals, spendings, questions } = useAppSelector(state => state.characterBurner);
-	const { cbOpenSkill, cbChangeSkillExponent } = useStore().characterBurner;
+	const { cbOpenSkill, cbChangeSkillExponent, cbRemoveSkill } = useStore().characterBurner;
 
 	return (
 		<Fragment>
@@ -115,6 +115,7 @@ function GeneralSkillsBlock() {
 										checked: GetSkillOpenness(skillName, spendings),
 										onChange: (e, c) => cbOpenSkill(skillName, c, false)
 									}}
+									deleteCallback={() => cbRemoveSkill(skillName as SkillPath)}
 								/>
 								<Grid item sx={{ marginTop: "3px" }}>
 									<AbilityButton name={skillName} disabled>{GetSkillShade(skillName, spendings)}</AbilityButton>

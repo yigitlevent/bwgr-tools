@@ -42,11 +42,18 @@ export function ResourcesBlock({ openReModal }: { openReModal: (open: boolean) =
 				{Object.keys(spendings.resources).map((resourceKey, i) =>
 					<Grid key={i} item xs={6} sm={3}>
 						<Accordion disableGutters>
-							<AccordionSummary expandIcon={<ArrowForwardIosSharp sx={{ fontSize: "0.9em" }} />} sx={{ flexDirection: "row-reverse", "& .MuiAccordionSummary-content": { margin: "0" }, "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": { transform: "rotate(90deg)" } }}>
-								<Typography sx={{ fontSize: "18px", margin: "5px 0 0 12px" }}>
+							<AccordionSummary
+								expandIcon={<ArrowForwardIosSharp sx={{ fontSize: "0.9em" }} />}
+								sx={{
+									flexDirection: "row-reverse",
+									"& .MuiAccordionSummary-content": { margin: "0" },
+									"& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": { transform: "rotate(90deg)" }
+								}}
+							>
+								<Typography sx={{ fontSize: "18px", margin: "0 0 0 12px" }}>
 									{spendings.resources[resourceKey].name} ({spendings.resources[resourceKey].cost}rps)
 								</Typography>
-								<IconButton onClick={() => cbRemoveResource(resourceKey)} sx={{ position: "absolute", right: "0" }}>
+								<IconButton color="primary" onClick={() => cbRemoveResource(resourceKey)} sx={{ position: "absolute", right: "0", margin: "2px 12px 0 0", padding: 0 }}>
 									<DeleteIcon />
 								</IconButton>
 							</AccordionSummary>

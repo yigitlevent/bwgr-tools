@@ -93,7 +93,7 @@ function LifepathTraitsBlock() {
 
 function GeneralTraitsBlock() {
 	const { totals, spendings } = useAppSelector(state => state.characterBurner);
-	const { cbOpenTrait } = useStore().characterBurner;
+	const { cbOpenTrait, cbRemoveTrait } = useStore().characterBurner;
 
 	return (
 		<Fragment>
@@ -111,6 +111,7 @@ function GeneralTraitsBlock() {
 								disabled: !GetTraitOpenness(traitName, spendings) && GetRemainingTraitTotals(totals, spendings).traitPoints === 0,
 								onChange: (e, c) => cbOpenTrait(traitName, c, false)
 							}}
+							deleteCallback={() => cbRemoveTrait(traitName as TraitPath)}
 						/>
 					</GenericGrid>
 				</Grid>
