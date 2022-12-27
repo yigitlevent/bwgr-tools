@@ -36,8 +36,8 @@ function ListItemLink({ item, icon }: { item: [string, string]; icon?: JSX.Eleme
 const Items: [string, string][][] = [
 	[["Dice Roller", "/diceroller"]],
 	[["Lifepaths", "/lifepaths"], ["Skills", "/skills"], ["Traits", "/traits"], ["Resources", "/resources"]],
-	[["Practice Planner", "/practiceplanner"], ["Magic Wheel", "/magicwheel"]],
-	[["Duel of Wits Planner", "/dowplanner"], ["Range and Cover Planner", "/racplanner"], ["Fight Planner", "/fightplanner"]],
+	[["Magic Wheel", "/magicwheel"]],
+	[["Practice Planner", "/practiceplanner"], ["Duel of Wits Planner", "/dowplanner"], ["Range and Cover Planner", "/racplanner"], ["Fight Planner", "/fightplanner"]],
 	[["Character Burner", "/characterburner"]]
 ];
 
