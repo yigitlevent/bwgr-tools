@@ -9,21 +9,29 @@ import MenuItem from "@mui/material/MenuItem";
 import Modal from "@mui/material/Modal";
 import Paper from "@mui/material/Paper";
 import Select from "@mui/material/Select";
+import Typography from "@mui/material/Typography";
 
 import { useStore } from "../../../hooks/useStore";
 import { useAppSelector } from "../../../state/store";
+import { Skill } from "../../../data/skills/_skills";
 import { GetSkillFromPath } from "../../../utils/pathFinder";
+import { CheckDatasets } from "../../../utils/checkDatasets";
 
 import { GenericGrid } from "../../Shared/Grids";
-import Typography from "@mui/material/Typography";
 
+function GetSubskills(skillPath: SkillPath, datasets: Ruleset[]): SkillPath[] {
+	return ((GetSkillFromPath(skillPath).subskills as SkillPath[])
+		.map(v => [v, GetSkillFromPath(v)]) as [SkillPath, Skill][])
+		.filter(v => CheckDatasets(datasets, v[1].allowed))
+		.map(v => v[0]);
+}
 
 export function AppropriateWeaponsSelection() {
+	const { datasets } = useAppSelector(state => state.dataset);
 	const { specialSkills } = useAppSelector(state => state.characterBurner);
 	const { cbSelectApprWeapon, cbSelectMandApprWeapon } = useStore().characterBurner;
 
-	// FIX: [SPECIAL SKILLS] These need to be filtered by the dataset
-	const subskills = GetSkillFromPath("Any General➞Appropriate Weapons").subskills as SkillPath[];
+	const subskills = GetSubskills("Any General➞Appropriate Weapons", datasets);
 
 	return (
 		<Fragment>
@@ -43,14 +51,14 @@ export function AppropriateWeaponsSelection() {
 			</Grid>
 
 			<Grid item xs={2}>
-				{subskills.map((skillName, i) =>
+				{subskills.map((skillPaths, i) =>
 					<FormControlLabel
 						key={i}
-						label={skillName.split("➞")[1]}
+						label={skillPaths.split("➞")[1]}
 						control={
 							<Checkbox
-								checked={specialSkills.appropriateWeapons.selected.includes(skillName)}
-								onChange={() => cbSelectApprWeapon(skillName)}
+								checked={specialSkills.appropriateWeapons.selected.includes(skillPaths)}
+								onChange={() => cbSelectApprWeapon(skillPaths)}
 							/>
 						}
 					/>
@@ -64,7 +72,6 @@ export function JavelinOrBowSelection() {
 	const { specialSkills } = useAppSelector(state => state.characterBurner);
 	const { cbSelectJavelinOrBow } = useStore().characterBurner;
 
-	// FIX: [SPECIAL SKILLS] These need to be filtered by the dataset
 	return (
 		<Fragment>
 			<Grid item xs={2}>
@@ -85,11 +92,11 @@ export function JavelinOrBowSelection() {
 }
 
 export function AnySmithSelection() {
+	const { datasets } = useAppSelector(state => state.dataset);
 	const { specialSkills } = useAppSelector(state => state.characterBurner);
 	const { cbSelectAnySmith } = useStore().characterBurner;
 
-	// FIX: [SPECIAL SKILLS] These need to be filtered by the dataset
-	const subskills = GetSkillFromPath("Any General➞Any -smith").subskills as SkillPath[];
+	const subskills = GetSubskills("Any General➞Any -smith", datasets);
 
 	return (
 		<Fragment>
