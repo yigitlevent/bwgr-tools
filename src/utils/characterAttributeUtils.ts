@@ -1,5 +1,4 @@
 import { Attributes } from "../data/attributes";
-import { Stocks } from "../data/stocks/_stocks";
 import { CharacterQuestions, CharacterSpendings, StatSpending } from "../state/reducers/characterBurner";
 import { IsTraitInCommonOrOpen } from "./characterQuestionUtils";
 import { GetSkillOpenness } from "./characterSkillUtils";
@@ -89,9 +88,6 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 			const willExp = (spendings.stats.Will.mentalPool as StatSpending).exponent + spendings.stats.Will.eitherPool.exponent;
 
 			exponent = 10 - willExp;
-		}
-		else if (attributeName === "Stride") {
-			exponent = Stocks[stock].stride;
 		}
 		else if (attributeName === "Greed") {
 			const willExp = GetStatExponent("Will", spendings);
@@ -219,6 +215,18 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 			if (questions.PACT) extras += 1;
 
 			exponent = 0 + extras - spendings.attributes[attributeName].shadeShifted;
+		}
+		else if (attributeName === "Resources") {
+			let extras = 0;
+			const res = Object.values(spendings.resources).filter(v => ["Property", "Reputation", "Affiliation"].includes(v.type));
+			if (res.length > 0) { extras += Math.floor(res.map(v => v.cost).reduce((a, b) => a + b) / 15); }
+			exponent = 0 + extras;
+		}
+		else if (attributeName === "Circles") {
+			let extras = 0;
+			const res = Object.values(spendings.resources).filter(v => ["Property", "Relationship"].includes(v.type));
+			if (res.length > 0 && res.map(v => v.cost).reduce((a, b) => a + b) >= 50) { extras += 1; }
+			exponent = Math.floor(GetStatExponent("Will", spendings) / 2) + extras;
 		}
 		else throw `Unhandled Attribute ${attributeName}`;
 	}

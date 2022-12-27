@@ -17,8 +17,8 @@ export function BasicsBlock() {
 	const { cbChangeStock, cbChangeConcept } = useStore().characterBurner;
 
 	return (
-		<GenericGrid columns={4} center>
-			<Grid item xs={2} sm={1} md={1}>
+		<GenericGrid columns={6} center>
+			<Grid item xs={6} sm={2} md={1}>
 				<FormControl fullWidth variant="standard">
 					<InputLabel>Stock</InputLabel>
 					<Select value={stock} onChange={(e) => cbChangeStock(e.target.value as StocksList)}>
@@ -27,7 +27,7 @@ export function BasicsBlock() {
 				</FormControl>
 			</Grid>
 
-			<Grid item xs={2} sm={1} md={1}>
+			<Grid item xs={6} sm={2} md={1}>
 				<TextField
 					label="Age"
 					value={totals.years.points > 0 ? `${totals.years.points}${totals.years.extensions.length > 0 ? `, plus ${totals.years.extensions.join(" ")}` : ""}` : ""}
@@ -37,7 +37,17 @@ export function BasicsBlock() {
 				/>
 			</Grid>
 
-			<Grid item xs={4} sm={2} md={2}>
+			<Grid item xs={6} sm={2} md={1}>
+				<TextField
+					label="Stride"
+					value={Stocks[stock].stride}
+					fullWidth
+					variant="standard"
+					disabled
+				/>
+			</Grid>
+
+			<Grid item xs={6} sm={6} md={3}>
 				<TextField
 					label="Concept"
 					value={concept}
