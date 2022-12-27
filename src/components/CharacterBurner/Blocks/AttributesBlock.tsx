@@ -14,7 +14,7 @@ import { AbilityButton } from "../../Shared/AbilityButton";
 
 
 export function AttributesBlock() {
-	const { stock, lifepathPaths, totals, spendings, questions } = useAppSelector(state => state.characterBurner);
+	const { stock, lifepathPaths, totals, spendings, questions, stockSpecific } = useAppSelector(state => state.characterBurner);
 	const { cbChangeAttributeShade } = useStore().characterBurner;
 
 	return (
@@ -34,7 +34,7 @@ export function AttributesBlock() {
 									{v.hasShade
 										? <AbilityButton
 											name={v.name}
-											disabled={GetAttributeExponent(v.name, stock, lifepathPaths, totals, spendings, questions) < 6}
+											disabled={GetAttributeExponent(v.name, stock, lifepathPaths, totals, spendings, questions, stockSpecific) < 6}
 											onClick={e => cbChangeAttributeShade(e, v.name, 5)}
 											onContextMenu={e => cbChangeAttributeShade(e, v.name, -5)}
 										>
@@ -43,7 +43,7 @@ export function AttributesBlock() {
 										: null
 									}
 									<AbilityButton name={v.name} disabled>
-										{GetAttributeExponent(v.name, stock, lifepathPaths, totals, spendings, questions)}
+										{GetAttributeExponent(v.name, stock, lifepathPaths, totals, spendings, questions, stockSpecific)}
 									</AbilityButton>
 								</Grid>
 							</GenericGrid>

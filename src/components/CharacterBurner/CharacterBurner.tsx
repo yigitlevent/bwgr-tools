@@ -16,6 +16,7 @@ import { TolerancesBlock } from "./Blocks/TolerancesBlock";
 import { LifepathModal } from "./Modals/LifepathModal";
 import { RandomLifepathsModal } from "./Modals/RandomLifepathsModal";
 import { QuestionModal } from "./Modals/QuestionModal";
+import { SpecialLifepathsModal } from "./Modals/SpecialLifepathsModal";
 import { SpecialSkillsModal } from "./Modals/SpecialSkillsModal";
 import { ResourceModal } from "./Modals/ResourceModal";
 import { StockSpecificModal } from "./Modals/StockSpecialModal";
@@ -27,6 +28,7 @@ export function CharacterBurner(): JSX.Element {
 	const [openLp, openLpModal] = useState(false);
 	const [openRl, openRlModal] = useState(false);
 	const [openQu, openQuModal] = useState(false);
+	const [openSl, openSlModal] = useState(false);
 	const [openSu, openSuModal] = useState(false);
 	const [openRe, openReModal] = useState(false);
 	const [openSs, openSsModal] = useState(false);
@@ -38,12 +40,13 @@ export function CharacterBurner(): JSX.Element {
 			<LifepathModal openLp={openLp} openLpModal={openLpModal} />
 			<RandomLifepathsModal openRl={openRl} openRlModal={openRlModal} />
 			<QuestionModal openQu={openQu} openQuModal={openQuModal} />
+			<SpecialLifepathsModal openSl={openSl} openSlModal={openSlModal} />
 			<SpecialSkillsModal openSu={openSu} openSuModal={openSuModal} />
 			<ResourceModal openRe={openRe} openReModal={openReModal} />
 			<StockSpecificModal openSs={openSs} openSsModal={openSsModal} />
 
 			<BasicsBlock />
-			<LifepathsBlock openLpModal={openLpModal} openRlModal={openRlModal} openQuModal={openQuModal} openSuModal={openSuModal} openSsModal={openSsModal} />
+			<LifepathsBlock openLpModal={openLpModal} openRlModal={openRlModal} openQuModal={openQuModal} openSlModal={openSlModal} openSuModal={openSuModal} openSsModal={openSsModal} />
 
 			{totals.years.points > 0
 				? <Fragment>

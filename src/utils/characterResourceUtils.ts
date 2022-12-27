@@ -11,7 +11,6 @@ export function GetRemainingResourceTotals(totals: LifepathTotals, spendings: Ch
 	const costs = Object.values(spendings.resources).map(v => v.cost);
 	const resourcePointSpending = costs.length > 0 ? costs.reduce((a, b) => a + b) : 0;
 
-	// FIX: [EXTENSIONS] This does not take extensions into account
 	return {
 		resourcePoints: totals.resources.points - resourcePointSpending
 	};

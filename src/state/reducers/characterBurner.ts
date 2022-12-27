@@ -43,6 +43,7 @@ interface AddResource { type: "ADD_CB_RESOURCE"; payload: { resource: SpendingFo
 interface RemoveResource { type: "REMOVE_CB_RESOURCE"; payload: { guid: string; }; }
 
 interface AddBrutalLifeTrait { type: "ADD_CB_BRUTAL_LIFE_TRAIT"; payload: { traitPath: TraitPath | undefined; }; }
+interface ModifySpecialLifepathValue { type: "MODIFY_CB_SPECIAL_LIFEPATH_VALUE"; payload: { advisorToTheCourtYears: number; } | { princeOfTheBloodYears: number; } | { bondsmanOwnerLifepathPath: LifepathPath; }; }
 
 export type CharacterBurnerActions =
 	ChangeCharacterStock | ChangeCharacterConcept |
@@ -54,7 +55,7 @@ export type CharacterBurnerActions =
 	SwitchQuestionAnswer |
 	SelectApprWeapon | SelectMandApprWeapon | SelectJavelinOrBow | SelectAnySmith |
 	AddResource | RemoveResource |
-	AddBrutalLifeTrait;
+	AddBrutalLifeTrait | ModifySpecialLifepathValue;
 
 export interface StatSpending {
 	shade: number;
@@ -110,8 +111,14 @@ export type CharacterQuestions = {
 	[key in AttributeQuestionsKeys]?: boolean;
 };
 
+export interface SpecialLifepaths {
+	advisorToTheCourt: { years: number; };
+	bondsman: { ownerLifepathPath: LifepathPath; };
+	princeOfTheBlood: { years: number; };
+}
+
 export interface SpecialSkills {
-	appropriateWeapons: { selected: SkillPath[]; mandatory: SkillPath; },
+	appropriateWeapons: { selected: SkillPath[]; mandatory: SkillPath; };
 	javelinOrBow: SkillPath;
 	anySmith: SkillPath[];
 }
@@ -126,6 +133,7 @@ export interface CharacterBurnerState {
 	stock: StocksList;
 	concept: string;
 	lifepathPaths: LifepathPath[];
+	specialLifepaths: SpecialLifepaths;
 	specialSkills: SpecialSkills;
 	totals: LifepathTotals;
 	spendings: CharacterSpendings;
@@ -152,6 +160,11 @@ const INITIAL: CharacterBurnerState = {
 	stock: "Dwarf",
 	concept: "",
 	lifepathPaths: [],
+	specialLifepaths: {
+		advisorToTheCourt: { years: 1 },
+		bondsman: { ownerLifepathPath: "Human➞Noble➞Lord" },
+		princeOfTheBlood: { years: 2 }
+	},
 	specialSkills: {
 		appropriateWeapons: { selected: ["Any General➞Sword"], mandatory: "Any General➞Sword" },
 		javelinOrBow: "Any General➞Javelin",
@@ -195,7 +208,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	else if (action.type === "ADD_CB_LIFEPATH") {
 		const lifepaths = [...state.lifepathPaths];
 		lifepaths.push(action.payload.lifepathPath);
-		const newTotals: LifepathTotals = lifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(lifepaths), state.specialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
+		const newTotals: LifepathTotals = lifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(lifepaths), state.specialLifepaths, state.specialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			skills: RefreshSkillsList(newTotals, state.spendings).skills,
@@ -214,7 +227,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	else if (action.type === "REMOVE_CB_LIFEPATH") {
 		const lifepaths = [...state.lifepathPaths];
 		lifepaths.pop();
-		const newTotals = lifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(lifepaths), state.specialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
+		const newTotals = lifepaths.length > 0 ? CalculateLifepathTotals(GetLifepathsFromPaths(lifepaths), state.specialLifepaths, state.specialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			skills: RefreshSkillsList(newTotals, state.spendings).skills,
@@ -251,7 +264,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	}
 	else if (action.type === "CHANGE_CB_ATTRIBUTE_SHADE") {
 		const spending = GetSpending(state);
-		spending.attributes[action.payload.attributeName] = ModifyAttributeShadeSpending(action.payload.attributeName, action.payload.change, state.stock, state.lifepathPaths, state.totals, spending, state.questions);
+		spending.attributes[action.payload.attributeName] = ModifyAttributeShadeSpending(action.payload.attributeName, action.payload.change, state.stock, state.lifepathPaths, state.totals, spending, state.questions, state.stockSpecific);
 		return {
 			...state,
 			spendings: { ...spending }
@@ -309,7 +322,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 				: newSpecialSkills.appropriateWeapons.selected[0];
 
 		const lifepaths = GetLifepathsFromPaths(state.lifepathPaths);
-		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
+		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, state.specialLifepaths, newSpecialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			skills: RefreshSkillsList(newTotals, state.spendings).skills,
@@ -331,7 +344,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 				: newSpecialSkills.appropriateWeapons.selected[0];
 
 		const lifepaths = GetLifepathsFromPaths(state.lifepathPaths);
-		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
+		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, state.specialLifepaths, newSpecialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			skills: RefreshSkillsList(newTotals, state.spendings).skills,
@@ -350,7 +363,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		newSpecialSkills.javelinOrBow = action.payload.skillPath;
 
 		const lifepaths = GetLifepathsFromPaths(state.lifepathPaths);
-		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
+		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, state.specialLifepaths, newSpecialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			skills: RefreshSkillsList(newTotals, state.spendings).skills,
@@ -374,7 +387,7 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		}
 
 		const lifepaths = GetLifepathsFromPaths(state.lifepathPaths);
-		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, newSpecialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
+		const newTotals: LifepathTotals = state.lifepathPaths.length > 0 ? CalculateLifepathTotals(lifepaths, state.specialLifepaths, newSpecialSkills, state.totals.skills.generalList, state.totals.traits.generalList) : EmptyTotals;
 		const newSpendings: CharacterSpendings = {
 			...state.spendings,
 			skills: RefreshSkillsList(newTotals, state.spendings).skills,
@@ -466,6 +479,16 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		return {
 			...state,
 			stockSpecific: newStockSpecific
+		};
+	}
+	else if (action.type === "MODIFY_CB_SPECIAL_LIFEPATH_VALUE") {
+		const newSpecialLifepaths = JSON.parse(JSON.stringify(state.specialLifepaths)) as SpecialLifepaths;
+		if ("advisorToTheCourtYears" in action.payload) newSpecialLifepaths.advisorToTheCourt.years = action.payload.advisorToTheCourtYears;
+		if ("bondsmanOwnerLifepathPath" in action.payload) newSpecialLifepaths.bondsman.ownerLifepathPath = action.payload.bondsmanOwnerLifepathPath;
+		if ("princeOfTheBloodYears" in action.payload) newSpecialLifepaths.princeOfTheBlood.years = action.payload.princeOfTheBloodYears;
+		return {
+			...state,
+			specialLifepaths: newSpecialLifepaths
 		};
 	}
 

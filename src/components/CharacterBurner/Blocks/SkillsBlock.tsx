@@ -16,7 +16,7 @@ import { AbilityButton } from "../../Shared/AbilityButton";
 
 
 function MandatorySkillsBlock() {
-	const { stock, lifepathPaths, totals, spendings, questions } = useAppSelector(state => state.characterBurner);
+	const { stock, lifepathPaths, totals, spendings, questions, stockSpecific } = useAppSelector(state => state.characterBurner);
 	const { cbChangeSkillExponent } = useStore().characterBurner;
 
 	return (
@@ -27,7 +27,7 @@ function MandatorySkillsBlock() {
 
 			<Fragment>
 				{totals.skills.mandatoryList
-					.filter(v => !SpecialSkills.includes(v))
+					.filter(v => !SpecialSkills.includes(v as SkillPath))
 					.map((skillName, i) =>
 						<Grid key={i} item xs={6} sm={3} md={2}>
 							<GenericGrid columns={5} center="h" hasBackground={1}>
@@ -41,7 +41,7 @@ function MandatorySkillsBlock() {
 								<Grid item>
 									<AbilityButton name={skillName} disabled>{GetSkillShade(skillName, spendings)}</AbilityButton>
 									<AbilityButton onClick={e => cbChangeSkillExponent(e, skillName, 1, true)} onContextMenu={e => cbChangeSkillExponent(e, skillName, -1, true)}>
-										{GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions)}
+										{GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions, stockSpecific)}
 									</AbilityButton>
 								</Grid>
 							</GenericGrid>
@@ -53,7 +53,7 @@ function MandatorySkillsBlock() {
 }
 
 function LifepathSkillsBlock() {
-	const { stock, lifepathPaths, totals, spendings, questions } = useAppSelector(state => state.characterBurner);
+	const { stock, lifepathPaths, totals, spendings, questions, stockSpecific } = useAppSelector(state => state.characterBurner);
 	const { cbOpenSkill, cbChangeSkillExponent } = useStore().characterBurner;
 
 	return (
@@ -64,7 +64,7 @@ function LifepathSkillsBlock() {
 
 			<Fragment>
 				{totals.skills.lifepathList
-					.filter(v => !SpecialSkills.includes(v))
+					.filter(v => !SpecialSkills.includes(v as SkillPath))
 					.map((skillName, i) =>
 						<Grid key={i} item xs={6} sm={3} md={2}>
 							<GenericGrid columns={5} center="h" hasBackground={1}>
@@ -82,7 +82,7 @@ function LifepathSkillsBlock() {
 										onClick={e => cbChangeSkillExponent(e, skillName, 1, true)}
 										onContextMenu={e => cbChangeSkillExponent(e, skillName, -1, true)}
 									>
-										{GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions)}
+										{GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions, stockSpecific)}
 									</AbilityButton>
 								</Grid>
 							</GenericGrid>
@@ -94,7 +94,7 @@ function LifepathSkillsBlock() {
 }
 
 function GeneralSkillsBlock() {
-	const { stock, lifepathPaths, totals, spendings, questions } = useAppSelector(state => state.characterBurner);
+	const { stock, lifepathPaths, totals, spendings, questions, stockSpecific } = useAppSelector(state => state.characterBurner);
 	const { cbOpenSkill, cbChangeSkillExponent, cbRemoveSkill } = useStore().characterBurner;
 
 	return (
@@ -105,7 +105,7 @@ function GeneralSkillsBlock() {
 
 			<Fragment>
 				{totals.skills.generalList
-					.filter(v => !SpecialSkills.includes(v))
+					.filter(v => !SpecialSkills.includes(v as SkillPath))
 					.map((skillName, i) =>
 						<Grid key={i} item xs={6} sm={3} md={2}>
 							<GenericGrid columns={5} center="h" hasBackground={1}>
@@ -125,7 +125,7 @@ function GeneralSkillsBlock() {
 										onClick={e => cbChangeSkillExponent(e, skillName, 1, false)}
 										onContextMenu={e => cbChangeSkillExponent(e, skillName, -1, false)}
 									>
-										{GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions)}
+										{GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions, stockSpecific)}
 									</AbilityButton>
 								</Grid>
 							</GenericGrid>

@@ -1,5 +1,5 @@
 import { Attributes } from "../data/attributes";
-import { CharacterQuestions, CharacterSpendings, StatSpending } from "../state/reducers/characterBurner";
+import { CharacterQuestions, CharacterSpendings, CharacterStockSpecific, StatSpending } from "../state/reducers/characterBurner";
 import { IsTraitInCommonOrOpen } from "./characterQuestionUtils";
 import { GetSkillOpenness } from "./characterSkillUtils";
 import { GetStatExponent, GetStatShade } from "./characterStatUtils";
@@ -21,7 +21,7 @@ export function GetAttributeShade(attributeName: AttributesList, spendings: Char
 	return shade;
 }
 
-export function GetAttributeExponent(attributeName: AttributesList, stock: StocksList, lifepaths: string[], totals: LifepathTotals, spendings: CharacterSpendings, questions: CharacterQuestions): number {
+export function GetAttributeExponent(attributeName: AttributesList, stock: StocksList, lifepaths: string[], totals: LifepathTotals, spendings: CharacterSpendings, questions: CharacterQuestions, stockSpecific: CharacterStockSpecific): number {
 	let exponent = 0;
 
 	if (attributeName in spendings.attributes) {
@@ -115,7 +115,7 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 			exponent = 0 + extras - spendings.attributes[attributeName].shadeShifted;
 		}
 		else if (attributeName === "Grief" || attributeName === "Spite") {
-			const steelExp = GetAttributeExponent("Steel", stock, lifepaths, totals, spendings, questions);
+			const steelExp = GetAttributeExponent("Steel", stock, lifepaths, totals, spendings, questions, stockSpecific);
 			const perceptionExp = GetStatExponent("Perception", spendings);
 
 			const lifepathsToCheck = ["Elf➞Protector➞Lancer", "Elf➞Protector➞Lieutenant", "Elf➞Protector➞Captain"];
@@ -175,12 +175,12 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 		}
 		else if (attributeName === "Hatred") {
 			const willExp = GetStatExponent("Will", spendings);
-			const steelExp = GetAttributeExponent("Steel", stock, lifepaths, totals, spendings, questions);
+			const steelExp = GetAttributeExponent("Steel", stock, lifepaths, totals, spendings, questions, stockSpecific);
 			const perceptionExp = GetStatExponent("Perception", spendings);
 
 			let extras = 0;
 			if (questions.WOUND) extras += 1;
-			// FIX: [BRUTAL LIFE] Implement "for each 1 rolled on the brutal life table"
+			extras += stockSpecific.brutalLife.traits.filter(v => v !== undefined && v !== null).length;
 			if (questions.TORTURE) extras += 1;
 			if (questions.SLAVE) extras += 1;
 			if (questions.FRATRICIDE) extras += 1;
@@ -244,11 +244,11 @@ export function GetAttributeExponent(attributeName: AttributesList, stock: Stock
 }
 
 // SPEND
-export function ModifyAttributeShadeSpending(attributeName: AttributesList, change: 5 | -5, stock: StocksList, lifepaths: string[], totals: LifepathTotals, spendings: CharacterSpendings, questions: CharacterQuestions) {
+export function ModifyAttributeShadeSpending(attributeName: AttributesList, change: 5 | -5, stock: StocksList, lifepaths: string[], totals: LifepathTotals, spendings: CharacterSpendings, questions: CharacterQuestions, stockSpecific: CharacterStockSpecific) {
 	const spending = spendings.attributes[attributeName];
 
 	const shade = GetAttributeShade(attributeName, spendings);
-	const exponent = GetAttributeExponent(attributeName, stock, lifepaths, totals, spendings, questions);
+	const exponent = GetAttributeExponent(attributeName, stock, lifepaths, totals, spendings, questions, stockSpecific);
 
 	if (change === 5 && exponent > 5 && shade !== "W") {
 		spending.shadeShifted += change;

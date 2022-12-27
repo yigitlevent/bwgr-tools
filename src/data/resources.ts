@@ -2183,7 +2183,7 @@ export const Resources: ResourceGroup = {
 			Relationship,
 			Reputation,
 			Affiliation,
-			// TODO: [RESOURCES] Add Roden resources,
+			// TODO: [RESOURCES] Add Roden resources
 			...SorcerySpells,
 			...PracticalMagicSchools,
 			...SpiritBindingDomainBindingLevels,

@@ -32,7 +32,7 @@ import { GetPathFromLifepath } from "../../../utils/pathFinder";
 
 export function RandomLifepathsModal({ openRl, openRlModal }: { openRl: boolean; openRlModal: (open: boolean) => void; }) {
 	const { datasets } = useAppSelector(state => state.dataset);
-	const { specialSkills } = useAppSelector(state => state.characterBurner);
+	const { specialLifepaths, specialSkills } = useAppSelector(state => state.characterBurner);
 	const { stock, setting, noDuplicates, maxLeads, maxLifepaths, minLifepaths } = useAppSelector(state => state.lifepathRandomizer);
 	const { lprChangeMaxLPs, lprChangeMaxLeads, lprChangeMinLPs, lprChangeStock, lprToggleNoDuplicates } = useStore().lifepathRandomizer;
 	const { cbChangeStock, cbAddLifepath } = useStore().characterBurner;
@@ -102,7 +102,7 @@ export function RandomLifepathsModal({ openRl, openRlModal }: { openRl: boolean;
 		openRlModal(false);
 	}, [cbAddLifepath, cbChangeStock, chosenLifepaths, newStock, openRlModal]);
 
-	const totals = (chosenLifepaths.length > 0) ? CalculateLifepathTotals(chosenLifepaths, specialSkills, [], []) : undefined;
+	const totals = (chosenLifepaths.length > 0) ? CalculateLifepathTotals(chosenLifepaths, specialLifepaths, specialSkills, [], []) : undefined;
 
 	return (
 		<Modal open={openRl} onClose={() => openRlModal(false)}>

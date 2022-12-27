@@ -19,6 +19,7 @@ import { CheckDatasets } from "../../../utils/checkDatasets";
 
 import { GenericGrid } from "../../Shared/Grids";
 
+
 function GetSubskills(skillPath: SkillPath, datasets: Ruleset[]): SkillPath[] {
 	return ((GetSkillFromPath(skillPath).subskills as SkillPath[])
 		.map(v => [v, GetSkillFromPath(v)]) as [SkillPath, Skill][])

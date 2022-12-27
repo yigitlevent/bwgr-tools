@@ -1,6 +1,7 @@
 import { Lifepath, Stocks } from "../data/stocks/_stocks";
 import { TraitCategories } from "../data/traits/_traits";
-import { SpecialSkills } from "../state/reducers/characterBurner";
+import { SpecialLifepaths, SpecialSkills } from "../state/reducers/characterBurner";
+import { GetLifepathFromPath } from "./pathFinder";
 
 
 export interface LifepathTotals {
@@ -86,7 +87,7 @@ export const EmptyTotals: LifepathTotals = {
 	}
 };
 
-export function CalculateLifepathTotals(chosenLifepaths: Lifepath[], specialSkills: SpecialSkills, generalSkills: string[], generalTraits: string[]) {
+export function CalculateLifepathTotals(chosenLifepaths: Lifepath[], specialLifepaths: SpecialLifepaths, specialSkills: SpecialSkills, generalSkills: string[], generalTraits: string[]) {
 	const totals: LifepathTotals = JSON.parse(JSON.stringify(EmptyTotals));
 
 	for (let i = 0; i < chosenLifepaths.length; i++) {
@@ -99,7 +100,11 @@ export function CalculateLifepathTotals(chosenLifepaths: Lifepath[], specialSkil
 		}
 
 		if (typeof lp.years === "number") totals.years.points = totals.years.points + lp.years;
+		else if (lp.name === "Advisor to the Court") totals.years.points += specialLifepaths.advisorToTheCourt.years;
+		else if (lp.name === "Prince of the Blood") totals.years.points += specialLifepaths.princeOfTheBlood.years;
 		else totals.years.extensions.push(lp.years);
+
+		const bondsmanOwnerLifepath = (lp.name === "Bondsman") ? GetLifepathFromPath(specialLifepaths.bondsman.ownerLifepathPath) : undefined;
 
 		if (repeatCount === 0 || repeatCount === 1) {
 			totals.stats.fromLifepaths.eitherPoints += lp.eitherPool;
@@ -107,12 +112,16 @@ export function CalculateLifepathTotals(chosenLifepaths: Lifepath[], specialSkil
 			totals.stats.fromLifepaths.physicalPoints += lp.physicalPool;
 
 			if (typeof lp.resources === "number") totals.resources.points += lp.resources;
+			else if (lp.name === "Hostage") totals.resources.points += Math.floor(chosenLifepaths[i - 1].resources as number / 2);
+			else if (lp.name === "Advisor to the Court") totals.resources.points += 10 * specialLifepaths.advisorToTheCourt.years;
 			else totals.resources.extensions.push(lp.resources);
 
 			if (typeof lp.generalSkillPool === "number") totals.skills.generalPoints.points += lp.generalSkillPool;
+			else if (lp.name === "Advisor to the Court") totals.skills.generalPoints.points += specialLifepaths.advisorToTheCourt.years;
 			else totals.skills.generalPoints.extensions.push(lp.generalSkillPool);
 
 			if (typeof lp.skillPool === "number") totals.skills.lifepathPoints.points += lp.skillPool;
+			else if (bondsmanOwnerLifepath) totals.skills.lifepathPoints.points += Math.floor(bondsmanOwnerLifepath.skillPool as number / 4);
 			else totals.skills.lifepathPoints.extensions.push(lp.skillPool);
 
 			if (repeatCount === 1 && lp.traits.length < 2) totals.traits.points += lp.traitPool - 1;
@@ -120,23 +129,24 @@ export function CalculateLifepathTotals(chosenLifepaths: Lifepath[], specialSkil
 		}
 		else if (repeatCount === 2) {
 			if (typeof lp.resources === "number") totals.resources.points += Math.floor(lp.resources / 2);
-			else totals.resources.extensions.push(`${lp.resources}/2`);
+			else if (lp.name === "Hostage") totals.resources.points += Math.floor(chosenLifepaths[i - 1].resources as number / 4);
+			else if (lp.name === "Advisor to the Court") totals.resources.points += Math.floor(10 * specialLifepaths.advisorToTheCourt.years / 2);
 
 			if (typeof lp.generalSkillPool === "number") totals.skills.generalPoints.points += Math.floor(lp.generalSkillPool / 2);
-			else totals.skills.generalPoints.extensions.push(`${lp.generalSkillPool}/2`);
+			else if (lp.name === "Advisor to the Court") totals.skills.generalPoints.points += Math.floor(specialLifepaths.advisorToTheCourt.years / 2);
 
 			if (typeof lp.skillPool === "number") totals.skills.lifepathPoints.points += Math.floor(lp.skillPool / 2);
-			else totals.skills.lifepathPoints.extensions.push(`${lp.skillPool}/2`);
+			else if (bondsmanOwnerLifepath) totals.skills.lifepathPoints.points += Math.floor(bondsmanOwnerLifepath.skillPool as number / 4 / 2);
 		}
 		else if (repeatCount > 2) {
 			if (typeof lp.resources === "number") totals.resources.points += Math.floor(lp.resources / 2);
-			else totals.resources.extensions.push(`${lp.resources}/2`);
+			else if (lp.name === "Hostage") totals.resources.points += Math.floor(chosenLifepaths[i - 1].resources as number / 2 / 2);
+			else if (lp.name === "Advisor to the Court") totals.resources.points += Math.floor(10 * specialLifepaths.advisorToTheCourt.years / 2 / 2);
 		}
 	}
 
 	const stock = chosenLifepaths[0].stock;
 
-	// FIX: [EXTENSIONS] This does not take extensions into account
 	const ageBracket = Stocks[stock].agePool.filter(v => (v.max >= totals.years.points && v.min <= totals.years.points));
 	totals.stats.fromAge = [ageBracket[0].m, ageBracket[0].p];
 
@@ -166,6 +176,12 @@ export function CalculateLifepathTotals(chosenLifepaths: Lifepath[], specialSkil
 		const lp = chosenLifepaths[lifepathKey];
 
 		lp.skills.forEach(skill => { if (!mandSkills.has(skill)) skills.add(skill); });
+
+		const bondsmanOwnerLifepath = (lp.name === "Bondsman") ? GetLifepathFromPath(specialLifepaths.bondsman.ownerLifepathPath) : undefined;
+		if (bondsmanOwnerLifepath) {
+			bondsmanOwnerLifepath.skills.forEach(skill => { if (!mandSkills.has(skill)) skills.add(skill); });
+		}
+
 		lp.traits.forEach(skill => { if (!commonTraits.has(skill) && !mandTraits.has(skill)) traits.add(skill); });
 
 		if (mandSkills.has("Any General➞Appropriate Weapons") || skills.has("Any General➞Appropriate Weapons")) {

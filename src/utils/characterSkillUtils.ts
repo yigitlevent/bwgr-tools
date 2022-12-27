@@ -1,6 +1,6 @@
 import { Attributes } from "../data/attributes";
 import { Stats } from "../data/stats";
-import { CharacterQuestions, CharacterSpendings } from "../state/reducers/characterBurner";
+import { CharacterQuestions, CharacterSpendings, CharacterStockSpecific } from "../state/reducers/characterBurner";
 import { GetAttributeExponent, GetAttributeShade } from "./characterAttributeUtils";
 import { GetStatExponent, GetStatShade } from "./characterStatUtils";
 import { LifepathTotals } from "./lifepathTotals";
@@ -23,12 +23,12 @@ export function GetSkillShade(skillName: string, spendings: CharacterSpendings):
 	return statShades.every(v => v === "G") ? "G" : "B";
 }
 
-export function GetSkillExponent(skillName: string, stock: StocksList, lifepaths: string[], totals: LifepathTotals, spendings: CharacterSpendings, questions: CharacterQuestions): number {
+export function GetSkillExponent(skillName: string, stock: StocksList, lifepaths: string[], totals: LifepathTotals, spendings: CharacterSpendings, questions: CharacterQuestions, stockSpecific: CharacterStockSpecific): number {
 	const skill = GetSkillFromPath(skillName);
 
 	return Math.floor(GetAverage([
 		...Stats.filter(v => skill.root.includes(v.name)).map(v => GetStatExponent(v.name, spendings)),
-		...Attributes.filter(v => skill.root.includes(v.name)).map(v => GetAttributeExponent(v.name, stock, lifepaths, totals, spendings, questions))
+		...Attributes.filter(v => skill.root.includes(v.name)).map(v => GetAttributeExponent(v.name, stock, lifepaths, totals, spendings, questions, stockSpecific))
 	]) / 2) + spendings.skills[skillName].general.advance + spendings.skills[skillName].lifepath.advance;
 }
 
@@ -44,7 +44,6 @@ export function GetRemainingSkillTotals(totals: LifepathTotals, spendings: Chara
 	const lifepathSpending =
 		Object.values(spendings.skills).map(v => v.lifepath.open + v.lifepath.advance);
 
-	// FIX: [EXTENSIONS] This does not take extensions into account
 	return {
 		generalPoints: totals.skills.generalPoints.points - ((generalSpending.length > 0) ? generalSpending.reduce((v, a) => v + a) : 0),
 		lifepathPoints: totals.skills.lifepathPoints.points - ((lifepathSpending.length > 0) ? lifepathSpending.reduce((v, a) => v + a) : 0)
