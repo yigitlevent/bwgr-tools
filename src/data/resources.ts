@@ -1965,7 +1965,7 @@ export const Resources: ResourceGroup = {
 					["Manor or estate, an urban hotel*", 40],
 					["Well-paid position (like mayor)*", 45],
 					["Successful small business, a large business, a keep*", 60],
-					["A fortress or moderat e-s iz ed estate*", 75],
+					["A fortress or moderate-sized estate*", 75],
 					["A castle with attendant town, a large estate*", 90],
 					["A palace or government position in a prosperous town*", 105],
 					["Rowboat or skiff", 5],
@@ -1976,7 +1976,7 @@ export const Resources: ResourceGroup = {
 					["Caravel", 75],
 					["Treasure ship", 105]
 				],
-				description: "Property counts as property when factoring Resources.<br>*Note that only Noble Born chara cters or characters with the Minister, Town Official, Merchant, Magnate, Steward, Master of Horse, Master of Hounds, Bailiff, Justiciar, Coroner, Constable, Treasurer, Bishop or Abbot LPs may spend more than 40 rps on property. Other characters simply may not own that degree of property (unless otherwi sespecified). The property purchase comes with appropriate staff, buildings and accoutrements. It does not provide the character with other free purchases from the Resources list."
+				description: "Property counts as property when factoring Resources.<br>*Note that only Noble Born characters or characters with the Minister, Town Official, Merchant, Magnate, Steward, Master of Horse, Master of Hounds, Bailiff, Justiciar, Coroner, Constable, Treasurer, Bishop or Abbot LPs may spend more than 40 rps on property. Other characters simply may not own that degree of property (unless otherwi sespecified). The property purchase comes with appropriate staff, buildings and accoutrements. It does not provide the character with other free purchases from the Resources list."
 			},
 			{
 				name: "Exotic Beast",
@@ -1993,7 +1993,7 @@ export const Resources: ResourceGroup = {
 					["Shepherd sling", 2],
 					["War sling", 3]
 				],
-				description: "For Flails and Whip, resource points cost found in the Arms section on pg. 202 of the Burning Wheel Gold"
+				description: "For Flails and Whip, resource points cost found in the Arms section on pg. 202 of the Burning Wheel Gold."
 			},
 			...SorcerySpells,
 			...PracticalMagicSchools,

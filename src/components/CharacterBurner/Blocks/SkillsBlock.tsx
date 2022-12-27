@@ -148,9 +148,13 @@ export function SkillsBlock() {
 				<Typography variant="h4">Skills</Typography>
 			</Grid>
 
-			<Grid item xs={6}>
-				<Typography>General Skill Points: {totals.skills.generalPoints.points}, Remaining: {skillRemaining ? skillRemaining.generalPoints : []}</Typography>
-				<Typography>Lifepath Skill Points: {totals.skills.lifepathPoints.points}, Remaining: {skillRemaining ? skillRemaining.lifepathPoints : []}</Typography>
+			<Grid item xs={6} sm={5}>
+				<Typography>General Skill Points: {totals.skills.generalPoints.points}, Remaining: {skillRemaining ? skillRemaining.generalPoints : -1}</Typography>
+				<Typography>Lifepath Skill Points: {totals.skills.lifepathPoints.points}, Remaining: {skillRemaining ? skillRemaining.lifepathPoints : -1}</Typography>
+			</Grid>
+
+			<Grid item xs={6} sm={1}>
+				<Button variant="outlined" size="small" onClick={() => setOpen(true)} fullWidth>Add General Skill</Button>
 			</Grid>
 
 			{totals.skills.mandatoryList.length > 0 ? <MandatorySkillsBlock /> : null}
@@ -158,17 +162,6 @@ export function SkillsBlock() {
 			{totals.skills.generalList.length > 0 ? <GeneralSkillsBlock /> : null}
 
 			<GeneralSkillModal open={open} setOpen={setOpen} />
-
-			<Grid item xs={6}>
-				<Button
-					variant="outlined"
-					size="medium"
-					onClick={() => setOpen(true)}
-					sx={{ margin: "16px 0 16px 0" }}
-				>
-					Add General Skill
-				</Button>
-			</Grid>
 		</GenericGrid>
 	);
 }

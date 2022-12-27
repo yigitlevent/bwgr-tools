@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 import { AttributeQuestionsKeys } from "../../data/attributes";
 import { ModifyAttributeShadeSpending, RefreshAttributesList } from "../../utils/characterAttributeUtils";
 import { RefreshQuestionsList, SwitchAnswer } from "../../utils/characterQuestionUtils";
@@ -33,8 +35,12 @@ interface SelectAnySmith { type: "SELECT_CB_ANY_SMITH"; payload: { skillName: Sk
 
 interface AddTrait { type: "ADD_CB_TRAIT"; payload: { traitName: TraitPath; }; }
 interface RemoveTrait { type: "REMOVE_CB_TRAIT"; payload: { traitName: TraitPath; }; }
+
 interface AddSkill { type: "ADD_CB_SKILL"; payload: { skillName: SkillPath; }; }
 interface RemoveSkill { type: "REMOVE_CB_SKILL"; payload: { skillName: SkillPath; }; }
+
+interface AddResource { type: "ADD_CB_RESOURCE"; payload: { resource: SpendingForResource; }; }
+interface RemoveResource { type: "REMOVE_CB_RESOURCE"; payload: { guid: string; }; }
 
 export type CharacterBurnerActions =
 	ChangeCharacterStock | ChangeCharacterConcept |
@@ -44,7 +50,8 @@ export type CharacterBurnerActions =
 	OpenSkill | ChangeSkillAdvancement | AddSkill | RemoveSkill |
 	OpenTrait | AddTrait | RemoveTrait |
 	SwitchQuestionAnswer |
-	SelectApprWeapon | SelectMandApprWeapon | SelectJavelinOrBow | SelectAnySmith;
+	SelectApprWeapon | SelectMandApprWeapon | SelectJavelinOrBow | SelectAnySmith |
+	AddResource | RemoveResource;
 
 export interface StatSpending {
 	shade: number;
@@ -80,11 +87,20 @@ export interface SpendingForTrait {
 	open: number;
 }
 
+export interface SpendingForResource {
+	name: string;
+	type: "Magical" | "Gear" | "Property" | "Relationship" | "Affiliation" | "Reputation";
+	cost: number;
+	modifiers: string[];
+	description: string;
+}
+
 export interface CharacterSpendings {
 	stats: { [key in StatsList]: SpendingForStat; };
 	attributes: { [key: string]: SpendingForAttribute; };
 	skills: { [key: string]: SpendingForSkill; };
 	traits: { [key: string]: SpendingForTrait; };
+	resources: { [key: string]: SpendingForResource; };
 }
 
 export type CharacterQuestions = {
@@ -118,7 +134,8 @@ const EmptySpendings: CharacterSpendings = {
 	},
 	attributes: {},
 	skills: {},
-	traits: {}
+	traits: {},
+	resources: {}
 };
 
 const INITIAL: CharacterBurnerState = {
@@ -406,6 +423,22 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 		return {
 			...state,
 			totals: newTotals,
+			spendings: newSpendings
+		};
+	}
+	else if (action.type === "ADD_CB_RESOURCE") {
+		const newSpendings = GetSpending(state);
+		newSpendings.resources[uuidv4()] = action.payload.resource;
+		return {
+			...state,
+			spendings: newSpendings
+		};
+	}
+	else if (action.type === "REMOVE_CB_RESOURCE") {
+		const newSpendings = GetSpending(state);
+		delete newSpendings.resources[action.payload.guid];
+		return {
+			...state,
 			spendings: newSpendings
 		};
 	}

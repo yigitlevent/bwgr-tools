@@ -124,7 +124,7 @@ export function SpecialSkillsModal({ openSu, openSuModal }: { openSu: boolean; o
 
 	return (
 		<Modal open={openSu} onClose={() => openSuModal(false)}>
-			<Paper sx={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", maxWidth: "800px", width: "100%", padding: "0 24px 24px", border: "none" }}>
+			<Paper sx={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", maxWidth: "800px", width: "100%", padding: "0 24px 24px", border: "none", overflow: "auto" }}>
 				<GenericGrid columns={2} spacing={[2, 1]} center>
 					{hasSkill("Any General➞Appropriate Weapons") ? <AppropriateWeaponsSelection /> : null}
 					{hasSkill("Any General➞Javelin or Bow") ? <JavelinOrBowSelection /> : null}

@@ -15,6 +15,7 @@ import { Clamp } from "../utils/misc";
 
 import { Notification } from "../components/Shared/Notification";
 import { AttributeQuestionsKeys } from "../data/attributes";
+import { SpendingForResource } from "../state/reducers/characterBurner";
 
 
 export function useStore() {
@@ -359,6 +360,12 @@ export function useStore() {
 		},
 		cbRemoveSkill: (skillName: SkillPath) => {
 			dispatch({ type: "REMOVE_CB_SKILL", payload: { skillName } });
+		},
+		cbAddResource: (resource: SpendingForResource) => {
+			dispatch({ type: "ADD_CB_RESOURCE", payload: { resource } });
+		},
+		cbRemoveResource: (guid: string) => {
+			dispatch({ type: "REMOVE_CB_RESOURCE", payload: { guid } });
 		}
 	};
 

@@ -1,0 +1,232 @@
+import { Fragment, useCallback, useEffect, useState } from "react";
+
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Modal from "@mui/material/Modal";
+import Paper from "@mui/material/Paper";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Divider from "@mui/material/Divider";
+import Typography from "@mui/material/Typography";
+import RadioGroup from "@mui/material/RadioGroup";
+import Radio from "@mui/material/Radio";
+
+import { useAppSelector } from "../../../state/store";
+import { useStore } from "../../../hooks/useStore";
+import { Resource, Resources } from "../../../data/resources";
+
+import { GenericGrid } from "../../Shared/Grids";
+import { AbilityButton } from "../../Shared/AbilityButton";
+import { GetRemainingResourceTotals } from "../../../utils/characterResourceUtils";
+
+
+interface SelectedCost {
+	baseCost: number;
+	modifiers: {
+		[key: string]: {
+			cost: number;
+			selected: boolean;
+		};
+	};
+}
+
+export function ResourceModal({ openRe, openReModal }: { openRe: boolean; openReModal: (open: boolean) => void; }) {
+	const { stock, totals, spendings } = useAppSelector(state => state.characterBurner);
+	const { cbAddResource } = useStore().characterBurner;
+
+	const [resource, setResource] = useState<Resource>(Resources[stock].resources[0]);
+	const [resourceDesc, setResourceDesc] = useState("");
+	const [costs, setCosts] = useState<SelectedCost>();
+
+	const resetCosts = useCallback(() => {
+		const newCosts: SelectedCost = { baseCost: 0, modifiers: {} };
+		if (Array.isArray(resource.cost)) {
+			newCosts.baseCost = resource.cost[0][1];
+		}
+		else if (typeof resource.cost === "number") {
+			newCosts.baseCost = resource.cost;
+		}
+		else if (resource.cost === "various") {
+			newCosts.baseCost = 0;
+		}
+		if (resource.modifiers) {
+			for (const key in resource.modifiers) {
+				newCosts.modifiers[resource.modifiers[key][0]] = { cost: resource.modifiers[key][1], selected: false };
+			}
+		}
+		setCosts({ ...newCosts });
+	}, [resource.cost, resource.modifiers]);
+
+	const modifyResource = useCallback((resourceName: string) => {
+		const res = Resources[stock].resources.find(v => v.name === resourceName);
+		if (res) {
+			setResourceDesc("");
+			setResource(res);
+			resetCosts();
+		}
+	}, [resetCosts, stock]);
+
+	const changeCost = useCallback((cost: number) => {
+		const newCosts = JSON.parse(JSON.stringify(costs)) as SelectedCost;
+		newCosts.baseCost = cost > 0 ? cost : 0;
+		setCosts({ ...newCosts });
+	}, [costs]);
+
+	const changeModifier = useCallback((name: string) => {
+		const newCosts = JSON.parse(JSON.stringify(costs)) as SelectedCost;
+		newCosts.modifiers[name] = { ...newCosts.modifiers[name], selected: !newCosts.modifiers[name].selected };
+		setCosts({ ...newCosts });
+	}, [costs]);
+
+	const createResource = useCallback(() => {
+		if (costs) {
+			const modifiers: [string, number][] = Object.keys(costs.modifiers).filter(v => costs.modifiers[v].selected).map(v => [v, costs.modifiers[v].cost]);
+			const modifierCosts = modifiers.map(v => v[1]);
+			const totalCost = costs.baseCost + (modifierCosts.length > 0 ? modifierCosts.reduce((a, b) => a + b) : 0);
+
+			console.log(totalCost);
+			console.log(GetRemainingResourceTotals(totals, spendings).resourcePoints);
+
+			if (totalCost <= GetRemainingResourceTotals(totals, spendings).resourcePoints) {
+				cbAddResource({
+					name: resource.name,
+					type: resource.type,
+					cost: totalCost >= 0 ? totalCost : 0,
+					modifiers: modifiers.map(v => v[0]),
+					description: resourceDesc
+				});
+				openReModal(false);
+			}
+		}
+	}, [cbAddResource, costs, openReModal, resource, resourceDesc, spendings, totals]);
+
+	useEffect(() => {
+		resetCosts();
+	}, [resource, resetCosts]);
+
+	return (
+		<Modal open={openRe} onClose={() => openReModal(false)}>
+			<Paper sx={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", maxWidth: "800px", width: "100%", maxHeight: "100vh", padding: "0 24px 24px", border: "none", overflow: "auto" }}>
+				<GenericGrid columns={6} spacing={[1, 2]} center="v">
+					<Grid item xs={6}>
+						<FormControl fullWidth variant="standard">
+							<InputLabel>Resource</InputLabel>
+							<Select value={resource.name} onChange={(e) => modifyResource(e.target.value)}>
+								{Resources[stock].resources.map((resource, i) =>
+									<MenuItem key={i} value={resource.name}>{resource.name}</MenuItem>
+								)}
+							</Select>
+						</FormControl>
+					</Grid>
+
+					<Grid item xs={6}>
+						<Divider>Type: {resource.type}</Divider>
+					</Grid>
+
+					{typeof resource.cost === "number"
+						? <Grid item xs={6} sm={2}>
+							<Typography variant="body2">Cost: {resource.cost}</Typography>
+						</Grid>
+						: null
+					}
+
+					{resource.magical
+						? <Fragment>
+							<Grid item xs={6} sm={2}>
+								<Typography variant="body2">Obstacle: {resource.magical.obstacle}</Typography>
+							</Grid>
+							<Grid item xs={6} sm={2}>
+								<Typography variant="body2">Actions: {resource.magical.actions}</Typography>
+							</Grid>
+						</Fragment>
+						: null
+					}
+
+					{resource.magical
+						? <Fragment>
+							<Grid item xs={6} sm={2}>
+								<Typography variant="body2">Origin: {resource.magical.origin}</Typography>
+							</Grid>
+							<Grid item xs={6} sm={2}>
+								<Typography variant="body2">Element: {resource.magical.element.join("/")}</Typography>
+							</Grid>
+							<Grid item xs={6} sm={2}>
+								<Typography variant="body2">Duration: {resource.magical.duration}</Typography>
+							</Grid>
+							<Grid item xs={6} sm={4}>
+								<Typography variant="body2">Area of Effect: {resource.magical.areaOfEffect}</Typography>
+							</Grid>
+							<Grid item xs={6} sm={2}>
+								<Typography variant="body2">Impetus: {resource.magical.impetus.join("/")}</Typography>
+							</Grid>
+						</Fragment>
+						: null
+					}
+
+					{resource.description
+						? <Grid item xs={6}>
+							{resource.description.split("<br>").map((v, i) => {
+								if (resource.magical && i === 0) return <Typography key={i} variant="subtitle2">{v}</Typography>;
+								return <Typography key={i} variant="body2">{v}</Typography>;
+							})}
+						</Grid>
+						: null
+					}
+
+					{costs && Array.isArray(resource.cost)
+						? <Grid item xs={6}>
+							<Typography variant="h6">Cost</Typography>
+							<RadioGroup value={costs.baseCost} onChange={(e, v) => changeCost(parseInt(v))}>
+								{resource.cost.map((v, i) =>
+									<FormControlLabel key={i} label={`${v[0]} (${v[1]}rps)`} value={v[1]} control={<Radio />} />
+								)}
+							</RadioGroup>
+						</Grid>
+						: null
+					}
+
+					{costs && resource.cost === "various"
+						? <Grid item xs={6}>
+							<Typography sx={{ display: "inline", margin: "0 8px 0 0" }}>Cost</Typography>
+							<AbilityButton
+								onClick={e => { e.preventDefault(); changeCost(costs.baseCost + 1); }}
+								onContextMenu={e => { e.preventDefault(); changeCost(costs.baseCost - 1); }}
+							>
+								{costs.baseCost}
+							</AbilityButton>
+						</Grid>
+						: null
+					}
+
+					{costs && resource.modifiers
+						? <Fragment>
+							<Grid item xs={6}>
+								<Typography variant="h6">Modifiers</Typography>
+							</Grid>
+
+							{resource.modifiers.map((v, i) =>
+								<Grid item key={i} xs={2}>
+									<FormControlLabel label={`${v[0]} (${v[1]}rps)`} checked={costs.modifiers[v[0]].selected} onChange={() => changeModifier(v[0])} control={<Checkbox />} />
+								</Grid>
+							)}
+						</Fragment>
+						: null
+					}
+
+					<Grid item xs={6}>
+						<TextField label="Add description (optional)" variant="standard" value={resourceDesc} onChange={e => setResourceDesc(e.target.value)} fullWidth />
+					</Grid>
+
+					<Grid item>
+						<Button variant="outlined" size="medium" onClick={() => createResource()}>Add Resource</Button>
+					</Grid>
+				</GenericGrid>
+			</Paper >
+		</Modal >
+	);
+}

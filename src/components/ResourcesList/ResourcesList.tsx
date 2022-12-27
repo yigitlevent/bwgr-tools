@@ -25,7 +25,7 @@ import { GenericGrid } from "../Shared/Grids";
 import { CheckDatasets } from "../../utils/checkDatasets";
 
 
-function ResourceItem({ resource }: { resource: Resource; }) {
+export function ResourceItem({ resource }: { resource: Resource; }) {
 	return (
 		<GenericGrid columns={3}>
 			<Grid item xs={2}>

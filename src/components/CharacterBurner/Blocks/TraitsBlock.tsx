@@ -132,8 +132,12 @@ export function TraitsBlock() {
 				<Typography variant="h4">Traits</Typography>
 			</Grid>
 
-			<Grid item xs={6}>
-				<Typography>Trait Points: {totals.traits.points}, Remaining: {traitRemaining ? traitRemaining.traitPoints : []}</Typography>
+			<Grid item xs={6} sm={5}>
+				<Typography>Trait Points: {totals.traits.points}, Remaining: {traitRemaining ? traitRemaining.traitPoints : -1}</Typography>
+			</Grid>
+
+			<Grid item xs={6} sm={1}>
+				<Button variant="outlined" size="small" onClick={() => setOpen(true)} fullWidth>Add General Trait</Button>
 			</Grid>
 
 			{totals.traits.commonList.length > 0 ? <CommonTraitsBlock /> : null}
@@ -142,17 +146,6 @@ export function TraitsBlock() {
 			{totals.traits.generalList.length > 0 ? <GeneralTraitsBlock /> : null}
 
 			<GeneralTraitModal open={open} setOpen={setOpen} />
-
-			<Grid item xs={6}>
-				<Button
-					variant="outlined"
-					size="medium"
-					onClick={() => setOpen(true)}
-					sx={{ margin: "16px 0 16px 0" }}
-				>
-					Add General Trait
-				</Button>
-			</Grid>
 		</GenericGrid>
 	);
 }

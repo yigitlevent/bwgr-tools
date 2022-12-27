@@ -11,9 +11,11 @@ import { SkillsBlock } from "./Blocks/SkillsBlock";
 import { TraitsBlock } from "./Blocks/TraitsBlock";
 import { BasicsBlock } from "./Blocks/BasicsBlock";
 import { LifepathsBlock } from "./Blocks/LifepathsBlock";
+import { ResourcesBlock } from "./Blocks/ResourcesBlock";
 import { LifepathModal } from "./Modals/LifepathModal";
 import { QuestionModal } from "./Modals/QuestionModal";
 import { SpecialSkillsModal } from "./Modals/SpecialSkillsModal";
+import { ResourceModal } from "./Modals/ResourceModal";
 
 
 export function CharacterBurner(): JSX.Element {
@@ -22,6 +24,7 @@ export function CharacterBurner(): JSX.Element {
 	const [openLp, openLpModal] = useState(false);
 	const [openQu, openQuModal] = useState(false);
 	const [openSu, openSuModal] = useState(false);
+	const [openRe, openReModal] = useState(false);
 
 	return (
 		<Fragment>
@@ -30,6 +33,7 @@ export function CharacterBurner(): JSX.Element {
 			<LifepathModal openLp={openLp} openLpModal={openLpModal} />
 			<QuestionModal openQu={openQu} openQuModal={openQuModal} />
 			<SpecialSkillsModal openSu={openSu} openSuModal={openSuModal} />
+			<ResourceModal openRe={openRe} openReModal={openReModal} />
 
 			<BasicsBlock />
 			<LifepathsBlock openLpModal={openLpModal} openQuModal={openQuModal} openSuModal={openSuModal} />
@@ -44,6 +48,8 @@ export function CharacterBurner(): JSX.Element {
 					<SkillsBlock />
 					<BlockDivider />
 					<TraitsBlock />
+					<BlockDivider />
+					<ResourcesBlock openReModal={openReModal} />
 				</Fragment>
 				: null
 			}

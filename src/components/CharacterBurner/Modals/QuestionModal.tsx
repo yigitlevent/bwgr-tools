@@ -17,7 +17,7 @@ export function QuestionModal({ openQu, openQuModal }: { openQu: boolean; openQu
 
 	return (
 		<Modal open={openQu} onClose={() => openQuModal(false)}>
-			<Paper sx={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", maxWidth: "800px", width: "100%", padding: "0 24px 24px", border: "none" }}>
+			<Paper sx={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", maxWidth: "800px", width: "100%", padding: "0 24px 24px", border: "none", overflow: "auto" }}>
 				<GenericGrid columns={1} spacing={[2, 2]} center>
 					{Object.keys(questions)
 						.map((v, i) => {

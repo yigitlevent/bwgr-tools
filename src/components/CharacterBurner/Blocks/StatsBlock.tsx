@@ -26,9 +26,9 @@ export function StatsBlock() {
 			</Grid>
 
 			<Grid item xs={6}>
-				<Typography>Mental Pool: {GetMentalTotal(totals)}, Remaining: {statRemaining ? statRemaining.mentalPool : []}</Typography>
-				<Typography>Physical Pool: {GetPhysicalTotal(totals)}, Remaining: {statRemaining ? statRemaining.physicalPool : []}</Typography>
-				<Typography>Either Pool: {totals.stats.fromLifepaths.eitherPoints}, Remaining: {statRemaining ? statRemaining.eitherPool : []}</Typography>
+				<Typography>Mental Pool: {GetMentalTotal(totals)}, Remaining: {statRemaining ? statRemaining.mentalPool : -1}</Typography>
+				<Typography>Physical Pool: {GetPhysicalTotal(totals)}, Remaining: {statRemaining ? statRemaining.physicalPool : -1}</Typography>
+				<Typography>Either Pool: {totals.stats.fromLifepaths.eitherPoints}, Remaining: {statRemaining ? statRemaining.eitherPool : -1}</Typography>
 			</Grid>
 
 			<Fragment>
