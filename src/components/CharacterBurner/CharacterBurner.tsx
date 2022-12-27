@@ -12,17 +12,19 @@ import { TraitsBlock } from "./Blocks/TraitsBlock";
 import { BasicsBlock } from "./Blocks/BasicsBlock";
 import { LifepathsBlock } from "./Blocks/LifepathsBlock";
 import { ResourcesBlock } from "./Blocks/ResourcesBlock";
+import { TolerancesBlock } from "./Blocks/TolerancesBlock";
 import { LifepathModal } from "./Modals/LifepathModal";
+import { RandomLifepathsModal } from "./Modals/RandomLifepathsModal";
 import { QuestionModal } from "./Modals/QuestionModal";
 import { SpecialSkillsModal } from "./Modals/SpecialSkillsModal";
 import { ResourceModal } from "./Modals/ResourceModal";
-import { TolerancesBlock } from "./Blocks/TolerancesBlock";
 
 
 export function CharacterBurner(): JSX.Element {
 	const { totals } = useAppSelector(state => state.characterBurner);
 
 	const [openLp, openLpModal] = useState(false);
+	const [openRl, openRlModal] = useState(false);
 	const [openQu, openQuModal] = useState(false);
 	const [openSu, openSuModal] = useState(false);
 	const [openRe, openReModal] = useState(false);
@@ -32,12 +34,13 @@ export function CharacterBurner(): JSX.Element {
 			<Typography variant="h3">Character Burner</Typography>
 
 			<LifepathModal openLp={openLp} openLpModal={openLpModal} />
+			<RandomLifepathsModal openRl={openRl} openRlModal={openRlModal} />
 			<QuestionModal openQu={openQu} openQuModal={openQuModal} />
 			<SpecialSkillsModal openSu={openSu} openSuModal={openSuModal} />
 			<ResourceModal openRe={openRe} openReModal={openReModal} />
 
 			<BasicsBlock />
-			<LifepathsBlock openLpModal={openLpModal} openQuModal={openQuModal} openSuModal={openSuModal} />
+			<LifepathsBlock openLpModal={openLpModal} openRlModal={openRlModal} openQuModal={openQuModal} openSuModal={openSuModal} />
 
 			{totals.years.points > 0
 				? <Fragment>

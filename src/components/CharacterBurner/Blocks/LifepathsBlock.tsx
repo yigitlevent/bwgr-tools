@@ -13,7 +13,9 @@ import { GenericGrid } from "../../Shared/Grids";
 import { LifepathBox } from "../../LifepathLists/LifepathBox";
 
 
-export function LifepathsBlock({ openLpModal, openQuModal, openSuModal }: { openLpModal: (open: boolean) => void; openQuModal: (open: boolean) => void; openSuModal: (open: boolean) => void; }) {
+type Generic = (open: boolean) => void;
+
+export function LifepathsBlock({ openLpModal, openRlModal, openQuModal, openSuModal }: { openLpModal: Generic; openRlModal: Generic; openQuModal: Generic; openSuModal: Generic; }) {
 	const { lifepathPaths } = useAppSelector(state => state.characterBurner);
 	const { cbRemoveLifepath } = useStore().characterBurner;
 
@@ -37,6 +39,10 @@ export function LifepathsBlock({ openLpModal, openQuModal, openSuModal }: { open
 
 			<Grid item>
 				<Button variant="outlined" size="medium" onClick={() => cbRemoveLifepath()} disabled={lifepathPaths.length === 0}>Remove Lifepath</Button>
+			</Grid>
+
+			<Grid item>
+				<Button variant="outlined" size="medium" onClick={() => openRlModal(true)} disabled={lifepathPaths.length !== 0}>Random Lifepaths</Button>
 			</Grid>
 
 			<Grid item>

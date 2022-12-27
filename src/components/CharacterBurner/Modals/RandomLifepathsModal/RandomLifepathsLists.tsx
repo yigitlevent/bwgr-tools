@@ -2,14 +2,14 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 
-import { Trait, TraitCategories } from "../../data/traits/_traits";
-import { Skill, SkillCategories } from "../../data/skills/_skills";
-import { LifepathTotals } from "../../utils/lifepathTotals";
+import { Trait, TraitCategories } from "../../../../data/traits/_traits";
+import { Skill, SkillCategories } from "../../../../data/skills/_skills";
+import { LifepathTotals } from "../../../../utils/lifepathTotals";
 
-import { PopoverLink } from "../Shared/PopoverLink";
+import { PopoverLink } from "../../../Shared/PopoverLink";
 
 
-export function RandomCharacterBurnerLists({ totals }: { totals: LifepathTotals; }) {
+export function RandomLifepathsLists({ totals }: { totals: LifepathTotals; }) {
 	const mandSkills = [...totals.skills.mandatoryList].map(path => {
 		const [category, name] = path.split("➞");
 		let s = SkillCategories[category].skills.find(v => v.name === name);
