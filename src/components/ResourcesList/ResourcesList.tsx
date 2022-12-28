@@ -17,7 +17,7 @@ import Divider from "@mui/material/Divider";
 
 import { useAppSelector } from "../../state/store";
 import { useStore } from "../../hooks/useStore";
-import { Resource, Resources } from "../../data/resources";
+import { Resource, Resources } from "../../data/resources/_resources";
 
 import { useSearch } from "../../hooks/useSearch";
 

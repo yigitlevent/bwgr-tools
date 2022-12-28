@@ -18,7 +18,7 @@ import Radio from "@mui/material/Radio";
 
 import { useAppSelector } from "../../../state/store";
 import { useStore } from "../../../hooks/useStore";
-import { Resource, Resources } from "../../../data/resources";
+import { Resource, Resources } from "../../../data/resources/_resources";
 
 import { GenericGrid } from "../../Shared/Grids";
 import { AbilityButton } from "../../Shared/AbilityButton";
