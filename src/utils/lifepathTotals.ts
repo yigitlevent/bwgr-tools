@@ -1,47 +1,7 @@
 import { Lifepath, Stocks } from "../data/stocks/_stocks";
 import { TraitCategories } from "../data/traits/_traits";
-import { SpecialLifepaths, SpecialSkills } from "../state/reducers/characterBurner";
 import { GetLifepathFromPath } from "./pathFinder";
 
-
-export interface LifepathTotals {
-	years: {
-		points: number;
-		extensions: string[];
-	};
-	resources: {
-		points: number;
-		extensions: string[];
-	};
-	stats: {
-		fromAge: [mentalPoints: number, physicalPoints: number];
-		fromLifepaths: {
-			mentalPoints: number;
-			physicalPoints: number;
-			eitherPoints: number;
-		};
-	};
-	skills: {
-		generalPoints: {
-			points: number;
-			extensions: string[];
-		};
-		lifepathPoints: {
-			points: number;
-			extensions: string[];
-		};
-		mandatoryList: string[];
-		lifepathList: string[];
-		generalList: string[];
-	};
-	traits: {
-		points: number;
-		commonList: string[];
-		mandatoryList: string[];
-		lifepathList: string[];
-		generalList: string[];
-	};
-}
 
 function OccuranceCount(chosenLifepaths: Lifepath[], currentLifepath: Lifepath, currentIndex: number) {
 	const previousLifepaths = chosenLifepaths.slice(0, currentIndex);

@@ -1,6 +1,4 @@
 import { Attribute, AttributeQuestions, AttributeQuestionsKeys, Attributes } from "../data/attributes";
-import { CharacterQuestions, CharacterSpendings } from "../state/reducers/characterBurner";
-import { LifepathTotals } from "./lifepathTotals";
 
 
 export function IsTraitInCommonOrOpen(questionTrait: string, totals: LifepathTotals, spendings: CharacterSpendings) {

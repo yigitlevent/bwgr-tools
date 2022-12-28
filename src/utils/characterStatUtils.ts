@@ -1,6 +1,4 @@
 import { Stat, Stats } from "../data/stats";
-import { CharacterSpendings, StatSpending } from "../state/reducers/characterBurner";
-import { LifepathTotals } from "./lifepathTotals";
 
 
 export interface StatRemaining {

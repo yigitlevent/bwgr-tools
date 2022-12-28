@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 
 import { Trait, TraitCategories } from "../../../../data/traits/_traits";
 import { Skill, SkillCategories } from "../../../../data/skills/_skills";
-import { LifepathTotals } from "../../../../utils/lifepathTotals";
 
 import { PopoverLink } from "../../../Shared/PopoverLink";
 

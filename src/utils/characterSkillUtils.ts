@@ -1,9 +1,7 @@
 import { Attributes } from "../data/attributes";
 import { Stats } from "../data/stats";
-import { CharacterQuestions, CharacterSpendings, CharacterStockSpecific } from "../state/reducers/characterBurner";
 import { GetAttributeExponent, GetAttributeShade } from "./characterAttributeUtils";
 import { GetStatExponent, GetStatShade } from "./characterStatUtils";
-import { LifepathTotals } from "./lifepathTotals";
 import { GetAverage } from "./misc";
 import { GetSkillFromPath } from "./pathFinder";
 

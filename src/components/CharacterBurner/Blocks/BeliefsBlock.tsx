@@ -11,7 +11,7 @@ import { GenericGrid } from "../../Shared/Grids";
 
 
 export function BeliefsBlock() {
-	const { beliefs } = useAppSelector(state => state.characterBurner);
+	const { beliefs, limits } = useAppSelector(state => state.characterBurner);
 	const { cbChangeBelief } = useStore().characterBurner;
 
 	return (
@@ -27,7 +27,7 @@ export function BeliefsBlock() {
 							label={i !== 3 ? `Belief ${i}` : "Special Belief"}
 							value={v}
 							onChange={(e) => cbChangeBelief(i, e.target.value)}
-							disabled={i === 3}
+							disabled={i >= (limits.beliefs - 1)}
 							fullWidth
 							variant="standard"
 						/>

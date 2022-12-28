@@ -2,7 +2,6 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
 import { GetMentalTotal, GetPhysicalTotal } from "../../../../utils/characterStatUtils";
-import { LifepathTotals } from "../../../../utils/lifepathTotals";
 
 
 export function RandomLifepathsBasics({ totals }: { totals: LifepathTotals; }) {

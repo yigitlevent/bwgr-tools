@@ -1,5 +1,3 @@
-import { CharacterSpendings } from "../state/reducers/characterBurner";
-import { LifepathTotals } from "./lifepathTotals";
 import { GetTraitFromPath } from "./pathFinder";
 
 

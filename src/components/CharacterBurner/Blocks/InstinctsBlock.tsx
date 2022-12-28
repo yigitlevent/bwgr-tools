@@ -11,7 +11,7 @@ import { GenericGrid } from "../../Shared/Grids";
 
 
 export function InstinctsBlock() {
-	const { instincts } = useAppSelector(state => state.characterBurner);
+	const { instincts, limits } = useAppSelector(state => state.characterBurner);
 	const { cbChangeInstinct } = useStore().characterBurner;
 
 	return (
@@ -27,7 +27,7 @@ export function InstinctsBlock() {
 							label={i !== 3 ? `Instinct ${i}` : "Special Instinct"}
 							value={v}
 							onChange={(e) => cbChangeInstinct(i, e.target.value)}
-							disabled={i === 3}
+							disabled={i >= (limits.beliefs - 1)}
 							fullWidth
 							variant="standard"
 						/>

@@ -1,10 +1,8 @@
 import { Attributes } from "../data/attributes";
-import { CharacterQuestions, CharacterSpendings, CharacterStockSpecific, StatSpending } from "../state/reducers/characterBurner";
 import { IsTraitInCommonOrOpen } from "./characterQuestionUtils";
 import { GetSkillOpenness } from "./characterSkillUtils";
 import { GetStatExponent, GetStatShade } from "./characterStatUtils";
 import { GetTraitOpenness } from "./characterTraitUtils";
-import { LifepathTotals } from "./lifepathTotals";
 import { GetAverage } from "./misc";
 
 

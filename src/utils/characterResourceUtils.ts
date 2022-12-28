@@ -1,7 +1,3 @@
-import { CharacterSpendings } from "../state/reducers/characterBurner";
-import { LifepathTotals } from "./lifepathTotals";
-
-
 export interface ResourceRemaining {
 	resourcePoints: number;
 }

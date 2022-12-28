@@ -15,7 +15,6 @@ import { Clamp } from "../utils/misc";
 
 import { Notification } from "../components/Shared/Notification";
 import { AttributeQuestionsKeys } from "../data/attributes";
-import { SpendingForResource } from "../state/reducers/characterBurner";
 
 
 export function useStore() {

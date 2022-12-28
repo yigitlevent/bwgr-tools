@@ -14,7 +14,7 @@ import { SkillListActions, SkillListReducer, SkillListState } from "./reducers/s
 import { TraitListActions, TraitListReducer, TraitListState } from "./reducers/traitList";
 import { ResourceListActions, ResourceListReducer, ResourceListState } from "./reducers/resourceList";
 import { DatasetActions, DatasetReducer, DatasetState } from "./reducers/dataset";
-import { CharacterBurnerActions, CharacterBurnerReducer, CharacterBurnerState } from "./reducers/characterBurner";
+import { CharacterBurnerReducer } from "./reducers/characterBurner";
 
 type CombinedActions = DrawerActions | DatasetActions
 	| DiceRollerActions
