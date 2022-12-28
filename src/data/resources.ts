@@ -4,7 +4,7 @@ export interface Resource {
 	type: "Gear" | "Property" | "Relationship" | "Affiliation" | "Reputation" | "Magical";
 	description?: string;
 	cost: number | [string, number][] | "various";
-	modifiers?: [string, number][];
+	modifiers?: [string, number | `${number}/per`][];
 	magical?: {
 		origin: "Personal" | "Presence" | "Double Presence" | "Sight";
 		element: ("Anima" | "Arcana" | "Heaven" | "White" | "Fire" | "Air" | "Earth" | "Water")[];
@@ -1403,6 +1403,11 @@ export const Resources: ResourceGroup = {
 				allowed: ["bwg"],
 				type: "Gear",
 				cost: 5,
+				modifiers: [
+					["Spiked Pommel", "1/per"],
+					["Weighted Pommel", "1/per"],
+					["Beak Pommel", "1/per"]
+				],
 				description: "Any gear choice listed as 'shoddy' merely means the is not Dwarf-made. It counts as run of the mill gear and provides none of the bonuses of the more expensive Dwarven gear."
 			},
 			{
@@ -1410,6 +1415,11 @@ export const Resources: ResourceGroup = {
 				allowed: ["bwg"],
 				type: "Gear",
 				cost: 20,
+				modifiers: [
+					["Spiked Pommel", "4/per"],
+					["Weighted Pommel", "4/per"],
+					["Beak Pommel", "4/per"]
+				],
 				description: "All Dwarven Arms are considered superior quality items. In addition, they add a +1D balance die to the skill of the wielder. Traditionally, Dwarves use axes and hammers, throwing axes and knives. But swords and maces are acceptable as well. Players may purchase beaks, spikes and weights for their character's weapons at +4rps per modification, per weapon."
 			},
 			{
@@ -1417,6 +1427,12 @@ export const Resources: ResourceGroup = {
 				allowed: ["bwg"],
 				type: "Gear",
 				cost: 6,
+				modifiers: [
+					["Helmeted", 0],
+					["Mallet Head", 1],
+					["Fisted Bolt", 1],
+					["Spear Tip", 1]
+				],
 				description: "Any gear choice listed as 'shoddy' merely means the is not Dwarf-made. It counts as run of the mill gear and provides none of the bonuses of the more expensive Dwarven gear."
 			},
 			{
@@ -1424,7 +1440,13 @@ export const Resources: ResourceGroup = {
 				allowed: ["bwg"],
 				type: "Gear",
 				cost: 20,
-				description: "The arbalest is a special Dwarven make of the traditional crossbow. It can fire rocks or bolts. It counts as a crossbow but only requires 10 actions to load when firing bolts, or 6 actions when firing rocks. These devices are so well-made they add a +1D balance die to the wielder 's skill.<br>Rocks IMS: I: B3, M: B6, S: B9, VA: —. When firing rocks, the arbalest counts as an arquebus for Range and Cover and DoF rules.<br>It can fire bolts using the range and damage of a crossbow."
+				modifiers: [
+					["Helmeted", 0],
+					["Mallet Head", 1],
+					["Fisted Bolt", 1],
+					["Spear Tip", 1]
+				],
+				description: "The arbalest is a special Dwarven make of the traditional crossbow. It can fire rocks or bolts. It counts as a crossbow but only requires 10 actions to load when firing bolts, or 6 actions when firing rocks. These devices are so well-made they add a +1D balance die to the wielder's skill.<br>Rocks IMS: I: B3, M: B6, S: B9, VA: —. When firing rocks, the arbalest counts as an arquebus for Range and Cover and DoF rules.<br>It can fire bolts using the range and damage of a crossbow."
 			},
 			{
 				name: "Dwarven-made Armor",
@@ -1545,10 +1567,36 @@ export const Resources: ResourceGroup = {
 			Reputation,
 			Affiliation,
 			{
-				name: "Run of the Mill Weapons and Armor",
+				name: "Run of the Mill Arms",
 				allowed: ["bwg"],
 				type: "Gear",
-				cost: [["Bow", 5], ["Arms", 5], ["Reinforced Leather", 3], ["Light Mail", 6], ["Heavy Mail", 10], ["Plated Mail", 20]],
+				cost: 5,
+				modifiers: [
+					["Spiked Pommel", "1/per"],
+					["Weighted Pommel", "1/per"],
+					["Beak Pommel", "1/per"]
+				],
+				description: "Use the stats for the equipment listed in the Human Lifepaths and run of the mill lists for this gear."
+			},
+			{
+				name: "Run of the Mill Bow",
+				allowed: ["bwg"],
+				type: "Gear",
+				cost: 5,
+				modifiers: [
+					["Bodkin Head", 1],
+					["Leaf Head", 1],
+					["Frog Crotch", 1],
+					["Blunt Head", 1],
+					["Barbed Tip", 1]
+				],
+				description: "Use the stats for the equipment listed in the Human Lifepaths and run of the mill lists for this gear."
+			},
+			{
+				name: "Run of the Mill Armor",
+				allowed: ["bwg"],
+				type: "Gear",
+				cost: [["Reinforced Leather", 3], ["Light Mail", 6], ["Heavy Mail", 10], ["Plated Mail", 20]],
 				description: "Use the stats for the equipment listed in the Human Lifepaths and run of the mill lists for this gear."
 			},
 			{
@@ -1563,14 +1611,26 @@ export const Resources: ResourceGroup = {
 				allowed: ["bwg"],
 				type: "Gear",
 				cost: 15,
+				modifiers: [
+					["Spiked Pommel", "3/per"],
+					["Weighted Pommel", "3/per"],
+					["Beak Pommel", "3/per"]
+				],
 				description: "Elven Arms are considered superior quality weapons. Players may purchase beaks, spikes and weights for their characters' weapons at +3 rps per modification, per weapon."
 			},
 			{
 				name: "Elven Bow",
 				allowed: ["bwg"],
 				type: "Gear",
-				cost: 25,
-				description: "These are the weapons made using the Elven Bowcraft skill. Elven Bows are bigger than hunting bows, but not as big as the great bows of men. They provide 3D of range dice at extreme, and 3D at optimal. Maximum range is 250 paces. In the Fight rules, they have a Nock and Draw time of five actions.<br>When purchasing an Elven Bow, Elves may choose from these arrows:<br>Hunting Head: I: B4, M: B8, S: B11, VA 2, Free<br>Leaf Head: I: BS, M: B9, S: B12, VA 1, +1rp<br>Bodkin: I: B4, M: B7, S: B10, VA 3, +2rps<br>Elven characters who take four or fewer lifepaths and whose last lifepath is Elven Bowyer may take an Elven Bow for 5 rps."
+				cost: [
+					["Requirements unfulfilled", 25],
+					["Requirements fulfilled", 5]
+				],
+				modifiers: [
+					["Leaf Head", 1],
+					["Bodkin Head", 2]
+				],
+				description: "These are the weapons made using the Elven Bowcraft skill. Elven Bows are bigger than hunting bows, but not as big as the great bows of men. They provide 3D of range dice at extreme, and 3D at optimal. Maximum range is 250 paces. In the Fight rules, they have a Nock and Draw time of five actions.<br>When purchasing an Elven Bow, Elves may choose from these arrows:<br>Hunting Head: I: B4, M: B8, S: B11, VA 2, Free<br>Leaf Head: I: BS, M: B9, S: B12, VA 1, +1rp<br>Bodkin Head: I: B4, M: B7, S: B10, VA 3, +2rps<br>Elven characters who take four or fewer lifepaths and whose last lifepath is Elven Bowyer may take an Elven Bow for 5 rps."
 			},
 			{
 				name: "Elven Cloak",
@@ -1729,7 +1789,7 @@ export const Resources: ResourceGroup = {
 				allowed: ["bwc"],
 				type: "Gear",
 				cost: 10,
-				description: "These tppşs are required to use the Lock Pick skill."
+				description: "These tools are required to use the Lock Pick skill."
 			},
 			{
 				name: "Long Knife",
@@ -1809,6 +1869,10 @@ export const Resources: ResourceGroup = {
 				allowed: ["bwc"],
 				type: "Gear",
 				cost: 15,
+				modifiers: [
+					["Additional VA", 15],
+					["Additional Power", 30]
+				],
 				description: "Weapons made of the Dark Elven black metal count as superior quality. You may modify the weapon thusly:<br>For an additional +15 rps, you may add an additional point of weapon speed or VA to the weapon's stats.<br>For +30 rps, you may add +1 Power to the weapon.<br>However, to qualify for this bonus, you must name the weapon and it must be unique in your campaign. For example, if you take a black metal dagger with VA 2, it can be the only one of its type."
 			}
 		]
@@ -1826,13 +1890,56 @@ export const Resources: ResourceGroup = {
 				type: "Gear",
 				cost: [
 					["Poor Quality Arms", 3],
-					["Run of the Mill Quality Arms", 5],
-					["Superior Quality Arms", 20]
+					["Run of the Mill Quality Arms", 5]
 				],
-				description: "Arms covers the necessary hand weaponry to suit a character's idiom. Arms for a knight would consist of a sword, lance and dagger. For a foot soldier, perhaps an axe and spear. Whatever it is, just take what you need. Players may purchase beaks, spikes and weights for their characters' weapons at + 1 rp per modification per weapon, +4 rps per modification per weapon of superior quality.<br>Poor Quality Arms - sing poor quality weapon incurs a +1 Ob penalty to all combat tests using the weapon.<br>Run of the Mill Quality Arms - Use run of the mill stats for weapons<br>Superior Quality Arms - Use the superior quality weapon stats."
+				modifiers: [
+					["Spiked Pommel", "1/per"],
+					["Weighted Pommel", "1/per"],
+					["Beak Pommel", "1/per"]
+				],
+				description: "Arms covers the necessary hand weaponry to suit a character's idiom. Arms for a knight would consist of a sword, lance and dagger. For a foot soldier, perhaps an axe and spear. Whatever it is, just take what you need. Players may purchase beaks, spikes and weights for their characters' weapons at +1 rp per modification per weapon.<br>Poor Quality Arms - Using poor quality weapon incurs a +1 Ob penalty to all combat tests using the weapon.<br>Run of the Mill Quality Arms - Use run of the mill stats for weapons"
 			},
 			{
-				name: "Missiles",
+				name: "Superior Arms",
+				allowed: ["bwg"],
+				type: "Gear",
+				cost: 20,
+				modifiers: [
+					["Spiked Pommel", "4/per"],
+					["Weighted Pommel", "4/per"],
+					["Beak Pommel", "4/per"]
+				],
+				description: "Arms covers the necessary hand weaponry to suit a character's idiom. Arms for a knight would consist of a sword, lance and dagger. For a foot soldier, perhaps an axe and spear. Whatever it is, just take what you need. Players may purchase beaks, spikes and weights for their characters' weapons at +4 rps per modification per weapon of superior quality.<br>Superior Quality Arms - Use the superior quality weapon stats."
+			},
+			{
+				name: "Poor Missiles",
+				allowed: ["bwg"],
+				type: "Gear",
+				cost: [
+					["Throwing weapons like knives or javelins", 2],
+					["Hunting bow", 3],
+					["Great bow", 5],
+					["Crossbow", 4],
+					["Heavy crossbow", 6],
+					["Pistol", 8],
+					["Arquebus", 10]
+				],
+				modifiers: [
+					["Hunting Head (Bow)", 1],
+					["Bodkin Head (Bow)", 1],
+					["Leaf Head (Bow)", 1],
+					["Frog Crotch (Bow)", 1],
+					["Blunt Head (Bow)", 1],
+					["Barbed Tip (Bow)", 1],
+					["Helmeted (Crossbow)", 1],
+					["Mallet Head (Crossbow)", 1],
+					["Fisted Bolt (Crossbow)", 1],
+					["Spear Tip (Crossbow)", 1]
+				],
+				description: "Included in the costs of these weapons are enough missiles to adequately outfit the character. Special arrowheads are not included and cost extra resource points. They cost 1 rp per special head type-take as many of each head as you like. Rules for special arrowheads are given in the Weapon Appendix.<br>Poor Quality Missiles - Half resource points cost rounded up. Poor quality missiles are +1 Ob to hit."
+			},
+			{
+				name: "Run of the Mill Missiles",
 				allowed: ["bwg"],
 				type: "Gear",
 				cost: [
@@ -1844,10 +1951,63 @@ export const Resources: ResourceGroup = {
 					["Pistol", 15],
 					["Arquebus", 20]
 				],
-				description: "Included in the costs of these weapons are enough missiles to adequately outfit the character. Special arrowheads are not included and cost extra resource points. They cost 1 rp per special head type-take as many of each head as you like. Rules for special arrowheads are given in the Weapon Appendix.<br>Poor Quality Missiles - Half resource points cost rounded up. Poor quality missiles are + 1 Ob to hit.<br>Superior Quality Missiles- 3x rps cost. Superior quality missile weapons grant the character a +1D bonus balance die. This is added to his skill every time he takes a shot."
+				modifiers: [
+					["Hunting Head (Bow)", 1],
+					["Bodkin Head (Bow)", 1],
+					["Leaf Head (Bow)", 1],
+					["Frog Crotch (Bow)", 1],
+					["Blunt Head (Bow)", 1],
+					["Barbed Tip (Bow)", 1],
+					["Helmeted (Crossbow)", 1],
+					["Mallet Head (Crossbow)", 1],
+					["Fisted Bolt (Crossbow)", 1],
+					["Spear Tip (Crossbow)", 1]
+				],
+				description: "Included in the costs of these weapons are enough missiles to adequately outfit the character. Special arrowheads are not included and cost extra resource points. They cost 1 rp per special head type-take as many of each head as you like. Rules for special arrowheads are given in the Weapon Appendix."
 			},
 			{
-				name: "Armor",
+				name: "Superior Missiles",
+				allowed: ["bwg"],
+				type: "Gear",
+				cost: [
+					["Throwing weapons like knives or javelins", 9],
+					["Hunting bow", 15],
+					["Great bow", 30],
+					["Crossbow", 21],
+					["Heavy crossbow", 36],
+					["Pistol", 45],
+					["Arquebus", 60]
+				],
+				modifiers: [
+					["Hunting Head (Bow)", 1],
+					["Bodkin Head (Bow)", 1],
+					["Leaf Head (Bow)", 1],
+					["Frog Crotch (Bow)", 1],
+					["Blunt Head (Bow)", 1],
+					["Barbed Tip (Bow)", 1],
+					["Helmeted (Crossbow)", 1],
+					["Mallet Head (Crossbow)", 1],
+					["Fisted Bolt (Crossbow)", 1],
+					["Spear Tip (Crossbow)", 1]
+				],
+				description: "Included in the costs of these weapons are enough missiles to adequately outfit the character. Special arrowheads are not included and cost extra resource points. They cost 1 rp per special head type-take as many of each head as you like. Rules for special arrowheads are given in the Weapon Appendix.<br>Superior Quality Missiles- 3x rps cost. Superior quality missile weapons grant the character a +1D bonus balance die. This is added to his skill every time he takes a shot."
+			},
+			{
+				name: "Poor Quality Armor",
+				allowed: ["bwg"],
+				type: "Gear",
+				cost: [
+					["Gambeson", 2],
+					["Reinforced leather", 3],
+					["Light mail", 5],
+					["Heavy mail", 8],
+					["Plated mail", 10],
+					["Full plated mail", 25]
+				],
+				description: "When you buy armor, you buy the whole suit-helmet, arms, chest and legs. The player may choose individual pieces if he likes. A helmet or br eastplate costs half the full suit. Greaves or leggings cost a third of the full price. Round up any fractional costs. Shields may be included in an armor kit at no extra cost.<br>Poor Quality Armor - This armor falls apart; all 1s count for losing armor dice."
+			},
+			{
+				name: "Run of the Mill Armor",
 				allowed: ["bwg"],
 				type: "Gear",
 				cost: [
@@ -1858,7 +2018,21 @@ export const Resources: ResourceGroup = {
 					["Plated mail", 20],
 					["Full plated mail", 50]
 				],
-				description: "When you buy armor, you buy the whole suit-helmet, arms, chest and legs. The player may choose individual pieces if he likes. A helmet or br eastplate costs half the full suit. Grea ves or leggin gs cost a third of the full price. Round up any fractional costs. Shields may be included in an armor kit at no extra cost.<br>Poor Quality Armor - Half of the run of the mill cost rounded up. This armor falls apart; all 1s count for losing armor dice.<br>Superior Quality Armor - 4x cost of a full suit. Only the first 1 counts, which is rerolled; if that die comes up a 1 again, an armor die is lost."
+				description: "When you buy armor, you buy the whole suit-helmet, arms, chest and legs. The player may choose individual pieces if he likes. A helmet or br eastplate costs half the full suit. Greaves or leggings cost a third of the full price. Round up any fractional costs. Shields may be included in an armor kit at no extra cost."
+			},
+			{
+				name: "Superior Quality Armor",
+				allowed: ["bwg"],
+				type: "Gear",
+				cost: [
+					["Gambeson", 12],
+					["Reinforced leather", 24],
+					["Light mail", 40],
+					["Heavy mail", 60],
+					["Plated mail", 80],
+					["Full plated mail", 200]
+				],
+				description: "When you buy armor, you buy the whole suit-helmet, arms, chest and legs. The player may choose individual pieces if he likes. A helmet or br eastplate costs half the full suit. Greaves or leggings cost a third of the full price. Round up any fractional costs. Shields may be included in an armor kit at no extra cost.<br>Superior Quality Armor - Only the first 1 counts, which is rerolled; if that die comes up a 1 again, an armor die is lost."
 			},
 			{
 				name: "Riding Mount or Pack Animal",
@@ -2032,6 +2206,11 @@ export const Resources: ResourceGroup = {
 				allowed: ["bwg"],
 				type: "Gear",
 				cost: [["Poor quality arms", 3], ["Run of the mill arms", 5]],
+				modifiers: [
+					["Spiked Pommel", "1/per"],
+					["Weighted Pommel", "1/per"],
+					["Beak Pommel", "1/per"]
+				],
 				description: "You may purchase run of the mill or poor quality weapons for your character. You may purchase beaks, spikes and weights for your character's weapons at +1 rp per modification, per weapon."
 			},
 			{
@@ -2061,7 +2240,19 @@ export const Resources: ResourceGroup = {
 					["Run of the mill crossbow", 6],
 					["Iron-cased bombs", 10]
 				],
-				description: "Included in the costs of these weapons are enough missiles to adequately outfit the character. Special heads for arrows and bolts can be purchased for 1 rp apiece. Take as many of each head as you like. Rules for special arrowheads are given in the Weapon Appendix of the Burning Wheel."
+				modifiers: [
+					["Hunting Head (Bow)", 1],
+					["Bodkin Head (Bow)", 1],
+					["Leaf Head (Bow)", 1],
+					["Frog Crotch (Bow)", 1],
+					["Blunt Head (Bow)", 1],
+					["Barbed Tip (Bow)", 1],
+					["Helmeted (Crossbow)", 1],
+					["Mallet Head (Crossbow)", 1],
+					["Fisted Bolt (Crossbow)", 1],
+					["Spear Tip (Crossbow)", 1]
+				],
+				description: "Included in the costs of these weapons are enough missiles to adequately outfit the character. Special heads for arrows and bolts can be purchased for +1rp apiece. Take as many of each head as you like. Rules for special arrowheads are given in the Weapon Appendix of the Burning Wheel."
 			},
 			{
 				name: "Black Iron Helmet",
@@ -2183,7 +2374,183 @@ export const Resources: ResourceGroup = {
 			Relationship,
 			Reputation,
 			Affiliation,
-			// TODO: [RESOURCES] Add Roden resources
+			{
+				name: "Arms",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: [
+					["Poor Quality Arms", 3],
+					["Run of the Mill Quality Arms", 5]
+				],
+				modifiers: [
+					["Spiked Pommel", "1/per"],
+					["Weighted Pommel", "1/per"],
+					["Beak Pommel", "1/per"]
+				],
+				description: "Arms covers the necessary hand weaponry to suit a character's idiom. Arms for a knight would consist of a sword, lance and dagger. For a foot soldier, perhaps an axe and spear. Whatever it is, just take what you need. Players may purchase beaks, spikes and weights for their characters' weapons at +1 rp per modification per weapon.<br>Poor Quality Arms - Using poor quality weapon incurs a +1 Ob penalty to all combat tests using the weapon.<br>Run of the Mill Quality Arms - Use run of the mill stats for weapons"
+			},
+			{
+				name: "Superior Arms",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: 20,
+				modifiers: [
+					["Spiked Pommel", "4/per"],
+					["Weighted Pommel", "4/per"],
+					["Beak Pommel", "4/per"]
+				],
+				description: "Arms covers the necessary hand weaponry to suit a character's idiom. Arms for a knight would consist of a sword, lance and dagger. For a foot soldier, perhaps an axe and spear. Whatever it is, just take what you need. Players may purchase beaks, spikes and weights for their characters' weapons at +4 rps per modification per weapon of superior quality.<br>Superior Quality Arms - Use the superior quality weapon stats."
+			},
+			{
+				name: "Roden Throwing Blades",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: 15,
+				description: "This category includes a number of weapons designed for throwing, including knives, darts and discs. The balance ofthese blades are superb and adds +1D to the Throwing skillwhen used. Players may take two knives. These are meant to be rare and expensive.<br>Pow: 1, VA: 1, DoF 1-2/3-4/5-6, Range: Optimal 1D, Extreme 1D"
+			},
+			{
+				name: "Wooden Shield",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: 2,
+				description: "While armor might be very rare for Roden, they often use shields to protect themselves in battle. These shields are made from strong wood and offer 2D of protection as target shields."
+			},
+			{
+				name: "Poor Quality Armor",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: [
+					["Leather", 5],
+					["Plated leather", 8],
+					["Chain", 10]
+				],
+				description: "When you buy armor, you buy the whole suit-helmet, arms, chest and legs. The player may choose individual pieces if he likes. A helmet or br eastplate costs half the full suit. Greaves or leggings cost a third of the full price. Round up any fractional costs. Shields may be included in an armor kit at no extra cost.<br>Poor Quality Armor - This armor falls apart; all 1s count for losing armor dice."
+			},
+			{
+				name: "Run of the Mill Armor",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: [
+					["Leather", 10],
+					["Plated leather", 15],
+					["Chain", 20]
+				],
+				description: "When you buy armor, you buy the whole suit-helmet, arms, chest and legs. The player may choose individual pieces if he likes. A helmet or br eastplate costs half the full suit. Greaves or leggings cost a third of the full price. Round up any fractional costs. Shields may be included in an armor kit at no extra cost."
+			},
+			{
+				name: "Superior Quality Armor",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: [
+					["Leather", 40],
+					["Plated leather", 60],
+					["Chain", 80]
+				],
+				description: "When you buy armor, you buy the whole suit-helmet, arms, chest and legs. The player may choose individual pieces if he likes. A helmet or br eastplate costs half the full suit. Greaves or leggings cost a third of the full price. Round up any fractional costs. Shields may be included in an armor kit at no extra cost.<br>Superior Quality Armor - Only the first 1 counts, which is rerolled; if that die comes up a 1 again, an armor die is lost."
+			},
+			{
+				name: "Workshop",
+				allowed: ["bwc"],
+				type: "Property",
+				cost: 20,
+				description: "A workshop is just a big toolkit. It is used for artisan and craftsman skill tests that require more than just simple tools. Purchasing this gives the character an appropriate room/building/tower to house the workshop. Workshops allow for more than one character to help on a skill test. This counts as property when factoring resources."
+			},
+			{
+				name: "Animal Herd",
+				allowed: ["bwc"],
+				type: "Property",
+				cost: 10,
+				description: "Although the Field Roden do not keep animals, their kin Below have long known the taste of flesh. A herd may include goats, pigs or chickens. This counts as property for the purposes of factoring resources."
+			},
+			{
+				name: "Clothes",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: 1,
+				description: "This resource purchase includes all of the clothing a character would need for everyday life in his station. It is not just one outfit. Like the Arms purchase, Clothing allows the player to take what he needs to trick out his character (short of finery)."
+			},
+			{
+				name: "Traveling Gear",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: 1,
+				description: "This is all the necessary bits, odds and ends and what-no ts that are needed for survival on the road-candles, matches, flint and steel, a pocket knife, a rain cloak, a rain hat, a good sturdy rucksack, a thick leather belt, a money purse or wallet, a warm coat, etc. The exact choices are up to the player, but the GM has some say —no flamethrowers or Elven cloaks in traveling gear. Oh, yes, I almost forgot... don't forget to bring a good length of rope; you'll want one if you don't."
+			},
+			{
+				name: "Shoes",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: 3,
+				description: "Shoes"
+			},
+			{
+				name: "Skill Toolkits",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: 9,
+				description: "Many skills require tools. This resource can represent anything from medicine to books. If a skill is listed with 'Tools: Yes,' then a character must spend resource points on a toolkit in order to be able to adequately perform skill tests. Tests without tools (for skills that require them) are at a double obstacle penalty.<br>A toolkit that has finite supplies —like medicine for Herbalism— can run dry. Each use after the first, roll a d6. If a 1 comes up, the kit is empty. The character must make an Ob 2-5 Resources test to replenish it. The GM may set the obstacle depending on how rare the contents of the kit are. Ob 2 for peasant tools, Ob 4 for surgeon's tools, Ob 5 for sorcerous tools. Only one character can help you when you're using a toolkit."
+			},
+			{
+				name: "Firebombs",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: [
+					["Requirements unfulfilled", 20],
+					["Requirements fulfilled", 6]
+				],
+				description: "In order to purchase firebombs, the character's last lifepath must be in the Society. Players may purchase six bottle-sized bombs or one medium-sized incendiary bomb. If a player's last lifepath was Arsonist, he may purchase the firebombs for 6 rps. See the Firebombs skill for more information."
+			},
+			{
+				name: "Robes of the Ordained",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: 1,
+				description: "These are the humble wool robes worn by Aecer's Ordained. Brothers and Sisters wear brown; Fathers and Mothers wear green; and Abbots and Abbesses wear pumpkin."
+			},
+			{
+				name: "Honeyed Oatcakes",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: 5,
+				description: "These are delight for any traveler! Sweet and crunchy, filling and healthy, they don't spoil and make for good meals while on the road. They add +1D to any Forte or Health tests made within 1 day of consumption."
+			},
+			{
+				name: "Dandewine",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: 5,
+				description: "Made from dandelions and infused with other secret liquids and spices, dandewine is featuresd at every Field Roden social event. Surprisingly, it's nonalcoholic, but it has wondrous effects. Reduce hesitation by one and also decrease by one all social skill tests obstacles made against those drunk on wine."
+			},
+			{
+				name: "Blood Blossom",
+				allowed: ["bwc"],
+				type: "Gear",
+				cost: 5,
+				description: "Known in the Fields and Below for its great healing powers, blood blossoms have been stabple of Roden healers for ages. Harvested only at the summer equinox, they are prepared immediately and stay usable for up to a full year. These flowers will add +1D to any Herbalism or Field Dressing tests."
+			},
+			{
+				name: "Roden Property",
+				allowed: ["bwc"],
+				type: "Property",
+				cost: [
+					["A den for a single Roden", 2],
+					["A nest for a small family of Roden", 7],
+					["A nest for a large group of Roden", 10],
+					["Apiary for the beekeepers", 10],
+					["Fields for harvesters", 15]
+				]
+			},
+			{
+				name: "Visionary Cult",
+				allowed: ["bwc"],
+				type: "Affiliation",
+				cost: [
+					["1D: A small, local or specialized group", 10],
+					["2D: A large, regional or expansive group", 25],
+					["3D: A national, powerful or ruling group", 50]
+				],
+				description: "The devotees of the Visionary, they follow his guidance and do his bidding. Most are clever and work inconspicuously among the Field and Below, being very careful to avoid suspicion. Only a Visionary may purchase a Cult. A Cult counts as an affiliation. Each die spent in the affiliation also grants +1D to the Visionary Faith trait. If the cult is lost, destroyed or abandoned, the Visionary loses access to these dice."
+			},
 			...SorcerySpells,
 			...PracticalMagicSchools,
 			...SpiritBindingDomainBindingLevels,

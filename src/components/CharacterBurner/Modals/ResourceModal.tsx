@@ -29,7 +29,7 @@ interface SelectedCost {
 	baseCost: number;
 	modifiers: {
 		[key: string]: {
-			cost: number;
+			cost: number | `${number}/per`;
 			selected: boolean;
 		};
 	};
@@ -42,9 +42,11 @@ export function ResourceModal({ openRe, openReModal }: { openRe: boolean; openRe
 	const [resource, setResource] = useState<Resource>(Resources[stock].resources[0]);
 	const [resourceDesc, setResourceDesc] = useState("");
 	const [costs, setCosts] = useState<SelectedCost>();
+	const [numberOfWeapons, setNumberOfWeapons] = useState(1);
 
 	const resetCosts = useCallback(() => {
 		const newCosts: SelectedCost = { baseCost: 0, modifiers: {} };
+
 		if (Array.isArray(resource.cost)) {
 			newCosts.baseCost = resource.cost[0][1];
 		}
@@ -56,11 +58,14 @@ export function ResourceModal({ openRe, openReModal }: { openRe: boolean; openRe
 		}
 		if (resource.modifiers) {
 			for (const key in resource.modifiers) {
-				newCosts.modifiers[resource.modifiers[key][0]] = { cost: resource.modifiers[key][1], selected: false };
+				newCosts.modifiers[resource.modifiers[key][0]] = {
+					cost: resource.modifiers[key][1],
+					selected: false
+				};
 			}
 		}
 		setCosts({ ...newCosts });
-	}, [resource.cost, resource.modifiers]);
+	}, [resource]);
 
 	const modifyResource = useCallback((resourceName: string) => {
 		const res = Resources[stock].resources.find(v => v.name === resourceName);
@@ -83,16 +88,27 @@ export function ResourceModal({ openRe, openReModal }: { openRe: boolean; openRe
 		setCosts({ ...newCosts });
 	}, [costs]);
 
+	const getTotalCost = useCallback((modifiers: [string, number | `${number}/per`][]) => {
+		if (costs) {
+			let totalCost = costs.baseCost;
+			const modifierCosts = modifiers.map(v => v[1]);
+			if (modifierCosts.length > 0) {
+				for (const key in modifiers) {
+					const modCost = modifiers[key][1];
+					if (typeof modCost === "number") totalCost += modCost;
+					else if (typeof modCost === "string") totalCost += numberOfWeapons * parseInt(modCost.split("/")[0]);
+				}
+			}
+			return totalCost;
+		}
+	}, [costs, numberOfWeapons]);
+
 	const createResource = useCallback(() => {
 		if (costs) {
-			const modifiers: [string, number][] = Object.keys(costs.modifiers).filter(v => costs.modifiers[v].selected).map(v => [v, costs.modifiers[v].cost]);
-			const modifierCosts = modifiers.map(v => v[1]);
-			const totalCost = costs.baseCost + (modifierCosts.length > 0 ? modifierCosts.reduce((a, b) => a + b) : 0);
+			const modifiers: [string, number | `${number}/per`][] = Object.keys(costs.modifiers).filter(v => costs.modifiers[v].selected).map(v => [v, costs.modifiers[v].cost]);
+			const totalCost = getTotalCost(modifiers);
 
-			console.log(totalCost);
-			console.log(GetRemainingResourceTotals(totals, spendings).resourcePoints);
-
-			if (totalCost <= GetRemainingResourceTotals(totals, spendings).resourcePoints) {
+			if (totalCost && totalCost <= GetRemainingResourceTotals(totals, spendings).resourcePoints) {
 				cbAddResource({
 					name: resource.name,
 					type: resource.type,
@@ -103,11 +119,11 @@ export function ResourceModal({ openRe, openReModal }: { openRe: boolean; openRe
 				openReModal(false);
 			}
 		}
-	}, [cbAddResource, costs, openReModal, resource, resourceDesc, spendings, totals]);
+	}, [cbAddResource, costs, getTotalCost, openReModal, resource, resourceDesc, spendings, totals]);
 
 	useEffect(() => {
 		resetCosts();
-	}, [resource, resetCosts]);
+	}, [resource, resetCosts, numberOfWeapons]);
 
 	return (
 		<Modal open={openRe} onClose={() => openReModal(false)}>
@@ -215,6 +231,19 @@ export function ResourceModal({ openRe, openReModal }: { openRe: boolean; openRe
 								</Grid>
 							)}
 						</Fragment>
+						: null
+					}
+
+					{costs && resource.modifiers && resource.modifiers.some(v => typeof v[1] === "string")
+						? <Grid item xs={6}>
+							<Typography variant="h6">Number of Weapons</Typography>
+							<AbilityButton
+								onClick={e => { e.preventDefault(); setNumberOfWeapons((v) => v + 1); }}
+								onContextMenu={e => { e.preventDefault(); setNumberOfWeapons((v) => v - 1); }}
+							>
+								{numberOfWeapons}
+							</AbilityButton>
+						</Grid>
 						: null
 					}
 
