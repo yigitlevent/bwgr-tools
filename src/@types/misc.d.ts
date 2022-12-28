@@ -10,6 +10,8 @@ type TraitTypesList = "Character" | "Call-on" | "Die" | "Call-on and Die";
 type ShadesList = "B" | "G" | "W";
 type ShadesListLimited = Exclude<ShadesList, "W">;
 
+type HuntingGroundsList = "Waste" | "Marginal" | "Typical" | "Plentiful" | "Untouched"
+
 type StockPath = `${StocksList}`;
 type SettingPath = `${StockPath}➞${string}`;
 type LifepathPath = `${SettingPath}➞${string}`;

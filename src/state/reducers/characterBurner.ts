@@ -43,6 +43,7 @@ interface AddResource { type: "ADD_CB_RESOURCE"; payload: { resource: SpendingFo
 interface RemoveResource { type: "REMOVE_CB_RESOURCE"; payload: { guid: string; }; }
 
 interface AddBrutalLifeTrait { type: "ADD_CB_BRUTAL_LIFE_TRAIT"; payload: { traitPath: TraitPath | undefined; }; }
+interface SetHuntingGround { type: "SET_CB_HUNTING_GROUND"; payload: { huntingGround: HuntingGroundsList; }; }
 interface ModifySpecialLifepathValue { type: "MODIFY_CB_SPECIAL_LIFEPATH_VALUE"; payload: { advisorToTheCourtYears: number; } | { princeOfTheBloodYears: number; } | { bondsmanOwnerLifepathPath: LifepathPath; }; }
 
 export type CharacterBurnerActions =
@@ -55,7 +56,7 @@ export type CharacterBurnerActions =
 	SwitchQuestionAnswer |
 	SelectApprWeapon | SelectMandApprWeapon | SelectJavelinOrBow | SelectAnySmith |
 	AddResource | RemoveResource |
-	AddBrutalLifeTrait | ModifySpecialLifepathValue;
+	AddBrutalLifeTrait | SetHuntingGround | ModifySpecialLifepathValue;
 
 export interface StatSpending {
 	shade: number;
@@ -127,6 +128,9 @@ export interface CharacterStockSpecific {
 	brutalLife: {
 		traits: (TraitPath | undefined)[];
 	};
+	territory: {
+		huntingGround: undefined | HuntingGroundsList;
+	};
 }
 
 export interface CharacterBurnerState {
@@ -176,6 +180,9 @@ const INITIAL: CharacterBurnerState = {
 	stockSpecific: {
 		brutalLife: {
 			traits: []
+		},
+		territory: {
+			huntingGround: undefined
 		}
 	}
 };
@@ -476,6 +483,14 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	else if (action.type === "ADD_CB_BRUTAL_LIFE_TRAIT") {
 		const newStockSpecific = JSON.parse(JSON.stringify(state.stockSpecific)) as CharacterStockSpecific;
 		newStockSpecific.brutalLife.traits.push(action.payload.traitPath);
+		return {
+			...state,
+			stockSpecific: newStockSpecific
+		};
+	}
+	else if (action.type === "SET_CB_HUNTING_GROUND") {
+		const newStockSpecific = JSON.parse(JSON.stringify(state.stockSpecific)) as CharacterStockSpecific;
+		newStockSpecific.territory.huntingGround = action.payload.huntingGround;
 		return {
 			...state,
 			stockSpecific: newStockSpecific

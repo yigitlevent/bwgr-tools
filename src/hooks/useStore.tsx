@@ -370,6 +370,9 @@ export function useStore() {
 		cbAddBrutalLifeTrait: (traitPath: TraitPath | undefined) => {
 			dispatch({ type: "ADD_CB_BRUTAL_LIFE_TRAIT", payload: { traitPath } });
 		},
+		cbSetHuntingGround: (huntingGround: HuntingGroundsList) => {
+			dispatch({ type: "SET_CB_HUNTING_GROUND", payload: { huntingGround } });
+		},
 		cbModifySpecialLifepathValue: (value: { advisorToTheCourtYears: number; } | { princeOfTheBloodYears: number; } | { bondsmanOwnerLifepathPath: LifepathPath; }) => {
 			dispatch({ type: "MODIFY_CB_SPECIAL_LIFEPATH_VALUE", payload: value });
 		}

@@ -30,7 +30,8 @@ export function LifepathsBlock({ openLpModal, openRlModal, openQuModal, openSlMo
 			|| totals.skills.lifepathList.some(v => SpecialSkills.includes(v as SkillPath)));
 
 	const isStockSpecificDisabled =
-		!(stock === "Orc" && lifepathPaths.length < 5);
+		!((stock === "Orc" && lifepathPaths.length < 5)
+			|| (stock === "Great Wolf" && lifepathPaths.length > 0));
 
 	return (
 		<GenericGrid columns={4} center="v">
