@@ -12,6 +12,10 @@ import { GetLifepathsFromPaths } from "../../utils/pathFinder";
 
 interface ChangeCharacterStock { type: "CHANGE_CB_STOCK"; payload: { stock: StocksList; }; }
 interface ChangeCharacterConcept { type: "CHANGE_CB_CONCEPT"; payload: { concept: string; }; }
+interface ChangeCharacterName { type: "CHANGE_CB_NAME"; payload: { name: string; }; }
+
+interface ChangeBelief { type: "CHANGE_CB_BELIEF"; payload: { index: number; belief: string; }; }
+interface ChangeInstinct { type: "CHANGE_CB_INSTINCT"; payload: { index: number; instinct: string; }; }
 
 interface AddLifepath { type: "ADD_CB_LIFEPATH"; payload: { lifepathPath: LifepathPath; }; }
 interface RemoveLifepath { type: "REMOVE_CB_LIFEPATH"; }
@@ -47,7 +51,8 @@ interface SetHuntingGround { type: "SET_CB_HUNTING_GROUND"; payload: { huntingGr
 interface ModifySpecialLifepathValue { type: "MODIFY_CB_SPECIAL_LIFEPATH_VALUE"; payload: { advisorToTheCourtYears: number; } | { princeOfTheBloodYears: number; } | { bondsmanOwnerLifepathPath: LifepathPath; }; }
 
 export type CharacterBurnerActions =
-	ChangeCharacterStock | ChangeCharacterConcept |
+	ChangeCharacterStock | ChangeCharacterConcept | ChangeCharacterName |
+	ChangeBelief | ChangeInstinct |
 	AddLifepath | RemoveLifepath |
 	ChangeStatShade | ChangeStatExponent |
 	ChangeAttributeShade |
@@ -136,6 +141,9 @@ export interface CharacterStockSpecific {
 export interface CharacterBurnerState {
 	stock: StocksList;
 	concept: string;
+	name: string;
+	beliefs: [string, string, string, string];
+	instincts: [string, string, string, string];
 	lifepathPaths: LifepathPath[];
 	specialLifepaths: SpecialLifepaths;
 	specialSkills: SpecialSkills;
@@ -163,6 +171,9 @@ const EmptySpendings: CharacterSpendings = {
 const INITIAL: CharacterBurnerState = {
 	stock: "Dwarf",
 	concept: "",
+	name: "",
+	beliefs: ["", "", "", ""],
+	instincts: ["", "", "", ""],
 	lifepathPaths: [],
 	specialLifepaths: {
 		advisorToTheCourt: { years: 1 },
@@ -211,6 +222,19 @@ export const CharacterBurnerReducer = (state = INITIAL, action: CharacterBurnerA
 	}
 	else if (action.type === "CHANGE_CB_CONCEPT") {
 		return { ...state, concept: action.payload.concept };
+	}
+	else if (action.type === "CHANGE_CB_NAME") {
+		return { ...state, name: action.payload.name };
+	}
+	else if (action.type === "CHANGE_CB_BELIEF") {
+		const newBeliefs = [...state.beliefs];
+		newBeliefs[action.payload.index] = action.payload.belief;
+		return { ...state, beliefs: newBeliefs as any };
+	}
+	else if (action.type === "CHANGE_CB_INSTINCT") {
+		const newInstincts = [...state.instincts];
+		newInstincts[action.payload.index] = action.payload.instinct;
+		return { ...state, instincts: newInstincts as any };
 	}
 	else if (action.type === "ADD_CB_LIFEPATH") {
 		const lifepaths = [...state.lifepathPaths];

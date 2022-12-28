@@ -306,6 +306,15 @@ export function useStore() {
 		cbChangeConcept: (concept: string) => {
 			dispatch({ type: "CHANGE_CB_CONCEPT", payload: { concept } });
 		},
+		cbChangeName: (name: string) => {
+			dispatch({ type: "CHANGE_CB_NAME", payload: { name } });
+		},
+		cbChangeBelief: (index: number, belief: string) => {
+			dispatch({ type: "CHANGE_CB_BELIEF", payload: { index, belief } });
+		},
+		cbChangeInstinct: (index: number, instinct: string) => {
+			dispatch({ type: "CHANGE_CB_INSTINCT", payload: { index, instinct } });
+		},
 		cbAddLifepath: (lifepathPath: LifepathPath) => {
 			dispatch({ type: "ADD_CB_LIFEPATH", payload: { lifepathPath } });
 		},

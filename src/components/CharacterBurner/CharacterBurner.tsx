@@ -13,6 +13,7 @@ import { BasicsBlock } from "./Blocks/BasicsBlock";
 import { LifepathsBlock } from "./Blocks/LifepathsBlock";
 import { ResourcesBlock } from "./Blocks/ResourcesBlock";
 import { TolerancesBlock } from "./Blocks/TolerancesBlock";
+import { BeliefsInstinctsBlock } from "./Blocks/BeliefsInstinctsBlock";
 import { LifepathModal } from "./Modals/LifepathModal";
 import { RandomLifepathsModal } from "./Modals/RandomLifepathsModal";
 import { QuestionModal } from "./Modals/QuestionModal";
@@ -46,6 +47,7 @@ export function CharacterBurner(): JSX.Element {
 			<StockSpecificModal openSs={openSs} openSsModal={openSsModal} />
 
 			<BasicsBlock />
+			<BeliefsInstinctsBlock />
 			<LifepathsBlock openLpModal={openLpModal} openRlModal={openRlModal} openQuModal={openQuModal} openSlModal={openSlModal} openSuModal={openSuModal} openSsModal={openSsModal} />
 
 			{totals.years.points > 0
