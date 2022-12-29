@@ -4,9 +4,7 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 
-import { useAppSelector } from "../../../state/store";
-import { useStore } from "../../../hooks/useStore";
-import { GetRemainingTraitTotals, GetTraitOpenness } from "../../../utils/characterTraitUtils";
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 
 import { GenericGrid } from "../../Shared/Grids";
 import { BlockTraitPopover } from "../BlockText";
@@ -14,7 +12,7 @@ import { GeneralTraitModal } from "../Modals/GeneralTraitModal";
 
 
 function CommonTraitsBlock() {
-	const { totals } = useAppSelector(state => state.characterBurner);
+	const { totals } = useCharacterBurnerStore();
 
 	return (
 		<Fragment>
@@ -26,7 +24,7 @@ function CommonTraitsBlock() {
 				{totals.traits.commonList.map((traitName, i) =>
 					<Grid key={i} item xs={6} sm={3} md={2}>
 						<GenericGrid columns={5} center="h" hasBackground={1}>
-							<BlockTraitPopover traitName={traitName} checkbox={{ checked: true, disabled: true }} />
+							<BlockTraitPopover traitPath={traitName} checkbox={{ checked: true, disabled: true }} />
 						</GenericGrid>
 					</Grid>
 				)}
@@ -36,7 +34,7 @@ function CommonTraitsBlock() {
 }
 
 function MandatoryTraitsBlock() {
-	const { totals, spendings } = useAppSelector(state => state.characterBurner);
+	const { totals, getTraitOpenness } = useCharacterBurnerStore();
 
 	return (
 		<Fragment>
@@ -45,13 +43,13 @@ function MandatoryTraitsBlock() {
 			</Grid>
 
 			<Fragment>
-				{totals.traits.mandatoryList.map((traitName, i) =>
+				{totals.traits.mandatoryList.map((traitPath, i) =>
 					<Grid key={i} item xs={6} sm={3} md={2}>
 						<GenericGrid columns={5} center="h" hasBackground={1}>
 							<BlockTraitPopover
-								traitName={traitName}
+								traitPath={traitPath}
 								checkbox={{
-									checked: GetTraitOpenness(traitName, spendings),
+									checked: getTraitOpenness(traitPath as TraitPath),
 									disabled: true
 								}}
 							/>
@@ -64,8 +62,7 @@ function MandatoryTraitsBlock() {
 }
 
 function LifepathTraitsBlock() {
-	const { totals, spendings } = useAppSelector(state => state.characterBurner);
-	const { cbOpenTrait } = useStore().characterBurner;
+	const { totals, openTrait, getTraitOpenness, getTraitRemainings } = useCharacterBurnerStore();
 
 	return (
 		<Fragment>
@@ -73,15 +70,15 @@ function LifepathTraitsBlock() {
 				<Typography variant="h5" sx={{ margin: "12px 0 0 24px" }}>Lifepath</Typography>
 			</Grid>
 
-			{totals.traits.lifepathList.map((traitName, i) =>
+			{totals.traits.lifepathList.map((traitPath, i) =>
 				<Grid key={i} item xs={6} sm={3} md={2}>
 					<GenericGrid columns={5} center="h" hasBackground={1}>
 						<BlockTraitPopover
-							traitName={traitName}
+							traitPath={traitPath as TraitPath}
 							checkbox={{
-								checked: GetTraitOpenness(traitName, spendings),
-								disabled: !GetTraitOpenness(traitName, spendings) && GetRemainingTraitTotals(totals, spendings).traitPoints === 0,
-								onChange: (e, c) => cbOpenTrait(traitName, c, true)
+								checked: getTraitOpenness(traitPath as TraitPath),
+								disabled: !getTraitOpenness(traitPath as TraitPath) && getTraitRemainings().traitPoints === 0,
+								onChange: (e, c) => openTrait(traitPath as TraitPath, c, true)
 							}}
 						/>
 					</GenericGrid>
@@ -92,8 +89,7 @@ function LifepathTraitsBlock() {
 }
 
 function GeneralTraitsBlock() {
-	const { totals, spendings } = useAppSelector(state => state.characterBurner);
-	const { cbOpenTrait, cbRemoveTrait } = useStore().characterBurner;
+	const { totals, openTrait, removeTrait, getTraitOpenness, getTraitRemainings } = useCharacterBurnerStore();
 
 	return (
 		<Fragment>
@@ -101,17 +97,17 @@ function GeneralTraitsBlock() {
 				<Typography variant="h5" sx={{ margin: "12px 0 0 24px" }}>General</Typography>
 			</Grid>
 
-			{totals.traits.generalList.map((traitName, i) =>
+			{totals.traits.generalList.map((traitPath, i) =>
 				<Grid key={i} item xs={6} sm={3} md={2}>
 					<GenericGrid columns={5} center="h" hasBackground={1}>
 						<BlockTraitPopover
-							traitName={traitName}
+							traitPath={traitPath as TraitPath}
 							checkbox={{
-								checked: GetTraitOpenness(traitName, spendings),
-								disabled: !GetTraitOpenness(traitName, spendings) && GetRemainingTraitTotals(totals, spendings).traitPoints === 0,
-								onChange: (e, c) => cbOpenTrait(traitName, c, false)
+								checked: getTraitOpenness(traitPath as TraitPath),
+								disabled: !getTraitOpenness(traitPath as TraitPath) && getTraitRemainings().traitPoints === 0,
+								onChange: (e, c) => openTrait(traitPath as TraitPath, c, false)
 							}}
-							deleteCallback={() => cbRemoveTrait(traitName as TraitPath)}
+							deleteCallback={() => removeTrait(traitPath as TraitPath as TraitPath)}
 						/>
 					</GenericGrid>
 				</Grid>
@@ -122,7 +118,7 @@ function GeneralTraitsBlock() {
 
 
 function BrutalLifeTraitsBlock() {
-	const { stockSpecific } = useAppSelector(state => state.characterBurner);
+	const { stockSpecific } = useCharacterBurnerStore();
 
 	return (
 		<Fragment>
@@ -134,7 +130,7 @@ function BrutalLifeTraitsBlock() {
 				{(stockSpecific.brutalLife.traits.filter(v => v !== undefined && v !== null) as TraitPath[]).map((traitName, i) =>
 					<Grid key={i} item xs={6} sm={3} md={2}>
 						<GenericGrid columns={5} center="h" hasBackground={1}>
-							<BlockTraitPopover traitName={traitName} checkbox={{ checked: true, disabled: true }} />
+							<BlockTraitPopover traitPath={traitName} checkbox={{ checked: true, disabled: true }} />
 						</GenericGrid>
 					</Grid>
 				)}
@@ -144,14 +140,14 @@ function BrutalLifeTraitsBlock() {
 }
 
 export function TraitsBlock() {
-	const { totals, spendings, stockSpecific } = useAppSelector(state => state.characterBurner);
+	const { totals, stockSpecific, getTraitRemainings } = useCharacterBurnerStore();
 
 	const [open, setOpen] = useState(false);
 
-	const traitRemaining = GetRemainingTraitTotals(totals, spendings);
+	const traitRemaining = getTraitRemainings();
 
 	return (
-		<GenericGrid columns={6} center spacing={[0, 2]}>
+		<GenericGrid columns={6} center="v" spacing={[0, 2]}>
 			<Grid item xs={6}>
 				<Typography variant="h4">Traits</Typography>
 			</Grid>

@@ -4,22 +4,20 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 
-import { useAppSelector } from "../../../state/store";
-import { useStore } from "../../../hooks/useStore";
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 import { Lifepath } from "../../../data/stocks/_stocks";
+import { SpecialLifepaths } from "../../../data/stocks/_specialLifepaths";
+import { SpecialSkills } from "../../../data/skills/_specialSkills";
 import { GetLifepathFromPath } from "../../../utils/pathFinder";
 
 import { GenericGrid } from "../../Shared/Grids";
 import { LifepathBox } from "../../LifepathLists/LifepathBox";
-import { SpecialLifepaths } from "../../../data/stocks/_specialLifepaths";
-import { SpecialSkills } from "../../../data/skills/_specialSkills";
 
 
 type Generic = (open: boolean) => void;
 
 export function LifepathsBlock({ openLpModal, openRlModal, openQuModal, openSlModal, openSuModal, openSsModal }: { openLpModal: Generic; openRlModal: Generic; openQuModal: Generic; openSlModal: Generic; openSuModal: Generic; openSsModal: Generic; }) {
-	const { stock, lifepathPaths, totals } = useAppSelector(state => state.characterBurner);
-	const { cbRemoveLifepath } = useStore().characterBurner;
+	const { stock, lifepathPaths, totals, removeLifepath } = useCharacterBurnerStore();
 
 	const isSpecialLifepathsDisabled =
 		!lifepathPaths.some(v => SpecialLifepaths.includes(v));
@@ -52,7 +50,7 @@ export function LifepathsBlock({ openLpModal, openRlModal, openQuModal, openSlMo
 			</Grid>
 
 			<Grid item xs={4} sm={2} md={1}>
-				<Button variant="outlined" size="medium" fullWidth onClick={() => cbRemoveLifepath()} disabled={lifepathPaths.length === 0}>Remove Lifepath</Button>
+				<Button variant="outlined" size="medium" fullWidth onClick={() => removeLifepath()} disabled={lifepathPaths.length === 0}>Remove Lifepath</Button>
 			</Grid>
 
 			<Grid item xs={4} sm={2} md={1}>

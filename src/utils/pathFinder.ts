@@ -11,7 +11,7 @@ export function GetLifepathFromPath(path: string): Lifepath | undefined {
 	return Stocks[spl[0]].settings[spl[1]].lifepaths.find(lp => lp.name === spl[2]);
 }
 
-export function GetLifepathsFromPaths(paths: string[]): Lifepath[] {
+export function GetLifepathsFromPaths(paths: LifepathPath[]): Lifepath[] {
 	return paths.map((lp) => GetLifepathFromPath(lp) as Lifepath);
 }
 

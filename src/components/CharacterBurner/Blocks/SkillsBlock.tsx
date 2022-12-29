@@ -4,10 +4,8 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 
-import { useAppSelector } from "../../../state/store";
-import { useStore } from "../../../hooks/useStore";
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 import { SpecialSkills } from "../../../data/skills/_specialSkills";
-import { GetRemainingSkillTotals, GetSkillExponent, GetSkillOpenness, GetSkillShade } from "../../../utils/characterSkillUtils";
 
 import { GenericGrid } from "../../Shared/Grids";
 import { BlockSkillPopover } from "../BlockText";
@@ -16,13 +14,12 @@ import { AbilityButton } from "../../Shared/AbilityButton";
 
 
 function MandatorySkillsBlock() {
-	const { stock, lifepathPaths, totals, spendings, questions, stockSpecific } = useAppSelector(state => state.characterBurner);
-	const { cbChangeSkillExponent } = useStore().characterBurner;
+	const { totals, getSkillOpenness, getSkillShade, getSkillExponent, changeSkillExponent } = useCharacterBurnerStore();
 
 	return (
 		<Fragment>
 			<Grid item xs={6}>
-				<Typography variant="h5" sx={{ margin: "12px 0 0 24px" }}>Lifepath</Typography>
+				<Typography variant="h5" sx={{ margin: "12px 0 0 24px" }}>Mandatory</Typography>
 			</Grid>
 
 			<Fragment>
@@ -34,14 +31,14 @@ function MandatorySkillsBlock() {
 								<BlockSkillPopover
 									skillName={skillName}
 									checkbox={{
-										checked: GetSkillOpenness(skillName, spendings),
+										checked: getSkillOpenness(skillName as SkillPath),
 										disabled: true
 									}}
 								/>
 								<Grid item>
-									<AbilityButton name={skillName} disabled>{GetSkillShade(skillName, spendings)}</AbilityButton>
-									<AbilityButton onClick={e => cbChangeSkillExponent(e, skillName, 1, true)} onContextMenu={e => cbChangeSkillExponent(e, skillName, -1, true)}>
-										{GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions, stockSpecific)}
+									<AbilityButton name={skillName} disabled>{getSkillShade(skillName as SkillPath)}</AbilityButton>
+									<AbilityButton onClick={e => changeSkillExponent(e, skillName as SkillPath, 1, true)} onContextMenu={e => changeSkillExponent(e, skillName as SkillPath, -1, true)}>
+										{getSkillExponent(skillName as SkillPath)}
 									</AbilityButton>
 								</Grid>
 							</GenericGrid>
@@ -53,8 +50,7 @@ function MandatorySkillsBlock() {
 }
 
 function LifepathSkillsBlock() {
-	const { stock, lifepathPaths, totals, spendings, questions, stockSpecific } = useAppSelector(state => state.characterBurner);
-	const { cbOpenSkill, cbChangeSkillExponent } = useStore().characterBurner;
+	const { totals, getSkillOpenness, getSkillShade, getSkillExponent, openSkill, changeSkillExponent } = useCharacterBurnerStore();
 
 	return (
 		<Fragment>
@@ -65,24 +61,24 @@ function LifepathSkillsBlock() {
 			<Fragment>
 				{totals.skills.lifepathList
 					.filter(v => !SpecialSkills.includes(v as SkillPath))
-					.map((skillName, i) =>
+					.map((skillPath, i) =>
 						<Grid key={i} item xs={6} sm={3} md={2}>
 							<GenericGrid columns={5} center="h" hasBackground={1}>
 								<BlockSkillPopover
-									skillName={skillName}
+									skillName={skillPath}
 									checkbox={{
-										checked: GetSkillOpenness(skillName, spendings),
-										onChange: (e, c) => cbOpenSkill(skillName, c, true)
+										checked: getSkillOpenness(skillPath as SkillPath),
+										onChange: (e, c) => openSkill(skillPath as SkillPath, c, true)
 									}}
 								/>
 								<Grid item sx={{ marginTop: "3px" }}>
-									<AbilityButton name={skillName} disabled>{GetSkillShade(skillName, spendings)}</AbilityButton>
+									<AbilityButton name={skillPath} disabled>{getSkillShade(skillPath as SkillPath)}</AbilityButton>
 									<AbilityButton
-										disabled={!GetSkillOpenness(skillName, spendings)}
-										onClick={e => cbChangeSkillExponent(e, skillName, 1, true)}
-										onContextMenu={e => cbChangeSkillExponent(e, skillName, -1, true)}
+										disabled={!getSkillOpenness(skillPath as SkillPath)}
+										onClick={e => changeSkillExponent(e, skillPath as SkillPath, 1, true)}
+										onContextMenu={e => changeSkillExponent(e, skillPath as SkillPath, -1, true)}
 									>
-										{GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions, stockSpecific)}
+										{getSkillExponent(skillPath as SkillPath)}
 									</AbilityButton>
 								</Grid>
 							</GenericGrid>
@@ -94,8 +90,7 @@ function LifepathSkillsBlock() {
 }
 
 function GeneralSkillsBlock() {
-	const { stock, lifepathPaths, totals, spendings, questions, stockSpecific } = useAppSelector(state => state.characterBurner);
-	const { cbOpenSkill, cbChangeSkillExponent, cbRemoveSkill } = useStore().characterBurner;
+	const { totals, getSkillOpenness, getSkillShade, getSkillExponent, openSkill, changeSkillExponent, removeSkill } = useCharacterBurnerStore();
 
 	return (
 		<Fragment>
@@ -112,20 +107,20 @@ function GeneralSkillsBlock() {
 								<BlockSkillPopover
 									skillName={skillName}
 									checkbox={{
-										checked: GetSkillOpenness(skillName, spendings),
-										onChange: (e, c) => cbOpenSkill(skillName, c, false)
+										checked: getSkillOpenness(skillName as SkillPath),
+										onChange: (e, c) => openSkill(skillName as SkillPath, c, false)
 									}}
-									deleteCallback={() => cbRemoveSkill(skillName as SkillPath)}
+									deleteCallback={() => removeSkill(skillName as SkillPath)}
 								/>
 								<Grid item sx={{ marginTop: "3px" }}>
-									<AbilityButton name={skillName} disabled>{GetSkillShade(skillName, spendings)}</AbilityButton>
+									<AbilityButton name={skillName} disabled>{getSkillShade(skillName as SkillPath)}</AbilityButton>
 									<AbilityButton
 										name={skillName}
-										disabled={!GetSkillOpenness(skillName, spendings)}
-										onClick={e => cbChangeSkillExponent(e, skillName, 1, false)}
-										onContextMenu={e => cbChangeSkillExponent(e, skillName, -1, false)}
+										disabled={!getSkillOpenness(skillName as SkillPath)}
+										onClick={e => changeSkillExponent(e, skillName as SkillPath, 1, false)}
+										onContextMenu={e => changeSkillExponent(e, skillName as SkillPath, -1, false)}
 									>
-										{GetSkillExponent(skillName, stock, lifepathPaths, totals, spendings, questions, stockSpecific)}
+										{getSkillExponent(skillName as SkillPath)}
 									</AbilityButton>
 								</Grid>
 							</GenericGrid>
@@ -137,14 +132,14 @@ function GeneralSkillsBlock() {
 }
 
 export function SkillsBlock() {
-	const { totals, spendings } = useAppSelector(state => state.characterBurner);
+	const { totals, getSkillRemainings } = useCharacterBurnerStore();
 
 	const [open, setOpen] = useState(false);
 
-	const skillRemaining = GetRemainingSkillTotals(totals, spendings);
+	const skillRemaining = getSkillRemainings();
 
 	return (
-		<GenericGrid columns={6} center spacing={[0, 2]}>
+		<GenericGrid columns={6} center="v" spacing={[0, 2]}>
 			<Grid item xs={6}>
 				<Typography variant="h4">Skills</Typography>
 			</Grid>

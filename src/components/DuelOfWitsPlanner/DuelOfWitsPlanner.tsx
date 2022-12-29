@@ -16,8 +16,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
-import { useAppSelector } from "../../state/store";
-import { useStore } from "../../hooks/useStore";
+import { useDuelOfWitsPlannerStore } from "../../hooks/stores/useDuelOfWitsPlannerStore";
 import { DuelOfWitsActions } from "../../data/duelOfWits";
 
 import { DuelOfWitsActionDetails } from "./DuelOfWitsActionDetails";
@@ -25,8 +24,10 @@ import { GenericGrid } from "../Shared/Grids";
 
 
 export function DuelOfWitsPlanner() {
-	const { volleyIndex, actions, selectedAction } = useAppSelector(state => state.duelOfWits);
-	const { dowChangeVolleyIndex, dowAddAction, dowDeleteAction, dowSelectedChangeAction, dowToggleActionDetails, dowToggleActionVisibility } = useStore().duelOfWits;
+	const {
+		volleyIndex, actions, selectedAction,
+		changeVolleyIndex, addAction, deleteAction, selectedChangeAction, toggleActionDetails, toggleActionVisibility
+	} = useDuelOfWitsPlannerStore();
 
 	return (
 		<Fragment>
@@ -36,7 +37,7 @@ export function DuelOfWitsPlanner() {
 				<Grid item xs={3} sm={3} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Volley</InputLabel>
-						<Select label="Volley" value={volleyIndex} onChange={(e) => dowChangeVolleyIndex(parseInt(e.target.value as string))}>
+						<Select label="Volley" value={volleyIndex} onChange={(e) => changeVolleyIndex(parseInt(e.target.value as string))}>
 							<MenuItem value={0}>Volley 1</MenuItem>
 							<MenuItem value={1}>Volley 2</MenuItem>
 							<MenuItem value={2}>Volley 3</MenuItem>
@@ -47,14 +48,14 @@ export function DuelOfWitsPlanner() {
 				<Grid item xs={3} sm={3} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Action</InputLabel>
-						<Select label="Action" value={selectedAction} onChange={(e) => dowSelectedChangeAction(volleyIndex, e.target.value)}>
+						<Select label="Action" value={selectedAction} onChange={(e) => selectedChangeAction(e.target.value)}>
 							{DuelOfWitsActions.map(v => <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>
 
 				<Grid item xs={3} sm={3} md={1}>
-					<Button variant="outlined" size="medium" onClick={() => dowAddAction(volleyIndex, selectedAction)}>Add Action</Button>
+					<Button variant="outlined" size="medium" onClick={() => addAction(volleyIndex, selectedAction)}>Add Action</Button>
 				</Grid>
 			</GenericGrid>
 
@@ -72,13 +73,13 @@ export function DuelOfWitsPlanner() {
 								</Grid>
 
 								<Grid item>
-									<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => dowToggleActionDetails(volleyIndex)}>
+									<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => toggleActionDetails(volleyIndex)}>
 										{action.open ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
 									</IconButton>
-									<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => dowToggleActionVisibility(volleyIndex)}>
+									<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => toggleActionVisibility(volleyIndex)}>
 										{action.visible ? <VisibilityIcon /> : <VisibilityOffIcon />}
 									</IconButton>
-									<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => dowDeleteAction(volleyIndex)}>
+									<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => deleteAction(volleyIndex)}>
 										<DeleteOutline />
 									</IconButton>
 								</Grid>

@@ -17,8 +17,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
-import { useAppSelector } from "../../state/store";
-import { useStore } from "../../hooks/useStore";
+import { useRangeAndCoverPlannerStore } from "../../hooks/stores/useRangeAndCoverPlannerStore";
 import { RangeAndCoverActions } from "../../data/rangeAndCover";
 import { GroupBy } from "../../utils/misc";
 
@@ -29,8 +28,10 @@ import { GenericGrid } from "../Shared/Grids";
 const GroupedRangeAndCoverActions = GroupBy(RangeAndCoverActions, a => a.group);
 
 export function RangeAndCoverPlanner() {
-	const { volleyIndex, actions, selectedAction } = useAppSelector(state => state.rangeAndCover);
-	const { racChangeVolleyIndex, racAddAction, racDeleteAction, racSelectedChangeAction, racToggleActionDetails, racToggleActionVisibility } = useStore().rangeAndCover;
+	const {
+		volleyIndex, actions, selectedAction,
+		changeVolleyIndex, addAction, deleteAction, selectedChangeAction, toggleActionDetails, toggleActionVisibility
+	} = useRangeAndCoverPlannerStore();
 
 	return (
 		<Fragment>
@@ -40,7 +41,7 @@ export function RangeAndCoverPlanner() {
 				<Grid item xs={3} sm={3} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel >Volley</InputLabel>
-						<Select label="Volley" value={volleyIndex} onChange={(e) => racChangeVolleyIndex(parseInt(e.target.value as string))}>
+						<Select label="Volley" value={volleyIndex} onChange={(e) => changeVolleyIndex(parseInt(e.target.value as string))}>
 							<MenuItem value={0}>Volley 1</MenuItem>
 							<MenuItem value={1}>Volley 2</MenuItem>
 							<MenuItem value={2}>Volley 3</MenuItem>
@@ -51,7 +52,7 @@ export function RangeAndCoverPlanner() {
 				<Grid item xs={3} sm={3} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Action</InputLabel>
-						<Select label="Action" value={selectedAction} onChange={(e) => racSelectedChangeAction(volleyIndex, e.target.value)}>
+						<Select label="Action" value={selectedAction} onChange={(e) => selectedChangeAction(e.target.value)}>
 							{Object.keys(GroupedRangeAndCoverActions).map((groupKey, groupIndex) => {
 								const elements = [
 									<ListSubheader key={groupIndex}>{groupKey}</ListSubheader>,
@@ -66,7 +67,7 @@ export function RangeAndCoverPlanner() {
 				</Grid>
 
 				<Grid item xs={3} sm={3} md={1}>
-					<Button variant="outlined" size="medium" onClick={() => racAddAction(volleyIndex, selectedAction)}>Add Action</Button>
+					<Button variant="outlined" size="medium" onClick={() => addAction(volleyIndex, selectedAction)}>Add Action</Button>
 				</Grid>
 			</GenericGrid>
 
@@ -84,13 +85,13 @@ export function RangeAndCoverPlanner() {
 								</Grid>
 
 								<Grid item>
-									<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => racToggleActionDetails(volleyIndex)}>
+									<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => toggleActionDetails(volleyIndex)}>
 										{action.open ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
 									</IconButton>
-									<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => racToggleActionVisibility(volleyIndex)}>
+									<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => toggleActionVisibility(volleyIndex)}>
 										{action.visible ? <VisibilityIcon /> : <VisibilityOffIcon />}
 									</IconButton>
-									<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => racDeleteAction(volleyIndex)}>
+									<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => deleteAction(volleyIndex)}>
 										<DeleteOutline />
 									</IconButton>
 								</Grid>

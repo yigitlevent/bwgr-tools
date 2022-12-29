@@ -13,36 +13,47 @@ import Checkbox from "@mui/material/Checkbox";
 import ListItemText from "@mui/material/ListItemText";
 import Alert from "@mui/material/Alert";
 
-import { useAppSelector } from "../../state/store";
-import { useStore } from "../../hooks/useStore";
+import { useRulesetStore } from "../../hooks/stores/useRulesetStore";
 import { Trait, TraitCategories } from "../../data/traits/_traits";
-
 import { useSearch } from "../../hooks/useSearch";
 
 import { PopoverLink } from "../Shared/PopoverLink";
 import { GenericGrid } from "../Shared/Grids";
-import { CheckDatasets } from "../../utils/checkDatasets";
 
 
 export function TraitLists() {
-	const { datasets } = useAppSelector(state => state.dataset);
-	const { category } = useAppSelector(state => state.traitList);
-	const { trtChangeCategory } = useStore().traitList;
-	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Trait>(TraitCategories[category].traits);
+	const { checkRulesets } = useRulesetStore();
+	const { traitCategory, changeTraitCategory } = useRulesetStore();
+	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Trait>(TraitCategories[traitCategory].traits);
 
 	const [searchParams, setSearchParams] = useSearchParams();
+
+	const allowedCategories = Object.values(TraitCategories).filter(v => checkRulesets(v.allowed));
+
+	useEffect(() => {
+		if (!(allowedCategories.map(v => v.name).includes(traitCategory))) {
+			changeTraitCategory(allowedCategories[0].name as TraitCategoryPath);
+		}
+	}, [allowedCategories, changeTraitCategory, traitCategory]);
 
 	useEffect(() => {
 		const arr = [...searchParams.entries()];
 		const prms: { [key: string]: string; } = {};
 		for (const item in arr) { prms[arr[item][0]] = arr[item][1]; }
-		prms["category"] = category;
+		prms["category"] = traitCategory;
 		setSearchParams(prms);
-	}, [category, searchParams, setSearchParams]);
+	}, [traitCategory, searchParams, setSearchParams]);
 
 	useEffect(() => {
-		setList(TraitCategories[category].traits);
-	}, [category, setList]);
+		const arr = [...searchParams.entries()];
+		const prms: { [key: string]: string; } = {};
+		for (const item in arr) { prms[arr[item][0]] = arr[item][1]; }
+		if ("category" in prms) { changeTraitCategory(prms["category"] as TraitCategoryPath); }
+	}, [changeTraitCategory, searchParams]);
+
+	useEffect(() => {
+		setList(TraitCategories[traitCategory].traits);
+	}, [traitCategory, setList]);
 
 	return (
 		<Fragment>
@@ -52,8 +63,12 @@ export function TraitLists() {
 				<Grid item xs={4} sm={4} md={2}>
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Trait Category</InputLabel>
-						<Select label="Trait Category" value={category} onChange={trtChangeCategory} placeholder="Select a category">
-							{Object.values(TraitCategories).filter(v => CheckDatasets(datasets, v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
+						<Select
+							label="Trait Category"
+							value={allowedCategories.map(v => v.name).includes(traitCategory) ? traitCategory : allowedCategories[0].name}
+							onChange={v => changeTraitCategory(v.target.value as TraitCategoryPath)}
+						>
+							{allowedCategories.map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>

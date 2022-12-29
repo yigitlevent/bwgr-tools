@@ -505,7 +505,7 @@ export const GreatWolfSpecial: SkillCategory = {
 
 export const GreatWolfSpiritHunterSong: SkillCategory = {
 	allowed: ["bwc"],
-	name: "Great Wolf Spirit Hunter Songs",
+	name: "Great Wolf Spirit Hunter Song",
 	skills: [
 		{
 			allowed: ["bwc"],

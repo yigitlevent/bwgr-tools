@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 
-import { FightActionExtended } from "../../state/reducers/fight";
+import { FightActionExtended } from "../../hooks/stores/useFightPlannerStore";
 
 
 const FightResolutionActions = [

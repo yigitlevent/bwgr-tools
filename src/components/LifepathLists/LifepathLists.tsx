@@ -12,11 +12,8 @@ import Checkbox from "@mui/material/Checkbox";
 import ListItemText from "@mui/material/ListItemText";
 import Alert from "@mui/material/Alert";
 
-import { CheckDatasets } from "../../utils/checkDatasets";
-import { useAppSelector } from "../../state/store";
+import { useRulesetStore } from "../../hooks/stores/useRulesetStore";
 import { Lifepath, Stocks } from "../../data/stocks/_stocks";
-
-import { useStore } from "../../hooks/useStore";
 import { useSearch } from "../../hooks/useSearch";
 
 import { LifepathBox } from "./LifepathBox";
@@ -24,10 +21,9 @@ import { GenericGrid } from "../Shared/Grids";
 
 
 export function LifepathLists() {
-	const { datasets } = useAppSelector(state => state.dataset);
-	const { stock, setting } = useAppSelector(state => state.lifepathList);
-	const { lplChangeStock, lplChangeSetting } = useStore().lifepathList;
-	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Lifepath>(Stocks[stock].settings[setting].lifepaths);
+	const { rulesets } = useRulesetStore();
+	const { lifepathStock, lifepathSetting, allowedStocks, allowedSettings, changeLifepathStock, changeLifepathSetting } = useRulesetStore();
+	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Lifepath>(Stocks[lifepathStock].settings[lifepathSetting].lifepaths);
 
 	const [searchParams, setSearchParams] = useSearchParams();
 
@@ -35,14 +31,22 @@ export function LifepathLists() {
 		const arr = [...searchParams.entries()];
 		const prms: { [key: string]: string; } = {};
 		for (const item in arr) { prms[arr[item][0]] = arr[item][1]; }
-		prms["stock"] = stock;
-		prms["setting"] = setting;
+		prms["stock"] = lifepathStock;
+		prms["setting"] = lifepathSetting;
 		setSearchParams(prms);
-	}, [searchParams, setSearchParams, setting, stock]);
+	}, [lifepathSetting, lifepathStock, searchParams, setSearchParams]);
 
 	useEffect(() => {
-		setList(Stocks[stock].settings[setting].lifepaths);
-	}, [stock, setting, setList]);
+		const arr = [...searchParams.entries()];
+		const prms: { [key: string]: string; } = {};
+		for (const item in arr) { prms[arr[item][0]] = arr[item][1]; }
+		if ("stock" in prms) { changeLifepathStock(prms["stock"] as StocksList); }
+		if ("setting" in prms) { changeLifepathSetting(prms["setting"]); }
+	}, [changeLifepathSetting, changeLifepathStock, searchParams]);
+
+	useEffect(() => {
+		setList(Stocks[lifepathStock].settings[lifepathSetting].lifepaths);
+	}, [rulesets, lifepathStock, lifepathSetting, setList]);
 
 	return (
 		<Fragment>
@@ -52,16 +56,24 @@ export function LifepathLists() {
 				<Grid item xs={6} sm={3} md={1}>
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Stock</InputLabel>
-						<Select label="Stock" value={stock} onChange={lplChangeStock} placeholder="Select a stock">
-							{Object.values(Stocks).filter(v => CheckDatasets(datasets, v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
+						<Select
+							label="Stock"
+							value={lifepathStock}
+							onChange={v => changeLifepathStock(v.target.value as StocksList)}
+						>
+							{allowedStocks.map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>
 				<Grid item xs={6} sm={3} md={1}>
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Setting</InputLabel>
-						<Select label="Setting" value={setting} onChange={lplChangeSetting} placeholder="Select a setting">
-							{Object.values(Stocks[stock].settings).filter(v => CheckDatasets(datasets, v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
+						<Select
+							label="Setting"
+							value={lifepathSetting}
+							onChange={v => changeLifepathSetting(v.target.value)}
+						>
+							{allowedSettings.map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>

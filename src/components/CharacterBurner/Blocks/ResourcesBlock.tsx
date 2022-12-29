@@ -10,22 +10,19 @@ import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ArrowForwardIosSharp from "@mui/icons-material/ArrowForwardIosSharp";
 
-import { useAppSelector } from "../../../state/store";
-import { useStore } from "../../../hooks/useStore";
-import { GetRemainingResourceTotals } from "../../../utils/characterResourceUtils";
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 
 import { GenericGrid } from "../../Shared/Grids";
 import Divider from "@mui/material/Divider";
 
 
 export function ResourcesBlock({ openReModal }: { openReModal: (open: boolean) => void; }) {
-	const { totals, spendings } = useAppSelector(state => state.characterBurner);
-	const { cbRemoveResource } = useStore().characterBurner;
+	const { totals, spendings, removeResource, getResourceRemainings } = useCharacterBurnerStore();
 
-	const resourceRemaining = GetRemainingResourceTotals(totals, spendings);
+	const resourceRemaining = getResourceRemainings();
 
 	return (
-		<GenericGrid columns={6} center>
+		<GenericGrid columns={6} center="h">
 			<Grid item xs={6}>
 				<Typography variant="h4">Resources</Typography>
 			</Grid>
@@ -53,7 +50,7 @@ export function ResourcesBlock({ openReModal }: { openReModal: (open: boolean) =
 								<Typography sx={{ fontSize: "18px", margin: "0 0 0 12px" }}>
 									{spendings.resources[resourceKey].name} ({spendings.resources[resourceKey].cost}rps)
 								</Typography>
-								<IconButton color="primary" onClick={() => cbRemoveResource(resourceKey)} sx={{ position: "absolute", right: "0", margin: "2px 12px 0 0", padding: 0 }}>
+								<IconButton color="primary" onClick={() => removeResource(resourceKey)} sx={{ position: "absolute", right: "0", margin: "2px 12px 0 0", padding: 0 }}>
 									<DeleteIcon />
 								</IconButton>
 							</AccordionSummary>

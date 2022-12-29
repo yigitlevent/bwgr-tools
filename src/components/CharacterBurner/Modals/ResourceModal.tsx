@@ -16,13 +16,11 @@ import Typography from "@mui/material/Typography";
 import RadioGroup from "@mui/material/RadioGroup";
 import Radio from "@mui/material/Radio";
 
-import { useAppSelector } from "../../../state/store";
-import { useStore } from "../../../hooks/useStore";
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 import { Resource, Resources } from "../../../data/resources/_resources";
 
 import { GenericGrid } from "../../Shared/Grids";
 import { AbilityButton } from "../../Shared/AbilityButton";
-import { GetRemainingResourceTotals } from "../../../utils/characterResourceUtils";
 
 
 interface SelectedCost {
@@ -36,8 +34,7 @@ interface SelectedCost {
 }
 
 export function ResourceModal({ openRe, openReModal }: { openRe: boolean; openReModal: (open: boolean) => void; }) {
-	const { stock, totals, spendings } = useAppSelector(state => state.characterBurner);
-	const { cbAddResource } = useStore().characterBurner;
+	const { stock, addResource, getResourceRemainings } = useCharacterBurnerStore();
 
 	const [resource, setResource] = useState<Resource>(Resources[stock].resources[0]);
 	const [resourceDesc, setResourceDesc] = useState("");
@@ -88,6 +85,11 @@ export function ResourceModal({ openRe, openReModal }: { openRe: boolean; openRe
 		setCosts({ ...newCosts });
 	}, [costs]);
 
+	const getModifiers = useCallback((costs: SelectedCost) => {
+		const modifiers: [string, number | `${number}/per`][] = Object.keys(costs.modifiers).filter(v => costs.modifiers[v].selected).map(v => [v, costs.modifiers[v].cost]);
+		return modifiers;
+	}, []);
+
 	const getTotalCost = useCallback((modifiers: [string, number | `${number}/per`][]) => {
 		if (costs) {
 			let totalCost = costs.baseCost;
@@ -99,27 +101,27 @@ export function ResourceModal({ openRe, openReModal }: { openRe: boolean; openRe
 					else if (typeof modCost === "string") totalCost += numberOfWeapons * parseInt(modCost.split("/")[0]);
 				}
 			}
-			return totalCost;
+			return totalCost < 1 ? 1 : totalCost;
 		}
 	}, [costs, numberOfWeapons]);
 
 	const createResource = useCallback(() => {
 		if (costs) {
-			const modifiers: [string, number | `${number}/per`][] = Object.keys(costs.modifiers).filter(v => costs.modifiers[v].selected).map(v => [v, costs.modifiers[v].cost]);
+			const modifiers = getModifiers(costs);
 			const totalCost = getTotalCost(modifiers);
 
-			if (totalCost && totalCost <= GetRemainingResourceTotals(totals, spendings).resourcePoints) {
-				cbAddResource({
+			if (totalCost !== undefined && totalCost <= getResourceRemainings().resourcePoints) {
+				addResource({
 					name: resource.name,
 					type: resource.type,
-					cost: totalCost >= 0 ? totalCost : 0,
+					cost: totalCost,
 					modifiers: modifiers.map(v => v[0]),
 					description: resourceDesc
 				});
 				openReModal(false);
 			}
 		}
-	}, [cbAddResource, costs, getTotalCost, openReModal, resource, resourceDesc, spendings, totals]);
+	}, [addResource, costs, getModifiers, getResourceRemainings, getTotalCost, openReModal, resource.name, resource.type, resourceDesc]);
 
 	useEffect(() => {
 		resetCosts();
@@ -250,6 +252,13 @@ export function ResourceModal({ openRe, openReModal }: { openRe: boolean; openRe
 					<Grid item xs={6}>
 						<TextField label="Add description (optional)" variant="standard" value={resourceDesc} onChange={e => setResourceDesc(e.target.value)} fullWidth />
 					</Grid>
+
+					{costs
+						? <Grid item xs={6}>
+							<Typography>{getTotalCost(getModifiers(costs))}</Typography>
+						</Grid>
+						: null
+					}
 
 					<Grid item>
 						<Button variant="outlined" size="medium" onClick={() => createResource()}>Add Resource</Button>

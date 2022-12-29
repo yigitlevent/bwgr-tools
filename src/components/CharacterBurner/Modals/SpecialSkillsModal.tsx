@@ -11,28 +11,27 @@ import Paper from "@mui/material/Paper";
 import Select from "@mui/material/Select";
 import Typography from "@mui/material/Typography";
 
-import { useStore } from "../../../hooks/useStore";
-import { useAppSelector } from "../../../state/store";
+import { useRulesetStore } from "../../../hooks/stores/useRulesetStore";
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 import { Skill } from "../../../data/skills/_skills";
 import { GetSkillFromPath } from "../../../utils/pathFinder";
-import { CheckDatasets } from "../../../utils/checkDatasets";
 
 import { GenericGrid } from "../../Shared/Grids";
 
 
-function GetSubskills(skillPath: SkillPath, datasets: Ruleset[]): SkillPath[] {
+function GetSubskills(skillPath: SkillPath): SkillPath[] {
+	const { checkRulesets } = useRulesetStore();
+
 	return ((GetSkillFromPath(skillPath).subskills as SkillPath[])
 		.map(v => [v, GetSkillFromPath(v)]) as [SkillPath, Skill][])
-		.filter(v => CheckDatasets(datasets, v[1].allowed))
+		.filter(v => checkRulesets(v[1].allowed))
 		.map(v => v[0]);
 }
 
 export function AppropriateWeaponsSelection() {
-	const { datasets } = useAppSelector(state => state.dataset);
-	const { specialSkills } = useAppSelector(state => state.characterBurner);
-	const { cbSelectApprWeapon, cbSelectMandApprWeapon } = useStore().characterBurner;
+	const { specialSkills, selectAppropriateWeapon, selectMandatoryAppropriateWeapon } = useCharacterBurnerStore();
 
-	const subskills = GetSubskills("Any General➞Appropriate Weapons", datasets);
+	const subskills = GetSubskills("Any General➞Appropriate Weapons");
 
 	return (
 		<Fragment>
@@ -43,7 +42,7 @@ export function AppropriateWeaponsSelection() {
 			<Grid item xs={2}>
 				<FormControl fullWidth>
 					<InputLabel>Mandatory Weapon Skill</InputLabel>
-					<Select value={specialSkills.appropriateWeapons.mandatory} label="Mandatory Weapon Skill" onChange={(v) => cbSelectMandApprWeapon(v.target.value as SkillPath)}>
+					<Select value={specialSkills.appropriateWeapons.mandatory} label="Mandatory Weapon Skill" onChange={(v) => selectMandatoryAppropriateWeapon(v.target.value as SkillPath)}>
 						{specialSkills.appropriateWeapons.selected.map((skillName, i) =>
 							<MenuItem key={i} value={skillName}>{skillName.split("➞")[1]}</MenuItem>
 						)}
@@ -59,7 +58,7 @@ export function AppropriateWeaponsSelection() {
 						control={
 							<Checkbox
 								checked={specialSkills.appropriateWeapons.selected.includes(skillPaths)}
-								onChange={() => cbSelectApprWeapon(skillPaths)}
+								onChange={() => selectAppropriateWeapon(skillPaths)}
 							/>
 						}
 					/>
@@ -70,8 +69,7 @@ export function AppropriateWeaponsSelection() {
 }
 
 export function JavelinOrBowSelection() {
-	const { specialSkills } = useAppSelector(state => state.characterBurner);
-	const { cbSelectJavelinOrBow } = useStore().characterBurner;
+	const { specialSkills, selectJavelinOrBow } = useCharacterBurnerStore();
 
 	return (
 		<Fragment>
@@ -82,7 +80,7 @@ export function JavelinOrBowSelection() {
 			<Grid item xs={2}>
 				<FormControl fullWidth>
 					<InputLabel>Javelin or Bow</InputLabel>
-					<Select value={specialSkills.javelinOrBow} label="Javelin or Bow" onChange={(v) => cbSelectJavelinOrBow(v.target.value as SkillPath)}>
+					<Select value={specialSkills.javelinOrBow} label="Javelin or Bow" onChange={(v) => selectJavelinOrBow(v.target.value as SkillPath)}>
 						<MenuItem value={"Any General➞Bow"}>Bow</MenuItem>
 						<MenuItem value={"Any General➞Javelin"}>Javelin</MenuItem>
 					</Select>
@@ -93,11 +91,9 @@ export function JavelinOrBowSelection() {
 }
 
 export function AnySmithSelection() {
-	const { datasets } = useAppSelector(state => state.dataset);
-	const { specialSkills } = useAppSelector(state => state.characterBurner);
-	const { cbSelectAnySmith } = useStore().characterBurner;
+	const { specialSkills, selectAnySmith } = useCharacterBurnerStore();
 
-	const subskills = GetSubskills("Any General➞Any -smith", datasets);
+	const subskills = GetSubskills("Any General➞Any -smith");
 
 	return (
 		<Fragment>
@@ -113,7 +109,7 @@ export function AnySmithSelection() {
 						control={
 							<Checkbox
 								checked={specialSkills.anySmith.includes(skillName)}
-								onChange={() => cbSelectAnySmith(skillName)}
+								onChange={() => selectAnySmith(skillName)}
 							/>
 						}
 					/>
@@ -124,7 +120,7 @@ export function AnySmithSelection() {
 }
 
 export function SpecialSkillsModal({ openSu, openSuModal }: { openSu: boolean; openSuModal: (open: boolean) => void; }) {
-	const { totals } = useAppSelector(state => state.characterBurner);
+	const { totals } = useCharacterBurnerStore();
 
 	const hasSkill = (skillName: string) => {
 		return totals.skills.mandatoryList.includes(skillName) || totals.skills.lifepathList.includes(skillName);

@@ -130,7 +130,7 @@ export const HumanMagical: SkillCategory = {
 
 export const HumanSpecial: SkillCategory = {
 	allowed: ["bwg"],
-	name: "Man Special",
+	name: "Human Special",
 	skills: [
 		{
 			allowed: ["bwg"],

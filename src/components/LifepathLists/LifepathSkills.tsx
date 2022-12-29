@@ -3,16 +3,15 @@ import { Fragment } from "react";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 
-import { useAppSelector } from "../../state/store";
+import { useRulesetStore } from "../../hooks/stores/useRulesetStore";
 import type { Lifepath } from "../../data/stocks/_stocks";
 import { Skill, SkillCategories } from "../../data/skills/_skills";
-import { CheckDatasets } from "../../utils/checkDatasets";
 
 import { PopoverLink } from "../Shared/PopoverLink";
 
 
 export function LifepathSkills({ lifepath }: { lifepath: Lifepath; }) {
-	const { datasets } = useAppSelector(state => state.dataset);
+	const { checkRulesets } = useRulesetStore();
 
 	const hasGeneralSkill = typeof lifepath.generalSkillPool === "string" || lifepath.generalSkillPool > 0;
 	const hasLifepathSkill = typeof lifepath.skillPool === "string" || lifepath.skillPool > 0;
@@ -23,7 +22,7 @@ export function LifepathSkills({ lifepath }: { lifepath: Lifepath; }) {
 			.filter(entry => {
 				const [category, name] = entry.split("➞");
 				const s = SkillCategories[category].skills.find(v => v.name === name) as Skill;
-				return CheckDatasets(datasets, s.allowed);
+				return checkRulesets(s.allowed);
 			})
 			.map(path => {
 				const [category, name] = path.split("➞");

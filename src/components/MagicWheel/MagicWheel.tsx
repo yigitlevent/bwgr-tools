@@ -16,8 +16,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import CircularProgress from "@mui/material/CircularProgress";
 
-import { useAppSelector } from "../../state/store";
-import { useStore } from "../../hooks/useStore";
+import { useRulesetStore } from "../../hooks/stores/useRulesetStore";
 import { MagicData, MagicFacet, MiscMagicElements, MiscMagicFacets } from "../../data/magic";
 import { RandomNumber } from "../../utils/misc";
 
@@ -25,6 +24,7 @@ import { BackCanvas } from "./BackCanvas";
 import { MainCanvas } from "./MainCanvas";
 import { FrontCanvas } from "./FrontCanvas";
 import { GenericGrid } from "../Shared/Grids";
+import { useMagicWheelStore } from "../../hooks/stores/useMagicWheelStore";
 
 
 const CanvasWrapper = styled.div<{ size: string; }>`
@@ -41,9 +41,13 @@ const CanvasWrapper = styled.div<{ size: string; }>`
 export const MWCONST = { canvasSize: 580, circleRadius: 32, circleOffset: 90, textOffset: 100 };
 
 export function MagicWheel() {
-	const { datasets } = useAppSelector(state => state.dataset);
-	const { aoe, element, impetus, duration, origin, direction, steps, cover, elementIndex } = useAppSelector(state => state.magicWheel);
-	const { mgwChangeAOE, mgwChangeElement, mgwChangeImpetus, mgwChangeDuration, mgwChangeOrigin, mgwChangeDirection, mgwChangeSteps, mgwToggleCover, mgwChangeElementIndex } = useStore().magicWheel;
+	const { checkRulesets } = useRulesetStore();
+	const {
+		aoe, element, impetus, duration, origin, direction, steps, cover, elementIndex,
+		changeAOE, changeElement, changeImpetus, changeDuration, changeOrigin, changeDirection, changeSteps, toggleCover, changeElementIndex
+	} = useMagicWheelStore();
+
+	const hasMscRuleset = checkRulesets(["msc"]);
 
 	const wrapperRef = createRef<HTMLDivElement>();
 	const [size, setSize] = useState("0px");
@@ -58,7 +62,7 @@ export function MagicWheel() {
 	const [currentElementAngle, setCurrentElementAngle] = useState(0);
 	const [currentAOEAngle, setCurrentAOEAngle] = useState(0);
 
-	const [magicData, setMagicData] = useState(datasets.includes("msc") ? MiscMagicFacets : MagicData);
+	const [magicData, setMagicData] = useState(hasMscRuleset ? MiscMagicFacets : MagicData);
 
 	const updateFacets = useCallback((amount: number) => {
 		const selected: string[] = [origin, duration, impetus, element, aoe];
@@ -72,29 +76,29 @@ export function MagicWheel() {
 			selected[key] = magicData[key][newIndex].name;
 		}
 
-		mgwChangeOrigin(selected[0]);
-		mgwChangeDuration(selected[1]);
-		mgwChangeImpetus(selected[2]);
-		mgwChangeElement(selected[3]);
-		mgwChangeAOE(selected[4]);
-	}, [origin, duration, impetus, element, aoe, mgwChangeOrigin, mgwChangeDuration, mgwChangeImpetus, mgwChangeElement, mgwChangeAOE, magicData]);
+		changeOrigin(selected[0]);
+		changeDuration(selected[1]);
+		changeImpetus(selected[2]);
+		changeElement(selected[3]);
+		changeAOE(selected[4]);
+	}, [origin, duration, impetus, element, aoe, changeOrigin, changeDuration, changeImpetus, changeElement, changeAOE, magicData]);
 
 	const getFacetMapping = useCallback((type: string) => {
 		switch (type) {
 			case "Area of Effect":
-				return { bandIndex: 4, currentAngle: currentAOEAngle, setFunction: setCurrentAOEAngle, setStoreFunction: mgwChangeAOE };
+				return { bandIndex: 4, currentAngle: currentAOEAngle, setFunction: setCurrentAOEAngle, setStoreFunction: changeAOE };
 			case "Element":
-				return { bandIndex: 3, currentAngle: currentElementAngle, setFunction: setCurrentElementAngle, setStoreFunction: mgwChangeElement };
+				return { bandIndex: 3, currentAngle: currentElementAngle, setFunction: setCurrentElementAngle, setStoreFunction: changeElement };
 			case "Impetus":
-				return { bandIndex: 2, currentAngle: currentImpetusAngle, setFunction: setCurrentImpetusAngle, setStoreFunction: mgwChangeImpetus };
+				return { bandIndex: 2, currentAngle: currentImpetusAngle, setFunction: setCurrentImpetusAngle, setStoreFunction: changeImpetus };
 			case "Duration":
-				return { bandIndex: 1, currentAngle: currentDurationAngle, setFunction: setCurrentDurationAngle, setStoreFunction: mgwChangeDuration };
+				return { bandIndex: 1, currentAngle: currentDurationAngle, setFunction: setCurrentDurationAngle, setStoreFunction: changeDuration };
 			case "Origin":
-				return { bandIndex: 0, currentAngle: currentOriginAngle, setFunction: setCurrentOriginAngle, setStoreFunction: mgwChangeOrigin };
+				return { bandIndex: 0, currentAngle: currentOriginAngle, setFunction: setCurrentOriginAngle, setStoreFunction: changeOrigin };
 			default:
 				throw "Facet type invalid.";
 		}
-	}, [currentAOEAngle, currentDurationAngle, currentElementAngle, currentImpetusAngle, currentOriginAngle, mgwChangeAOE, mgwChangeDuration, mgwChangeElement, mgwChangeImpetus, mgwChangeOrigin]);
+	}, [currentAOEAngle, currentDurationAngle, currentElementAngle, currentImpetusAngle, currentOriginAngle, changeAOE, changeDuration, changeElement, changeImpetus, changeOrigin]);
 
 	const rotateBand = useCallback((amount: number, type: string) => {
 		const { bandIndex, currentAngle, setFunction } = getFacetMapping(type);
@@ -154,16 +158,16 @@ export function MagicWheel() {
 
 	const changeElementGroup = useCallback((event: SelectChangeEvent<string>) => {
 		const value = event.target.value;
-		mgwChangeElementIndex(parseInt(value));
-	}, [mgwChangeElementIndex]);
+		changeElementIndex(parseInt(value));
+	}, [changeElementIndex]);
 
 	const resetStartingFacets = useCallback((data: MagicFacet[][]) => {
-		mgwChangeAOE(data[4][0].name);
-		mgwChangeElement(data[3][0].name);
-		mgwChangeImpetus(data[2][0].name);
-		mgwChangeDuration(data[1][0].name);
-		mgwChangeOrigin(data[0][0].name);
-	}, [mgwChangeAOE, mgwChangeDuration, mgwChangeElement, mgwChangeImpetus, mgwChangeOrigin]);
+		changeAOE(data[4][0].name);
+		changeElement(data[3][0].name);
+		changeImpetus(data[2][0].name);
+		changeDuration(data[1][0].name);
+		changeOrigin(data[0][0].name);
+	}, [changeAOE, changeDuration, changeElement, changeImpetus, changeOrigin]);
 
 	const resetCurrentAngles = useCallback(() => {
 		setCurrentOriginAngle(0);
@@ -178,7 +182,7 @@ export function MagicWheel() {
 	}, [wrapperRef]);
 
 	useEffect(() => {
-		if (datasets.includes("msc")) {
+		if (hasMscRuleset) {
 			const d = MiscMagicFacets;
 			d[3] = MiscMagicElements[elementIndex];
 			setMagicData([...d]);
@@ -190,7 +194,7 @@ export function MagicWheel() {
 			resetStartingFacets(MagicData);
 			resetCurrentAngles();
 		}
-	}, [datasets, elementIndex, resetCurrentAngles, resetStartingFacets]);
+	}, [elementIndex, hasMscRuleset, resetCurrentAngles, resetStartingFacets]);
 
 	useEffect(() => {
 		const tempArr = [0, 0, 0, 0, 0];
@@ -198,7 +202,7 @@ export function MagicWheel() {
 			tempArr[parseInt(arrayKey)] = 4 * Math.PI / magicData[arrayKey].length;
 		}
 		setEntryAngleSpan(tempArr);
-	}, [aoe, element, impetus, duration, origin, magicData, datasets]);
+	}, [aoe, element, impetus, duration, origin, magicData]);
 
 	useEffect(() => {
 		if (!isFontLoaded) {
@@ -209,7 +213,7 @@ export function MagicWheel() {
 		}
 	}, [isFontLoaded]);
 
-	const columns = datasets.includes("msc") ? 6 : 5;
+	const columns = hasMscRuleset ? 6 : 5;
 
 	return (
 		<Fragment>
@@ -225,7 +229,7 @@ export function MagicWheel() {
 					</FormControl>
 				</Grid>
 
-				{datasets.includes("msc")
+				{hasMscRuleset
 					? <Grid item xs={columns} sm={2} md={1}>
 						<FormControl fullWidth variant="standard">
 							<InputLabel>Element Group</InputLabel>
@@ -250,7 +254,7 @@ export function MagicWheel() {
 
 				<Grid item xs={columns} sm={2} md={1}>
 					<FormControl fullWidth variant="standard">
-						<InputLabel>{datasets.includes("msc") ? "Law" : "Impetus"}</InputLabel>
+						<InputLabel>{hasMscRuleset ? "Law" : "Impetus"}</InputLabel>
 						<Select label="Impetus" name="Impetus" value={isRotating > 0 ? "" : impetus} onChange={changeStartingFacet} disabled={isRotating > 0}>
 							{Object.values(magicData[2]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>
@@ -295,7 +299,7 @@ export function MagicWheel() {
 				<Grid item xs={2} sm={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Direction</InputLabel>
-						<Select label="Direction" value={direction} onChange={mgwChangeDirection} disabled={isRotating > 0}>
+						<Select label="Direction" value={direction} onChange={e => changeDirection(e.target.value)} disabled={isRotating > 0}>
 							<MenuItem value={"Clockwise"}>Clockwise</MenuItem>
 							<MenuItem value={"Counterclockwise"}>Counterclockwise</MenuItem>
 						</Select>
@@ -307,7 +311,7 @@ export function MagicWheel() {
 						label="Steps"
 						inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
 						value={steps}
-						onChange={mgwChangeSteps}
+						onChange={e => changeSteps(e.target.value)}
 						fullWidth
 						disabled={isRotating > 0}
 						variant="standard"
@@ -339,7 +343,7 @@ export function MagicWheel() {
 					<FormControlLabel
 						label="Toggle Cover"
 						labelPlacement="start"
-						control={<Checkbox checked={cover} onChange={mgwToggleCover} />}
+						control={<Checkbox checked={cover} onChange={toggleCover} />}
 					/>
 				</Fragment>
 				: <CircularProgress />

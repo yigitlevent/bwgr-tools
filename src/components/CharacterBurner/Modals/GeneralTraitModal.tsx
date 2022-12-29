@@ -8,20 +8,17 @@ import Paper from "@mui/material/Paper";
 import Autocomplete from "@mui/material/Autocomplete";
 import Typography from "@mui/material/Typography";
 
-import { useAppSelector } from "../../../state/store";
-import { useStore } from "../../../hooks/useStore";
+import { useRulesetStore } from "../../../hooks/stores/useRulesetStore";
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 import { TraitCategories } from "../../../data/traits/_traits";
-import { CheckDatasets } from "../../../utils/checkDatasets";
 import { GetTraitFromPath } from "../../../utils/pathFinder";
-import { GetRemainingTraitTotals } from "../../../utils/characterTraitUtils";
 
 import { GenericGrid } from "../../Shared/Grids";
 
 
 export function GeneralTraitModal({ open, setOpen }: { open: boolean; setOpen: (open: boolean) => void; }) {
-	const { datasets } = useAppSelector(state => state.dataset);
-	const { stock, totals, spendings } = useAppSelector(state => state.characterBurner);
-	const { cbAddTrait } = useStore().characterBurner;
+	const { checkRulesets } = useRulesetStore();
+	const { stock, totals, addTrait, getTraitRemainings } = useCharacterBurnerStore();
 
 	const [chosenTrait, setChosenTrait] = useState("");
 
@@ -30,7 +27,7 @@ export function GeneralTraitModal({ open, setOpen }: { open: boolean; setOpen: (
 		for (const categoryKey in TraitCategories) {
 			const category = TraitCategories[categoryKey];
 
-			const allowedByDataset = CheckDatasets(datasets, category.allowed);
+			const allowedByDataset = checkRulesets(category.allowed);
 			if (!allowedByDataset) continue;
 			const allowedByCategory = !(category.name.endsWith("Common") || category.name.endsWith("Lifepath"));
 			if (!allowedByCategory) continue;
@@ -38,9 +35,9 @@ export function GeneralTraitModal({ open, setOpen }: { open: boolean; setOpen: (
 			for (const traitKey in category.traits) {
 				const trait = category.traits[traitKey];
 				const traitPath = `${category.name}➞${trait.name}`;
-				const traitRemaining = GetRemainingTraitTotals(totals, spendings);
+				const traitRemaining = getTraitRemainings();
 
-				const allowedByDataset = CheckDatasets(datasets, trait.allowed);
+				const allowedByDataset = checkRulesets(trait.allowed);
 				const allowedByStock = trait.stock === "Any" || trait.stock === stock;
 				const notInLists = !(totals.traits.commonList.includes(traitPath) || totals.traits.mandatoryList.includes(traitPath)
 					|| totals.traits.lifepathList.includes(traitPath) || totals.traits.generalList.includes(traitPath));
@@ -51,7 +48,7 @@ export function GeneralTraitModal({ open, setOpen }: { open: boolean; setOpen: (
 			}
 		}
 		return possibilities;
-	}, [datasets, spendings, stock, totals]);
+	}, [checkRulesets, getTraitRemainings, stock, totals]);
 
 	const resetDefaultChosen = useCallback(() => {
 		setChosenTrait(getPossible()[0]);
@@ -59,13 +56,13 @@ export function GeneralTraitModal({ open, setOpen }: { open: boolean; setOpen: (
 
 	const addNewTrait = () => {
 		setOpen(false);
-		cbAddTrait(chosenTrait as TraitPath);
+		addTrait(chosenTrait as TraitPath);
 		resetDefaultChosen();
 	};
 
 	useEffect(() => {
 		resetDefaultChosen();
-	}, [resetDefaultChosen, datasets]);
+	}, [resetDefaultChosen]);
 
 	const trait = chosenTrait.length > 0 ? GetTraitFromPath(chosenTrait) : undefined;
 

@@ -4,15 +4,13 @@ import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 
-import { useAppSelector } from "../../../state/store";
-import { useStore } from "../../../hooks/useStore";
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 
 import { GenericGrid } from "../../Shared/Grids";
 
 
 export function BeliefsBlock() {
-	const { beliefs, limits } = useAppSelector(state => state.characterBurner);
-	const { cbChangeBelief } = useStore().characterBurner;
+	const { beliefs, limits, changeBelief } = useCharacterBurnerStore();
 
 	return (
 		<GenericGrid columns={6} center>
@@ -24,10 +22,10 @@ export function BeliefsBlock() {
 				{beliefs.map((v, i) =>
 					<Grid key={i} item xs={6}>
 						<TextField
-							label={i !== 3 ? `Belief ${i}` : "Special Belief"}
+							label={i !== 3 ? `Belief ${i + 1}` : "Special Belief"}
 							value={v}
-							onChange={(e) => cbChangeBelief(i, e.target.value)}
-							disabled={i >= (limits.beliefs - 1)}
+							onChange={(e) => changeBelief(i, e.target.value)}
+							disabled={i >= limits.beliefs}
 							fullWidth
 							variant="standard"
 						/>

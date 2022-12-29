@@ -1,5 +1,4 @@
 import { Lifepath, Stock } from "../data/stocks/_stocks";
-import { CheckDatasets } from "./checkDatasets";
 
 
 function CheckString(chosenLifepaths: Lifepath[], conditionString: string): boolean {
@@ -31,10 +30,10 @@ function GetCurrentAge(chosenLifepaths: Lifepath[], leadCount: number) {
 	return sum + leadCount;
 }
 
-function FilterByRequirements(datasets: Ruleset[], combinedPossibleLifepaths: Lifepath[], chosenLifepaths: Lifepath[], currentAge: number): Lifepath[] {
+function FilterByRequirements(combinedPossibleLifepaths: Lifepath[], chosenLifepaths: Lifepath[], currentAge: number, checkRulesets: (allowed: Ruleset[]) => boolean): Lifepath[] {
 	const filteredLifepaths: Lifepath[] = [];
 
-	combinedPossibleLifepaths = combinedPossibleLifepaths.filter(v => v.born === false).filter(v => CheckDatasets(datasets, v.allowed));
+	combinedPossibleLifepaths = combinedPossibleLifepaths.filter(v => v.born === false).filter(v => checkRulesets(v.allowed));
 
 	for (const lifepathKey in combinedPossibleLifepaths) {
 		const lp = combinedPossibleLifepaths[lifepathKey];
@@ -58,7 +57,7 @@ function FilterByRequirements(datasets: Ruleset[], combinedPossibleLifepaths: Li
 	return filteredLifepaths;
 }
 
-export function FilterLifepaths(datasets: Ruleset[], currentStock: Stock, chosenLifepaths: Lifepath[], maxLeads: number, prevLeadsCount: number) {
+export function FilterLifepaths(currentStock: Stock, chosenLifepaths: Lifepath[], maxLeads: number, prevLeadsCount: number, checkRulesets: (allowed: Ruleset[]) => boolean) {
 	const lastLP = chosenLifepaths[chosenLifepaths.length - 1];
 	let possibilities = [...currentStock.settings[lastLP.setting].lifepaths];
 	if (prevLeadsCount < maxLeads) {
@@ -69,5 +68,5 @@ export function FilterLifepaths(datasets: Ruleset[], currentStock: Stock, chosen
 	}
 
 	const currentAge = GetCurrentAge(chosenLifepaths, prevLeadsCount);
-	return FilterByRequirements(datasets, possibilities, chosenLifepaths, currentAge);
+	return FilterByRequirements(possibilities, chosenLifepaths, currentAge, checkRulesets);
 }

@@ -19,7 +19,7 @@ export interface Trait {
 
 export interface TraitCategory {
 	allowed: Ruleset[];
-	name: string;
+	name: TraitCategoryPath;
 	traits: Trait[];
 }
 

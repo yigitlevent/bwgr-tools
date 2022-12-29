@@ -7,37 +7,35 @@ import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 
-import { useStore } from "../../../hooks/useStore";
+import { useRulesetStore } from "../../../hooks/stores/useRulesetStore";
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 import { Stocks } from "../../../data/stocks/_stocks";
-import { useAppSelector } from "../../../state/store";
 import { GetPathFromLifepath } from "../../../utils/pathFinder";
-import { CheckDatasets } from "../../../utils/checkDatasets";
 
 import { GenericGrid } from "../../Shared/Grids";
 import { AbilityButton } from "../../Shared/AbilityButton";
 
 
 export function SpecialLifepathsModal({ openSl, openSlModal }: { openSl: boolean; openSlModal: (open: boolean) => void; }) {
-	const { datasets } = useAppSelector(state => state.dataset);
-	const { lifepathPaths, specialLifepaths } = useAppSelector(state => state.characterBurner);
-	const { cbModifySpecialLifepathValue } = useStore().characterBurner;
+	const { checkRulesets } = useRulesetStore();
+	const { lifepathPaths, specialLifepaths, modifySpecialLifepathValue } = useCharacterBurnerStore();
 
 	const modifyAdvisor = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, change: number) => {
 		e.preventDefault();
 		if (specialLifepaths.advisorToTheCourt.years + change < 4 && specialLifepaths.advisorToTheCourt.years + change > 0) {
-			cbModifySpecialLifepathValue({ advisorToTheCourtYears: specialLifepaths.advisorToTheCourt.years + change });
+			modifySpecialLifepathValue({ advisorToTheCourtYears: specialLifepaths.advisorToTheCourt.years + change });
 		}
 	};
 
 	const modifyBondsman = (e: React.SyntheticEvent<Element, Event>, change: LifepathPath) => {
 		e.preventDefault();
-		cbModifySpecialLifepathValue({ bondsmanOwnerLifepathPath: change });
+		modifySpecialLifepathValue({ bondsmanOwnerLifepathPath: change });
 	};
 
 	const modifyPrince = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, change: number) => {
 		e.preventDefault();
 		if (specialLifepaths.princeOfTheBlood.years + change < 20 && specialLifepaths.princeOfTheBlood.years + change > 1) {
-			cbModifySpecialLifepathValue({ princeOfTheBloodYears: specialLifepaths.princeOfTheBlood.years + change });
+			modifySpecialLifepathValue({ princeOfTheBloodYears: specialLifepaths.princeOfTheBlood.years + change });
 		}
 	};
 
@@ -46,10 +44,10 @@ export function SpecialLifepathsModal({ openSl, openSlModal }: { openSl: boolean
 			Object.values(Stocks["Human"].settings)
 				.map(setting => setting.lifepaths.filter(lp => !lp.born && ["City Dweller", "Noble", "Professional Soldier", "Villager"].includes(lp.setting)))
 				.flat()
-				.filter(v => CheckDatasets(datasets, v.allowed));
+				.filter(v => checkRulesets( v.allowed));
 
 		return possibilities.sort((a, b) => a.name.localeCompare(b.name));
-	}, [datasets]);
+	}, [checkRulesets]);
 
 	return (
 		<Modal open={openSl} onClose={() => openSlModal(false)}>

@@ -13,36 +13,47 @@ import Checkbox from "@mui/material/Checkbox";
 import ListItemText from "@mui/material/ListItemText";
 import Alert from "@mui/material/Alert";
 
-import { useAppSelector } from "../../state/store";
-import { useStore } from "../../hooks/useStore";
-import { Skill, SkillCategories } from "../../data/skills/_skills";
-
+import { useRulesetStore } from "../../hooks/stores/useRulesetStore";
 import { useSearch } from "../../hooks/useSearch";
+import { Skill, SkillCategories } from "../../data/skills/_skills";
 
 import { PopoverLink } from "../Shared/PopoverLink";
 import { GenericGrid } from "../Shared/Grids";
-import { CheckDatasets } from "../../utils/checkDatasets";
 
 
 export function SkillLists() {
-	const { datasets } = useAppSelector(state => state.dataset);
-	const { category } = useAppSelector(state => state.skillList);
-	const { sklChangeCategory } = useStore().skillList;
-	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Skill>(SkillCategories[category].skills);
+	const { checkRulesets } = useRulesetStore();
+	const { skillCategory, changeSkillCategory } = useRulesetStore();
+	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Skill>(SkillCategories[skillCategory].skills);
 
 	const [searchParams, setSearchParams] = useSearchParams();
+
+	const allowedCategories = Object.values(SkillCategories).filter(v => checkRulesets(v.allowed));
+
+	useEffect(() => {
+		if (!(allowedCategories.map(v => v.name).includes(skillCategory))) {
+			changeSkillCategory(allowedCategories[0].name as SkillCategoryPath);
+		}
+	}, [allowedCategories, changeSkillCategory, skillCategory]);
 
 	useEffect(() => {
 		const arr = [...searchParams.entries()];
 		const prms: { [key: string]: string; } = {};
 		for (const item in arr) { prms[arr[item][0]] = arr[item][1]; }
-		prms["category"] = category;
+		prms["category"] = skillCategory;
 		setSearchParams(prms);
-	}, [category, searchParams, setSearchParams]);
+	}, [skillCategory, searchParams, setSearchParams]);
 
 	useEffect(() => {
-		setList(SkillCategories[category].skills);
-	}, [category, setList]);
+		const arr = [...searchParams.entries()];
+		const prms: { [key: string]: string; } = {};
+		for (const item in arr) { prms[arr[item][0]] = arr[item][1]; }
+		if ("category" in prms) { changeSkillCategory(prms["category"] as SkillCategoryPath); }
+	}, [changeSkillCategory, searchParams]);
+
+	useEffect(() => {
+		setList(SkillCategories[skillCategory].skills);
+	}, [skillCategory, setList]);
 
 	return (
 		<Fragment>
@@ -52,8 +63,12 @@ export function SkillLists() {
 				<Grid item xs={4} sm={4} md={2}>
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Skill Category</InputLabel>
-						<Select label="Skill Category" value={category} onChange={sklChangeCategory} placeholder="Select a category">
-							{Object.values(SkillCategories).filter(v => CheckDatasets(datasets, v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
+						<Select
+							label="Skill Category"
+							value={allowedCategories.map(v => v.name).includes(skillCategory) ? skillCategory : allowedCategories[0].name}
+							onChange={v => changeSkillCategory(v.target.value as SkillCategoryPath)}
+						>
+							{allowedCategories.map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>

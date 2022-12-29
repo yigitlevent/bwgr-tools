@@ -3,23 +3,22 @@ import { Fragment } from "react";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 
-import { useAppSelector } from "../../state/store";
+import { useRulesetStore } from "../../hooks/stores/useRulesetStore";
 import type { Lifepath } from "../../data/stocks/_stocks";
 import { Trait, TraitCategories } from "../../data/traits/_traits";
 
 import { PopoverLink } from "../Shared/PopoverLink";
-import { CheckDatasets } from "../../utils/checkDatasets";
 
 
 export function LifepathTraits({ lifepath }: { lifepath: Lifepath; }) {
-	const { datasets } = useAppSelector(state => state.dataset);
+	const { checkRulesets } = useRulesetStore();
 
 	const traits =
 		lifepath.traits
 			.filter(entry => {
 				const [category, name] = entry.split("➞");
 				const t = TraitCategories[category].traits.find(v => v.name === name) as Trait;
-				return CheckDatasets(datasets, t.allowed);
+				return checkRulesets(t.allowed);
 			})
 			.map(path => {
 				const [category, name] = path.split("➞");

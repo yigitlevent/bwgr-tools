@@ -18,8 +18,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
-import { useAppSelector } from "../../state/store";
-import { useStore } from "../../hooks/useStore";
+import { useFightPlannerStore } from "../../hooks/stores/useFightPlannerStore";
 import { FightActions } from "../../data/fight";
 import { GroupBy } from "../../utils/misc";
 
@@ -30,8 +29,10 @@ import { GenericGrid } from "../Shared/Grids";
 const GroupedFightActions = GroupBy(FightActions, a => a.group);
 
 export function FightPlanner() {
-	const { reflexes, volleyIndex, actions, selectedAction } = useAppSelector(state => state.fight);
-	const { fgtChangeReflexes, fgtChangeVolleyIndex, fgtAddAction, fgtDeleteAction, fgtChangeSelectedAction, fgtToggleActionDetails, fgtToggleActionVisibility } = useStore().fight;
+	const {
+		reflexes, volleyIndex, actions, selectedAction,
+		changeReflexes, changeVolleyIndex, addAction, deleteAction, changeSelectedAction, toggleActionDetails, toggleActionVisibility
+	} = useFightPlannerStore();
 
 	const [notification, setNotification] = useState<null | JSX.Element>(null);
 
@@ -47,7 +48,7 @@ export function FightPlanner() {
 						label="Reflexes"
 						inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
 						value={reflexes}
-						onChange={(e) => fgtChangeReflexes(parseInt(e.target.value), actions, setNotification)}
+						onChange={(e) => changeReflexes(parseInt(e.target.value), actions, setNotification)}
 						fullWidth
 						variant="standard"
 					/>
@@ -56,7 +57,7 @@ export function FightPlanner() {
 				<Grid item xs={4} sm={2} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Volley</InputLabel>
-						<Select label="Volley" value={volleyIndex} onChange={(e) => fgtChangeVolleyIndex(parseInt(e.target.value as string))}>
+						<Select label="Volley" value={volleyIndex} onChange={(e) => changeVolleyIndex(parseInt(e.target.value as string))}>
 							<MenuItem value={0}>Volley 1</MenuItem>
 							<MenuItem value={1}>Volley 2</MenuItem>
 							<MenuItem value={2}>Volley 3</MenuItem>
@@ -67,7 +68,7 @@ export function FightPlanner() {
 				<Grid item xs={4} sm={2} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Action</InputLabel>
-						<Select label="Action" value={selectedAction} onChange={(e) => fgtChangeSelectedAction(volleyIndex, e.target.value)}>
+						<Select label="Action" value={selectedAction} onChange={(e) => changeSelectedAction(e.target.value)}>
 							{Object.keys(GroupedFightActions).map((groupKey, groupIndex) => {
 								const elements = [
 									<ListSubheader key={groupIndex}>{groupKey}</ListSubheader>,
@@ -82,7 +83,7 @@ export function FightPlanner() {
 				</Grid>
 
 				<Grid item xs={4} sm={2} md={1}>
-					<Button variant="outlined" size="medium" onClick={() => fgtAddAction(volleyIndex, selectedAction, reflexes, actions, setNotification)}>Add Action</Button>
+					<Button variant="outlined" size="medium" onClick={() => addAction(volleyIndex, selectedAction, reflexes, actions, setNotification)}>Add Action</Button>
 				</Grid>
 			</GenericGrid>
 
@@ -101,13 +102,13 @@ export function FightPlanner() {
 									</Grid>
 
 									<Grid item>
-										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => fgtToggleActionDetails(volleyIndex, actionIndex)}>
+										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => toggleActionDetails(volleyIndex, actionIndex)}>
 											{action.open ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
 										</IconButton>
-										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => fgtToggleActionVisibility(volleyIndex, actionIndex)}>
+										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => toggleActionVisibility(volleyIndex, actionIndex)}>
 											{action.visible ? <VisibilityIcon /> : <VisibilityOffIcon />}
 										</IconButton>
-										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => fgtDeleteAction(volleyIndex, actionIndex)}>
+										<IconButton size="small" sx={{ margin: "0 8px" }} onClick={() => deleteAction(volleyIndex, actionIndex)}>
 											<DeleteOutline />
 										</IconButton>
 									</Grid>

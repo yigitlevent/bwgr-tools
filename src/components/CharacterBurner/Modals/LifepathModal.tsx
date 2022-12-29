@@ -7,32 +7,30 @@ import Modal from "@mui/material/Modal";
 import Paper from "@mui/material/Paper";
 import Autocomplete from "@mui/material/Autocomplete";
 
-import { useAppSelector } from "../../../state/store";
-import { useStore } from "../../../hooks/useStore";
+import { useRulesetStore } from "../../../hooks/stores/useRulesetStore";
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 import { Lifepath, Stocks } from "../../../data/stocks/_stocks";
 import { GetLifepathFromPath, GetPathFromLifepath } from "../../../utils/pathFinder";
 import { FilterLifepaths } from "../../../utils/lifepathFilter";
-import { CheckDatasets } from "../../../utils/checkDatasets";
 
 import { GenericGrid } from "../../Shared/Grids";
 import { LifepathBox } from "../../LifepathLists/LifepathBox";
 
 
 export function LifepathModal({ openLp, openLpModal }: { openLp: boolean; openLpModal: (open: boolean) => void; }) {
-	const { datasets } = useAppSelector(state => state.dataset);
-	const { stock, lifepathPaths } = useAppSelector(state => state.characterBurner);
-	const { cbAddLifepath } = useStore().characterBurner;
+	const { checkRulesets } = useRulesetStore();
+	const { stock, lifepathPaths, addLifepath } = useCharacterBurnerStore();
 
 	const [chosenLP, setChosenLP] = useState("");
 
 	const getPossibleLifepaths = useCallback(() => {
 		const possibilities =
 			lifepathPaths.length === 0
-				? Object.values(Stocks[stock].settings).map(setting => setting.lifepaths.filter(lp => lp.born)).flat().filter(v => CheckDatasets(datasets, v.allowed))
-				: FilterLifepaths(datasets, Stocks[stock], lifepathPaths.map((lp) => GetLifepathFromPath(lp) as Lifepath), Infinity, 0);
+				? Object.values(Stocks[stock].settings).map(setting => setting.lifepaths.filter(lp => lp.born)).flat().filter(v => checkRulesets(v.allowed))
+				: FilterLifepaths(Stocks[stock], lifepathPaths.map((lp) => GetLifepathFromPath(lp) as Lifepath), Infinity, 0, checkRulesets);
 
 		return possibilities.sort((a, b) => a.name.localeCompare(b.name));
-	}, [datasets, lifepathPaths, stock]);
+	}, [checkRulesets, lifepathPaths, stock]);
 
 	const resetDefaultChosen = useCallback(() => {
 		setChosenLP(GetPathFromLifepath(getPossibleLifepaths()[0]));
@@ -40,13 +38,13 @@ export function LifepathModal({ openLp, openLpModal }: { openLp: boolean; openLp
 
 	const addNewLifepath = () => {
 		openLpModal(false);
-		cbAddLifepath(chosenLP as LifepathPath);
+		addLifepath(chosenLP as LifepathPath);
 		resetDefaultChosen();
 	};
 
 	useEffect(() => {
 		resetDefaultChosen();
-	}, [resetDefaultChosen, datasets]);
+	}, [resetDefaultChosen]);
 
 	return (
 		<Modal open={openLp} onClose={() => openLpModal(false)}>

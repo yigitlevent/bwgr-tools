@@ -7,16 +7,14 @@ import Typography from "@mui/material/Typography";
 import Alert from "@mui/material/Alert";
 import Button from "@mui/material/Button";
 
-import { useStore } from "../../../hooks/useStore";
-import { useAppSelector } from "../../../state/store";
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 import { Clamp, GetOrdinalSuffix, RandomNumber } from "../../../utils/misc";
 
 import { GenericGrid } from "../../Shared/Grids";
 
 
 export function StockSpecificModal({ openSs, openSsModal }: { openSs: boolean; openSsModal: (open: boolean) => void; }) {
-	const { stock, lifepathPaths, stockSpecific } = useAppSelector(state => state.characterBurner);
-	const { cbAddBrutalLifeTrait, cbSetHuntingGround } = useStore().characterBurner;
+	const { stock, lifepathPaths, stockSpecific, addBrutalLifeTrait, setHuntingGround } = useCharacterBurnerStore();
 
 	const rollBrutalLife = useCallback((lifepathNumber: number) => {
 		const isBrutal = (lifepathNumber < 10)
@@ -32,8 +30,8 @@ export function StockSpecificModal({ openSs, openSsModal }: { openSs: boolean; o
 								: (lifepathNumber === 9) ? "Any Die➞Missing Limb"
 									: "Any Die➞Missing Limb";
 
-		cbAddBrutalLifeTrait(trait);
-	}, [cbAddBrutalLifeTrait]);
+		addBrutalLifeTrait(trait);
+	}, [addBrutalLifeTrait]);
 
 	const rollTerritory = useCallback(() => {
 		const huntingGrounds: HuntingGroundsList[] = ["Waste", "Marginal", "Typical", "Plentiful", "Untouched"];
@@ -58,8 +56,8 @@ export function StockSpecificModal({ openSs, openSsModal }: { openSs: boolean; o
 			category = category + 2;
 		}
 
-		cbSetHuntingGround(huntingGrounds[Clamp(category, 0, 4)]);
-	}, [cbSetHuntingGround, lifepathPaths]);
+		setHuntingGround(huntingGrounds[Clamp(category, 0, 4)]);
+	}, [setHuntingGround, lifepathPaths]);
 
 	return (
 		<Modal open={openSs} onClose={() => openSsModal(false)}>

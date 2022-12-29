@@ -27,7 +27,7 @@ export interface Resource {
 }
 
 export interface ResourceStock {
-	name: string;
+	name: StocksListExtended;
 	allowed: Ruleset[];
 	resources: Resource[];
 }

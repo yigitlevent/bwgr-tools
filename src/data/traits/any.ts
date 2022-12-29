@@ -3466,7 +3466,7 @@ export const AnyCharacter: TraitCategory = {
 
 export const AnyCallon: TraitCategory = {
 	allowed: ["bwg"],
-	name: "Any Callon",
+	name: "Any Call-on",
 	traits: [
 		{
 			allowed: ["bwg"],

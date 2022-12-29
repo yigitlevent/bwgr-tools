@@ -215,6 +215,7 @@ function ScanFaultyPaths(): void {
 		}
 	}
 
+	console.debug("/// START ///");
 	console.debug("/// ERRORS ///");
 	console.debug(errors);
 	console.debug("/// WARNINGS ///");

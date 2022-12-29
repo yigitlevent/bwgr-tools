@@ -37,61 +37,6 @@ interface LifepathTotals {
 	};
 }
 
-// ACTIONS
-interface ChangeCharacterStock { type: "CHANGE_CB_STOCK"; payload: { stock: StocksList; }; }
-interface ChangeCharacterConcept { type: "CHANGE_CB_CONCEPT"; payload: { concept: string; }; }
-interface ChangeCharacterName { type: "CHANGE_CB_NAME"; payload: { name: string; }; }
-
-interface ChangeBelief { type: "CHANGE_CB_BELIEF"; payload: { index: number; belief: string; }; }
-interface ChangeInstinct { type: "CHANGE_CB_INSTINCT"; payload: { index: number; instinct: string; }; }
-
-interface AddLifepath { type: "ADD_CB_LIFEPATH"; payload: { lifepathPath: LifepathPath; }; }
-interface RemoveLifepath { type: "REMOVE_CB_LIFEPATH"; }
-
-interface ChangeStatShade { type: "CHANGE_CB_STAT_SHADE"; payload: { statName: StatsList; }; }
-interface ChangeStatExponent { type: "CHANGE_CB_STAT_EXPONENT"; payload: { statName: StatsList; change: 1 | -1; }; }
-
-interface ChangeAttributeShade { type: "CHANGE_CB_ATTRIBUTE_SHADE"; payload: { attributeName: AttributesList; change: 5 | -5; }; }
-
-interface OpenSkill { type: "OPEN_CB_SKILL"; payload: { skillPath: string; open: boolean; isLifepath: boolean; }; }
-interface ChangeSkillAdvancement { type: "CHANGE_CB_SKILL_EXPONENT"; payload: { skillPath: string; change: 1 | -1; isLifepath: boolean; }; }
-
-interface OpenTrait { type: "OPEN_CB_TRAIT"; payload: { traitPath: string; open: boolean; isLifepath: boolean; }; }
-
-interface SwitchQuestionAnswer { type: "SWITCH_CB_ANSWER"; payload: { questionKey: AttributeQuestionsKeys; }; }
-
-interface SelectApprWeapon { type: "SELECT_CB_APPR_WEAPON"; payload: { skillPath: SkillPath; }; }
-interface SelectMandApprWeapon { type: "SELECT_CB_MAND_APPR_WEAPON"; payload: { skillPath: SkillPath; }; }
-interface SelectJavelinOrBow { type: "SELECT_CB_JAVELIN_OR_BOW"; payload: { skillPath: SkillPath; }; }
-interface SelectAnySmith { type: "SELECT_CB_ANY_SMITH"; payload: { skillPath: SkillPath; }; }
-
-interface AddTrait { type: "ADD_CB_TRAIT"; payload: { traitPath: TraitPath; }; }
-interface RemoveTrait { type: "REMOVE_CB_TRAIT"; payload: { traitPath: TraitPath; }; }
-
-interface AddSkill { type: "ADD_CB_SKILL"; payload: { skillPath: SkillPath; }; }
-interface RemoveSkill { type: "REMOVE_CB_SKILL"; payload: { skillPath: SkillPath; }; }
-
-interface AddResource { type: "ADD_CB_RESOURCE"; payload: { resource: SpendingForResource; }; }
-interface RemoveResource { type: "REMOVE_CB_RESOURCE"; payload: { guid: string; }; }
-
-interface AddBrutalLifeTrait { type: "ADD_CB_BRUTAL_LIFE_TRAIT"; payload: { traitPath: TraitPath | undefined; }; }
-interface SetHuntingGround { type: "SET_CB_HUNTING_GROUND"; payload: { huntingGround: HuntingGroundsList; }; }
-interface ModifySpecialLifepathValue { type: "MODIFY_CB_SPECIAL_LIFEPATH_VALUE"; payload: { advisorToTheCourtYears: number; } | { princeOfTheBloodYears: number; } | { bondsmanOwnerLifepathPath: LifepathPath; }; }
-
-type CharacterBurnerActions =
-	ChangeCharacterStock | ChangeCharacterConcept | ChangeCharacterName |
-	ChangeBelief | ChangeInstinct |
-	AddLifepath | RemoveLifepath |
-	ChangeStatShade | ChangeStatExponent |
-	ChangeAttributeShade |
-	OpenSkill | ChangeSkillAdvancement | AddSkill | RemoveSkill |
-	OpenTrait | AddTrait | RemoveTrait |
-	SwitchQuestionAnswer |
-	SelectApprWeapon | SelectMandApprWeapon | SelectJavelinOrBow | SelectAnySmith |
-	AddResource | RemoveResource |
-	AddBrutalLifeTrait | SetHuntingGround | ModifySpecialLifepathValue;
-
-// STATE
 interface StatSpending {
 	shade: number;
 	exponent: number;
@@ -174,6 +119,25 @@ interface CharacterLimits {
 	attributes: number;
 }
 
+interface StatRemaining {
+	eitherPool: number;
+	mentalPool: number;
+	physicalPool: number;
+}
+
+interface SkillRemaining {
+	generalPoints: number;
+	lifepathPoints: number;
+}
+
+interface TraitRemaining {
+	traitPoints: number;
+}
+
+interface ResourceRemaining {
+	resourcePoints: number;
+}
+
 interface CharacterBurnerState {
 	stock: StocksList;
 	concept: string;
@@ -188,4 +152,73 @@ interface CharacterBurnerState {
 	spendings: CharacterSpendings;
 	questions: CharacterQuestions;
 	stockSpecific: CharacterStockSpecific;
+
+	clearLifepathPaths: () => void;
+	clearTotals: () => void;
+	clearSpendings: () => void;
+	clearQuestions: () => void;
+
+	calculateTotals: (chosenLifepaths: Lifepath[]) => LifepathTotals;
+	checkIfTraitInCommonOrOpen: (questionTrait: string) => boolean;
+
+	refreshTotals: (generalSkills: string[], generalTraits: string[]) => void;
+	refreshStockLimits: () => void;
+	refreshSkillSpendings: () => void;
+	refreshTraitSpendings: () => void;
+	refreshAttributeSpendings: () => void;
+	refreshQuestions: () => void;
+	refreshStockSpecifics: () => void;
+
+	getMentalPointsTotal: () => number;
+	getPhysicalPointsTotal: () => number;
+	getStatShade: (statName: StatsList) => ShadesListLimited;
+	getStatExponent: (statName: StatsList) => number;
+	getStatRemainings: () => StatRemaining;
+	getAttributeShade: (attributeName: AttributesList) => ShadesList;
+	getAttributeExponent: (attributeName: AttributesList) => number;
+	getSkillOpenness: (skillName: SkillPath) => boolean;
+	getSkillShade: (skillName: SkillPath) => ShadesList;
+	getSkillExponent: (skillName: SkillPath) => number;
+	getSkillRemainings: () => SkillRemaining;
+	getTraitOpenness: (traitName: TraitPath) => boolean;
+	getTraitRemainings: () => TraitRemaining;
+	getResourceRemainings: () => ResourceRemaining;
+
+	changeStock: (stock: StocksList) => void;
+	changeConcept: (concept: string) => void;
+	changeName: (name: string) => void;
+	changeBelief: (index: number, belief: string) => void;
+	changeInstinct: (index: number, instinct: string) => void;
+
+	addLifepath: (lifepathPath: LifepathPath) => void;
+	removeLifepath: () => void;
+
+	changeStatShade: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, statName: StatsList) => void;
+	changeStatExponent: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, statName: StatsList, change: 1 | -1) => void;
+
+	changeAttributeShade: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, attributeName: AttributesList, change: 5 | -5) => void;
+
+	openSkill: (skillPath: SkillPath, toOpen: boolean, isLifepath: boolean) => void;
+	changeSkillExponent: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, skillPath: SkillPath, change: 1 | -1, isLifepath: boolean) => void;
+	addSkill: (skillPath: SkillPath) => void;
+	removeSkill: (skillPath: SkillPath) => void;
+
+	openTrait: (traitPath: TraitPath, toOpen: boolean, isLifepath: boolean) => void;
+	addTrait: (traitPath: TraitPath) => void;
+	removeTrait: (traitPath: TraitPath) => void;
+
+	switchAnswer: (questionKey: AttributeQuestionsKeys) => void;
+
+	selectAppropriateWeapon: (skillPath: SkillPath) => void;
+	selectMandatoryAppropriateWeapon: (skillPath: SkillPath) => void;
+	selectJavelinOrBow: (skillPath: SkillPath) => void;
+	selectAnySmith: (skillPath: SkillPath) => void;
+
+	addResource: (resource: SpendingForResource) => void;
+	removeResource: (guid: string) => void;
+
+	addBrutalLifeTrait: (traitPath: TraitPath | undefined) => void;
+	setHuntingGround: (huntingGround: HuntingGroundsList) => void;
+
+	modifySpecialLifepathValue: (value: { advisorToTheCourtYears: number; } | { princeOfTheBloodYears: number; } | { bondsmanOwnerLifepathPath: LifepathPath; }) => void;
 }

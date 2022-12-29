@@ -5,23 +5,21 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import TextField from "@mui/material/TextField";
 
-import { useAppSelector } from "../../../state/store";
-import { useStore } from "../../../hooks/useStore";
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 import { Stocks } from "../../../data/stocks/_stocks";
 
 import { GenericGrid } from "../../Shared/Grids";
 
 
 export function BasicsBlock() {
-	const { stock, concept, name, totals } = useAppSelector(state => state.characterBurner);
-	const { cbChangeStock, cbChangeConcept, cbChangeName } = useStore().characterBurner;
+	const { stock, concept, name, totals, changeStock, changeConcept, changeName } = useCharacterBurnerStore();
 
 	return (
 		<GenericGrid columns={6} center>
 			<Grid item xs={6} sm={2}>
 				<FormControl fullWidth variant="standard">
 					<InputLabel>Stock</InputLabel>
-					<Select value={stock} onChange={(e) => cbChangeStock(e.target.value as StocksList)}>
+					<Select value={stock} onChange={(e) => changeStock(e.target.value as StocksList)}>
 						{Object.keys(Stocks).map((stock, i) => <MenuItem key={i} value={stock}>{stock}</MenuItem>)}
 					</Select>
 				</FormControl>
@@ -51,7 +49,7 @@ export function BasicsBlock() {
 				<TextField
 					label="Name"
 					value={name}
-					onChange={(e) => cbChangeName(e.target.value)}
+					onChange={(e) => changeName(e.target.value)}
 					fullWidth
 					variant="standard"
 				/>
@@ -61,7 +59,7 @@ export function BasicsBlock() {
 				<TextField
 					label="Concept"
 					value={concept}
-					onChange={(e) => cbChangeConcept(e.target.value)}
+					onChange={(e) => changeConcept(e.target.value)}
 					fullWidth
 					variant="standard"
 				/>

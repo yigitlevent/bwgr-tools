@@ -1,15 +1,17 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
-import { GetMentalTotal, GetPhysicalTotal } from "../../../../utils/characterStatUtils";
+import { useCharacterBurnerStore } from "../../../../hooks/stores/useCharacterBurnerStore";
 
 
-export function RandomLifepathsBasics({ totals }: { totals: LifepathTotals; }) {
+export function RandomLifepathsBasics() {
+	const { totals, getMentalPointsTotal, getPhysicalPointsTotal } = useCharacterBurnerStore();
+	
 	const yearsExtension = totals.years.extensions.length > 0 ? `, plus ${totals.years.extensions.join(" ")}` : "";
 	const resourcesExtension = totals.resources.extensions.length > 0 ? `, plus ${totals.resources.extensions.join(" ")}` : "";
 
-	const mentalPool = GetMentalTotal(totals);
-	const physicalPool = GetPhysicalTotal(totals);
+	const mentalPool = getMentalPointsTotal();
+	const physicalPool = getPhysicalPointsTotal();
 	const eitherPool = (totals.stats.fromLifepaths.eitherPoints !== 0) ? `, (${totals.stats.fromLifepaths.eitherPoints > 0 ? "+" : ""}${totals.stats.fromLifepaths.eitherPoints}M/P)` : "";
 
 	const generalSkillExtension = totals.skills.generalPoints.extensions.length > 0 ? `, plus ${totals.skills.generalPoints.extensions.join(" ")}` : "";

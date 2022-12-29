@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
@@ -10,7 +10,6 @@ import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
-
 import LooksOneIcon from "@mui/icons-material/LooksOne";
 import LooksTwoIcon from "@mui/icons-material/LooksTwo";
 import Looks3Icon from "@mui/icons-material/Looks3";
@@ -18,17 +17,26 @@ import Looks4Icon from "@mui/icons-material/Looks4";
 import Looks5Icon from "@mui/icons-material/Looks5";
 import Looks6Icon from "@mui/icons-material/Looks6";
 
-import { useAppSelector } from "../../state/store";
-import { useStore } from "../../hooks/useStore";
-import { TestResult } from "../../state/reducers/diceRoller";
 import { Tests } from "../../data/tests";
 import { RandomNumber } from "../../utils/misc";
 import { GenericGrid } from "../Shared/Grids";
 
 
+interface TestResult {
+	dice: number[];
+	successes: number;
+	failures: number;
+	test: string;
+	usedFate: boolean;
+}
+
 export function DiceRoller() {
-	const { shade, dicePool, obstacle, isOpenEnded, isDoubleObstacle, result } = useAppSelector(state => state.diceRoller);
-	const { dirChangeShade, dirChangeDicePool, dirChangeObstacle, dirToggleIsOpenEnded, dirToggleIsDoubleObstacle, dirSetResult } = useStore().diceRoller;
+	const [shade, setShade] = useState("Black");
+	const [dicePool, setDicePool] = useState(1);
+	const [obstacle, setObstacle] = useState(1);
+	const [isOpenEnded, setIsOpenEnded] = useState(false);
+	const [isDoubleObstacle, setIsDoubleObstacle] = useState(false);
+	const [result, setResult] = useState<TestResult | undefined>(undefined);
 
 	const calculateResult = (dice: number[], usedFate: boolean) => {
 		let successes = 0;
@@ -46,7 +54,7 @@ export function DiceRoller() {
 					? "Routine"
 					: "Difficult";
 
-		dirSetResult(dice, successes, failures, test, usedFate);
+		setResult({ dice, successes, failures, test, usedFate });
 	};
 
 	const rerollFailure = (dice: number[]) => {
@@ -124,7 +132,7 @@ export function DiceRoller() {
 				<Grid item xs={6} sm={2} md={1}>
 					<FormControl fullWidth variant="standard">
 						<InputLabel>Shade</InputLabel>
-						<Select value={shade} onChange={(e) => dirChangeShade(e.target.value)}>
+						<Select value={shade} onChange={e => setShade(e.target.value)}>
 							<MenuItem value={"Black"}>Black</MenuItem>
 							<MenuItem value={"Gray"}>Gray</MenuItem>
 							<MenuItem value={"White"}>White</MenuItem>
@@ -137,7 +145,7 @@ export function DiceRoller() {
 						label="Dice Pool"
 						inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
 						value={dicePool}
-						onChange={(e) => dirChangeDicePool(parseInt(e.target.value))}
+						onChange={e => setDicePool(parseInt(e.target.value))}
 						fullWidth
 						variant="standard"
 					/>
@@ -148,7 +156,7 @@ export function DiceRoller() {
 						label="Obstacle"
 						inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
 						value={obstacle}
-						onChange={(e) => dirChangeObstacle(parseInt(e.target.value))}
+						onChange={e => setObstacle(parseInt(e.target.value))}
 						fullWidth
 						variant="standard"
 					/>
@@ -158,7 +166,7 @@ export function DiceRoller() {
 					<FormControlLabel
 						label="Is Open Ended?"
 						labelPlacement="start"
-						control={<Checkbox checked={isOpenEnded} onChange={dirToggleIsOpenEnded} />}
+						control={<Checkbox checked={isOpenEnded} onChange={(e, c) => setIsOpenEnded(c)} />}
 					/>
 				</Grid>
 
@@ -166,7 +174,7 @@ export function DiceRoller() {
 					<FormControlLabel
 						label="Is Double Obstacle?"
 						labelPlacement="start"
-						control={<Checkbox checked={isDoubleObstacle} onChange={dirToggleIsDoubleObstacle} />}
+						control={<Checkbox checked={isDoubleObstacle} onChange={(e, c) => setIsDoubleObstacle(c)} />}
 					/>
 				</Grid>
 

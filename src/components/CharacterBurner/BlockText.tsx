@@ -59,7 +59,7 @@ export function BlockSkillPopover({ skillName, checkbox, deleteCallback }: Block
 }
 
 interface BlockTraitPopoverProps {
-	traitName: string;
+	traitPath: string;
 	checkbox?: {
 		checked: boolean;
 		disabled?: boolean;
@@ -68,7 +68,7 @@ interface BlockTraitPopoverProps {
 	deleteCallback?: () => void;
 }
 
-export function BlockTraitPopover({ traitName, checkbox, deleteCallback }: BlockTraitPopoverProps) {
+export function BlockTraitPopover({ traitPath: traitName, checkbox, deleteCallback }: BlockTraitPopoverProps) {
 	return (
 		<Grid item>
 			{checkbox

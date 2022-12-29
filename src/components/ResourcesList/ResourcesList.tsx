@@ -15,14 +15,11 @@ import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 
-import { useAppSelector } from "../../state/store";
-import { useStore } from "../../hooks/useStore";
+import { useRulesetStore } from "../../hooks/stores/useRulesetStore";
 import { Resource, Resources } from "../../data/resources/_resources";
-
 import { useSearch } from "../../hooks/useSearch";
 
 import { GenericGrid } from "../Shared/Grids";
-import { CheckDatasets } from "../../utils/checkDatasets";
 
 
 export function ResourceItem({ resource }: { resource: Resource; }) {
@@ -101,24 +98,37 @@ export function ResourceItem({ resource }: { resource: Resource; }) {
 }
 
 export function ResourcesList() {
-	const { datasets } = useAppSelector(state => state.dataset);
-	const { stock } = useAppSelector(state => state.resourceList);
-	const { rscChangeStock } = useStore().resourceList;
-	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Resource>(Resources[stock].resources);
+	const { checkRulesets, resourceStock, changeResourceStock } = useRulesetStore();
+	const { searchString, setSearchString, searchFields, setSearchFields, setList, searchResults } = useSearch<Resource>(Resources[resourceStock].resources);
 
 	const [searchParams, setSearchParams] = useSearchParams();
+
+	const allowedCategories = Object.values(Resources).filter(v => checkRulesets(v.allowed));
+
+	useEffect(() => {
+		if (!(allowedCategories.map(v => v.name).includes(resourceStock))) {
+			changeResourceStock(allowedCategories[0].name as StocksList);
+		}
+	}, [allowedCategories, changeResourceStock, resourceStock]);
 
 	useEffect(() => {
 		const arr = [...searchParams.entries()];
 		const prms: { [key: string]: string; } = {};
 		for (const item in arr) { prms[arr[item][0]] = arr[item][1]; }
-		prms["stock"] = stock;
+		prms["stock"] = resourceStock;
 		setSearchParams(prms);
-	}, [searchParams, setSearchParams, stock]);
+	}, [resourceStock, searchParams, setSearchParams]);
 
 	useEffect(() => {
-		setList(Resources[stock].resources);
-	}, [setList, stock]);
+		const arr = [...searchParams.entries()];
+		const prms: { [key: string]: string; } = {};
+		for (const item in arr) { prms[arr[item][0]] = arr[item][1]; }
+		if ("stock" in prms) { changeResourceStock(prms["stock"] as StocksList); }
+	}, [changeResourceStock, searchParams]);
+
+	useEffect(() => {
+		setList(Resources[resourceStock].resources);
+	}, [setList, resourceStock]);
 
 	return (
 		<Fragment>
@@ -128,8 +138,12 @@ export function ResourcesList() {
 				<Grid item xs={4} sm={4} md={2}>
 					<FormControl variant="standard" fullWidth>
 						<InputLabel>Resource Stock</InputLabel>
-						<Select label="Resource Stock" value={stock} onChange={rscChangeStock} placeholder="Select a stock">
-							{Object.values(Resources).filter(v => CheckDatasets(datasets, v.allowed)).map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
+						<Select
+							label="Resource Stock"
+							value={allowedCategories.map(v => v.name).includes(resourceStock) ? resourceStock : allowedCategories[0].name}
+							onChange={v => changeResourceStock(v.target.value as StocksList)}
+						>
+							{allowedCategories.map((v, i) => <MenuItem key={i} value={v.name}>{v.name}</MenuItem>)}
 						</Select>
 					</FormControl>
 				</Grid>
@@ -163,7 +177,6 @@ export function ResourcesList() {
 			</GenericGrid>
 
 			<GenericGrid columns={1}>
-
 				{searchResults.length > 0
 					? searchResults.map((resource, i) =>
 						<Grid item xs={1} key={i}>

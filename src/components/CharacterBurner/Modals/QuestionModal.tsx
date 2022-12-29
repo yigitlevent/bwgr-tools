@@ -4,16 +4,14 @@ import Modal from "@mui/material/Modal";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 import { AttributeQuestions, AttributeQuestionsKeys } from "../../../data/attributes";
-import { useStore } from "../../../hooks/useStore";
-import { useAppSelector } from "../../../state/store";
 
 import { GenericGrid } from "../../Shared/Grids";
 
 
 export function QuestionModal({ openQu, openQuModal }: { openQu: boolean; openQuModal: (open: boolean) => void; }) {
-	const { questions } = useAppSelector(state => state.characterBurner);
-	const { cbSwitchAnswer } = useStore().characterBurner;
+	const { questions, switchAnswer } = useCharacterBurnerStore();
 
 	return (
 		<Modal open={openQu} onClose={() => openQuModal(false)}>
@@ -26,7 +24,7 @@ export function QuestionModal({ openQu, openQuModal }: { openQu: boolean; openQu
 							const isTrue = questions[qkey];
 							return (
 								<Grid key={i} item xs={1}>
-									<Checkbox checked={isTrue} onChange={() => cbSwitchAnswer(qkey)} sx={{ margin: "0 0 3px", padding: 0, display: "inline-block", height: "24px" }} />
+									<Checkbox checked={isTrue} onChange={() => switchAnswer(qkey)} sx={{ margin: "0 0 3px", padding: 0, display: "inline-block", height: "24px" }} />
 									<Typography sx={{ display: "inline", margin: "6px 0 0 8px" }}>
 										{question}
 									</Typography>

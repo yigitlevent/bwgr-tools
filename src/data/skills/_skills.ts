@@ -26,7 +26,7 @@ export interface Skill {
 
 export interface SkillCategory {
 	allowed: Ruleset[];
-	name: string;
+	name: SkillCategoryPath;
 	skills: Skill[];
 }
 

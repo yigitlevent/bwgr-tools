@@ -10,16 +10,15 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
 
-import { useAppSelector } from "../../state/store";
-import { useStore } from "../../hooks/useStore";
+import { usePracticePlannerStore } from "../../hooks/stores/usePracticePlannerStore";
 import { PracticeTable } from "../../data/tables";
-import { PracticePlannerCell } from "./PracticePlannerCell";
+
 import { GenericGrid } from "../Shared/Grids";
+import { PracticePlannerCell } from "./PracticePlannerCell";
 
 
 export function PracticePlanner(): JSX.Element {
-	const { days, hours, cells } = useAppSelector(state => state.practicePlanner);
-	const { prpChangeDays, prpChangeHours, prpAddCells, prpAddPractice } = useStore().practicePlanner;
+	const { days, hours, cells, changeDays, changeHours, addCells, addPractice } = usePracticePlannerStore();
 
 	const [notification, setNotification] = useState<null | JSX.Element>(null);
 
@@ -35,7 +34,7 @@ export function PracticePlanner(): JSX.Element {
 						label="Number of Days"
 						inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
 						value={days}
-						onChange={prpChangeDays}
+						onChange={e => changeDays(e.target.value)}
 						variant="standard"
 					/>
 				</Grid>
@@ -45,17 +44,17 @@ export function PracticePlanner(): JSX.Element {
 						label="Number of Hours per Day"
 						inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
 						value={hours}
-						onChange={prpChangeHours}
+						onChange={e => changeHours(e.target.value)}
 						variant="standard"
 					/>
 				</Grid>
 
 				<Grid item>
-					<Button variant="outlined" onClick={() => prpAddCells(days, hours)}>Add Days</Button>
+					<Button variant="outlined" onClick={() => addCells(days, hours)}>Add Days</Button>
 				</Grid>
 			</GenericGrid>
 
-			<form onSubmit={(e) => prpAddPractice(e, cells, setNotification)}>
+			<form onSubmit={e => addPractice(e, cells, setNotification)}>
 				<GenericGrid columns={5} center>
 					<Grid item xs={4} sm={2} md={1}>
 						<FormControl fullWidth variant="standard">

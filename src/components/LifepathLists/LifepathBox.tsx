@@ -2,18 +2,17 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 
+import { useRulesetStore } from "../../hooks/stores/useRulesetStore";
 import type { Lifepath } from "../../data/stocks/_stocks";
 import { Stocks } from "../../data/stocks/_stocks";
 
 import { LifepathSkills } from "./LifepathSkills";
 import { LifepathTraits } from "./LifepathTraits";
 import { LifepathRequirements } from "./LifepathRequirements";
-import { useAppSelector } from "../../state/store";
-import { CheckDatasets } from "../../utils/checkDatasets";
 
 
 export function LifepathBox({ lifepath }: { lifepath: Lifepath; }) {
-	const { datasets } = useAppSelector(state => state.dataset);
+	const { checkRulesets } = useRulesetStore();
 
 	const getYears = (l: Lifepath) => {
 		return l.years + (typeof l.years !== "number" ? "" : (l.skillPool > 1) ? "yrs" : "yr");
@@ -40,7 +39,7 @@ export function LifepathBox({ lifepath }: { lifepath: Lifepath; }) {
 			: l.leads
 				.filter((lead) => {
 					const path = lead.split("➞");
-					return CheckDatasets(datasets, Stocks[path[0]].settings[path[1]].allowed);
+					return checkRulesets(Stocks[path[0]].settings[path[1]].allowed);
 				})
 				.map((lead) => {
 					const path = lead.split("➞");

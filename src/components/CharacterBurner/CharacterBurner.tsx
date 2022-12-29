@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 
 import Typography from "@mui/material/Typography";
 
-import { useAppSelector } from "../../state/store";
+import { useCharacterBurnerStore } from "../../hooks/stores/useCharacterBurnerStore";
 
 import { BlockDivider } from "./BlockDivider";
 import { StatsBlock } from "./Blocks/StatsBlock";
@@ -25,7 +25,7 @@ import { InstinctsBlock } from "./Blocks/InstinctsBlock";
 
 
 export function CharacterBurner(): JSX.Element {
-	const { totals } = useAppSelector(state => state.characterBurner);
+	const { totals } = useCharacterBurnerStore();
 
 	const [openLp, openLpModal] = useState(false);
 	const [openRl, openRlModal] = useState(false);

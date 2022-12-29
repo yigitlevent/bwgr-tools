@@ -8,10 +8,9 @@ import Paper from "@mui/material/Paper";
 import Autocomplete from "@mui/material/Autocomplete";
 import Typography from "@mui/material/Typography";
 
-import { useAppSelector } from "../../../state/store";
-import { useStore } from "../../../hooks/useStore";
+import { useRulesetStore } from "../../../hooks/stores/useRulesetStore";
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 import { SkillCategories } from "../../../data/skills/_skills";
-import { CheckDatasets } from "../../../utils/checkDatasets";
 import { GetSkillFromPath } from "../../../utils/pathFinder";
 import { GetSkillRestrictionString } from "../../../utils/getSkillRestriction";
 
@@ -19,9 +18,8 @@ import { GenericGrid } from "../../Shared/Grids";
 
 
 export function GeneralSkillModal({ open, setOpen }: { open: boolean; setOpen: (open: boolean) => void; }) {
-	const { datasets } = useAppSelector(state => state.dataset);
-	const { stock, totals, spendings } = useAppSelector(state => state.characterBurner);
-	const { cbAddSkill } = useStore().characterBurner;
+	const { checkRulesets } = useRulesetStore();
+	const { stock, totals, spendings, addSkill } = useCharacterBurnerStore();
 
 	const [chosenSkill, setChosenSkill] = useState("");
 
@@ -30,7 +28,7 @@ export function GeneralSkillModal({ open, setOpen }: { open: boolean; setOpen: (
 		for (const categoryKey in SkillCategories) {
 			const category = SkillCategories[categoryKey];
 
-			const allowedByDataset = CheckDatasets(datasets, category.allowed);
+			const allowedByDataset = checkRulesets(category.allowed);
 			if (!allowedByDataset) continue;
 			const allowedByCategory = !(category.name.endsWith("Common") || category.name.endsWith("Lifepath"));
 			if (!allowedByCategory) continue;
@@ -39,7 +37,7 @@ export function GeneralSkillModal({ open, setOpen }: { open: boolean; setOpen: (
 				const skill = category.skills[skillKey];
 				const skillPath = `${category.name}➞${skill.name}`;
 
-				const allowedByDataset = CheckDatasets(datasets, skill.allowed);
+				const allowedByDataset = checkRulesets(skill.allowed);
 				const notInLists = !(totals.skills.mandatoryList.includes(skillPath) || totals.skills.lifepathList.includes(skillPath));
 				const rest = skill.restriction.split("➞");
 				const allowedByStockAndAttribute = (rest.length === 1) || (rest.length === 2 && rest[1] === stock)
@@ -50,7 +48,7 @@ export function GeneralSkillModal({ open, setOpen }: { open: boolean; setOpen: (
 			}
 		}
 		return possibilities;
-	}, [datasets, spendings, stock, totals]);
+	}, [checkRulesets, spendings, stock, totals]);
 
 	const resetDefaultChosen = useCallback(() => {
 		setChosenSkill(getPossible()[0]);
@@ -58,13 +56,13 @@ export function GeneralSkillModal({ open, setOpen }: { open: boolean; setOpen: (
 
 	const addNewTrait = () => {
 		setOpen(false);
-		cbAddSkill(chosenSkill as SkillPath);
+		addSkill(chosenSkill as SkillPath);
 		resetDefaultChosen();
 	};
 
 	useEffect(() => {
 		resetDefaultChosen();
-	}, [resetDefaultChosen, datasets]);
+	}, [resetDefaultChosen]);
 
 	const skill = chosenSkill.length > 0 ? GetSkillFromPath(chosenSkill) : undefined;
 

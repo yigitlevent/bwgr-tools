@@ -2,27 +2,27 @@ import { useCallback, useEffect, useState } from "react";
 import Fuse from "fuse.js";
 import { useSearchParams } from "react-router-dom";
 
-import { useAppSelector } from "../state/store";
-import { CheckDatasets } from "../utils/checkDatasets";
+import { useRulesetStore } from "./stores/useRulesetStore";
+
 
 type List<T> = (T & { allowed: Ruleset[]; })[];
 
 export function useSearch<T>(list: List<T>) {
 	const [searchParams, setSearchParams] = useSearchParams();
-	const { datasets } = useAppSelector(state => state.dataset);
+	const { checkRulesets } = useRulesetStore();
 
 	const s = searchParams.get("s");
 	const sf = searchParams.get("sf");
 
-	const [mainList, setMainList] = useState<List<T>>(list.filter(v => CheckDatasets(datasets, v.allowed)));
-	const [searchResults, setSearchResults] = useState<List<T>>(list.filter(v => CheckDatasets(datasets, v.allowed)));
+	const [mainList, setMainList] = useState<List<T>>(list.filter(v => checkRulesets(v.allowed)));
+	const [searchResults, setSearchResults] = useState<List<T>>(list.filter(v => checkRulesets(v.allowed)));
 
 	const [searchString, setSearchString] = useState(s ? s : "");
 	const [searchFields, setSearchFields] = useState<string[]>(sf ? sf.split(",") : []);
 
 	const setList = useCallback((newList: List<T>) => {
-		setMainList(newList.filter(v => CheckDatasets(datasets, v.allowed)));
-	}, [datasets]);
+		setMainList(newList.filter(v => checkRulesets(v.allowed)));
+	}, [checkRulesets]);
 
 	const search = useCallback(() => {
 		let res = [];
@@ -38,8 +38,8 @@ export function useSearch<T>(list: List<T>) {
 			res = results.map(x => x.item);
 		}
 		else { res = mainList; }
-		setSearchResults(res.filter(v => CheckDatasets(datasets, v.allowed)));
-	}, [datasets, mainList, searchFields, searchString]);
+		setSearchResults(res.filter(v => checkRulesets(v.allowed)));
+	}, [checkRulesets, mainList, searchFields, searchString]);
 
 	useEffect(() => {
 		const arr = [...searchParams.entries()];

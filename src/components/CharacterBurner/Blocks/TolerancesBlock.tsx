@@ -10,23 +10,22 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
-import { useAppSelector } from "../../../state/store";
-import { GetStatExponent } from "../../../utils/characterStatUtils";
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 import { GetAverage } from "../../../utils/misc";
 
 import { GenericGrid } from "../../Shared/Grids";
 
 
 export function TolerancesBlock() {
-	const { spendings } = useAppSelector(state => state.characterBurner);
+	const { spendings, getStatExponent } = useCharacterBurnerStore();
 
 	const [tolerances, setTolerances] = useState<string[]>(Array(16).fill("—"));
 
 	useEffect(() => {
 		const ptgs: string[] = Array(16).fill("—");
 
-		const powerExp = GetStatExponent("Power", spendings);
-		const forteExp = GetStatExponent("Forte", spendings);
+		const powerExp = getStatExponent("Power");
+		const forteExp = getStatExponent("Forte");
 
 		const maxDistance = Math.ceil(forteExp / 2);
 
@@ -52,7 +51,7 @@ export function TolerancesBlock() {
 		}
 
 		setTolerances(ptgs);
-	}, [spendings]);
+	}, [getStatExponent, spendings]);
 
 	return (
 		<GenericGrid columns={16} spacing={[0, 1]} center>

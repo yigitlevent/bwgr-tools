@@ -3,10 +3,8 @@ import { Fragment } from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 
-import { useAppSelector } from "../../../state/store";
-import { useStore } from "../../../hooks/useStore";
+import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 import { Attributes } from "../../../data/attributes";
-import { GetAttributeExponent, GetAttributeShade } from "../../../utils/characterAttributeUtils";
 
 import { GenericGrid } from "../../Shared/Grids";
 import { BlockText } from "../BlockText";
@@ -14,8 +12,7 @@ import { AbilityButton } from "../../Shared/AbilityButton";
 
 
 export function AttributesBlock() {
-	const { stock, lifepathPaths, totals, spendings, questions, stockSpecific } = useAppSelector(state => state.characterBurner);
-	const { cbChangeAttributeShade } = useStore().characterBurner;
+	const { totals, spendings, getAttributeShade, getAttributeExponent, changeAttributeShade } = useCharacterBurnerStore();
 
 	return (
 		<GenericGrid columns={6} center spacing={[0, 2]}>
@@ -34,16 +31,16 @@ export function AttributesBlock() {
 									{v.hasShade
 										? <AbilityButton
 											name={v.name}
-											disabled={GetAttributeExponent(v.name, stock, lifepathPaths, totals, spendings, questions, stockSpecific) < 6}
-											onClick={e => cbChangeAttributeShade(e, v.name, 5)}
-											onContextMenu={e => cbChangeAttributeShade(e, v.name, -5)}
+											disabled={getAttributeExponent(v.name) < 6}
+											onClick={e => changeAttributeShade(e, v.name, 5)}
+											onContextMenu={e => changeAttributeShade(e, v.name, -5)}
 										>
-											{GetAttributeShade(v.name, spendings)}
+											{getAttributeShade(v.name)}
 										</AbilityButton>
 										: null
 									}
 									<AbilityButton name={v.name} disabled>
-										{GetAttributeExponent(v.name, stock, lifepathPaths, totals, spendings, questions, stockSpecific)}
+										{getAttributeExponent(v.name)}
 									</AbilityButton>
 								</Grid>
 							</GenericGrid>
