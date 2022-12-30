@@ -23,6 +23,8 @@ import { StockSpecificModal } from "./Modals/StockSpecialModal";
 import { BeliefsBlock } from "./Blocks/BeliefsBlock";
 import { InstinctsBlock } from "./Blocks/InstinctsBlock";
 
+import { CharacterBurnerChecklist } from "./CharacterBurnerChecklist";
+
 
 export function CharacterBurner(): JSX.Element {
 	const { totals } = useCharacterBurnerStore();
@@ -72,6 +74,8 @@ export function CharacterBurner(): JSX.Element {
 				</Fragment>
 				: null
 			}
+
+			<CharacterBurnerChecklist />
 		</Fragment>
 	);
 }

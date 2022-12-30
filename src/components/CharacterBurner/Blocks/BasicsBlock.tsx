@@ -45,7 +45,7 @@ export function BasicsBlock() {
 				/>
 			</Grid>
 
-			<Grid item xs={6} sm={6} md={3}>
+			<Grid item xs={6} sm={6} md={2}>
 				<TextField
 					label="Name"
 					value={name}
@@ -55,7 +55,7 @@ export function BasicsBlock() {
 				/>
 			</Grid>
 
-			<Grid item xs={6} sm={6} md={3}>
+			<Grid item xs={6} sm={6} md={4}>
 				<TextField
 					label="Concept"
 					value={concept}

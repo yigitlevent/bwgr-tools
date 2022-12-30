@@ -1,7 +1,6 @@
 export const EnablePersist = import.meta.env.MODE !== "development";
 
 const Versions: { [key: string]: number; } = {
-	interface: 1,
 	ruleset: 1,
 	characterBurner: 1,
 	lifepathRandomizer: 1,
@@ -16,7 +15,6 @@ function GetVersion(key: string) {
 	return EnablePersist ? Versions[key] : Math.round(Math.random() * 100000);
 }
 
-export const InterfaceStoreVersion = GetVersion("interface");
 export const RulesetStoreVersion = GetVersion("rulesetStore");
 export const CharacterBurnerStoreVersion = GetVersion("characterBurner");
 export const LifepathRandomizerStoreVersion = GetVersion("lifepathRandomizer");

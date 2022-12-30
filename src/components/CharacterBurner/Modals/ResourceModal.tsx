@@ -254,8 +254,8 @@ export function ResourceModal({ openRe, openReModal }: { openRe: boolean; openRe
 					</Grid>
 
 					{costs
-						? <Grid item xs={6}>
-							<Typography>{getTotalCost(getModifiers(costs))}</Typography>
+						? <Grid item>
+							<Typography sx={{ marginTop: 2, marginBottom: 2 }}>Total Cost: {getTotalCost(getModifiers(costs))}</Typography>
 						</Grid>
 						: null
 					}
