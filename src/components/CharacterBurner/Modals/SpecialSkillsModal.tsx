@@ -120,10 +120,10 @@ export function AnySmithSelection() {
 }
 
 export function SpecialSkillsModal({ openSu, openSuModal }: { openSu: boolean; openSuModal: (open: boolean) => void; }) {
-	const { totals } = useCharacterBurnerStore();
+	const { checkHasSkill } = useCharacterBurnerStore();
 
-	const hasSkill = (skillName: string) => {
-		return totals.skills.mandatoryList.includes(skillName) || totals.skills.lifepathList.includes(skillName);
+	const hasSkill = (skillName: SkillPath) => {
+		return checkHasSkill(skillName);
 	};
 
 	return (

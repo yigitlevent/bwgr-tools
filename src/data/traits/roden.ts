@@ -719,14 +719,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "A tough character may round up when determining his mortal wound.",
-			name: "Tough",
-			stock: "Roden",
-			type: "Die"
-		},
-		{
-			allowed: ["bwc"],
-			cost: 0,
 			description: "The Below is a dark place and those who live there have adapted. Your character can see as normal in low-lit areas but not in complete darkness. Those looking directly into these eyes will see glowing green orbs staring back. Reduces penalties for dim light by one step.",
 			name: "Tunnel Vision",
 			stock: "Roden",

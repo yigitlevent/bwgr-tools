@@ -111,6 +111,24 @@ export const useCharacterBurnerStore = create<CharacterBurnerState>()(
 					}
 				},
 
+				checkHasLifepath: (lifepathPath: LifepathPath) => {
+					const state = get();
+					return (state.lifepathPaths.includes(lifepathPath));
+				},
+				checkHasSkill: (skillPath: SkillPath) => {
+					const state = get();
+					return (state.totals.skills.mandatoryList.includes(skillPath)
+						|| state.totals.skills.lifepathList.includes(skillPath)
+						|| state.totals.skills.generalList.includes(skillPath));
+				},
+				checkHasTrait: (traitPath: TraitPath) => {
+					const state = get();
+					return (state.totals.traits.commonList.includes(traitPath)
+						|| state.totals.traits.mandatoryList.includes(traitPath)
+						|| state.totals.traits.lifepathList.includes(traitPath)
+						|| state.totals.traits.generalList.includes(traitPath));
+				},
+
 				calculateTotals: (chosenLifepaths: Lifepath[]) => {
 					const occuranceCount = (chosenLifepaths: Lifepath[], currentLifepath: Lifepath, currentIndex: number) => {
 						const previousLifepaths = chosenLifepaths.slice(0, currentIndex);
@@ -374,20 +392,20 @@ export const useCharacterBurnerStore = create<CharacterBurnerState>()(
 				},
 				refreshStockLimits: () => {
 					set(produce<CharacterBurnerState>((state) => {
-						if (state.totals.traits.commonList.includes("Dwarf Common➞Stout")) {
+						if (state.checkHasTrait("Dwarf Common➞Stout")) {
 							state.limits.stats.Forte = { min: 1, max: 9 };
 							state.limits.stats.Speed = { min: 1, max: 6 };
 						}
-						if (state.totals.traits.commonList.includes("Elf Common➞First Born")) {
+						if (state.checkHasTrait("Elf Common➞First Born")) {
 							state.limits.stats.Perception = { min: 1, max: 9 };
 						}
-						if (state.totals.traits.commonList.includes("Troll Common➞Massive Stature")) {
+						if (state.checkHasTrait("Troll Common➞Massive Stature")) {
 							state.limits.stats.Power = { min: 4, max: 9 };
 							state.limits.stats.Forte = { min: 4, max: 9 };
 							state.limits.stats.Agility = { min: 1, max: 5 };
 							state.limits.stats.Speed = { min: 1, max: 5 };
 						}
-						if (state.totals.traits.commonList.includes("Great Wolf Common➞Great Lupine Form")) {
+						if (state.checkHasTrait("Great Wolf Common➞Great Lupine Form")) {
 							state.limits.stats.Agility = { min: 1, max: 6 };
 						}
 					}));

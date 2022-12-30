@@ -18,7 +18,7 @@ import { GenericGrid } from "../../Shared/Grids";
 
 export function GeneralTraitModal({ open, setOpen }: { open: boolean; setOpen: (open: boolean) => void; }) {
 	const { checkRulesets } = useRulesetStore();
-	const { stock, totals, addTrait, getTraitRemainings } = useCharacterBurnerStore();
+	const { stock, addTrait, getTraitRemainings, checkHasTrait } = useCharacterBurnerStore();
 
 	const [chosenTrait, setChosenTrait] = useState("");
 
@@ -34,13 +34,12 @@ export function GeneralTraitModal({ open, setOpen }: { open: boolean; setOpen: (
 
 			for (const traitKey in category.traits) {
 				const trait = category.traits[traitKey];
-				const traitPath = `${category.name}➞${trait.name}`;
+				const traitPath: TraitPath = `${category.name}➞${trait.name}`;
 				const traitRemaining = getTraitRemainings();
 
 				const allowedByDataset = checkRulesets(trait.allowed);
 				const allowedByStock = trait.stock === "Any" || trait.stock === stock;
-				const notInLists = !(totals.traits.commonList.includes(traitPath) || totals.traits.mandatoryList.includes(traitPath)
-					|| totals.traits.lifepathList.includes(traitPath) || totals.traits.generalList.includes(traitPath));
+				const notInLists = !checkHasTrait(traitPath);
 				const canPayCost = traitRemaining.traitPoints >= trait.cost;
 				if (allowedByDataset && allowedByStock && notInLists && canPayCost) {
 					possibilities.push(traitPath);
@@ -48,7 +47,7 @@ export function GeneralTraitModal({ open, setOpen }: { open: boolean; setOpen: (
 			}
 		}
 		return possibilities;
-	}, [checkRulesets, getTraitRemainings, stock, totals]);
+	}, [checkHasTrait, checkRulesets, getTraitRemainings, stock]);
 
 	const resetDefaultChosen = useCallback(() => {
 		setChosenTrait(getPossible()[0]);

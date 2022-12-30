@@ -17,7 +17,7 @@ import { GenericGrid } from "../../Shared/Grids";
 
 
 export function TolerancesBlock() {
-	const { spendings, getStatExponent } = useCharacterBurnerStore();
+	const { checkHasTrait, getStatExponent } = useCharacterBurnerStore();
 
 	const [tolerances, setTolerances] = useState<string[]>(Array(16).fill("—"));
 
@@ -29,7 +29,10 @@ export function TolerancesBlock() {
 
 		const maxDistance = Math.ceil(forteExp / 2);
 
-		const mortalWound = Math.floor(GetAverage([powerExp, forteExp])) + 6;
+		const mortalWound = (checkHasTrait("Any Die➞Tough") || checkHasTrait("Dwarf Common➞Tough") || checkHasTrait("Troll Common➞Tough"))
+			? Math.ceil(GetAverage([powerExp, forteExp])) + 6
+			: Math.floor(GetAverage([powerExp, forteExp])) + 6;
+
 		let traumatic = mortalWound - 1;
 		let severe = mortalWound - 2;
 		let midi = mortalWound - 3;
@@ -51,7 +54,7 @@ export function TolerancesBlock() {
 		}
 
 		setTolerances(ptgs);
-	}, [getStatExponent, spendings]);
+	}, [checkHasTrait, getStatExponent]);
 
 	return (
 		<GenericGrid columns={16} spacing={[0, 1]} center>

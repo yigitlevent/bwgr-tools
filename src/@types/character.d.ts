@@ -153,6 +153,10 @@ interface CharacterBurnerState {
 	questions: CharacterQuestions;
 	stockSpecific: CharacterStockSpecific;
 
+	checkHasLifepath: (lifepathPath: LifepathPath) => boolean;
+	checkHasSkill: (skillPath: SkillPath) => boolean;
+	checkHasTrait: (traitPath: TraitPath) => boolean;
+
 	clearLifepathPaths: () => void;
 	clearTotals: () => void;
 	clearSpendings: () => void;

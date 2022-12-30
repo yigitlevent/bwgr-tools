@@ -56,7 +56,7 @@ export const TrollCommon: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "Trolls are embodiment of though. Round up when factoring Mortal Wound.",
+			description: "Trolls are embodiment of tough. Round up when factoring Mortal Wound.",
 			name: "Tough",
 			stock: "Troll",
 			type: "Die"

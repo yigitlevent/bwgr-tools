@@ -19,7 +19,7 @@ import { GenericGrid } from "../../Shared/Grids";
 
 export function GeneralSkillModal({ open, setOpen }: { open: boolean; setOpen: (open: boolean) => void; }) {
 	const { checkRulesets } = useRulesetStore();
-	const { stock, totals, spendings, addSkill } = useCharacterBurnerStore();
+	const { stock, totals, spendings, addSkill, checkHasSkill } = useCharacterBurnerStore();
 
 	const [chosenSkill, setChosenSkill] = useState("");
 
@@ -35,10 +35,10 @@ export function GeneralSkillModal({ open, setOpen }: { open: boolean; setOpen: (
 
 			for (const skillKey in category.skills) {
 				const skill = category.skills[skillKey];
-				const skillPath = `${category.name}➞${skill.name}`;
+				const skillPath: SkillPath = `${category.name}➞${skill.name}`;
 
 				const allowedByDataset = checkRulesets(skill.allowed);
-				const notInLists = !(totals.skills.mandatoryList.includes(skillPath) || totals.skills.lifepathList.includes(skillPath));
+				const notInLists = !checkHasSkill(skillPath);
 				const rest = skill.restriction.split("➞");
 				const allowedByStockAndAttribute = (rest.length === 1) || (rest.length === 2 && rest[1] === stock)
 					|| (rest.length === 4 && rest[1] === stock && rest[3] in spendings.attributes);
