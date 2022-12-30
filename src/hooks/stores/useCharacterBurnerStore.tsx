@@ -940,13 +940,19 @@ export const useCharacterBurnerStore = create<CharacterBurnerState>()(
 						const remaining = state.getStatRemainings();
 						const key = (Stats.find(v => v.name === statName) as Stat).pool === "Mental" ? "mentalPool" : "physicalPool";
 
+						const totalSpent = (state.spendings.stats[statName][key] as StatSpending).exponent + state.spendings.stats[statName].eitherPool.exponent;
+
 						if (change === 1) {
-							if (remaining[key] > 0) (state.spendings.stats[statName][key] as StatSpending).exponent += 1;
-							else if (remaining.eitherPool > 0) state.spendings.stats[statName].eitherPool.exponent += 1;
+							if (totalSpent < state.limits.stats[statName].max) {
+								if (remaining[key] > 0) (state.spendings.stats[statName][key] as StatSpending).exponent += 1;
+								else if (remaining.eitherPool > 0) state.spendings.stats[statName].eitherPool.exponent += 1;
+							}
 						}
 						else if (change === -1) {
-							if (state.spendings.stats[statName].eitherPool.exponent > 0) state.spendings.stats[statName].eitherPool.exponent -= 1;
-							else if ((state.spendings.stats[statName][key] as StatSpending).exponent > 0) (state.spendings.stats[statName][key] as StatSpending).exponent -= 1;
+							if (totalSpent > state.limits.stats[statName].min) {
+								if (state.spendings.stats[statName].eitherPool.exponent > 0) state.spendings.stats[statName].eitherPool.exponent -= 1;
+								else if ((state.spendings.stats[statName][key] as StatSpending).exponent > 0) (state.spendings.stats[statName][key] as StatSpending).exponent -= 1;
+							}
 						}
 					}));
 				},
@@ -996,12 +1002,8 @@ export const useCharacterBurnerStore = create<CharacterBurnerState>()(
 				},
 				changeSkillExponent: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, skillPath: SkillPath, change: 1 | -1, isLifepath: boolean) => {
 					e.preventDefault();
-					const state = get();
-					const remainings = state.getSkillRemainings();
-					console.log({ isLifepath });
-					console.log({ remainings });
-
 					set(produce<CharacterBurnerState>((state) => {
+						const remainings = state.getSkillRemainings();
 						if (change === 1) {
 							if (isLifepath && remainings.lifepathPoints > 0) state.spendings.skills[skillPath].lifepath.advance += 1;
 							else if (isLifepath && remainings.generalPoints > 0) state.spendings.skills[skillPath].general.advance += 1;
