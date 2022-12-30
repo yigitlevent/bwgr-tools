@@ -496,7 +496,7 @@ export const useCharacterBurnerStore = create<CharacterBurnerState>()(
 						state.questions = newQuestions;
 					}));
 				},
-				refreshStockSpecifics: () => {
+				resetStockSpecifics: () => {
 					set(produce<CharacterBurnerState>((state) => {
 						if (state.stockSpecific.brutalLife.traits.length > 0) {
 							const brutalLifeTraits = state.stockSpecific.brutalLife.traits;
@@ -877,7 +877,7 @@ export const useCharacterBurnerStore = create<CharacterBurnerState>()(
 				},
 				changeInstinct: (index: number, instinct: string) => {
 					set(produce<CharacterBurnerState>((state) => {
-						state.beliefs[index] = instinct;
+						state.instincts[index] = instinct;
 					}));
 				},
 
@@ -894,7 +894,7 @@ export const useCharacterBurnerStore = create<CharacterBurnerState>()(
 					state.refreshTraitSpendings();
 					state.refreshAttributeSpendings();
 					state.refreshQuestions();
-					state.refreshStockSpecifics();
+					state.resetStockSpecifics();
 				},
 				removeLifepath: () => {
 					set(produce<CharacterBurnerState>((state) => {
@@ -907,7 +907,7 @@ export const useCharacterBurnerStore = create<CharacterBurnerState>()(
 					state.refreshTraitSpendings();
 					state.refreshAttributeSpendings();
 					state.refreshQuestions();
-					state.refreshStockSpecifics();
+					state.resetStockSpecifics();
 				},
 
 				changeStatShade: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, statName: StatsList) => {

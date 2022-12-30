@@ -19,11 +19,9 @@ import { QuestionModal } from "./Modals/QuestionModal";
 import { SpecialLifepathsModal } from "./Modals/SpecialLifepathsModal";
 import { SpecialSkillsModal } from "./Modals/SpecialSkillsModal";
 import { ResourceModal } from "./Modals/ResourceModal";
-import { StockSpecificModal } from "./Modals/StockSpecialModal";
+import { StockSpecificModal } from "./Modals/StockSpecificModal";
 import { BeliefsBlock } from "./Blocks/BeliefsBlock";
 import { InstinctsBlock } from "./Blocks/InstinctsBlock";
-
-import { CharacterBurnerChecklist } from "./CharacterBurnerChecklist";
 
 
 export function CharacterBurner(): JSX.Element {
@@ -74,8 +72,6 @@ export function CharacterBurner(): JSX.Element {
 				</Fragment>
 				: null
 			}
-
-			<CharacterBurnerChecklist />
 		</Fragment>
 	);
 }

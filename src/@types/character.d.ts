@@ -167,7 +167,7 @@ interface CharacterBurnerState {
 	refreshTraitSpendings: () => void;
 	refreshAttributeSpendings: () => void;
 	refreshQuestions: () => void;
-	refreshStockSpecifics: () => void;
+	resetStockSpecifics: () => void;
 
 	getMentalPointsTotal: () => number;
 	getPhysicalPointsTotal: () => number;
