@@ -37,7 +37,7 @@ export const HumanMagical: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "Circination is the art of drawing circles and sigils chat aid the spirit binder and summoner. There are three types of circles that may be drawn: the summoning circle or ga.te, the fortress circle and the prison circle. The summoning circle aids in conjuring and binding spirits. The fortress protects the summoner from spirits. The prison circle traps unruly spirits. Circination is tested like a regular skill: It is not open-ended and dues not get combined with anything special (except help or FoRKs) when tll-sted. Circinution is used to aid Spirit Binding and Summoning. <br> If a circle is physically damaged -erased, marred, smudged- then it loses its powers.",
+			description: "Circination is the art of drawing circles and sigils chat aid the spirit binder and summoner. There are three types of circles that may be drawn: the summoning circle or ga.te, the fortress circle and the prison circle. The summoning circle aids in conjuring and binding spirits. The fortress protects the summoner from spirits. The prison circle traps unruly spirits. Circination is tested like a regular skill: It is not open-ended and dues not get combined with anything special (except help or FoRKs) when tll-sted. Circinution is used to aid Spirit Binding and Summoning.<br>If a circle is physically damaged -erased, marred, smudged- then it loses its powers.",
 			magical: true,
 			name: "Circination",
 			noList: false,
@@ -82,7 +82,7 @@ export const HumanMagical: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "Sorcery is the skill that allows the character to understand written or spoken magical formulae. Should the character have the Gifted trait, he can then translate those formulae into spells and thereby cast magic. He may also use this skill to create new spells. The mechanics of Sorcery are described in detail in the Sorcery section of the Burning Wheel. <br> The Sorcery skill can count for the standard version of the Sorcery or count for Art Magic or Practical Magic. Pick one form that the skill represents in your game. All iterations of the Sorcery skill, no matter whut lifepath they are earned from, cou",
+			description: "Sorcery is the skill that allows the character to understand written or spoken magical formulae. Should the character have the Gifted trait, he can then translate those formulae into spells and thereby cast magic. He may also use this skill to create new spells. The mechanics of Sorcery are described in detail in the Sorcery section of the Burning Wheel.<br>The Sorcery skill can count for the standard version of the Sorcery or count for Art Magic or Practical Magic. Pick one form that the skill represents in your game. All iterations of the Sorcery skill, no matter whut lifepath they are earned from, cou",
 			magical: true,
 			name: "Sorcery",
 			noList: false,
@@ -149,7 +149,7 @@ export const HumanSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "The study of the stars, the planets, and the zodiac—astrology is a deep and ancient science that describes the relations of the celestial sphere to the terrestrial. <br> Astrology may be FoRKed with any skill except those of martial or physical type. However, the Astrology FoRK die is different from other FoRKs: The die is open-ended. But unlike standard open-ended dice, it open-ends both ways. 6s are rerolled as per the normal open-end rules, but 1s are open-ended as well. If a 1 is rolled, reroll the die. If the second roll is a failure, then a success is subtracted from the result. For a less risky roll, use this skill as a linked test toward any endeavor or gambit. In this case, do not use the open-ended die.",
+			description: "The study of the stars, the planets, and the zodiac—astrology is a deep and ancient science that describes the relations of the celestial sphere to the terrestrial.<br>Astrology may be FoRKed with any skill except those of martial or physical type. However, the Astrology FoRK die is different from other FoRKs: The die is open-ended. But unlike standard open-ended dice, it open-ends both ways. 6s are rerolled as per the normal open-end rules, but 1s are open-ended as well. If a 1 is rolled, reroll the die. If the second roll is a failure, then a success is subtracted from the result. For a less risky roll, use this skill as a linked test toward any endeavor or gambit. In this case, do not use the open-ended die.",
 			magical: false,
 			name: "Astrology",
 			noList: false,

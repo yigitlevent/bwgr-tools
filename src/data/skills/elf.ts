@@ -763,7 +763,7 @@ export const ElfSpellSong: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "This spell song allows the prince to see what lurks in the hearts of Men, Dwarves and Elves. It counts as a bulwark against Falsehood, Soothing Platitudes, Persuasion, Inconspicuous and Seduction. Increase the obstacle by one for these skills if they a1'e used against the Etharch while he is singing Discerner. <br> Add the margin of success from the song to the obstacle penalty. If the test to deceive the Etharch is failed, he is aware of the intentions of the manipulator or deceiver (but not the precise nature of the lie).",
+			description: "This spell song allows the prince to see what lurks in the hearts of Men, Dwarves and Elves. It counts as a bulwark against Falsehood, Soothing Platitudes, Persuasion, Inconspicuous and Seduction. Increase the obstacle by one for these skills if they a1'e used against the Etharch while he is singing Discerner.<br>Add the margin of success from the song to the obstacle penalty. If the test to deceive the Etharch is failed, he is aware of the intentions of the manipulator or deceiver (but not the precise nature of the lie).",
 			magical: true,
 			name: "Discerner",
 			noList: false,
@@ -1063,7 +1063,7 @@ export const ElfSpellSong: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "The Song of Bonding is usually only sung once in each Elf's life—to bind himself into the Master—student relationship with his sword-father. Once successfully sung, the Bonded Second now gains a new trait: Bonded. This counts as a call—on for Steel when his master is in danger. <br> If a player is starting a Second in a game with his Sword Singer, sing this song before the game starts. If the song fails, or the Second's Sword Singer is not part of the game, then the player may choose to bond himself to another master as the game progresses.",
+			description: "The Song of Bonding is usually only sung once in each Elf's life—to bind himself into the Master—student relationship with his sword-father. Once successfully sung, the Bonded Second now gains a new trait: Bonded. This counts as a call—on for Steel when his master is in danger.<br>If a player is starting a Second in a game with his Sword Singer, sing this song before the game starts. If the song fails, or the Second's Sword Singer is not part of the game, then the player may choose to bond himself to another master as the game progresses.",
 			magical: true,
 			name: "Song of Bonding",
 			noList: false,
@@ -1123,7 +1123,7 @@ export const ElfSpellSong: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "This beautiful harmony can be sung in accompaniment to any other spellsong. The Song of Songs may help a Elven spell song as if it were a related skill. Song of Songs may not help skill-songs. <br> For example, the Lord Protector is in dire need; the servants of the Dark have unleashed terrible beasts of shadow, and his war-host quails before them. He calls his Song Singers to aid him as he sings the mighty Anthem of Courage. The Lord has an Anthem of B6. Each Song of Songs singer gives helpind dice according to the standard rules, The Lord Protector's palyer would then cast his song dice plus the helping dice to pass the test",
+			description: "This beautiful harmony can be sung in accompaniment to any other spellsong. The Song of Songs may help a Elven spell song as if it were a related skill. Song of Songs may not help skill-songs.<br>For example, the Lord Protector is in dire need; the servants of the Dark have unleashed terrible beasts of shadow, and his war-host quails before them. He calls his Song Singers to aid him as he sings the mighty Anthem of Courage. The Lord has an Anthem of B6. Each Song of Songs singer gives helpind dice according to the standard rules, The Lord Protector's palyer would then cast his song dice plus the helping dice to pass the test",
 			magical: true,
 			name: "Song of Songs",
 			noList: false,

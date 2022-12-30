@@ -336,7 +336,7 @@ export const HumanLifepath: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "This special trait may only be chosen after consultation with the GM and/or other players. If it is taken, the character is possessed by a dæmon, spirit, or seraph. Choose one appropriate trait to be made manifest through the human vessel from the dæmon/seraph list in the Monster Burner. I recommend that Lawbreaker come along with any and all choices, but it's not required. Once the nature of the possession is determined, the player and the GM need to devise a separate set of Beliefs and Instincts for the possessing spirit. When these come into conflict with the character's own BIT's, a versus Will test must be made—the spirit against the character. Use the appropriate Will from the stat blocks in the Monster Burner. Whoever wins the test can enact his Belief or Instinct. <br> A Possessed person can be exorcised as per the Faith mechanics in the Burning Wheel. Whether or not he wants to be exorcised is another matter. Also, the Possessed character's aura (for Aura Reading) will show the additional trait and the additional set of Beliefs and Instincts.",
+			description: "This special trait may only be chosen after consultation with the GM and/or other players. If it is taken, the character is possessed by a dæmon, spirit, or seraph. Choose one appropriate trait to be made manifest through the human vessel from the dæmon/seraph list in the Monster Burner. I recommend that Lawbreaker come along with any and all choices, but it's not required. Once the nature of the possession is determined, the player and the GM need to devise a separate set of Beliefs and Instincts for the possessing spirit. When these come into conflict with the character's own BIT's, a versus Will test must be made—the spirit against the character. Use the appropriate Will from the stat blocks in the Monster Burner. Whoever wins the test can enact his Belief or Instinct.<br>A Possessed person can be exorcised as per the Faith mechanics in the Burning Wheel. Whether or not he wants to be exorcised is another matter. Also, the Possessed character's aura (for Aura Reading) will show the additional trait and the additional set of Beliefs and Instincts.",
 			name: "Possessed",
 			stock: "Human",
 			type: "Die"
@@ -408,7 +408,7 @@ export const HumanLifepath: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "When another character cracks a whip across his back and gives an order, the player must obey the orders (so long as the orders aren't to 'stick that knife in your throat' or something similar). He can be driven to attack, to flee, to drop his weapon, fall to his knees, or just plain row the boat. <br> This trait does not allow a reroll, it merely forces an action. Thus it can be used to cow opportunities or send your reluctant underlings into the fray.",
+			description: "When another character cracks a whip across his back and gives an order, the player must obey the orders (so long as the orders aren't to 'stick that knife in your throat' or something similar). He can be driven to attack, to flee, to drop his weapon, fall to his knees, or just plain row the boat.<br>This trait does not allow a reroll, it merely forces an action. Thus it can be used to cow opportunities or send your reluctant underlings into the fray.",
 			name: "Tasting the Lash",
 			stock: "Human",
 			type: "Die"
@@ -559,7 +559,7 @@ export const HumanSpecial: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "Catamite has been chosen as the trait name to represent openly homosexual characters in the Burning Wheel. Honestly, it was a pejorative medieval term- a slur. It is how society would refer to them, not necessarily how they refer to themselves. <br> Any character may be homosexual via the player's choice, but by taking the Catamite trait, the player is acknowledging that his character is open about his orientation. The ramifications of such a decision in a conservative medieval society are grist for great game situations.",
+			description: "Catamite has been chosen as the trait name to represent openly homosexual characters in the Burning Wheel. Honestly, it was a pejorative medieval term- a slur. It is how society would refer to them, not necessarily how they refer to themselves.<br>Any character may be homosexual via the player's choice, but by taking the Catamite trait, the player is acknowledging that his character is open about his orientation. The ramifications of such a decision in a conservative medieval society are grist for great game situations.",
 			name: "Catamite",
 			stock: "Human",
 			type: "Character"
@@ -759,7 +759,7 @@ export const HumanSpecial: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 3,
-			description: "The Outlaw is a very particular person in medieval society. A player who chooses the Outlaw trait for his character must consent to a few conditions: First, his character has either committed a grievous crime or is perceived as a11 enemy of the established order. Second, no law applies to this character- he has no rights whatsoever. He cannot appeal to the courts or the mercy of a judge for anything. Any man or beast may kill the outlaw and suffer no legal penalty for it. <br> When the Outlaw trait is taken, the player must divide his resource points into two pools. Any resource points from City, Noble or Religious lifepaths go into one pool: The player may spend them as per the normal rules. However, he does not get access to the City/Noble/Religious resources until the Outlaw trait is voted off. The character's remaining resource points may be spent as normal on gear, affiliations, relationships, etc. <br> Outlaws gain a 1D infamous reputation among town and city folk and the nobility.",
+			description: "The Outlaw is a very particular person in medieval society. A player who chooses the Outlaw trait for his character must consent to a few conditions: First, his character has either committed a grievous crime or is perceived as a11 enemy of the established order. Second, no law applies to this character- he has no rights whatsoever. He cannot appeal to the courts or the mercy of a judge for anything. Any man or beast may kill the outlaw and suffer no legal penalty for it.<br>When the Outlaw trait is taken, the player must divide his resource points into two pools. Any resource points from City, Noble or Religious lifepaths go into one pool: The player may spend them as per the normal rules. However, he does not get access to the City/Noble/Religious resources until the Outlaw trait is voted off. The character's remaining resource points may be spent as normal on gear, affiliations, relationships, etc.<br>Outlaws gain a 1D infamous reputation among town and city folk and the nobility.",
 			name: "Outlaw",
 			stock: "Human",
 			type: "Die"

@@ -8,7 +8,7 @@ export const OrcCommon: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "So vile are they, Ores will not hesitate to slay and eat their companions.",
+			description: "So vile are they, Orcs will not hesitate to slay and eat their companions.",
 			name: "Cannibal",
 			stock: "Orc",
 			type: "Character"
@@ -80,7 +80,7 @@ export const OrcLifepath: TraitCategory = {
 			allowed: ["bwg"],
 			cost: 0,
 			description: "The Siege Master cannot resist big targets. Massive, sturdy donjons are an affront to his sensibilities. The Siege Master will always target the biggest hunk of bricks (or prettiest war machines) first and pound them into dust and ruin.",
-			name: "The Bigger They Come…",
+			name: "The Bigger They Come...",
 			stock: "Orc",
 			type: "Character"
 		},
@@ -95,7 +95,7 @@ export const OrcLifepath: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "Those Born Great and Black are marked by distinctive features—tall stature, broad shoulders, and deep-hued skin. This is the mantle of hereditary leadership among the Orcs. In order to be a Great One or a Servant, one must be Born to Rule Them All. This trait grants a 1D affiliation among Great and Black Orcs and a 1D infamous reputation among the chattel and the legion.",
+			description: "Those Born Great and Black are marked by distinctive features —tall stature, broad shoulders, and deep-hued skin. This is the mantle of hereditary leadership among the Orcs. In order to be a Great One or a Servant, one must be Born to Rule Them All. This trait grants a 1D affiliation among Great and Black Orcs and a 1D infamous reputation among the chattel and the legion.",
 			name: "Born to Rule Them All",
 			stock: "Orc",
 			type: "Die"
@@ -255,7 +255,7 @@ export const OrcLifepath: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "When another character cracks a whip across his back and gives an order, the player must obey the orders (so long as the orders aren't to 'stick that knife in your throat' or something similar). He can be driven to attack, to flee, to drop his weapon, fall to his knees, or just plain row the boat. <br> This trait does not allow a reroll, it merely forces an action. Thus it can be used to cow opportunities or send your reluctant underlings into the fray.",
+			description: "When another character cracks a whip across his back and gives an order, the player must obey the orders (so long as the orders aren't to 'stick that knife in your throat' or something similar). He can be driven to attack, to flee, to drop his weapon, fall to his knees, or just plain row the boat.<br>This trait does not allow a reroll, it merely forces an action. Thus it can be used to cow opportunities or send your reluctant underlings into the fray.",
 			name: "Tasting the Lash",
 			stock: "Orc",
 			type: "Die"
@@ -318,7 +318,7 @@ export const OrcSpecial: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 4,
-			description: "Drinkers of the Dark are immersed in shivering pools of arcane energies. They are taught to imbibe, inhale and exhale the Dark Blood and survive. This trait transforms the Orc's Hatred into a vehicle for enormous power. However, Ores are unable to tap their innate power without Rituals. Void Embrace is an emotional attribute with its own shade and exponent. <br> It is used to resist tax, sustain spells (rather than Will), and is used to maintain a spell after a distraction. Any Orc maybe taught the Rituals, but without Void Embrace, he cannot resist the tax and thus will be permanently crippled or worse. Void Embrace can also he used to enhance certain rolls by spending a persona point to tap the Void. See the Void Embrace section of the Orc chapter for more details. If Void Embrace is advanced to exponent 10, the Orc goes mad or commits suicide. Either way, he's removed from play.",
+			description: "Drinkers of the Dark are immersed in shivering pools of arcane energies. They are taught to imbibe, inhale and exhale the Dark Blood and survive. This trait transforms the Orc's Hatred into a vehicle for enormous power. However, Ores are unable to tap their innate power without Rituals. Void Embrace is an emotional attribute with its own shade and exponent.<br>It is used to resist tax, sustain spells (rather than Will), and is used to maintain a spell after a distraction. Any Orc maybe taught the Rituals, but without Void Embrace, he cannot resist the tax and thus will be permanently crippled or worse. Void Embrace can also he used to enhance certain rolls by spending a persona point to tap the Void. See the Void Embrace section of the Orc chapter for more details. If Void Embrace is advanced to exponent 10, the Orc goes mad or commits suicide. Either way, he's removed from play.",
 			name: "Void Embrace",
 			stock: "Orc",
 			type: "Die"

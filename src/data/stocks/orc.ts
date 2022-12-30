@@ -1141,7 +1141,7 @@ export const Orc: Stock = {
 					stock: "Orc",
 					traitPool: 1,
 					traits: [
-						"Orc Lifepath➞The Bigger They Come…",
+						"Orc Lifepath➞The Bigger They Come...",
 						"Orc Lifepath➞Brutish Efficiency"
 					],
 					years: 10

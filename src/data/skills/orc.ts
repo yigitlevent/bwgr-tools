@@ -202,7 +202,7 @@ export const OrcSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "This skill teaches the Knower of Secrets how to extract and preserve poisons from venomous and stinging creatures. Using his knowledge, he can create: <br>  A stinging and nettling contact poison, Ob 2. A dose on the skin causes the victim to break out in boils. +2 Ob to all physical, martial, and social tests for one scene. <br>  A debilitating, ingested poison, Ob 4. Victim must test Forte vs Ob 4. Margin of failure is permanently subtracted from Health (and Health maximum). <br>  A deadly poison, Ob 5. The poison must be slathered on a blade or arrowhead and injected into the victim with a Mark result hit. If so injected, the poison delivers one additional B9 wound in a number of exchanges equal to six plus the victim's Forte.",
+			description: "This skill teaches the Knower of Secrets how to extract and preserve poisons from venomous and stinging creatures. Using his knowledge, he can create:<br> A stinging and nettling contact poison, Ob 2. A dose on the skin causes the victim to break out in boils. +2 Ob to all physical, martial, and social tests for one scene.<br> A debilitating, ingested poison, Ob 4. Victim must test Forte vs Ob 4. Margin of failure is permanently subtracted from Health (and Health maximum).<br> A deadly poison, Ob 5. The poison must be slathered on a blade or arrowhead and injected into the victim with a Mark result hit. If so injected, the poison delivers one additional B9 wound in a number of exchanges equal to six plus the victim's Forte.",
 			magical: false,
 			name: "Vile Poisoner",
 			noList: false,

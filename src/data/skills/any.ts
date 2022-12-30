@@ -867,7 +867,7 @@ export const AnyGeneral: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "Doctrine describes the tenets and beliefs of a particular religious faith. A character may only take the following variations if they were available on his lifepaths or through general skill points: <br> Cult Doctrine is the application of a belief system to a non-standard, unapproved, or independent school of thought. <br> Foreign Doctrine is the knowledge or study of an accepted popular religion from another land or culture. <br> Heretical Doctrine is the understanding and knowledge of a set of beliefs and tenets that are an offshoot of the popular religion but are not commonly accepted by the religious power structure.",
+			description: "Doctrine describes the tenets and beliefs of a particular religious faith. A character may only take the following variations if they were available on his lifepaths or through general skill points:<br>Cult Doctrine is the application of a belief system to a non-standard, unapproved, or independent school of thought.<br>Foreign Doctrine is the knowledge or study of an accepted popular religion from another land or culture.<br>Heretical Doctrine is the understanding and knowledge of a set of beliefs and tenets that are an offshoot of the popular religion but are not commonly accepted by the religious power structure.",
 			magical: false,
 			name: "Cult Doctrine",
 			noList: false,
@@ -942,7 +942,7 @@ export const AnyGeneral: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "Doctrine describes the tenets and beliefs of a particular religious faith. A character may only take the following variations if they were available on his lifepaths or through general skill points: <br> Cult Doctrine is the application of a belief system to a non-standard, unapproved, or independent school of thought. <br> Foreign Doctrine is the knowledge or study of an accepted popular religion from another land or culture. <br> Heretical Doctrine is the understanding and knowledge of a set of beliefs and tenets that are an offshoot of the popular religion but are not commonly accepted by the religious power structure.",
+			description: "Doctrine describes the tenets and beliefs of a particular religious faith. A character may only take the following variations if they were available on his lifepaths or through general skill points:<br>Cult Doctrine is the application of a belief system to a non-standard, unapproved, or independent school of thought.<br>Foreign Doctrine is the knowledge or study of an accepted popular religion from another land or culture.<br>Heretical Doctrine is the understanding and knowledge of a set of beliefs and tenets that are an offshoot of the popular religion but are not commonly accepted by the religious power structure.",
 			magical: false,
 			name: "Doctrine",
 			noList: false,
@@ -1332,7 +1332,7 @@ export const AnyGeneral: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "Doctrine describes the tenets and beliefs of a particular religious faith. A character may only take the following variations if they were available on his lifepaths or through general skill points: <br> Cult Doctrine is the application of a belief system to a non-standard, unapproved, or independent school of thought. <br> Foreign Doctrine is the knowledge or study of an accepted popular religion from another land or culture. <br> Heretical Doctrine is the understanding and knowledge of a set of beliefs and tenets that are an offshoot of the popular religion but are not commonly accepted by the religious power structure.",
+			description: "Doctrine describes the tenets and beliefs of a particular religious faith. A character may only take the following variations if they were available on his lifepaths or through general skill points:<br>Cult Doctrine is the application of a belief system to a non-standard, unapproved, or independent school of thought.<br>Foreign Doctrine is the knowledge or study of an accepted popular religion from another land or culture.<br>Heretical Doctrine is the understanding and knowledge of a set of beliefs and tenets that are an offshoot of the popular religion but are not commonly accepted by the religious power structure.",
 			magical: false,
 			name: "Foreign Doctrine",
 			noList: false,
@@ -1362,7 +1362,7 @@ export const AnyGeneral: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "A character with this skill has learned foreign languages over the course of his life. Test this skill when attempting to communicate with another character in a language that is not your native tongue.  <br> There are constraints based on which level of speech you aim for. You can cover basic ground with survival/conversational language, but there are whole swaths of meaning that are simply beyond your grasp if you can't express ideas in metaphor or other abstract concepts. Good luck expressing the meaning behind your actions.  <br> Here are some suggested failure results: The character is able to communicate, but screws up the words for numbers, ordinal directions, etc. Or the character can understand what is said, but can't make his speech understood. Or you can only use single words and gestures to get across your meaning.",
+			description: "A character with this skill has learned foreign languages over the course of his life. Test this skill when attempting to communicate with another character in a language that is not your native tongue.<br>There are constraints based on which level of speech you aim for. You can cover basic ground with survival/conversational language, but there are whole swaths of meaning that are simply beyond your grasp if you can't express ideas in metaphor or other abstract concepts. Good luck expressing the meaning behind your actions.<br>Here are some suggested failure results: The character is able to communicate, but screws up the words for numbers, ordinal directions, etc. Or the character can understand what is said, but can't make his speech understood. Or you can only use single words and gestures to get across your meaning.",
 			magical: false,
 			name: "Foreign Languages",
 			noList: false,
@@ -1542,7 +1542,7 @@ export const AnyGeneral: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "Doctrine describes the tenets and beliefs of a particular religious faith. A character may only take the following variations if they were available on his lifepaths or through general skill points: <br> Cult Doctrine is the application of a belief system to a non-standard, unapproved, or independent school of thought. <br> Foreign Doctrine is the knowledge or study of an accepted popular religion from another land or culture. <br> Heretical Doctrine is the understanding and knowledge of a set of beliefs and tenets that are an offshoot of the popular religion but are not commonly accepted by the religious power structure.",
+			description: "Doctrine describes the tenets and beliefs of a particular religious faith. A character may only take the following variations if they were available on his lifepaths or through general skill points:<br>Cult Doctrine is the application of a belief system to a non-standard, unapproved, or independent school of thought.<br>Foreign Doctrine is the knowledge or study of an accepted popular religion from another land or culture.<br>Heretical Doctrine is the understanding and knowledge of a set of beliefs and tenets that are an offshoot of the popular religion but are not commonly accepted by the religious power structure.",
 			magical: false,
 			name: "Heretical Doctrine",
 			noList: false,
@@ -2997,7 +2997,7 @@ export const AnyGeneral: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "This martial training skill allows a character to fight effectively with a weapon in his off hand. This secondary weapon must be smaller or of equal weight to his other weapon. Both weapons must be one-handed and be at most long weapon length.  <br> When fighting with two weapons, there is no penalty for striking with a weapon in the off-hand. If a player wants to Strike with both weapons simultaneously, divide his dice between his two weapons. They must be of equal length to perform this. The character may perform Block & Strike actions as if he had Shield Training. Skill dice are divided between attack and defense as the combatant sees fit.",
+			description: "This martial training skill allows a character to fight effectively with a weapon in his off hand. This secondary weapon must be smaller or of equal weight to his other weapon. Both weapons must be one-handed and be at most long weapon length.<br>When fighting with two weapons, there is no penalty for striking with a weapon in the off-hand. If a player wants to Strike with both weapons simultaneously, divide his dice between his two weapons. They must be of equal length to perform this. The character may perform Block & Strike actions as if he had Shield Training. Skill dice are divided between attack and defense as the combatant sees fit.",
 			magical: false,
 			name: "Two-Fisted Fighting Training",
 			noList: false,

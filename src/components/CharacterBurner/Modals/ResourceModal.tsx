@@ -228,9 +228,16 @@ export function ResourceModal({ openRe, openReModal }: { openRe: boolean; openRe
 							</Grid>
 
 							{resource.modifiers.map((v, i) =>
-								<Grid item key={i} xs={2}>
-									<FormControlLabel label={`${v[0]} (${v[1]}rps)`} checked={costs.modifiers[v[0]].selected} onChange={() => changeModifier(v[0])} control={<Checkbox />} />
-								</Grid>
+								(v[0] in costs.modifiers)
+									? <Grid item key={i} xs={2}>
+										<FormControlLabel
+											label={`${v[0]} (${v[1]}rps)`}
+											checked={costs.modifiers[v[0]].selected}
+											onChange={() => changeModifier(v[0])}
+											control={<Checkbox />}
+										/>
+									</Grid>
+									: null
 							)}
 						</Fragment>
 						: null

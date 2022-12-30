@@ -3615,7 +3615,7 @@ export const AnyCallon: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 5,
-			description: "This trait can be used to determine the ingredients of a substance sampled by taste. The player can combine this trait with any one of his applicable skills. Using his knowledge and this inborn talent, he can decipher the ingredients or components of a material, substance or compound. <br> Such an act requires a successful Perception test at an obstacle equal to what it would normally take to create or spot this substance. This test is open-ended. <br> Keen Taste can also be used as a call-on for Alchemy, Apothecary, Herbalism, Wine Tasting, Cooking and Baking.",
+			description: "This trait can be used to determine the ingredients of a substance sampled by taste. The player can combine this trait with any one of his applicable skills. Using his knowledge and this inborn talent, he can decipher the ingredients or components of a material, substance or compound.<br>Such an act requires a successful Perception test at an obstacle equal to what it would normally take to create or spot this substance. This test is open-ended.<br>Keen Taste can also be used as a call-on for Alchemy, Apothecary, Herbalism, Wine Tasting, Cooking and Baking.",
 			name: "Keen Taste",
 			stock: "Any",
 			type: "Call-on and Die"
@@ -3767,7 +3767,7 @@ export const AnyCallon: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 5,
-			description: "Characters with the Wolverine trait recover faster than others from wounds and illness. May be used as a call-on for Health for recovery from a wound or illness. <br> Wolverine can also be used to buy off a botched recovery test. If used in this way, the test is considered passed, but the trait is lost in the bargain.",
+			description: "Characters with the Wolverine trait recover faster than others from wounds and illness. May be used as a call-on for Health for recovery from a wound or illness.<br>Wolverine can also be used to buy off a botched recovery test. If used in this way, the test is considered passed, but the trait is lost in the bargain.",
 			name: "Wolverine",
 			stock: "Any",
 			type: "Call-on and Die"
@@ -3870,7 +3870,7 @@ export const AnyDie: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 3,
-			description: "He will die for our sins. We all know it. We all want it (not that he would do anything to speed the process along…). In him we shall be redeemed. The player whose character possesses this trait earns persona artha for personal goals when taking steps in the game to martyr his character. The character must die for a lost cause—preferably religious. Should this glorious death transpire, the character's remains instantly become holy relics. The first person to gather up those remains is granted all of the martyr's remaining artha. If he had no artha left at the time of his death, the relic grants a deeds point to its new owner. Lastly, after the artha/deeds point is spent from the remains, they become a suitable matrix for Enchanting. See the Enchanting rules in the Magic Burner.",
+			description: "He will die for our sins. We all know it. We all want it (not that he would do anything to speed the process along...). In him we shall be redeemed. The player whose character possesses this trait earns persona artha for personal goals when taking steps in the game to martyr his character. The character must die for a lost cause—preferably religious. Should this glorious death transpire, the character's remains instantly become holy relics. The first person to gather up those remains is granted all of the martyr's remaining artha. If he had no artha left at the time of his death, the relic grants a deeds point to its new owner. Lastly, after the artha/deeds point is spent from the remains, they become a suitable matrix for Enchanting. See the Enchanting rules in the Magic Burner.",
 			name: "Aura of Matyrdom",
 			stock: "Any",
 			type: "Die"
@@ -3894,7 +3894,7 @@ export const AnyDie: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 2,
-			description: "'You've got to leave this library and go out and experience the world! Stop hiding in your books and live!' warned the old instructor. <br> 'Yeah, right,' thought the student. <br> 'All the knowledge I'll ever need is here…in these books!' <br> Characters with this trait reduce their aptitude for learning Academic skills by one.",
+			description: "'You've got to leave this library and go out and experience the world! Stop hiding in your books and live!' warned the old instructor.<br>'Yeah, right,' thought the student.<br>'All the knowledge I'll ever need is here... in these books!'<br>Characters with this trait reduce their aptitude for learning Academic skills by one.",
 			name: "Bookworm",
 			stock: "Any",
 			type: "Die"
@@ -3990,7 +3990,7 @@ export const AnyDie: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 5,
-			description: "Deadly Precision allows the character to choose one weapon skill that he favors. Use his skill exponent in place of his Power stat when factoring his IMS for weapons under this skill. For example: <br> A character with a B4 Power and a B6 Throwing skill does damage with throwing knives using the 6 of his Throwing skill rather than his 4 Power. In the standard rules he does: I B3, M B5, S B7 with a throwing knife. Once trained to hit with Precision, he would do: I B4, M B7, S B10. Much better!",
+			description: "Deadly Precision allows the character to choose one weapon skill that he favors. Use his skill exponent in place of his Power stat when factoring his IMS for weapons under this skill. For example:<br>A character with a B4 Power and a B6 Throwing skill does damage with throwing knives using the 6 of his Throwing skill rather than his 4 Power. In the standard rules he does: I B3, M B5, S B7 with a throwing knife. Once trained to hit with Precision, he would do: I B4, M B7, S B10. Much better!",
 			name: "Deadly Precision",
 			stock: "Any",
 			type: "Die"
@@ -4158,7 +4158,7 @@ export const AnyDie: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 4,
-			description: "So many years and so much humanity has this character seen, life seems to be an endless repetition of petty struggles. 'I tire of this game…' Reduce hesitation for surprise or shock by three.",
+			description: "So many years and so much humanity has this character seen, life seems to be an endless repetition of petty struggles. 'I tire of this game...' Reduce hesitation for surprise or shock by three.",
 			name: "Jaded",
 			stock: "Any",
 			type: "Die"
@@ -4166,7 +4166,7 @@ export const AnyDie: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 5,
-			description: "This trait can be used to determine the ingredients of a substance sampled by taste. The player can combine this trait with any one of his applicable skills. Using his knowledge and this inborn talent, he can decipher the ingredients or components of a material, substance or compound. <br> Such an act requires a successful Perception test at an obstacle equal to what it would normally take to create or spot this substance. This test is open-ended. <br> Keen Taste can also be used as a call-on for Alchemy, Apothecary, Herbalism, Wine Tasting, Cooking and Baking.",
+			description: "This trait can be used to determine the ingredients of a substance sampled by taste. The player can combine this trait with any one of his applicable skills. Using his knowledge and this inborn talent, he can decipher the ingredients or components of a material, substance or compound.<br>Such an act requires a successful Perception test at an obstacle equal to what it would normally take to create or spot this substance. This test is open-ended.<br>Keen Taste can also be used as a call-on for Alchemy, Apothecary, Herbalism, Wine Tasting, Cooking and Baking.",
 			name: "Keen Taste",
 			stock: "Any",
 			type: "Call-on and Die"
@@ -4190,7 +4190,7 @@ export const AnyDie: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 5,
-			description: "The beauty of art inspires this character to wild heights. The player must choose an art form and a skill it inspires. When under the influence of his Muse, the character gains +2 open-ended dice to all 'inspired' skill tests. <br> A character cannot be his own Muse. He cannot recite poetry to himself while he is madly hacking away at is enemies.",
+			description: "The beauty of art inspires this character to wild heights. The player must choose an art form and a skill it inspires. When under the influence of his Muse, the character gains +2 open-ended dice to all 'inspired' skill tests.<br>A character cannot be his own Muse. He cannot recite poetry to himself while he is madly hacking away at is enemies.",
 			name: "Lesser Muse",
 			stock: "Any",
 			type: "Die"
@@ -4374,7 +4374,7 @@ export const AnyDie: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 2,
-			description: "The match appeared in his hand, and in a tiny blur of motion, his pipe was lit. This character has a trademark act that he has repeated so frequently that it has become a single action—like lighting a pipe with a match. Normally this would cost at least three 'actions' in game, but the Practiced Precision trait reduces that cost to one action. Players must decide what 'trademark act' their characters will practice before the character enters into the game. <br> Combat-related actions may be Practiced Precision trademarks. They are only reduced by one action, rather than reduced to one action.",
+			description: "The match appeared in his hand, and in a tiny blur of motion, his pipe was lit. This character has a trademark act that he has repeated so frequently that it has become a single action—like lighting a pipe with a match. Normally this would cost at least three 'actions' in game, but the Practiced Precision trait reduces that cost to one action. Players must decide what 'trademark act' their characters will practice before the character enters into the game.<br>Combat-related actions may be Practiced Precision trademarks. They are only reduced by one action, rather than reduced to one action.",
 			name: "Practiced Precision",
 			stock: "Any",
 			type: "Die"
@@ -4446,7 +4446,7 @@ export const AnyDie: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 4,
-			description: "With Second Sight, the character can peer vaguely into the shifting shadows of the spirit world. It is a powerful, multifaceted ability. Through an act of concentration, he can push through the veil of reality to see the other side. This costs one action in Fight! but otherwise can be done at will. The Second Sight grants the ability to discern if something is magical or not. Test Perception: <br>  High power magic (major miracles, Mjӧlnir, the Burning Wheel, Ob 10 spells, Strength 10 spirits, etc.), Ob 1 <br>  Moderately-powered magic (minor miracles, Ob 5 spells, a risen corpse, the Belt of Flying, Dragon Slaying Sword, Spirit Weapons, Strength 5 spirits), Ob 5 <br>  Low power magic (Red Spectacles, Bless/Curse, Ob 2 spells, Strength 2 spirits, etc.), Ob 8. <br> If successful, the character knows the item, person, or effect is magical. He doesn't know exactly what the magic does. Second Sight is one of the abilities that allows a character to use the Aura Reading skill in this book for obstacles. Second Sight allows the mage to FoRK Aura Reading into Sorcery or Summoning (so long as he is using his sight). Second Sight turns Perception into Observation for detecting Stealthy or Inconspicuous characters. Any physical actions taken (running, jumping, fighting, etc.) while using Second Sight suffer a +1 Ob penalty.",
+			description: "With Second Sight, the character can peer vaguely into the shifting shadows of the spirit world. It is a powerful, multifaceted ability. Through an act of concentration, he can push through the veil of reality to see the other side. This costs one action in Fight! but otherwise can be done at will. The Second Sight grants the ability to discern if something is magical or not. Test Perception:<br> High power magic (major miracles, Mjӧlnir, the Burning Wheel, Ob 10 spells, Strength 10 spirits, etc.), Ob 1<br> Moderately-powered magic (minor miracles, Ob 5 spells, a risen corpse, the Belt of Flying, Dragon Slaying Sword, Spirit Weapons, Strength 5 spirits), Ob 5<br> Low power magic (Red Spectacles, Bless/Curse, Ob 2 spells, Strength 2 spirits, etc.), Ob 8.<br>If successful, the character knows the item, person, or effect is magical. He doesn't know exactly what the magic does. Second Sight is one of the abilities that allows a character to use the Aura Reading skill in this book for obstacles. Second Sight allows the mage to FoRK Aura Reading into Sorcery or Summoning (so long as he is using his sight). Second Sight turns Perception into Observation for detecting Stealthy or Inconspicuous characters. Any physical actions taken (running, jumping, fighting, etc.) while using Second Sight suffer a +1 Ob penalty.",
 			name: "Second Sight",
 			stock: "Any",
 			type: "Die"
@@ -4470,7 +4470,7 @@ export const AnyDie: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 3,
-			description: "This character gets a twinge in his brain (or eye, or heart, or stomach) when a life-threatening event or phenomenon is near. This trait counts as a very special Instinct: Always get a twinge in the head from impending danger. It's broad and breaks all the rules for Instincts, but that's why it's a trait. <br> At any point where the player is about to send his character into a life-threatening situation, the GM is obliged to warn him, 'You've got a bad feeling about this.' The precise nature of the danger is not revealed. Also, it is the player's responsibility to remind the GM that he has Sixth Sense. If ever there is a dispute surrounding its use, apply the guidelines for using Instincts to the trait.",
+			description: "This character gets a twinge in his brain (or eye, or heart, or stomach) when a life-threatening event or phenomenon is near. This trait counts as a very special Instinct: Always get a twinge in the head from impending danger. It's broad and breaks all the rules for Instincts, but that's why it's a trait.<br>At any point where the player is about to send his character into a life-threatening situation, the GM is obliged to warn him, 'You've got a bad feeling about this.' The precise nature of the danger is not revealed. Also, it is the player's responsibility to remind the GM that he has Sixth Sense. If ever there is a dispute surrounding its use, apply the guidelines for using Instincts to the trait.",
 			name: "Sixth Sense",
 			stock: "Any",
 			type: "Die"
@@ -4582,7 +4582,7 @@ export const AnyDie: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 7,
-			description: "This trait allows the character to 'read' objects through her touch. A successful Perception test will give impressions present in the object: strong emotion, arcana, and even age. <br>  Type/name of object, Ob 1 <br>  Age of object, Ob 2 <br>  Length of time the object has been in its current location, Ob 3 <br>  Recent events surrounding the object that left physical evidence, Ob 4 <br>  Recent events that left no physical mark, Ob 5 <br>  Past events that left their mark, Ob 6 <br>  Past events that left no mark, Ob 7",
+			description: "This trait allows the character to 'read' objects through her touch. A successful Perception test will give impressions present in the object: strong emotion, arcana, and even age.<br> Type/name of object, Ob 1<br> Age of object, Ob 2<br> Length of time the object has been in its current location, Ob 3<br> Recent events surrounding the object that left physical evidence, Ob 4<br> Recent events that left no physical mark, Ob 5<br> Past events that left their mark, Ob 6<br> Past events that left no mark, Ob 7",
 			name: "Touch of Ages",
 			stock: "Any",
 			type: "Die"
@@ -4638,7 +4638,7 @@ export const AnyDie: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 2,
-			description: "'My joints ache; storm's coming.' With a twinge in the knee, a stiffening of the joints, back pain, or headaches, Weather Sense clues a character into impending weather. Unless the GM plays with strict house weather rules—I don't—the Weather Sense in essence gives the player the ability to dictate the weather. Why else would a player pick this trait unless he were concerned about having the right weather for something or other? Anyway, I say let him predict it based on the Perception obstacles below—and let his predictions come true. <br>  Useless, vague predictions ('Rain soon'), Ob 1 <br>  Accurate weather, Ob 2 <br>  Approximate location, Ob 3 <br>  Approximate time, Ob 4 <br>  Accurate location, Ob 4 <br>  Accurate time, Ob 5 <br> Each obstacle tier includes all the other effects under it.",
+			description: "'My joints ache; storm's coming.' With a twinge in the knee, a stiffening of the joints, back pain, or headaches, Weather Sense clues a character into impending weather. Unless the GM plays with strict house weather rules—I don't—the Weather Sense in essence gives the player the ability to dictate the weather. Why else would a player pick this trait unless he were concerned about having the right weather for something or other? Anyway, I say let him predict it based on the Perception obstacles below—and let his predictions come true.<br> Useless, vague predictions ('Rain soon'), Ob 1<br> Accurate weather, Ob 2<br> Approximate location, Ob 3<br> Approximate time, Ob 4<br> Accurate location, Ob 4<br> Accurate time, Ob 5<br>Each obstacle tier includes all the other effects under it.",
 			name: "Weather Sense",
 			stock: "Any",
 			type: "Die"
@@ -4654,7 +4654,7 @@ export const AnyDie: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 5,
-			description: "Characters with the Wolverine trait recover faster than others from wounds and illness. May be used as a call-on for Health for recovery from a wound or illness. <br> Wolverine can also be used to buy off a botched recovery test. If used in this way, the test is considered passed, but the trait is lost in the bargain.",
+			description: "Characters with the Wolverine trait recover faster than others from wounds and illness. May be used as a call-on for Health for recovery from a wound or illness.<br>Wolverine can also be used to buy off a botched recovery test. If used in this way, the test is considered passed, but the trait is lost in the bargain.",
 			name: "Wolverine",
 			stock: "Any",
 			type: "Call-on and Die"
@@ -5453,7 +5453,7 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "This trait grants the reanimated corpse the Wi B9, Pe 1, Ag B3, Sp B3, Po B5, Fo B5 stat line and eliminates th Health, Resources and Circles attributes. These creatures may not recover from injury. However, neither do they bleed to death or suffer from any type of disease or poison. Also, these creatures may advance extant skills, but they may not learn new skills in play.<br>The Reanimated Corpse trait also gives the creature the mindless ability to act in a mob. Up to five walking corpses may help each other at once with any task, including dragging down their victims and eating them (in other words, positioning and Lock actions).<br>When one corpse helps another, it adds helping dice as per usual, but it may not then act on his own. <br><b>Restrictions:</b> Corpses only.",
+			description: "This trait grants the reanimated corpse the Wi B9, Pe 1, Ag B3, Sp B3, Po B5, Fo B5 stat line and eliminates th Health, Resources and Circles attributes. These creatures may not recover from injury. However, neither do they bleed to death or suffer from any type of disease or poison. Also, these creatures may advance extant skills, but they may not learn new skills in play.<br>The Reanimated Corpse trait also gives the creature the mindless ability to act in a mob. Up to five walking corpses may help each other at once with any task, including dragging down their victims and eating them (in other words, positioning and Lock actions).<br>When one corpse helps another, it adds helping dice as per usual, but it may not then act on his own.<br><b>Restrictions:</b> Corpses only.",
 			name: "Reanimated Corpse",
 			stock: "Any",
 			type: "Die"

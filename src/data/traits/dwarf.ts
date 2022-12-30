@@ -32,7 +32,7 @@ export const DwarfCommon: TraitCategory =  {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "All Dwarves have stern values hammered into their skulls from a very early age. In fact, Dwarven society is a complex and interlocking network of promises and traditions. The most prime among them is: 'Honor the oath.' To break an oath is to break tradition that has seen Dwarves through many dark ages. It is a terrible crime and one not easily forgiven or forgotten. <br> Dwarf characters start the game with an additional (fourth) Belief. This Belief must come in the form of a1n oath and represents a pre-game bond between the Dwarf and one of his relationships. Oaths that pertain to the situation in play fill one of the standard three Belief slots. <br> Acceptable oaths are: 'I owe Burri a debt of honor;' 'I swore to recover the crown for my brother;', 'My father's last words were to rule wisely this I swore;', 'I vow never to go near the beer again.'. <br> Yes, the requirements of an oath mean a Dwarf character must start with a relationship which must be bought with resource points.",
+			description: "All Dwarves have stern values hammered into their skulls from a very early age. In fact, Dwarven society is a complex and interlocking network of promises and traditions. The most prime among them is: 'Honor the oath.' To break an oath is to break tradition that has seen Dwarves through many dark ages. It is a terrible crime and one not easily forgiven or forgotten.<br>Dwarf characters start the game with an additional (fourth) Belief. This Belief must come in the form of a1n oath and represents a pre-game bond between the Dwarf and one of his relationships. Oaths that pertain to the situation in play fill one of the standard three Belief slots.<br>Acceptable oaths are: 'I owe Burri a debt of honor;' 'I swore to recover the crown for my brother;', 'My father's last words were to rule wisely this I swore;', 'I vow never to go near the beer again.'.<br>Yes, the requirements of an oath mean a Dwarf character must start with a relationship which must be bought with resource points.",
 			name: "Oathsworn",
 			stock: "Dwarf",
 			type: "Die"
@@ -40,7 +40,7 @@ export const DwarfCommon: TraitCategory =  {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "In the first age, when the earth was barren, Dwarves were created by the One Who Most Dearly Loves to Shape with His Hands. Dwarves were born beneath the earth and it was lo11g before they came forth into the light of the sun. In those dark ages, they grew familiar with the ores, veins, rocks and sediments that were their sky, ocean and earth. <br> Attendant with their appreciation of raw materials is a love of building and shaping. Above all else it is craftsmanship and the beauty of that which is wrought by skill that Dwarves prize most. And since they were Born Under Earth, metals, stones and gems are their first love—far beyond cloth, wood or leather. This trait also gives the Dwarves access to natural magic abilities- open-ended/special skills for most of their crafts and arts.",
+			description: "In the first age, when the earth was barren, Dwarves were created by the One Who Most Dearly Loves to Shape with His Hands. Dwarves were born beneath the earth and it was lo11g before they came forth into the light of the sun. In those dark ages, they grew familiar with the ores, veins, rocks and sediments that were their sky, ocean and earth.<br>Attendant with their appreciation of raw materials is a love of building and shaping. Above all else it is craftsmanship and the beauty of that which is wrought by skill that Dwarves prize most. And since they were Born Under Earth, metals, stones and gems are their first love—far beyond cloth, wood or leather. This trait also gives the Dwarves access to natural magic abilities- open-ended/special skills for most of their crafts and arts.",
 			name: "Shaped from Earth and Stone",
 			stock: "Dwarf",
 			type: "Die"
@@ -48,7 +48,7 @@ export const DwarfCommon: TraitCategory =  {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "Dwarves are smaller than Men in stature, but they tend to be a bit thicker around the middle, with broader hands, feet and arms. Though tough and doughty, Dwarves' stout frames also hinder them slightly. Speed must always be lower than their Power or Forte (whichever is higher), even if this limits advancement. Their stride is 6. <br> Dwarven nature allows for a Forte maximum of 9 rather than 8 and a Speed maximum of 6 rather than 8. All other caps are 8.",
+			description: "Dwarves are smaller than Men in stature, but they tend to be a bit thicker around the middle, with broader hands, feet and arms. Though tough and doughty, Dwarves' stout frames also hinder them slightly. Speed must always be lower than their Power or Forte (whichever is higher), even if this limits advancement. Their stride is 6.<br>Dwarven nature allows for a Forte maximum of 9 rather than 8 and a Speed maximum of 6 rather than 8. All other caps are 8.",
 			name: "Stout",
 			stock: "Dwarf",
 			type: "Die"
@@ -183,7 +183,7 @@ export const DwarfLifepath: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "Long has it been the tradition of the great Dwarven Princes to go before the Longbeards of the clans to receive their blessing and swear an oath to protect them and uphold the traditions of their forefathers. Oathswearer is perhaps the most vital trait in Dwarven culture. Though all Dwarves are Oathsworn, only those with the Oathswearer trait may pronounce a binding pact. Any oath taken while not under the guidance of an Oathswearer is not binding. Any oath pronounced before an Oathswearer must he written into the character's Beliefs. It usually replaces one of the character's existing three Beliefs. It can be used to replace the fourth, Oathsworn trait belief only if that oath has been satisfied. <br> If an Oathswearer demands a character's word, and the character refuses, the Oathswearer can, at his discretion, brand him a coward. It is a stain that all Dwarves recognize, and no oaths or agreements are made with cowards. The character is given the Branded a Coward trait.",
+			description: "Long has it been the tradition of the great Dwarven Princes to go before the Longbeards of the clans to receive their blessing and swear an oath to protect them and uphold the traditions of their forefathers. Oathswearer is perhaps the most vital trait in Dwarven culture. Though all Dwarves are Oathsworn, only those with the Oathswearer trait may pronounce a binding pact. Any oath taken while not under the guidance of an Oathswearer is not binding. Any oath pronounced before an Oathswearer must he written into the character's Beliefs. It usually replaces one of the character's existing three Beliefs. It can be used to replace the fourth, Oathsworn trait belief only if that oath has been satisfied.<br>If an Oathswearer demands a character's word, and the character refuses, the Oathswearer can, at his discretion, brand him a coward. It is a stain that all Dwarves recognize, and no oaths or agreements are made with cowards. The character is given the Branded a Coward trait.",
 			name: "Oathswearer",
 			stock: "Dwarf",
 			type: "Die"
@@ -254,7 +254,7 @@ export const DwarfSpecial: TraitCategory =  {
 		{
 			allowed: ["bwg"],
 			cost: 3,
-			description: "A player may choose to make his Dwarven character especially Greedy. With this trait, he can raise his character's starting Greed to whatever exponent he desires (so long as it is higher than what it would start at). The downside of this is that Creed tests always count as the type of test the character needs to advance, no matter the obstacle. If he needs a routine, the next test counts as routine. See the Greed mechanics for the ramifications of this.",
+			description: "A player may choose to make his Dwarven character especially Greedy. With this trait, he can raise his character's starting Greed to whatever exponent he desires (so long as it is higher than what it would start at). The downside of this is that Greed tests always count as the type of test the character needs to advance, no matter the obstacle. If he needs a routine, the next test counts as routine. See the Greed mechanics for the ramifications of this.",
 			name: "Avarice",
 			stock: "Dwarf",
 			type: "Die"
@@ -270,7 +270,7 @@ export const DwarfSpecial: TraitCategory =  {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "This character contains within him the capacity to maintain terrible enmity for perceived slights. He swears grudges like others swear oaths. The Grudgekeeper trait allows the player to replace his Oathsworn Belief with a Grudge. Rather than a promise or an oath, he swears revenge. Grudges follow the same mechanic as oaths. <br> If the character has the Oathswearer trait, it combines with Grudgekeeper. He may only pronounce grudges-rather than oaths-between two characters. They must write them into their Beliefs as if they were oaths.",
+			description: "This character contains within him the capacity to maintain terrible enmity for perceived slights. He swears grudges like others swear oaths. The Grudgekeeper trait allows the player to replace his Oathsworn Belief with a Grudge. Rather than a promise or an oath, he swears revenge. Grudges follow the same mechanic as oaths.<br>If the character has the Oathswearer trait, it combines with Grudgekeeper. He may only pronounce grudges-rather than oaths-between two characters. They must write them into their Beliefs as if they were oaths.",
 			name: "Grudgekeeper",
 			stock: "Dwarf",
 			type: "Die"
@@ -278,7 +278,7 @@ export const DwarfSpecial: TraitCategory =  {
 		{
 			allowed: ["bwg"],
 			cost: 3,
-			description: "This Dwarf is virtuous, honorable and restrained. He may add +2D to his Steel when making tests against Creed. He also may reduce his starting Creed by -1D.",
+			description: "This Dwarf is virtuous, honorable and restrained. He may add +2D to his Steel when making tests against Greed. He also may reduce his starting Greed by -1D.",
 			name: "Virtuous",
 			stock: "Dwarf",
 			type: "Die"

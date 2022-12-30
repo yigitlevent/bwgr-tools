@@ -32,7 +32,7 @@ export const GreatWolfCommon: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "Without a doubt, Great Wolvea re intelligent creatures. They possess a personality and intellect equivalent to that of humans and Orcs. Never assume that just because they don't live in cities, write with pends or eat with knives, wolves are dumb brutes.<br>Even so, Great Wolves are not tool-using creatures. Though they understand a great many matters, they generally don't use (or even need) tools to accomplish the tasks in their daily lives. Any wolf attempting to use tools like hammers, swords or scissors suffers quadruple obstacle penalties.",
+			description: "Without a doubt, Great Wolve are intelligent creatures. They possess a personality and intellect equivalent to that of humans and Orcs. Never assume that just because they don't live in cities, write with pends or eat with knives, wolves are dumb brutes.<br>Even so, Great Wolves are not tool-using creatures. Though they understand a great many matters, they generally don't use (or even need) tools to accomplish the tasks in their daily lives. Any wolf attempting to use tools like hammers, swords or scissors suffers quadruple obstacle penalties.",
 			name: "Lupine Intellect",
 			stock: "Great Wolf",
 			type: "Die"
@@ -119,7 +119,7 @@ export const GreatWolfLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "Before the charge, these beasts bombard their opponents with cold fear. This wolf can howl and add +4D to Intimidation. This howl requires two actions to perform and cannot be done on the charge -it must be done beforehand. In Range and Cover, it positions with 2D. In Fight, it counts as the Longest weapon.",
+			description: "Before the charge, these beasts bombard their opponents with cold fear. This wolf can howl and add +4D to Intimidation. This howl requires two actions to perform and cannot be done on the charge —it must be done beforehand. In Range and Cover, it positions with 2D. In Fight, it counts as the Longest weapon.",
 			name: "Howl of Doom",
 			stock: "Great Wolf",
 			type: "Die"
@@ -143,7 +143,7 @@ export const GreatWolfLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "Wolves who are chosen to become Dark Friends tend to be particularly obedient. While their masters can be extremely generous -feeding their wolves much fresh meat- they are also extremely violent and punishing. Rarely do they hesitate to kill a disobedient wolf. Lastly, a Dark Friend has an intuitive understanding of the powers the Blood Summoners wield -he knows the might of success and the calamity of failure. It is far better to aid the former and prevent the latter.",
+			description: "Wolves who are chosen to become Dark Friends tend to be particularly obedient. While their masters can be extremely generous —feeding their wolves much fresh meat— they are also extremely violent and punishing. Rarely do they hesitate to kill a disobedient wolf. Lastly, a Dark Friend has an intuitive understanding of the powers the Blood Summoners wield —he knows the might of success and the calamity of failure. It is far better to aid the former and prevent the latter.",
 			name: "Obedient",
 			stock: "Great Wolf",
 			type: "Character"
@@ -199,7 +199,7 @@ export const GreatWolfLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "Spirit Howlers become attuned to the spirit world as their Taint grows. A wolf with this trait has the ability to hear those of the spirit nature. Counts as Observation for detecting the movements of spirits, demons and other creatures of spirit nature. Obstacles to detect spirits is 10 minues their Strength. WOlves may use their Woodland Ear in combination with this trait but not their Wolf Snout.",
+			description: "Spirit Howlers become attuned to the spirit world as their Taint grows. A wolf with this trait has the ability to hear those of the spirit nature. Counts as Observation for detecting the movements of spirits, demons and other creatures of spirit nature. Obstacles to detect spirits is 10 minues their Strength. Wolves may use their Woodland Ear in combination with this trait but not their Wolf Snout.",
 			name: "Spirit Ears",
 			stock: "Great Wolf",
 			type: "Die"
@@ -239,7 +239,7 @@ export const GreatWolfLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "Wolves learn to submit to a Dominant wolf at a very young age. Any wolf in the pack who is not part of the Dominant pair is submissive. These wolves follow the lead of their superiors and often beg for certain permissions, including permission to eat from a kill. Being Submissive in the pack connotes no weakness. It merely shows that the wolf understands the natural order of things. This trait grants a free relationship with a master or dominant character.<br>Prominent Submissive behaviors include: looking away from the Dominant's gaze, crouching with head to the ground before the Dominant, rolling over and exposing the belly to the Dominant and nibbling or licking the Dominant's chin.<br>Lastly, wolves may possess both the Dominant and Submissive traits. These wolves will rule their pack as they rightly should, but they might also submit to stronger Dominants -be they wolf, human or Orc.",
+			description: "Wolves learn to submit to a Dominant wolf at a very young age. Any wolf in the pack who is not part of the Dominant pair is submissive. These wolves follow the lead of their superiors and often beg for certain permissions, including permission to eat from a kill. Being Submissive in the pack connotes no weakness. It merely shows that the wolf understands the natural order of things. This trait grants a free relationship with a master or dominant character.<br>Prominent Submissive behaviors include: looking away from the Dominant's gaze, crouching with head to the ground before the Dominant, rolling over and exposing the belly to the Dominant and nibbling or licking the Dominant's chin.<br>Lastly, wolves may possess both the Dominant and Submissive traits. These wolves will rule their pack as they rightly should, but they might also submit to stronger Dominants —be they wolf, human or prc.",
 			name: "Submissive",
 			stock: "Great Wolf",
 			type: "Die"
@@ -247,7 +247,7 @@ export const GreatWolfLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "When another character cracks a whip across his back and gives an order, the player must obey the orders (so long as the orders aren't to 'stick that knife in your throat' or something similar). He can be driven to attack, to flee, to drop his weapon, fall to his knees, or just plain row the boat. <br> This trait does not allow a reroll, it merely forces an action. Thus it can be used to cow opportunities or send your reluctant underlings into the fray.",
+			description: "When another character cracks a whip across his back and gives an order, the player must obey the orders (so long as the orders aren't to 'stick that knife in your throat' or something similar). He can be driven to attack, to flee, to drop his weapon, fall to his knees, or just plain row the boat.<br>This trait does not allow a reroll, it merely forces an action. Thus it can be used to cow opportunities or send your reluctant underlings into the fray.",
 			name: "Tasting the Lash",
 			stock: "Great Wolf",
 			type: "Die"

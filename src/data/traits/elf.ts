@@ -32,7 +32,7 @@ export const ElfCommon: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "Elves are made from the very fabric of nature- wind, air, wood and water. Thus, they know its secrets very well: They know how to preserve much of its power- even when it is taken and shaped into something new. It is this intimate knowledge that allows the Elves to weave their songs. <br> Their unadulterated essence grants them insight into their world unmatched by the races of Men, Dwarves or Ores. Due to this, Elves' Perception maximum is 9 rather than 8.",
+			description: "Elves are made from the very fabric of nature —wind, air, wood and water. Thus, they know its secrets very well: They know how to preserve much of its power —even when it is taken and shaped into something new. It is this intimate knowledge that allows the Elves to weave their songs.<br>Their unadulterated essence grants them insight into their world unmatched by the races of Men, Dwarves or Ores. Due to this, Elves' Perception maximum is 9 rather than 8.",
 			name: "First Born",
 			stock: "Elf",
 			type: "Die"
@@ -71,7 +71,7 @@ export const ElfLifepath: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "This trait indicates the Elf is of a rare lineage—those first to walk even among the First Born. Down through the ages, the Aman have most often tread the path of the Etharch—they are the lords and kings of all Elves. This character need not be an Etharch himself, but he is eligible for that rank. In addition, the Elf-folk of the Wilderlands and Citadel treat him with a mixture of fear and adoration.",
+			description: "This trait indicates the Elf is of a rare lineage —those first to walk even among the First Born. Down through the ages, the Aman have most often tread the path of the Etharch —they are the lords and kings of all Elves. This character need not be an Etharch himself, but he is eligible for that rank. In addition, the Elf-folk of the Wilderlands and Citadel treat him with a mixture of fear and adoration.",
 			name: "Aman",
 			stock: "Elf",
 			type: "Character"
@@ -159,7 +159,7 @@ export const ElfLifepath: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "The Althing is the most powerful Elven citizen barring the Lord Protector. He is the ruler of a vast and ancient Citadel—heir to a tradition stretching back nearly to the dawn of time. Such as it is, the Althing tends to take his job pretty seriously. If the player takes it seriously and adds both a Belief and an Instinct relating to the welfare of his city—and these are relevant to the game at hand—the character gets a 2D reputation and 2D major affiliation in and around the citadel. These may be improved with additional resource point allocations.",
+			description: "The Althing is the most powerful Elven citizen barring the Lord Protector. He is the ruler of a vast and ancient Citadel—heir to a tradition stretching back nearly to the dawn of time. Such as it is, the Althing tends to take his job pretty seriously. If the player takes it seriously and adds both a Belief and an Instinct relating to the welfare of his city —and these are relevant to the game at hand— the character gets a 2D reputation and 2D major affiliation in and around the citadel. These may be improved with additional resource point allocations.",
 			name: "Servant of the Citadel",
 			stock: "Elf",
 			type: "Die"
@@ -167,7 +167,7 @@ export const ElfLifepath: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "Sword Singers are revered among the Elven hosts. Take a 1D affiliation with the Swords of the White Towers—Elven sword singers who have sworn to protect their lands and citadels.",
+			description: "Sword Singers are revered among the Elven hosts. Take a 1D affiliation with the Swords of the White Towers —Elven sword singers who have sworn to protect their lands and citadels.",
 			name: "Sword of the White Towers",
 			stock: "Elf",
 			type: "Die"
@@ -230,7 +230,7 @@ export const DarkElfLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "Wastrels lose themselves to their animal instincts, living for decades at a time without contact with civilization -living as animals do. The Feral trait reduces overall hesitation by one,  but adds +1 Ob to all social skill tests. Also, Feral negates the bonus to Circles from any Elven lifepath trait such as Etharchal, Lord of Ages, etc.",
+			description: "Wastrels lose themselves to their animal instincts, living for decades at a time without contact with civilization —living as animals do. The Feral trait reduces overall hesitation by one, but adds +1 Ob to all social skill tests. Also, Feral negates the bonus to Circles from any Elven lifepath trait such as Etharchal, Lord of Ages, etc.",
 			name: "Feral",
 			stock: "Elf",
 			type: "Die"
@@ -270,7 +270,7 @@ export const DarkElfLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "If the Dark Elf character is defeated in a Duel of With or a Fight and lives to tell the tale, he may FoRK his Spite into all rolls bent on avenging himself against his enemy. Humiliating or murdering the enemy -getting revenge upon them- immediately earns the player a bonus persona point, for a total of two: one for a personal goal and one for Vengeful.<br>The Vengeful trait also requires that the Dark Elf have a close relationship with a non-spiteful Elf or a mortal human. It can be familial, romantic or fraternal in nature -but it must be close. It must rankle the Dark Elf that they still live that way.",
+			description: "If the Dark Elf character is defeated in a Duel of With or a Fight and lives to tell the tale, he may FoRK his Spite into all rolls bent on avenging himself against his enemy. Humiliating or murdering the enemy —getting revenge upon them— immediately earns the player a bonus persona point, for a total of two: one for a personal goal and one for Vengeful.<br>The Vengeful trait also requires that the Dark Elf have a close relationship with a non-spiteful Elf or a mortal human. It can be familial, romantic or fraternal in nature —but it must be close. It must rankle the Dark Elf that they still live that way.",
 			name: "Vengeful",
 			stock: "Elf",
 			type: "Die"
@@ -301,7 +301,7 @@ export const ElfSpecial: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 3,
-			description: "The Mourner is obsessed with his Grief. He is morose. The player may add any amount to his starting Grief that he sees fit, up to a maximum of exponent 9. In addition, all Laments are made at +2 Ob, and any time the character's Grief is one test from advancing, the next test -regardless of its difficulty- advances him. Grief clings to this character's spirit and cannot be shaken.",
+			description: "The Mourner is obsessed with his Grief. He is morose. The player may add any amount to his starting Grief that he sees fit, up to a maximum of exponent 9. In addition, all Laments are made at +2 Ob, and any time the character's Grief is one test from advancing, the next test —regardless of its difficulty— advances him. Grief clings to this character's spirit and cannot be shaken.",
 			name: "Mourner",
 			stock: "Elf",
 			type: "Die"
@@ -309,7 +309,7 @@ export const ElfSpecial: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 4,
-			description: "This Elf has been marked as a slayer of his kin. In his past, his rage overcame his Grief and compassion, and he slew one of his own. Now he is marked as enemy and hunted by his own people. +lD to starting Grief, a 2D infamous reputation (all Elven people) as a Slayer, and +lD to Intimidate/Silent Fury any Elf.",
+			description: "This Elf has been marked as a slayer of his kin. In his past, his rage overcame his Grief and compassion, and he slew one of his own. Now he is marked as enemy and hunted by his own people. +1D to starting Grief, a 2D infamous reputation (all Elven people) as a Slayer, and +1D to Intimidate/Silent Fury any Elf.",
 			name: "Slayer",
 			stock: "Elf",
 			type: "Die"
