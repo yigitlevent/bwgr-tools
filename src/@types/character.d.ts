@@ -216,6 +216,7 @@ interface CharacterBurnerState {
 
 	addResource: (resource: SpendingForResource) => void;
 	removeResource: (guid: string) => void;
+	editResourceDescription: (guid: string, description: string) => void;
 
 	addBrutalLifeTrait: (traitPath: TraitPath | undefined) => void;
 	setHuntingGround: (huntingGround: HuntingGroundsList) => void;

@@ -7,17 +7,18 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import IconButton from "@mui/material/IconButton";
+import Divider from "@mui/material/Divider";
+import TextField from "@mui/material/TextField";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ArrowForwardIosSharp from "@mui/icons-material/ArrowForwardIosSharp";
 
 import { useCharacterBurnerStore } from "../../../hooks/stores/useCharacterBurnerStore";
 
 import { GenericGrid } from "../../Shared/Grids";
-import Divider from "@mui/material/Divider";
 
 
 export function ResourcesBlock({ openReModal }: { openReModal: (open: boolean) => void; }) {
-	const { totals, spendings, removeResource, getResourceRemainings } = useCharacterBurnerStore();
+	const { totals, spendings, removeResource, editResourceDescription, getResourceRemainings } = useCharacterBurnerStore();
 
 	const resourceRemaining = getResourceRemainings();
 
@@ -68,12 +69,15 @@ export function ResourcesBlock({ openReModal }: { openReModal: (open: boolean) =
 										</Grid>
 										: null
 									}
-									{spendings.resources[resourceKey].description.length > 0
-										? <Grid item xs={2}>
-											<Typography variant="body2">{spendings.resources[resourceKey].description}</Typography>
-										</Grid>
-										: null
-									}
+									<Grid item xs={2}>
+										<TextField
+											label="Description"
+											variant="standard"
+											value={spendings.resources[resourceKey].description}
+											onChange={e => editResourceDescription(resourceKey, e.target.value)}
+											fullWidth
+										/>
+									</Grid>
 								</GenericGrid>
 							</AccordionDetails>
 						</Accordion>

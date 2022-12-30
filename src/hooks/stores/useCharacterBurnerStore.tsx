@@ -1144,6 +1144,11 @@ export const useCharacterBurnerStore = create<CharacterBurnerState>()(
 						delete state.spendings.resources[guid];
 					}));
 				},
+				editResourceDescription: (guid: string, description: string) => {
+					set(produce<CharacterBurnerState>((state) => {
+						state.spendings.resources[guid].description = description;
+					}));
+				},
 
 				addBrutalLifeTrait: (traitPath: TraitPath | undefined) => {
 					set(produce<CharacterBurnerState>((state) => {
