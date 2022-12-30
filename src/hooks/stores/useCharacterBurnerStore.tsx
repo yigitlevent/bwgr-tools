@@ -996,10 +996,15 @@ export const useCharacterBurnerStore = create<CharacterBurnerState>()(
 				},
 				changeSkillExponent: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, skillPath: SkillPath, change: 1 | -1, isLifepath: boolean) => {
 					e.preventDefault();
+					const state = get();
+					const remainings = state.getSkillRemainings();
+					console.log({ isLifepath });
+					console.log({ remainings });
+
 					set(produce<CharacterBurnerState>((state) => {
-						const remainings = state.getSkillRemainings();
 						if (change === 1) {
 							if (isLifepath && remainings.lifepathPoints > 0) state.spendings.skills[skillPath].lifepath.advance += 1;
+							else if (isLifepath && remainings.generalPoints > 0) state.spendings.skills[skillPath].general.advance += 1;
 							else if (!isLifepath && remainings.generalPoints > 0) state.spendings.skills[skillPath].general.advance += 1;
 						}
 						else if (change === -1) {
