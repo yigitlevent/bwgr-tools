@@ -1,4 +1,4 @@
-type Ruleset = "bwg" | "bwc" | "msc";
+type Ruleset = "bwg" | "bwc" | "msc" | "amw";
 type StocksList = "Dwarf" | "Elf" | "Human" | "Orc" | "Roden" | "Troll" | "Great Wolf";
 type SubStocksList = "Dark Elf";
 type StocksListExtended = StocksList | SubStocksList;

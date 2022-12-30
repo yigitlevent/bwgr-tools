@@ -47,7 +47,7 @@ export function MagicWheel() {
 		changeAOE, changeElement, changeImpetus, changeDuration, changeOrigin, changeDirection, changeSteps, toggleCover, changeElementIndex
 	} = useMagicWheelStore();
 
-	const hasMscRuleset = checkRulesets(["msc"]);
+	const hasAmwRuleset = checkRulesets(["amw"]);
 
 	const wrapperRef = createRef<HTMLDivElement>();
 	const [size, setSize] = useState("0px");
@@ -62,7 +62,7 @@ export function MagicWheel() {
 	const [currentElementAngle, setCurrentElementAngle] = useState(0);
 	const [currentAOEAngle, setCurrentAOEAngle] = useState(0);
 
-	const [magicData, setMagicData] = useState(hasMscRuleset ? MiscMagicFacets : MagicData);
+	const [magicData, setMagicData] = useState(hasAmwRuleset ? MiscMagicFacets : MagicData);
 
 	const updateFacets = useCallback((amount: number) => {
 		const selected: string[] = [origin, duration, impetus, element, aoe];
@@ -182,7 +182,7 @@ export function MagicWheel() {
 	}, [wrapperRef]);
 
 	useEffect(() => {
-		if (hasMscRuleset) {
+		if (hasAmwRuleset) {
 			const d = MiscMagicFacets;
 			d[3] = MiscMagicElements[elementIndex];
 			setMagicData([...d]);
@@ -194,7 +194,7 @@ export function MagicWheel() {
 			resetStartingFacets(MagicData);
 			resetCurrentAngles();
 		}
-	}, [elementIndex, hasMscRuleset, resetCurrentAngles, resetStartingFacets]);
+	}, [elementIndex, hasAmwRuleset, resetCurrentAngles, resetStartingFacets]);
 
 	useEffect(() => {
 		const tempArr = [0, 0, 0, 0, 0];
@@ -213,7 +213,7 @@ export function MagicWheel() {
 		}
 	}, [isFontLoaded]);
 
-	const columns = hasMscRuleset ? 6 : 5;
+	const columns = hasAmwRuleset ? 6 : 5;
 
 	return (
 		<Fragment>
@@ -229,7 +229,7 @@ export function MagicWheel() {
 					</FormControl>
 				</Grid>
 
-				{hasMscRuleset
+				{hasAmwRuleset
 					? <Grid item xs={columns} sm={2} md={1}>
 						<FormControl fullWidth variant="standard">
 							<InputLabel>Element Group</InputLabel>
@@ -254,7 +254,7 @@ export function MagicWheel() {
 
 				<Grid item xs={columns} sm={2} md={1}>
 					<FormControl fullWidth variant="standard">
-						<InputLabel>{hasMscRuleset ? "Law" : "Impetus"}</InputLabel>
+						<InputLabel>{hasAmwRuleset ? "Law" : "Impetus"}</InputLabel>
 						<Select label="Impetus" name="Impetus" value={isRotating > 0 ? "" : impetus} onChange={changeStartingFacet} disabled={isRotating > 0}>
 							{Object.values(magicData[2]).map(v => { return <MenuItem key={v.name} value={v.name}>{v.name}</MenuItem>; })}
 						</Select>

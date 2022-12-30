@@ -46,6 +46,13 @@ export function Datasets({ expanded }: { expanded: boolean; }) {
 								<ListItemText primary="House Rules" sx={{ margin: "0 0 2px -10px" }} />
 							</ListItemButton>
 						</ListItem>
+
+						<ListItem disablePadding>
+							<ListItemButton onClick={() => toggleDataset("amw")}>
+								<ListItemIcon sx={{ margin: 0 }}>{checkRulesets(["amw"]) ? <CheckIcon color="success" /> : <CloseIcon color="error" />}</ListItemIcon>
+								<ListItemText primary="Alternative Magic Wheel" sx={{ margin: "0 0 2px -10px" }} />
+							</ListItemButton>
+						</ListItem>
 					</List>
 				</Box>
 			</Card>
