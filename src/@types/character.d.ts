@@ -1,41 +1,4 @@
-interface LifepathTotals {
-	years: {
-		points: number;
-		extensions: string[];
-	};
-	resources: {
-		points: number;
-		extensions: string[];
-	};
-	stats: {
-		fromAge: [mentalPoints: number, physicalPoints: number];
-		fromLifepaths: {
-			mentalPoints: number;
-			physicalPoints: number;
-			eitherPoints: number;
-		};
-	};
-	skills: {
-		generalPoints: {
-			points: number;
-			extensions: string[];
-		};
-		lifepathPoints: {
-			points: number;
-			extensions: string[];
-		};
-		mandatoryList: string[];
-		lifepathList: string[];
-		generalList: string[];
-	};
-	traits: {
-		points: number;
-		commonList: string[];
-		mandatoryList: string[];
-		lifepathList: string[];
-		generalList: string[];
-	};
-}
+
 
 interface StatSpending {
 	shade: number;
@@ -71,12 +34,17 @@ interface SpendingForTrait {
 	open: number;
 }
 
-interface SpendingForResource {
+type ResourceTypes = "Magical" | "Gear" | "Property" | "Relationship" | "Affiliation" | "Reputation";
+
+interface FreeResource {
 	name: string;
-	type: "Magical" | "Gear" | "Property" | "Relationship" | "Affiliation" | "Reputation";
+	type: ResourceTypes;
+	description: string;
+}
+
+interface SpendingForResource extends FreeResource {
 	cost: number;
 	modifiers: string[];
-	description: string;
 }
 
 interface CharacterSpendings {
@@ -138,12 +106,59 @@ interface ResourceRemaining {
 	resourcePoints: number;
 }
 
+interface LifepathTotals {
+	years: {
+		points: number;
+		extensions: string[];
+	};
+	resources: {
+		points: number;
+		extensions: string[];
+		fromTraitsList: FreeResource[];
+	};
+	stats: {
+		fromAge: [mentalPoints: number, physicalPoints: number];
+		fromLifepaths: {
+			mentalPoints: number;
+			physicalPoints: number;
+			eitherPoints: number;
+		};
+	};
+	skills: {
+		generalPoints: {
+			points: number;
+			extensions: string[];
+		};
+		lifepathPoints: {
+			points: number;
+			extensions: string[];
+		};
+		mandatoryList: string[];
+		lifepathList: string[];
+		generalList: string[];
+	};
+	traits: {
+		points: number;
+		commonList: string[];
+		mandatoryList: string[];
+		lifepathList: string[];
+		generalList: string[];
+		attributeMods: { [key: string]: number; };
+	};
+}
+
 interface CharacterBurnerState {
 	stock: StocksList;
 	concept: string;
 	name: string;
-	beliefs: [string, string, string, string];
-	instincts: [string, string, string, string];
+	beliefs: {
+		list: [string, string, string, string];
+		fourthBeliefName: string;
+	};
+	instincts: {
+		list: [string, string, string, string];
+		fourthInstinctName: string;
+	};
 	limits: CharacterLimits;
 	lifepathPaths: LifepathPath[];
 	specialLifepaths: SpecialLifepaths;
@@ -166,9 +181,9 @@ interface CharacterBurnerState {
 	checkIfTraitInCommonOrOpen: (questionTrait: string) => boolean;
 
 	refreshTotals: (generalSkills: string[], generalTraits: string[]) => void;
-	refreshStockLimits: () => void;
 	refreshSkillSpendings: () => void;
 	refreshTraitSpendings: () => void;
+	refreshTraitEffects: () => void;
 	refreshAttributeSpendings: () => void;
 	refreshQuestions: () => void;
 	resetStockSpecifics: () => void;

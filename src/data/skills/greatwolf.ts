@@ -22,7 +22,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Cage-wise",
 			noList: false,
@@ -67,7 +66,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Dog-wise",
 			noList: false,
@@ -82,7 +80,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Elf-wise",
 			noList: false,
@@ -112,7 +109,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Forest-wise",
 			noList: false,
@@ -157,7 +153,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Legion-wise",
 			noList: false,
@@ -202,7 +197,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Old World-wise",
 			noList: false,
@@ -217,7 +211,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Orc-wise",
 			noList: false,
@@ -262,7 +255,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Pack-wise",
 			noList: false,
@@ -277,7 +269,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Path-wise",
 			noList: false,
@@ -292,7 +283,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Poisons-wise",
 			noList: false,
@@ -307,7 +297,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Pup-wise",
 			noList: false,
@@ -352,7 +341,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Rituals-wise",
 			noList: false,
@@ -367,7 +355,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "River-wise",
 			noList: false,
@@ -412,7 +399,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Scent-wise",
 			noList: false,
@@ -427,7 +413,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Spirit Hunter-wise",
 			noList: false,
@@ -442,7 +427,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Village-wise",
 			noList: false,
@@ -487,7 +471,6 @@ export const GreatWolfSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Wolf-wise",
 			noList: false,

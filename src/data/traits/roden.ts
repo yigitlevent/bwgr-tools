@@ -71,7 +71,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Abused",
 			stock: "Roden",
 			type: "Character"
@@ -79,7 +78,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Acquisitive",
 			stock: "Roden",
 			type: "Character"
@@ -87,7 +85,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Ambitious",
 			stock: "Roden",
 			type: "Character"
@@ -119,7 +116,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Bedside Manner",
 			stock: "Roden",
 			type: "Character"
@@ -135,7 +131,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Bitter",
 			stock: "Roden",
 			type: "Character"
@@ -159,7 +154,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Calloused",
 			stock: "Roden",
 			type: "Character"
@@ -175,7 +169,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Cautious",
 			stock: "Roden",
 			type: "Character"
@@ -191,7 +184,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Cocky",
 			stock: "Roden",
 			type: "Character"
@@ -199,7 +191,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Compassionate",
 			stock: "Roden",
 			type: "Character"
@@ -207,7 +198,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Condescending",
 			stock: "Roden",
 			type: "Character"
@@ -215,7 +205,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Confident",
 			stock: "Roden",
 			type: "Character"
@@ -247,7 +236,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Daring",
 			stock: "Roden",
 			type: "Character"
@@ -263,7 +251,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Defensive",
 			stock: "Roden",
 			type: "Character"
@@ -271,7 +258,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Desperate",
 			stock: "Roden",
 			type: "Character"
@@ -279,7 +265,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Diligent",
 			stock: "Roden",
 			type: "Character"
@@ -287,7 +272,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Distracted",
 			stock: "Roden",
 			type: "Character"
@@ -295,7 +279,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Dumb",
 			stock: "Roden",
 			type: "Character"
@@ -327,7 +310,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Fragrant",
 			stock: "Roden",
 			type: "Character"
@@ -335,7 +317,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Frustrated",
 			stock: "Roden",
 			type: "Character"
@@ -351,7 +332,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Gnawing Hunger",
 			stock: "Roden",
 			type: "Character"
@@ -367,7 +347,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Gopher",
 			stock: "Roden",
 			type: "Character"
@@ -375,7 +354,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Hacking Cough",
 			stock: "Roden",
 			type: "Character"
@@ -383,7 +361,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Hoarder",
 			stock: "Roden",
 			type: "Character"
@@ -399,7 +376,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Impersonal",
 			stock: "Roden",
 			type: "Character"
@@ -415,7 +391,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Industrious",
 			stock: "Roden",
 			type: "Character"
@@ -423,7 +398,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Independent",
 			stock: "Roden",
 			type: "Character"
@@ -455,7 +429,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Mean",
 			stock: "Roden",
 			type: "Character"
@@ -463,7 +436,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Meek",
 			stock: "Roden",
 			type: "Character"
@@ -479,7 +451,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Merciless",
 			stock: "Roden",
 			type: "Character"
@@ -503,7 +474,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Murderous",
 			stock: "Roden",
 			type: "Character"
@@ -511,7 +481,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Nauseous",
 			stock: "Roden",
 			type: "Character"
@@ -519,7 +488,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Obsessed",
 			stock: "Roden",
 			type: "Character"
@@ -527,7 +495,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Opportunist",
 			stock: "Roden",
 			type: "Character"
@@ -543,7 +510,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Pack Rat",
 			stock: "Roden",
 			type: "Character"
@@ -551,7 +517,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Patient",
 			stock: "Roden",
 			type: "Character"
@@ -567,7 +532,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Portly",
 			stock: "Roden",
 			type: "Character"
@@ -575,7 +539,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Practical",
 			stock: "Roden",
 			type: "Character"
@@ -583,7 +546,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Practiced Smile",
 			stock: "Roden",
 			type: "Character"
@@ -591,7 +553,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Pyromaniac",
 			stock: "Roden",
 			type: "Character"
@@ -623,7 +584,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Righteous",
 			stock: "Roden",
 			type: "Character"
@@ -631,7 +591,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Ruthless",
 			stock: "Roden",
 			type: "Character"
@@ -655,7 +614,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Secretive",
 			stock: "Roden",
 			type: "Character"
@@ -663,7 +621,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Serious",
 			stock: "Roden",
 			type: "Character"
@@ -687,7 +644,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Sweet Tooth",
 			stock: "Roden",
 			type: "Character"
@@ -703,7 +659,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Toughtful",
 			stock: "Roden",
 			type: "Character"
@@ -727,7 +682,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Vegetarian",
 			stock: "Roden",
 			type: "Character"
@@ -743,7 +697,6 @@ export const RodenLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Weird",
 			stock: "Roden",
 			type: "Character"
@@ -790,7 +743,6 @@ export const RodenSpecial: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Extra-Long Fur",
 			stock: "Roden",
 			type: "Character"

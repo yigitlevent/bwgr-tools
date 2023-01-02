@@ -19,10 +19,10 @@ export function InstinctsBlock() {
 			</Grid>
 
 			<Fragment>
-				{instincts.map((v, i) =>
+				{instincts.list.map((v, i) =>
 					<Grid key={i} item xs={6}>
 						<TextField
-							label={i !== 3 ? `Instinct ${i + 1}` : "Special Instinct"}
+							label={i !== 3 ? `Instinct ${i + 1}` : instincts.fourthInstinctName}
 							value={v}
 							onChange={(e) => changeInstinct(i, e.target.value)}
 							disabled={i >= limits.beliefs}

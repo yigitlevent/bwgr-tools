@@ -72,7 +72,6 @@ export const TrollCommon: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Voracious Carnivore",
 			stock: "Troll",
 			type: "Character"
@@ -87,7 +86,6 @@ export const TrollLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Addled",
 			stock: "Troll",
 			type: "Character"
@@ -119,7 +117,6 @@ export const TrollLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Brutal",
 			stock: "Troll",
 			type: "Character"
@@ -167,7 +164,6 @@ export const TrollLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Insidious Cruelty",
 			stock: "Troll",
 			type: "Character"
@@ -175,7 +171,6 @@ export const TrollLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Mind Numbing Work",
 			stock: "Troll",
 			type: "Character"
@@ -183,7 +178,6 @@ export const TrollLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Misshapen",
 			stock: "Troll",
 			type: "Character"
@@ -207,7 +201,6 @@ export const TrollLifepath: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 0,
-			description: "",
 			name: "Solitary",
 			stock: "Troll",
 			type: "Character"
@@ -366,7 +359,6 @@ export const TrollSpecial: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Malformed",
 			stock: "Troll",
 			type: "Character"
@@ -382,7 +374,6 @@ export const TrollSpecial: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Oafishly Charming",
 			stock: "Troll",
 			type: "Character"

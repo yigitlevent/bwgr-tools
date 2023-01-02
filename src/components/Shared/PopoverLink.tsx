@@ -33,11 +33,13 @@ function SkillPop({ skill }: { skill: Skill; }) {
 				<Typography variant="caption">Restrictions: {GetSkillRestrictionString(skill)}</Typography>
 			</Grid>
 
-			<Grid item xs={2}>
-				{skill.description.split("<br>").map(v => <Typography key={v} variant="body2">{v}</Typography>)}
-			</Grid>
+			{skill.description
+				? <Grid item xs={2}>
+					{skill.description.split("<br>").map(v => <Typography key={v} variant="body2">{v}</Typography>)}
+				</Grid>
+				: null
+			}
 		</Grid>
-
 	);
 }
 
@@ -68,11 +70,13 @@ function TraitPop({ trait }: { trait: Trait; }) {
 				: null
 			}
 
-			<Grid item xs={3}>
-				{trait.description.split("<br>").map(v => <Typography key={v} variant="body2" sx={{ textIndent: "8px" }}>{v}</Typography>)}
-			</Grid>
+			{trait.description
+				? <Grid item xs={3}>
+					{trait.description.split("<br>").map(v => <Typography key={v} variant="body2" sx={{ textIndent: "8px" }}>{v}</Typography>)}
+				</Grid>
+				: null
+			}
 		</Grid>
-
 	);
 }
 

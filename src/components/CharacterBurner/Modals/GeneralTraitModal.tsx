@@ -112,9 +112,12 @@ export function GeneralTraitModal({ open, setOpen }: { open: boolean; setOpen: (
 									: null
 								}
 
-								<Grid item xs={3}>
-									{trait.description.split("<br>").map(v => <Typography key={v} variant="body2" sx={{ textIndent: "8px" }}>{v}</Typography>)}
-								</Grid>
+								{trait.description
+									? <Grid item xs={3}>
+										{trait.description.split("<br>").map(v => <Typography key={v} variant="body2" sx={{ textIndent: "8px" }}>{v}</Typography>)}
+									</Grid>
+									: null
+								}
 							</Grid>
 						</Grid>
 						: null

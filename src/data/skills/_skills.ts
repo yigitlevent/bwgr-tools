@@ -10,7 +10,7 @@ import { TrollSpecial } from "./troll";
 
 export interface Skill {
 	name: string;
-	description: string;
+	description?: string;
 
 	allowed: Ruleset[];
 	magical: boolean;

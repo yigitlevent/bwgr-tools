@@ -19,10 +19,10 @@ export function BeliefsBlock() {
 			</Grid>
 
 			<Fragment>
-				{beliefs.map((v, i) =>
+				{beliefs.list.map((v, i) =>
 					<Grid key={i} item xs={6}>
 						<TextField
-							label={i !== 3 ? `Belief ${i + 1}` : "Special Belief"}
+							label={i !== 3 ? `Belief ${i + 1}` : beliefs.fourthBeliefName}
 							value={v}
 							onChange={(e) => changeBelief(i, e.target.value)}
 							disabled={i >= limits.beliefs}

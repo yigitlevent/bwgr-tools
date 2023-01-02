@@ -19,7 +19,7 @@ import { GenericGrid } from "../../Shared/Grids";
 
 export function GeneralSkillModal({ open, setOpen }: { open: boolean; setOpen: (open: boolean) => void; }) {
 	const { checkRulesets } = useRulesetStore();
-	const { stock, totals, spendings, addSkill, checkHasSkill } = useCharacterBurnerStore();
+	const { stock, spendings, addSkill, checkHasSkill } = useCharacterBurnerStore();
 
 	const [chosenSkill, setChosenSkill] = useState("");
 
@@ -48,7 +48,7 @@ export function GeneralSkillModal({ open, setOpen }: { open: boolean; setOpen: (
 			}
 		}
 		return possibilities;
-	}, [checkRulesets, spendings, stock, totals]);
+	}, [checkHasSkill, checkRulesets, spendings.attributes, stock]);
 
 	const resetDefaultChosen = useCallback(() => {
 		setChosenSkill(getPossible()[0]);
@@ -109,9 +109,12 @@ export function GeneralSkillModal({ open, setOpen }: { open: boolean; setOpen: (
 									<Typography variant="caption">Restrictions: {GetSkillRestrictionString(skill)}</Typography>
 								</Grid>
 
-								<Grid item xs={2}>
-									{skill.description.split("<br>").map(v => <Typography key={v} variant="body2">{v}</Typography>)}
-								</Grid>
+								{skill.description
+									? <Grid item xs={2}>
+										{skill.description.split("<br>").map(v => <Typography key={v} variant="body2">{v}</Typography>)}
+									</Grid>
+									: null
+								}
 							</Grid>
 						</Grid>
 						: null

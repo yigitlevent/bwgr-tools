@@ -8,7 +8,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "A Little Crazy",
 			stock: "Any",
 			type: "Character"
@@ -16,7 +15,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "A Little Fat",
 			stock: "Any",
 			type: "Character"
@@ -24,7 +22,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Abashed",
 			stock: "Any",
 			type: "Character"
@@ -32,7 +29,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Abnormally Long Tongue",
 			stock: "Any",
 			type: "Character"
@@ -40,7 +36,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Abused",
 			stock: "Any",
 			type: "Character"
@@ -48,7 +43,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Academic",
 			stock: "Any",
 			type: "Character"
@@ -56,7 +50,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Accustomed to the Dark",
 			stock: "Any",
 			type: "Character"
@@ -64,7 +57,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Aches and Pains",
 			stock: "Any",
 			type: "Character"
@@ -72,7 +64,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Addicted",
 			stock: "Any",
 			type: "Character"
@@ -80,7 +71,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Adorable",
 			stock: "Any",
 			type: "Character"
@@ -88,7 +78,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Aggressive",
 			stock: "Any",
 			type: "Character"
@@ -96,7 +85,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Agoraphobic",
 			stock: "Any",
 			type: "Character"
@@ -104,7 +92,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Agreeable",
 			stock: "Any",
 			type: "Character"
@@ -112,7 +99,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Alarming",
 			stock: "Any",
 			type: "Character"
@@ -120,7 +106,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Alcoholic",
 			stock: "Any",
 			type: "Character"
@@ -128,7 +113,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Alms-Taker",
 			stock: "Any",
 			type: "Character"
@@ -136,7 +120,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Aloof",
 			stock: "Any",
 			type: "Character"
@@ -144,7 +127,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Ambidextrous",
 			stock: "Any",
 			type: "Character"
@@ -152,7 +134,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Ambitious",
 			stock: "Any",
 			type: "Character"
@@ -160,7 +141,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Amenable to Other Options",
 			stock: "Any",
 			type: "Character"
@@ -168,7 +148,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Amenable",
 			stock: "Any",
 			type: "Character"
@@ -176,7 +155,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Anemic",
 			stock: "Any",
 			type: "Character"
@@ -184,7 +162,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Appreciation for Beauty",
 			stock: "Any",
 			type: "Character"
@@ -192,7 +169,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Apprehensive",
 			stock: "Any",
 			type: "Character"
@@ -200,7 +176,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Arcane",
 			stock: "Any",
 			type: "Character"
@@ -208,7 +183,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Arrogant",
 			stock: "Any",
 			type: "Character"
@@ -216,7 +190,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Authoritative",
 			stock: "Any",
 			type: "Character"
@@ -224,7 +197,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Bad Egg",
 			stock: "Any",
 			type: "Character"
@@ -232,7 +204,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Barker",
 			stock: "Any",
 			type: "Character"
@@ -240,7 +211,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Base Humility",
 			stock: "Any",
 			type: "Character"
@@ -248,7 +218,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Batshit",
 			stock: "Any",
 			type: "Character"
@@ -256,7 +225,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Bedside Manner",
 			stock: "Any",
 			type: "Character"
@@ -264,7 +232,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Bellicose",
 			stock: "Any",
 			type: "Character"
@@ -272,7 +239,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Big Boned",
 			stock: "Any",
 			type: "Character"
@@ -280,7 +246,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Bilge-Drinker",
 			stock: "Any",
 			type: "Character"
@@ -288,7 +253,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Bitter",
 			stock: "Any",
 			type: "Character"
@@ -296,7 +260,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Blasphemer",
 			stock: "Any",
 			type: "Character"
@@ -304,7 +267,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Blisters",
 			stock: "Any",
 			type: "Character"
@@ -312,7 +274,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Bloviatic",
 			stock: "Any",
 			type: "Character"
@@ -320,7 +281,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Boaster",
 			stock: "Any",
 			type: "Character"
@@ -328,7 +288,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Bored",
 			stock: "Any",
 			type: "Character"
@@ -336,7 +295,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Boring",
 			stock: "Any",
 			type: "Character"
@@ -344,7 +302,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Brash",
 			stock: "Any",
 			type: "Character"
@@ -352,7 +309,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Brave",
 			stock: "Any",
 			type: "Character"
@@ -360,7 +316,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Broken Man",
 			stock: "Any",
 			type: "Character"
@@ -368,7 +323,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Brusque",
 			stock: "Any",
 			type: "Character"
@@ -376,7 +330,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Brutal",
 			stock: "Any",
 			type: "Character"
@@ -384,7 +337,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Bulbous Nose",
 			stock: "Any",
 			type: "Character"
@@ -392,7 +344,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Buxom",
 			stock: "Any",
 			type: "Character"
@@ -400,7 +351,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Cadaverous",
 			stock: "Any",
 			type: "Character"
@@ -408,7 +358,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Call of the Sea",
 			stock: "Any",
 			type: "Character"
@@ -416,7 +365,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Callous",
 			stock: "Any",
 			type: "Character"
@@ -424,7 +372,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Calloused",
 			stock: "Any",
 			type: "Character"
@@ -432,7 +379,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Callow",
 			stock: "Any",
 			type: "Character"
@@ -440,7 +386,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Carrulous",
 			stock: "Any",
 			type: "Character"
@@ -448,7 +393,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Cassandra",
 			stock: "Any",
 			type: "Character"
@@ -464,7 +408,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Chuffing",
 			stock: "Any",
 			type: "Character"
@@ -472,7 +415,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Chuntering",
 			stock: "Any",
 			type: "Character"
@@ -480,7 +422,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Circumspect",
 			stock: "Any",
 			type: "Character"
@@ -488,7 +429,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Collector",
 			stock: "Any",
 			type: "Character"
@@ -496,7 +436,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Color Blind",
 			stock: "Any",
 			type: "Character"
@@ -504,7 +443,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Colorful",
 			stock: "Any",
 			type: "Character"
@@ -512,7 +450,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Comely",
 			stock: "Any",
 			type: "Character"
@@ -520,7 +457,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Comfortable Shoes",
 			stock: "Any",
 			type: "Character"
@@ -528,7 +464,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Complaining",
 			stock: "Any",
 			type: "Character"
@@ -544,7 +479,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Condescending",
 			stock: "Any",
 			type: "Character"
@@ -552,7 +486,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Confident",
 			stock: "Any",
 			type: "Character"
@@ -560,7 +493,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Cookie",
 			stock: "Any",
 			type: "Character"
@@ -568,7 +500,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Corrupt",
 			stock: "Any",
 			type: "Character"
@@ -576,7 +507,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Cramped Hands",
 			stock: "Any",
 			type: "Character"
@@ -584,7 +514,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Crotchety",
 			stock: "Any",
 			type: "Character"
@@ -592,7 +521,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Cruel",
 			stock: "Any",
 			type: "Character"
@@ -600,7 +528,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Cry Wolf",
 			stock: "Any",
 			type: "Character"
@@ -608,7 +535,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Cryptic",
 			stock: "Any",
 			type: "Character"
@@ -616,7 +542,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Curious",
 			stock: "Any",
 			type: "Character"
@@ -624,7 +549,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Curses like a Sailor",
 			stock: "Any",
 			type: "Character"
@@ -632,7 +556,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Cursing",
 			stock: "Any",
 			type: "Character"
@@ -640,7 +563,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Cynical",
 			stock: "Any",
 			type: "Character"
@@ -648,7 +570,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Dangerous",
 			stock: "Any",
 			type: "Character"
@@ -656,7 +577,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Daring",
 			stock: "Any",
 			type: "Character"
@@ -664,7 +584,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Debauched",
 			stock: "Any",
 			type: "Character"
@@ -672,7 +591,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Deferential",
 			stock: "Any",
 			type: "Character"
@@ -680,7 +598,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Demagogue",
 			stock: "Any",
 			type: "Character"
@@ -688,7 +605,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Denouncer",
 			stock: "Any",
 			type: "Character"
@@ -696,7 +612,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Desperate",
 			stock: "Any",
 			type: "Character"
@@ -704,7 +619,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Despondent",
 			stock: "Any",
 			type: "Character"
@@ -712,7 +626,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Determined",
 			stock: "Any",
 			type: "Character"
@@ -720,7 +633,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Devout",
 			stock: "Any",
 			type: "Character"
@@ -728,7 +640,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Diligent",
 			stock: "Any",
 			type: "Character"
@@ -736,7 +647,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Diminutive Hands",
 			stock: "Any",
 			type: "Character"
@@ -752,7 +662,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Disciplined",
 			stock: "Any",
 			type: "Character"
@@ -760,7 +669,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Dismissive",
 			stock: "Any",
 			type: "Character"
@@ -768,7 +676,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Distracted",
 			stock: "Any",
 			type: "Character"
@@ -776,7 +683,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Disturbed",
 			stock: "Any",
 			type: "Character"
@@ -784,7 +690,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Disturbingly Confident",
 			stock: "Any",
 			type: "Character"
@@ -792,7 +697,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Disturbingly Large Mouth",
 			stock: "Any",
 			type: "Character"
@@ -800,7 +704,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Dog Lover",
 			stock: "Any",
 			type: "Character"
@@ -808,7 +711,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Dog-Faced Boy",
 			stock: "Any",
 			type: "Character"
@@ -816,7 +718,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Domineering",
 			stock: "Any",
 			type: "Character"
@@ -824,7 +725,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Dour",
 			stock: "Any",
 			type: "Character"
@@ -832,7 +732,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Downtrodden",
 			stock: "Any",
 			type: "Character"
@@ -840,7 +739,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Drop-Dead Gorgeous",
 			stock: "Any",
 			type: "Character"
@@ -848,7 +746,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Drunk",
 			stock: "Any",
 			type: "Character"
@@ -856,7 +753,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Dusty",
 			stock: "Any",
 			type: "Character"
@@ -864,7 +760,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Dutiful",
 			stock: "Any",
 			type: "Character"
@@ -872,7 +767,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Early Riser",
 			stock: "Any",
 			type: "Character"
@@ -880,7 +774,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Earthen",
 			stock: "Any",
 			type: "Character"
@@ -888,7 +781,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Earthy Smell",
 			stock: "Any",
 			type: "Character"
@@ -896,7 +788,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Eating Maggots",
 			stock: "Any",
 			type: "Character"
@@ -904,7 +795,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Ebullient",
 			stock: "Any",
 			type: "Character"
@@ -912,7 +802,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Educated",
 			stock: "Any",
 			type: "Character"
@@ -920,7 +809,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Effete",
 			stock: "Any",
 			type: "Character"
@@ -928,7 +816,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Emotional",
 			stock: "Any",
 			type: "Character"
@@ -936,7 +823,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Erudite",
 			stock: "Any",
 			type: "Character"
@@ -944,7 +830,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Esoteric",
 			stock: "Any",
 			type: "Character"
@@ -952,7 +837,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Eunuch",
 			stock: "Any",
 			type: "Character"
@@ -960,7 +844,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Evasive",
 			stock: "Any",
 			type: "Character"
@@ -968,7 +851,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Exasperated",
 			stock: "Any",
 			type: "Character"
@@ -976,7 +858,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Extra Digit",
 			stock: "Any",
 			type: "Character"
@@ -984,7 +865,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Extremely Bitter",
 			stock: "Any",
 			type: "Character"
@@ -992,7 +872,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Extremely Respectful of One's Betters",
 			stock: "Any",
 			type: "Character"
@@ -1000,7 +879,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Faded",
 			stock: "Any",
 			type: "Character"
@@ -1008,7 +886,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Fanatical Devotion",
 			stock: "Any",
 			type: "Character"
@@ -1016,7 +893,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Farting",
 			stock: "Any",
 			type: "Character"
@@ -1024,7 +900,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Fastidious",
 			stock: "Any",
 			type: "Character"
@@ -1032,7 +907,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Fateful",
 			stock: "Any",
 			type: "Character"
@@ -1040,7 +914,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Fear of Cheese",
 			stock: "Any",
 			type: "Character"
@@ -1048,7 +921,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Fear of Wet Noises",
 			stock: "Any",
 			type: "Character"
@@ -1056,7 +928,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Fearful Respect of the Servants",
 			stock: "Any",
 			type: "Character"
@@ -1064,7 +935,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Feral",
 			stock: "Any",
 			type: "Character"
@@ -1072,7 +942,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Fervent Believer",
 			stock: "Any",
 			type: "Character"
@@ -1080,7 +949,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Firm",
 			stock: "Any",
 			type: "Character"
@@ -1088,7 +956,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Fixed Smile",
 			stock: "Any",
 			type: "Character"
@@ -1096,7 +963,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Flamboyant",
 			stock: "Any",
 			type: "Character"
@@ -1104,7 +970,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Flatterer",
 			stock: "Any",
 			type: "Character"
@@ -1112,7 +977,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Flea-Bitten",
 			stock: "Any",
 			type: "Character"
@@ -1120,7 +984,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Flee from Battle",
 			stock: "Any",
 			type: "Character"
@@ -1128,7 +991,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Flip",
 			stock: "Any",
 			type: "Character"
@@ -1136,7 +998,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Floksy Wisdom",
 			stock: "Any",
 			type: "Character"
@@ -1144,7 +1005,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Floury",
 			stock: "Any",
 			type: "Character"
@@ -1152,7 +1012,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Following the Beat",
 			stock: "Any",
 			type: "Character"
@@ -1160,7 +1019,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Fondness for Elven Blood",
 			stock: "Any",
 			type: "Character"
@@ -1168,7 +1026,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Formalist",
 			stock: "Any",
 			type: "Character"
@@ -1176,7 +1033,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Foul Smelling",
 			stock: "Any",
 			type: "Character"
@@ -1184,7 +1040,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Fretful",
 			stock: "Any",
 			type: "Character"
@@ -1192,7 +1047,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Frippery",
 			stock: "Any",
 			type: "Character"
@@ -1200,7 +1054,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Frustrated",
 			stock: "Any",
 			type: "Character"
@@ -1208,7 +1061,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Gelid",
 			stock: "Any",
 			type: "Character"
@@ -1216,7 +1068,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Generous",
 			stock: "Any",
 			type: "Character"
@@ -1224,7 +1075,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Genial",
 			stock: "Any",
 			type: "Character"
@@ -1232,7 +1082,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Gentle but Firm",
 			stock: "Any",
 			type: "Character"
@@ -1240,7 +1089,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Gerbil Brain",
 			stock: "Any",
 			type: "Character"
@@ -1248,7 +1096,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Gluttonous",
 			stock: "Any",
 			type: "Character"
@@ -1256,7 +1103,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Gnawing Hunger",
 			stock: "Any",
 			type: "Character"
@@ -1264,7 +1110,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Good for Nothing",
 			stock: "Any",
 			type: "Character"
@@ -1272,7 +1117,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Good Listener",
 			stock: "Any",
 			type: "Character"
@@ -1280,7 +1124,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Gossip",
 			stock: "Any",
 			type: "Character"
@@ -1288,7 +1131,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Grand",
 			stock: "Any",
 			type: "Character"
@@ -1296,7 +1138,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Greasy",
 			stock: "Any",
 			type: "Character"
@@ -1304,7 +1145,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Greedy",
 			stock: "Any",
 			type: "Character"
@@ -1312,7 +1152,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Grey Mantle",
 			stock: "Any",
 			type: "Character"
@@ -1320,7 +1159,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Grim",
 			stock: "Any",
 			type: "Character"
@@ -1328,7 +1166,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Grumbling",
 			stock: "Any",
 			type: "Character"
@@ -1336,7 +1173,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Guarded",
 			stock: "Any",
 			type: "Character"
@@ -1344,7 +1180,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Hacking Cough",
 			stock: "Any",
 			type: "Character"
@@ -1352,7 +1187,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Hairy",
 			stock: "Any",
 			type: "Character"
@@ -1360,7 +1194,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Halitosis",
 			stock: "Any",
 			type: "Character"
@@ -1368,7 +1201,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Handicapped",
 			stock: "Any",
 			type: "Character"
@@ -1376,7 +1208,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Handsome",
 			stock: "Any",
 			type: "Character"
@@ -1384,7 +1215,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Happy-Go-Lucky",
 			stock: "Any",
 			type: "Character"
@@ -1392,7 +1222,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Hard Work",
 			stock: "Any",
 			type: "Character"
@@ -1400,7 +1229,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Hatred of Forests",
 			stock: "Any",
 			type: "Character"
@@ -1408,7 +1236,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Haunted",
 			stock: "Any",
 			type: "Character"
@@ -1416,7 +1243,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "He's a Jonah That One",
 			stock: "Any",
 			type: "Character"
@@ -1424,7 +1250,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Hide Before Battle",
 			stock: "Any",
 			type: "Character"
@@ -1432,7 +1257,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Hoarding",
 			stock: "Any",
 			type: "Character"
@@ -1440,7 +1264,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Holier",
 			stock: "Any",
 			type: "Character"
@@ -1448,7 +1271,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Hollow Bones",
 			stock: "Any",
 			type: "Character"
@@ -1456,7 +1278,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Homesick",
 			stock: "Any",
 			type: "Character"
@@ -1464,7 +1285,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Honored",
 			stock: "Any",
 			type: "Character"
@@ -1472,7 +1292,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Hope",
 			stock: "Any",
 			type: "Character"
@@ -1480,7 +1299,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Horsefriend",
 			stock: "Any",
 			type: "Character"
@@ -1488,7 +1306,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Humble Before My Master",
 			stock: "Any",
 			type: "Character"
@@ -1496,7 +1313,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Humility in the Face of Your Betters",
 			stock: "Any",
 			type: "Character"
@@ -1504,7 +1320,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Humility",
 			stock: "Any",
 			type: "Character"
@@ -1512,7 +1327,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Hungry",
 			stock: "Any",
 			type: "Character"
@@ -1520,7 +1334,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Hurt",
 			stock: "Any",
 			type: "Character"
@@ -1528,7 +1341,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Hypochondriac",
 			stock: "Any",
 			type: "Character"
@@ -1536,7 +1348,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Idealistic",
 			stock: "Any",
 			type: "Character"
@@ -1544,7 +1355,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Ideologue",
 			stock: "Any",
 			type: "Character"
@@ -1552,7 +1362,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Impecunious",
 			stock: "Any",
 			type: "Character"
@@ -1560,7 +1369,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Imperious",
 			stock: "Any",
 			type: "Character"
@@ -1568,7 +1376,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Impulsive",
 			stock: "Any",
 			type: "Character"
@@ -1576,7 +1383,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Incessant Tapping",
 			stock: "Any",
 			type: "Character"
@@ -1584,7 +1390,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Inconsiderate",
 			stock: "Any",
 			type: "Character"
@@ -1592,7 +1397,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Indecisive",
 			stock: "Any",
 			type: "Character"
@@ -1608,7 +1412,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Infallible Religious Logic",
 			stock: "Any",
 			type: "Character"
@@ -1616,7 +1419,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Ink-Stained Hands",
 			stock: "Any",
 			type: "Character"
@@ -1624,7 +1426,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Inscrutable",
 			stock: "Any",
 			type: "Character"
@@ -1632,7 +1433,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Insightful",
 			stock: "Any",
 			type: "Character"
@@ -1640,7 +1440,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Insomniac",
 			stock: "Any",
 			type: "Character"
@@ -1648,7 +1447,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Instractable",
 			stock: "Any",
 			type: "Character"
@@ -1656,7 +1454,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Intense Hatred",
 			stock: "Any",
 			type: "Character"
@@ -1664,7 +1461,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Intense",
 			stock: "Any",
 			type: "Character"
@@ -1672,7 +1468,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Intimidating",
 			stock: "Any",
 			type: "Character"
@@ -1680,7 +1475,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Inured",
 			stock: "Any",
 			type: "Character"
@@ -1688,7 +1482,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Invisible Friend",
 			stock: "Any",
 			type: "Character"
@@ -1696,7 +1489,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Involuntary Shudders",
 			stock: "Any",
 			type: "Character"
@@ -1704,7 +1496,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Iron Nails",
 			stock: "Any",
 			type: "Character"
@@ -1712,7 +1503,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "It Just Might Work!",
 			stock: "Any",
 			type: "Character"
@@ -1720,7 +1510,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Jaunty",
 			stock: "Any",
 			type: "Character"
@@ -1728,7 +1517,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Jealous",
 			stock: "Any",
 			type: "Character"
@@ -1736,7 +1524,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Joan of Arc",
 			stock: "Any",
 			type: "Character"
@@ -1744,7 +1531,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Keen Sense of Humor",
 			stock: "Any",
 			type: "Character"
@@ -1752,7 +1538,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Know It All",
 			stock: "Any",
 			type: "Character"
@@ -1760,7 +1545,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Laconic",
 			stock: "Any",
 			type: "Character"
@@ -1768,7 +1552,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Lavish Taste",
 			stock: "Any",
 			type: "Character"
@@ -1776,7 +1559,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Lazy",
 			stock: "Any",
 			type: "Character"
@@ -1784,7 +1566,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Learned",
 			stock: "Any",
 			type: "Character"
@@ -1792,7 +1573,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Leprosy",
 			stock: "Any",
 			type: "Character"
@@ -1800,7 +1580,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Loner",
 			stock: "Any",
 			type: "Character"
@@ -1808,7 +1587,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Lonesome",
 			stock: "Any",
 			type: "Character"
@@ -1816,7 +1594,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Long Fingered",
 			stock: "Any",
 			type: "Character"
@@ -1824,7 +1601,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Lord's Favorite",
 			stock: "Any",
 			type: "Character"
@@ -1832,7 +1608,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Love of the Horse",
 			stock: "Any",
 			type: "Character"
@@ -1840,7 +1615,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Lugubrious",
 			stock: "Any",
 			type: "Character"
@@ -1856,7 +1630,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Lustrous",
 			stock: "Any",
 			type: "Character"
@@ -1864,7 +1637,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Mad",
 			stock: "Any",
 			type: "Character"
@@ -1872,7 +1644,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Maggot Connoisseur",
 			stock: "Any",
 			type: "Character"
@@ -1880,7 +1651,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Man of Few Words",
 			stock: "Any",
 			type: "Character"
@@ -1888,7 +1658,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Manly",
 			stock: "Any",
 			type: "Character"
@@ -1896,7 +1665,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Many-Colored Hands",
 			stock: "Any",
 			type: "Character"
@@ -1904,7 +1672,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Mark of the Beast",
 			stock: "Any",
 			type: "Character"
@@ -1912,7 +1679,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Maternal",
 			stock: "Any",
 			type: "Character"
@@ -1920,7 +1686,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Matriarchal/Patriarchal",
 			stock: "Any",
 			type: "Character"
@@ -1928,7 +1693,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Maudlin",
 			stock: "Any",
 			type: "Character"
@@ -1936,7 +1700,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Mean",
 			stock: "Any",
 			type: "Character"
@@ -1944,7 +1707,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Melodramatic Family",
 			stock: "Any",
 			type: "Character"
@@ -1952,7 +1714,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Mercenary",
 			stock: "Any",
 			type: "Character"
@@ -1960,7 +1721,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Merciful",
 			stock: "Any",
 			type: "Character"
@@ -1968,7 +1728,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Merciless",
 			stock: "Any",
 			type: "Character"
@@ -1976,7 +1735,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Metal Plate in the Skull",
 			stock: "Any",
 			type: "Character"
@@ -1984,7 +1742,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Mind for Small Details",
 			stock: "Any",
 			type: "Character"
@@ -1992,7 +1749,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Misanthropic",
 			stock: "Any",
 			type: "Character"
@@ -2000,7 +1756,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Missing Digit",
 			stock: "Any",
 			type: "Character"
@@ -2008,7 +1763,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Murderous",
 			stock: "Any",
 			type: "Character"
@@ -2016,7 +1770,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Mute",
 			stock: "Any",
 			type: "Character"
@@ -2024,7 +1777,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Muttering",
 			stock: "Any",
 			type: "Character"
@@ -2032,7 +1784,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Naked Hatred",
 			stock: "Any",
 			type: "Character"
@@ -2040,7 +1791,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Narcoleptic",
 			stock: "Any",
 			type: "Character"
@@ -2048,7 +1798,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Never Cry Wolf",
 			stock: "Any",
 			type: "Character"
@@ -2056,7 +1805,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Night Owl",
 			stock: "Any",
 			type: "Character"
@@ -2064,7 +1812,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Nihilistic",
 			stock: "Any",
 			type: "Character"
@@ -2072,7 +1819,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "No Nonsense",
 			stock: "Any",
 			type: "Character"
@@ -2080,7 +1826,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Nose for Trouble",
 			stock: "Any",
 			type: "Character"
@@ -2088,7 +1833,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Obedient",
 			stock: "Any",
 			type: "Character"
@@ -2096,7 +1840,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Obliging",
 			stock: "Any",
 			type: "Character"
@@ -2104,7 +1847,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Obsequious",
 			stock: "Any",
 			type: "Character"
@@ -2112,7 +1854,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Obsessed",
 			stock: "Any",
 			type: "Character"
@@ -2120,7 +1861,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Obstinate",
 			stock: "Any",
 			type: "Character"
@@ -2128,7 +1868,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Odd",
 			stock: "Any",
 			type: "Character"
@@ -2136,7 +1875,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Odious",
 			stock: "Any",
 			type: "Character"
@@ -2144,7 +1882,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Off-Kilter",
 			stock: "Any",
 			type: "Character"
@@ -2152,7 +1889,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Oikofugic",
 			stock: "Any",
 			type: "Character"
@@ -2160,7 +1896,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Ornery",
 			stock: "Any",
 			type: "Character"
@@ -2168,7 +1903,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Other Life",
 			stock: "Any",
 			type: "Character"
@@ -2176,7 +1910,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Overbearing Loony",
 			stock: "Any",
 			type: "Character"
@@ -2184,7 +1917,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Overbite",
 			stock: "Any",
 			type: "Character"
@@ -2192,7 +1924,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Overworked",
 			stock: "Any",
 			type: "Character"
@@ -2200,7 +1931,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Paranoid About the Ship",
 			stock: "Any",
 			type: "Character"
@@ -2208,7 +1938,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Paranoid",
 			stock: "Any",
 			type: "Character"
@@ -2216,7 +1945,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Pariah",
 			stock: "Any",
 			type: "Character"
@@ -2224,7 +1952,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Passionate",
 			stock: "Any",
 			type: "Character"
@@ -2232,7 +1959,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Patient",
 			stock: "Any",
 			type: "Character"
@@ -2240,7 +1966,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Patriatchal",
 			stock: "Any",
 			type: "Character"
@@ -2248,7 +1973,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Pecunious",
 			stock: "Any",
 			type: "Character"
@@ -2256,7 +1980,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Pegboy",
 			stock: "Any",
 			type: "Character"
@@ -2264,7 +1987,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Perfectionist",
 			stock: "Any",
 			type: "Character"
@@ -2272,7 +1994,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Peripatetic",
 			stock: "Any",
 			type: "Character"
@@ -2280,7 +2001,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Pigpen",
 			stock: "Any",
 			type: "Character"
@@ -2288,7 +2008,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Pointed Ears",
 			stock: "Any",
 			type: "Character"
@@ -2296,7 +2015,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Poisonous Ambition",
 			stock: "Any",
 			type: "Character"
@@ -2304,7 +2022,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Pompous",
 			stock: "Any",
 			type: "Character"
@@ -2312,7 +2029,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Practical",
 			stock: "Any",
 			type: "Character"
@@ -2320,7 +2036,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Pragmatic Outlook",
 			stock: "Any",
 			type: "Character"
@@ -2328,7 +2043,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Pragmatic",
 			stock: "Any",
 			type: "Character"
@@ -2336,7 +2050,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Predatory",
 			stock: "Any",
 			type: "Character"
@@ -2344,7 +2057,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Problem with Authority",
 			stock: "Any",
 			type: "Character"
@@ -2352,7 +2064,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Professionally Diligent",
 			stock: "Any",
 			type: "Character"
@@ -2360,7 +2071,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Profuse Sweat",
 			stock: "Any",
 			type: "Character"
@@ -2368,7 +2078,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Prominent Scar",
 			stock: "Any",
 			type: "Character"
@@ -2376,7 +2085,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Prone to Exaggeration",
 			stock: "Any",
 			type: "Character"
@@ -2384,7 +2092,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Proud",
 			stock: "Any",
 			type: "Character"
@@ -2392,7 +2099,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Psychotic",
 			stock: "Any",
 			type: "Character"
@@ -2400,7 +2106,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Querulous",
 			stock: "Any",
 			type: "Character"
@@ -2408,7 +2113,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Quirky",
 			stock: "Any",
 			type: "Character"
@@ -2416,7 +2120,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Rabble-Rouser",
 			stock: "Any",
 			type: "Character"
@@ -2424,7 +2127,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Rarified",
 			stock: "Any",
 			type: "Character"
@@ -2432,7 +2134,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Rash",
 			stock: "Any",
 			type: "Character"
@@ -2440,7 +2141,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Reckless",
 			stock: "Any",
 			type: "Character"
@@ -2448,7 +2148,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Recondite",
 			stock: "Any",
 			type: "Character"
@@ -2456,7 +2155,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Red Cheeks",
 			stock: "Any",
 			type: "Character"
@@ -2464,7 +2162,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Red-Blooded",
 			stock: "Any",
 			type: "Character"
@@ -2472,7 +2169,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Reeks of Alcohol",
 			stock: "Any",
 			type: "Character"
@@ -2480,7 +2176,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Regal Bearing",
 			stock: "Any",
 			type: "Character"
@@ -2488,7 +2183,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Reincarnated",
 			stock: "Any",
 			type: "Character"
@@ -2496,7 +2190,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Remarkable Flatulence",
 			stock: "Any",
 			type: "Character"
@@ -2504,7 +2197,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Remote",
 			stock: "Any",
 			type: "Character"
@@ -2512,7 +2204,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Resigned to Fate",
 			stock: "Any",
 			type: "Character"
@@ -2520,7 +2211,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Resolute",
 			stock: "Any",
 			type: "Character"
@@ -2528,7 +2218,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Restless",
 			stock: "Any",
 			type: "Character"
@@ -2536,7 +2225,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Reviled",
 			stock: "Any",
 			type: "Character"
@@ -2544,7 +2232,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Rhetorical",
 			stock: "Any",
 			type: "Character"
@@ -2552,7 +2239,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Righteous",
 			stock: "Any",
 			type: "Character"
@@ -2560,7 +2246,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Road Weary",
 			stock: "Any",
 			type: "Character"
@@ -2568,7 +2253,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Romantic",
 			stock: "Any",
 			type: "Character"
@@ -2576,7 +2260,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Rough Hands",
 			stock: "Any",
 			type: "Character"
@@ -2584,7 +2267,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Royal Favorite",
 			stock: "Any",
 			type: "Character"
@@ -2592,7 +2274,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Ruddy Complexion",
 			stock: "Any",
 			type: "Character"
@@ -2600,7 +2281,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Sadistic",
 			stock: "Any",
 			type: "Character"
@@ -2608,7 +2288,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Sailor's Oath",
 			stock: "Any",
 			type: "Character"
@@ -2616,7 +2295,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Salt of the Earth",
 			stock: "Any",
 			type: "Character"
@@ -2624,7 +2302,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Sane",
 			stock: "Any",
 			type: "Character"
@@ -2632,7 +2309,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Scapegoat",
 			stock: "Any",
 			type: "Character"
@@ -2640,7 +2316,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Scarred",
 			stock: "Any",
 			type: "Character"
@@ -2648,7 +2323,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Scavenger",
 			stock: "Any",
 			type: "Character"
@@ -2656,7 +2330,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Screaming",
 			stock: "Any",
 			type: "Character"
@@ -2664,7 +2337,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Scurvy",
 			stock: "Any",
 			type: "Character"
@@ -2672,7 +2344,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Seasoned",
 			stock: "Any",
 			type: "Character"
@@ -2680,7 +2351,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Secretive",
 			stock: "Any",
 			type: "Character"
@@ -2688,7 +2358,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Secretly Worships the Black Sea God",
 			stock: "Any",
 			type: "Character"
@@ -2696,7 +2365,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Seemingly Concerned",
 			stock: "Any",
 			type: "Character"
@@ -2704,7 +2372,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Seen It All",
 			stock: "Any",
 			type: "Character"
@@ -2712,7 +2379,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Seen Not Heard",
 			stock: "Any",
 			type: "Character"
@@ -2720,7 +2386,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Self-Confident",
 			stock: "Any",
 			type: "Character"
@@ -2728,7 +2393,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Self-Satisfied",
 			stock: "Any",
 			type: "Character"
@@ -2736,7 +2400,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Sense of Entitlement",
 			stock: "Any",
 			type: "Character"
@@ -2744,7 +2407,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Sharp Dresser",
 			stock: "Any",
 			type: "Character"
@@ -2752,7 +2414,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Shouting",
 			stock: "Any",
 			type: "Character"
@@ -2760,7 +2421,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Shrewd",
 			stock: "Any",
 			type: "Character"
@@ -2768,7 +2428,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Sick",
 			stock: "Any",
 			type: "Character"
@@ -2776,7 +2435,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Silent Hatred",
 			stock: "Any",
 			type: "Character"
@@ -2784,7 +2442,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Singed",
 			stock: "Any",
 			type: "Character"
@@ -2792,7 +2449,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Skeptical",
 			stock: "Any",
 			type: "Character"
@@ -2800,7 +2456,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Skin of an Apple",
 			stock: "Any",
 			type: "Character"
@@ -2808,7 +2463,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Skinny",
 			stock: "Any",
 			type: "Character"
@@ -2816,7 +2470,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Sleek",
 			stock: "Any",
 			type: "Character"
@@ -2824,7 +2477,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Sleep-Talker",
 			stock: "Any",
 			type: "Character"
@@ -2832,7 +2484,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Smart",
 			stock: "Any",
 			type: "Character"
@@ -2840,7 +2491,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Smells Like a Horse",
 			stock: "Any",
 			type: "Character"
@@ -2848,7 +2498,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Solipsistic",
 			stock: "Any",
 			type: "Character"
@@ -2856,7 +2505,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Somnambulist",
 			stock: "Any",
 			type: "Character"
@@ -2864,7 +2512,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Speaker of the Secret Language",
 			stock: "Any",
 			type: "Character"
@@ -2872,7 +2519,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Spectacular",
 			stock: "Any",
 			type: "Character"
@@ -2880,7 +2526,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Spitting",
 			stock: "Any",
 			type: "Character"
@@ -2888,7 +2533,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Spooky",
 			stock: "Any",
 			type: "Character"
@@ -2896,7 +2540,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Squinty",
 			stock: "Any",
 			type: "Character"
@@ -2904,7 +2547,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Stalker",
 			stock: "Any",
 			type: "Character"
@@ -2912,7 +2554,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Starved",
 			stock: "Any",
 			type: "Character"
@@ -2920,7 +2561,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Steady Hands",
 			stock: "Any",
 			type: "Character"
@@ -2928,7 +2568,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Stern Demeanor",
 			stock: "Any",
 			type: "Character"
@@ -2936,7 +2575,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Stinky",
 			stock: "Any",
 			type: "Character"
@@ -2944,7 +2582,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Stolid",
 			stock: "Any",
 			type: "Character"
@@ -2952,7 +2589,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Strange",
 			stock: "Any",
 			type: "Character"
@@ -2960,7 +2596,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Strapping",
 			stock: "Any",
 			type: "Character"
@@ -2968,7 +2603,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Strong-Willed",
 			stock: "Any",
 			type: "Character"
@@ -2976,7 +2610,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Stung Once (Once)",
 			stock: "Any",
 			type: "Character"
@@ -2984,7 +2617,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Stutter",
 			stock: "Any",
 			type: "Character"
@@ -2992,7 +2624,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Superstitious",
 			stock: "Any",
 			type: "Character"
@@ -3000,7 +2631,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Suspicious",
 			stock: "Any",
 			type: "Character"
@@ -3008,7 +2638,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Swaggering",
 			stock: "Any",
 			type: "Character"
@@ -3016,7 +2645,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Taciturn",
 			stock: "Any",
 			type: "Character"
@@ -3024,7 +2652,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Taste for Man-Flesh",
 			stock: "Any",
 			type: "Character"
@@ -3032,7 +2659,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Temperamental",
 			stock: "Any",
 			type: "Character"
@@ -3040,7 +2666,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Tenuous",
 			stock: "Any",
 			type: "Character"
@@ -3048,7 +2673,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Thug",
 			stock: "Any",
 			type: "Character"
@@ -3056,7 +2680,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Thunderous Snoring",
 			stock: "Any",
 			type: "Character"
@@ -3064,7 +2687,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Tidy Aspect",
 			stock: "Any",
 			type: "Character"
@@ -3072,7 +2694,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Timid",
 			stock: "Any",
 			type: "Character"
@@ -3080,7 +2701,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Tolerant",
 			stock: "Any",
 			type: "Character"
@@ -3088,7 +2708,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Touch of Madness",
 			stock: "Any",
 			type: "Character"
@@ -3096,7 +2715,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Trusting",
 			stock: "Any",
 			type: "Character"
@@ -3104,7 +2722,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Trustworthy",
 			stock: "Any",
 			type: "Character"
@@ -3112,7 +2729,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Turgid",
 			stock: "Any",
 			type: "Character"
@@ -3120,7 +2736,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Ugly",
 			stock: "Any",
 			type: "Character"
@@ -3128,7 +2743,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Unbeliever",
 			stock: "Any",
 			type: "Character"
@@ -3136,7 +2750,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Underbite",
 			stock: "Any",
 			type: "Character"
@@ -3144,7 +2757,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Underpaid",
 			stock: "Any",
 			type: "Character"
@@ -3152,7 +2764,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Uneasy",
 			stock: "Any",
 			type: "Character"
@@ -3160,7 +2771,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Unrelenting Hatred",
 			stock: "Any",
 			type: "Character"
@@ -3168,7 +2778,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Unsavory Madman",
 			stock: "Any",
 			type: "Character"
@@ -3176,7 +2785,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Urbane",
 			stock: "Any",
 			type: "Character"
@@ -3184,7 +2792,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Venal",
 			stock: "Any",
 			type: "Character"
@@ -3192,7 +2799,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Veneer of Obedience",
 			stock: "Any",
 			type: "Character"
@@ -3200,7 +2806,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Vitriolic",
 			stock: "Any",
 			type: "Character"
@@ -3208,7 +2813,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Vocal",
 			stock: "Any",
 			type: "Character"
@@ -3216,7 +2820,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Voice in the Crowd",
 			stock: "Any",
 			type: "Character"
@@ -3224,7 +2827,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Wary",
 			stock: "Any",
 			type: "Character"
@@ -3232,7 +2834,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Watchful",
 			stock: "Any",
 			type: "Character"
@@ -3240,7 +2841,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Weight of the World",
 			stock: "Any",
 			type: "Character"
@@ -3248,7 +2848,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Weird",
 			stock: "Any",
 			type: "Character"
@@ -3256,7 +2855,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Well Appointed",
 			stock: "Any",
 			type: "Character"
@@ -3264,7 +2862,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Well Dressed",
 			stock: "Any",
 			type: "Character"
@@ -3272,7 +2869,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "White-Gold Wielder",
 			stock: "Any",
 			type: "Character"
@@ -3280,7 +2876,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Worldly",
 			stock: "Any",
 			type: "Character"
@@ -3288,7 +2883,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Xenophobic",
 			stock: "Any",
 			type: "Character"
@@ -3296,7 +2890,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "You Should Know Better than That!",
 			stock: "Any",
 			type: "Character"
@@ -3304,7 +2897,6 @@ export const AnyCharacter: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 1,
-			description: "",
 			name: "Yowling",
 			stock: "Any",
 			type: "Character"
@@ -4725,7 +4317,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Acquisitive",
 			stock: "Any",
 			type: "Character"
@@ -4733,7 +4324,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Addled",
 			stock: "Any",
 			type: "Character"
@@ -4869,7 +4459,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Clumsy Walker",
 			stock: "Any",
 			type: "Character"
@@ -4885,7 +4474,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Cocky",
 			stock: "Any",
 			type: "Character"
@@ -4893,7 +4481,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Compassionate",
 			stock: "Any",
 			type: "Character"
@@ -4941,7 +4528,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Defensive",
 			stock: "Any",
 			type: "Character"
@@ -4965,7 +4551,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Dumb",
 			stock: "Any",
 			type: "Character"
@@ -4997,7 +4582,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Extra-Long Fur",
 			stock: "Any",
 			type: "Character"
@@ -5037,7 +4621,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Fragrant",
 			stock: "Any",
 			type: "Character"
@@ -5061,7 +4644,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Furtive",
 			stock: "Any",
 			type: "Character"
@@ -5093,7 +4675,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Gopher",
 			stock: "Any",
 			type: "Character"
@@ -5133,7 +4714,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Hermaphrodite",
 			stock: "Any",
 			type: "Character"
@@ -5157,7 +4737,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Hoarder",
 			stock: "Any",
 			type: "Character"
@@ -5189,7 +4768,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Hungry Dead",
 			stock: "Any",
 			type: "Character"
@@ -5205,7 +4783,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Impersonal",
 			stock: "Any",
 			type: "Character"
@@ -5213,7 +4790,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Independent",
 			stock: "Any",
 			type: "Character"
@@ -5221,7 +4797,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Industrious",
 			stock: "Any",
 			type: "Character"
@@ -5229,7 +4804,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Insidious Cruelty",
 			stock: "Any",
 			type: "Character"
@@ -5269,7 +4843,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Malformed",
 			stock: "Any",
 			type: "Character"
@@ -5277,7 +4850,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Mangy Coat",
 			stock: "Any",
 			type: "Character"
@@ -5285,7 +4857,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Meek",
 			stock: "Any",
 			type: "Character"
@@ -5301,7 +4872,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Misshapen",
 			stock: "Any",
 			type: "Character"
@@ -5333,7 +4903,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Nauseous",
 			stock: "Any",
 			type: "Character"
@@ -5341,7 +4910,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Necrophagic",
 			stock: "Any",
 			type: "Character"
@@ -5357,7 +4925,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Oafishly Charming",
 			stock: "Any",
 			type: "Character"
@@ -5373,7 +4940,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Opportunist",
 			stock: "Any",
 			type: "Character"
@@ -5381,7 +4947,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Pack Rat",
 			stock: "Any",
 			type: "Character"
@@ -5405,7 +4970,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Portly",
 			stock: "Any",
 			type: "Character"
@@ -5413,7 +4977,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Practiced Smile",
 			stock: "Any",
 			type: "Character"
@@ -5429,7 +4992,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Pyromaniac",
 			stock: "Any",
 			type: "Character"
@@ -5461,7 +5023,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Reclusive",
 			stock: "Any",
 			type: "Character"
@@ -5485,7 +5046,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Ruthless",
 			stock: "Any",
 			type: "Character"
@@ -5501,7 +5061,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Serious",
 			stock: "Any",
 			type: "Character"
@@ -5565,7 +5124,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Solitary",
 			stock: "Any",
 			type: "Character"
@@ -5597,7 +5155,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Sweet Tooth",
 			stock: "Any",
 			type: "Character"
@@ -5620,7 +5177,7 @@ export const AnyMonstrous: TraitCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			cost: 
+			cost:
 				7,
 			description: "Tentacles are supple, strong, sticky and agile additional limbs. This trait comes in two grades: Two tentacles cost 4 pts and give a +1D advantage to all Lock, Push and grabbing related tests. More than two tentacles cost 7 pts and grant +2D advantage to all Lock, Push and grabbing related tests. These extra limbs cause a +1 Ob and a +2 Ob to Inconspicuous tests respectively.",
 			name: "Tentacles (7)",
@@ -5638,7 +5195,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Toughtful",
 			stock: "Any",
 			type: "Character"
@@ -5670,7 +5226,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Vegetarian",
 			stock: "Any",
 			type: "Character"
@@ -5686,7 +5241,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Voracious Carnivore",
 			stock: "Any",
 			type: "Character"
@@ -5694,7 +5248,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Wanderlust",
 			stock: "Any",
 			type: "Character"
@@ -5718,7 +5271,6 @@ export const AnyMonstrous: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Zoophagia",
 			stock: "Any",
 			type: "Character"

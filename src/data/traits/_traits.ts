@@ -8,14 +8,77 @@ import { RodenCommon, RodenLifepath, RodenSpecial } from "./roden";
 import { TrollCommon, TrollLifepath, TrollSpecial } from "./troll";
 
 
-export interface Trait {
+interface TraitBasicEffect {
+	type: "Basic";
+	subtype: "Requirement" | "Conditional" | "Obstacle" | "Additional Effect";
+	description: string;
+}
+
+interface TraitFourthBeliefEffect {
+	type: "Belief";
+	openFourth: boolean;
+	beliefName: string;
+}
+
+interface TraitFourthInstinctEffect {
+	type: "Instinct";
+	openFourth: boolean;
+	instinctName: string;
+}
+
+interface TraitStatEffect {
+	type: "Stat",
+	callon?: { statName: StatsList; condition?: string; };
+	limit?: { [key: string]: { min: number; max: number; }; };
+}
+
+interface TraitAttributeEffect {
+	type: "Attribute";
+	enable?: AttributesList;
+	disable?: AttributesList;
+	freeExponent?: AttributesList;
+	roundUp?: AttributesList | "Mortal Wound";
+	modify?: { attribute: AttributesList; modifier: number; };
+	conditionalModify?: { attribute: AttributesList; modifier: number; ifHasTrait: TraitPath; };
+	callon?: { attribute: AttributesList; condition?: string; };
+	addWhenCalculating?: { attribute: AttributesList; modifier: number; };
+}
+
+interface TraitSkillEffect {
+	type: "Skill";
+	roundUpByRoot?: StatsList;
+	modify?: { skillPath: SkillPath; modifier: number; };
+	callon?: { skillPath: SkillPath; condition?: string; };
+}
+
+interface TraitResourceEffect {
+	type: "Resource";
+	free: { resourceType: ResourceTypes; description: string; };
+}
+
+export type TraitEffect = TraitBasicEffect | TraitFourthBeliefEffect | TraitFourthInstinctEffect
+	| TraitStatEffect | TraitAttributeEffect | TraitSkillEffect | TraitResourceEffect;
+
+export interface CharacterTrait {
+	allowed: Ruleset[];
+	cost: number;
+	description?: string;
+	name: string;
+	stock: "Any" | StocksList;
+	type: "Character";
+}
+
+export interface OtherTrait {
 	allowed: Ruleset[];
 	cost: number;
 	description: string;
 	name: string;
 	stock: "Any" | StocksList;
-	type: TraitTypesList;
+	type: Exclude<TraitTypesList, "Character">;
+	effects: TraitEffect[];
 }
+
+export type Trait = CharacterTrait | OtherTrait;
 
 export interface TraitCategory {
 	allowed: Ruleset[];

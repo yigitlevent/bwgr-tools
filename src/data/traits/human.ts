@@ -192,7 +192,7 @@ export const HumanLifepath: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "The carpenter is a strange bloke, but he definitely knows the ship. This trait acts as a call-on for any ability used in trying to figure out something about the sailor's ship—be it the location of something lost or the knowledge to repair terrible damage.",
+			description: "The carpenter is a strange bloke, but he definitely knows the ship. This trait acts as a call-on for any ability used in trying to figure out something about the sailor's ship —be it the location of something lost or the knowledge to repair terrible damage.",
 			name: "I Know This Ship Like My Own Hands",
 			stock: "Human",
 			type: "Call-on"
@@ -495,7 +495,6 @@ export const HumanSpecial: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Always in the Way",
 			stock: "Human",
 			type: "Character"
@@ -511,7 +510,6 @@ export const HumanSpecial: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Assistant Pig-Keeper",
 			stock: "Human",
 			type: "Character"
@@ -543,7 +541,6 @@ export const HumanSpecial: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Bully",
 			stock: "Human",
 			type: "Character"
@@ -591,7 +588,6 @@ export const HumanSpecial: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Creepy",
 			stock: "Human",
 			type: "Character"
@@ -607,7 +603,6 @@ export const HumanSpecial: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Demented",
 			stock: "Human",
 			type: "Character"
@@ -623,7 +618,6 @@ export const HumanSpecial: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Efficient",
 			stock: "Human",
 			type: "Character"
@@ -631,7 +625,6 @@ export const HumanSpecial: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Evil",
 			stock: "Human",
 			type: "Character"
@@ -663,7 +656,6 @@ export const HumanSpecial: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Fiery",
 			stock: "Human",
 			type: "Character"
@@ -687,7 +679,6 @@ export const HumanSpecial: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Harried",
 			stock: "Human",
 			type: "Character"
@@ -719,7 +710,6 @@ export const HumanSpecial: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 2,
-			description: "",
 			name: "Late",
 			stock: "Human",
 			type: "Character"
@@ -767,7 +757,6 @@ export const HumanSpecial: TraitCategory = {
 		{
 			allowed: ["bwc"],
 			cost: 1,
-			description: "",
 			name: "Polite",
 			stock: "Human",
 			type: "Character"

@@ -7,7 +7,6 @@ export const TrollSpecial: SkillCategory = {
 	skills: [
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Bridge-wise",
 			noList: false,
@@ -52,7 +51,6 @@ export const TrollSpecial: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Mine-wise",
 			noList: false,

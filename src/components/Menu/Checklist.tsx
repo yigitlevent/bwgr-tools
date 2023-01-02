@@ -106,7 +106,7 @@ export function Checklist({ expanded }: { expanded: boolean; }) {
 		else if (traitRemainings.traitPoints !== 0) setActiveStep(5);
 		else if (!Object.values(questions).includes(true)) setActiveStep(6);
 		else if (resourceRemainings.resourcePoints !== 0) setActiveStep(7);
-		else if ((beliefs.filter(v => v !== "").length < limits.beliefs - 1 || instincts.filter(v => v !== "").length < limits.instincts - 1)) setActiveStep(8);
+		else if ((beliefs.list.filter(v => v !== "").length < limits.beliefs - 1 || instincts.list.filter(v => v !== "").length < limits.instincts - 1)) setActiveStep(8);
 		else if (name === "") setActiveStep(9);
 		else setActiveStep(10);
 

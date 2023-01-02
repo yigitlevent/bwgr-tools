@@ -3524,7 +3524,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Abbey-wise",
 			noList: false,
@@ -3539,7 +3538,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Aecer-wise",
 			noList: false,
@@ -3554,7 +3552,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Alms-wise",
 			noList: false,
@@ -3569,7 +3566,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Althing-wise",
 			noList: false,
@@ -3584,7 +3580,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Ambition-wise",
 			noList: false,
@@ -3599,7 +3594,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Ambush-wise",
 			noList: false,
@@ -3614,7 +3608,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Animal-wise",
 			noList: false,
@@ -3629,7 +3622,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Antique-wise",
 			noList: false,
@@ -3644,7 +3636,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Apocalypse-wise",
 			noList: false,
@@ -3659,7 +3650,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Apostate-wise",
 			noList: false,
@@ -3674,7 +3664,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Apprentice-wise",
 			noList: false,
@@ -3689,7 +3678,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Army-wise",
 			noList: false,
@@ -3704,7 +3692,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Arson-wise",
 			noList: false,
@@ -3719,7 +3706,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Artificer-wise",
 			noList: false,
@@ -3734,7 +3720,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Artisan-wise",
 			noList: false,
@@ -3749,7 +3734,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Assassination-wise",
 			noList: false,
@@ -3764,7 +3748,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Aura-wise",
 			noList: false,
@@ -3779,7 +3762,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Authority-wise",
 			noList: false,
@@ -3794,7 +3776,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Back Alley-wise",
 			noList: false,
@@ -3809,7 +3790,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Bad End-wise",
 			noList: false,
@@ -3824,7 +3804,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Baggage Train-wise",
 			noList: false,
@@ -3839,7 +3818,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Bandit-wise",
 			noList: false,
@@ -3854,7 +3832,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Banner-wise",
 			noList: false,
@@ -3869,7 +3846,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Bannerman-wise",
 			noList: false,
@@ -3884,7 +3860,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Bat-wise",
 			noList: false,
@@ -3899,7 +3874,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Battle-wise",
 			noList: false,
@@ -3914,7 +3888,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Bay-wise",
 			noList: false,
@@ -3929,7 +3902,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Beast of Burden-wise",
 			noList: false,
@@ -3944,7 +3916,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Bee-wise",
 			noList: false,
@@ -3959,7 +3930,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Beer-wise",
 			noList: false,
@@ -3974,7 +3944,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Beggar-wise",
 			noList: false,
@@ -3989,7 +3958,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Below-wise",
 			noList: false,
@@ -4004,7 +3972,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Bishop-wise",
 			noList: false,
@@ -4034,7 +4001,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Bone Headed-wise",
 			noList: false,
@@ -4049,7 +4015,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Bone-wise",
 			noList: false,
@@ -4064,7 +4029,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Books-wise",
 			noList: false,
@@ -4079,7 +4043,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Border-wise",
 			noList: false,
@@ -4094,7 +4057,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Boss-wise",
 			noList: false,
@@ -4109,7 +4071,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Bow-wise",
 			noList: false,
@@ -4124,7 +4085,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Bread-wise",
 			noList: false,
@@ -4139,7 +4099,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Brew-wise",
 			noList: false,
@@ -4154,7 +4113,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Bribe-wise",
 			noList: false,
@@ -4169,7 +4127,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Bridge-wise",
 			noList: false,
@@ -4184,7 +4141,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Bully-wise",
 			noList: false,
@@ -4199,7 +4155,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Burden of the Crown-wise",
 			noList: false,
@@ -4214,7 +4169,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Cadence-wise",
 			noList: false,
@@ -4229,7 +4183,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Campaign-wise",
 			noList: false,
@@ -4244,7 +4197,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Captain-wise",
 			noList: false,
@@ -4259,7 +4211,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Caravan-wise",
 			noList: false,
@@ -4274,7 +4225,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Cargo-wise",
 			noList: false,
@@ -4289,7 +4239,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Cat-wise",
 			noList: false,
@@ -4304,7 +4253,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Caulking-wise",
 			noList: false,
@@ -4319,7 +4267,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Cavalry-wise",
 			noList: false,
@@ -4334,7 +4281,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Cave-In-wise",
 			noList: false,
@@ -4349,7 +4295,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Cave-wise",
 			noList: false,
@@ -4364,7 +4309,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Cell-wise",
 			noList: false,
@@ -4379,7 +4323,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Cemetary-wise",
 			noList: false,
@@ -4394,7 +4337,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Cemetery-wise",
 			noList: false,
@@ -4409,7 +4351,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Chain-wise",
 			noList: false,
@@ -4424,7 +4365,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Champion-wise",
 			noList: false,
@@ -4439,7 +4379,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Charcoal-wise",
 			noList: false,
@@ -4454,7 +4393,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Chattel-wise",
 			noList: false,
@@ -4469,7 +4407,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Cheat-wise",
 			noList: false,
@@ -4484,7 +4421,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Cheating-wise",
 			noList: false,
@@ -4499,7 +4435,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Child-wise",
 			noList: false,
@@ -4514,7 +4449,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Church Politics-wise",
 			noList: false,
@@ -4529,7 +4463,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Church Treasure-wise",
 			noList: false,
@@ -4544,7 +4477,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Church-wise",
 			noList: false,
@@ -4559,7 +4491,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Circuit-wise",
 			noList: false,
@@ -4574,7 +4505,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Citadel-wise",
 			noList: false,
@@ -4589,7 +4519,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "City Guard-wise",
 			noList: false,
@@ -4604,7 +4533,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "City-wise",
 			noList: false,
@@ -4619,7 +4547,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Clan-wise",
 			noList: false,
@@ -4634,7 +4561,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Clique-wise",
 			noList: false,
@@ -4649,7 +4575,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Clothing-wise",
 			noList: false,
@@ -4664,7 +4589,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Coin-wise",
 			noList: false,
@@ -4679,7 +4603,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Commodities-wise",
 			noList: false,
@@ -4694,7 +4617,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Contract-wise",
 			noList: false,
@@ -4709,7 +4631,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Countryside-wise",
 			noList: false,
@@ -4724,7 +4645,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Court Gossip-wise",
 			noList: false,
@@ -4739,7 +4659,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Court-wise",
 			noList: false,
@@ -4754,7 +4673,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Craft-wise",
 			noList: false,
@@ -4769,7 +4687,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Craftsman-wise",
 			noList: false,
@@ -4784,7 +4701,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Creepy Priest-wise",
 			noList: false,
@@ -4799,7 +4715,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Crew-wise",
 			noList: false,
@@ -4814,7 +4729,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Criminal-wise",
 			noList: false,
@@ -4829,7 +4743,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Crop-wise",
 			noList: false,
@@ -4844,7 +4757,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Crowd-wise",
 			noList: false,
@@ -4859,7 +4771,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Cult-wise",
 			noList: false,
@@ -4874,7 +4785,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Cultist-wise",
 			noList: false,
@@ -4889,7 +4799,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Currency-wise",
 			noList: false,
@@ -4904,7 +4813,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Current-wise",
 			noList: false,
@@ -4919,7 +4827,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Customer-wise",
 			noList: false,
@@ -4934,7 +4841,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Daily Bread-wise",
 			noList: false,
@@ -4949,7 +4855,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Dark Arts-wise",
 			noList: false,
@@ -4964,7 +4869,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Dark Elf-wise",
 			noList: false,
@@ -4979,7 +4883,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Dark Secret-wise",
 			noList: false,
@@ -4994,7 +4897,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Darkened Streets-wise",
 			noList: false,
@@ -5009,7 +4911,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Darkness-wise",
 			noList: false,
@@ -5024,7 +4925,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Deal-wise",
 			noList: false,
@@ -5039,7 +4939,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Death Cult-wise",
 			noList: false,
@@ -5054,7 +4953,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Death-wise",
 			noList: false,
@@ -5069,7 +4967,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Debt-wise",
 			noList: false,
@@ -5084,7 +4981,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Dirty Secrets-wise",
 			noList: false,
@@ -5099,7 +4995,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Disgusting Necromancer-wise",
 			noList: false,
@@ -5114,7 +5009,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Dog-wise",
 			noList: false,
@@ -5129,7 +5023,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Domain-wise",
 			noList: false,
@@ -5144,7 +5037,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Drama-wise",
 			noList: false,
@@ -5159,7 +5051,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Drink-wise",
 			noList: false,
@@ -5174,7 +5065,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Drunk Husband-wise",
 			noList: false,
@@ -5189,7 +5079,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Drunk-wise",
 			noList: false,
@@ -5204,7 +5093,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Drunkard-wise",
 			noList: false,
@@ -5219,7 +5107,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Dupe-wise",
 			noList: false,
@@ -5234,7 +5121,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Dwarf-wise",
 			noList: false,
@@ -5249,7 +5135,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Dwarven Art-wise",
 			noList: false,
@@ -5264,7 +5149,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Dwarven Heroes-wise",
 			noList: false,
@@ -5294,7 +5178,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Elf-wise",
 			noList: false,
@@ -5309,7 +5192,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Elven Art-wise",
 			noList: false,
@@ -5324,7 +5206,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Elven Artifact-wise",
 			noList: false,
@@ -5339,7 +5220,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Elven Blade-wise",
 			noList: false,
@@ -5354,7 +5234,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Elven Citadel-wise",
 			noList: false,
@@ -5369,7 +5248,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Elven Politics-wise",
 			noList: false,
@@ -5384,7 +5262,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Elven Ranger-wise",
 			noList: false,
@@ -5399,7 +5276,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Elven Songs-wise",
 			noList: false,
@@ -5414,7 +5290,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Estate-wise",
 			noList: false,
@@ -5429,7 +5304,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Etharch-wise",
 			noList: false,
@@ -5444,7 +5318,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Everybody's Innocent-wise",
 			noList: false,
@@ -5459,7 +5332,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Evil Necromancer-wise",
 			noList: false,
@@ -5474,7 +5346,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Excuses-wise",
 			noList: false,
@@ -5489,7 +5360,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Extortion-wise",
 			noList: false,
@@ -5504,7 +5374,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Fabric-wise",
 			noList: false,
@@ -5519,7 +5388,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Facet-wise",
 			noList: false,
@@ -5534,7 +5402,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Faith-wise",
 			noList: false,
@@ -5549,7 +5416,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Fake-wise",
 			noList: false,
@@ -5564,7 +5430,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Fall Grass-wise",
 			noList: false,
@@ -5579,7 +5444,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Family Secret-wise",
 			noList: false,
@@ -5594,7 +5458,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Family Secrets-wise",
 			noList: false,
@@ -5609,7 +5472,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Family-wise",
 			noList: false,
@@ -5624,7 +5486,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Fashion-wise",
 			noList: false,
@@ -5639,7 +5500,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Fat Merchant-wise",
 			noList: false,
@@ -5654,7 +5514,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Fealty-wise",
 			noList: false,
@@ -5669,7 +5528,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Feet-wise",
 			noList: false,
@@ -5684,7 +5542,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Fire and Steel-wise",
 			noList: false,
@@ -5699,7 +5556,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Flock-wise",
 			noList: false,
@@ -5714,7 +5570,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Flower-wise",
 			noList: false,
@@ -5729,7 +5584,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Fool-wise",
 			noList: false,
@@ -5744,7 +5598,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Forest-wise",
 			noList: false,
@@ -5759,7 +5612,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Fortress-wise",
 			noList: false,
@@ -5774,7 +5626,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Gaol-wise",
 			noList: false,
@@ -5789,7 +5640,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Gas Pocket-wise",
 			noList: false,
@@ -5804,7 +5654,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Genius-wise",
 			noList: false,
@@ -5819,7 +5668,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "God of Death-wise",
 			noList: false,
@@ -5834,7 +5682,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Gossip-wise",
 			noList: false,
@@ -5849,7 +5696,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Graft-wise",
 			noList: false,
@@ -5864,7 +5710,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Grain-wise",
 			noList: false,
@@ -5879,7 +5724,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Grape-wise",
 			noList: false,
@@ -5894,7 +5738,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Grave-wise",
 			noList: false,
@@ -5909,7 +5752,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Graveyard-wise",
 			noList: false,
@@ -5924,7 +5766,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Graybeard-wise",
 			noList: false,
@@ -5939,7 +5780,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Great and Black-wise",
 			noList: false,
@@ -5954,7 +5794,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Great Masters-wise",
 			noList: false,
@@ -5969,7 +5808,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Great Wolf-wise",
 			noList: false,
@@ -5984,7 +5822,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Grift-wise",
 			noList: false,
@@ -5999,7 +5836,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Guard-wise",
 			noList: false,
@@ -6014,7 +5850,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Guest-wise",
 			noList: false,
@@ -6029,7 +5864,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Guilder-wise",
 			noList: false,
@@ -6044,7 +5878,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Guts-wise",
 			noList: false,
@@ -6059,7 +5892,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Handwriting-wise",
 			noList: false,
@@ -6074,7 +5906,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Hatchet-wise",
 			noList: false,
@@ -6089,7 +5920,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Hazing-wise",
 			noList: false,
@@ -6104,7 +5934,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Herb-wise",
 			noList: false,
@@ -6119,7 +5948,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Herbalist-wise",
 			noList: false,
@@ -6134,7 +5962,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Heresy-wise",
 			noList: false,
@@ -6149,7 +5976,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Hills-wise",
 			noList: false,
@@ -6164,7 +5990,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Hold-wise",
 			noList: false,
@@ -6179,7 +6004,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Honey-wise",
 			noList: false,
@@ -6194,7 +6018,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Hoof-wise",
 			noList: false,
@@ -6209,7 +6032,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Horse-wise",
 			noList: false,
@@ -6224,7 +6046,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Hospital-wise",
 			noList: false,
@@ -6239,7 +6060,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Host-wise",
 			noList: false,
@@ -6254,7 +6074,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Hostel-wise",
 			noList: false,
@@ -6269,7 +6088,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Hurt-wise",
 			noList: false,
@@ -6284,7 +6102,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Husband-wise",
 			noList: false,
@@ -6299,7 +6116,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Hypocritical Bastards-wise",
 			noList: false,
@@ -6314,7 +6130,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Imperfections-wise",
 			noList: false,
@@ -6329,7 +6144,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Inane Requst-wise",
 			noList: false,
@@ -6344,7 +6158,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Infection-wise",
 			noList: false,
@@ -6359,7 +6172,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Inner Workings-wise",
 			noList: false,
@@ -6374,7 +6186,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Intrigue-wise",
 			noList: false,
@@ -6389,7 +6200,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Junior Student-wise",
 			noList: false,
@@ -6404,7 +6214,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Junk-wise",
 			noList: false,
@@ -6419,7 +6228,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Kick Me-wise",
 			noList: false,
@@ -6434,7 +6242,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Kingdom-wise",
 			noList: false,
@@ -6449,7 +6256,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Knife-wise",
 			noList: false,
@@ -6464,7 +6270,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Laborer-wise",
 			noList: false,
@@ -6479,7 +6284,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Landlord-wise",
 			noList: false,
@@ -6494,7 +6298,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Latrine-wise",
 			noList: false,
@@ -6509,7 +6312,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Law-wise",
 			noList: false,
@@ -6524,7 +6326,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Lazy Bastard-wise",
 			noList: false,
@@ -6539,7 +6340,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Lazy-wise",
 			noList: false,
@@ -6554,7 +6354,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Leather-wise",
 			noList: false,
@@ -6569,7 +6368,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Ledger-wise",
 			noList: false,
@@ -6584,7 +6382,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Leper-wise",
 			noList: false,
@@ -6599,7 +6396,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Leverage-wise",
 			noList: false,
@@ -6614,7 +6410,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Library-wise",
 			noList: false,
@@ -6629,7 +6424,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Local Law-wise",
 			noList: false,
@@ -6644,7 +6438,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Lock-wise",
 			noList: false,
@@ -6659,7 +6452,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Loot-wise",
 			noList: false,
@@ -6674,7 +6466,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Lord-wise",
 			noList: false,
@@ -6689,7 +6480,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Lost Secret-wise",
 			noList: false,
@@ -6704,7 +6494,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Lost Treasures-wise",
 			noList: false,
@@ -6719,7 +6508,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Mad Invention-wise",
 			noList: false,
@@ -6734,7 +6522,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Maker's Mark-wise",
 			noList: false,
@@ -6749,7 +6536,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Human-wise",
 			noList: false,
@@ -6764,7 +6550,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Manor-wise",
 			noList: false,
@@ -6779,7 +6564,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Map-wise",
 			noList: false,
@@ -6794,7 +6578,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Materials-wise",
 			noList: false,
@@ -6809,7 +6592,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Mead-wise",
 			noList: false,
@@ -6824,7 +6606,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Mercenary Company-wise",
 			noList: false,
@@ -6839,7 +6620,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Merchant-wise",
 			noList: false,
@@ -6854,7 +6634,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Metal-wise",
 			noList: false,
@@ -6869,7 +6648,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Mill-wise",
 			noList: false,
@@ -6884,7 +6662,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Mineral-wise",
 			noList: false,
@@ -6899,7 +6676,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Minister-wise",
 			noList: false,
@@ -6914,7 +6690,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Monk-wise",
 			noList: false,
@@ -6929,7 +6704,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Mount-wise",
 			noList: false,
@@ -6944,7 +6718,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Mountain-wise",
 			noList: false,
@@ -6959,7 +6732,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Mouth of Hell-wise",
 			noList: false,
@@ -6974,7 +6746,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Mule-wise",
 			noList: false,
@@ -6989,7 +6760,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Murder-wise",
 			noList: false,
@@ -7004,7 +6774,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Mystery Meat-wise",
 			noList: false,
@@ -7019,7 +6788,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Nail-wise",
 			noList: false,
@@ -7034,7 +6802,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Nest-wise",
 			noList: false,
@@ -7049,7 +6816,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Night Watch-wise",
 			noList: false,
@@ -7064,7 +6830,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Noble-wise",
 			noList: false,
@@ -7079,7 +6844,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Nut and Berry-wise",
 			noList: false,
@@ -7094,7 +6858,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Oath-wise",
 			noList: false,
@@ -7109,7 +6872,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Obligation-wise",
 			noList: false,
@@ -7124,7 +6886,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Obscure Text-wise",
 			noList: false,
@@ -7139,7 +6900,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Omen-wise",
 			noList: false,
@@ -7154,7 +6914,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Orc Rituals-wise",
 			noList: false,
@@ -7169,7 +6928,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Orc Servant-wise",
 			noList: false,
@@ -7184,7 +6942,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Orc-wise",
 			noList: false,
@@ -7199,7 +6956,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Ore-wise",
 			noList: false,
@@ -7214,7 +6970,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Outlaw-wise",
 			noList: false,
@@ -7229,7 +6984,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Pack-wise",
 			noList: false,
@@ -7244,7 +6998,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Paint-wise",
 			noList: false,
@@ -7259,7 +7012,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Papal Bull-wise",
 			noList: false,
@@ -7274,7 +7026,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Paperwork-wise",
 			noList: false,
@@ -7289,7 +7040,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Parish-wise",
 			noList: false,
@@ -7304,7 +7054,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Park-wise",
 			noList: false,
@@ -7319,7 +7068,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Paths-wise",
 			noList: false,
@@ -7334,7 +7082,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Pattern-wise",
 			noList: false,
@@ -7349,7 +7096,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Peasant-wise",
 			noList: false,
@@ -7364,7 +7110,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Pecking Order-wise",
 			noList: false,
@@ -7379,7 +7124,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Personal Effects-wise",
 			noList: false,
@@ -7394,7 +7138,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Pest-wise",
 			noList: false,
@@ -7409,7 +7152,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Petitioner-wise",
 			noList: false,
@@ -7424,7 +7166,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Pig-wise",
 			noList: false,
@@ -7439,7 +7180,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Pilgrim-wise",
 			noList: false,
@@ -7454,7 +7194,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Pilgrimage-wise",
 			noList: false,
@@ -7469,7 +7208,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Pirate Cove-wise",
 			noList: false,
@@ -7484,7 +7222,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Pirates-wise",
 			noList: false,
@@ -7499,7 +7236,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Plant-wise",
 			noList: false,
@@ -7514,7 +7250,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Poacher-wise",
 			noList: false,
@@ -7529,7 +7264,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Poison-wise",
 			noList: false,
@@ -7544,7 +7278,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Pope Joke-wise",
 			noList: false,
@@ -7559,7 +7292,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Prayer-wise",
 			noList: false,
@@ -7574,7 +7306,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Priest-wise",
 			noList: false,
@@ -7589,7 +7320,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Profanity-wise",
 			noList: false,
@@ -7604,7 +7334,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Promise-wise",
 			noList: false,
@@ -7619,7 +7348,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Prostitute-wise",
 			noList: false,
@@ -7634,7 +7362,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Protector-wise",
 			noList: false,
@@ -7649,7 +7376,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Quack-wise",
 			noList: false,
@@ -7664,7 +7390,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Ransom-wise",
 			noList: false,
@@ -7679,7 +7404,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Relic-wise",
 			noList: false,
@@ -7694,7 +7418,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Religious Rumor-wise",
 			noList: false,
@@ -7709,7 +7432,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Reputation-wise",
 			noList: false,
@@ -7724,7 +7446,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Rhythm of the City-wise",
 			noList: false,
@@ -7739,7 +7460,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Ridiculous Request-wise",
 			noList: false,
@@ -7754,7 +7474,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Righteous Priest-wise",
 			noList: false,
@@ -7769,7 +7488,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Riot-wise",
 			noList: false,
@@ -7784,7 +7502,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Rituals-wise",
 			noList: false,
@@ -7799,7 +7516,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Road-wise",
 			noList: false,
@@ -7814,7 +7530,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Rock-wise",
 			noList: false,
@@ -7829,7 +7544,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Roof-wise",
 			noList: false,
@@ -7844,7 +7558,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Rope-wise",
 			noList: false,
@@ -7859,7 +7572,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Royal Parks-wise",
 			noList: false,
@@ -7874,7 +7586,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Royal Secret-wise",
 			noList: false,
@@ -7889,7 +7600,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Rumor-wise",
 			noList: false,
@@ -7904,7 +7614,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Sail-wise",
 			noList: false,
@@ -7919,7 +7628,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Sailor-wise",
 			noList: false,
@@ -7934,7 +7642,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Saint-wise",
 			noList: false,
@@ -7949,7 +7656,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Sacrament-wise",
 			noList: false,
@@ -7964,7 +7670,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Scheme-wise",
 			noList: false,
@@ -7979,7 +7684,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "School of Magic-wise",
 			noList: false,
@@ -7994,7 +7698,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Scurvy-wise",
 			noList: false,
@@ -8009,7 +7712,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Scutwork-wise",
 			noList: false,
@@ -8024,7 +7726,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Sea-wise",
 			noList: false,
@@ -8039,7 +7740,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Seaman-wise",
 			noList: false,
@@ -8054,7 +7754,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Secret Cult Worship-wise",
 			noList: false,
@@ -8069,7 +7768,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Secret-wise",
 			noList: false,
@@ -8084,7 +7782,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Seed-wise",
 			noList: false,
@@ -8099,7 +7796,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Ship-wise",
 			noList: false,
@@ -8114,7 +7810,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Shoal-wise",
 			noList: false,
@@ -8129,7 +7824,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Shoe-wise",
 			noList: false,
@@ -8144,7 +7838,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Shortcut-wise",
 			noList: false,
@@ -8159,7 +7852,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Shovel-wise",
 			noList: false,
@@ -8174,7 +7866,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Shrine-wise",
 			noList: false,
@@ -8189,7 +7880,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Slave Deck-wise",
 			noList: false,
@@ -8204,7 +7894,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Slavery-wise",
 			noList: false,
@@ -8219,7 +7908,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Society-wise",
 			noList: false,
@@ -8234,7 +7922,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Soldier-wise",
 			noList: false,
@@ -8249,7 +7936,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Soot-wise",
 			noList: false,
@@ -8264,7 +7950,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Sorcery-wise",
 			noList: false,
@@ -8279,7 +7964,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Spiel-wise",
 			noList: false,
@@ -8294,7 +7978,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Spirit-wise",
 			noList: false,
@@ -8309,7 +7992,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Staff-wise",
 			noList: false,
@@ -8324,7 +8006,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Stone-wise",
 			noList: false,
@@ -8339,7 +8020,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Structural Weakness-wise",
 			noList: false,
@@ -8354,7 +8034,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Suicidal Bravery-wise",
 			noList: false,
@@ -8369,7 +8048,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Summoner-wise",
 			noList: false,
@@ -8384,7 +8062,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Superstition-wise",
 			noList: false,
@@ -8399,7 +8076,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Supplier-wise",
 			noList: false,
@@ -8414,7 +8090,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Supply-wise",
 			noList: false,
@@ -8429,7 +8104,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Sweet Tooth-wise",
 			noList: false,
@@ -8444,7 +8118,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Sword-wise",
 			noList: false,
@@ -8459,7 +8132,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Swordsman-wise",
 			noList: false,
@@ -8474,7 +8146,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Tail-wise",
 			noList: false,
@@ -8489,7 +8160,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Tall Grass-wise",
 			noList: false,
@@ -8504,7 +8174,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Tar-wise",
 			noList: false,
@@ -8519,7 +8188,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Taskmaster-wise",
 			noList: false,
@@ -8534,7 +8202,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Tavern Tales-wise",
 			noList: false,
@@ -8549,7 +8216,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Tax-wise",
 			noList: false,
@@ -8565,7 +8231,6 @@ export const AnyWise: SkillCategory = {
 
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Temple-wise",
 			noList: false,
@@ -8580,7 +8245,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Territory-wise",
 			noList: false,
@@ -8595,7 +8259,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Terroir-wise",
 			noList: false,
@@ -8610,7 +8273,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Tithe-wise",
 			noList: false,
@@ -8625,7 +8287,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Tomb-wise",
 			noList: false,
@@ -8640,7 +8301,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Tools-wise",
 			noList: false,
@@ -8655,7 +8315,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Torture Devices-wise",
 			noList: false,
@@ -8670,7 +8329,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Town-wise",
 			noList: false,
@@ -8685,7 +8343,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Toxin-wise",
 			noList: false,
@@ -8700,7 +8357,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Tragic End-wise",
 			noList: false,
@@ -8715,7 +8371,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Trail-wise",
 			noList: false,
@@ -8730,7 +8385,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Trails-wise",
 			noList: false,
@@ -8745,7 +8399,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Traitor-wise",
 			noList: false,
@@ -8760,7 +8413,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Traveler-wise",
 			noList: false,
@@ -8775,7 +8427,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Treasure-wise",
 			noList: false,
@@ -8790,7 +8441,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Tree-wise",
 			noList: false,
@@ -8805,7 +8455,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Trial by Combat-wise",
 			noList: false,
@@ -8835,7 +8484,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Trouble-wise",
 			noList: false,
@@ -8850,7 +8498,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Troubled Student-wise",
 			noList: false,
@@ -8865,7 +8512,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Tunnel-wise",
 			noList: false,
@@ -8880,7 +8526,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Undermining-wise",
 			noList: false,
@@ -8895,7 +8540,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Vagrant-wise",
 			noList: false,
@@ -8910,7 +8554,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Vein-wise",
 			noList: false,
@@ -8925,7 +8568,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Vessel-wise",
 			noList: false,
@@ -8940,7 +8582,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Village Secret-wise",
 			noList: false,
@@ -8955,7 +8596,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Village Secrets-wise",
 			noList: false,
@@ -8970,7 +8610,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Village-wise",
 			noList: false,
@@ -8985,7 +8624,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Vine-wise",
 			noList: false,
@@ -9000,7 +8638,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Vintage-wise",
 			noList: false,
@@ -9015,7 +8652,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Visage-wise",
 			noList: false,
@@ -9030,7 +8666,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Wagon-wise",
 			noList: false,
@@ -9045,7 +8680,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Walking Corpse-wise",
 			noList: false,
@@ -9060,7 +8694,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "War-wise",
 			noList: false,
@@ -9075,7 +8708,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Wasteland-wise",
 			noList: false,
@@ -9090,7 +8722,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Waterworks-wise",
 			noList: false,
@@ -9105,7 +8736,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Wealth-wise",
 			noList: false,
@@ -9120,7 +8750,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Wealthy-wise",
 			noList: false,
@@ -9135,7 +8764,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Web-wise",
 			noList: false,
@@ -9150,7 +8778,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Well-wise",
 			noList: false,
@@ -9165,7 +8792,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Whip-wise",
 			noList: false,
@@ -9180,7 +8806,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Whispered Secrets-wise",
 			noList: false,
@@ -9195,7 +8820,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Wholesale-wise",
 			noList: false,
@@ -9210,7 +8834,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Wife-wise",
 			noList: false,
@@ -9225,7 +8848,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Windage-wise",
 			noList: false,
@@ -9240,7 +8862,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "Window-wise",
 			noList: false,
@@ -9255,7 +8876,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Wolf-wise",
 			noList: false,
@@ -9270,7 +8890,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Wood-wise",
 			noList: false,
@@ -9285,7 +8904,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Work-wise",
 			noList: false,
@@ -9300,7 +8918,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwc"],
-			description: "",
 			magical: false,
 			name: "World Domination-wise",
 			noList: false,
@@ -9315,7 +8932,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Worshipper-wise",
 			noList: false,
@@ -9330,7 +8946,6 @@ export const AnyWise: SkillCategory = {
 		},
 		{
 			allowed: ["bwg"],
-			description: "",
 			magical: false,
 			name: "Writ-wise",
 			noList: false,
