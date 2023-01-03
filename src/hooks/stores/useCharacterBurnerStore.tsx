@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from "uuid";
 import produce from "immer";
 import create from "zustand";
 import { devtools, persist } from "zustand/middleware";
@@ -1324,7 +1323,8 @@ export const useCharacterBurnerStore = create<CharacterBurnerState>()(
 
 				addResource: (resource: SpendingForResource) => {
 					set(produce<CharacterBurnerState>((state) => {
-						state.spendings.resources[uuidv4()] = resource;
+						const newUUID = self.crypto.randomUUID();
+						state.spendings.resources[newUUID] = resource;
 					}));
 				},
 				removeResource: (guid: string) => {
