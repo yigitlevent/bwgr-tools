@@ -8,56 +8,82 @@ import { RodenCommon, RodenLifepath, RodenSpecial } from "./roden";
 import { TrollCommon, TrollLifepath, TrollSpecial } from "./troll";
 
 
-interface TraitBasicEffect {
-	type: "Basic";
-	subtype: "Requirement" | "Conditional" | "Obstacle" | "Additional Effect";
-	description: string;
-}
+/*
+type TraitNewCapability =
+	{ type: "New Capability"; };
 
-interface TraitFourthBeliefEffect {
-	type: "Belief";
-	openFourth: boolean;
-	beliefName: string;
-}
+type TraitEffectCondition =
+	{ testAgainst: AttributesList | StatsList | SkillPath; } |
+	{ inSituation: string; };
 
-interface TraitFourthInstinctEffect {
-	type: "Instinct";
-	openFourth: boolean;
-	instinctName: string;
-}
+type TraitEffectPaths =
+	{ stat: StatsList; } |
+	{ attribute: AttributesList; } |
+	{ skill: SkillPath; } |
+	{ againstDoWAction: string; } |
+	{ skillWithRootOf: StatsList | AttributesList; chooseOne: boolean; } |
+	{ any: "Test"; } |
+	{ misc: string; };
 
-interface TraitStatEffect {
-	type: "Stat",
-	callon?: { statName: StatsList; condition?: string; };
-	limit?: { [key: string]: { min: number; max: number; }; };
-}
+type TraitCallOnEffect =
+	{ type: "Call-on"; condition?: TraitEffectCondition; }
+	& TraitEffectPaths;
 
-interface TraitAttributeEffect {
-	type: "Attribute";
-	enable?: AttributesList;
-	disable?: AttributesList;
-	freeExponent?: AttributesList;
-	roundUp?: AttributesList | "Mortal Wound";
-	modify?: { attribute: AttributesList; modifier: number; };
-	conditionalModify?: { attribute: AttributesList; modifier: number; ifHasTrait: TraitPath; };
-	callon?: { attribute: AttributesList; condition?: string; };
-	addWhenCalculating?: { attribute: AttributesList; modifier: number; };
-}
+type TraitDicePoolEffect =
+	{ type: "Dice Pool"; modifier: number; condition?: TraitEffectCondition; }
+	& TraitEffectPaths;
 
-interface TraitSkillEffect {
-	type: "Skill";
-	roundUpByRoot?: StatsList;
-	modify?: { skillPath: SkillPath; modifier: number; };
-	callon?: { skillPath: SkillPath; condition?: string; };
-}
+type TraitExponentEffect =
+	{ type: "Exponent"; modifier: number; }
+	& TraitEffectPaths;
 
-interface TraitResourceEffect {
-	type: "Resource";
-	free: { resourceType: ResourceTypes; description: string; };
-}
+type TraitObstacleEffect =
+	{ type: "Obstacle"; modifier: number; condition?: TraitEffectCondition; }
+	& TraitEffectPaths;
 
-export type TraitEffect = TraitBasicEffect | TraitFourthBeliefEffect | TraitFourthInstinctEffect
-	| TraitStatEffect | TraitAttributeEffect | TraitSkillEffect | TraitResourceEffect;
+type TraitLimitEffect =
+	{ type: "Limit"; min: number; max: number; }
+	& TraitEffectPaths;
+
+type TraitAptitudeEffect =
+	{ type: "Aptitude"; modifier: number; }
+	& TraitEffectPaths;
+
+type TraitShadeEffect =
+	{ type: "Shade"; newShade: ShadesList; condition?: TraitEffectCondition; }
+	& TraitEffectPaths;
+
+type TraitAttributeEffect =
+	{ type: "Attribute"; } & (
+		{ enable: AttributesList; } |
+		{ disable: AttributesList; } |
+		{ freeExponent: AttributesList; } |
+		{ addModifierWhenCalculatingTarget: { target: AttributesList; modifier: number; }; }
+	);
+
+type TraitCharacterEffect =
+	{ type: "Character"; } & (
+		{ fourthBelief: { enable: boolean; name?: string; }; } |
+		{ fourthInstinct: { enable: boolean; name?: string; }; }
+	);
+
+type TraitResourceEffect =
+	{ type: "Resource"; } & (
+		{ free: { resourceType: ResourceTypes; description: string; }; } |
+		{ weapon: { name: string; power: number; add: number; versusArmor: number; weaponSpeed: number; weaponLength: "Short"; }; }
+	);
+
+type TraitRoundEffect =
+	{ type: "Round"; round: "up" | "down"; } & (
+		{ roundUpSkillsOfStat: StatsList; } |
+		{ roundUpAttribute: AttributesList | "Mortal Wound"; }
+	);
+
+export type TraitEffect = TraitNewCapability | TraitCallOnEffect | TraitShadeEffect
+	| TraitExponentEffect | TraitDicePoolEffect | TraitObstacleEffect | TraitLimitEffect
+	| TraitAttributeEffect | TraitCharacterEffect | TraitResourceEffect | TraitRoundEffect
+	| TraitAptitudeEffect;
+*/
 
 export interface CharacterTrait {
 	allowed: Ruleset[];
@@ -68,15 +94,14 @@ export interface CharacterTrait {
 	type: "Character";
 }
 
-export interface OtherTrait {
+export type OtherTrait = {
 	allowed: Ruleset[];
 	cost: number;
 	description: string;
 	name: string;
 	stock: "Any" | StocksList;
 	type: Exclude<TraitTypesList, "Character">;
-	effects: TraitEffect[];
-}
+}; //& ({ effects?: TraitEffect[]; } | { effectsChooseOne?: TraitEffect[]; });
 
 export type Trait = CharacterTrait | OtherTrait;
 

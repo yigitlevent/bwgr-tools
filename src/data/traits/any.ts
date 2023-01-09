@@ -3279,7 +3279,7 @@ export const AnyCallon: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 2,
-			description: "More than just an inscrutable stone face, Poker Face is all about giving the face you need to mislead your opponent. This trait can be used as a call-on for Falsehood and Cambling/Games of Chance.",
+			description: "More than just an inscrutable stone face, Poker Face is all about giving the face you need to mislead your opponent. This trait can be used as a call-on for Falsehood and Gambling/Games of Chance.",
 			name: "Poker Face",
 			stock: "Any",
 			type: "Call-on"
@@ -3295,7 +3295,7 @@ export const AnyCallon: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 2,
-			description: "This character realizes that he is going to die and has accepted that fact. This trait acts as a call-on for Steel tests in which the character rightly assumes he is going to die—when the cause is hopeless, he's badly wounded, everyone else is dead, etc.",
+			description: "This character realizes that he is going to die and has accepted that fact. This trait acts as a call-on for Steel tests in which the character rightly assumes he is going to die —when the cause is hopeless, he's badly wounded, everyone else is dead, etc.",
 			name: "Resigned (to Death)",
 			stock: "Any",
 			type: "Call-on"
@@ -3327,7 +3327,7 @@ export const AnyCallon: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 4,
-			description: "This is a call-on for Steel when confronted or against impossible",
+			description: "This is a call-on for Steel when confronted or against impossible.",
 			name: "Show No Fear",
 			stock: "Any",
 			type: "Call-on"
@@ -3363,14 +3363,7 @@ export const AnyCallon: TraitCategory = {
 			name: "Wolverine",
 			stock: "Any",
 			type: "Call-on and Die"
-		},
-		{
-			allowed: ["bwg"],
-			cost: 2,
-			description: "This character's dexterous fingers make complex movements look easy. This is a call-on for Hand Speech.",
-			name: "Graceful Fingers",
-			stock: "Any",
-			type: "Call-on"
+			
 		}
 	]
 };

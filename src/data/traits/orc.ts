@@ -16,7 +16,7 @@ export const OrcCommon: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "The cold substance of night runs through their veins, rendering these tormented souls immortal. But it also makes them susceptible to the sun's burning rays. Ores suffer +2 Ob to all tests while abroad in the sunlight. If it is cloudy, dawn or twilight, the penalty is only +1 Ob. But the night deadens their nerves as well: Cold Black Blood reduces hesitation obstacles by two for pain, but not fear or wonderment.",
+			description: "The cold substance of night runs through their veins, rendering these tormented souls immortal. But it also makes them susceptible to the sun's burning rays. Orcs suffer +2 Ob to all tests while abroad in the sunlight. If it is cloudy, dawn or twilight, the penalty is only +1 Ob. But the night deadens their nerves as well: Cold Black Blood reduces hesitation obstacles by two for pain, but not fear or wonderment.",
 			name: "Cold Black Blood",
 			stock: "Orc",
 			type: "Die"
@@ -24,7 +24,7 @@ export const OrcCommon: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "The mouth of an Orc is a violent organ, well suited to tearing flesh and shouting blasphemies. Ores may use their Fanged Maw as a weapon: The bite is a Power 1, WS 1, VA 1, Add 2, shortest length weapon. Claws like steel shards protrude from their gnarled fingers. They may be used as weapons: Power 1, WS X, VA -, Add 2, shortest length. They act like knives for purposes of positioning and fighting distance.",
+			description: "The mouth of an Orc is a violent organ, well suited to tearing flesh and shouting blasphemies. Orcs may use their Fanged Maw as a weapon: The bite is a Power 1, WS 1, VA 1, Add 2, shortest length weapon. Claws like steel shards protrude from their gnarled fingers. They may be used as weapons: Power 1, WS X, VA -, Add 2, shortest length. They act like knives for purposes of positioning and fighting distance.",
 			name: "Fanged and Clawed",
 			stock: "Orc",
 			type: "Die"
@@ -279,7 +279,7 @@ export const OrcLifepath: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 0,
-			description: "Orcs live by the rule of the lash. With a whip in hand and lads to lash, an Orc taskmaster feels that nothing can stop him! An Orc with this trait and a whip can force another—any character—to reroll a failed test once per session as if he had a call-on for this particular test. This effect is automatic so long as the player is bellowing and flailing around like he has a whip in his hand (and his character actually has a whip). This is how Orcs make slaves of their captives. A few sessions of accepting the whip will no doubt earn you the Tasting the Lash trait in the vote.",
+			description: "Orcs live by the rule of the lash. With a whip in hand and lads to lash, an Orc taskmaster feels that nothing can stop him! An Orc with this trait and a whip can force another —any character— to reroll a failed test once per session as if he had a call-on for this particular test. This effect is automatic so long as the player is bellowing and flailing around like he has a whip in his hand (and his character actually has a whip). This is how Orcs make slaves of their captives. A few sessions of accepting the whip will no doubt earn you the Tasting the Lash trait in the vote.",
 			name: "Where There's a Whip There's a Way",
 			stock: "Orc",
 			type: "Call-on and Die"
@@ -302,7 +302,7 @@ export const OrcSpecial: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 3,
-			description: "The greatest, most fearsome of Ores have been bred to resist the pure rays of the sun. They may travel by day and suffer no obstacle penalties as under the Cold Black Blood Orc common trait.",
+			description: "The greatest, most fearsome of Orcs have been bred to resist the pure rays of the sun. They may travel by day and suffer no obstacle penalties as under the Cold Black Blood Orc common trait.",
 			name: "Enemy of the Sun",
 			stock: "Orc",
 			type: "Die"
@@ -318,7 +318,7 @@ export const OrcSpecial: TraitCategory = {
 		{
 			allowed: ["bwg"],
 			cost: 4,
-			description: "Drinkers of the Dark are immersed in shivering pools of arcane energies. They are taught to imbibe, inhale and exhale the Dark Blood and survive. This trait transforms the Orc's Hatred into a vehicle for enormous power. However, Ores are unable to tap their innate power without Rituals. Void Embrace is an emotional attribute with its own shade and exponent.<br>It is used to resist tax, sustain spells (rather than Will), and is used to maintain a spell after a distraction. Any Orc maybe taught the Rituals, but without Void Embrace, he cannot resist the tax and thus will be permanently crippled or worse. Void Embrace can also he used to enhance certain rolls by spending a persona point to tap the Void. See the Void Embrace section of the Orc chapter for more details. If Void Embrace is advanced to exponent 10, the Orc goes mad or commits suicide. Either way, he's removed from play.",
+			description: "Drinkers of the Dark are immersed in shivering pools of arcane energies. They are taught to imbibe, inhale and exhale the Dark Blood and survive. This trait transforms the Orc's Hatred into a vehicle for enormous power. However, Orcs are unable to tap their innate power without Rituals. Void Embrace is an emotional attribute with its own shade and exponent.<br>It is used to resist tax, sustain spells (rather than Will), and is used to maintain a spell after a distraction. Any Orc maybe taught the Rituals, but without Void Embrace, he cannot resist the tax and thus will be permanently crippled or worse. Void Embrace can also he used to enhance certain rolls by spending a persona point to tap the Void. See the Void Embrace section of the Orc chapter for more details. If Void Embrace is advanced to exponent 10, the Orc goes mad or commits suicide. Either way, he's removed from play.",
 			name: "Void Embrace",
 			stock: "Orc",
 			type: "Die"

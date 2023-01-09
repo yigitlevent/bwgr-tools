@@ -7,6 +7,17 @@ export const AnyGeneral: SkillCategory = {
 	skills: [
 		{
 			allowed: ["bwg"],
+			magical: false,
+			name: "Any Skill",
+			noList: true,
+			restriction: "N/A",
+			root: ["Perception"],
+			tools: ["No", ""],
+			training: false,
+			type: "Academic"
+		},
+		{
+			allowed: ["bwg"],
 			description: "Accountants keep track of expenses, income, stocks and taxes. This skill is primarily used to recover taxed Resources.",
 			magical: false,
 			name: "Accounting",
@@ -2054,7 +2065,7 @@ export const AnyGeneral: SkillCategory = {
 			allowed: ["bwg"],
 			description: "Musical performance is a powerful tool. It can impress an emotion upon the listener—seducing, enraging, pleasing, etc. Choose an instrument: Drum, Flute, and Lyre are but a few of the many options.",
 			magical: false,
-			name: "Musical Instrument",
+			name: "Musical Instrument", // FIX: special like appropriate weapons
 			noList: false,
 			restriction: "N/A",
 			root: ["Will", "Agility"],
