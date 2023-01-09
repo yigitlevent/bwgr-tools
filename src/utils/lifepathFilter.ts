@@ -30,7 +30,7 @@ function GetCurrentAge(chosenLifepaths: Lifepath[], leadCount: number) {
 	return sum + leadCount;
 }
 
-function FilterByRequirements(combinedPossibleLifepaths: Lifepath[], chosenLifepaths: Lifepath[], currentAge: number, checkRulesets: (allowed: Ruleset[]) => boolean): Lifepath[] {
+function FilterByRequirements(combinedPossibleLifepaths: Lifepath[], chosenLifepaths: Lifepath[], currentAge: number, checkRulesets: (allowed: RulesetId[]) => boolean): Lifepath[] {
 	const filteredLifepaths: Lifepath[] = [];
 
 	combinedPossibleLifepaths = combinedPossibleLifepaths.filter(v => v.born === false).filter(v => checkRulesets(v.allowed));
@@ -57,7 +57,7 @@ function FilterByRequirements(combinedPossibleLifepaths: Lifepath[], chosenLifep
 	return filteredLifepaths;
 }
 
-export function FilterLifepaths(currentStock: Stock, chosenLifepaths: Lifepath[], maxLeads: number, prevLeadsCount: number, checkRulesets: (allowed: Ruleset[]) => boolean) {
+export function FilterLifepaths(currentStock: Stock, chosenLifepaths: Lifepath[], maxLeads: number, prevLeadsCount: number, checkRulesets: (allowed: RulesetId[]) => boolean) {
 	const lastLP = chosenLifepaths[chosenLifepaths.length - 1];
 	let possibilities = [...currentStock.settings[lastLP.setting].lifepaths];
 	if (prevLeadsCount < maxLeads) {

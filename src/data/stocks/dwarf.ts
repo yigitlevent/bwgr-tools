@@ -17,7 +17,7 @@ export const Dwarf: Stock = {
 		{ max: 525, min: 446, m: 11, p: 13 },
 		{ max: 99999, min: 526, m: 10, p: 12 }
 	],
-	allowed: ["bwg"],
+	allowed: ["bwgr"],
 	hasSetting: true,
 	hasSubsetting: true,
 	name: "Dwarf",
@@ -25,14 +25,14 @@ export const Dwarf: Stock = {
 	stride: 6,
 	settings: {
 		"Artificer": {
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			name: "Artificer",
 			short: "Artificer",
 			stock: "Dwarf",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 3,
@@ -55,7 +55,7 @@ export const Dwarf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -86,7 +86,7 @@ export const Dwarf: Stock = {
 					years: 21
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -123,7 +123,7 @@ export const Dwarf: Stock = {
 					years: 21
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -160,7 +160,7 @@ export const Dwarf: Stock = {
 					years: 30
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -194,7 +194,7 @@ export const Dwarf: Stock = {
 					years: 55
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -232,7 +232,7 @@ export const Dwarf: Stock = {
 					years: 75
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -270,7 +270,7 @@ export const Dwarf: Stock = {
 					years: 75
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -305,14 +305,14 @@ export const Dwarf: Stock = {
 			]
 		},
 		"Clansman": {
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			name: "Clansman",
 			short: "Clansman",
 			stock: "Dwarf",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 3,
@@ -333,7 +333,7 @@ export const Dwarf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -361,7 +361,7 @@ export const Dwarf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -391,7 +391,7 @@ export const Dwarf: Stock = {
 					years: 15
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -420,7 +420,7 @@ export const Dwarf: Stock = {
 					years: 35
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -448,7 +448,7 @@ export const Dwarf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -476,7 +476,7 @@ export const Dwarf: Stock = {
 					years: 30
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -515,7 +515,7 @@ export const Dwarf: Stock = {
 					years: 40
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -551,7 +551,7 @@ export const Dwarf: Stock = {
 					years: 35
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -586,7 +586,7 @@ export const Dwarf: Stock = {
 					years: 70
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -631,14 +631,14 @@ export const Dwarf: Stock = {
 			]
 		},
 		"Guilder": {
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			name: "Guilder",
 			short: "Guilder",
 			stock: "Dwarf",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 4,
@@ -659,7 +659,7 @@ export const Dwarf: Stock = {
 					years: 21
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -690,7 +690,7 @@ export const Dwarf: Stock = {
 					years: 15
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -719,7 +719,7 @@ export const Dwarf: Stock = {
 					years: 10
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -750,7 +750,7 @@ export const Dwarf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -779,7 +779,7 @@ export const Dwarf: Stock = {
 					years: 15
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -808,7 +808,7 @@ export const Dwarf: Stock = {
 					years: 15
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -848,7 +848,7 @@ export const Dwarf: Stock = {
 					years: 25
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 1,
@@ -884,7 +884,7 @@ export const Dwarf: Stock = {
 					years: 45
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -923,14 +923,14 @@ export const Dwarf: Stock = {
 			]
 		},
 		"Host": {
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			name: "Host",
 			short: "Host",
 			stock: "Dwarf",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -962,7 +962,7 @@ export const Dwarf: Stock = {
 					years: 10
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -993,7 +993,7 @@ export const Dwarf: Stock = {
 					years: 12
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1023,7 +1023,7 @@ export const Dwarf: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1051,7 +1051,7 @@ export const Dwarf: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1094,7 +1094,7 @@ export const Dwarf: Stock = {
 					years: 15
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1134,7 +1134,7 @@ export const Dwarf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1171,7 +1171,7 @@ export const Dwarf: Stock = {
 					years: 25
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1212,7 +1212,7 @@ export const Dwarf: Stock = {
 					years: 50
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1250,7 +1250,7 @@ export const Dwarf: Stock = {
 					years: 55
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1290,7 +1290,7 @@ export const Dwarf: Stock = {
 					years: 55
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1327,7 +1327,7 @@ export const Dwarf: Stock = {
 					years: 60
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1370,14 +1370,14 @@ export const Dwarf: Stock = {
 			]
 		},
 		"Noble": {
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			name: "Noble",
 			short: "Noble",
 			stock: "Dwarf",
 			type: "Setting",
 			lifepaths: [
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: true,
 					eitherPool: 0,
 					generalSkillPool: 4,
@@ -1403,7 +1403,7 @@ export const Dwarf: Stock = {
 					years: 21
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1432,7 +1432,7 @@ export const Dwarf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1462,7 +1462,7 @@ export const Dwarf: Stock = {
 					years: 25
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1500,7 +1500,7 @@ export const Dwarf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1542,7 +1542,7 @@ export const Dwarf: Stock = {
 					years: 50
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1583,7 +1583,7 @@ export const Dwarf: Stock = {
 					years: 55
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1622,7 +1622,7 @@ export const Dwarf: Stock = {
 					years: 75
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 2,
@@ -1665,7 +1665,7 @@ export const Dwarf: Stock = {
 					years: 75
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1708,14 +1708,14 @@ export const Dwarf: Stock = {
 			]
 		},
 		"Outcast": {
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			name: "Outcast",
 			short: "Outcast",
 			stock: "Dwarf",
 			type: "Subsetting",
 			lifepaths: [
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1756,7 +1756,7 @@ export const Dwarf: Stock = {
 					years: 5
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1784,7 +1784,7 @@ export const Dwarf: Stock = {
 					years: 7
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1812,7 +1812,7 @@ export const Dwarf: Stock = {
 					years: 20
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,
@@ -1840,7 +1840,7 @@ export const Dwarf: Stock = {
 					years: 10
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 1,
 					generalSkillPool: 0,
@@ -1866,7 +1866,7 @@ export const Dwarf: Stock = {
 					years: 15
 				},
 				{
-					allowed: ["bwg"],
+					allowed: ["bwgr"],
 					born: false,
 					eitherPool: 0,
 					generalSkillPool: 0,

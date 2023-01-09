@@ -28,7 +28,7 @@ export function Datasets({ expanded }: { expanded: boolean; }) {
 					<List>
 						<ListItem disablePadding>
 							<ListItemButton disabled>
-								<ListItemIcon sx={{ margin: 0 }}>{checkRulesets(["bwg"]) ? <CheckIcon color="success" /> : <CloseIcon color="error" />}</ListItemIcon>
+								<ListItemIcon sx={{ margin: 0 }}>{checkRulesets(["bwgr"]) ? <CheckIcon color="success" /> : <CloseIcon color="error" />}</ListItemIcon>
 								<ListItemText primary="Burning Wheel Gold Revised" sx={{ margin: "0 0 2px -10px" }} />
 							</ListItemButton>
 						</ListItem>
@@ -37,13 +37,6 @@ export function Datasets({ expanded }: { expanded: boolean; }) {
 							<ListItemButton onClick={() => toggleDataset("bwc")}>
 								<ListItemIcon sx={{ margin: 0 }}>{checkRulesets(["bwc"]) ? <CheckIcon color="success" /> : <CloseIcon color="error" />}</ListItemIcon>
 								<ListItemText primary="Burning Wheel Codex" sx={{ margin: "0 0 2px -10px" }} />
-							</ListItemButton>
-						</ListItem>
-
-						<ListItem disablePadding>
-							<ListItemButton onClick={() => toggleDataset("msc")}>
-								<ListItemIcon sx={{ margin: 0 }}>{checkRulesets(["msc"]) ? <CheckIcon color="success" /> : <CloseIcon color="error" />}</ListItemIcon>
-								<ListItemText primary="House Rules" sx={{ margin: "0 0 2px -10px" }} />
 							</ListItemButton>
 						</ListItem>
 

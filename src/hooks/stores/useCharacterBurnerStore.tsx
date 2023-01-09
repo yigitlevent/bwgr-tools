@@ -444,7 +444,7 @@ export const useCharacterBurnerStore = create<CharacterBurnerState>()(
 					state.refreshTraitEffects();
 				},
 				refreshTraitEffects: () => {
-					set(produce<CharacterBurnerState>((state) => {
+					/*set(produce<CharacterBurnerState>((state) => {
 						const createResource = (type: ResourceTypes, nameSuffix: string, description: string) => {
 							if (nameSuffix.length > 0) return { name: `${type} (${nameSuffix})`, type, description };
 							return { name: type, type, description };
@@ -461,129 +461,16 @@ export const useCharacterBurnerStore = create<CharacterBurnerState>()(
 						if (state.checkHasTrait("Elf Common➞First Born")) {
 							state.limits.stats.Perception = { min: 1, max: 9 };
 						}
-						if (state.checkHasTrait("Elf Lifepath➞Etharchal")) {
-							newResources.push(createResource("Affiliation", "1D", "With Elven Etharchs."));
-						}
-						if (state.checkHasTrait("Elf Lifepath➞Servant of the Citadel")) {
-							newResources.push(createResource("Affiliation", "2D", "In and around the citadel."));
-							newResources.push(createResource("Reputation", "2D", "In and around the citadel."));
-						}
-						if (state.checkHasTrait("Elf Lifepath➞Sword of the White Towers")) {
-							newResources.push(createResource("Affiliation", "1D", "With the Swords of the White Towers—Elven."));
-						}
-						if (state.checkHasTrait("Elf Lifepath➞Sworn to Protect")) {
-							newResources.push(createResource("Affiliation", "2D", "Within the Protectors."));
-						}
-						if (state.checkHasTrait("Elf Lifepath➞Sworn to the Lord Protector")) {
-							newResources.push(createResource("Relationship", "", "With the Lord Protector."));
-						}
-						if (state.checkHasTrait("Elf Lifepath➞Exile")) {
-							newResources.push(createResource("Reputation", "1D", "Infamous, among all Elves."));
-						}
-						if (state.checkHasTrait("Elf Special➞Slayer")) {
-							newResources.push(createResource("Reputation", "2D", "Infamous, (all Elven people) as a Slayer."));
-							createAttributeIfNotExists("Grief");
-							state.totals.traits.attributeMods["Grief"] += 1;
-						}
-						if (state.checkHasTrait("Elf Lifepath➞Ear to the Ground")) {
-							if (!state.checkHasTrait("Dark Elf Lifepath➞Feral")) {
-								createAttributeIfNotExists("Circles");
-								state.totals.traits.attributeMods["Circles"] += 1;
-							}
-						}
-						if (state.checkHasTrait("Elf Lifepath➞Prince of the Blood")) {
-							if (!state.checkHasTrait("Dark Elf Lifepath➞Feral")) {
-								createAttributeIfNotExists("Circles");
-								state.totals.traits.attributeMods["Circles"] += 1;
-							}
-						}
-						if (state.checkHasTrait("Elf Special➞Exile")) {
-							createAttributeIfNotExists("Grief");
-							state.totals.traits.attributeMods["Grief"] += 1;
-						}
-						if (state.checkHasTrait("Elf Special➞Unbreakable")) {
-							createAttributeIfNotExists("Grief");
-							state.totals.traits.attributeMods["Grief"] -= 2;
-						}
-						if (state.checkHasTrait("Elf Special➞World Weary")) {
-							createAttributeIfNotExists("Hesitation");
-							createAttributeIfNotExists("Grief");
-							state.totals.traits.attributeMods["Hesitation"] -= 2;
-							state.totals.traits.attributeMods["Grief"] += 1;
-						}
-						/* TODO: Incomplete Elf trait effects
-						Elf Lifepath➞Lesson of One
-							1D Reputation: as his student if an important relationship is selected with mentor
-							2D Reputation: as his student if a powerful relationship is selected with mentor
-
-						Elf Lifepath➞Lord of Ages
-							+1D to any Reputation or Affiliation
-
-						Elf Special➞Mourner
-							Attribute: Grief exponent to anything equal or above starting exp, up to 9
-						*/
 
 						// HUMAN
-						if (state.checkHasTrait("Human Lifepath➞Affinity for Business")) {
-							createAttributeIfNotExists("Resources");
-							state.totals.traits.attributeMods["Resources"] += 1;
-						}
-						if (state.checkHasTrait("Human Lifepath➞Keys to the Church")) {
-							newResources.push(createResource("Affiliation", "1D", "Within the Church. If he took liberties with his duties, infamous."));
-						}
-						if (state.checkHasTrait("Human Lifepath➞Made Man")) {
-							newResources.push(createResource("Affiliation", "1D", "For being a journeyman craftsman."));
-						}
-						if (state.checkHasTrait("Human Lifepath➞Mark of Privilage")) {
-							newResources.push(createResource("Affiliation", "1D", "With nobility."));
-						}
-						/* TODO: Incomplete Human trait effects
-						*/
 
 						// ORC
-						if (state.checkHasTrait("Orc Lifepath➞Born to Rule Them All")) {
-							newResources.push(createResource("Affiliation", "1D", "Among Great and Black Orcs."));
-							newResources.push(createResource("Reputation", "1D", "Infamous, among the chattel and the legion."));
-						}
 
 						// RODEN
-						/* TODO: Roden trait effects */
 
 						// GREAT WOLF
 						if (state.checkHasTrait("Great Wolf Common➞Great Lupine Form")) {
 							state.limits.stats.Agility = { min: 1, max: 6 };
-						}
-						if (state.checkHasTrait("Great Wolf Lifepath➞Dominant")) {
-							newResources.push(createResource("Affiliation", "1D", "With a pack."));
-							newResources.push(createResource("Reputation", "1D", "Within that pack as a Dominant."));
-						}
-						if (state.checkHasTrait("Great Wolf Lifepath➞Loyal")) {
-							state.beliefs.fourthBeliefName = "Loyalty";
-							state.limits.beliefs = 4;
-						}
-						if (state.checkHasTrait("Great Wolf Lifepath➞Odor of Spirits")) {
-							newResources.push(createResource("Reputation", "1D", "Infamous."));
-						}
-						if (state.checkHasTrait("Great Wolf Lifepath➞Prenaturally Calm")) {
-							createAttributeIfNotExists("Hesitation");
-							state.totals.traits.attributeMods["Hesitation"] -= 2;
-						}
-						if (state.checkHasTrait("Great Wolf Lifepath➞Spirit Marked")) {
-							newResources.push(createResource("Affiliation", "1D", "With the Spirit Hunters."));
-							newResources.push(createResource("Magical", "Spirit Mark 1D", "As per the Spirit Binding rules."));
-						}
-						if (state.checkHasTrait("Great Wolf Lifepath➞Stained")) {
-							newResources.push(createResource("Reputation", "1D", "As a Last Wolf."));
-						}
-						if (state.checkHasTrait("Great Wolf Lifepath➞Stink of the Ancient")) {
-							newResources.push(createResource("Reputation", "1D", "As a Ghost of the Deeping Wood among the packs."));
-						}
-						if (state.checkHasTrait("Great Wolf Lifepath➞Submissive")) {
-							newResources.push(createResource("Relationship", "", "With a master or dominant character."));
-						}
-						if (state.checkHasTrait("Great Wolf Special➞Raven Friend")) {
-							newResources.push(createResource("Relationship", "", "With a raven."));
-							newResources.push(createResource("Affiliation", "1D", "With a conspiracy of ravens."));
 						}
 
 						// TROLL
@@ -593,19 +480,18 @@ export const useCharacterBurnerStore = create<CharacterBurnerState>()(
 							state.limits.stats.Agility = { min: 1, max: 5 };
 							state.limits.stats.Speed = { min: 1, max: 5 };
 						}
-						/* TODO: Troll trait effects */
 
 						// GENERAL CALL-ON
-						/* TODO: General call-on trait effects */
+						//TODO: General call-on trait effects 
 
 						// GENERAL DIE
-						/* TODO: General die trait effects */
+						//TODO: General die trait effects 
 
 						// GENERAL MONSTROUS
-						/* TODO: General monstrous trait effects */
+						//TODO: General monstrous trait effects 
 
-						state.totals.resources.fromTraitsList = newResources;
-					}));
+						// state.totals.resources.fromTraitsList = newResources;
+					}))*/
 				},
 				refreshAttributeSpendings: () => {
 					set(produce<CharacterBurnerState>((state) => {
@@ -1123,16 +1009,16 @@ export const useCharacterBurnerStore = create<CharacterBurnerState>()(
 						const totalSpent = (state.spendings.stats[statName][key] as StatSpending).exponent + state.spendings.stats[statName].eitherPool.exponent;
 
 						if (change === 1) {
-							if (totalSpent < state.limits.stats[statName].max) {
+							if (totalSpent < 10 /*state.limits.stats[statName].max*/) {
 								if (remaining[key] > 0) (state.spendings.stats[statName][key] as StatSpending).exponent += 1;
 								else if (remaining.eitherPool > 0) state.spendings.stats[statName].eitherPool.exponent += 1;
 							}
 						}
 						else if (change === -1) {
-							if (totalSpent > state.limits.stats[statName].min) {
-								if (state.spendings.stats[statName].eitherPool.exponent > 0) state.spendings.stats[statName].eitherPool.exponent -= 1;
-								else if ((state.spendings.stats[statName][key] as StatSpending).exponent > 0) (state.spendings.stats[statName][key] as StatSpending).exponent -= 1;
-							}
+							//if (totalSpent > state.limits.stats[statName].min) {
+							if (state.spendings.stats[statName].eitherPool.exponent > 0) state.spendings.stats[statName].eitherPool.exponent -= 1;
+							else if ((state.spendings.stats[statName][key] as StatSpending).exponent > 0) (state.spendings.stats[statName][key] as StatSpending).exponent -= 1;
+							//}
 						}
 					}));
 				},

@@ -82,7 +82,7 @@ const ChecklistSteps: { label: string, description: string[]; }[] = [
 
 export function Checklist({ expanded }: { expanded: boolean; }) {
 	const {
-		stock, concept, name, beliefs, instincts, limits, lifepathPaths, stockSpecific, questions,
+		stock, concept, name, beliefs, instincts, /*limits,*/ lifepathPaths, stockSpecific, questions,
 		getStatRemainings, getSkillRemainings, getTraitRemainings, getResourceRemainings
 	} = useCharacterBurnerStore();
 
@@ -106,11 +106,25 @@ export function Checklist({ expanded }: { expanded: boolean; }) {
 		else if (traitRemainings.traitPoints !== 0) setActiveStep(5);
 		else if (!Object.values(questions).includes(true)) setActiveStep(6);
 		else if (resourceRemainings.resourcePoints !== 0) setActiveStep(7);
-		else if ((beliefs.list.filter(v => v !== "").length < limits.beliefs - 1 || instincts.list.filter(v => v !== "").length < limits.instincts - 1)) setActiveStep(8);
+		else if ((beliefs.list.filter(v => v !== "").length < 4 /* limits.beliefs - 1*/ || instincts.list.filter(v => v !== "").length < 4/*limits.instincts - 1*/)) setActiveStep(8);
 		else if (name === "") setActiveStep(9);
 		else setActiveStep(10);
-
-	}, [beliefs, concept, instincts, lifepathPaths.length, limits.beliefs, limits.instincts, name, questions, resourceRemainings.resourcePoints, skillRemainings.generalPoints, skillRemainings.lifepathPoints, statRemainings.eitherPool, statRemainings.mentalPool, statRemainings.physicalPool, stock, stockSpecific.brutalLife.traits.length, stockSpecific.territory.huntingGround, traitRemainings.traitPoints]);
+	}, [beliefs,
+		concept,
+		instincts,
+		lifepathPaths.length,
+		name,
+		questions,
+		resourceRemainings.resourcePoints,
+		skillRemainings.generalPoints,
+		skillRemainings.lifepathPoints,
+		statRemainings.eitherPool,
+		statRemainings.mentalPool,
+		statRemainings.physicalPool,
+		stock,
+		stockSpecific.brutalLife.traits.length,
+		stockSpecific.territory.huntingGround,
+		traitRemainings.traitPoints]);
 
 	return (
 		<Slide direction="left" in={expanded}>

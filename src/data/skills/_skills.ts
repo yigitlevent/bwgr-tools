@@ -12,7 +12,7 @@ export interface Skill {
 	name: string;
 	description?: string;
 
-	allowed: Ruleset[];
+	allowed: RulesetId[];
 	magical: boolean;
 	noList: boolean;
 	restriction: "N/A" | `${"ONLY" | "ONLYBURN"}➞${StocksList}${"" | `➞WITH➞${AttributesList}`}`;
@@ -25,7 +25,7 @@ export interface Skill {
 }
 
 export interface SkillCategory {
-	allowed: Ruleset[];
+	allowed: RulesetId[];
 	name: SkillCategoryPath;
 	skills: Skill[];
 }

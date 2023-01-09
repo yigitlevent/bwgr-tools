@@ -10,7 +10,7 @@ import { GreatWolf } from "./greatWolf";
 
 export interface Resource {
 	name: string;
-	allowed: Ruleset[];
+	allowed: RulesetId[];
 	type: "Gear" | "Property" | "Relationship" | "Affiliation" | "Reputation" | "Magical";
 	description?: string;
 	cost: number | [string, number][] | "various";
@@ -28,7 +28,7 @@ export interface Resource {
 
 export interface ResourceStock {
 	name: StocksListExtended;
-	allowed: Ruleset[];
+	allowed: RulesetId[];
 	resources: Resource[];
 }
 

@@ -10,7 +10,7 @@ import { GenericGrid } from "../../Shared/Grids";
 
 
 export function InstinctsBlock() {
-	const { instincts, limits, changeInstinct } = useCharacterBurnerStore();
+	const { instincts, /*limits,*/ changeInstinct } = useCharacterBurnerStore();
 
 	return (
 		<GenericGrid columns={6} center>
@@ -25,7 +25,7 @@ export function InstinctsBlock() {
 							label={i !== 3 ? `Instinct ${i + 1}` : instincts.fourthInstinctName}
 							value={v}
 							onChange={(e) => changeInstinct(i, e.target.value)}
-							disabled={i >= limits.beliefs}
+							disabled={i >= 3/*limits.instincts*/}
 							fullWidth
 							variant="standard"
 						/>

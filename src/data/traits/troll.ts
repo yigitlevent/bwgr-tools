@@ -91,7 +91,7 @@ export const TrollLifepath: TraitCategory = {
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 0,
 			description: "Call-on for Power or Forte when performing hard labor.",
 			name: "Back-Breaking Labor",
@@ -262,7 +262,7 @@ export const TrollLifepath: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 0,
 			description: "Orcs live by the rule of the lash. With a whip in hand and lads to lash, an Orc taskmaster feels that nothing can stop him! An Orc with this trait and a whip can force another—any character—to reroll a failed test once per session as if he had a call-on for this particular test. This effect is automatic so long as the player is bellowing and flailing around like he has a whip in his hand (and his character actually has a whip). This is how Orcs make slaves of their captives. A few sessions of accepting the whip will no doubt earn you the Tasting the Lash trait in the vote.",
 			name: "Where There's a Whip There's a Way",

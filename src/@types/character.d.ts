@@ -159,7 +159,7 @@ interface CharacterBurnerState {
 		list: [string, string, string, string];
 		fourthInstinctName: string;
 	};
-	limits: CharacterLimits;
+	//limits: CharacterLimits;
 	lifepathPaths: LifepathPath[];
 	specialLifepaths: SpecialLifepaths;
 	specialSkills: SpecialSkills;

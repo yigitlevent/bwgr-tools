@@ -5,14 +5,14 @@ import { SorcerySpells, PracticalMagicSchools, SpiritBindingDomainBindingLevels,
 
 export const Human: ResourceStock = {
 	name: "Human",
-	allowed: ["bwg"],
+	allowed: ["bwgr"],
 	resources: [
 		Relationship,
 		Reputation,
 		Affiliation,
 		{
 			name: "Arms",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: [
 				["Poor Quality Arms", 3],
@@ -27,7 +27,7 @@ export const Human: ResourceStock = {
 		},
 		{
 			name: "Superior Arms",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 20,
 			modifiers: [
@@ -39,7 +39,7 @@ export const Human: ResourceStock = {
 		},
 		{
 			name: "Poor Missiles",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: [
 				["Throwing weapons like knives or javelins", 2],
@@ -66,7 +66,7 @@ export const Human: ResourceStock = {
 		},
 		{
 			name: "Run of the Mill Missiles",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: [
 				["Throwing weapons like knives or javelins", 3],
@@ -93,7 +93,7 @@ export const Human: ResourceStock = {
 		},
 		{
 			name: "Superior Missiles",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: [
 				["Throwing weapons like knives or javelins", 9],
@@ -120,7 +120,7 @@ export const Human: ResourceStock = {
 		},
 		{
 			name: "Poor Quality Armor",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: [
 				["Gambeson", 2],
@@ -134,7 +134,7 @@ export const Human: ResourceStock = {
 		},
 		{
 			name: "Run of the Mill Armor",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: [
 				["Gambeson", 3],
@@ -148,7 +148,7 @@ export const Human: ResourceStock = {
 		},
 		{
 			name: "Superior Quality Armor",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: [
 				["Gambeson", 12],
@@ -162,98 +162,98 @@ export const Human: ResourceStock = {
 		},
 		{
 			name: "Riding Mount or Pack Animal",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 5,
 			description: "A horse, pony, camel and so forth can be bought with this choice. Basic riding horse stats follow: Stats: Pe: B3(4), Wi: B2, Ag: B2, Sp: B6, Po: B6, Fo: B6. Attributes: He: B4, St: B3, Re: B4 , MW: B12. Hesitation: 8. Skills: Rider Training, Foraging B2. Traits: Gelded, Docile, Obedient, Proud, Long-Limbed, Keen Hearing, Hooved, Ungulate. Stride: 12."
 		},
 		{
 			name: "Warhorse (Courser)",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 12,
 			description: "A warhorse is trained to carry its master into battle. Basic warhorse stats: Pe: B3(4), Wi: B2, Ag: B4, Sp: B6, Po: B7, Fo: B7. Attributes: He: B5, St: B7, Re: B4, MW: B13. Hesitation: 5 (Fearless and Determined). Skills: Rider Training, Mounted Combat Training, Armor Training, Formation Fighting Training, Intimidation B2, Brawling B3, Foraging B2. Traits: Level-Headed, Loyal, Determined, Fearless, Aggressive, Long-Limbed, Keen Hearing, Hooved, Ungulate. Stride : 12."
 		},
 		{
 			name: "Clothes",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 1,
 			description: "This resource purchase includes all of the clothing a character would need for everyday life in his station. It is not just one outfit. Like the Arms purchase, Clothing allows the player to take what he needs to trick out his character (short of finery)."
 		},
 		{
 			name: "Traveling Gear",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 1,
 			description: "This is all the necessary bits, odds and ends and what-no ts that are needed for survival on the road-candles, matches, flint and steel, a pocket knife, a rain cloak, a rain hat, a good sturdy rucksack, a thick leather belt, a money purse or wallet, a warm coat, etc. The exact choices are up to the player, but the GM has some say —no flamethrowers or Elven cloaks in traveling gear. Oh, yes, I almost forgot... don't forget to bring a good length of rope; you'll want one if you don't."
 		},
 		{
 			name: "Shoes",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 1,
 			description: "Shoes"
 		},
 		{
 			name: "Personal Effects",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 1,
 			description: "A player may purchase for his character personal effects of sentimental value: a religious trinket, a mirror, a book, a ring, a cane, a locket or any other similar item."
 		},
 		{
 			name: "Finery",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 5,
 			description: "Finery covers specialty clothing and expensive items that one would wear either on special occasions or when trying to make a point: courtly regalia for nobles, vestments for priests, shining robes for mages, etc. Like clothing, this purchase includes a whole wardrobe, not just a single outfit. Take as much or as little as you like. Improper dress imposes obstacle penalties to Inconspicuous and Etiquette tests among others"
 		},
 		{
 			name: "Cash",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 6,
 			description: "A player may start with a pocketful of cash. This grants 1D of cash that can be used as per the Resources rules. Once used, the cash is expended."
 		},
 		{
 			name: "Skill Toolkits",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 8,
 			description: "Many skills require tools. This resource can represent anything from medicine to books. If a skill is listed with 'Tools: Yes,' then a character must spend resource points on a toolkit in order to be able to adequately perform skill tests. Tests without tools (for skills that require them) are at a double obstacle penalty.<br>A toolkit that has finite supplies —like medicine for Herbalism— can run dry. Each use after the first, roll a d6. If a 1 comes up, the kit is empty. The character must make an Ob 2-5 Resources test to replenish it. The GM may set the obstacle depending on how rare the contents of the kit are. Ob 2 for peasant tools, Ob 4 for surgeon's tools, Ob 5 for sorcerous tools. Only one character can help you when you're using a toolkit."
 		},
 		{
 			name: "Workshop",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Property",
 			cost: 20,
 			description: "A workshop is just a big toolkit. It is used for artisan and craftsman skill tests that require more than just simple tools. Purchasing this gives the character an appropriate room/building/tower to house the workshop. Workshops allow for more than one character to help on a skill test. This counts as property when factoring resources."
 		},
 		{
 			name: "Companion Animal",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 3,
 			description: "Some players may wish to take a dog, cat or falcon as an accoutrement to their character. Stats are provided for these beasties in the Creature Codex PDF, but they are really there more for show than for stealing the spotlight in an adventure."
 		},
 		{
 			name: "Herd of Animals",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Property",
 			cost: 20,
 			description: "Characters with the Animal Husbandry skill, or the Master of Horses, Merchant or Magnate lifepath, may take an appropriate herd of animals. This purchase counts as property when factoring resources."
 		},
 		{
 			name: "Rent",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Property",
 			cost: 5,
 			description: "Characters who cannot afford to own property live on leased land or rented houses/apartments. It's a common condition of the age. This purchase gives the character a place to live and counts as an Ob 2 Resources maintenan ce test. Paying rent counts as property when factoring Resources."
 		},
 		{
 			name: "Property",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Property",
 			cost: [
 				["A leaky shack", 1],
@@ -277,23 +277,6 @@ export const Human: ResourceStock = {
 				["Treasure ship", 105]
 			],
 			description: "Property counts as property when factoring Resources.<br>*Note that only Noble Born characters or characters with the Minister, Town Official, Merchant, Magnate, Steward, Master of Horse, Master of Hounds, Bailiff, Justiciar, Coroner, Constable, Treasurer, Bishop or Abbot LPs may spend more than 40 rps on property. Other characters simply may not own that degree of property (unless otherwi sespecified). The property purchase comes with appropriate staff, buildings and accoutrements. It does not provide the character with other free purchases from the Resources list."
-		},
-		{
-			name: "Exotic Beast",
-			allowed: ["msc"],
-			type: "Property",
-			cost: 20,
-			description: "Characters with the Animal Instruction skill, or the Merchant, Magnate, Lord, Baron, Viscount, Count, Duke, or Noble Prince lifepath, may take an appropriate exotic animal foreign to their land. This purchase counts as property when factoring Resources."
-		},
-		{
-			name: "Flails, Whips, Slings",
-			allowed: ["msc"],
-			type: "Gear",
-			cost: [
-				["Shepherd sling", 2],
-				["War sling", 3]
-			],
-			description: "For Flails and Whip, resource points cost found in the Arms section on pg. 202 of the Burning Wheel Gold."
 		},
 		...SorcerySpells,
 		...PracticalMagicSchools,

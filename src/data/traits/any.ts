@@ -2,403 +2,403 @@ import { TraitCategory } from "./_traits";
 
 
 export const AnyCharacter: TraitCategory = {
-	allowed: ["bwg"],
+	allowed: ["bwgr"],
 	name: "Any Character",
 	traits: [
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "A Little Crazy",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "A Little Fat",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Abashed",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Abnormally Long Tongue",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Abused",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Academic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Accustomed to the Dark",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Aches and Pains",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Addicted",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Adorable",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Aggressive",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Agoraphobic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Agreeable",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Alarming",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Alcoholic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Alms-Taker",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Aloof",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Ambidextrous",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Ambitious",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Amenable to Other Options",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Amenable",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Anemic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Appreciation for Beauty",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Apprehensive",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Arcane",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Arrogant",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Authoritative",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Bad Egg",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Barker",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Base Humility",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Batshit",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Bedside Manner",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Bellicose",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Big Boned",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Bilge-Drinker",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Bitter",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Blasphemer",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Blisters",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Bloviatic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Boaster",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Bored",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Boring",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Brash",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Brave",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Broken Man",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Brusque",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Brutal",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Bulbous Nose",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Buxom",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Cadaverous",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Call of the Sea",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Callous",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Calloused",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Callow",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Carrulous",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Cassandra",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "An innate sense of time plagues this character. He always knows what time it is.",
 			name: "Chronologue",
@@ -406,70 +406,70 @@ export const AnyCharacter: TraitCategory = {
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Chuffing",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Chuntering",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Circumspect",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Collector",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Color Blind",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Colorful",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Comely",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Comfortable Shoes",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Complaining",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "The character cannot help himself: the lies come unbidden and never ending. Note that this trait does not necessarily make the charactera good liar.",
 			name: "Compulsive Liar",
@@ -477,182 +477,182 @@ export const AnyCharacter: TraitCategory = {
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Condescending",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Confident",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Cookie",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Corrupt",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Cramped Hands",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Crotchety",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Cruel",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Cry Wolf",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Cryptic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Curious",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Curses like a Sailor",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Cursing",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Cynical",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Dangerous",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Daring",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Debauched",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Deferential",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Demagogue",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Denouncer",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Desperate",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Despondent",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Determined",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Devout",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Diligent",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Diminutive Hands",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "Characters of Diminutive Stature are no taller than five feet (1.6 paces). This is the stature of Dwarves and Roden.",
 			name: "Diminutive Stature",
@@ -660,749 +660,749 @@ export const AnyCharacter: TraitCategory = {
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Disciplined",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Dismissive",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Distracted",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Disturbed",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Disturbingly Confident",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Disturbingly Large Mouth",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Dog Lover",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Dog-Faced Boy",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Domineering",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Dour",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Downtrodden",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Drop-Dead Gorgeous",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Drunk",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Dusty",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Dutiful",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Early Riser",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Earthen",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Earthy Smell",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Eating Maggots",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Ebullient",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Educated",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Effete",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Emotional",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Erudite",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Esoteric",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Eunuch",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Evasive",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Exasperated",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Extra Digit",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Extremely Bitter",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Extremely Respectful of One's Betters",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Faded",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Fanatical Devotion",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Farting",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Fastidious",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Fateful",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Fear of Cheese",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Fear of Wet Noises",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Fearful Respect of the Servants",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Feral",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Fervent Believer",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Firm",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Fixed Smile",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Flamboyant",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Flatterer",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Flea-Bitten",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Flee from Battle",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Flip",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Floksy Wisdom",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Floury",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Following the Beat",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Fondness for Elven Blood",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Formalist",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Foul Smelling",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Fretful",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Frippery",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Frustrated",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Gelid",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Generous",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Genial",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Gentle but Firm",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Gerbil Brain",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Gluttonous",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Gnawing Hunger",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Good for Nothing",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Good Listener",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Gossip",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Grand",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Greasy",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Greedy",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Grey Mantle",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Grim",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Grumbling",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Guarded",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Hacking Cough",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Hairy",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Halitosis",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Handicapped",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Handsome",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Happy-Go-Lucky",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Hard Work",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Hatred of Forests",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Haunted",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "He's a Jonah That One",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Hide Before Battle",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Hoarding",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Holier",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Hollow Bones",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Homesick",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Honored",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Hope",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Horsefriend",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Humble Before My Master",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Humility in the Face of Your Betters",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Humility",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Hungry",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Hurt",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Hypochondriac",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Idealistic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Ideologue",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Impecunious",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Imperious",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Impulsive",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Incessant Tapping",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Inconsiderate",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Indecisive",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "An Ineffable Feature is a facial or bodily feature that cannot he altered or destroyed. Or if it is somehow destroyed or removed, it grows back the same as it was before.",
 			name: "Ineffable Feature",
@@ -1410,217 +1410,217 @@ export const AnyCharacter: TraitCategory = {
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Infallible Religious Logic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Ink-Stained Hands",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Inscrutable",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Insightful",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Insomniac",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Instractable",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Intense Hatred",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Intense",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Intimidating",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Inured",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Invisible Friend",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Involuntary Shudders",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Iron Nails",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "It Just Might Work!",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Jaunty",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Jealous",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Joan of Arc",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Keen Sense of Humor",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Know It All",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Laconic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Lavish Taste",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Lazy",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Learned",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Leprosy",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Loner",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Lonesome",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Long Fingered",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Lord's Favorite",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Love of the Horse",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Lugubrious",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "This character always knows the phase of the moon.",
 			name: "Lunatic",
@@ -1628,1440 +1628,1288 @@ export const AnyCharacter: TraitCategory = {
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Lustrous",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Mad",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Maggot Connoisseur",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Man of Few Words",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Manly",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Many-Colored Hands",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Mark of the Beast",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Maternal",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Matriarchal/Patriarchal",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Maudlin",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Mean",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Melodramatic Family",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Mercenary",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Merciful",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Merciless",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Metal Plate in the Skull",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Mind for Small Details",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Misanthropic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Missing Digit",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Murderous",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Mute",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Muttering",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Naked Hatred",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Narcoleptic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Never Cry Wolf",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Night Owl",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Nihilistic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "No Nonsense",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Nose for Trouble",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Obedient",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Obliging",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Obsequious",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Obsessed",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Obstinate",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Odd",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Odious",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Off-Kilter",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Oikofugic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Ornery",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Other Life",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Overbearing Loony",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Overbite",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Overworked",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Paranoid About the Ship",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Paranoid",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Pariah",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Passionate",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Patient",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Patriatchal",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Pecunious",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Pegboy",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Perfectionist",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Peripatetic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Pigpen",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Pointed Ears",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Poisonous Ambition",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Pompous",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Practical",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Pragmatic Outlook",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Pragmatic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Predatory",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Problem with Authority",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Professionally Diligent",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Profuse Sweat",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Prominent Scar",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Prone to Exaggeration",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Proud",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Psychotic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Querulous",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Quirky",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Rabble-Rouser",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Rarified",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Rash",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Reckless",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Recondite",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Red Cheeks",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Red-Blooded",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Reeks of Alcohol",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Regal Bearing",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Reincarnated",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Remarkable Flatulence",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Remote",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Resigned to Fate",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Resolute",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Restless",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Reviled",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Rhetorical",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Righteous",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Road Weary",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Romantic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Rough Hands",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Royal Favorite",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Ruddy Complexion",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Sadistic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Sailor's Oath",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Salt of the Earth",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Sane",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Scapegoat",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Scarred",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Scavenger",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Screaming",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Scurvy",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Seasoned",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Secretive",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Secretly Worships the Black Sea God",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Seemingly Concerned",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Seen It All",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Seen Not Heard",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Self-Confident",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Self-Satisfied",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Sense of Entitlement",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Sharp Dresser",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Shouting",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Shrewd",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Sick",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Silent Hatred",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Singed",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Skeptical",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Skin of an Apple",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Skinny",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Sleek",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Sleep-Talker",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Smart",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Smells Like a Horse",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Solipsistic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Somnambulist",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Speaker of the Secret Language",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Spectacular",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Spitting",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Spooky",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Squinty",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Stalker",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Starved",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Steady Hands",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Stern Demeanor",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Stinky",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Stolid",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Strange",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Strapping",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Strong-Willed",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Stung Once (Once)",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Stutter",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Superstitious",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Suspicious",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Swaggering",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Taciturn",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Taste for Man-Flesh",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Temperamental",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Tenuous",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Thug",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Thunderous Snoring",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Tidy Aspect",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Timid",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Tolerant",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Touch of Madness",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Trusting",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Trustworthy",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Turgid",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Ugly",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Unbeliever",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Underbite",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Underpaid",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Uneasy",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Unrelenting Hatred",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Unsavory Madman",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Urbane",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Venal",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Veneer of Obedience",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Vitriolic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Vocal",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Voice in the Crowd",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Wary",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Watchful",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Weight of the World",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Weird",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Well Appointed",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Well Dressed",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "White-Gold Wielder",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Worldly",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Xenophobic",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "You Should Know Better than That!",
 			stock: "Any",
 			type: "Character"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			name: "Yowling",
 			stock: "Any",
 			type: "Character"
-		},
-		{
-			name: "Adventurous",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Cruel",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Deadpan",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Easygoing",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Eccentric",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Fretful",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Impulsive",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Mind for Small Details",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Musky",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Mystical",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Naive",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Never Satisfied",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Outsider",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Placid",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Rambling",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Reclusive",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Selfish",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Soft-Spoken",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
-		},
-		{
-			name: "Thoughtful",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Character",
-			cost: 1,
-			description: ""
 		}
 	]
 };
 
 export const AnyCallon: TraitCategory = {
-	allowed: ["bwg"],
+	allowed: ["bwgr"],
 	name: "Any Call-on",
 	traits: [
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "This trait allows the character and everyone within his presence to reroll one test in a great effort.",
 			name: "Aura of Determination",
@@ -3069,7 +2917,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This character projects the appearance of being completely free of taint and guilt in any crime. No one would ever suspect him. This is a call-on for Falsehood or Inconspicuous when dodging guilt.",
 			name: "Aura of Innocence",
@@ -3077,7 +2925,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This character's voice cuts through walls and overpowers other speakers. This is a call-on for Conspicuous, Oratory or Command.",
 			name: "Booming Voice",
@@ -3085,7 +2933,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "There is something magnetic and enigmatic about this character that draws people to him. People generally enjoy his company. This is a call-on for Persuasion or Oratory. Pick one.",
 			name: "Charismatic",
@@ -3093,7 +2941,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Suave and likable, this character possesses a certain je ne sais quoi that makes him affable (despite his cowardly, murderous personality). Call-on for Soothing Platitudes or Seduction. Pick one.",
 			name: "Charming",
@@ -3101,7 +2949,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "A Contortionist can bend and twist the body into odd positions. Call-on for Speed and Agility in tight situations.",
 			name: "Contortionist",
@@ -3109,7 +2957,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This trait can be called on when the character is trying to navigate narrow ledges, branches, rope or walkways. Call-on for Climbing or related Speed tests.",
 			name: "Dexterity of the Cat",
@@ -3117,7 +2965,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Whatever happens to the character, it is very entertaining and overwrought when he tells you about it later. This trait can be called on for Acting and Theatrics.",
 			name: "Dramatic",
@@ -3125,7 +2973,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This character is so horrible to look upon, dread fills the hearts of his enemies and friends. The character can use this trait as a call-on for Intimidation and Interrogation.",
 			name: "Dreadful",
@@ -3133,7 +2981,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "There is a distant goal which drives this character on. Something burns in his mind that will make all this suffering, hardship and pain worth it in the end. This trait is a call-on for one skill that is related to one of the goals listed in the character's Beliefs. Choose the skill before play starts.",
 			name: "Driven",
@@ -3141,7 +2989,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Of course he's my friend, I've seen him around here dozens of times! Familiar Face is a call-on for Circles tests.",
 			name: "Familiar Face",
@@ -3149,7 +2997,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Fleet of Foot is a call-on for Speed when racing or positioning.",
 			name: "Fleet of Foot",
@@ -3157,7 +3005,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "When others would quit from exhaustion, this character will heave to and give it one more try. Call-on for Forte.",
 			name: "Fortitude",
@@ -3165,7 +3013,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This character is a believable storyteller. His manner and expressions are earnest and appropriate. This trait is a call-on for Soothing Platitudes, Falsehood and Seduction.",
 			name: "Glib",
@@ -3173,7 +3021,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "This character is fluid and flowing in motion. This trait may be call-on for Speed tests and for social skills requiring grace or presence. This is a special, double effect call-on.",
 			name: "Graceful",
@@ -3181,7 +3029,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "No matter what the character does or how he lives his life, he still maintains the glow of fitness. Call-on for Health tests.",
 			name: "Healthy",
@@ -3189,7 +3037,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This character innervates and motivates other people by his mere presence. Can be used as a call-on for Oratory and Command.",
 			name: "Inspirational",
@@ -3197,7 +3045,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This character can eat nearly anything and not get sick, even while enduring stomach—churning grossout jokes. Call-on for Forte tests against illness or poison.",
 			name: "Iron Stomach",
@@ -3205,7 +3053,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "This trait can be used to determine the ingredients of a substance sampled by taste. The player can combine this trait with any one of his applicable skills. Using his knowledge and this inborn talent, he can decipher the ingredients or components of a material, substance or compound.<br>Such an act requires a successful Perception test at an obstacle equal to what it would normally take to create or spot this substance. This test is open-ended.<br>Keen Taste can also be used as a call-on for Alchemy, Apothecary, Herbalism, Wine Tasting, Cooking and Baking.",
 			name: "Keen Taste",
@@ -3213,7 +3061,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on and Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "This character is passionate about languages. They are a puzzle to solve, a mystery to unravel, a game he enjoys and is naturally good at. Reduce aptitude for learning the Foreign Languages skill by 1. Acts as a call-on for Foreign Languages skill.",
 			name: "Linguist",
@@ -3221,7 +3069,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on and Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This character has fluid grace inherent to his movements. Lithe characters tend to be thin and muscular. Call-on for Dance or any other athletic-type skill. Choose one before starting the game.",
 			name: "Lithe",
@@ -3229,7 +3077,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "The Meticulous character is neat and organized to the point of obsessiveness. All non-physical/martial arts skill tests take the maximum time required. The trait may be used as a call-on for one academic, craftsman, artisan or military skill of the player's choosing. For Dwarven characters, the skill must relate to the character's Greed idiom.",
 			name: "Meticulous",
@@ -3237,7 +3085,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Nimble characters are capable of great acts of dexterity with their hands. Nimble may be called-on for Agility tests or one skill with Agility in its root. Choose the skill during character burning.",
 			name: "Nimble",
@@ -3245,7 +3093,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Perfect Pitch bestows the heavenly ability to identify or to reproduce any pitch heard. Obviously this can be greatly useful in music. Call—on for singing and musical instrument skills.",
 			name: "Perfect Pitch",
@@ -3253,7 +3101,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "This artist possesses the incredible ability to represent three-dimensional objects and depth relationships on a two-dimensional surface. This trait acts as a call-on for any situation in which such an ability would prove useful.",
 			name: "Perspective",
@@ -3261,7 +3109,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "The character just looks like anyone else (of his race and class) and is quite difficult to identify in a crowd. Call-on for Inconspicuous.",
 			name: "Plain Faced",
@@ -3269,7 +3117,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "Despite being caught in extremely compromising circumstances, this character remains unflustered. Poised counts as a call-on for resisting the effects of Obfuscate and Incite actions. It also counts as a call-on for Etiquette.",
 			name: "Poised",
@@ -3277,7 +3125,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "More than just an inscrutable stone face, Poker Face is all about giving the face you need to mislead your opponent. This trait can be used as a call-on for Falsehood and Gambling/Games of Chance.",
 			name: "Poker Face",
@@ -3285,7 +3133,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Quiet characters walk quietly, talk quietly, eat quietly and often startle their friends with unheralded appearances. This trait can be used as a call-on for Stealthy.",
 			name: "Quiet",
@@ -3293,7 +3141,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This character realizes that he is going to die and has accepted that fact. This trait acts as a call-on for Steel tests in which the character rightly assumes he is going to die —when the cause is hopeless, he's badly wounded, everyone else is dead, etc.",
 			name: "Resigned (to Death)",
@@ -3301,7 +3149,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This is a call-on for the Scavenging skill.",
 			name: "Scaveging",
@@ -3309,7 +3157,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Call-on for Speed when aboard a ship. Also, this character doesn't get seasick.",
 			name: "Sea Legs",
@@ -3317,7 +3165,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Characters with this trait have a harder time getting lost because they always have a general idea which direction they came from. Sense of Direction can be called on to aid Orienteering and Navigation. This trait is not universal: a farmer has no Sense of direction at sea; a ranger has no Sense of Direction underground; a sailor doesn't do so well in the mountains.",
 			name: "Sense of Direction",
@@ -3325,7 +3173,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "This is a call-on for Steel when confronted or against impossible.",
 			name: "Show No Fear",
@@ -3333,7 +3181,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This character's voice sounds sweet and melodious to the ear. So delightful is the sound that it can be used as a call-on for Seduction, Persuasion and Suasion tests.",
 			name: "Sonorous Voice",
@@ -3341,7 +3189,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "This character understands the dangers and customs of city living. This trait may be used as a call-on for Streetwise, City-wise and Circles in the City Dweller Setting.",
 			name: "Street Smart",
@@ -3349,7 +3197,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 7,
 			description: "This is an odd but powerful trait. With the Touch of the Devil, a character's hands become sensitive and finely tuned instruments. If, when making a Perception test, the player can describe how his character is using his hands to sense the disturbance/noise, Perception counts as Gray shade. Detecting soft foot steps on a stone floor, impressions on a piece of paper, cracks in a vial or the breeze through a keyhole, for example. If used in a versus test against Stealthy, Touch of the Devil counts as Observation. Surgery, Pottery, Carpentry, Sewing, Whitesmithing, Etching, Engraving, Carving, Lapidary and jewelcraft may root from Gray Perception. Whenever a character with this trait is wounded, he suffers an additional automatic superficial wound. These count toward the 'three superficial wounds' limit and toward incapacitation.",
 			name: "Touch of the Devil",
@@ -3357,7 +3205,7 @@ export const AnyCallon: TraitCategory = {
 			type: "Call-on and Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "Characters with the Wolverine trait recover faster than others from wounds and illness. May be used as a call-on for Health for recovery from a wound or illness.<br>Wolverine can also be used to buy off a botched recovery test. If used in this way, the test is considered passed, but the trait is lost in the bargain.",
 			name: "Wolverine",
@@ -3369,11 +3217,11 @@ export const AnyCallon: TraitCategory = {
 };
 
 export const AnyDie: TraitCategory = {
-	allowed: ["bwg"],
+	allowed: ["bwgr"],
 	name: "Any Die",
 	traits: [
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "Desc needed",
 			name: "Affinity for Books and Scrolls",
@@ -3381,7 +3229,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "Desc needed",
 			name: "Affinity for Plants",
@@ -3389,7 +3237,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "Desc needed",
 			name: "Affinity for Rope",
@@ -3397,7 +3245,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "An Affinity trait represents something that the character loves so much, he excels at it. Players may choose one skill for which their character has an Affinity. The trait gives the character +1D to the skill.",
 			name: "Affinity for...",
@@ -3405,7 +3253,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Little, electric voices echo round the character's skull. Character may Glance Assess and Aim (+1D) when Stand and Drool hesitating. Therefore, if your character hesitates for two actions in Fight, he may shit himself and get two aiming dice. In Range and Cover, Alert grants 1D to the next shot after the character finishes hesitating.",
 			name: "Alert",
@@ -3413,7 +3261,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "This trait allows the character to see it coming—he knows Destiny has it in for him and knows what she looks like. In the Fight rules, he may forfeit one action for free per exchange: He does not have to lose one when he changes one. All the other normal rules and conditions for Forfeiting apply.",
 			name: "Artful Dodger",
@@ -3421,7 +3269,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "Someone who is Atravieso is always getting his hands into everything, fiddling with every little thing he can. When in any new place, or a stressful situation, the character must pass an Ob 3 Will test to resist touching and fiddling. If he fails the test, the character goes for the most fragile/breakable/dangerous objects around—beakers in the laboratory, eggs in the hen house, detonators in the bomb shop, the queen's dress at court, etc.—and, well, fiddles with them.",
 			name: "Atravieso",
@@ -3429,7 +3277,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "This character emanates fear. When entering his presence, all must pass a Steel test. Once the Steel test is made, the victim character does not have to test again until the next time he encounters this fearful creature.",
 			name: "Aura of Fear",
@@ -3437,7 +3285,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 7,
 			description: "This character is bathed in a divine light. Any character with the Lawbreaker, Dreaded, Spirit Nature, or Aura of Malevolence trait must immediately take a Steel test when entering the holy character's presence. Add the holy character's Will exponent to the hesitation obstacle. In addition, the holy man's Suasion dice are always considered open-ended",
 			name: "Aura of Holiness",
@@ -3445,7 +3293,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 6,
 			description: "This character is evil, and everyone knows it. Little children run away crying, dogs bark maniacally. This character, and all of his cohorts within his Presence gain +2D to Intimidate or Interrogate. If the malevolent character has other characters helping him Intimidate, each character grants an additional helping die over what they would normally give. Only one effect may be used at a time.",
 			name: "Aura of Malevolence",
@@ -3453,7 +3301,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "He will die for our sins. We all know it. We all want it (not that he would do anything to speed the process along...). In him we shall be redeemed. The player whose character possesses this trait earns persona artha for personal goals when taking steps in the game to martyr his character. The character must die for a lost cause—preferably religious. Should this glorious death transpire, the character's remains instantly become holy relics. The first person to gather up those remains is granted all of the martyr's remaining artha. If he had no artha left at the time of his death, the relic grants a deeds point to its new owner. Lastly, after the artha/deeds point is spent from the remains, they become a suitable matrix for Enchanting. See the Enchanting rules in the Magic Burner.",
 			name: "Aura of Matyrdom",
@@ -3461,7 +3309,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "No matter the emotion, the character never shows any sign of 'getting it.' The little light bulb never seems to come on. +1 Ob to all Persuasion and Soothing Platitudes tests made against the character.",
 			name: "Blank Stare",
@@ -3469,7 +3317,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "This character cannot see clearly. He cannot make purely visual-based Perception tests, and he is at +2 Ob to all sight-based Speed and Agility tests.",
 			name: "Blind",
@@ -3477,7 +3325,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "'You've got to leave this library and go out and experience the world! Stop hiding in your books and live!' warned the old instructor.<br>'Yeah, right,' thought the student.<br>'All the knowledge I'll ever need is here... in these books!'<br>Characters with this trait reduce their aptitude for learning Academic skills by one.",
 			name: "Bookworm",
@@ -3485,7 +3333,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Eat and eat and eat. 'Nature's Cruel Joke.' Characters with the Bottomless Stomach trait are at +1 Ob to all Resources tests involving food, drink, and meals.",
 			name: "Bottomless Stomach",
@@ -3493,7 +3341,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This trait is only available to one or two lifepath characters. The player may add +3D to the Perception or Will exponent of the character, or may shade shift one skill. Abuse this at your peril.",
 			name: "Child Prodigy",
@@ -3501,7 +3349,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "It is not that the character is completely nondescript, but there is something about him that makes people not notice him. This trait shade shifts Inconspicuous to gray, but adds +1 Ob to all Circles tests.",
 			name: "Cipher",
@@ -3509,7 +3357,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "Claustrophobia is a specific phobia applying to enclosed spaces. A character affiliated with this trait will not willingly enter small spaces like prison cells, closets, tunnels, trunks, or even cramped rooms. If he should find himself in an enclosed space for a long period of time (more than a minute or two), he becomes agitated and eventually hysterical—the character must pass a Steel test. If failed, he must either Swoon or Run and Scream.",
 			name: "Claustrophobic",
@@ -3517,7 +3365,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "This character tends to trip or drop things at the wrong moment. Use this trait to further color failed tests involving holding precious or fragile things. A Clumsy character will always drop what he is holding in a rather spectacular manner if he fails a test.",
 			name: "Clumsy",
@@ -3525,7 +3373,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This murderous soul has had a bellyful of killing and he won't hesitate to do more. Reduce hesitation for death, violence, and pain by one. Do not reduce hesitation for surprise or wonderment.",
 			name: "Cold Blooded",
@@ -3533,7 +3381,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 6,
 			description: "This character possesses an imperious and imposing demeanor. His merest words seem like fiat and his statements like edicts. His lesser feel compelled to obey. Add +1D to the character's Command skill. He may also help all those in his presence with any Steel tests they are compelled to make.",
 			name: "Commanding Aura",
@@ -3541,7 +3389,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "This character has connections that belie his station. You may add one of the following new settings to your Circles: City dweller, Villager, Professional Soldier, or Outcast (or equivalent from non-Mannish settings).",
 			name: "Connected",
@@ -3549,7 +3397,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Cool heads keep calm in crazy situations. Reduce hesitation from surprise and fear (not pain) by one.",
 			name: "Cool Headed",
@@ -3557,7 +3405,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "This is not the most flattering trait. Cowardly characters will not willingly put themselves at bodily risk and tend to run from danger—or at least be conveniently absent: +1 hesitation.",
 			name: "Cowardly",
@@ -3565,7 +3413,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "This character is beloved at court. Increase any reputation by +1D.",
 			name: "Darling of the Court",
@@ -3573,7 +3421,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "Deadly Precision allows the character to choose one weapon skill that he favors. Use his skill exponent in place of his Power stat when factoring his IMS for weapons under this skill. For example:<br>A character with a B4 Power and a B6 Throwing skill does damage with throwing knives using the 6 of his Throwing skill rather than his 4 Power. In the standard rules he does: I B3, M B5, S B7 with a throwing knife. Once trained to hit with Precision, he would do: I B4, M B7, S B10. Much better!",
 			name: "Deadly Precision",
@@ -3581,7 +3429,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "This character cannot make auditory-based Perception tests, and is +2 Ob to all Perception tests in general.",
 			name: "Deaf",
@@ -3589,7 +3437,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "Deep Sleepers are very difficult to rouse from sleep. Loud noises, shouts, even calling their own names won't do it. To wake from sleep before the appointed time, this character must pass an Ob 5 Will test.",
 			name: "Deep Sleeper",
@@ -3597,7 +3445,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "This character's dreams have a lifelike and portentous quality. The prime function of this trait is to allow the character to have visions in his dreams. These visions are always relevant to the game at hand. The player then becomes the intermediary for this information between the GM and the rest of the group.",
 			name: "Dreamer",
@@ -3605,7 +3453,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "Eagle Eye allows the character to see great distances clearly. For the purposes of shooting skill tests, characters with Eagle Eye count extreme range as optimal in the Range and Cover rules.",
 			name: "Eagle Eye",
@@ -3613,7 +3461,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "The character always remembers a voice and is able to pick out conversations over distance and noise. An Ob 3 Perception test allows the character to hear perfectly that conversation across the busy bar.",
 			name: "Ear for Voices",
@@ -3621,7 +3469,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "The character has the ability to remember nearly anything that he has read or seen. The player is allowed to consult the GM on occasion about certain important character memories. Whenever there is a question about whether or not the character remembers something, it is assumed that he does. The GM can provide the necessary information to the player.",
 			name: "Eidetic Memory",
@@ -3629,7 +3477,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 8,
 			description: "Magic does not and cannot directly affect this character. This includes both beneficial and detrimental effects. This isn't the best trait for sorcerers, as it would negate the Gifted trait.",
 			name: "Eldritch Sink",
@@ -3637,7 +3485,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "Things fall apart around the character. Any mechanic that involves something breaking—armor or materials, for example—counts double in its effect. One breach counts as two, one lost armor die counts as two. Any DoF mechanic for catastrophic failure is weighted by +1 toward the worst result. And any roll that results in complete failure indicates that something broke. Oops. This trait affects everyone and everything in the character's presence, including himself.",
 			name: "Entropic",
@@ -3645,7 +3493,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "The character may reduce his aptitude for learning social skills by one.",
 			name: "Extrovert",
@@ -3653,7 +3501,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "Characters with the Eye of the Hunter count their Perception exponent as Observation for detecting Stealthy, Camouflage, or similarly concealed characters.",
 			name: "Eye of the Hunter",
@@ -3661,7 +3509,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "A Family Heirloom is an item of great value or power that symbolizes the (once great) might of the family. A character may only take this trait if he starts with 20 or fewer resource points. The trait allows the player to take one item from any list that costs 50 rps or less.",
 			name: "Family Heirloom",
@@ -3669,7 +3517,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "This character is practically immune to fear. Reduce hesitation for pain, fear, and the shock of gore or death by three. Hesitation for wonderment or surprise is not reduced.",
 			name: "Fearless",
@@ -3677,7 +3525,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "The blood of the elder folk runs through him. This character may choose one trait from the Elf, Dwarf, or Orc traits list. Lifepath and Common Racial traits are free, normal costs apply to Special Traits.",
 			name: "Fey Blood",
@@ -3685,7 +3533,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "Weakness saps vitality. This character is less vigorous than his companions. Perhaps due to an overactive life of the mind? Subtract one from Power or Forte. Also, the maximum for the Frail stat is reduced to exponent 5.",
 			name: "Frail",
@@ -3693,7 +3541,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "Geometry is the mother of invention. Forget what that other guy says. This trait gives +1D to any skill that utilizes mathematics or measurements.",
 			name: "Geometric",
@@ -3701,7 +3549,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "A Gloryhound cannot restrain himself when he sees a chance for 'glory.' He charges into the fray heedless of safety, tactics, or plans. Glory includes: maidens fair, enemy sorcerers commanding undead hordes, large monsters, enemy knights, and enemy kings. Gloryhounds may add an additional Steel reaction: For Glory! While hesitating from a failed Steel test (and choosing this reaction) the Gloryhound must Close. In Range and Cover he must use Steel. In Fight he must Close and attempt to Charge. He may not do anything else.",
 			name: "Gloryhound",
@@ -3709,7 +3557,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 6,
 			description: "Under the influence of his muse, this character is a virtuoso. The player must choose an art form and one of his character's skills that it inspires. When the art is being performed or witnessed, the dependent skill shade shifts one step lighter. A character cannot be his own muse.",
 			name: "Greater Muse",
@@ -3717,7 +3565,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "The character may round up when factoring roots for skills with the Perception/Agility root.",
 			name: "Hand-Eye Coordination",
@@ -3725,7 +3573,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "The character's fists (and feet) have been so toughened that his hands count as a Power 1 weapon (like a stone, knife, or dagger).",
 			name: "Hands of Iron",
@@ -3733,7 +3581,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "Characters with Iron Will are resistant to Interrogation and Seduction. Any attempts at bending them are made at a double obstacle penalty. In a Duel of Wits in which the opposing skill is Interrogation or Seduction, the player may double his body of argument.",
 			name: "Iron Will",
@@ -3741,7 +3589,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "So many years and so much humanity has this character seen, life seems to be an endless repetition of petty struggles. 'I tire of this game...' Reduce hesitation for surprise or shock by three.",
 			name: "Jaded",
@@ -3749,7 +3597,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "This trait can be used to determine the ingredients of a substance sampled by taste. The player can combine this trait with any one of his applicable skills. Using his knowledge and this inborn talent, he can decipher the ingredients or components of a material, substance or compound.<br>Such an act requires a successful Perception test at an obstacle equal to what it would normally take to create or spot this substance. This test is open-ended.<br>Keen Taste can also be used as a call-on for Alchemy, Apothecary, Herbalism, Wine Tasting, Cooking and Baking.",
 			name: "Keen Taste",
@@ -3757,7 +3605,7 @@ export const AnyDie: TraitCategory = {
 			type: "Call-on and Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "One of the character's legs is deformed or permanently injured, causing the character to walk with a pronounced limp. Reduce the character's stride by one. In addition, the character may not benefit from any skill or trait that increases the stride (like Sprinter).",
 			name: "Lame",
@@ -3765,7 +3613,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "'I think I'm gonna throw up.' 'I can't swim!' Look at the landlubber, seasick and staggering around the deck. This character is +1 Ob to all Health tests and attempts at good judgment while at sea.",
 			name: "Landlubber",
@@ -3773,7 +3621,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "The beauty of art inspires this character to wild heights. The player must choose an art form and a skill it inspires. When under the influence of his Muse, the character gains +2 open-ended dice to all 'inspired' skill tests.<br>A character cannot be his own Muse. He cannot recite poetry to himself while he is madly hacking away at is enemies.",
 			name: "Lesser Muse",
@@ -3781,7 +3629,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Light Sleepers are easily roused from slumber. They are always allowed the benefit of a Perception test to wake up when a noise is heard or someone is creeping about their room. Make the test as if they were awake. If the character has Observation, that can be used in place of Perception. If the test is passed, the character is instantly awake and ready to go. Also, Light Sleeper adds +1 Ob to all Health tests for recovering Tax.",
 			name: "Light Sleeper",
@@ -3789,7 +3637,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "This character is passionate about languages. They are a puzzle to solve, a mystery to unravel, a game he enjoys and is naturally good at. Reduce aptitude for learning the Foreign Languages skill by 1. Acts as a call-on for Foreign Languages skill.",
 			name: "Linguist",
@@ -3797,7 +3645,7 @@ export const AnyDie: TraitCategory = {
 			type: "Call-on and Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "Abnormally long arms or legs. Long of Limb increases the character's bare-fisted reach in positioning tests to long. If used with a weapon, increase the weapon length by one step.",
 			name: "Long of Limb",
@@ -3805,7 +3653,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "This character never knows where he is or in what direction he is going. Explicit directions are required to get him anywhere, and even that rarely works. Double obstacle penalties to all Orienteering or Navigation tests and any Perception test used to find the right direction.",
 			name: "Lost",
@@ -3813,7 +3661,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "When surprised or shocked by a revelation (especially when called on to make a Steel test for such instances), this character is prone to fits of laughter. He may replace 'Stand and Drool' with 'Belly Laugh' in his hesitation options. If this doesn't infuriate friends and foes alike, something is wrong in the world.",
 			name: "Louis Wu",
@@ -3821,7 +3669,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "The knowledge of the language of animals and beasts is known to you. Choose one type of animalia: birds, horses and beasts of burden, beasts of the wild, reptiles and scaly beasts, fish, or insects. This trait may be taken multiple times. Additional Low Speech categories cost +1 trait point.",
 			name: "Low Speech",
@@ -3829,7 +3677,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "There is an old saying: 'Death is lighter than a feather, but duty is heavier than a mountain.' This character lives by these words. The player may add an additional Belief centered around his Loyalty to another character. Should this trait ever be voted off, the character loses the Belief as well; should the Belief be changed, the trait is lost.",
 			name: "Loyal",
@@ -3837,7 +3685,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "This trait grants the ability to detect strong emotions in others, namely fear, nerves, elation, and arousal. The character's Perception acts as the Aura Reading skill (but only for the non-spell detection uses).",
 			name: "Manhunter",
@@ -3845,7 +3693,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "This character is the size of a Troll. Due to his imposing bulk, his weapon length categories are increased by one step. If wielding a 'longest' weapon, he may count his weapon longer than longest!",
 			name: "Massive Stature",
@@ -3853,7 +3701,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "With this trait, a player may add one point from his physical pool to his mental pool. This trait has no effect after character burning.",
 			name: "Mind over Matter",
@@ -3861,7 +3709,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "Character has the aura of another type of person or creature. The player and the GM must design this aura—complete with character stock, Beliefs, Instincts, and Traits—before play begins. Any Aura Reading tests made against this character see the Misplaced Aura instead of the real one. However, the Aura Reader can see the Misplaced Aura trait if he gets at least four successes on his test.",
 			name: "Misplaced Aura",
@@ -3869,7 +3717,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "This trait increases most sight-based Perception obstacles by +1 to +2 Ob depending on the situation.",
 			name: "Missing Eye",
@@ -3877,7 +3725,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "-1D Agility. Choose one hand.",
 			name: "Missing Hand",
@@ -3885,7 +3733,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "Missing limbs have a serious effect on how the character is played. A missing arm sets the Agility cap at 5, and obviously prevents the character from performing any action with two hands. A missing leg sets the Speed cap at 4 and reduces the stride by two.",
 			name: "Missing Limb",
@@ -3893,7 +3741,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "A character with the Nose of the Bloodhound trait can tell a person's or animal's identity via scent and an Ob 1 Perception test. Nose of the Bloodhound also counts as a call-on for Tracking.",
 			name: "Nose of the Bloodhound",
@@ -3901,7 +3749,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "Tests to read this character's Aura are made at a double obstacle penalty. This penalty does not apply to detecting spells cast by or on the character.",
 			name: "Obscure Aura",
@@ -3909,7 +3757,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "The shakes. Manifestations of this can be minor or only arise under certain conditions. But whenever it does arise, the character has serious difficulty performing delicate work with the hands. +1 Ob to any delicate work on Agility- or Perception/Agility-rooted skills.",
 			name: "Palsy",
@@ -3917,7 +3765,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "A character with Paranoid Ear uses his Perception exponent as Observation for detecting Stealthy (or Chameleoned) characters.",
 			name: "Paranoid Ear",
@@ -3925,7 +3773,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "Penetrating Gaze reduces obstacle penalties for visibility and darkness by two.",
 			name: "Penetrating Gaze",
@@ -3933,7 +3781,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "Choose any one of the numerous phobias floating around out in the world. If faced with the object of his phobia, a character must make a Steel Test at +2 Ob hesitation.",
 			name: "Phobia",
@@ -3941,7 +3789,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "This character may ignore all starting Health penalties for having an unhealthy lifestyle and whatnot. The character must pursue the unhealthy lifestyle in game.",
 			name: "Pickled",
@@ -3949,7 +3797,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "A character with this trait has extended his tendrils of power from his traditional Circles into a new setting. You may add one of the following settings to your Circles—Religious, Noble Court, or Noble (or equivalent).",
 			name: "Power Behind the Throne",
@@ -3957,7 +3805,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "The match appeared in his hand, and in a tiny blur of motion, his pipe was lit. This character has a trademark act that he has repeated so frequently that it has become a single action—like lighting a pipe with a match. Normally this would cost at least three 'actions' in game, but the Practiced Precision trait reduces that cost to one action. Players must decide what 'trademark act' their characters will practice before the character enters into the game.<br>Combat-related actions may be Practiced Precision trademarks. They are only reduced by one action, rather than reduced to one action.",
 			name: "Practiced Precision",
@@ -3965,7 +3813,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "A character with this trait reduces his Perception aptitude by one.",
 			name: "Quick Study",
@@ -3973,7 +3821,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "Quick-Witted reduces hesitation by one action and grants the character +1D to any Rebuttal action in the Duel of Wits.",
 			name: "Quick-Witted",
@@ -3981,7 +3829,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "There was a moment of electric hesitation between them; their eyes flashed and fenced. But when the assassin lunged it was too late. The thin man was already at his throat. This trait allows the character to round up when factoring Reflexes.",
 			name: "Quickened Pulse",
@@ -3989,7 +3837,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Buying this trait allows the player to neutralize and remove one required lifepath trait.",
 			name: "Quiescent",
@@ -3997,7 +3845,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "If the character can see it, he can count it. The tallying happens instantaneously and is utterly involuntary. This inevitably leads to the character constantly muttering numbers and figures and driving his companions crazy.",
 			name: "Rainman",
@@ -4005,7 +3853,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "The player may add one point from his mental pool to his physical pool in character burning. Thereafter Robust acts as a character trait.",
 			name: "Robust",
@@ -4013,7 +3861,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "+1D to Power to motivate an oar-driven seagoing vessel.",
 			name: "Rower",
@@ -4021,7 +3869,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Scheming characters are always plotting and planning. It doesn't even have to be for their benefit or gain—sometimes they just plot and plan to see their cleverness at work. Combined with Murderous or Ambitious, this can be a very problematic trait. Scheming also allows the player to add +1D to his body of argument in a Duel of Wits.",
 			name: "Scheming",
@@ -4029,7 +3877,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "With Second Sight, the character can peer vaguely into the shifting shadows of the spirit world. It is a powerful, multifaceted ability. Through an act of concentration, he can push through the veil of reality to see the other side. This costs one action in Fight! but otherwise can be done at will. The Second Sight grants the ability to discern if something is magical or not. Test Perception:<br> High power magic (major miracles, Mjӧlnir, the Burning Wheel, Ob 10 spells, Strength 10 spirits, etc.), Ob 1<br> Moderately-powered magic (minor miracles, Ob 5 spells, a risen corpse, the Belt of Flying, Dragon Slaying Sword, Spirit Weapons, Strength 5 spirits), Ob 5<br> Low power magic (Red Spectacles, Bless/Curse, Ob 2 spells, Strength 2 spirits, etc.), Ob 8.<br>If successful, the character knows the item, person, or effect is magical. He doesn't know exactly what the magic does. Second Sight is one of the abilities that allows a character to use the Aura Reading skill in this book for obstacles. Second Sight allows the mage to FoRK Aura Reading into Sorcery or Summoning (so long as he is using his sight). Second Sight turns Perception into Observation for detecting Stealthy or Inconspicuous characters. Any physical actions taken (running, jumping, fighting, etc.) while using Second Sight suffer a +1 Ob penalty.",
 			name: "Second Sight",
@@ -4037,7 +3885,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This character is prone to illness. Permanently subtract -1D of Health. Cap Health at B5.",
 			name: "Sickly",
@@ -4045,7 +3893,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 6,
 			description: "This is a scary supernatural trait. It negates all penalties for darkness or dim light.",
 			name: "Sight of the Bat",
@@ -4053,7 +3901,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "This character gets a twinge in his brain (or eye, or heart, or stomach) when a life-threatening event or phenomenon is near. This trait counts as a very special Instinct: Always get a twinge in the head from impending danger. It's broad and breaks all the rules for Instincts, but that's why it's a trait.<br>At any point where the player is about to send his character into a life-threatening situation, the GM is obliged to warn him, 'You've got a bad feeling about this.' The precise nature of the danger is not revealed. Also, it is the player's responsibility to remind the GM that he has Sixth Sense. If ever there is a dispute surrounding its use, apply the guidelines for using Instincts to the trait.",
 			name: "Sixth Sense",
@@ -4061,7 +3909,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "This character is hard to get a hold of—he wriggles and squirms his way out of nearly any grip. This character may use his Speed or Agility rather than Power to escape from and avoid Locks.",
 			name: "Slippery",
@@ -4069,7 +3917,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "Slow to react and slow on the uptake, he's not the sharpest knife in the drawer. +1 Ob to all Perception tests and increase base hesitation by one.",
 			name: "Slow",
@@ -4077,7 +3925,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "This character is a hero among the slaves, outcasts, and soldiery. You may add one of the following settings to your Circles: Servitude, Outcast, or Professional Soldier.",
 			name: "Spartacus",
@@ -4085,7 +3933,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "This trait increases the stride of the character by one. For Orcs and Men, that'd be from 7 to 8. This can grant a substantial bonus to positioning tests, as the character will very likely have the highest stride and gain a bonus die for it.",
 			name: "Sprinter",
@@ -4093,7 +3941,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "The Stoic character simply does not flinch in the face of danger. Reduce overall hesitation by one.",
 			name: "Stoic",
@@ -4101,7 +3949,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "This trait adds +2D to the character's body of argument in a Duel of Wits that contravenes one of his Beliefs.",
 			name: "Stubborn",
@@ -4109,7 +3957,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "+1 Ob to all social skills and spells affecting and used by this character.",
 			name: "Stupid",
@@ -4117,7 +3965,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "This character's ancestors have mated with something unholy and have tainted the bloodline forever: a curse that will never be lifted, a twisted yoke to bear. The player may choose one trait from a dæmon, vampyr, satyr, red cap, raksha, ophidian, koscista-noga, giant, or dragon (which are found in the Monster Burner). Tainted Legacy also incurs an Inconspicuous penalty. The character always counts as having the 'different race' penalty (+2 Ob)—his taint has certain odd outward signs.",
 			name: "Tainted Legacy",
@@ -4125,7 +3973,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 4,
 			description: "A Tenacious character has a one-track mind. Once he is fixed on something he keeps after it. If a Tenacious character's body of argument in a Duel of Wits is reduced to zero or below, this trait puts it back up to one die. This allows the character to play out the next volley (or more if the die isn't lost). Once that one die is reduced, however, the argument is over.",
 			name: "Tenacious",
@@ -4133,7 +3981,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "This character is always aware of what is going on around him- always looking one way while acting on something else. In Fight, The Killer trait reduces all shooting and throwing actions by one action. In Range and Cover, The Killer grants a +1D advantage to maneuver tests.",
 			name: "The Killer",
@@ -4141,7 +3989,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "The character is unaffected by insults, nettling, and nagging. Incite actions in the Duel of Wits are +2 Ob against this character.",
 			name: "Thick Skin",
@@ -4149,7 +3997,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This character has seen so much death, shock, inhumanity, and horror that nothing phases him anymore. This trait reduces hesitation by three against pain, violence, and intimidation but increases hesitation by two against surprise and Wonderment-type spell effects. This character may not Run and Scream. Characters with this trait tend to be quiet, remote, and cold. They also never seem to look into your eyes. Rather, their gaze is always fixed a thousand yards behind you.",
 			name: "Thousand-Yard Stare",
@@ -4157,7 +4005,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This character's tongue has been cut out, either as an act of criminal malice, as cruel punishment, or as religious service. The character may not properly speak. This is a pretty big handicap in a game where all communication is done via speech.",
 			name: "Tongueless",
@@ -4165,7 +4013,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 7,
 			description: "This trait allows the character to 'read' objects through her touch. A successful Perception test will give impressions present in the object: strong emotion, arcana, and even age.<br> Type/name of object, Ob 1<br> Age of object, Ob 2<br> Length of time the object has been in its current location, Ob 3<br> Recent events surrounding the object that left physical evidence, Ob 4<br> Recent events that left no physical mark, Ob 5<br> Past events that left their mark, Ob 6<br> Past events that left no mark, Ob 7",
 			name: "Touch of Ages",
@@ -4173,7 +4021,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 7,
 			description: "This is an odd but powerful trait. With the Touch of the Devil, a character's hands become sensitive and finely tuned instruments. If, when making a Perception test, the player can describe how his character is using his hands to sense the disturbance/noise, Perception counts as Gray shade. Detecting soft foot steps on a stone floor, impressions on a piece of paper, cracks in a vial or the breeze through a keyhole, for example. If used in a versus test against Stealthy, Touch of the Devil counts as Observation. Surgery, Pottery, Carpentry, Sewing, Whitesmithing, Etching, Engraving, Carving, Lapidary and jewelcraft may root from Gray Perception. Whenever a character with this trait is wounded, he suffers an additional automatic superficial wound. These count toward the 'three superficial wounds' limit and toward incapacitation.",
 			name: "Touch of the Devil",
@@ -4181,7 +4029,7 @@ export const AnyDie: TraitCategory = {
 			type: "Call-on and Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 6,
 			description: "Pain and suffering are a picnic. This character is not required to make Steel tests for pain, exhaustion, or deprivation. He just clambers to his feet and keeps going. If kicked back to the ground, he crawls.",
 			name: "Tough as Nails",
@@ -4189,7 +4037,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "A tough character may round up when determining his mortal wound.",
 			name: "Tough",
@@ -4197,7 +4045,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 3,
 			description: "The personality of this character is so caustic that he is distasteful and difficult to be around. +2 Ob to the character's Persuasion, Seduction, Haggling, and Oratory tests. It does not affect Command or even Intimidation.",
 			name: "Unctuous",
@@ -4205,7 +4053,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 1,
 			description: "The Unlucky character has a hard life. Whenever the player makes an arbitrary decision about something in game, it's always wrong. If, for example, the character comes to a fork in the road, and the player just shrugs, 'I dunno. I go left.' It's the wrong direction—doesn't matter what the 'truth' is, that's his luck. Unlucky may be bought off in game. If the player utterly succeeds at a test at a crucial moment—all successes, glowing results, victory, etc.—the player may opt to turn the success into a dismal, catastrophic, and hopefully hilarious failure. Doing so immediately earns the player a fate point and persona point. Unlucky is then removed from his trait list.",
 			name: "Unlucky",
@@ -4213,7 +4061,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "This character is pliable like tapioca. In a Duel of Wits, this character can only ever use the Not a Big Deal rules for his body of argument.",
 			name: "Weak-Willed",
@@ -4221,7 +4069,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 2,
 			description: "'My joints ache; storm's coming.' With a twinge in the knee, a stiffening of the joints, back pain, or headaches, Weather Sense clues a character into impending weather. Unless the GM plays with strict house weather rules—I don't—the Weather Sense in essence gives the player the ability to dictate the weather. Why else would a player pick this trait unless he were concerned about having the right weather for something or other? Anyway, I say let him predict it based on the Perception obstacles below—and let his predictions come true.<br> Useless, vague predictions ('Rain soon'), Ob 1<br> Accurate weather, Ob 2<br> Approximate location, Ob 3<br> Approximate time, Ob 4<br> Accurate location, Ob 4<br> Accurate time, Ob 5<br>Each obstacle tier includes all the other effects under it.",
 			name: "Weather Sense",
@@ -4229,7 +4077,7 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "The character's sense of smell and space are so intertwined that he gets +1D to Perception. This trait also lets the player use his Perception as an Observation skill (without the bonus die).",
 			name: "Wolf's Snout",
@@ -4237,68 +4085,12 @@ export const AnyDie: TraitCategory = {
 			type: "Die"
 		},
 		{
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			cost: 5,
 			description: "Characters with the Wolverine trait recover faster than others from wounds and illness. May be used as a call-on for Health for recovery from a wound or illness.<br>Wolverine can also be used to buy off a botched recovery test. If used in this way, the test is considered passed, but the trait is lost in the bargain.",
 			name: "Wolverine",
 			stock: "Any",
 			type: "Call-on and Die"
-		},
-		{
-			name: "Debt-Ridden",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Die",
-			cost: 3,
-			description: "This character once took out a sizable loan but has since piddled away the money with nothing to show for it. The size of the debt is double the character's current Resources exponent or Ob 2 if the character has Resources 0 (see the rules for paying back a debt on pg. 375 of the Burning Wheel Gold). Additionally, this character possesses a 1D infamous reputation for being bad with money."
-		},
-		{
-			name: "Dedicated",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Die",
-			cost: 3,
-			description: "This character's relentless dedication allows them to make efficient use of their time. When using the Practice rules, this character may treat their Will as one higher when determining the number of hours that they can practice per day."
-		},
-		{
-			name: "Deeper than Skin",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Die",
-			cost: 3,
-			description: "It takes more than words for this character to adequately express their emotions. Gain +1D to the Body Art skill when using it on a character you have a Relationship with"
-		},
-		{
-			name: "Fierce Rival",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Die",
-			cost: 3,
-			description: "This trait grants the character a minor relationship. This relationship must be with a rival character who is constantly trying to surpass and humiliate them. When creating this rival, choose a skill highly valued by both characters; the rival's skill exponent is always one higher.<br>You may invest additional Resource Points and increase the value of this Relationship."
-		},
-		{
-			name: "Fragile",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Die",
-			cost: 4,
-			description: "Even the smallest wounds pose a threat to this character. Light wounds bleed to Midi if they are not treated before the conclusion of the session, though the wound ceases to bleed at Midi. For any medical skill, it is an Ob 1 test to staunch the flow of blood for one scene. Characters with one or two total lifepaths may purchase this trait for only 1 pt."
-		},
-		{
-			name: "Nocturnal",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Die",
-			cost: 2,
-			description: "This character is well accustomed to the dead of night. Nocturnal reduces obstacle penalties for darkness by one."
-		},
-		{
-			name: "Frafile",
-			allowed: ["msc"],
-			stock: "Any",
-			type: "Die",
-			cost: 4,
-			description: "Through strength of will this character refuses to let any wound take them down. Every time this character is incapacitated due to wound dice, they may attempt to shrug off wound penalties and remain standing. If the character's lowest stat(s) is at 0, it is an Ob 4 Health test to shrug off -1D of wound penalties and remain standing. If the character's lowest stat(s) is at -1, it is an Ob 5 Health test to shrug off -2D of wound penalties and remain standing. For -2, it is Ob 6 and so on. Mortal wounds cannot be shrugged off in this manner. The full wound penalties return at the end of the scene."
 		}
 	]
 };

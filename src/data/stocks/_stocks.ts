@@ -10,7 +10,7 @@ import { GreatWolf } from "./greatWolf";
 export interface Lifepath {
 	name: string;
 
-	allowed: Ruleset[];
+	allowed: RulesetId[];
 	stock: StocksList;
 	setting: string;
 	leads: SettingPath[];
@@ -32,7 +32,7 @@ export interface Lifepath {
 }
 
 export interface Setting {
-	allowed: Ruleset[];
+	allowed: RulesetId[];
 	name: string;
 	short: string;
 	stock: StocksList;
@@ -46,7 +46,7 @@ export interface Settings {
 
 export interface Stock {
 	agePool: { max: number, min: number, m: number, p: number; }[];
-	allowed: Ruleset[];
+	allowed: RulesetId[];
 	hasSetting: boolean;
 	hasSubsetting: boolean;
 	name: StocksList;

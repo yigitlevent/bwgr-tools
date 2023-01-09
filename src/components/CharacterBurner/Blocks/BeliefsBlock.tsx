@@ -10,7 +10,7 @@ import { GenericGrid } from "../../Shared/Grids";
 
 
 export function BeliefsBlock() {
-	const { beliefs, limits, changeBelief } = useCharacterBurnerStore();
+	const { beliefs, /*limits,*/ changeBelief } = useCharacterBurnerStore();
 
 	return (
 		<GenericGrid columns={6} center>
@@ -25,7 +25,7 @@ export function BeliefsBlock() {
 							label={i !== 3 ? `Belief ${i + 1}` : beliefs.fourthBeliefName}
 							value={v}
 							onChange={(e) => changeBelief(i, e.target.value)}
-							disabled={i >= limits.beliefs}
+							disabled={i >= 3/*limits.beliefs*/}
 							fullWidth
 							variant="standard"
 						/>

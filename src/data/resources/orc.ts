@@ -5,32 +5,32 @@ import { RitualsOfNightRituals } from "./_magical";
 
 export const Orc: ResourceStock = {
 	name: "Orc",
-	allowed: ["bwg"],
+	allowed: ["bwgr"],
 	resources: [
 		Relationship,
 		Reputation,
 		OrcAffiliation,
 		{
 			name: "Rags",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 1
 		},
 		{
 			name: "Traveling Gear",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 3
 		},
 		{
 			name: "Hobnailed Boots",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 1
 		},
 		{
 			name: "Orc Arms",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: [["Poor quality arms", 3], ["Run of the mill arms", 5]],
 			modifiers: [
@@ -42,7 +42,7 @@ export const Orc: ResourceStock = {
 		},
 		{
 			name: "Orc Armor",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: [
 				["Poor quality hides (gambeson equivalent)", 1],
@@ -58,7 +58,7 @@ export const Orc: ResourceStock = {
 		},
 		{
 			name: "Orc Missiles",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: [
 				["Poor quality bow (+1 Ob to hit)", 3],
@@ -83,110 +83,110 @@ export const Orc: ResourceStock = {
 		},
 		{
 			name: "Black Iron Helmet",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 5,
 			description: "A helmet complete with spikes, horse hair tassels and a prison-gate mask. 5D, +2 Ob to Perception tests."
 		},
 		{
 			name: "Black Iron Shield",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 4,
 			description: "A large, iron, circular shield, stained coal black. The outer edge is sharpened to add a little surprise for those who want to get close. 3D shield. Power 2, Add 2, VA 1, WS 1, short weapon."
 		},
 		{
 			name: "Riding Mount or Pack Animal",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 9
 		},
 		{
 			name: "Great Wolf Mount",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 15,
 			description: "The Great Wolf is the pr eferred mount of the Orcish cavalry. Though not as swift as horses, they mak e up for their loss in cunning and ferocity. Use the stats in the Monsters section in the Burning Wheel for the Black Destroyer and Astride the Beast wolves (they're too long to li st here) or burn up th e wolf using the Great Wolf lifepaths in the Codex. Burned wolves have one less lifepath than their master and obey the other rules for relationships. Lastly, the wolf can be burned up as a character by another player. This creates a powerful partnership, rather than a master/slave, rider/mount relation ship. When using a player character wolf, lifepath limits are the same as for any other character."
 		},
 		{
 			name: "Whip",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 2,
 			description: "The lash is required for making use of the Where There's a Whip, There's a Way trait. The whip is not a weapon of any consequence. This may only be purchased by characters with the Where There's a Whip, There's a Way trait."
 		},
 		{
 			name: "Poison",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 5,
 			description: "Three doses of one of the types of poison listed under Vile Poisoner."
 		},
 		{
 			name: "Brazen Horn or Clan Banner",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 9,
 			description: "The Brazen Horn adds +1D to the Brazen Horn of Despair skill and allows Despair Shouters to help a Named with Command or Brutal Intimidation. The banner reduces hesitation by one for all in the clan who can see it."
 		},
 		{
 			name: "Skill Toolkits",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 9
 		},
 		{
 			name: "Riding Harness for Wolf",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 5,
 			description: "The saddle, bit and bridle, stirrups and reins add +1D to Riding tests for wolves."
 		},
 		{
 			name: "Spoils of War",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: "various",
 			description: "Named, Great Ones, Whisperers, Head Takers, Summoners and Masters may purchase one item from any character stock resources/gear list they wish. Troll Lords may purchase gear from the Troll resources list in the Codex. Any Orc character who has 'failed' a Brutal Life test may also purchase Spoils of War from other character stocks, but the cost of the item/property may not exceed half the Orc's total resource points. Named, Great Ones, etc. may take a second item, but to do so counts as failing a Brutal Life roll at his current lifepath level. If an Orc player takes property as part of their Spoils of War, be sure to include its cost when calculating his Resources."
 		},
 		{
 			name: "Black Robes",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 1,
 			description: "Servants only."
 		},
 		{
 			name: "Leather Apron",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 1,
 			description: "Servants only."
 		},
 		{
 			name: "Ceremonial Knives",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 3,
 			description: "Servants only. These ornate and hallowed weapons are vital to the Servant for performing his dark rituals. Otherwise they are simply ornate run of the mill weapons."
 		},
 		{
 			name: "Ceremonial Axe or Sword",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 7,
 			description: "Servants only. These ornate and hallowed weapons are vital to the Servant for performing his dark rituals. Otherwise they are simply ornate run of the mill weapons."
 		},
 		{
 			name: "Tools of the Trade",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 7,
 			description: "Servants only. These are a collection of knives, blades, pins, clamps and other strange devices. Tools of the Trade add +1D to the Torture skill."
 		},
 		{
 			name: "Poisoner's Toolkit",
-			allowed: ["bwg"],
+			allowed: ["bwgr"],
 			type: "Gear",
 			cost: 7,
 			description: "Servants only. This kit allows the Knower of Secrets to mix poisons. All of the ingredients necessary for concocting the poisons listed under the Vile Poisoner skill are present in this foul smelling pouch. After using this kit, roll the Die of Fate. On a 1, the supplies have run out and the character must refill the kit via a Resources, Foraging or Scavenging test (or another means sanctioned by the GM)."

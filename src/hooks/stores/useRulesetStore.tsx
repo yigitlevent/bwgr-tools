@@ -10,7 +10,7 @@ import { Resources, ResourceStock } from "../../data/resources/_resources";
 
 
 interface RulesetState {
-	rulesets: Ruleset[];
+	rulesets: RulesetId[];
 
 	lifepathStock: StocksList;
 	lifepathSetting: string;
@@ -26,9 +26,9 @@ interface RulesetState {
 	resourceStock: StocksListExtended;
 	allowedResourceStocks: ResourceStock[];
 
-	toggleDataset: (dataset: Ruleset) => void;
-	checkRulesets: (allowed: Ruleset[]) => boolean;
-	checkExactRulesets: (allowed: Ruleset[]) => boolean;
+	toggleDataset: (dataset: RulesetId) => void;
+	checkRulesets: (allowed: RulesetId[]) => boolean;
+	checkExactRulesets: (allowed: RulesetId[]) => boolean;
 
 	refreshAllowedStocksList: (stock: StocksList) => void;
 	refreshAllowedSettingsList: (setting: string) => void;
@@ -43,7 +43,7 @@ interface RulesetState {
 	changeResourceStock: (stock: StocksListExtended) => void;
 }
 
-function CheckRulesets(rulesets: Ruleset[], allowed: Ruleset[]) {
+function CheckRulesets(rulesets: RulesetId[], allowed: RulesetId[]) {
 	return rulesets.some(ruleset => allowed.includes(ruleset));
 }
 
@@ -51,23 +51,23 @@ export const useRulesetStore = create<RulesetState>()(
 	devtools(
 		persist(
 			(set, get) => ({
-				rulesets: ["bwg", "bwc"],
+				rulesets: ["bwgr"],
 
-				lifepathStock: Object.values(Stocks).filter(v => CheckRulesets(["bwg", "bwc"], v.allowed))[0].name,
-				lifepathSetting: Object.values(Stocks["Dwarf"].settings).filter(v => CheckRulesets(["bwg", "bwc"], v.allowed))[0].name,
-				allowedStocks: Object.values(Stocks).filter(v => CheckRulesets(["bwg", "bwc"], v.allowed)),
-				allowedSettings: Object.values(Stocks["Dwarf"].settings).filter(v => CheckRulesets(["bwg", "bwc"], v.allowed)),
+				lifepathStock: Object.values(Stocks).filter(v => CheckRulesets(["bwgr", "bwc"], v.allowed))[0].name,
+				lifepathSetting: Object.values(Stocks["Dwarf"].settings).filter(v => CheckRulesets(["bwgr", "bwc"], v.allowed))[0].name,
+				allowedStocks: Object.values(Stocks).filter(v => CheckRulesets(["bwgr", "bwc"], v.allowed)),
+				allowedSettings: Object.values(Stocks["Dwarf"].settings).filter(v => CheckRulesets(["bwgr", "bwc"], v.allowed)),
 
-				skillCategory: Object.values(SkillCategories).filter(v => CheckRulesets(["bwg", "bwc"], v.allowed))[0].name,
-				allowedSkillCategories: Object.values(SkillCategories).filter(v => CheckRulesets(["bwg", "bwc"], v.allowed)),
+				skillCategory: Object.values(SkillCategories).filter(v => CheckRulesets(["bwgr", "bwc"], v.allowed))[0].name,
+				allowedSkillCategories: Object.values(SkillCategories).filter(v => CheckRulesets(["bwgr", "bwc"], v.allowed)),
 
-				traitCategory: Object.values(TraitCategories).filter(v => CheckRulesets(["bwg", "bwc"], v.allowed))[0].name,
-				allowedTraitCategories: Object.values(TraitCategories).filter(v => CheckRulesets(["bwg", "bwc"], v.allowed)),
+				traitCategory: Object.values(TraitCategories).filter(v => CheckRulesets(["bwgr", "bwc"], v.allowed))[0].name,
+				allowedTraitCategories: Object.values(TraitCategories).filter(v => CheckRulesets(["bwgr", "bwc"], v.allowed)),
 
-				resourceStock: Object.values(Resources).filter(v => CheckRulesets(["bwg", "bwc"], v.allowed))[0].name,
-				allowedResourceStocks: Object.values(Resources).filter(v => CheckRulesets(["bwg", "bwc"], v.allowed)),
+				resourceStock: Object.values(Resources).filter(v => CheckRulesets(["bwgr", "bwc"], v.allowed))[0].name,
+				allowedResourceStocks: Object.values(Resources).filter(v => CheckRulesets(["bwgr", "bwc"], v.allowed)),
 
-				toggleDataset: (ruleset: Ruleset) => {
+				toggleDataset: (ruleset: RulesetId) => {
 					set(produce<RulesetState>((state) => {
 						if (state.rulesets.includes(ruleset)) {
 							state.rulesets = state.rulesets.filter(v => v != ruleset);
@@ -85,11 +85,11 @@ export const useRulesetStore = create<RulesetState>()(
 					state.refreshAllowedTraitCategoriesList(state.traitCategory);
 					state.refreshAllowedResourceStocksList(state.resourceStock);
 				},
-				checkRulesets: (allowed: Ruleset[]) => {
+				checkRulesets: (allowed: RulesetId[]) => {
 					const state = get();
 					return CheckRulesets(state.rulesets, allowed);
 				},
-				checkExactRulesets: (allowed: Ruleset[]) => {
+				checkExactRulesets: (allowed: RulesetId[]) => {
 					const state = get();
 					return allowed.every(ruleset => state.rulesets.includes(ruleset));
 				},

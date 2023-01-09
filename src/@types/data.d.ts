@@ -1,4 +1,7 @@
-type Ruleset = "bwg" | "bwc" | "msc" | "amw";
+type CoreRulesetId = "bwgr" | "bs";
+type ExpansionRulesetId = "bwc" | "antv1" | "amw";
+//type RulesetId = CoreRulesetId | ExpansionRulesetId
+
 type StocksList = "Dwarf" | "Elf" | "Human" | "Orc" | "Roden" | "Troll" | "Great Wolf";
 type SubStocksList = "Dark Elf";
 type StocksListExtended = StocksList | SubStocksList;

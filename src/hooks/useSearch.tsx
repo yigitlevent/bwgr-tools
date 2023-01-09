@@ -5,7 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import { useRulesetStore } from "./stores/useRulesetStore";
 
 
-type List<T> = (T & { allowed: Ruleset[]; })[];
+type List<T> = (T & { allowed: RulesetId[]; })[];
 
 export function useSearch<T>(list: List<T>) {
 	const [searchParams, setSearchParams] = useSearchParams();
