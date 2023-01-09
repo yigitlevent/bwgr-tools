@@ -1,5 +1,3 @@
-
-
 export interface CoreRuleset {
 	id: CoreRulesetId;
 	name: string;

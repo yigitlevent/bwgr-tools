@@ -7,6 +7,7 @@ import { Setting, Stock, Stocks } from "../../data/stocks/_stocks";
 import { SkillCategories, SkillCategory } from "../../data/skills/_skills";
 import { TraitCategories, TraitCategory } from "../../data/traits/_traits";
 import { Resources, ResourceStock } from "../../data/resources/_resources";
+import { CoreRulesets } from "../../data/rulesets";
 
 
 interface RulesetState {
@@ -69,7 +70,10 @@ export const useRulesetStore = create<RulesetState>()(
 
 				toggleDataset: (ruleset: RulesetId) => {
 					set(produce<RulesetState>((state) => {
-						if (state.rulesets.includes(ruleset)) {
+						const found = CoreRulesets.find(x => x.id === ruleset);
+
+						if (found) { state.rulesets = [ruleset]; }
+						else if (state.rulesets.includes(ruleset)) {
 							state.rulesets = state.rulesets.filter(v => v != ruleset);
 						}
 						else {

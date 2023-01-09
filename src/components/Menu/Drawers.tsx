@@ -7,7 +7,7 @@ import DatasetOutlinedIcon from "@mui/icons-material/DatasetOutlined";
 
 import { Menu } from "./Menu";
 import { Checklist } from "./Checklist";
-import { Datasets } from "./Datasets";
+import { RulesetSelector } from "./RulesetSelector";
 import { useLocation } from "react-router-dom";
 
 
@@ -61,7 +61,7 @@ export function Drawers() {
 			</Paper>
 
 			<Menu expanded={menuExpanded} />
-			<Datasets expanded={datasetsExpanded} />
+			<RulesetSelector expanded={datasetsExpanded} />
 			<Checklist expanded={checklistExpanded} />
 		</Fragment>
 	);

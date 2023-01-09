@@ -1,6 +1,6 @@
 type CoreRulesetId = "bwgr" | "bs";
 type ExpansionRulesetId = "bwc" | "antv1" | "amw";
-//type RulesetId = CoreRulesetId | ExpansionRulesetId
+type RulesetId = CoreRulesetId | ExpansionRulesetId;
 
 type StocksList = "Dwarf" | "Elf" | "Human" | "Orc" | "Roden" | "Troll" | "Great Wolf";
 type SubStocksList = "Dark Elf";
@@ -15,7 +15,7 @@ type TraitTypesList = "Character" | "Call-on" | "Die" | "Call-on and Die";
 type ShadesList = "B" | "G" | "W";
 type ShadesListLimited = Exclude<ShadesList, "W">;
 
-type HuntingGroundsList = "Waste" | "Marginal" | "Typical" | "Plentiful" | "Untouched"
+type HuntingGroundsList = "Waste" | "Marginal" | "Typical" | "Plentiful" | "Untouched";
 
 type StockPath = `${StocksList}`;
 type SettingPath = `${StockPath}➞${string}`;
