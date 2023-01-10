@@ -32,4 +32,5 @@ jobs:
           source ~/.nvm/nvm.sh
           cd ${{ secrets.DIR }}
           nvm use 19.4.0
+          npm i
           npm run build
