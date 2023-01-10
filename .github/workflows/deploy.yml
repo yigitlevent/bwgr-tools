@@ -27,4 +27,6 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
         KEY: ${{ secrets.SSHKEY }}
-        script: npm run build
+        script: |
+          nvs use 19.4.0
+          npm run build
