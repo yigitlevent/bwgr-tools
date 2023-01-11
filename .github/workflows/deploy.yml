@@ -1,4 +1,4 @@
-name: Deploy
+name: deploy-bwgr-tools
 
 on: [push]
 
@@ -9,7 +9,17 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Copy repository contents via scp
+    - name: Source Cleanup
+      uses: appleboy/ssh-action@master
+      with:
+        HOST: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PORT: ${{ secrets.PORT }}
+        KEY: ${{ secrets.SSHKEY }}
+        script: |
+          rm -rf ${{ secrets.SOURCEDIR }}
+
+    - name: Copy
       uses: appleboy/scp-action@master
       env:
         HOST: ${{ secrets.HOST }}
@@ -18,9 +28,9 @@ jobs:
         KEY: ${{ secrets.SSHKEY }}
       with:
         source: "."
-        target: "/var/www/yigitlevent.com"
+        target: ${{ secrets.SOURCEDIR }}
 
-    - name: Executing remote command
+    - name: Build, Target Cleanup, Copy
       uses: appleboy/ssh-action@master
       with:
         HOST: ${{ secrets.HOST }}
@@ -30,7 +40,9 @@ jobs:
         script: |
           export NVM_DIR=~/.nvm
           source ~/.nvm/nvm.sh
-          cd ${{ secrets.DIR }}
+          cd ${{ secrets.SOURCEDIR }}
           nvm use 19.4.0
           npm i
           npm run build
+          rm -rf ${{ secrets.TARGETDIR }}
+          sudo cp -R ${{ secrets.SOURCEDIR }}/dist ${{ secrets.TARGETDIR }}
