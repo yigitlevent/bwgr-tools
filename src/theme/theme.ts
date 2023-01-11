@@ -1,9 +1,10 @@
 import { createTheme } from "@mui/material/styles";
-
-import text from "/src/assets/fonts/literata.woff"; // text
-import title from "/src/assets/fonts/thryromanes.woff"; // title
-import hand from "/src/assets/fonts/CormorantUpright-SemiBold.woff"; // hand
 import { blue, green, grey, lightBlue, orange, purple, red } from "@mui/material/colors";
+
+import text from "/src/assets/fonts/literata.woff"; 
+import title from "/src/assets/fonts/thryromanes.woff"; 
+import hand from "/src/assets/fonts/CormorantUpright-SemiBold.woff"; 
+
 
 const White = "#ffffff";
 const Black = "#000000";
